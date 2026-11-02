@@ -24,6 +24,9 @@
 #include <algorithm>
 #include <atomic>
 #include <ctime>
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 namespace qtm {
 
@@ -64,9 +67,16 @@ QSet<QString> g_recFiles;
 
 double threadCpuMs()
 {
+#ifdef _WIN32
+    FILETIME created, exited, kernel, user;
+    GetThreadTimes(GetCurrentThread(), &created, &exited, &kernel, &user);
+    auto ms = [](const FILETIME &t) { return double((quint64(t.dwHighDateTime) << 32) | t.dwLowDateTime) / 1e4; };
+    return ms(kernel) + ms(user);   // 100 ns units to milliseconds
+#else
     timespec ts{};
     clock_gettime(CLOCK_THREAD_CPUTIME_ID, &ts);
     return double(ts.tv_sec) * 1e3 + double(ts.tv_nsec) / 1e6;
+#endif
 }
 double num(const QJsonValue &v) { return v.isString() ? v.toString().toDouble() : v.toDouble(); }
 } // namespace
