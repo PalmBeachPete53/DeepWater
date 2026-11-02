@@ -1,6 +1,7 @@
-# Builds Deepwater on GitHub's machines and packs it: a .dmg on macOS (Apple silicon), an installer .exe and a
-# portable .zip on Windows. The packages are in the run's "Artifacts" (kept 5 days); a tag v* also publishes them
-# in a GitHub Release. Locally, the same packaging is `cmake --build build --target dist` (README › Packaging).
+# Builds Deepwater on a GitHub macOS machine and packs it as a .dmg (Apple silicon). The .dmg is in the run's
+# "Artifacts" (kept 5 days); a tag v* also publishes it in a GitHub Release. Locally, the same packaging is
+# `cmake --build build --target dist` (README › Packaging). The Windows job (MSVC, NSIS .exe, smoke test) was
+# dropped on 2026-11-02 to keep development on macOS only; it is in git history (commit 7a4ba3f) to bring back.
 name: Build
 
 on:
@@ -58,113 +59,10 @@ jobs:
           compression-level: 0
           if-no-files-found: error
 
-  windows:
-    name: Windows 11 (.exe)
-    runs-on: windows-2022
-    timeout-minutes: 120
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Package version
-        shell: bash
-        run: |
-          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then v="${GITHUB_REF_NAME#v}"; else v="0.1-${GITHUB_SHA::7}"; fi
-          echo "PKG_VERSION=$v" >> "$GITHUB_ENV"
-
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: ${{ env.QT_VERSION }}
-          host: windows
-          target: desktop
-          arch: win64_msvc2022_64
-          modules: ${{ env.QT_MODULES }}
-          cache: true
-          # Qt 6.11+ splits its Windows repository by compiler (qt6_6120/qt6_6120_msvc2022_64/), which aqtinstall
-          # 3.3.0, the last release on PyPI, can't read: aqtinstall's master has the fix (PR #1000), pinned here.
-          # Back to the default once aqtinstall 3.4 is out.
-          aqtsource: git+https://github.com/miurahr/aqtinstall.git@5a49f2b391ae8ee1d3c0dd87f8b33c1d49a4deb7
-
-      # zlib (the World Bank / USDA / JODI zip archives), static so there is no DLL to ship.
-      - name: Install zlib
-        shell: pwsh
-        run: '& "$env:VCPKG_INSTALLATION_ROOT\vcpkg.exe" install zlib:x64-windows-static-md'
-
-      # CPack's NSIS generator needs makensis, the build Ninja; the runner image normally has both.
-      - name: Check NSIS and Ninja
-        shell: pwsh
-        run: |
-          if (-not (Get-Command makensis -ErrorAction SilentlyContinue) -and
-              -not (Test-Path "${env:ProgramFiles(x86)}\NSIS\makensis.exe")) { choco install nsis -y --no-progress }
-          if (-not (Get-Command ninja -ErrorAction SilentlyContinue)) { choco install ninja -y --no-progress }
-
-      # The x64 MSVC environment (what the "x64 Native Tools Command Prompt" sets) for the next steps.
-      - name: MSVC environment
-        shell: pwsh
-        run: |
-          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * `
-                -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
-          cmd /c "`"$vs\VC\Auxiliary\Build\vcvars64.bat`" >nul && set" | ForEach-Object {
-            if ($_ -match '^([^=]+)=(.*)$') { "$($Matches[1])=$($Matches[2])" | Out-File $env:GITHUB_ENV -Append -Encoding utf8 }
-          }
-
-      # Ninja rather than MSBuild: with -k 0 it compiles every file even after errors, so one run shows them all.
-      - name: Configure
-        shell: pwsh
-        run: >
-          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
-          -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
-          -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR"
-          -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT\scripts\buildsystems\vcpkg.cmake"
-          -DVCPKG_TARGET_TRIPLET=x64-windows-static-md
-          -DDEEPWATER_PACKAGE_VERSION="$env:PKG_VERSION"
-
-      - name: Build and package
-        run: cmake --build build --target dist -- -k 0
-
-      # The packed folder must run on its own: launch it with Qt off the PATH and no Qt variables, open the News
-      # reader on a page (Qt WebEngine and its QtWebEngineProcess.exe on Windows), and take a screenshot.
-      - name: Smoke test
-        shell: pwsh
-        run: |
-          $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
-          Get-ChildItem $dir | Format-Table -AutoSize Mode, Length, Name | Out-String -Width 200
-          foreach ($f in 'deepwater.exe', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
-            if (-not (Test-Path "$dir\$f")) { throw "$f isn't at the top of the packed folder" }
-          }
-          $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
-          Remove-Item Env:QT_PLUGIN_PATH, Env:QML2_IMPORT_PATH, Env:QT_ROOT_DIR -ErrorAction SilentlyContinue
-          $shot = "$PWD\build\dist\smoke-windows.png"
-          $p = Start-Process "$dir\deepwater.exe" -PassThru -ArgumentList `
-               '--page', 'news', '--news-url', 'https://example.com', '--delay', '20000', '--screenshot', "`"$shot`""
-          $null = $p.Handle   # without it, ExitCode stays empty after WaitForExit
-          if (-not $p.WaitForExit(120000)) { $p.Kill(); throw "deepwater.exe didn't exit within 2 minutes" }
-          if ($p.ExitCode -ne 0) { throw "deepwater.exe exited with code $($p.ExitCode)" }
-          if (-not (Test-Path $shot)) { throw "no screenshot" }
-          "Screenshot: $((Get-Item $shot).Length) bytes"
-
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: smoke-windows
-          path: build/dist/smoke-windows.png
-          retention-days: 5
-          if-no-files-found: ignore
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: deepwater-windows
-          path: |
-            build/dist/*.exe
-            ${{ startsWith(github.ref, 'refs/tags/') && 'build/dist/*.zip' || '' }}
-          retention-days: 5
-          compression-level: 0
-          if-no-files-found: error
-
   release:
     name: GitHub Release
     if: startsWith(github.ref, 'refs/tags/v')
-    needs: [macos, windows]
+    needs: [macos]
     runs-on: ubuntu-latest
     permissions:
       contents: write
