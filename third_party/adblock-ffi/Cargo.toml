@@ -1,0 +1,19 @@
+[package]
+name = "adblock-ffi"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "C ABI over Brave's adblock-rust engine for Deepwater's article reader"
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+# No "unsync-regex-caching": the engine must be Sync (checked from Chromium's IO thread).
+adblock = { version = "0.13", default-features = false, features = ["embedded-domain-resolver", "full-regex-handling", "content-blocking"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1

@@ -1,0 +1,12 @@
+//@version=6
+indicator("Demo MA", shorttitle="DMA", overlay=true)
+len = input.int(20, "Length", minval=1, maxval=500)
+src = input.source(close, "Source")
+useEma = input.bool(false, "Use EMA")
+mode = input.string("A", "Mode", options=["A", "B"])
+ma = useEma ? ta.ema(src, len) : ta.sma(src, len)
+plot(ma, "MA", color=color.blue, linewidth=2)
+plot(ta.rsi(close, 14), "RSI", style=plot.style_histogram, color = close > open ? color.green : color.red)
+plotshape(ta.crossover(close, ma), "Cross up", style=shape.triangleup, location=location.belowbar, color=color.green, text="up")
+plotchar(ta.crossunder(close, ma), "Cross down", char="x", location=location.abovebar, color=color.red)
+hline(50, "Mid")

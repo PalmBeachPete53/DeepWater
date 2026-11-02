@@ -1,0 +1,7837 @@
+{
+ "numbers": [
+  {
+   "n": 0,
+   "s": "0",
+   "j": "0"
+  },
+  {
+   "n": 0,
+   "s": "0",
+   "j": "0"
+  },
+  {
+   "n": 1,
+   "s": "1",
+   "j": "1"
+  },
+  {
+   "n": -1,
+   "s": "-1",
+   "j": "-1"
+  },
+  {
+   "n": 0.1,
+   "s": "0.1",
+   "j": "0.1"
+  },
+  {
+   "n": 0.5,
+   "s": "0.5",
+   "j": "0.5"
+  },
+  {
+   "n": 0.3333333333333333,
+   "s": "0.3333333333333333",
+   "j": "0.3333333333333333"
+  },
+  {
+   "n": 0.6666666666666666,
+   "s": "0.6666666666666666",
+   "j": "0.6666666666666666"
+  },
+  {
+   "n": 1e+21,
+   "s": "1e+21",
+   "j": "1e+21"
+  },
+  {
+   "n": 100000000000000000000,
+   "s": "100000000000000000000",
+   "j": "100000000000000000000"
+  },
+  {
+   "n": 123456789012345680000,
+   "s": "123456789012345680000",
+   "j": "123456789012345680000"
+  },
+  {
+   "n": 1.5e-7,
+   "s": "1.5e-7",
+   "j": "1.5e-7"
+  },
+  {
+   "n": 0.000001,
+   "s": "0.000001",
+   "j": "0.000001"
+  },
+  {
+   "n": 0.000001234,
+   "s": "0.000001234",
+   "j": "0.000001234"
+  },
+  {
+   "n": 1761696000,
+   "s": "1761696000",
+   "j": "1761696000"
+  },
+  {
+   "n": 1761696000000,
+   "s": "1761696000000",
+   "j": "1761696000000"
+  },
+  {
+   "n": 83000.12,
+   "s": "83000.12",
+   "j": "83000.12"
+  },
+  {
+   "n": 42776.1,
+   "s": "42776.1",
+   "j": "42776.1"
+  },
+  {
+   "n": 3.14159,
+   "s": "3.14159",
+   "j": "3.14159"
+  },
+  {
+   "n": -2.5e-10,
+   "s": "-2.5e-10",
+   "j": "-2.5e-10"
+  },
+  {
+   "n": 5e-324,
+   "s": "5e-324",
+   "j": "5e-324"
+  },
+  {
+   "n": 1.7976931348623157e+308,
+   "s": "1.7976931348623157e+308",
+   "j": "1.7976931348623157e+308"
+  },
+  {
+   "n": 100,
+   "s": "100",
+   "j": "100"
+  },
+  {
+   "n": 10000000,
+   "s": "10000000",
+   "j": "10000000"
+  },
+  {
+   "n": 12345600,
+   "s": "12345600",
+   "j": "12345600"
+  }
+ ],
+ "dates": [
+  {
+   "s": "2026-10-14",
+   "t": 1791936000000
+  },
+  {
+   "s": "2026-10-14T14:30:00Z",
+   "t": 1791988200000
+  },
+  {
+   "s": "2026-10-14T10:30:00-04:00",
+   "t": 1791988200000
+  },
+  {
+   "s": "2026-10-14T14:30:00.123Z",
+   "t": 1791988200123
+  },
+  {
+   "s": "Wed, 29 Oct 2026 10:00:00 +0000",
+   "t": 1793268000000
+  },
+  {
+   "s": "Wed, 29 Oct 2026 10:00:00 GMT",
+   "t": 1793268000000
+  },
+  {
+   "s": "Tue, 28 Oct 2026 18:05:12 -0400",
+   "t": 1793225112000
+  },
+  {
+   "s": "29 Oct 2026 10:00:00 EST",
+   "t": 1793286000000
+  },
+  {
+   "s": "",
+   "t": null
+  },
+  {
+   "s": "garbage",
+   "t": null
+  },
+  {
+   "s": "Oct 28, 2026",
+   "t": 1793145600000
+  },
+  {
+   "s": "10/28/2026 09:15 AM",
+   "t": 1793178900000
+  },
+  {
+   "s": "Oct 28, 2026 4:05PM",
+   "t": null
+  }
+ ],
+ "parseSpread": [
+  {
+   "s": "BTCUSDT/ETHUSDT",
+   "r": {
+    "a": "BTCUSDT",
+    "op": "/",
+    "b": "ETHUSDT"
+   }
+  },
+  {
+   "s": "EUR/USD",
+   "r": null
+  },
+  {
+   "s": "SOL/USDT",
+   "r": null
+  },
+  {
+   "s": "AAPL - MSFT",
+   "r": {
+    "a": "AAPL",
+    "op": "-",
+    "b": "MSFT"
+   }
+  },
+  {
+   "s": "AAPL-MSFT",
+   "r": null
+  },
+  {
+   "s": "BTC/USD",
+   "r": null
+  },
+  {
+   "s": "SPREAD:US:AAPL - US:MSFT",
+   "r": {
+    "a": "US:AAPL",
+    "op": "-",
+    "b": "US:MSFT"
+   }
+  },
+  {
+   "s": "spread:a / b",
+   "r": {
+    "a": "A",
+    "op": "/",
+    "b": "B"
+   }
+  },
+  {
+   "s": "2 * AAPL",
+   "r": {
+    "a": "2",
+    "op": "*",
+    "b": "AAPL"
+   }
+  },
+  {
+   "s": "AAPL*2",
+   "r": {
+    "a": "AAPL",
+    "op": "*",
+    "b": "2"
+   }
+  },
+  {
+   "s": "ETH/BTC",
+   "r": {
+    "a": "ETH",
+    "op": "/",
+    "b": "BTC"
+   }
+  },
+  {
+   "s": "A / B / C",
+   "r": {
+    "a": "A",
+    "op": "/",
+    "b": "B / C"
+   }
+  },
+  {
+   "s": "",
+   "r": null
+  },
+  {
+   "s": "  btcusdt / 2 ",
+   "r": {
+    "a": "BTCUSDT",
+    "op": "/",
+    "b": "2"
+   }
+  },
+  {
+   "s": "X + Y",
+   "r": {
+    "a": "X",
+    "op": "+",
+    "b": "Y"
+   }
+  },
+  {
+   "s": "XAU/USD",
+   "r": null
+  }
+ ],
+ "resolve": [
+  {
+   "s": "btc",
+   "r": {
+    "ok": {
+     "id": "BINANCE:BTCUSDT",
+     "exchange": "BINANCE",
+     "ticker": "BTCUSDT"
+    }
+   }
+  },
+  {
+   "s": "BTCUSDT",
+   "r": {
+    "ok": {
+     "id": "BINANCE:BTCUSDT",
+     "exchange": "BINANCE",
+     "ticker": "BTCUSDT"
+    }
+   }
+  },
+  {
+   "s": "eth",
+   "r": {
+    "ok": {
+     "id": "BINANCE:ETHUSDT",
+     "exchange": "BINANCE",
+     "ticker": "ETHUSDT"
+    }
+   }
+  },
+  {
+   "s": "ETH-USD",
+   "r": {
+    "ok": {
+     "id": "COINBASE:ETH-USD",
+     "exchange": "COINBASE",
+     "ticker": "ETH-USD"
+    }
+   }
+  },
+  {
+   "s": "SOL/USDT",
+   "r": {
+    "ok": {
+     "id": "US:SOL/USDT",
+     "exchange": "US",
+     "ticker": "SOL/USDT"
+    }
+   }
+  },
+  {
+   "s": "AAPL",
+   "r": {
+    "ok": {
+     "id": "US:AAPL",
+     "exchange": "US",
+     "ticker": "AAPL"
+    }
+   }
+  },
+  {
+   "s": "aapl",
+   "r": {
+    "ok": {
+     "id": "US:AAPL",
+     "exchange": "US",
+     "ticker": "AAPL"
+    }
+   }
+  },
+  {
+   "s": "EURUSD",
+   "r": {
+    "ok": {
+     "id": "FX:EURUSD",
+     "exchange": "FX",
+     "ticker": "EURUSD"
+    }
+   }
+  },
+  {
+   "s": "eur/usd",
+   "r": {
+    "ok": {
+     "id": "FX:EURUSD",
+     "exchange": "FX",
+     "ticker": "EURUSD"
+    }
+   }
+  },
+  {
+   "s": "XAUUSD",
+   "r": {
+    "ok": {
+     "id": "FX:XAUUSD",
+     "exchange": "FX",
+     "ticker": "XAUUSD"
+    }
+   }
+  },
+  {
+   "s": "xau/usd",
+   "r": {
+    "ok": {
+     "id": "FX:XAUUSD",
+     "exchange": "FX",
+     "ticker": "XAUUSD"
+    }
+   }
+  },
+  {
+   "s": "GOLD",
+   "r": {
+    "ok": {
+     "id": "US:GOLD",
+     "exchange": "US",
+     "ticker": "GOLD"
+    }
+   }
+  },
+  {
+   "s": "^FTSE",
+   "r": {
+    "ok": {
+     "id": "YAHOO:^FTSE",
+     "exchange": "YAHOO",
+     "ticker": "^FTSE"
+    }
+   }
+  },
+  {
+   "s": "YAHOO:^FTSE",
+   "r": {
+    "ok": {
+     "id": "YAHOO:^FTSE",
+     "exchange": "YAHOO",
+     "ticker": "^FTSE"
+    }
+   }
+  },
+  {
+   "s": "VOD.L",
+   "r": {
+    "ok": {
+     "id": "YAHOO:VOD.L",
+     "exchange": "YAHOO",
+     "ticker": "VOD.L"
+    }
+   }
+  },
+  {
+   "s": "BRK-B",
+   "r": {
+    "ok": {
+     "id": "US:BRK-B",
+     "exchange": "US",
+     "ticker": "BRK-B"
+    }
+   }
+  },
+  {
+   "s": "YAHOO:GC=F",
+   "r": {
+    "ok": {
+     "id": "YAHOO:GC=F",
+     "exchange": "YAHOO",
+     "ticker": "GC=F"
+    }
+   }
+  },
+  {
+   "s": "NQ",
+   "r": {
+    "ok": {
+     "id": "CME:NQ1!",
+     "exchange": "CME",
+     "ticker": "NQ1!"
+    }
+   }
+  },
+  {
+   "s": "nq1!",
+   "r": {
+    "ok": {
+     "id": "CME:NQ1!",
+     "exchange": "CME",
+     "ticker": "NQ1!"
+    }
+   }
+  },
+  {
+   "s": "MNQ",
+   "r": {
+    "ok": {
+     "id": "CME:MNQ1!",
+     "exchange": "CME",
+     "ticker": "MNQ1!"
+    }
+   }
+  },
+  {
+   "s": "CME_MINI:NQ1!",
+   "r": {
+    "ok": {
+     "id": "CME:NQ1!",
+     "exchange": "CME",
+     "ticker": "NQ1!"
+    }
+   }
+  },
+  {
+   "s": "CME:ES1!",
+   "r": {
+    "ok": {
+     "id": "CME:ES1!",
+     "exchange": "CME",
+     "ticker": "ES1!"
+    }
+   }
+  },
+  {
+   "s": "ES",
+   "r": {
+    "ok": {
+     "id": "CME:ES1!",
+     "exchange": "CME",
+     "ticker": "ES1!"
+    }
+   }
+  },
+  {
+   "s": "MES1!",
+   "r": {
+    "ok": {
+     "id": "CME:MES1!",
+     "exchange": "CME",
+     "ticker": "MES1!"
+    }
+   }
+  },
+  {
+   "s": "BTCUSDT/ETHUSDT",
+   "r": {
+    "ok": {
+     "id": "SPREAD:BINANCE:BTCUSDT / BINANCE:ETHUSDT",
+     "exchange": "SPREAD",
+     "ticker": "BINANCE:BTCUSDT / BINANCE:ETHUSDT"
+    }
+   }
+  },
+  {
+   "s": "BTC/USDT",
+   "r": {
+    "ok": {
+     "id": "BINANCE:BTCUSDT",
+     "exchange": "BINANCE",
+     "ticker": "BTCUSDT"
+    }
+   }
+  },
+  {
+   "s": "ETH/BTC",
+   "r": {
+    "ok": {
+     "id": "SPREAD:BINANCE:ETHUSDT / BINANCE:BTCUSDT",
+     "exchange": "SPREAD",
+     "ticker": "BINANCE:ETHUSDT / BINANCE:BTCUSDT"
+    }
+   }
+  },
+  {
+   "s": "2 * AAPL",
+   "r": {
+    "ok": {
+     "id": "SPREAD:2 * US:AAPL",
+     "exchange": "SPREAD",
+     "ticker": "2 * US:AAPL"
+    }
+   }
+  },
+  {
+   "s": "1 / 2",
+   "r": {
+    "error": "A spread needs at least one symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "A/B/C / D",
+   "r": {
+    "error": "Use one operator per spread, like BTCUSDT/ETHUSDT",
+    "status": 400
+   }
+  },
+  {
+   "s": "",
+   "r": {
+    "error": "Empty symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "  ",
+   "r": {
+    "error": "Empty symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "BINANCE:BTC&interval=1m",
+   "r": {
+    "error": "\"BINANCE:BTC&interval=1m\" isn't a symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "US:../../admin",
+   "r": {
+    "error": "Use one operator per spread, like BTCUSDT/ETHUSDT",
+    "status": 400
+   }
+  },
+  {
+   "s": ":::",
+   "r": {
+    "error": "\":::\" isn't a symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "A B?C",
+   "r": {
+    "error": "\"A B?C\" isn't a symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+   "r": {
+    "error": "\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\" isn't a symbol",
+    "status": 400
+   }
+  },
+  {
+   "s": "csv:my_file",
+   "r": {
+    "ok": {
+     "id": "CSV:MY_FILE",
+     "exchange": "CSV",
+     "ticker": "MY_FILE"
+    }
+   }
+  },
+  {
+   "s": "COINBASE:BTC-USD",
+   "r": {
+    "ok": {
+     "id": "COINBASE:BTC-USD",
+     "exchange": "COINBASE",
+     "ticker": "BTC-USD"
+    }
+   }
+  },
+  {
+   "s": "KRAKEN:XBTUSD",
+   "r": {
+    "ok": {
+     "id": "KRAKEN:XBTUSD",
+     "exchange": "KRAKEN",
+     "ticker": "XBTUSD"
+    }
+   }
+  },
+  {
+   "s": "SOL-USD",
+   "r": {
+    "ok": {
+     "id": "COINBASE:SOL-USD",
+     "exchange": "COINBASE",
+     "ticker": "SOL-USD"
+    }
+   }
+  },
+  {
+   "s": "DOGE",
+   "r": {
+    "ok": {
+     "id": "US:DOGE",
+     "exchange": "US",
+     "ticker": "DOGE"
+    }
+   }
+  },
+  {
+   "s": "AB-USD",
+   "r": {
+    "ok": {
+     "id": "COINBASE:AB-USD",
+     "exchange": "COINBASE",
+     "ticker": "AB-USD"
+    }
+   }
+  },
+  {
+   "s": "spy",
+   "r": {
+    "ok": {
+     "id": "US:SPY",
+     "exchange": "US",
+     "ticker": "SPY"
+    }
+   }
+  },
+  {
+   "s": "AAPL - MSFT",
+   "r": {
+    "ok": {
+     "id": "SPREAD:US:AAPL - US:MSFT",
+     "exchange": "SPREAD",
+     "ticker": "US:AAPL - US:MSFT"
+    }
+   }
+  }
+ ],
+ "krakenPairMap": {
+  "BTCUSD": "XBTUSD",
+  "DOGEUSD": "XDGUSD",
+  "SOLUSD": "SOLUSD",
+  "ETHEUR": "ETHEUR"
+ },
+ "parseYahoo": {
+  "daily": [
+   {
+    "time": 1760400000,
+    "open": 101,
+    "high": 102,
+    "low": 100,
+    "close": 101.5,
+    "volume": 1001
+   },
+   {
+    "time": 1760486400,
+    "open": 104,
+    "high": 105,
+    "low": 103,
+    "close": 104.5,
+    "volume": 1004
+   },
+   {
+    "time": 1760572800,
+    "open": 108,
+    "high": 109,
+    "low": 107,
+    "close": 108.5,
+    "volume": 1008
+   },
+   {
+    "time": 1760659200,
+    "open": 112,
+    "high": 113,
+    "low": 111,
+    "close": 112.5,
+    "volume": 1012
+   },
+   {
+    "time": 1760745600,
+    "open": 115,
+    "high": 116,
+    "low": 114,
+    "close": 115.5,
+    "volume": 1015
+   },
+   {
+    "time": 1760832000,
+    "open": 119,
+    "high": 120,
+    "low": 118,
+    "close": 119.5,
+    "volume": 1019
+   },
+   {
+    "time": 1760918400,
+    "open": 122,
+    "high": 123,
+    "low": 121,
+    "close": 122.5,
+    "volume": 1022
+   },
+   {
+    "time": 1761004800,
+    "open": 125,
+    "high": 126,
+    "low": 124,
+    "close": 125.5,
+    "volume": 1025
+   },
+   {
+    "time": 1761091200,
+    "open": 200,
+    "high": 201,
+    "low": 199,
+    "close": 200.5,
+    "volume": 5
+   }
+  ],
+  "intraday": [
+   {
+    "time": 1760450400,
+    "open": 100,
+    "high": 101,
+    "low": 99,
+    "close": 100.5,
+    "volume": 1000
+   },
+   {
+    "time": 1760475600,
+    "open": 101,
+    "high": 102,
+    "low": 100,
+    "close": 101.5,
+    "volume": 1001
+   },
+   {
+    "time": 1760500800,
+    "open": 102,
+    "high": 103,
+    "low": 101,
+    "close": 102.5,
+    "volume": 1002
+   },
+   {
+    "time": 1760551200,
+    "open": 104,
+    "high": 105,
+    "low": 103,
+    "close": 104.5,
+    "volume": 1004
+   },
+   {
+    "time": 1760601600,
+    "open": 106,
+    "high": 107,
+    "low": 105,
+    "close": 106.5,
+    "volume": 1006
+   },
+   {
+    "time": 1760626800,
+    "open": 107,
+    "high": 108,
+    "low": 106,
+    "close": 107.5,
+    "volume": 0
+   },
+   {
+    "time": 1760652000,
+    "open": 108,
+    "high": 109,
+    "low": 107,
+    "close": 108.5,
+    "volume": 1008
+   },
+   {
+    "time": 1760677200,
+    "open": 109,
+    "high": 110,
+    "low": 108,
+    "close": 109.5,
+    "volume": 1009
+   },
+   {
+    "time": 1760702400,
+    "open": 110,
+    "high": 111,
+    "low": 109,
+    "close": 110.5,
+    "volume": 1010
+   },
+   {
+    "time": 1760727600,
+    "open": 111,
+    "high": 112,
+    "low": 110,
+    "close": 111.5,
+    "volume": 1011
+   },
+   {
+    "time": 1760752800,
+    "open": 112,
+    "high": 113,
+    "low": 111,
+    "close": 112.5,
+    "volume": 1012
+   },
+   {
+    "time": 1760778000,
+    "open": 113,
+    "high": 114,
+    "low": 112,
+    "close": 113.5,
+    "volume": 1013
+   },
+   {
+    "time": 1760803200,
+    "open": 114,
+    "high": 115,
+    "low": 113,
+    "close": 114.5,
+    "volume": 1014
+   },
+   {
+    "time": 1760828400,
+    "open": 115,
+    "high": 116,
+    "low": 114,
+    "close": 115.5,
+    "volume": 1015
+   },
+   {
+    "time": 1760853600,
+    "open": 116,
+    "high": 117,
+    "low": 115,
+    "close": 116.5,
+    "volume": 1016
+   },
+   {
+    "time": 1760878800,
+    "open": 117,
+    "high": 118,
+    "low": 116,
+    "close": 117.5,
+    "volume": 1017
+   },
+   {
+    "time": 1760904000,
+    "open": 118,
+    "high": 119,
+    "low": 117,
+    "close": 118.5,
+    "volume": 1018
+   },
+   {
+    "time": 1760929200,
+    "open": 119,
+    "high": 120,
+    "low": 118,
+    "close": 119.5,
+    "volume": 1019
+   },
+   {
+    "time": 1760954400,
+    "open": 120,
+    "high": 121,
+    "low": 119,
+    "close": 120.5,
+    "volume": 1020
+   },
+   {
+    "time": 1760979600,
+    "open": 121,
+    "high": 122,
+    "low": 120,
+    "close": 121.5,
+    "volume": 1021
+   },
+   {
+    "time": 1761004800,
+    "open": 122,
+    "high": 123,
+    "low": 121,
+    "close": 122.5,
+    "volume": 1022
+   },
+   {
+    "time": 1761030000,
+    "open": 123,
+    "high": 124,
+    "low": 122,
+    "close": 123.5,
+    "volume": 1023
+   },
+   {
+    "time": 1761055200,
+    "open": 124,
+    "high": 125,
+    "low": 123,
+    "close": 124.5,
+    "volume": 1024
+   },
+   {
+    "time": 1761080400,
+    "open": 125,
+    "high": 126,
+    "low": 124,
+    "close": 125.5,
+    "volume": 1025
+   },
+   {
+    "time": 1761105600,
+    "open": 126,
+    "high": 127,
+    "low": 125,
+    "close": 126.5,
+    "volume": 1026
+   },
+   {
+    "time": 1761130800,
+    "open": 127,
+    "high": 128,
+    "low": 126,
+    "close": 127.5,
+    "volume": 1027
+   },
+   {
+    "time": 1761156000,
+    "open": 128,
+    "high": 129,
+    "low": 127,
+    "close": 128.5,
+    "volume": 1028
+   },
+   {
+    "time": 1761181200,
+    "open": 200,
+    "high": 201,
+    "low": 199,
+    "close": 200.5,
+    "volume": 5
+   }
+  ],
+  "noData": "No data found, symbol may be delisted",
+  "empty": "Yahoo returned no data for that symbol"
+ },
+ "nyWallToUtc": [
+  {
+   "ms": 1791970200000,
+   "r": 1791984600000
+  },
+  {
+   "ms": 1768383000000,
+   "r": 1768401000000
+  },
+  {
+   "ms": 1772962200000,
+   "r": 1772976600000
+  },
+  {
+   "ms": 1793496600000,
+   "r": 1793511000000
+  },
+  {
+   "ms": 1793548740000,
+   "r": 1793566740000
+  },
+  {
+   "ms": 1783206000000,
+   "r": 1783220400000
+  }
+ ],
+ "frontContract": [
+  {
+   "root": "NQ",
+   "ms": 1792065600000,
+   "r": "NQZ6"
+  },
+  {
+   "root": "NQ",
+   "ms": 1796817600000,
+   "r": "NQZ6"
+  },
+  {
+   "root": "NQ",
+   "ms": 1796911200000,
+   "r": "NQH7"
+  },
+  {
+   "root": "NQ",
+   "ms": 1804852800000,
+   "r": "NQM7"
+  },
+  {
+   "root": "NQ",
+   "ms": 1767355200000,
+   "r": "NQH6"
+  },
+  {
+   "root": "NQ",
+   "ms": 1893452400000,
+   "r": "NQH0"
+  },
+  {
+   "root": "NQ",
+   "ms": 1781184540000,
+   "r": "NQM6"
+  },
+  {
+   "root": "NQ",
+   "ms": 1781184660000,
+   "r": "NQU6"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1792065600000,
+   "r": "MNQZ6"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1796817600000,
+   "r": "MNQZ6"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1796911200000,
+   "r": "MNQH7"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1804852800000,
+   "r": "MNQM7"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1767355200000,
+   "r": "MNQH6"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1893452400000,
+   "r": "MNQH0"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1781184540000,
+   "r": "MNQM6"
+  },
+  {
+   "root": "MNQ",
+   "ms": 1781184660000,
+   "r": "MNQU6"
+  },
+  {
+   "root": "ES",
+   "ms": 1792065600000,
+   "r": "ESZ6"
+  },
+  {
+   "root": "ES",
+   "ms": 1796817600000,
+   "r": "ESZ6"
+  },
+  {
+   "root": "ES",
+   "ms": 1796911200000,
+   "r": "ESH7"
+  },
+  {
+   "root": "ES",
+   "ms": 1804852800000,
+   "r": "ESM7"
+  },
+  {
+   "root": "ES",
+   "ms": 1767355200000,
+   "r": "ESH6"
+  },
+  {
+   "root": "ES",
+   "ms": 1893452400000,
+   "r": "ESH0"
+  },
+  {
+   "root": "ES",
+   "ms": 1781184540000,
+   "r": "ESM6"
+  },
+  {
+   "root": "ES",
+   "ms": 1781184660000,
+   "r": "ESU6"
+  }
+ ],
+ "inUsSession": [
+  [
+   1772755200,
+   false
+  ],
+  [
+   1772757000,
+   false
+  ],
+  [
+   1772758800,
+   false
+  ],
+  [
+   1772760600,
+   false
+  ],
+  [
+   1772762400,
+   false
+  ],
+  [
+   1772764200,
+   false
+  ],
+  [
+   1772766000,
+   false
+  ],
+  [
+   1772767800,
+   false
+  ],
+  [
+   1772769600,
+   false
+  ],
+  [
+   1772771400,
+   false
+  ],
+  [
+   1772773200,
+   false
+  ],
+  [
+   1772775000,
+   false
+  ],
+  [
+   1772776800,
+   false
+  ],
+  [
+   1772778600,
+   false
+  ],
+  [
+   1772780400,
+   false
+  ],
+  [
+   1772782200,
+   false
+  ],
+  [
+   1772784000,
+   false
+  ],
+  [
+   1772785800,
+   false
+  ],
+  [
+   1772787600,
+   false
+  ],
+  [
+   1772789400,
+   false
+  ],
+  [
+   1772791200,
+   false
+  ],
+  [
+   1772793000,
+   false
+  ],
+  [
+   1772794800,
+   false
+  ],
+  [
+   1772796600,
+   false
+  ],
+  [
+   1772798400,
+   false
+  ],
+  [
+   1772800200,
+   false
+  ],
+  [
+   1772802000,
+   false
+  ],
+  [
+   1772803800,
+   false
+  ],
+  [
+   1772805600,
+   false
+  ],
+  [
+   1772807400,
+   true
+  ],
+  [
+   1772809200,
+   true
+  ],
+  [
+   1772811000,
+   true
+  ],
+  [
+   1772812800,
+   true
+  ],
+  [
+   1772814600,
+   true
+  ],
+  [
+   1772816400,
+   true
+  ],
+  [
+   1772818200,
+   true
+  ],
+  [
+   1772820000,
+   true
+  ],
+  [
+   1772821800,
+   true
+  ],
+  [
+   1772823600,
+   true
+  ],
+  [
+   1772825400,
+   true
+  ],
+  [
+   1772827200,
+   true
+  ],
+  [
+   1772829000,
+   true
+  ],
+  [
+   1772830800,
+   false
+  ],
+  [
+   1772832600,
+   false
+  ],
+  [
+   1772834400,
+   false
+  ],
+  [
+   1772836200,
+   false
+  ],
+  [
+   1772838000,
+   false
+  ],
+  [
+   1772839800,
+   false
+  ],
+  [
+   1772841600,
+   false
+  ],
+  [
+   1772843400,
+   false
+  ],
+  [
+   1772845200,
+   false
+  ],
+  [
+   1772847000,
+   false
+  ],
+  [
+   1772848800,
+   false
+  ],
+  [
+   1772850600,
+   false
+  ],
+  [
+   1772852400,
+   false
+  ],
+  [
+   1772854200,
+   false
+  ],
+  [
+   1772856000,
+   false
+  ],
+  [
+   1772857800,
+   false
+  ],
+  [
+   1772859600,
+   false
+  ],
+  [
+   1772861400,
+   false
+  ],
+  [
+   1772863200,
+   false
+  ],
+  [
+   1772865000,
+   false
+  ],
+  [
+   1772866800,
+   false
+  ],
+  [
+   1772868600,
+   false
+  ],
+  [
+   1772870400,
+   false
+  ],
+  [
+   1772872200,
+   false
+  ],
+  [
+   1772874000,
+   false
+  ],
+  [
+   1772875800,
+   false
+  ],
+  [
+   1772877600,
+   false
+  ],
+  [
+   1772879400,
+   false
+  ],
+  [
+   1772881200,
+   false
+  ],
+  [
+   1772883000,
+   false
+  ],
+  [
+   1772884800,
+   false
+  ],
+  [
+   1772886600,
+   false
+  ],
+  [
+   1772888400,
+   false
+  ],
+  [
+   1772890200,
+   false
+  ],
+  [
+   1772892000,
+   false
+  ],
+  [
+   1772893800,
+   true
+  ],
+  [
+   1772895600,
+   true
+  ],
+  [
+   1772897400,
+   true
+  ],
+  [
+   1772899200,
+   true
+  ],
+  [
+   1772901000,
+   true
+  ],
+  [
+   1772902800,
+   true
+  ],
+  [
+   1772904600,
+   true
+  ],
+  [
+   1772906400,
+   true
+  ],
+  [
+   1772908200,
+   true
+  ],
+  [
+   1772910000,
+   true
+  ],
+  [
+   1772911800,
+   true
+  ],
+  [
+   1772913600,
+   true
+  ],
+  [
+   1772915400,
+   true
+  ],
+  [
+   1772917200,
+   false
+  ],
+  [
+   1772919000,
+   false
+  ],
+  [
+   1772920800,
+   false
+  ],
+  [
+   1772922600,
+   false
+  ],
+  [
+   1772924400,
+   false
+  ],
+  [
+   1772926200,
+   false
+  ],
+  [
+   1772928000,
+   false
+  ],
+  [
+   1772929800,
+   false
+  ],
+  [
+   1772931600,
+   false
+  ],
+  [
+   1772933400,
+   false
+  ],
+  [
+   1772935200,
+   false
+  ],
+  [
+   1772937000,
+   false
+  ],
+  [
+   1772938800,
+   false
+  ],
+  [
+   1772940600,
+   false
+  ],
+  [
+   1772942400,
+   false
+  ],
+  [
+   1772944200,
+   false
+  ],
+  [
+   1772946000,
+   false
+  ],
+  [
+   1772947800,
+   false
+  ],
+  [
+   1772949600,
+   false
+  ],
+  [
+   1772951400,
+   false
+  ],
+  [
+   1772953200,
+   false
+  ],
+  [
+   1772955000,
+   false
+  ],
+  [
+   1772956800,
+   false
+  ],
+  [
+   1772958600,
+   false
+  ],
+  [
+   1772960400,
+   false
+  ],
+  [
+   1772962200,
+   false
+  ],
+  [
+   1772964000,
+   false
+  ],
+  [
+   1772965800,
+   false
+  ],
+  [
+   1772967600,
+   false
+  ],
+  [
+   1772969400,
+   false
+  ],
+  [
+   1772971200,
+   false
+  ],
+  [
+   1772973000,
+   false
+  ],
+  [
+   1772974800,
+   false
+  ],
+  [
+   1772976600,
+   true
+  ],
+  [
+   1772978400,
+   true
+  ],
+  [
+   1772980200,
+   true
+  ],
+  [
+   1772982000,
+   true
+  ],
+  [
+   1772983800,
+   true
+  ],
+  [
+   1772985600,
+   true
+  ],
+  [
+   1772987400,
+   true
+  ],
+  [
+   1772989200,
+   true
+  ],
+  [
+   1772991000,
+   true
+  ],
+  [
+   1772992800,
+   true
+  ],
+  [
+   1772994600,
+   true
+  ],
+  [
+   1772996400,
+   true
+  ],
+  [
+   1772998200,
+   true
+  ],
+  [
+   1773000000,
+   false
+  ],
+  [
+   1773001800,
+   false
+  ],
+  [
+   1773003600,
+   false
+  ],
+  [
+   1773005400,
+   false
+  ],
+  [
+   1773007200,
+   false
+  ],
+  [
+   1773009000,
+   false
+  ],
+  [
+   1773010800,
+   false
+  ],
+  [
+   1773012600,
+   false
+  ],
+  [
+   1773014400,
+   false
+  ],
+  [
+   1773016200,
+   false
+  ],
+  [
+   1773018000,
+   false
+  ],
+  [
+   1773019800,
+   false
+  ],
+  [
+   1773021600,
+   false
+  ],
+  [
+   1773023400,
+   false
+  ],
+  [
+   1773025200,
+   false
+  ],
+  [
+   1773027000,
+   false
+  ],
+  [
+   1773028800,
+   false
+  ],
+  [
+   1773030600,
+   false
+  ],
+  [
+   1773032400,
+   false
+  ],
+  [
+   1773034200,
+   false
+  ],
+  [
+   1773036000,
+   false
+  ],
+  [
+   1773037800,
+   false
+  ],
+  [
+   1773039600,
+   false
+  ],
+  [
+   1773041400,
+   false
+  ],
+  [
+   1773043200,
+   false
+  ],
+  [
+   1773045000,
+   false
+  ],
+  [
+   1773046800,
+   false
+  ],
+  [
+   1773048600,
+   false
+  ],
+  [
+   1773050400,
+   false
+  ],
+  [
+   1773052200,
+   false
+  ],
+  [
+   1773054000,
+   false
+  ],
+  [
+   1773055800,
+   false
+  ],
+  [
+   1773057600,
+   false
+  ],
+  [
+   1773059400,
+   false
+  ],
+  [
+   1773061200,
+   false
+  ],
+  [
+   1773063000,
+   true
+  ],
+  [
+   1773064800,
+   true
+  ],
+  [
+   1773066600,
+   true
+  ],
+  [
+   1773068400,
+   true
+  ],
+  [
+   1773070200,
+   true
+  ],
+  [
+   1773072000,
+   true
+  ],
+  [
+   1773073800,
+   true
+  ],
+  [
+   1773075600,
+   true
+  ],
+  [
+   1773077400,
+   true
+  ],
+  [
+   1773079200,
+   true
+  ],
+  [
+   1773081000,
+   true
+  ],
+  [
+   1773082800,
+   true
+  ],
+  [
+   1773084600,
+   true
+  ],
+  [
+   1773086400,
+   false
+  ],
+  [
+   1773088200,
+   false
+  ],
+  [
+   1773090000,
+   false
+  ],
+  [
+   1773091800,
+   false
+  ],
+  [
+   1773093600,
+   false
+  ],
+  [
+   1773095400,
+   false
+  ],
+  [
+   1773097200,
+   false
+  ],
+  [
+   1773099000,
+   false
+  ]
+ ],
+ "search": {
+  "btc": [
+   {
+    "symbol": "BINANCE:BTCUSDT",
+    "name": "BTC / USDT",
+    "type": "crypto",
+    "exchange": "Binance"
+   }
+  ],
+  "MNQ": [
+   {
+    "symbol": "CME:MNQ1!",
+    "name": "Micro E-mini Nasdaq-100 futures",
+    "type": "futures",
+    "exchange": "CME"
+   }
+  ],
+  "ES": [
+   {
+    "symbol": "CME:ES1!",
+    "name": "E-mini S&P 500 futures",
+    "type": "futures",
+    "exchange": "CME"
+   }
+  ],
+  "gold": [
+   {
+    "symbol": "FX:XAUUSD",
+    "name": "Gold / USD",
+    "type": "commodity",
+    "exchange": "FX"
+   }
+  ],
+  "eur": [
+   {
+    "symbol": "FX:EURUSD",
+    "name": "EUR / USD",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURGBP",
+    "name": "EUR / GBP",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURJPY",
+    "name": "EUR / JPY",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURCHF",
+    "name": "EUR / CHF",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURCAD",
+    "name": "EUR / CAD",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURAUD",
+    "name": "EUR / AUD",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURNZD",
+    "name": "EUR / NZD",
+    "type": "forex",
+    "exchange": "FX"
+   }
+  ],
+  "xa": [
+   {
+    "symbol": "FX:XAUUSD",
+    "name": "Gold / USD",
+    "type": "commodity",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:XAGUSD",
+    "name": "Silver / USD",
+    "type": "commodity",
+    "exchange": "FX"
+   }
+  ],
+  "cme:nq1": [
+   {
+    "symbol": "CME:NQ1!",
+    "name": "E-mini Nasdaq-100 futures",
+    "type": "futures",
+    "exchange": "CME"
+   }
+  ],
+  "nasdaq": [
+   {
+    "symbol": "CME:NQ1!",
+    "name": "E-mini Nasdaq-100 futures",
+    "type": "futures",
+    "exchange": "CME"
+   },
+   {
+    "symbol": "CME:MNQ1!",
+    "name": "Micro E-mini Nasdaq-100 futures",
+    "type": "futures",
+    "exchange": "CME"
+   }
+  ],
+  "": [],
+  "e": [
+   {
+    "symbol": "BINANCE:ETHUSDT",
+    "name": "ETH / USDT",
+    "type": "crypto",
+    "exchange": "Binance"
+   },
+   {
+    "symbol": "FX:EURUSD",
+    "name": "EUR / USD",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURGBP",
+    "name": "EUR / GBP",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURJPY",
+    "name": "EUR / JPY",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURCHF",
+    "name": "EUR / CHF",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURCAD",
+    "name": "EUR / CAD",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURAUD",
+    "name": "EUR / AUD",
+    "type": "forex",
+    "exchange": "FX"
+   },
+   {
+    "symbol": "FX:EURNZD",
+    "name": "EUR / NZD",
+    "type": "forex",
+    "exchange": "FX"
+   }
+  ]
+ },
+ "parseRss": [
+  {
+   "title": "Bitcoin & Ether rally",
+   "url": "https://x.test/a",
+   "source": "Test",
+   "time": 1793268000000,
+   "summary": "BTC rose \"fast\" 'today'"
+  },
+  {
+   "title": "No date",
+   "url": "https://x.test/b",
+   "source": "Test",
+   "time": null,
+   "summary": "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word "
+  },
+  {
+   "title": "Solana 'news'",
+   "url": "https://x.test/d",
+   "source": "Test",
+   "time": 1793210712000,
+   "summary": "Short"
+  }
+ ],
+ "parseBars": {
+  "alpaca": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 59997,
+      "high": 60010,
+      "low": 59990,
+      "close": 60000,
+      "volume": 1
+     },
+     {
+      "time": 1791984660,
+      "open": 60000.49895846353,
+      "high": 60013.49895846353,
+      "low": 59993.49895846353,
+      "close": 60003.49895846353,
+      "volume": 2
+     },
+     {
+      "time": 1791984720,
+      "open": 60003.99167083234,
+      "high": 60016.99167083234,
+      "low": 59996.99167083234,
+      "close": 60006.99167083234,
+      "volume": 3
+     },
+     {
+      "time": 1791984780,
+      "open": 60007.47190662368,
+      "high": 60020.47190662368,
+      "low": 60000.47190662368,
+      "close": 60010.47190662368,
+      "volume": 4
+     },
+     {
+      "time": 1791984840,
+      "open": 60010.933466539755,
+      "high": 60023.933466539755,
+      "low": 60003.933466539755,
+      "close": 60013.933466539755,
+      "volume": 5
+     },
+     {
+      "time": 1791984900,
+      "open": 60014.37019796273,
+      "high": 60027.37019796273,
+      "low": 60007.37019796273,
+      "close": 60017.37019796273,
+      "volume": 6
+     },
+     {
+      "time": 1791984960,
+      "open": 60017.776010333066,
+      "high": 60030.776010333066,
+      "low": 60010.776010333066,
+      "close": 60020.776010333066,
+      "volume": 7
+     },
+     {
+      "time": 1791985020,
+      "open": 60021.14489037277,
+      "high": 60034.14489037277,
+      "low": 60014.14489037277,
+      "close": 60024.14489037277,
+      "volume": 1
+     },
+     {
+      "time": 1791985080,
+      "open": 60024.47091711543,
+      "high": 60037.47091711543,
+      "low": 60017.47091711543,
+      "close": 60027.47091711543,
+      "volume": 2
+     },
+     {
+      "time": 1791985140,
+      "open": 60027.74827670556,
+      "high": 60040.74827670556,
+      "low": 60020.74827670556,
+      "close": 60030.74827670556,
+      "volume": 3
+     },
+     {
+      "time": 1791985200,
+      "open": 60030.97127693021,
+      "high": 60043.97127693021,
+      "low": 60023.97127693021,
+      "close": 60033.97127693021,
+      "volume": 4
+     },
+     {
+      "time": 1791985260,
+      "open": 60034.13436144653,
+      "high": 60047.13436144653,
+      "low": 60027.13436144653,
+      "close": 60037.13436144653,
+      "volume": 5
+     },
+     {
+      "time": 1791985320,
+      "open": 60037.23212366975,
+      "high": 60050.23212366975,
+      "low": 60030.23212366975,
+      "close": 60040.23212366975,
+      "volume": 6
+     },
+     {
+      "time": 1791985380,
+      "open": 60040.2593202868,
+      "high": 60053.2593202868,
+      "low": 60033.2593202868,
+      "close": 60043.2593202868,
+      "volume": 7
+     },
+     {
+      "time": 1791985440,
+      "open": 60043.210884361884,
+      "high": 60056.210884361884,
+      "low": 60036.210884361884,
+      "close": 60046.210884361884,
+      "volume": 1
+     },
+     {
+      "time": 1791985500,
+      "open": 60046.08193800117,
+      "high": 60059.08193800117,
+      "low": 60039.08193800117,
+      "close": 60049.08193800117,
+      "volume": 2
+     },
+     {
+      "time": 1791985560,
+      "open": 60048.86780454498,
+      "high": 60061.86780454498,
+      "low": 60041.86780454498,
+      "close": 60051.86780454498,
+      "volume": 3
+     },
+     {
+      "time": 1791985620,
+      "open": 60051.564020257014,
+      "high": 60064.564020257014,
+      "low": 60044.564020257014,
+      "close": 60054.564020257014,
+      "volume": 4
+     },
+     {
+      "time": 1791985680,
+      "open": 60054.166345481375,
+      "high": 60067.166345481375,
+      "low": 60047.166345481375,
+      "close": 60057.166345481375,
+      "volume": 5
+     },
+     {
+      "time": 1791985740,
+      "open": 60056.67077523947,
+      "high": 60069.67077523947,
+      "low": 60049.67077523947,
+      "close": 60059.67077523947,
+      "volume": 6
+     },
+     {
+      "time": 1791985800,
+      "open": 60059.0735492404,
+      "high": 60072.0735492404,
+      "low": 60052.0735492404,
+      "close": 60062.0735492404,
+      "volume": 7
+     },
+     {
+      "time": 1791985860,
+      "open": 60061.3711612797,
+      "high": 60074.3711612797,
+      "low": 60054.3711612797,
+      "close": 60064.3711612797,
+      "volume": 1
+     },
+     {
+      "time": 1791985920,
+      "open": 60063.56036800307,
+      "high": 60076.56036800307,
+      "low": 60056.56036800307,
+      "close": 60066.56036800307,
+      "volume": 2
+     },
+     {
+      "time": 1791985980,
+      "open": 60065.638197013024,
+      "high": 60078.638197013024,
+      "low": 60058.638197013024,
+      "close": 60068.638197013024,
+      "volume": 3
+     },
+     {
+      "time": 1791986040,
+      "open": 60067.60195429836,
+      "high": 60080.60195429836,
+      "low": 60060.60195429836,
+      "close": 60070.60195429836,
+      "volume": 4
+     },
+     {
+      "time": 1791986100,
+      "open": 60069.44923096778,
+      "high": 60082.44923096778,
+      "low": 60062.44923096778,
+      "close": 60072.44923096778,
+      "volume": 5
+     },
+     {
+      "time": 1791986160,
+      "open": 60071.17790927086,
+      "high": 60084.17790927086,
+      "low": 60064.17790927086,
+      "close": 60074.17790927086,
+      "volume": 6
+     },
+     {
+      "time": 1791986220,
+      "open": 60072.78616789133,
+      "high": 60085.78616789133,
+      "low": 60065.78616789133,
+      "close": 60075.78616789133,
+      "volume": 7
+     },
+     {
+      "time": 1791986280,
+      "open": 60074.27248649942,
+      "high": 60087.27248649942,
+      "low": 60067.27248649942,
+      "close": 60077.27248649942,
+      "volume": 1
+     },
+     {
+      "time": 1791986340,
+      "open": 60075.63564955188,
+      "high": 60088.63564955188,
+      "low": 60068.63564955188,
+      "close": 60078.63564955188,
+      "volume": 2
+     },
+     {
+      "time": 1791986400,
+      "open": 60076.8747493302,
+      "high": 60089.8747493302,
+      "low": 60069.8747493302,
+      "close": 60079.8747493302,
+      "volume": 3
+     },
+     {
+      "time": 1791986460,
+      "open": 60077.98918820947,
+      "high": 60090.98918820947,
+      "low": 60070.98918820947,
+      "close": 60080.98918820947,
+      "volume": 4
+     },
+     {
+      "time": 1791986520,
+      "open": 60078.978680152075,
+      "high": 60091.978680152075,
+      "low": 60071.978680152075,
+      "close": 60081.978680152075,
+      "volume": 5
+     },
+     {
+      "time": 1791986580,
+      "open": 60079.843251422695,
+      "high": 60092.843251422695,
+      "low": 60072.843251422695,
+      "close": 60082.843251422695,
+      "volume": 6
+     },
+     {
+      "time": 1791986640,
+      "open": 60080.583240522625,
+      "high": 60093.583240522625,
+      "low": 60073.583240522625,
+      "close": 60083.583240522625,
+      "volume": 7
+     },
+     {
+      "time": 1791986700,
+      "open": 60081.19929734369,
+      "high": 60094.19929734369,
+      "low": 60074.19929734369,
+      "close": 60084.19929734369,
+      "volume": 1
+     },
+     {
+      "time": 1791986760,
+      "open": 60081.69238154391,
+      "high": 60094.69238154391,
+      "low": 60074.69238154391,
+      "close": 60084.69238154391,
+      "volume": 2
+     },
+     {
+      "time": 1791986820,
+      "open": 60082.06376014876,
+      "high": 60095.06376014876,
+      "low": 60075.06376014876,
+      "close": 60085.06376014876,
+      "volume": 3
+     },
+     {
+      "time": 1791986880,
+      "open": 60082.31500438437,
+      "high": 60095.31500438437,
+      "low": 60075.31500438437,
+      "close": 60085.31500438437,
+      "volume": 4
+     },
+     {
+      "time": 1791986940,
+      "open": 60082.447985750194,
+      "high": 60095.447985750194,
+      "low": 60075.447985750194,
+      "close": 60085.447985750194,
+      "volume": 5
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "tv": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 59997,
+      "high": 60010,
+      "low": 59990,
+      "close": 60000,
+      "volume": 1
+     },
+     {
+      "time": 1791984660,
+      "open": 60000.49895846353,
+      "high": 60013.49895846353,
+      "low": 59993.49895846353,
+      "close": 60003.49895846353,
+      "volume": 2
+     },
+     {
+      "time": 1791984720,
+      "open": 60003.99167083234,
+      "high": 60016.99167083234,
+      "low": 59996.99167083234,
+      "close": 60006.99167083234,
+      "volume": 3
+     },
+     {
+      "time": 1791984780,
+      "open": 60007.47190662368,
+      "high": 60020.47190662368,
+      "low": 60000.47190662368,
+      "close": 60010.47190662368,
+      "volume": 4
+     },
+     {
+      "time": 1791984840,
+      "open": 60010.933466539755,
+      "high": 60023.933466539755,
+      "low": 60003.933466539755,
+      "close": 60013.933466539755,
+      "volume": 5
+     },
+     {
+      "time": 1791984900,
+      "open": 60014.37019796273,
+      "high": 60027.37019796273,
+      "low": 60007.37019796273,
+      "close": 60017.37019796273,
+      "volume": 6
+     },
+     {
+      "time": 1791984960,
+      "open": 60017.776010333066,
+      "high": 60030.776010333066,
+      "low": 60010.776010333066,
+      "close": 60020.776010333066,
+      "volume": 7
+     },
+     {
+      "time": 1791985020,
+      "open": 60021.14489037277,
+      "high": 60034.14489037277,
+      "low": 60014.14489037277,
+      "close": 60024.14489037277,
+      "volume": 1
+     },
+     {
+      "time": 1791985080,
+      "open": 60024.47091711543,
+      "high": 60037.47091711543,
+      "low": 60017.47091711543,
+      "close": 60027.47091711543,
+      "volume": 2
+     },
+     {
+      "time": 1791985140,
+      "open": 60027.74827670556,
+      "high": 60040.74827670556,
+      "low": 60020.74827670556,
+      "close": 60030.74827670556,
+      "volume": 3
+     },
+     {
+      "time": 1791985200,
+      "open": 60030.97127693021,
+      "high": 60043.97127693021,
+      "low": 60023.97127693021,
+      "close": 60033.97127693021,
+      "volume": 4
+     },
+     {
+      "time": 1791985260,
+      "open": 60034.13436144653,
+      "high": 60047.13436144653,
+      "low": 60027.13436144653,
+      "close": 60037.13436144653,
+      "volume": 5
+     },
+     {
+      "time": 1791985320,
+      "open": 60037.23212366975,
+      "high": 60050.23212366975,
+      "low": 60030.23212366975,
+      "close": 60040.23212366975,
+      "volume": 6
+     },
+     {
+      "time": 1791985380,
+      "open": 60040.2593202868,
+      "high": 60053.2593202868,
+      "low": 60033.2593202868,
+      "close": 60043.2593202868,
+      "volume": 7
+     },
+     {
+      "time": 1791985440,
+      "open": 60043.210884361884,
+      "high": 60056.210884361884,
+      "low": 60036.210884361884,
+      "close": 60046.210884361884,
+      "volume": 1
+     },
+     {
+      "time": 1791985500,
+      "open": 60046.08193800117,
+      "high": 60059.08193800117,
+      "low": 60039.08193800117,
+      "close": 60049.08193800117,
+      "volume": 2
+     },
+     {
+      "time": 1791985560,
+      "open": 60048.86780454498,
+      "high": 60061.86780454498,
+      "low": 60041.86780454498,
+      "close": 60051.86780454498,
+      "volume": 3
+     },
+     {
+      "time": 1791985620,
+      "open": 60051.564020257014,
+      "high": 60064.564020257014,
+      "low": 60044.564020257014,
+      "close": 60054.564020257014,
+      "volume": 4
+     },
+     {
+      "time": 1791985680,
+      "open": 60054.166345481375,
+      "high": 60067.166345481375,
+      "low": 60047.166345481375,
+      "close": 60057.166345481375,
+      "volume": 5
+     },
+     {
+      "time": 1791985740,
+      "open": 60056.67077523947,
+      "high": 60069.67077523947,
+      "low": 60049.67077523947,
+      "close": 60059.67077523947,
+      "volume": 6
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "mt": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 59997,
+      "high": 60010,
+      "low": 59990,
+      "close": 60000,
+      "volume": 1
+     },
+     {
+      "time": 1791984660,
+      "open": 60000.49895846353,
+      "high": 60013.49895846353,
+      "low": 59993.49895846353,
+      "close": 60003.49895846353,
+      "volume": 2
+     },
+     {
+      "time": 1791984720,
+      "open": 60003.99167083234,
+      "high": 60016.99167083234,
+      "low": 59996.99167083234,
+      "close": 60006.99167083234,
+      "volume": 3
+     },
+     {
+      "time": 1791984780,
+      "open": 60007.47190662368,
+      "high": 60020.47190662368,
+      "low": 60000.47190662368,
+      "close": 60010.47190662368,
+      "volume": 4
+     },
+     {
+      "time": 1791984840,
+      "open": 60010.933466539755,
+      "high": 60023.933466539755,
+      "low": 60003.933466539755,
+      "close": 60013.933466539755,
+      "volume": 5
+     },
+     {
+      "time": 1791984900,
+      "open": 60014.37019796273,
+      "high": 60027.37019796273,
+      "low": 60007.37019796273,
+      "close": 60017.37019796273,
+      "volume": 6
+     },
+     {
+      "time": 1791984960,
+      "open": 60017.776010333066,
+      "high": 60030.776010333066,
+      "low": 60010.776010333066,
+      "close": 60020.776010333066,
+      "volume": 7
+     },
+     {
+      "time": 1791985020,
+      "open": 60021.14489037277,
+      "high": 60034.14489037277,
+      "low": 60014.14489037277,
+      "close": 60024.14489037277,
+      "volume": 1
+     },
+     {
+      "time": 1791985080,
+      "open": 60024.47091711543,
+      "high": 60037.47091711543,
+      "low": 60017.47091711543,
+      "close": 60027.47091711543,
+      "volume": 2
+     },
+     {
+      "time": 1791985140,
+      "open": 60027.74827670556,
+      "high": 60040.74827670556,
+      "low": 60020.74827670556,
+      "close": 60030.74827670556,
+      "volume": 3
+     },
+     {
+      "time": 1791985200,
+      "open": 60030.97127693021,
+      "high": 60043.97127693021,
+      "low": 60023.97127693021,
+      "close": 60033.97127693021,
+      "volume": 4
+     },
+     {
+      "time": 1791985260,
+      "open": 60034.13436144653,
+      "high": 60047.13436144653,
+      "low": 60027.13436144653,
+      "close": 60037.13436144653,
+      "volume": 5
+     },
+     {
+      "time": 1791985320,
+      "open": 60037.23212366975,
+      "high": 60050.23212366975,
+      "low": 60030.23212366975,
+      "close": 60040.23212366975,
+      "volume": 6
+     },
+     {
+      "time": 1791985380,
+      "open": 60040.2593202868,
+      "high": 60053.2593202868,
+      "low": 60033.2593202868,
+      "close": 60043.2593202868,
+      "volume": 7
+     },
+     {
+      "time": 1791985440,
+      "open": 60043.210884361884,
+      "high": 60056.210884361884,
+      "low": 60036.210884361884,
+      "close": 60046.210884361884,
+      "volume": 1
+     },
+     {
+      "time": 1791985500,
+      "open": 60046.08193800117,
+      "high": 60059.08193800117,
+      "low": 60039.08193800117,
+      "close": 60049.08193800117,
+      "volume": 2
+     },
+     {
+      "time": 1791985560,
+      "open": 60048.86780454498,
+      "high": 60061.86780454498,
+      "low": 60041.86780454498,
+      "close": 60051.86780454498,
+      "volume": 3
+     },
+     {
+      "time": 1791985620,
+      "open": 60051.564020257014,
+      "high": 60064.564020257014,
+      "low": 60044.564020257014,
+      "close": 60054.564020257014,
+      "volume": 4
+     },
+     {
+      "time": 1791985680,
+      "open": 60054.166345481375,
+      "high": 60067.166345481375,
+      "low": 60047.166345481375,
+      "close": 60057.166345481375,
+      "volume": 5
+     },
+     {
+      "time": 1791985740,
+      "open": 60056.67077523947,
+      "high": 60069.67077523947,
+      "low": 60049.67077523947,
+      "close": 60059.67077523947,
+      "volume": 6
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "tabs": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 60000,
+      "high": 60000,
+      "low": 60000,
+      "close": 60000,
+      "volume": 0
+     },
+     {
+      "time": 1791984660,
+      "open": 60003.49895846353,
+      "high": 60003.49895846353,
+      "low": 60003.49895846353,
+      "close": 60003.49895846353,
+      "volume": 0
+     },
+     {
+      "time": 1791984720,
+      "open": 60006.99167083234,
+      "high": 60006.99167083234,
+      "low": 60006.99167083234,
+      "close": 60006.99167083234,
+      "volume": 0
+     },
+     {
+      "time": 1791984780,
+      "open": 60010.47190662368,
+      "high": 60010.47190662368,
+      "low": 60010.47190662368,
+      "close": 60010.47190662368,
+      "volume": 0
+     },
+     {
+      "time": 1791984840,
+      "open": 60013.933466539755,
+      "high": 60013.933466539755,
+      "low": 60013.933466539755,
+      "close": 60013.933466539755,
+      "volume": 0
+     },
+     {
+      "time": 1791984900,
+      "open": 60017.37019796273,
+      "high": 60017.37019796273,
+      "low": 60017.37019796273,
+      "close": 60017.37019796273,
+      "volume": 0
+     },
+     {
+      "time": 1791984960,
+      "open": 60020.776010333066,
+      "high": 60020.776010333066,
+      "low": 60020.776010333066,
+      "close": 60020.776010333066,
+      "volume": 0
+     },
+     {
+      "time": 1791985020,
+      "open": 60024.14489037277,
+      "high": 60024.14489037277,
+      "low": 60024.14489037277,
+      "close": 60024.14489037277,
+      "volume": 0
+     },
+     {
+      "time": 1791985080,
+      "open": 60027.47091711543,
+      "high": 60027.47091711543,
+      "low": 60027.47091711543,
+      "close": 60027.47091711543,
+      "volume": 0
+     },
+     {
+      "time": 1791985140,
+      "open": 60030.74827670556,
+      "high": 60030.74827670556,
+      "low": 60030.74827670556,
+      "close": 60030.74827670556,
+      "volume": 0
+     },
+     {
+      "time": 1791985200,
+      "open": 60033.97127693021,
+      "high": 60033.97127693021,
+      "low": 60033.97127693021,
+      "close": 60033.97127693021,
+      "volume": 0
+     },
+     {
+      "time": 1791985260,
+      "open": 60037.13436144653,
+      "high": 60037.13436144653,
+      "low": 60037.13436144653,
+      "close": 60037.13436144653,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "quoted": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 59997,
+      "high": 60010,
+      "low": 59990,
+      "close": 60000,
+      "volume": 0
+     },
+     {
+      "time": 1791984660,
+      "open": 60000.49895846353,
+      "high": 60013.49895846353,
+      "low": 59993.49895846353,
+      "close": 60003.49895846353,
+      "volume": 0
+     },
+     {
+      "time": 1791984720,
+      "open": 60003.99167083234,
+      "high": 60016.99167083234,
+      "low": 59996.99167083234,
+      "close": 60006.99167083234,
+      "volume": 0
+     },
+     {
+      "time": 1791984780,
+      "open": 60007.47190662368,
+      "high": 60020.47190662368,
+      "low": 60000.47190662368,
+      "close": 60010.47190662368,
+      "volume": 0
+     },
+     {
+      "time": 1791984840,
+      "open": 60010.933466539755,
+      "high": 60023.933466539755,
+      "low": 60003.933466539755,
+      "close": 60013.933466539755,
+      "volume": 0
+     },
+     {
+      "time": 1791984900,
+      "open": 60014.37019796273,
+      "high": 60027.37019796273,
+      "low": 60007.37019796273,
+      "close": 60017.37019796273,
+      "volume": 0
+     },
+     {
+      "time": 1791984960,
+      "open": 60017.776010333066,
+      "high": 60030.776010333066,
+      "low": 60010.776010333066,
+      "close": 60020.776010333066,
+      "volume": 0
+     },
+     {
+      "time": 1791985020,
+      "open": 60021.14489037277,
+      "high": 60034.14489037277,
+      "low": 60014.14489037277,
+      "close": 60024.14489037277,
+      "volume": 0
+     },
+     {
+      "time": 1791985080,
+      "open": 60024.47091711543,
+      "high": 60037.47091711543,
+      "low": 60017.47091711543,
+      "close": 60027.47091711543,
+      "volume": 0
+     },
+     {
+      "time": 1791985140,
+      "open": 60027.74827670556,
+      "high": 60040.74827670556,
+      "low": 60020.74827670556,
+      "close": 60030.74827670556,
+      "volume": 0
+     },
+     {
+      "time": 1791985200,
+      "open": 60030.97127693021,
+      "high": 60043.97127693021,
+      "low": 60023.97127693021,
+      "close": 60033.97127693021,
+      "volume": 0
+     },
+     {
+      "time": 1791985260,
+      "open": 60034.13436144653,
+      "high": 60047.13436144653,
+      "low": 60027.13436144653,
+      "close": 60037.13436144653,
+      "volume": 0
+     },
+     {
+      "time": 1791985320,
+      "open": 60037.23212366975,
+      "high": 60050.23212366975,
+      "low": 60030.23212366975,
+      "close": 60040.23212366975,
+      "volume": 0
+     },
+     {
+      "time": 1791985380,
+      "open": 60040.2593202868,
+      "high": 60053.2593202868,
+      "low": 60033.2593202868,
+      "close": 60043.2593202868,
+      "volume": 0
+     },
+     {
+      "time": 1791985440,
+      "open": 60043.210884361884,
+      "high": 60056.210884361884,
+      "low": 60036.210884361884,
+      "close": 60046.210884361884,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "skips": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 59997,
+      "high": 60010,
+      "low": 59990,
+      "close": 60000,
+      "volume": 0
+     },
+     {
+      "time": 1791984660,
+      "open": 60000.49895846353,
+      "high": 60013.49895846353,
+      "low": 59993.49895846353,
+      "close": 60003.49895846353,
+      "volume": 0
+     },
+     {
+      "time": 1791984720,
+      "open": 60003.99167083234,
+      "high": 60016.99167083234,
+      "low": 59996.99167083234,
+      "close": 60006.99167083234,
+      "volume": 0
+     },
+     {
+      "time": 1791984840,
+      "open": 60010.933466539755,
+      "high": 60023.933466539755,
+      "low": 60003.933466539755,
+      "close": 60013.933466539755,
+      "volume": 0
+     },
+     {
+      "time": 1791984960,
+      "open": 60017.776010333066,
+      "high": 60030.776010333066,
+      "low": 60010.776010333066,
+      "close": 60020.776010333066,
+      "volume": 0
+     },
+     {
+      "time": 1791985020,
+      "open": 60021.14489037277,
+      "high": 60034.14489037277,
+      "low": 60014.14489037277,
+      "close": 60024.14489037277,
+      "volume": 0
+     },
+     {
+      "time": 1791985080,
+      "open": 60024.47091711543,
+      "high": 60037.47091711543,
+      "low": 60017.47091711543,
+      "close": 60027.47091711543,
+      "volume": 0
+     },
+     {
+      "time": 1791985140,
+      "open": 60027.74827670556,
+      "high": 60040.74827670556,
+      "low": 60020.74827670556,
+      "close": 60030.74827670556,
+      "volume": 0
+     },
+     {
+      "time": 1791985200,
+      "open": 60030.97127693021,
+      "high": 60043.97127693021,
+      "low": 60023.97127693021,
+      "close": 60033.97127693021,
+      "volume": 0
+     },
+     {
+      "time": 1791985260,
+      "open": 60034.13436144653,
+      "high": 60047.13436144653,
+      "low": 60027.13436144653,
+      "close": 60037.13436144653,
+      "volume": 0
+     },
+     {
+      "time": 1791985320,
+      "open": 60037.23212366975,
+      "high": 60050.23212366975,
+      "low": 60030.23212366975,
+      "close": 60040.23212366975,
+      "volume": 0
+     },
+     {
+      "time": 1791985380,
+      "open": 60040.2593202868,
+      "high": 60053.2593202868,
+      "low": 60033.2593202868,
+      "close": 60043.2593202868,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 2
+   }
+  },
+  "dupes": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791984600,
+      "open": 60000,
+      "high": 60000,
+      "low": 60000,
+      "close": 60000,
+      "volume": 0
+     },
+     {
+      "time": 1791984660,
+      "open": 60003.49895846353,
+      "high": 60003.49895846353,
+      "low": 60003.49895846353,
+      "close": 60003.49895846353,
+      "volume": 0
+     },
+     {
+      "time": 1791984720,
+      "open": 60006.99167083234,
+      "high": 60006.99167083234,
+      "low": 60006.99167083234,
+      "close": 60006.99167083234,
+      "volume": 0
+     },
+     {
+      "time": 1791984780,
+      "open": 60010.47190662368,
+      "high": 60010.47190662368,
+      "low": 60010.47190662368,
+      "close": 60010.47190662368,
+      "volume": 0
+     },
+     {
+      "time": 1791984840,
+      "open": 60013.933466539755,
+      "high": 60013.933466539755,
+      "low": 60013.933466539755,
+      "close": 60013.933466539755,
+      "volume": 0
+     },
+     {
+      "time": 1791984900,
+      "open": 60017.37019796273,
+      "high": 60017.37019796273,
+      "low": 60017.37019796273,
+      "close": 60017.37019796273,
+      "volume": 0
+     },
+     {
+      "time": 1791984960,
+      "open": 60020.776010333066,
+      "high": 60020.776010333066,
+      "low": 60020.776010333066,
+      "close": 60020.776010333066,
+      "volume": 0
+     },
+     {
+      "time": 1791985020,
+      "open": 60024.14489037277,
+      "high": 60024.14489037277,
+      "low": 60024.14489037277,
+      "close": 60024.14489037277,
+      "volume": 0
+     },
+     {
+      "time": 1791985080,
+      "open": 60027.47091711543,
+      "high": 60027.47091711543,
+      "low": 60027.47091711543,
+      "close": 60027.47091711543,
+      "volume": 0
+     },
+     {
+      "time": 1791985140,
+      "open": 60030.74827670556,
+      "high": 60030.74827670556,
+      "low": 60030.74827670556,
+      "close": 60030.74827670556,
+      "volume": 0
+     },
+     {
+      "time": 1791985200,
+      "open": 60033.97127693021,
+      "high": 60033.97127693021,
+      "low": 60033.97127693021,
+      "close": 60033.97127693021,
+      "volume": 0
+     },
+     {
+      "time": 1791985260,
+      "open": 60037.13436144653,
+      "high": 60037.13436144653,
+      "low": 60037.13436144653,
+      "close": 60037.13436144653,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "daily": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1767225600,
+      "open": 100,
+      "high": 100,
+      "low": 100,
+      "close": 100,
+      "volume": 0
+     },
+     {
+      "time": 1767312000,
+      "open": 101,
+      "high": 101,
+      "low": 101,
+      "close": 101,
+      "volume": 0
+     },
+     {
+      "time": 1767398400,
+      "open": 102,
+      "high": 102,
+      "low": 102,
+      "close": 102,
+      "volume": 0
+     },
+     {
+      "time": 1767484800,
+      "open": 103,
+      "high": 103,
+      "low": 103,
+      "close": 103,
+      "volume": 0
+     },
+     {
+      "time": 1767571200,
+      "open": 104,
+      "high": 104,
+      "low": 104,
+      "close": 104,
+      "volume": 0
+     },
+     {
+      "time": 1767657600,
+      "open": 105,
+      "high": 105,
+      "low": 105,
+      "close": 105,
+      "volume": 0
+     },
+     {
+      "time": 1767744000,
+      "open": 106,
+      "high": 106,
+      "low": 106,
+      "close": 106,
+      "volume": 0
+     },
+     {
+      "time": 1767830400,
+      "open": 107,
+      "high": 107,
+      "low": 107,
+      "close": 107,
+      "volume": 0
+     },
+     {
+      "time": 1767916800,
+      "open": 108,
+      "high": 108,
+      "low": 108,
+      "close": 108,
+      "volume": 0
+     },
+     {
+      "time": 1768003200,
+      "open": 109,
+      "high": 109,
+      "low": 109,
+      "close": 109,
+      "volume": 0
+     },
+     {
+      "time": 1768089600,
+      "open": 110,
+      "high": 110,
+      "low": 110,
+      "close": 110,
+      "volume": 0
+     },
+     {
+      "time": 1768176000,
+      "open": 111,
+      "high": 111,
+      "low": 111,
+      "close": 111,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 86400,
+    "skipped": 0
+   }
+  },
+  "weekly": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1767571200,
+      "open": 100,
+      "high": 100,
+      "low": 100,
+      "close": 100,
+      "volume": 0
+     },
+     {
+      "time": 1768176000,
+      "open": 101,
+      "high": 101,
+      "low": 101,
+      "close": 101,
+      "volume": 0
+     },
+     {
+      "time": 1768780800,
+      "open": 102,
+      "high": 102,
+      "low": 102,
+      "close": 102,
+      "volume": 0
+     },
+     {
+      "time": 1769385600,
+      "open": 103,
+      "high": 103,
+      "low": 103,
+      "close": 103,
+      "volume": 0
+     },
+     {
+      "time": 1769990400,
+      "open": 104,
+      "high": 104,
+      "low": 104,
+      "close": 104,
+      "volume": 0
+     },
+     {
+      "time": 1770595200,
+      "open": 105,
+      "high": 105,
+      "low": 105,
+      "close": 105,
+      "volume": 0
+     },
+     {
+      "time": 1771200000,
+      "open": 106,
+      "high": 106,
+      "low": 106,
+      "close": 106,
+      "volume": 0
+     },
+     {
+      "time": 1771804800,
+      "open": 107,
+      "high": 107,
+      "low": 107,
+      "close": 107,
+      "volume": 0
+     },
+     {
+      "time": 1772409600,
+      "open": 108,
+      "high": 108,
+      "low": 108,
+      "close": 108,
+      "volume": 0
+     },
+     {
+      "time": 1773014400,
+      "open": 109,
+      "high": 109,
+      "low": 109,
+      "close": 109,
+      "volume": 0
+     },
+     {
+      "time": 1773619200,
+      "open": 110,
+      "high": 110,
+      "low": 110,
+      "close": 110,
+      "volume": 0
+     },
+     {
+      "time": 1774224000,
+      "open": 111,
+      "high": 111,
+      "low": 111,
+      "close": 111,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 604800,
+    "skipped": 0
+   }
+  },
+  "zone": {
+   "ok": {
+    "bars": [
+     {
+      "time": 1791986400,
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "close": 0,
+      "volume": 0
+     },
+     {
+      "time": 1791986460,
+      "open": 1,
+      "high": 1,
+      "low": 1,
+      "close": 1,
+      "volume": 0
+     },
+     {
+      "time": 1791986520,
+      "open": 2,
+      "high": 2,
+      "low": 2,
+      "close": 2,
+      "volume": 0
+     },
+     {
+      "time": 1791986580,
+      "open": 3,
+      "high": 3,
+      "low": 3,
+      "close": 3,
+      "volume": 0
+     },
+     {
+      "time": 1791986640,
+      "open": 4,
+      "high": 4,
+      "low": 4,
+      "close": 4,
+      "volume": 0
+     },
+     {
+      "time": 1791986700,
+      "open": 5,
+      "high": 5,
+      "low": 5,
+      "close": 5,
+      "volume": 0
+     },
+     {
+      "time": 1791986760,
+      "open": 6,
+      "high": 6,
+      "low": 6,
+      "close": 6,
+      "volume": 0
+     },
+     {
+      "time": 1791986820,
+      "open": 7,
+      "high": 7,
+      "low": 7,
+      "close": 7,
+      "volume": 0
+     },
+     {
+      "time": 1791986880,
+      "open": 8,
+      "high": 8,
+      "low": 8,
+      "close": 8,
+      "volume": 0
+     },
+     {
+      "time": 1791986940,
+      "open": 9,
+      "high": 9,
+      "low": 9,
+      "close": 9,
+      "volume": 0
+     },
+     {
+      "time": 1791987000,
+      "open": 10,
+      "high": 10,
+      "low": 10,
+      "close": 10,
+      "volume": 0
+     },
+     {
+      "time": 1791987060,
+      "open": 11,
+      "high": 11,
+      "low": 11,
+      "close": 11,
+      "volume": 0
+     }
+    ],
+    "baseSeconds": 60,
+    "skipped": 0
+   }
+  },
+  "badTime": {
+   "error": "Row 2: couldn't read the time \"14/10/2026\". Use a time like 2026-10-14 14:30:00 (UTC), an ISO time like 2026-10-14T14:30:00Z, or Unix seconds.",
+   "status": 400
+  },
+  "twoSymbols": {
+   "error": "The file has 2 symbols (ETH/USD, BTC/USD...). Import one symbol per file.",
+   "status": 400
+  },
+  "few": {
+   "error": "Only 4 usable bars in the file. It needs at least 10.",
+   "status": 400
+  },
+  "noCols": {
+   "error": "Couldn't find the time and close columns. Name them time, open, high, low, close and volume in the first row.",
+   "status": 400
+  },
+  "empty": {
+   "error": "The file is empty",
+   "status": 400
+  }
+ },
+ "parseTime": [
+  {
+   "s": "2026-10-14 14:30:00",
+   "t": 1791988200
+  },
+  {
+   "s": "2026-10-14T14:30:00Z",
+   "t": 1791988200
+  },
+  {
+   "s": "2026-10-14T14:30:00.000Z",
+   "t": 1791988200
+  },
+  {
+   "s": "2026-10-14 14:30:00+00:00",
+   "t": 1791988200
+  },
+  {
+   "s": "2026-10-14T10:30:00-04:00",
+   "t": 1791988200
+  },
+  {
+   "s": "1760452200",
+   "t": 1760452200
+  },
+  {
+   "s": "1760452200000",
+   "t": 1760452200
+  },
+  {
+   "s": "1760452200000000",
+   "t": 1760452200
+  },
+  {
+   "s": "1760452200000000000",
+   "t": 1760452200
+  },
+  {
+   "s": "2026.10.14",
+   "t": 1791936000
+  },
+  {
+   "s": "2026-10-14",
+   "t": 1791936000
+  },
+  {
+   "s": "14/10/2026",
+   "t": null
+  },
+  {
+   "s": "2026/2/3 4:05",
+   "t": 1770091500
+  },
+  {
+   "s": "2026-13-40",
+   "t": 1802131200
+  },
+  {
+   "s": "0099-01-01",
+   "t": 915148800
+  },
+  {
+   "s": "12345",
+   "t": null
+  },
+  {
+   "s": "1760452200.75",
+   "t": 1760452200
+  },
+  {
+   "s": "2026-10-14T14:30:00 UTC",
+   "t": 1791988200
+  },
+  {
+   "s": " 2026-10-14 ",
+   "t": 1791936000
+  },
+  {
+   "s": "2026-10-14T14:30:00+0530",
+   "t": 1791968400
+  }
+ ],
+ "parseTimeTod": [
+  {
+   "d": "2026.10.14",
+   "t": "14:30",
+   "r": 1791988200
+  },
+  {
+   "d": "2026-10-14",
+   "t": " 09:05:07 ",
+   "r": 1791968707
+  },
+  {
+   "d": "2026-10-14",
+   "t": "",
+   "r": 1791936000
+  }
+ ],
+ "tfLabel": [
+  [
+   1,
+   "1s"
+  ],
+  [
+   30,
+   "30s"
+  ],
+  [
+   60,
+   "1m"
+  ],
+  [
+   300,
+   "5m"
+  ],
+  [
+   3600,
+   "1h"
+  ],
+  [
+   7200,
+   "2h"
+  ],
+  [
+   86400,
+   "1D"
+  ],
+  [
+   172800,
+   "2D"
+  ],
+  [
+   604800,
+   "1W"
+  ],
+  [
+   2592000,
+   "1M"
+  ],
+  [
+   90,
+   "90s"
+  ]
+ ],
+ "cleanName": [
+  {
+   "n": "btc 1m (Alpaca).csv",
+   "r": {
+    "ok": "BTC_1M_ALPACA"
+   }
+  },
+  {
+   "n": "my-file.TXT",
+   "r": {
+    "ok": "MY_FILE"
+   }
+  },
+  {
+   "n": "___",
+   "r": {
+    "error": "Give the file a name made of letters or digits",
+    "status": 400
+   }
+  },
+  {
+   "n": "",
+   "r": {
+    "error": "Give the file a name made of letters or digits",
+    "status": 400
+   }
+  },
+  {
+   "n": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "r": {
+    "ok": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+   }
+  },
+  {
+   "n": "Éte data.csv",
+   "r": {
+    "ok": "TE_DATA"
+   }
+  }
+ ],
+ "parseSignals": {
+  "basic": {
+   "ok": {
+    "rows": 5,
+    "changes": [
+     [
+      1791984600,
+      0
+     ],
+     [
+      1791984660,
+      1
+     ],
+     [
+      1791984780,
+      -1
+     ],
+     [
+      1791984840,
+      0
+     ]
+    ],
+    "from": 1791984600,
+    "to": 1791984840
+   }
+  },
+  "bad": {
+   "error": "Row 2: the position \"2\" isn't one of 1 (long), 0 (flat) or -1 (short).",
+   "status": 400
+  },
+  "headerless": {
+   "ok": {
+    "rows": 4,
+    "changes": [
+     [
+      1791984600,
+      1
+     ],
+     [
+      1791984660,
+      -1
+     ],
+     [
+      1791984720,
+      1
+     ],
+     [
+      1791984780,
+      0
+     ]
+    ],
+    "from": 1791984600,
+    "to": 1791984780
+   }
+  },
+  "half": {
+   "ok": {
+    "rows": 2,
+    "changes": [
+     [
+      1791984540,
+      -0.5
+     ],
+     [
+      1791984600,
+      0.5
+     ]
+    ],
+    "from": 1791984540,
+    "to": 1791984600
+   }
+  },
+  "noRows": {
+   "error": "The file has no rows",
+   "status": 400
+  }
+ },
+ "signalSource": "// Position signal imported from test file.csv on 2026-10-29.\n// +1 long, 0 flat, -1 short, each holding until the next change. Import the CSV again to replace it.\nconst T = [1791984600,1791984660,1791984780,1791984840];\nconst P = [0,1,-1,0];\n\nexport default {\n  name: \"Signal: TEST\",\n  overlay: false,\n  inputs: [],\n  outputs: [{ key: \"position\", label: \"Position\", kind: \"histogram\", color: \"#2962ff\" }],\n  levels: [0],\n  calc(bars) {\n    const position = new Array(bars.length).fill(NaN);\n    const colors = new Array(bars.length).fill(\"#787b86\");\n    let k = -1;\n    for (let i = 0; i < bars.length; i++) {\n      const end = i + 1 < bars.length ? bars[i + 1].time : bars[i].time + (i ? bars[i].time - bars[i - 1].time : 86400);\n      while (k + 1 < T.length && T[k + 1] < end) k++;\n      if (k < 0) continue;\n      position[i] = P[k];\n      colors[i] = P[k] > 0 ? \"#089981\" : P[k] < 0 ? \"#f23645\" : \"#787b86\";\n    }\n    return { position, colors };\n  },\n};\n",
+ "signalStrategy": {
+  "indicators": {
+   "signal": {
+    "id": "custom:signal-test"
+   }
+  },
+  "entryLong": [
+   {
+    "left": "signal",
+    "op": ">",
+    "right": 0
+   }
+  ],
+  "exitLong": [
+   {
+    "left": "signal",
+    "op": "<=",
+    "right": 0
+   }
+  ],
+  "entryShort": [
+   {
+    "left": "signal",
+    "op": "<",
+    "right": 0
+   }
+  ],
+  "exitShort": [
+   {
+    "left": "signal",
+    "op": ">=",
+    "right": 0
+   }
+  ]
+ },
+ "translate": [
+  {
+   "name": "EMA cross (9/21)",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: EMA cross (9/21)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "EMA cross (9/21)",
+   "tf": "1h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: EMA cross (9/21)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "EMA cross (9/21)",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: EMA cross (9/21)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "EMA cross (9/21)",
+   "tf": "7m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: EMA cross (9/21)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not 7m."
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "EMA cross (9/21)",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: EMA cross (9/21)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "EMA cross (9/21)",
+   "tf": null,
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: EMA cross (9/21)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not undefined."
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "RSI mean reversion (30/55)",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: RSI mean reversion (30/55)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 55
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ stops each trade at 2 ATR under its own risk settings; the stop-loss % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "RSI mean reversion (30/55)",
+   "tf": "1h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: RSI mean reversion (30/55)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 55
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ stops each trade at 2 ATR under its own risk settings; the stop-loss % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "RSI mean reversion (30/55)",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: RSI mean reversion (30/55)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 55
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ stops each trade at 2 ATR under its own risk settings; the stop-loss % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "RSI mean reversion (30/55)",
+   "tf": "7m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: RSI mean reversion (30/55)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 55
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not 7m."
+    ],
+    "notes": [
+     "PTQ stops each trade at 2 ATR under its own risk settings; the stop-loss % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "RSI mean reversion (30/55)",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: RSI mean reversion (30/55)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 55
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ stops each trade at 2 ATR under its own risk settings; the stop-loss % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "RSI mean reversion (30/55)",
+   "tf": null,
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: RSI mean reversion (30/55)",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": 14
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "constant",
+          "value": 55
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not undefined."
+    ],
+    "notes": [
+     "PTQ stops each trade at 2 ATR under its own risk settings; the stop-loss % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "Supertrend follow",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Supertrend follow",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)",
+     "Exit condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "Supertrend follow",
+   "tf": "1h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Supertrend follow",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "1h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)",
+     "Exit condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "Supertrend follow",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Supertrend follow",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)",
+     "Exit condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "Supertrend follow",
+   "tf": "7m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Supertrend follow",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not 7m.",
+     "Entry condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)",
+     "Exit condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "Supertrend follow",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Supertrend follow",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)",
+     "Exit condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "Supertrend follow",
+   "tf": null,
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Supertrend follow",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not undefined.",
+     "Entry condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)",
+     "Exit condition 1: Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "MACD + 200 EMA trend filter",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: MACD + 200 EMA trend filter",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 200
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "MACD + 200 EMA trend filter",
+   "tf": "1h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: MACD + 200 EMA trend filter",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 200
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "MACD + 200 EMA trend filter",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: MACD + 200 EMA trend filter",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 200
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "MACD + 200 EMA trend filter",
+   "tf": "7m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: MACD + 200 EMA trend filter",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 200
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not 7m."
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "MACD + 200 EMA trend filter",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: MACD + 200 EMA trend filter",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 200
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "MACD + 200 EMA trend filter",
+   "tf": null,
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: MACD + 200 EMA trend filter",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 200
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "macd",
+          "params": {
+           "fast": 12,
+           "slow": 26
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "macd_signal",
+          "params": {
+           "fast": 12,
+           "slow": 26,
+           "signal": 9
+          }
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not undefined."
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "Bollinger breakout",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Bollinger breakout",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "bb_upper",
+          "params": {
+           "length": 20,
+           "mult": 2
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "Bollinger breakout",
+   "tf": "1h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Bollinger breakout",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "bb_upper",
+          "params": {
+           "length": 20,
+           "mult": 2
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "Bollinger breakout",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Bollinger breakout",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "bb_upper",
+          "params": {
+           "length": 20,
+           "mult": 2
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "Bollinger breakout",
+   "tf": "7m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Bollinger breakout",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "bb_upper",
+          "params": {
+           "length": 20,
+           "mult": 2
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not 7m."
+    ],
+    "notes": [
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "Bollinger breakout",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Bollinger breakout",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "bb_upper",
+          "params": {
+           "length": 20,
+           "mult": 2
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "Bollinger breakout",
+   "tf": null,
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: Bollinger breakout",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "bb_upper",
+          "params": {
+           "length": 20,
+           "mult": 2
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "PTQ tests on 1m, 5m, 15m, 1h, 4h or 1D, not undefined."
+    ],
+    "notes": [
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "extra0",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: strategy",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: \"crosses\" isn't one PTQ uses (it takes above, below, crosses above, crosses below)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra0",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: strategy",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: \"crosses\" isn't one PTQ uses (it takes above, below, crosses above, crosses below)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra0",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: strategy",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: \"crosses\" isn't one PTQ uses (it takes above, below, crosses above, crosses below)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra0",
+   "tf": "4h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: strategy",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": null
+     },
+     "signalTimeframe": "4h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: \"crosses\" isn't one PTQ uses (it takes above, below, crosses above, crosses below)"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra1",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "OR",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 240,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra1",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "OR",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 3,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ holds by whole hours, so the 10-bar time exit is sent as 3 hours."
+    ]
+   }
+  },
+  {
+   "name": "extra1",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "OR",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 1,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": [
+     "PTQ holds by whole hours, so the 10-bar time exit is sent as 1 hours."
+    ]
+   }
+  },
+  {
+   "name": "extra1",
+   "tf": "4h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_above",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "OR",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "ema",
+          "params": {
+           "length": 9
+          }
+         },
+         "op": "crosses_below",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "ema",
+          "params": {
+           "length": 21
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "4h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 40,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra2",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "short",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "sma",
+          "params": {
+           "length": 21
+          }
+         },
+         "op": ">",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "volume_sma",
+          "params": {
+           "length": 20
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "volume"
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "highest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "lowest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Exit condition 2: Donchian middle line isn't in PTQ's strategy builder yet"
+    ],
+    "notes": [
+     "PTQ's channel uses the bars before the current one, so a breakout means beating the previous high or low.",
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent.",
+     "PTQ applies its own trading costs; the spread isn't sent.",
+     "PTQ sets the take-profit from its own risk settings; the take-profit % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "extra2",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "short",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "sma",
+          "params": {
+           "length": 21
+          }
+         },
+         "op": ">",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "volume_sma",
+          "params": {
+           "length": 20
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "volume"
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "highest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "lowest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Exit condition 2: Donchian middle line isn't in PTQ's strategy builder yet"
+    ],
+    "notes": [
+     "PTQ's channel uses the bars before the current one, so a breakout means beating the previous high or low.",
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent.",
+     "PTQ applies its own trading costs; the spread isn't sent.",
+     "PTQ sets the take-profit from its own risk settings; the take-profit % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "extra2",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "short",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "sma",
+          "params": {
+           "length": 21
+          }
+         },
+         "op": ">",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "volume_sma",
+          "params": {
+           "length": 20
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "volume"
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "highest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "lowest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Exit condition 2: Donchian middle line isn't in PTQ's strategy builder yet"
+    ],
+    "notes": [
+     "PTQ's channel uses the bars before the current one, so a breakout means beating the previous high or low.",
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent.",
+     "PTQ applies its own trading costs; the spread isn't sent.",
+     "PTQ sets the take-profit from its own risk settings; the take-profit % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "extra2",
+   "tf": "4h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "short",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "sma",
+          "params": {
+           "length": 21
+          }
+         },
+         "op": ">",
+         "right": {
+          "indicator": "sma",
+          "params": {
+           "length": 9
+          }
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "volume_sma",
+          "params": {
+           "length": 20
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "volume"
+         }
+        },
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": ">",
+         "right": {
+          "indicator": "highest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      },
+      "exit": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "close"
+         },
+         "op": "<",
+         "right": {
+          "indicator": "lowest",
+          "params": {
+           "length": 20
+          }
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "4h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 0,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Exit condition 2: Donchian middle line isn't in PTQ's strategy builder yet"
+    ],
+    "notes": [
+     "PTQ's channel uses the bars before the current one, so a breakout means beating the previous high or low.",
+     "PTQ sizes and stops each trade by its own risk settings; the trailing stop isn't sent.",
+     "PTQ applies its own trading costs; the spread isn't sent.",
+     "PTQ sets the take-profit from its own risk settings; the take-profit % isn't sent."
+    ]
+   }
+  },
+  {
+   "name": "extra3",
+   "tf": "1D",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": "14"
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1d",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 168,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Exponential Moving Average (EMA) on hl2: PTQ computes indicators on the close",
+     "Entry condition 1: PTQ compares close, open, high, low or volume, not hl2",
+     "Entry condition 3: \"nope\" isn't a known indicator",
+     "Entry condition 3: \"[object Object]\" isn't a known indicator"
+    ],
+    "notes": []
+   }
+  },
+  {
+   "name": "extra3",
+   "tf": "15m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": "14"
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "15m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 2,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Exponential Moving Average (EMA) on hl2: PTQ computes indicators on the close",
+     "Entry condition 1: PTQ compares close, open, high, low or volume, not hl2",
+     "Entry condition 3: \"nope\" isn't a known indicator",
+     "Entry condition 3: \"[object Object]\" isn't a known indicator"
+    ],
+    "notes": [
+     "PTQ holds by whole hours, so the 7-bar time exit is sent as 2 hours."
+    ]
+   }
+  },
+  {
+   "name": "extra3",
+   "tf": "1m",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": "14"
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "1m",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 1,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Exponential Moving Average (EMA) on hl2: PTQ computes indicators on the close",
+     "Entry condition 1: PTQ compares close, open, high, low or volume, not hl2",
+     "Entry condition 3: \"nope\" isn't a known indicator",
+     "Entry condition 3: \"[object Object]\" isn't a known indicator"
+    ],
+    "notes": [
+     "PTQ holds by whole hours, so the 7-bar time exit is sent as 1 hours."
+    ]
+   }
+  },
+  {
+   "name": "extra3",
+   "tf": "4h",
+   "r": {
+    "manifest": {
+     "id": "ID",
+     "name": "Quant Terminal: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+     "version": "1.0.0",
+     "status": "research",
+     "assetClass": null,
+     "instrument": null,
+     "direction": "long",
+     "entryLogic": "composed",
+     "creationMode": "composer",
+     "composed": {
+      "entry": {
+       "kind": "group",
+       "op": "AND",
+       "conditions": [
+        {
+         "kind": "comparison",
+         "left": {
+          "indicator": "rsi",
+          "params": {
+           "length": "14"
+          }
+         },
+         "op": "<",
+         "right": {
+          "indicator": "constant",
+          "value": 30
+         }
+        }
+       ]
+      }
+     },
+     "signalTimeframe": "4h",
+     "session": {
+      "enabled": false,
+      "label": "24/7"
+     },
+     "newsGuard": false,
+     "maxHoldingHours": 28,
+     "risk": {
+      "riskPerTradePct": 0.5,
+      "stopAtr": 2,
+      "maxTradesPerDay": 3,
+      "requireBracket": true
+     },
+     "validation": {
+      "walkForward": true,
+      "transactionCosts": true,
+      "overfittingCheck": true,
+      "minOutOfSampleMonths": 12
+     },
+     "createdAt": 0,
+     "updatedAt": 0
+    },
+    "problems": [
+     "Entry condition 1: Exponential Moving Average (EMA) on hl2: PTQ computes indicators on the close",
+     "Entry condition 1: PTQ compares close, open, high, low or volume, not hl2",
+     "Entry condition 3: \"nope\" isn't a known indicator",
+     "Entry condition 3: \"[object Object]\" isn't a known indicator"
+    ],
+    "notes": []
+   }
+  }
+ ],
+ "toTerm": [
+  {
+   "o": "macd.signal",
+   "inds": {
+    "macd": {
+     "id": "macd"
+    }
+   },
+   "r": {
+    "term": {
+     "indicator": "macd_signal",
+     "params": {
+      "fast": 12,
+      "slow": 26,
+      "signal": 9
+     }
+    },
+    "notes": []
+   }
+  },
+  {
+   "o": "bb.upper",
+   "inds": {
+    "bb": {
+     "id": "bb",
+     "params": {
+      "length": 20,
+      "mult": 2
+     }
+    }
+   },
+   "r": {
+    "term": {
+     "indicator": "bb_upper",
+     "params": {
+      "length": 20,
+      "mult": 2
+     }
+    },
+    "notes": []
+   }
+  },
+  {
+   "o": 30,
+   "inds": {},
+   "r": {
+    "term": {
+     "indicator": "constant",
+     "value": 30
+    }
+   }
+  },
+  {
+   "o": "30",
+   "inds": {},
+   "r": {
+    "term": {
+     "indicator": "constant",
+     "value": 30
+    }
+   }
+  },
+  {
+   "o": " ",
+   "inds": {},
+   "r": {
+    "error": "\" \" isn't a known indicator"
+   }
+  },
+  {
+   "o": "close",
+   "inds": {},
+   "r": {
+    "term": {
+     "indicator": "close"
+    }
+   }
+  },
+  {
+   "o": "hl2",
+   "inds": {},
+   "r": {
+    "error": "PTQ compares close, open, high, low or volume, not hl2"
+   }
+  },
+  {
+   "o": "fast",
+   "inds": {
+    "fast": {
+     "id": "ema",
+     "params": {
+      "length": 900
+     }
+    }
+   },
+   "r": {
+    "error": "Exponential Moving Average (EMA): length 900 is outside PTQ's range (2 to 400)"
+   }
+  },
+  {
+   "o": "x.y",
+   "inds": {},
+   "r": {
+    "error": "\"x.y\" isn't a known indicator"
+   }
+  },
+  {
+   "o": "st",
+   "inds": {
+    "st": {
+     "id": "supertrend"
+    }
+   },
+   "r": {
+    "error": "Supertrend isn't in PTQ's strategy builder yet (it takes SMA, EMA, RSI, ATR, ROC, standard deviation, Bollinger Bands, MACD, Donchian highs and lows, MA Cross and volume)"
+   }
+  },
+  {
+   "o": "bb",
+   "inds": {
+    "bb": {
+     "id": "bb",
+     "params": {
+      "mult": 20
+     }
+    }
+   },
+   "r": {
+    "error": "Bollinger Bands: mult 20 is outside PTQ's range (0.1 to 10)"
+   }
+  }
+ ],
+ "describe": [
+  {
+   "a": {
+    "symbol": "BINANCE:BTCUSDT",
+    "tf": "1h",
+    "left": "close",
+    "op": "crossesAbove",
+    "right": 100000
+   },
+   "r": "BINANCE:BTCUSDT 1h: close crosses above 100000"
+  },
+  {
+   "a": {
+    "symbol": "X",
+    "tf": "1D",
+    "conditions": [
+     {
+      "left": "rsi",
+      "op": ">",
+      "right": 70
+     },
+     {
+      "left": "close",
+      "op": "<",
+      "right": {
+       "line": {
+        "t1": 1
+       }
+      }
+     }
+    ],
+    "match": "any"
+   },
+   "r": "X 1D: rsi is above 70 or close is below your drawn line"
+  },
+  {
+   "a": {
+    "symbol": "X",
+    "tf": "5m",
+    "conditions": [
+     {
+      "left": "a",
+      "op": "weird",
+      "right": 1.5
+     },
+     {
+      "left": "b",
+      "op": "<=",
+      "right": "c"
+     }
+    ]
+   },
+   "r": "X 5m: a weird 1.5 and b is at or below c"
+  },
+  {
+   "a": {
+    "symbol": "",
+    "watchlist": "Main",
+    "tf": "1D",
+    "message": "Hello",
+    "left": "close",
+    "op": ">",
+    "right": 0
+   },
+   "r": "BINANCE:ETHUSDT: Hello"
+  },
+  {
+   "a": {
+    "symbol": "Y",
+    "tf": "1D",
+    "message": "Plain",
+    "left": "close",
+    "op": ">",
+    "right": 0
+   },
+   "r": "Plain"
+  },
+  {
+   "a": {
+    "symbol": "Z",
+    "tf": 15,
+    "conditions": [],
+    "left": "close",
+    "op": "<",
+    "right": 0.000001
+   },
+   "r": "Z 15: close is below 0.000001"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>countries.json</file>
+        <file>country_names.json</file>
+        <file>country_indicators.json</file>
+        <file>supply_chain.json</file>
+        <file>data_sources.json</file>
+        <file>markets.json</file>
+        <file>ports.json</file>
+        <file>searoutes.json</file>
+        <file>sector_history.json</file>
+        <file>style.qss</file>
+        <file>icon/deepwater-512.png</file>
+    </qresource>
+</RCC>

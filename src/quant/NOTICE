@@ -1,0 +1,10 @@
+The Charts page (src/quant/) is a C++/Qt port of Quant Terminal 1.0.0
+(https://part-timequant.com), Copyright (c) 2026 Lewis Jackson, MIT licence (see LICENSE in this folder).
+
+src/quant/chart/ re-implements the behaviour of TradingView Lightweight Charts(TM) 5.2.1
+(https://github.com/tradingview/lightweight-charts), Copyright (c) TradingView, Inc., licensed under the
+Apache License 2.0. Quant Terminal and this port are not affiliated with or endorsed by TradingView, Inc.
+"TradingView" is a trademark of TradingView, Inc.
+
+Market data comes from public endpoints of Binance, Coinbase, Kraken, Nasdaq, Yahoo Finance and
+Forex Factory, each under its own terms. Nothing in this software is financial advice.

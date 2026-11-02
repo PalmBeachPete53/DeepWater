@@ -1,0 +1,9 @@
+# Not our code, or not code: keep the graph about deepwater itself.
+third_party/
+build/
+build-*/
+i18n/
+tests/quant/fixtures/
+tests/quant/*/reference/
+resources/*.json
+*.png

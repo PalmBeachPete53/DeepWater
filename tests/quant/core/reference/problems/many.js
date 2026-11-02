@@ -1,0 +1,1 @@
+export default { name: '', overlay: 1, inputs: [{ key: 'x', type: 'int', default: 1.5 }, { key: 'x', type: 'int', default: 1 }], outputs: [{ key: 'v', kind: 'dots' }], levels: 3 };

@@ -1,0 +1,14944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="fr">
+<context>
+    <name>AiClaudeView</name>
+    <message>
+        <location filename="../src/AiPage.cpp" line="+484"/>
+        <source>Claude</source>
+        <translation>Claude</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A conversation with Claude through the Anthropic API, streamed as it is written. The model thinks adaptively; Effort sets how deep. On the models that support it, a safety refusal is re-run by the server on a fallback model inside the same call. The key is entered in Sources › AI.</source>
+        <translation>Une conversation avec Claude par l&apos;API Anthropic, affichée au fil de l&apos;écriture. Le modèle réfléchit de façon adaptative ; Effort règle la profondeur. Sur les modèles qui le permettent, un refus de sécurité est rejoué par le serveur sur un modèle de repli dans le même appel. La clé se saisit dans Sources › IA.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Refresh the models</source>
+        <translation>Actualiser les modèles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Model</source>
+        <translation>Modèle</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Effort</source>
+        <translation>Effort</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>System prompt (optional): who Claude is for this conversation</source>
+        <translation>Prompt système (facultatif) : qui est Claude pour cette conversation</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Your message · Cmd+Enter sends</source>
+        <translation>Votre message · Cmd+Entrée envoie</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Send</source>
+        <translation>Envoyer</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Stop</source>
+        <translation>Arrêter</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>New conversation</source>
+        <translation>Nouvelle conversation</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>%1 · %2 tokens in, %3 out · %4 s</source>
+        <translation>%1 · %2 jetons en entrée, %3 en sortie · %4 s</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 from cache</source>
+        <translation>%1 depuis le cache</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>the model declined (safety)</source>
+        <translation>le modèle a refusé (sécurité)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>cut at the token limit</source>
+        <translation>coupé à la limite de jetons</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>thinking summary available on hover</source>
+        <translation>résumé de la réflexion au survol</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>API key saved (Sources › AI).</source>
+        <translation>Clé API enregistrée (Sources › IA).</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No API key: enter one in Sources › AI to talk to Claude.</source>
+        <translation>Pas de clé API : saisissez-en une dans Sources › IA pour parler à Claude.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Couldn&apos;t list the models: %1</source>
+        <translation>Impossible de lister les modèles : %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>You</source>
+        <translation>Vous</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Waiting for %1…</source>
+        <translation>En attente de %1…</translation>
+    </message>
+</context>
+<context>
+    <name>AiMlView</name>
+    <message>
+        <location filename="../src/AiMlView.cpp" line="+112"/>
+        <source>direction</source>
+        <translation>direction</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>accuracy</source>
+        <translation>exactitude</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Machine learning</source>
+        <translation>Apprentissage automatique</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Train models on Deepwater&apos;s data without leaving the app: scikit-learn, LightGBM, XGBoost and PyTorch run in a private Python environment the app creates in its data folder. Export the data, pick a data set, a target and a framework, train, and read the metrics; every run keeps its model, its settings and its feature importances.</source>
+        <translation>Entraînez des modèles sur les données de Deepwater sans quitter l&apos;application : scikit-learn, LightGBM, XGBoost et PyTorch tournent dans un environnement Python privé que l&apos;application crée dans son dossier de données. Exportez les données, choisissez un jeu de données, une cible et un cadre, entraînez, lisez les métriques ; chaque exécution garde son modèle, ses réglages et l&apos;importance de ses variables.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Python environment</source>
+        <translation>Environnement Python</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Interpreter</source>
+        <translation>Interpréteur</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+246"/>
+        <source>Create the environment</source>
+        <translation>Créer l&apos;environnement</translation>
+    </message>
+    <message>
+        <location line="-245"/>
+        <source>Check</source>
+        <translation>Vérifier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+105"/>
+        <source>Data</source>
+        <translation>Données</translation>
+    </message>
+    <message>
+        <location line="-104"/>
+        <source>CSV files in %1: the country series of every data set (long form), the IMF&apos;s annual indicators, policy rates, exchange rates, the COT report and ten years of daily prices of the symbols below (Yahoo).</source>
+        <translation>Fichiers CSV dans %1 : les séries pays de chaque jeu de données (format long), les indicateurs annuels du FMI, les taux directeurs, les taux de change, le rapport COT et dix ans de prix quotidiens des symboles ci-dessous (Yahoo).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Symbols for daily prices, comma-separated</source>
+        <translation>Symboles pour les prix quotidiens, séparés par des virgules</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Export Deepwater&apos;s data</source>
+        <translation>Exporter les données de Deepwater</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>File</source>
+        <translation>Fichier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+91"/>
+        <source>Rows</source>
+        <translation>Lignes</translation>
+    </message>
+    <message>
+        <location line="-91"/>
+        <source>Size</source>
+        <translation>Taille</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Written</source>
+        <translation>Écrit le</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Training</source>
+        <translation>Entraînement</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Regression</source>
+        <translation>Régression</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Classification</source>
+        <translation>Classification</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+66"/>
+        <source>Framework</source>
+        <translation>Cadre</translation>
+    </message>
+    <message>
+        <location line="-65"/>
+        <source>Model</source>
+        <translation>Modèle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Task</source>
+        <translation>Tâche</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The column itself</source>
+        <translation>La colonne elle-même</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next period&apos;s return, %</source>
+        <translation>Rendement de la période suivante, %</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next period up or down (1 / 0)</source>
+        <translation>Hausse ou baisse à la période suivante (1 / 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next period&apos;s value</source>
+        <translation>Valeur de la période suivante</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next period&apos;s change</source>
+        <translation>Variation de la période suivante</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Data set</source>
+        <translation>Jeu de données</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Target column</source>
+        <translation>Colonne cible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+52"/>
+        <source>Target</source>
+        <translation>Cible</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>Lagged copies of every feature, for time series</source>
+        <translation>Copies retardées de chaque variable, pour les séries temporelles</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Columns to leave out, comma-separated</source>
+        <translation>Colonnes à écarter, séparées par des virgules</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Lags</source>
+        <translation>Retards</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leave out</source>
+        <translation>Écarter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Test share</source>
+        <translation>Part de test</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Hyper-parameters</source>
+        <translation>Hyperparamètres</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Train</source>
+        <translation>Entraîner</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Stop</source>
+        <translation>Arrêter</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Feature</source>
+        <translation>Variable</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Importance</source>
+        <translation>Importance</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Runs</source>
+        <translation>Exécutions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Every training, with its model, in %1. Double-click a run to open its folder.</source>
+        <translation>Chaque entraînement, avec son modèle, dans %1. Double-cliquez sur une exécution pour ouvrir son dossier.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Run</source>
+        <translation>Exécution</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Metrics</source>
+        <translation>Métriques</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Time</source>
+        <translation>Durée</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Open the run&apos;s folder</source>
+        <translation>Ouvrir le dossier de l&apos;exécution</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>No Python 3 on this computer</source>
+        <translation>Pas de Python 3 sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Environment not created yet</source>
+        <translation>Environnement pas encore créé</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Installing…</source>
+        <translation>Installation…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Ready</source>
+        <translation>Prêt</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Incomplete: %1</source>
+        <translation>Incomplet : %1</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>PyTorch on the Apple GPU (MPS)</source>
+        <translation>PyTorch sur le GPU Apple (MPS)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Update the packages</source>
+        <translation>Mettre à jour les paquets</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>No export yet.</source>
+        <translation>Pas encore d&apos;export.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n file(s), %1.</source>
+        <translation>
+            <numerusform>%n fichier, %1.</numerusform>
+            <numerusform>%n fichiers, %1.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Random forest</source>
+        <translation>Forêt aléatoire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gradient boosting</source>
+        <translation>Gradient boosting</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear (ridge / logistic)</source>
+        <translation>Linéaire (ridge / logistique)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Multi-layer perceptron</source>
+        <translation>Perceptron multicouche</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Gradient-boosted trees</source>
+        <translation>Arbres boostés par gradient</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Training %1 on %2 → %3</source>
+        <translation>Entraînement %1 sur %2 → %3</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Couldn&apos;t start the training</source>
+        <translation>Impossible de lancer l&apos;entraînement</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Failed: %1</source>
+        <translation>Échec : %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>%1 · %2 rows, %3 features · %4 s · %5</source>
+        <translation>%1 · %2 lignes, %3 variables · %4 s · %5</translation>
+    </message>
+</context>
+<context>
+    <name>AiModelsView</name>
+    <message>
+        <location filename="../src/AiPage.cpp" line="-563"/>
+        <source>Models</source>
+        <translation>Modèles</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The models kept on this computer, and the Hugging Face Hub to get more: search a model, pick its files (a GGUF quantisation, the safetensors weights…) and download them into the app&apos;s models folder; downloads resume where they stopped. A Hub token (Sources › AI) opens gated repositories.</source>
+        <translation>Les modèles conservés sur cet ordinateur, et le Hub Hugging Face pour en obtenir d&apos;autres : cherchez un modèle, choisissez ses fichiers (une quantification GGUF, les poids safetensors…) et téléchargez-les dans le dossier des modèles de l&apos;application ; les téléchargements reprennent là où ils se sont arrêtés. Un jeton Hub (Sources › IA) ouvre les dépôts à accès restreint.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Search the Hub: qwen2.5 gguf, mistral, bge-m3, whisper…</source>
+        <translation>Chercher sur le Hub : qwen2.5 gguf, mistral, bge-m3, whisper…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Search</source>
+        <translation>Chercher</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Results</source>
+        <translation>Résultats</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+48"/>
+        <source>Model</source>
+        <translation>Modèle</translation>
+    </message>
+    <message>
+        <location line="-48"/>
+        <source>Task</source>
+        <translation>Tâche</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+37"/>
+        <source>Downloads</source>
+        <translation>Téléchargements</translation>
+    </message>
+    <message>
+        <location line="-37"/>
+        <source>Likes</source>
+        <translation>J&apos;aime</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+48"/>
+        <source>Updated</source>
+        <translation>Mis à jour</translation>
+    </message>
+    <message>
+        <location line="-36"/>
+        <location line="+36"/>
+        <source>Files</source>
+        <translation>Fichiers</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>File</source>
+        <translation>Fichier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+34"/>
+        <source>Size</source>
+        <translation>Taille</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>Download the ticked files</source>
+        <translation>Télécharger les fichiers cochés</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Open on huggingface.co</source>
+        <translation>Ouvrir sur huggingface.co</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>On this computer</source>
+        <translation>Sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Open the folder</source>
+        <translation>Ouvrir le dossier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Delete</source>
+        <translation>Supprimer</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Files · %1</source>
+        <translation>Fichiers · %1</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>No Hub token: public repositories only. Enter one in Sources › AI for gated models.</source>
+        <translation>Pas de jeton Hub : dépôts publics seulement. Saisissez-en un dans Sources › IA pour les modèles à accès restreint.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hub token saved: gated repositories you accepted the terms of are available.</source>
+        <translation>Jeton Hub enregistré : les dépôts à accès restreint dont vous avez accepté les conditions sont disponibles.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Searching…</source>
+        <translation>Recherche…</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Hub error: %1</source>
+        <translation>Erreur du Hub : %1</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n model(s), most downloaded first. Click one to see its files.</source>
+        <translation>
+            <numerusform>%n modèle, le plus téléchargé en premier. Cliquez pour voir ses fichiers.</numerusform>
+            <numerusform>%n modèles, les plus téléchargés en premier. Cliquez sur l&apos;un d&apos;eux pour voir ses fichiers.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source> (gated)</source>
+        <translation> (accès restreint)</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source> · on this computer</source>
+        <translation> · sur cet ordinateur</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+12"/>
+        <source>%1: %n file(s), %2 in all. Tick what to download.</source>
+        <translation>
+            <numerusform>%1 : %n fichier, %2 en tout. Cochez ce qu&apos;il faut télécharger.</numerusform>
+            <numerusform>%1 : %n fichiers, %2 en tout. Cochez ce qu&apos;il faut télécharger.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Nothing ticked</source>
+        <translation>Rien de coché</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+5"/>
+        <source>%n file(s), %1 on disk</source>
+        <translation>
+            <numerusform>%n fichier, %1 sur le disque</numerusform>
+            <numerusform>%n fichiers, %1 sur le disque</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>(+%n of unknown size)</source>
+        <translation>
+            <numerusform>(+%n de taille inconnue)</numerusform>
+            <numerusform>(+%n de taille inconnue)</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 free</source>
+        <translation>%1 libres</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>not enough room</source>
+        <translation>place insuffisante</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>done</source>
+        <translation>terminé</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>done · SHA-256 checked</source>
+        <translation>terminé · SHA-256 vérifié</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>checking the SHA-256…</source>
+        <translation>vérification du SHA-256…</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>waiting (%1 at a time)</source>
+        <translation>en attente (%1 à la fois)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 of %2 · %3/s</source>
+        <translation>%1 sur %2 · %3/s</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 · %2/s</source>
+        <translation>%1 · %2/s</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>No model yet. They go to %1.</source>
+        <translation>Aucun modèle pour l&apos;instant. Ils iront dans %1.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>%n model(s), %1, in %2.</source>
+        <translation>
+            <numerusform>%n modèle, %1, dans %2.</numerusform>
+            <numerusform>%n modèles, %1, dans %2.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Delete the model</source>
+        <translation>Supprimer le modèle</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Delete %1 (%2) from this computer?</source>
+        <translation>Supprimer %1 (%2) de cet ordinateur ?</translation>
+    </message>
+</context>
+<context>
+    <name>AiPage</name>
+    <message>
+        <location line="+214"/>
+        <source>Models</source>
+        <translation>Modèles</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Machine learning</source>
+        <translation>Apprentissage automatique</translation>
+    </message>
+</context>
+<context>
+    <name>AisStream</name>
+    <message>
+        <location filename="../src/AisStream.cpp" line="+71"/>
+        <source>aisstream.io closed the connection without sending data. Check that your API key is valid.</source>
+        <translation>aisstream.io a fermé la connexion sans envoyer de données. Vérifiez que votre clé API est valide.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Could not reach aisstream.io</source>
+        <translation>Impossible de joindre aisstream.io</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Connection closed</source>
+        <translation>Connexion fermée</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>No data received</source>
+        <translation>Aucune donnée reçue</translation>
+    </message>
+</context>
+<context>
+    <name>AnnualChart</name>
+    <message>
+        <location filename="../src/MacroPanel.cpp" line="+397"/>
+        <source>IMF projections</source>
+        <translation>Projections FMI</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>max %1</source>
+        <translation>max %1</translation>
+    </message>
+</context>
+<context>
+    <name>BalanceOfPayments</name>
+    <message>
+        <location filename="../src/MacroData.cpp" line="+708"/>
+        <source>Unexpected IMF response</source>
+        <translation>Réponse du FMI inattendue</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>No IMF balance of payments data</source>
+        <translation>Aucune donnée de balance des paiements du FMI</translation>
+    </message>
+</context>
+<context>
+    <name>CalendarPage</name>
+    <message>
+        <location filename="../src/CalendarPage.cpp" line="+61"/>
+        <source>Euro area</source>
+        <translation>Zone euro</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hong Kong</source>
+        <translation>Hong Kong</translation>
+    </message>
+    <message>
+        <location line="+138"/>
+        <source>High</source>
+        <translation>Élevé</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Medium</source>
+        <translation>Moyen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Low</source>
+        <translation>Faible</translation>
+    </message>
+    <message>
+        <location line="+974"/>
+        <source>Economic</source>
+        <translation>Économique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Corporate</source>
+        <translation>Entreprises</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Market hours</source>
+        <translation>Horaires des marchés</translation>
+    </message>
+</context>
+<context>
+    <name>ChokepointCard</name>
+    <message>
+        <location filename="../src/ChokepointsPage.cpp" line="+260"/>
+        <source>+%1 unidentified</source>
+        <translation>+%1 non identifiés</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>In zone now</source>
+        <translation>Dans la zone</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Passages · 48 h</source>
+        <translation>Passages · 48 h</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>−48 h</source>
+        <translation>−48 h</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h of %2 recorded</source>
+        <translation>%1 h sur %2 enregistrées</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Daily transits · IMF PortWatch</source>
+        <translation>Transits quotidiens · FMI PortWatch</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Loading historical data…</source>
+        <translation>Chargement de l’historique…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Historical data unavailable: %1</source>
+        <translation>Historique indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>%1 transits</source>
+        <translation>%1 transits</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 tankers</source>
+        <translation>%1 pétroliers</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 dry bulk</source>
+        <translation>%1 vraquiers</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 other</source>
+        <translation>%1 autres</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>7-day avg %1/day · 90-day avg %2/day</source>
+        <translation>moy. 7 j %1/jour · moy. 90 j %2/jour</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>PortWatch zone: %1</source>
+        <translation>Zone PortWatch : %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 days</source>
+        <translation>%1 jours</translation>
+    </message>
+    <message>
+        <location line="-82"/>
+        <source>No AIS reports from this zone right now: aisstream.io relies on volunteer receivers and does not cover every region.</source>
+        <translation>Aucun signal AIS dans cette zone pour l’instant : aisstream.io repose sur des récepteurs bénévoles et ne couvre pas toutes les régions.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>now</source>
+        <translation>maintenant</translation>
+    </message>
+</context>
+<context>
+    <name>Chokepoints</name>
+    <message>
+        <location filename="../src/Chokepoints.cpp" line="+42"/>
+        <source>Strait of Hormuz</source>
+        <translation>Détroit d’Ormuz</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gulf crude, products and LNG exports</source>
+        <translation>Exportations de brut, produits pétroliers et GNL du Golfe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bab-el-Mandeb</source>
+        <translation>Bab-el-Mandeb</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Red Sea gateway between Suez and the Indian Ocean</source>
+        <translation>Porte de la mer Rouge entre Suez et l’océan Indien</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Suez Canal</source>
+        <translation>Canal de Suez</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Shortest sea route between Europe and Asia</source>
+        <translation>Route maritime la plus courte entre l’Europe et l’Asie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Singapore Strait</source>
+        <translation>Détroit de Singapour</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Malacca route between the Indian Ocean and the Pacific</source>
+        <translation>Route de Malacca entre l’océan Indien et le Pacifique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Panama Canal</source>
+        <translation>Canal de Panama</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Atlantic–Pacific link for grain, LPG and containers</source>
+        <translation>Liaison Atlantique–Pacifique pour céréales, GPL et conteneurs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bosphorus</source>
+        <translation>Bosphore</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Black Sea grain and oil exports</source>
+        <translation>Exportations de céréales et de pétrole de la mer Noire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Strait of Gibraltar</source>
+        <translation>Détroit de Gibraltar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gateway between the Mediterranean and the Atlantic</source>
+        <translation>Passage entre la Méditerranée et l’Atlantique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dover Strait</source>
+        <translation>Pas de Calais</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lane to and from the North Sea ports</source>
+        <translation>Couloir vers et depuis les ports de la mer du Nord</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Danish Straits</source>
+        <translation>Détroits danois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Entrance to the Baltic Sea</source>
+        <translation>Entrée de la mer Baltique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cape of Good Hope</source>
+        <translation>Cap de Bonne-Espérance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Route around Africa for ships avoiding Suez</source>
+        <translation>Route contournant l’Afrique pour les navires évitant Suez</translation>
+    </message>
+</context>
+<context>
+    <name>ChokepointsPage</name>
+    <message>
+        <location filename="../src/ChokepointsPage.cpp" line="+96"/>
+        <source>Chokepoints</source>
+        <translation>Points de passage</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Live tanker and cargo-ship traffic through the main maritime straits and canals. Click a card to show it on the map.</source>
+        <translation>Trafic en direct des pétroliers et des cargos dans les principaux détroits et canaux maritimes. Cliquez sur une carte pour l’afficher sur la mappemonde.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Passages count tankers and cargo ships seen inside each zone (once per visit) over the last 48 h. aisstream.io keeps no history, so only hours when this app was receiving data are counted; the others are shaded in the charts. Counts are lower bounds: AIS coverage is partial, especially offshore.</source>
+        <translation>Les passages comptent les pétroliers et cargos vus dans chaque zone (une fois par visite) sur les 48 dernières heures. aisstream.io ne conserve aucun historique : seules les heures où l’app recevait des données sont comptées, les autres sont grisées dans les graphiques. Ce sont des minimums : la couverture AIS est partielle, surtout au large.</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Daily transits: IMF PortWatch (satellite AIS), published with a delay of a few days. Latest day: %1.</source>
+        <translation>Transits quotidiens : FMI PortWatch (AIS satellite), publiés avec quelques jours de décalage. Dernier jour : %1.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Daily transits: IMF PortWatch (satellite AIS), loading…</source>
+        <translation>Transits quotidiens : FMI PortWatch (AIS satellite), chargement…</translation>
+    </message>
+</context>
+<context>
+    <name>ClaudeClient</name>
+    <message>
+        <location filename="../src/ClaudeClient.cpp" line="+47"/>
+        <source>No Anthropic API key: enter one in Sources › AI</source>
+        <translation>Pas de clé API Anthropic : saisissez-en une dans Sources › IA</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Stopped</source>
+        <translation>Arrêté</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 (HTTP %2)</source>
+        <translation>%1 (HTTP %2)</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Error in the stream</source>
+        <translation>Erreur dans le flux</translation>
+    </message>
+</context>
+<context>
+    <name>CodeGraphView</name>
+    <message>
+        <location filename="../src/CodeGraphView.cpp" line="+804"/>
+        <source>Back to the communities</source>
+        <translation>Retour aux communautés</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Reload graph.json</source>
+        <translation>Recharger graph.json</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Search nodes...</source>
+        <translation>Rechercher un nœud…</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Node info</source>
+        <translation>Détail du nœud</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Communities</source>
+        <translation>Communautés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Select all</source>
+        <translation>Tout sélectionner</translation>
+    </message>
+    <message>
+        <location line="+112"/>
+        <source>Click a node to inspect it</source>
+        <translation>Cliquez sur un nœud pour le détailler</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Type</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>unknown</source>
+        <translation>inconnu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Community</source>
+        <translation>Communauté</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Source</source>
+        <translation>Source</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Members</source>
+        <translation>Membres</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Degree</source>
+        <translation>Degré</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Neighbors</source>
+        <translation>Voisins</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>graphify-out/graph.json not found.
+Run /graphify in the project to build the code graph.</source>
+        <translation>graphify-out/graph.json introuvable.
+Lancez /graphify dans le projet pour construire le graphe du code.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CODEBASE</source>
+        <translation>CODE</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>loading…</source>
+        <translation>chargement…</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+61"/>
+        <location line="+73"/>
+        <source>%n edges</source>
+        <translation>
+            <numerusform>%n arête</numerusform>
+            <numerusform>%n arêtes</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>(no file)</source>
+        <translation>(sans fichier)</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-64"/>
+        <location line="+22"/>
+        <location line="+73"/>
+        <location line="+2"/>
+        <location line="+19"/>
+        <source>%n nodes</source>
+        <translation>
+            <numerusform>%n nœud</numerusform>
+            <numerusform>%n nœuds</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="-20"/>
+        <source>%n files</source>
+        <translation>
+            <numerusform>%n fichier</numerusform>
+            <numerusform>%n fichiers</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>render %1 ms</source>
+        <translation>rendu %1 ms</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-102"/>
+        <source>CODEBASE · %n communities</source>
+        <translation>
+            <numerusform>CODE · %n communauté</numerusform>
+            <numerusform>CODE · %n communautés</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="-7"/>
+        <source>%n cross-community edges</source>
+        <translation>
+            <numerusform>%n arête inter-communautés</numerusform>
+            <numerusform>%n arêtes inter-communautés</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+74"/>
+        <source>%n outside links</source>
+        <translation>
+            <numerusform>%n lien externe</numerusform>
+            <numerusform>%n liens externes</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="-68"/>
+        <location line="+92"/>
+        <source>%n communities</source>
+        <translation>
+            <numerusform>%n communauté</numerusform>
+            <numerusform>%n communautés</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>%n links</source>
+        <translation>
+            <numerusform>%n lien</numerusform>
+            <numerusform>%n liens</numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>CommodityBenchmarks</name>
+    <message>
+        <location filename="../src/CommodityPrices.cpp" line="+215"/>
+        <source>Unexpected IMF commodity price format</source>
+        <translation>Format inattendu des prix des matières premières du FMI</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>No IMF commodity prices</source>
+        <translation>Aucun prix de matière première du FMI</translation>
+    </message>
+</context>
+<context>
+    <name>ComtradeProducts</name>
+    <message>
+        <location filename="../src/KeyedSources.cpp" line="+360"/>
+        <source>No reporter list</source>
+        <translation>Pas de liste de pays déclarants</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Not a Comtrade reporter</source>
+        <translation>Pays absent de Comtrade</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Comtrade&apos;s free quota is used up for now</source>
+        <translation>Le quota gratuit de Comtrade est épuisé pour le moment</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <location line="+24"/>
+        <source>No data for this country</source>
+        <translation>Pas de données pour ce pays</translation>
+    </message>
+</context>
+<context>
+    <name>CorporateCalendar</name>
+    <message>
+        <location filename="../src/CalendarData.cpp" line="+280"/>
+        <location line="+125"/>
+        <source>unexpected answer from Nasdaq</source>
+        <translation>réponse inattendue de Nasdaq</translation>
+    </message>
+</context>
+<context>
+    <name>CorporateView</name>
+    <message>
+        <location filename="../src/CalendarPage.cpp" line="-662"/>
+        <source>Earnings calendar</source>
+        <translation>Calendrier des résultats</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Upcoming</source>
+        <translation>À venir</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Recent</source>
+        <translation>Récents</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+47"/>
+        <location line="+1"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="-60"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+4"/>
+        <location line="+47"/>
+        <location line="+1"/>
+        <source>Company</source>
+        <translation>Société</translation>
+    </message>
+    <message>
+        <location line="-60"/>
+        <location line="+8"/>
+        <location line="+4"/>
+        <location line="+47"/>
+        <location line="+1"/>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <location line="-60"/>
+        <location line="+60"/>
+        <source>Actual</source>
+        <translation>Publié</translation>
+    </message>
+    <message>
+        <location line="-60"/>
+        <location line="+59"/>
+        <location line="+1"/>
+        <source>Est.</source>
+        <translation>Est.</translation>
+    </message>
+    <message>
+        <location line="-60"/>
+        <location line="+60"/>
+        <source>Surprise</source>
+        <translation>Surprise</translation>
+    </message>
+    <message>
+        <location line="-57"/>
+        <source>Dividends calendar</source>
+        <translation>Calendrier des dividendes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ex-date</source>
+        <translation>Date ex</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Payment</source>
+        <translation>Paiement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Amount</source>
+        <translation>Montant</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Stock splits calendar</source>
+        <translation>Calendrier des divisions d&apos;actions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ratio</source>
+        <translation>Ratio</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>IPO calendar</source>
+        <translation>Calendrier des introductions en bourse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Exchange</source>
+        <translation>Bourse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Status</source>
+        <translation>Statut</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Time</source>
+        <translation>Heure</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Last year</source>
+        <translation>An dernier</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Pre-market</source>
+        <translation>Avant ouverture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>After close</source>
+        <translation>Après clôture</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Not confirmed by Nasdaq yet (no surprise published)</source>
+        <translation>Pas encore confirmé par Nasdaq (aucune surprise publiée)</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Reverse split</source>
+        <translation>Regroupement d&apos;actions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Forward split</source>
+        <translation>Division d&apos;actions</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>%1 · %2 offered</source>
+        <translation>%1 · %2 offerts</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Priced</source>
+        <translation>Cotée</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Expected</source>
+        <translation>Prévue</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Loading Nasdaq&apos;s calendars (about 25 requests)…</source>
+        <translation>Chargement des calendriers de Nasdaq (environ 25 requêtes)…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Nasdaq: %1</source>
+        <translation>Nasdaq : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>updated %1</source>
+        <translation>mis à jour %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>last refresh failed: %1</source>
+        <translation>dernière actualisation en échec : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>US listings · source: Nasdaq</source>
+        <translation>sociétés cotées aux États-Unis · source : Nasdaq</translation>
+    </message>
+</context>
+<context>
+    <name>CorrelationMatrix</name>
+    <message>
+        <location filename="../src/ForexPage.cpp" line="+410"/>
+        <source>%1 vs %2: %3 over %4 daily returns</source>
+        <translation>%1 vs %2 : %3 sur %4 rendements quotidiens</translation>
+    </message>
+</context>
+<context>
+    <name>CotData</name>
+    <message>
+        <location filename="../src/MacroData.cpp" line="-296"/>
+        <source>Unexpected CFTC response</source>
+        <translation>Réponse CFTC inattendue</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>No CFTC positioning data</source>
+        <translation>Aucune donnée de positionnement CFTC</translation>
+    </message>
+</context>
+<context>
+    <name>CotReport</name>
+    <message>
+        <location filename="../src/QuantData.cpp" line="+408"/>
+        <source>Unexpected CFTC response</source>
+        <translation>Réponse inattendue de la CFTC</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>No CFTC positioning data</source>
+        <translation>Aucune donnée de positionnement CFTC</translation>
+    </message>
+</context>
+<context>
+    <name>CountriesView</name>
+    <message>
+        <location filename="../src/CountriesView.cpp" line="+361"/>
+        <source>Search countries…</source>
+        <translation>Rechercher un pays…</translation>
+    </message>
+</context>
+<context>
+    <name>CountryPage</name>
+    <message>
+        <location line="-289"/>
+        <source>Countries</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 Indicators</source>
+        <translation>%1 : indicateurs</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+238"/>
+        <source>Export CSV</source>
+        <translation>Exporter en CSV</translation>
+    </message>
+    <message>
+        <location line="-235"/>
+        <source>Save the table of this tab as a CSV file</source>
+        <translation>Enregistrer le tableau de cet onglet en fichier CSV</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Refresh</source>
+        <translation>Actualiser</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Download this country&apos;s indicators again</source>
+        <translation>Télécharger de nouveau les indicateurs de ce pays</translation>
+    </message>
+    <message>
+        <location line="+70"/>
+        <source>Last</source>
+        <translation>Dernier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Previous</source>
+        <translation>Précédent</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Highest</source>
+        <translation>Plus haut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Lowest</source>
+        <translation>Plus bas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unit</source>
+        <translation>Unité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Period</source>
+        <translation>Période</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Source</source>
+        <translation>Source</translation>
+    </message>
+    <message>
+        <location line="+84"/>
+        <source>This source gives the latest and previous values only: no history for the highest and lowest.</source>
+        <translation>Cette source ne donne que la dernière valeur et la précédente : pas d’historique pour le plus haut et le plus bas.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+33"/>
+        <source>%n indicator(s) need a free API key, saved in Sources: %1.</source>
+        <translation>
+            <numerusform>%n indicateur nécessite une clé d’API gratuite, à enregistrer dans Sources : %1.</numerusform>
+            <numerusform>%n indicateurs nécessitent une clé d’API gratuite, à enregistrer dans Sources : %1.</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>%n indicator(s) of this tab have no free source for %1.</source>
+        <translation>
+            <numerusform>%n indicateur de cet onglet n’a pas de source gratuite pour %1.</numerusform>
+            <numerusform>%n indicateurs de cet onglet n’ont pas de source gratuite pour %1.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Updating…</source>
+        <translation>Mise à jour…</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>CSV files (*.csv)</source>
+        <translation>Fichiers CSV (*.csv)</translation>
+    </message>
+</context>
+<context>
+    <name>CountrySeriesSet</name>
+    <message>
+        <location filename="../src/DomesticFinance.cpp" line="+169"/>
+        <source>No data in the response</source>
+        <translation>Aucune donnée dans la réponse</translation>
+    </message>
+</context>
+<context>
+    <name>DetailPanel</name>
+    <message>
+        <location filename="../src/DetailPanel.cpp" line="+239"/>
+        <location line="+262"/>
+        <location line="+69"/>
+        <source>What it measures</source>
+        <translation>Ce qu’il mesure</translation>
+    </message>
+    <message>
+        <location line="-330"/>
+        <location line="+299"/>
+        <location line="+77"/>
+        <source>How to read it</source>
+        <translation>Comment le lire</translation>
+    </message>
+    <message>
+        <location line="-375"/>
+        <location line="+303"/>
+        <location line="+77"/>
+        <location line="+180"/>
+        <source>Keep in mind</source>
+        <translation>À garder en tête</translation>
+    </message>
+    <message>
+        <location line="-470"/>
+        <source>Since %1, in share of GDP: %2 %3 → %4, %5 %6 → %7, %8 %9 → %10.</source>
+        <translation>Depuis %1, en part du PIB : %2 %3 → %4, %5 %6 → %7, %8 %9 → %10.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Jobs since %1: %2 %3 → %4, %5 %6 → %7, %8 %9 → %10.</source>
+        <translation>Emplois depuis %1 : %2 %3 → %4, %5 %6 → %7, %8 %9 → %10.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>&lt;b&gt;Rural exodus&lt;/b&gt;: the primary sector lost %1 pts of jobs since %2, mostly to the %3 sector: machines free farm workers and towns pay more.</source>
+        <translation>&lt;b&gt;Exode rural&lt;/b&gt; : le primaire a perdu %1 pts d’emplois depuis %2, surtout au profit du secteur %3 : les machines libèrent les travailleurs agricoles et les villes paient mieux.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>&lt;b&gt;Industry has declined since %1&lt;/b&gt;, from %2 of GDP to %3 in %4</source>
+        <translation>&lt;b&gt;L’industrie recule depuis %1&lt;/b&gt;, de %2 du PIB à %3 en %4</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;b&gt;Industry peaked in %1&lt;/b&gt; at %2 of GDP (%3 in %4)</source>
+        <translation>&lt;b&gt;Sommet industriel en %1&lt;/b&gt; : %2 du PIB (%3 en %4)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1; manufacturing makes most of the fall (%2 pts): competition from lower-cost producers, offshoring, and productivity gains that make goods cheaper.</source>
+        <translation>%1 ; l’essentiel du recul vient du manufacturier (%2 pts) : concurrence de pays à bas coûts, délocalisations, et gains de productivité qui font baisser le prix des biens.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1; manufacturing makes most of the fall (%2 pts), while services grow faster, before the country is rich.</source>
+        <translation>%1 ; l’essentiel du recul vient du manufacturier (%2 pts), pendant que les services croissent plus vite, avant que le pays ne soit riche.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1; most of the fall is outside manufacturing: mining, oil, energy or construction, which follow commodity prices and building cycles.</source>
+        <translation>%1 ; l’essentiel du recul vient d’ailleurs que le manufacturier : mines, pétrole, énergie ou construction, qui suivent les prix des matières premières et les cycles du bâtiment.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>&lt;b&gt;Industrialisation&lt;/b&gt;: the secondary sector gained %1 pts of GDP since %2, led by manufacturing (+%3 pts since %4): factories for export and the home market.</source>
+        <translation>&lt;b&gt;Industrialisation&lt;/b&gt; : le secondaire a gagné %1 pts de PIB depuis %2, tiré par le manufacturier (+%3 pts depuis %4) : des usines pour l’export et le marché intérieur.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;A growing secondary sector&lt;/b&gt;: +%1 pts of GDP since %2 with little manufacturing: mining, oil and gas or construction.</source>
+        <translation>&lt;b&gt;Un secondaire en hausse&lt;/b&gt; : +%1 pts de PIB depuis %2 avec peu de manufacturier : mines, pétrole et gaz ou construction.</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>&lt;b&gt;A volatile secondary sector&lt;/b&gt;: its share moves %1 pts a year on average, with oil and mineral prices; its largest fall was in %2 (%3 pts).</source>
+        <translation>&lt;b&gt;Un secondaire volatil&lt;/b&gt; : sa part bouge de %1 pts par an en moyenne, au rythme des prix du pétrole et des minerais ; sa plus forte baisse date de %2 (%3 pts).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;b&gt;The rise of services&lt;/b&gt;: +%1 pts of GDP since %2. As incomes grow, spending moves to health, education, finance, trade and leisure, and services get dearer relative to goods, whose productivity rises faster.</source>
+        <translation>&lt;b&gt;La montée des services&lt;/b&gt; : +%1 pts de PIB depuis %2. Quand les revenus augmentent, les dépenses vont à la santé, l’éducation, la finance, le commerce et les loisirs, et les services renchérissent par rapport aux biens, dont la productivité progresse plus vite.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;b&gt;A break in %1&lt;/b&gt;: the %2 sector moved %3 pts of GDP in one year, the mark of a crisis, a war, a price shock or a change in how the accounts are drawn up.</source>
+        <translation>&lt;b&gt;Une rupture en %1&lt;/b&gt; : le secteur %2 a bougé de %3 pts de PIB en un an, la marque d’une crise, d’une guerre, d’un choc de prix ou d’un changement de méthode comptable.</translation>
+    </message>
+    <message>
+        <location line="+191"/>
+        <source>primary</source>
+        <translation>primaire</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>secondary</source>
+        <translation>secondaire</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>tertiary</source>
+        <translation>tertiaire</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>What it is</source>
+        <translation>Ce que c’est</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>&lt;b&gt;A service economy&lt;/b&gt;: services make %1 of GDP. That is the profile of high-income countries: once basic needs are met, spending goes to health, education, finance, trade and leisure.</source>
+        <translation>&lt;b&gt;Une économie de services&lt;/b&gt; : les services font %1 du PIB. C’est le profil des pays à revenu élevé : une fois les besoins de base couverts, les dépenses vont à la santé, l’éducation, la finance, le commerce et les loisirs.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;A still largely agricultural economy&lt;/b&gt;: %1 of jobs are in the primary sector, so living standards follow harvests and farm prices closely.</source>
+        <translation>&lt;b&gt;Une économie encore largement agricole&lt;/b&gt; : %1 des emplois sont dans le primaire, si bien que le niveau de vie suit de près les récoltes et les prix agricoles.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;An extractive economy&lt;/b&gt;: the secondary sector makes %1 of GDP but manufacturing only %2; the rest comes mostly from oil, gas or mines, so income follows commodity prices.</source>
+        <translation>&lt;b&gt;Une économie extractive&lt;/b&gt; : le secondaire fait %1 du PIB mais l’industrie manufacturière seulement %2 ; le reste vient surtout du pétrole, du gaz ou des mines, si bien que les revenus suivent les cours des matières premières.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;An industrial economy&lt;/b&gt;: manufacturing makes %1 of GDP, among the highest shares in the world, so the country depends on world demand for goods and on its exports.</source>
+        <translation>&lt;b&gt;Une économie industrielle&lt;/b&gt; : l’industrie manufacturière fait %1 du PIB, parmi les parts les plus élevées au monde, si bien que le pays dépend de la demande mondiale de biens et de ses exportations.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;A mature, diversified economy&lt;/b&gt;: services make %1 of GDP, industry still holds %2 and the primary sector only %3; growth rests on both domestic spending and exports.</source>
+        <translation>&lt;b&gt;Une économie mûre et diversifiée&lt;/b&gt; : les services font %1 du PIB, l’industrie garde %2 et le primaire seulement %3 ; la croissance repose à la fois sur les dépenses intérieures et sur les exportations.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;An economy in transition&lt;/b&gt;: services make %1 of GDP, the secondary sector %2 and the primary %3; workers keep moving from farming to industry and services.</source>
+        <translation>&lt;b&gt;Une économie en transition&lt;/b&gt; : les services font %1 du PIB, le secondaire %2 et le primaire %3 ; la main-d’œuvre continue de passer de l’agriculture à l’industrie et aux services.</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>&lt;b&gt;Productivity&lt;/b&gt;: each sector&apos;s share of GDP is close to its share of jobs, so a job makes about as much in one sector as in another.</source>
+        <translation>&lt;b&gt;Productivité&lt;/b&gt; : la part de chaque secteur dans le PIB est proche de sa part dans les emplois ; un emploi produit à peu près autant d’un secteur à l’autre.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>&lt;b&gt;Rebalancing toward services&lt;/b&gt;: the secondary sector lost %1 pts of GDP since %2, to services and domestic spending, after a strong industrial stage.</source>
+        <translation>&lt;b&gt;Rééquilibrage vers les services&lt;/b&gt; : le secondaire a perdu %1 pts de PIB depuis %2 au profit des services et des dépenses intérieures, après une forte phase industrielle.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;b&gt;Industrialisation&lt;/b&gt;: the secondary sector gained %1 pts of GDP since %2.</source>
+        <translation>&lt;b&gt;Industrialisation&lt;/b&gt; : le secondaire a gagné %1 pts de PIB depuis %2.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The primary sector lost %1 pts of GDP since %2, as farming mechanises and the rest of the economy grows faster.</source>
+        <translation>Le primaire a perdu %1 pts de PIB depuis %2 : l’agriculture se mécanise et le reste de l’économie croît plus vite.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;Tertiarisation&lt;/b&gt;: services gained %1 pts of GDP since %2.</source>
+        <translation>&lt;b&gt;Tertiarisation&lt;/b&gt; : les services ont gagné %1 pts de PIB depuis %2.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;b&gt;A stable structure&lt;/b&gt;: no sector moved by more than 2 pts of GDP since %1.</source>
+        <translation>&lt;b&gt;Une structure stable&lt;/b&gt; : aucun secteur n’a bougé de plus de 2 pts de PIB depuis %1.</translation>
+    </message>
+    <message>
+        <location line="-199"/>
+        <location line="+77"/>
+        <location line="+126"/>
+        <source>What the figures say · %1</source>
+        <translation>Ce que disent les chiffres · %1</translation>
+    </message>
+    <message>
+        <location line="-275"/>
+        <source>Q%1 %2</source>
+        <translation>T%1 %2</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>very dear</source>
+        <translation>très cher</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>dear</source>
+        <translation>cher</translation>
+    </message>
+    <message>
+        <location filename="../src/DetailPanelSupply.cpp" line="+71"/>
+        <source>%1 Mt</source>
+        <translation>%1 Mt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 kt</source>
+        <translation>%1 kt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 t</source>
+        <translation>%1 t</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>%1 million barrels</source>
+        <translation>%1 millions de barils</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>since %1</source>
+        <translation>depuis le %1</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <location filename="../src/DetailPanel.cpp" line="+1154"/>
+        <source>Supply chains</source>
+        <translation>Chaînes d’approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Global supply chains</source>
+        <translation>Chaînes d’approvisionnement mondiales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ports, disruptions, oil storage and freight. Click a point on the globe for its details; the Supply chains indicators on the right color the countries.</source>
+        <translation>Ports, perturbations, stockage pétrolier et fret. Cliquez sur un point du globe pour ses détails ; les indicateurs Chaînes d’approvisionnement, à droite, colorent les pays.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Ports: more port calls over the last 7 days than a year before</source>
+        <translation>Ports : plus d’escales sur les 7 derniers jours qu’un an plus tôt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ports: fewer port calls (full color at ±40%; grey: no figures)</source>
+        <translation>Ports : moins d’escales (couleur pleine à ±40 % ; gris : pas de chiffres)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Oil storage sites, terminals and strategic reserves</source>
+        <translation>Sites de stockage pétrolier, terminaux et réserves stratégiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Disruptions (cyclones, earthquakes, floods, conflicts)</source>
+        <translation>Perturbations (cyclones, séismes, inondations, conflits)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Small ports appear as you zoom in.</source>
+        <translation>Les petits ports apparaissent en zoomant.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Supply chain pressure · New York Fed</source>
+        <translation>Pression sur les chaînes d’approvisionnement · Fed de New York</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+34"/>
+        <location line="+75"/>
+        <location line="+25"/>
+        <location line="+139"/>
+        <location line="+50"/>
+        <location filename="../src/DetailPanel.cpp" line="-103"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="-323"/>
+        <location line="+35"/>
+        <source>Unavailable: %1</source>
+        <translation>Indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="-30"/>
+        <source>well above its average: strained supply chains</source>
+        <translation>bien au-dessus de sa moyenne : chaînes d’approvisionnement tendues</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>above its average</source>
+        <translation>au-dessus de sa moyenne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/DetailPanel.cpp" line="-1050"/>
+        <source>near its average</source>
+        <translation>proche de sa moyenne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>below its average: supply chains running smoothly</source>
+        <translation>sous sa moyenne : chaînes d’approvisionnement fluides</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>well below its average</source>
+        <translation>bien en dessous de sa moyenne</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;span style=&apos;font-size:17px; font-weight:600&apos;&gt;%1&lt;/span&gt; in %2, %3 (%4 the month before, %5 a year before).</source>
+        <translation>&lt;span style=&apos;font-size:17px; font-weight:600&apos;&gt;%1&lt;/span&gt; en %2, %3 (%4 le mois précédent, %5 un an plus tôt).</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Pressure index</source>
+        <translation>Indice de pression</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Standard deviations from the average since 1997, built from shipping and air freight costs and the delivery times, backlogs and purchased stocks of manufacturing surveys in seven economies.</source>
+        <translation>En écarts-types par rapport à la moyenne depuis 1997, à partir des coûts du fret maritime et aérien et des délais de livraison, carnets de commandes en retard et stocks d’achats des enquêtes manufacturières de sept économies.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Port calls · last 7 days against a year before</source>
+        <translation>Escales · 7 derniers jours comparés à un an plus tôt</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Loading the PortWatch ports…</source>
+        <translation>Chargement des ports PortWatch…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Downloading the port calls, one day at a time (PortWatch answers slowly)…</source>
+        <translation>Téléchargement des escales, un jour à la fois (PortWatch répond lentement)…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No port calls yet: %1</source>
+        <translation>Pas encore d’escales : %1</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Week to %1, the ports that reported both weeks: &lt;b&gt;%2&lt;/b&gt; port calls (%3), &lt;b&gt;%4&lt;/b&gt; of cargo loaded and unloaded (%5).</source>
+        <translation>Semaine au %1, ports présents les deux semaines : &lt;b&gt;%2&lt;/b&gt; escales (%3), &lt;b&gt;%4&lt;/b&gt; de marchandises chargées et déchargées (%5).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>%1 of the 7 days so far; PortWatch answers slowly, the others follow.</source>
+        <translation>%1 des 7 jours pour l’instant ; PortWatch répond lentement, les autres suivent.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%1 · %2
+%3 port calls, %4 a year before (%5)</source>
+        <translation>%1 · %2
+%3 escales, %4 un an plus tôt (%5)</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Largest falls among busy ports</source>
+        <translation>Plus fortes baisses parmi les ports actifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Largest rises</source>
+        <translation>Plus fortes hausses</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Disruptions · last 30 days and ongoing · %1</source>
+        <translation>Perturbations · 30 derniers jours et en cours · %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>None reported.</source>
+        <translation>Aucune signalée.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n port(s) affected</source>
+        <translation>
+            <numerusform>%n port touché</numerusform>
+            <numerusform>%n ports touchés</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>US freight · FRED</source>
+        <translation>Fret aux États-Unis · FRED</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>%1 on a year</source>
+        <translation>%1 sur un an</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>US crude stocks · EIA weekly</source>
+        <translation>Stocks de brut aux États-Unis · EIA hebdomadaire</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Cushing, Oklahoma</source>
+        <translation>Cushing, Oklahoma</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Gulf Coast (PADD 3)</source>
+        <translation>Côte du Golfe (PADD 3)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Strategic Petroleum Reserve</source>
+        <translation>Réserve stratégique de pétrole</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commercial stocks, United States</source>
+        <translation>Stocks commerciaux, États-Unis</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%1 kb on the week</source>
+        <translation>%1 kb sur la semaine</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Sources: IMF PortWatch (ports, port calls from satellite AIS, disruptions from GDACS and other alerts), Federal Reserve Bank of New York, FRED, US Energy Information Administration.</source>
+        <translation>Sources : FMI PortWatch (ports, escales d’après l’AIS satellite, perturbations d’après GDACS et d’autres alertes), Banque fédérale de réserve de New York, FRED, Energy Information Administration des États-Unis.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <location line="+5"/>
+        <source>Port</source>
+        <translation>Port</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Unknown port</source>
+        <translation>Port inconnu</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Seven days to %1, against the same weekdays a year before:</source>
+        <translation>Sept jours jusqu’au %1, comparés aux mêmes jours de la semaine un an plus tôt :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Port calls</source>
+        <translation>Escales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unloaded</source>
+        <translation>Déchargé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Loaded</source>
+        <translation>Chargé</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No port calls reported over the last seven days published.</source>
+        <translation>Aucune escale signalée sur les sept derniers jours publiés.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Profile</source>
+        <translation>Profil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 vessels counted by PortWatch: %2 container ships, %3 dry bulk carriers, %4 tankers.</source>
+        <translation>%1 navires comptés par PortWatch : %2 porte-conteneurs, %3 vraquiers, %4 pétroliers.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1% of %2&apos;s seaborne imports and %3% of its exports go through the port.</source>
+        <translation>%1 % des importations maritimes de ce pays (%2) et %3 % de ses exportations passent par le port.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Main industries served: %1.</source>
+        <translation>Principales industries desservies : %1.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Disruptions that hit the port · %1</source>
+        <translation>Perturbations qui ont touché le port · %1</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+86"/>
+        <source>Open the country sheet</source>
+        <translation>Ouvrir la fiche pays</translation>
+    </message>
+    <message>
+        <location line="-79"/>
+        <source>Source: IMF PortWatch, port calls and cargo estimated from satellite AIS, published weekly a few days behind.</source>
+        <translation>Source : FMI PortWatch, escales et marchandises estimées d’après l’AIS satellite, publiées chaque semaine avec quelques jours de retard.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Crude stocks · EIA weekly</source>
+        <translation>Stocks de brut · EIA hebdomadaire</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>&lt;span style=&apos;font-size:17px; font-weight:600&apos;&gt;%1&lt;/span&gt; in the week to %2: %3 on the week, %4 on a year.</source>
+        <translation>&lt;span style=&apos;font-size:17px; font-weight:600&apos;&gt;%1&lt;/span&gt; la semaine au %2 : %3 sur la semaine, %4 sur un an.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 kb</source>
+        <translation>%1 kb</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+25"/>
+        <source>Crude stocks</source>
+        <translation>Stocks de brut</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Million barrels. The EIA publishes the total of the four reserve sites, not each one.</source>
+        <translation>Millions de barils. L’EIA publie le total des quatre sites de la réserve, pas chacun.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Million barrels, excluding the strategic reserve: the whole Gulf Coast region (PADD 3).</source>
+        <translation>Millions de barils, hors réserve stratégique : toute la région de la côte du Golfe (PADD 3).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Million barrels, excluding the strategic reserve.</source>
+        <translation>Millions de barils, hors réserve stratégique.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Crude stocks of %1 · JODI</source>
+        <translation>Stocks de brut · %1 · JODI</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;span style=&apos;font-size:17px; font-weight:600&apos;&gt;%1&lt;/span&gt; at the end of %2, %3 on a year.</source>
+        <translation>&lt;span style=&apos;font-size:17px; font-weight:600&apos;&gt;%1&lt;/span&gt; fin %2, %3 sur un an.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Million barrels, the whole country&apos;s crude stocks as it reports them, not this site alone.</source>
+        <translation>Millions de barils : les stocks de brut de tout le pays tels qu’il les déclare, pas ce seul site.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 reports no recent crude stocks to JODI.</source>
+        <translation>Aucun stock de brut récent déclaré à JODI (%1).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Weekly stocks of the ARA, Fujairah and Singapore hubs are published by Insights Global, S&amp;P Global (FEDCom) and Enterprise Singapore, without a free API.</source>
+        <translation>Les stocks hebdomadaires des pôles ARA, de Fujaïrah et de Singapour sont publiés par Insights Global, S&amp;P Global (FEDCom) et Enterprise Singapore, sans API gratuite.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Red alert</source>
+        <translation>Alerte rouge</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Orange alert</source>
+        <translation>Alerte orange</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Green alert</source>
+        <translation>Alerte verte</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>ongoing</source>
+        <translation>en cours</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Ports affected · %1</source>
+        <translation>Ports touchés · %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No port within the affected area.</source>
+        <translation>Aucun port dans la zone touchée.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>%1 port calls over the last 7 days (%2)</source>
+        <translation>%1 escales sur les 7 derniers jours (%2)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>no recent port calls</source>
+        <translation>pas d’escale récente</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Source: IMF PortWatch, from the Global Disaster Alert and Coordination System (GDACS) and its own monitoring.</source>
+        <translation>Source : FMI PortWatch, d’après le Système mondial d’alerte et de coordination en cas de catastrophe (GDACS) et sa propre veille.</translation>
+    </message>
+    <message>
+        <location filename="../src/DetailPanel.cpp" line="+1"/>
+        <source>cheap</source>
+        <translation>bon marché</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The price of homes across the country, corrected for inflation (real prices, 2010 = 100), so that a rise means homes got dearer than everything else. The OECD ratios compare prices with household incomes and with rents, in % of their own long-term average: above 100, housing is dearer than usual.</source>
+        <translation>Le prix des logements dans tout le pays, corrigé de l’inflation (prix réels, 2010 = 100) : une hausse signifie que le logement a renchéri plus que le reste. Les ratios de l’OCDE rapportent les prix aux revenus des ménages et aux loyers, en % de leur propre moyenne de long terme : au-dessus de 100, le logement est plus cher que d’habitude.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;b&gt;A boom&lt;/b&gt;: real prices rose %1 in five years. Rises that fast often end in a correction, all the more when credit grows with them.</source>
+        <translation>&lt;b&gt;Un boom&lt;/b&gt; : %1 sur les prix réels en cinq ans. Des hausses aussi rapides finissent souvent par une correction, surtout quand le crédit progresse avec elles.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;A bust not yet made up&lt;/b&gt;: real prices are still %1 below their peak of %2.</source>
+        <translation>&lt;b&gt;Une chute pas encore effacée&lt;/b&gt; : les prix réels sont encore %1 sous leur pic de %2.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;Falling prices&lt;/b&gt;: %1 in a year in real terms, the mark of dearer credit or of a market that ran ahead of incomes.</source>
+        <translation>&lt;b&gt;Prix en baisse&lt;/b&gt; : %1 sur un an en termes réels, signe d’un crédit plus cher ou d’un marché qui a devancé les revenus.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;Prices rising fast&lt;/b&gt;: %1 in a year in real terms.</source>
+        <translation>&lt;b&gt;Prix en forte hausse&lt;/b&gt; : %1 sur un an en termes réels.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;b&gt;Valuation&lt;/b&gt;: against incomes, housing is %1 (%2 of its long-term average): a home costs %3 years of income than usual.</source>
+        <translation>&lt;b&gt;Valorisation&lt;/b&gt; : rapporté aux revenus, le logement est %1 (%2 de sa moyenne de long terme) : un logement coûte %3 d’années de revenu que d’habitude.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>more</source>
+        <translation>plus</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>fewer</source>
+        <translation>moins</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Against rents, prices are at %1 of their average: owning yields less than renting out, which buyers accept when they expect prices to keep rising or rates to fall.</source>
+        <translation>Rapportés aux loyers, les prix sont à %1 de leur moyenne : le rendement locatif est faible, ce que les acheteurs acceptent quand ils anticipent une poursuite de la hausse des prix ou une baisse des taux.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&lt;b&gt;Credit&lt;/b&gt;: household debt rose %1 pts of GDP in five years, mostly mortgages: borrowing feeds house prices and prices feed borrowing.</source>
+        <translation>&lt;b&gt;Crédit&lt;/b&gt; : la dette des ménages a augmenté de %1 pts de PIB en cinq ans, surtout en prêts immobiliers : l’emprunt nourrit les prix et les prix nourrissent l’emprunt.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;b&gt;Credit&lt;/b&gt;: household debt fell %1 pts of GDP in five years: households are paying down mortgages, which holds prices back.</source>
+        <translation>&lt;b&gt;Crédit&lt;/b&gt; : la dette des ménages a reculé de %1 pts de PIB en cinq ans : les ménages remboursent leurs prêts immobiliers, ce qui freine les prix.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;A calm market&lt;/b&gt;: real prices moved %1 in a year, with no sign of a boom or a bust in the series.</source>
+        <translation>&lt;b&gt;Un marché calme&lt;/b&gt; : les prix réels ont varié de %1 sur un an, sans signe de boom ni de krach dans la série.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Housing moves in long cycles: credit and low rates push prices up for years, then rising rates or a recession bring them down, slowly, often over several years in real terms. Booms financed by debt end worst, because owners who borrowed heavily cut their spending when prices fall.</source>
+        <translation>L’immobilier évolue par longs cycles : le crédit et les taux bas poussent les prix pendant des années, puis la hausse des taux ou une récession les fait baisser, lentement, souvent sur plusieurs années en termes réels. Les booms financés par la dette finissent le plus mal, car les propriétaires très endettés réduisent leurs dépenses quand les prix baissent.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>A national average hides cities and regions that can move apart. Indices are built differently from country to country: compare a country with its own past rather than with others. The OECD ratios measure the same thing: distance from the country&apos;s own average.</source>
+        <translation>Une moyenne nationale masque des villes et des régions qui peuvent diverger. Les indices sont construits différemment d’un pays à l’autre : comparez un pays à son propre passé plutôt qu’aux autres. Les ratios de l’OCDE mesurent la même chose : l’écart à la moyenne propre au pays.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+1504"/>
+        <source>Real estate</source>
+        <translation>Immobilier</translation>
+    </message>
+    <message>
+        <location line="-1485"/>
+        <source>households</source>
+        <translation>des ménages</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>companies</source>
+        <translation>des entreprises</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>the government</source>
+        <translation>de l’État</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>What each borrower owes, in % of the country&apos;s yearly GDP: households (mostly mortgages), non-financial companies (loans and bonds) and the government. Debt service is the share of income that goes to interest and repayments.</source>
+        <translation>Ce que doit chaque emprunteur, en % du PIB annuel du pays : les ménages (surtout des prêts immobiliers), les entreprises non financières (prêts et obligations) et l’État. Le service de la dette est la part du revenu consacrée aux intérêts et aux remboursements.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>%1 (%2 of GDP)</source>
+        <translation>dette %1 (%2 du PIB)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;b&gt;Heavy debt&lt;/b&gt;: %1. Beyond about 85–90% of GDP, BIS research finds that more debt tends to slow growth: interest crowds out spending and investment.</source>
+        <translation>&lt;b&gt;Endettement élevé&lt;/b&gt; : %1. Au-delà d’environ 85–90 % du PIB, les travaux de la BRI montrent qu’un surcroît de dette tend à freiner la croissance : les intérêts évincent dépenses et investissement.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;Credit boom&lt;/b&gt;: the debt of %1 rose %2 pts of GDP in five years. Fast credit growth is the best early sign of banking crises, because loans made in a boom go to weaker borrowers.</source>
+        <translation>&lt;b&gt;Boom du crédit&lt;/b&gt; : la dette %1 a augmenté de %2 pts de PIB en cinq ans. Une croissance rapide du crédit est le meilleur signal avancé des crises bancaires, car les prêts accordés en plein boom vont à des emprunteurs plus fragiles.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;Deleveraging&lt;/b&gt;: the debt of %1 fell %2 pts of GDP in ten years, paid down or outgrown by GDP; it frees income but holds back spending while it lasts.</source>
+        <translation>&lt;b&gt;Désendettement&lt;/b&gt; : la dette %1 a reculé de %2 pts de PIB en dix ans, remboursée ou diluée par la croissance du PIB ; cela libère du revenu mais freine les dépenses tant que cela dure.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;Public debt building up&lt;/b&gt;: +%1 pts of GDP in ten years (crises, deficits): the room left for the next downturn shrinks, and the cost rises with rates.</source>
+        <translation>&lt;b&gt;Dette publique en hausse&lt;/b&gt; : +%1 pts de PIB en dix ans (crises, déficits) : la marge pour le prochain retournement se réduit, et le coût monte avec les taux.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&lt;b&gt;Strained households&lt;/b&gt;: debt service takes %1 of their income, above its usual %2: higher rates or more debt bite into spending.</source>
+        <translation>&lt;b&gt;Ménages sous tension&lt;/b&gt; : le service de la dette absorbe %1 de leur revenu, au-dessus de son niveau habituel de %2 : la hausse des taux ou de la dette pèse sur la consommation.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&lt;b&gt;Shallow credit&lt;/b&gt;: households owe only %1 of GDP. Few borrow to buy a home: homes are bought with savings or built over time, and credit is costly or hard to get.</source>
+        <translation>&lt;b&gt;Crédit peu développé&lt;/b&gt; : les ménages ne doivent que %1 du PIB. Peu empruntent pour acheter un logement : on achète sur son épargne ou on construit peu à peu, et le crédit est cher ou difficile à obtenir.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;Bad loans&lt;/b&gt;: %1 of bank loans are not being repaid; banks that carry them lend less.</source>
+        <translation>&lt;b&gt;Créances douteuses&lt;/b&gt; : %1 des prêts bancaires ne sont pas remboursés ; les banques qui les portent prêtent moins.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;Debt within usual bounds&lt;/b&gt;: no borrower stands above the levels where debt is found to weigh on growth, and none has borrowed fast lately.</source>
+        <translation>&lt;b&gt;Dette dans les normes&lt;/b&gt; : aucun emprunteur ne dépasse les niveaux où la dette pèse sur la croissance, et aucun n’a emprunté vite récemment.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Debt is neither good nor bad in itself: it pays for homes, factories and roads. What matters is its pace (a fast rise is riskier than a high but stable level), who holds it, and the cost of servicing it. Household debt and house prices move together, since most of it is mortgages.</source>
+        <translation>La dette n’est ni bonne ni mauvaise en soi : elle finance logements, usines et routes. Ce qui compte, c’est son rythme (une hausse rapide est plus risquée qu’un niveau élevé mais stable), qui la détient et le coût de son service. Dette des ménages et prix immobiliers évoluent ensemble, car elle est surtout faite de prêts immobiliers.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>These are gross debts, before deducting what borrowers own. Company debt includes loans between companies of the same group and abroad. The BIS and the IMF define debt slightly differently: compare figures from the same source. In % of GDP, a recession raises debt even when nobody borrows more.</source>
+        <translation>Il s’agit de dettes brutes, avant déduction de ce que possèdent les emprunteurs. La dette des entreprises inclut les prêts entre entreprises d’un même groupe et à l’étranger. La BRI et le FMI définissent la dette un peu différemment : comparez des chiffres de même source. En % du PIB, une récession fait monter la dette même si personne n’emprunte davantage.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+1529"/>
+        <source>Debt</source>
+        <translation>Endettement</translation>
+    </message>
+    <message>
+        <location line="-1406"/>
+        <source>History · cause and effect</source>
+        <translation>Histoire · causes et effets</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>share of GDP</source>
+        <translation>part du PIB</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>What the long series show</source>
+        <translation>Ce que montrent les séries longues</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No written account for this country: the causes above are read from the shape of its figures.</source>
+        <translation>Pas de récit rédigé pour ce pays : les causes ci-dessus sont déduites de la forme de ses chiffres.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Account written for Deepwater from established economic history; figures from the World Bank.</source>
+        <translation>Récit rédigé pour Deepwater à partir de l’histoire économique établie ; chiffres de la Banque mondiale.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Why it matters</source>
+        <translation>Pourquoi c’est important</translation>
+    </message>
+    <message>
+        <location line="+78"/>
+        <source>Clear selection</source>
+        <translation>Effacer la sélection</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Show all %1 sites</source>
+        <translation>Afficher tous les sites %1</translation>
+    </message>
+    <message>
+        <location line="+175"/>
+        <source>%1 economy →</source>
+        <translation>Économie : %1 →</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Other %1 sites</source>
+        <translation>Autres sites %1</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+439"/>
+        <source>%1 countries</source>
+        <translation>%1 pays</translation>
+    </message>
+    <message>
+        <location line="-438"/>
+        <source>Cluster</source>
+        <translation>Groupe</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 sites</source>
+        <translation>%1 sites</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+21"/>
+        <source>Sites</source>
+        <translation>Sites</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <location line="+238"/>
+        <source>Tanker</source>
+        <translation>Pétrolier</translation>
+    </message>
+    <message>
+        <location line="-237"/>
+        <location line="+237"/>
+        <source>Cargo ship</source>
+        <translation>Cargo</translation>
+    </message>
+    <message>
+        <location line="-236"/>
+        <source>Unidentified ship</source>
+        <translation>Navire non identifié</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Destination not reported</source>
+        <translation>Destination non déclarée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bound for %1</source>
+        <translation>À destination de %1</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Live AIS position. AIS does not report cargo: tankers carry oil, gas or chemicals; cargo ships carry dry bulk or containers.</source>
+        <translation>Position AIS en direct. L’AIS n’indique pas la cargaison : les pétroliers transportent pétrole, gaz ou produits chimiques ; les cargos transportent du vrac sec ou des conteneurs.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>No longer tracked.</source>
+        <translation>Plus suivi.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+3"/>
+        <source>Destination port</source>
+        <translation>Port de destination</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Not recognised</source>
+        <translation>Non reconnu</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Distance by sea</source>
+        <translation>Distance par la mer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 nm</source>
+        <translation>%1 nq</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 days</source>
+        <translation>%1 jours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 h</source>
+        <translation>%1 h</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>At current speed</source>
+        <translation>À la vitesse actuelle</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Speed</source>
+        <translation>Vitesse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+179"/>
+        <source>%1 kn</source>
+        <translation>%1 nd</translation>
+    </message>
+    <message>
+        <location line="-178"/>
+        <source>Course</source>
+        <translation>Cap</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Length</source>
+        <translation>Longueur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+1"/>
+        <source>%1 m</source>
+        <translation>%1 m</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Draught</source>
+        <translation>Tirant d’eau</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Position</source>
+        <translation>Position</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Call sign</source>
+        <translation>Indicatif</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>AIS ship type</source>
+        <translation>Type de navire AIS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last report</source>
+        <translation>Dernier signal</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 s ago</source>
+        <translation>il y a %1 s</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Chokepoint</source>
+        <translation>Point de passage</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Passages per hour · 48 h</source>
+        <translation>Passages par heure · 48 h</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Zone radius: %1 km. Counts are lower bounds: they depend on AIS coverage and on ships having broadcast their type.</source>
+        <translation>Rayon de la zone : %1 km. Ces chiffres sont des minimums : ils dépendent de la couverture AIS et de la réception du type des navires.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Daily transits · IMF PortWatch</source>
+        <translation>Transits quotidiens · FMI PortWatch</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;%1&lt;/b&gt; transits on %2: &lt;span style=&apos;color:%3&apos;&gt;%4 tankers&lt;/span&gt;, &lt;span style=&apos;color:%5&apos;&gt;%6 dry bulk&lt;/span&gt;, %7 container, %8 other.&lt;br&gt;&lt;span style=&apos;color:%9&apos;&gt;Tanker capacity: %10 t · 7-day avg %11/day vs 90-day avg %12/day&lt;/span&gt; &lt;span style=&apos;color:%13&apos;&gt;(%14%)&lt;/span&gt;</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt; transits le %2 : &lt;span style=&apos;color:%3&apos;&gt;%4 pétroliers&lt;/span&gt;, &lt;span style=&apos;color:%5&apos;&gt;%6 vraquiers&lt;/span&gt;, %7 porte-conteneurs, %8 autres.&lt;br&gt;&lt;span style=&apos;color:%9&apos;&gt;Capacité pétrolière : %10 t · moy. 7 j %11/jour vs moy. 90 j %12/jour&lt;/span&gt; &lt;span style=&apos;color:%13&apos;&gt;(%14 %)&lt;/span&gt;</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>PortWatch zone: %1</source>
+        <translation>Zone PortWatch : %1</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>In zone now</source>
+        <translation>Dans la zone</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Passages · 48 h</source>
+        <translation>Passages · 48 h</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 h of the last %2 h recorded (shaded hours: no data).</source>
+        <translation>%1 h enregistrées sur les %2 dernières (heures grisées : pas de données).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>+%1 unidentified ships in the zone</source>
+        <translation>+%1 navires non identifiés dans la zone</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No AIS reports from this zone right now: aisstream.io does not cover every region.</source>
+        <translation>Aucun signal AIS dans cette zone pour l’instant : aisstream.io ne couvre pas toutes les régions.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Ships in zone</source>
+        <translation>Navires dans la zone</translation>
+    </message>
+    <message>
+        <location line="+67"/>
+        <source>About this indicator</source>
+        <translation>À propos de cet indicateur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indicator</source>
+        <translation>Indicateur</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Europe</source>
+        <translation>Europe</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Asia</source>
+        <translation>Asie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Africa</source>
+        <translation>Afrique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>N. America</source>
+        <translation>Am. du Nord</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>S. America</source>
+        <translation>Am. du Sud</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Oceania</source>
+        <translation>Océanie</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Ranking</source>
+        <translation>Classement</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Source: %1</source>
+        <translation>Source : %1</translation>
+    </message>
+    <message>
+        <source>%1 · IMF projection</source>
+        <translation type="vanished">%1 · projection FMI</translation>
+    </message>
+    <message>
+        <source>%1 · IMF estimate</source>
+        <translation type="vanished">%1 · estimation FMI</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>No data for this year.</source>
+        <translation>Aucune donnée pour cette année.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+30"/>
+        <source>Loading IMF data…</source>
+        <translation>Chargement des données du FMI…</translation>
+    </message>
+    <message>
+        <location line="-18"/>
+        <location line="+673"/>
+        <source>Median</source>
+        <translation>Médiane</translation>
+    </message>
+    <message>
+        <location line="-671"/>
+        <source>Highest</source>
+        <translation>Plus haut</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Lowest</source>
+        <translation>Plus bas</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Economy</source>
+        <translation>Économie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GDP %1 in %2</source>
+        <translation>PIB de %1 en %2</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Growth %1</source>
+        <translation>Croissance %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Inflation %1</source>
+        <translation>Inflation %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+62"/>
+        <source>Policy rate</source>
+        <translation>Taux directeur</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Capital flows and trade</source>
+        <translation>Flux de capitaux et échanges</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>%1 at the end of %2</source>
+        <translation>%1 fin %2</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1%2 pts over 12 months</source>
+        <translation>%1%2 pts sur 12 mois</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Euro area member: ECB rate.</source>
+        <translation>Membre de la zone euro : taux de la BCE.</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Commodity sites</source>
+        <translation>Sites de matières premières</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Source: IMF World Economic Outlook, IMF balance of payments statistics and BIS. Figures for %1 and later are IMF estimates and projections; capital flows and trade are reported figures.</source>
+        <translation>Source : Perspectives de l’économie mondiale du FMI, statistiques de balance des paiements du FMI et BRI. Les chiffres à partir de %1 sont des estimations et projections du FMI ; les flux de capitaux et les échanges sont des chiffres déclarés.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sectors: World Bank, with jobs from ILO modelled estimates.</source>
+        <translation>Secteurs : Banque mondiale, emplois selon les estimations modélisées de l’OIT.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Latest figures</source>
+        <translation>Derniers chiffres</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Loading the official statistics…</source>
+        <translation>Chargement des statistiques officielles…</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Last</source>
+        <translation>Dernier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Previous</source>
+        <translation>Précédent</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Period</source>
+        <translation>Période</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>%1 · %2</source>
+        <translation>%1 · %2</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>No monthly figures for this country in Eurostat, the OECD, the IMF&apos;s price database or the BLS.</source>
+        <translation>Pas de chiffres mensuels pour ce pays chez Eurostat, l&apos;OCDE, la base des prix du FMI ou le BLS.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Sources: %1.</source>
+        <translation>Sources : %1.</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Official sources</source>
+        <translation>Sources officielles</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>and %1 more</source>
+        <translation>et %1 autres</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+11"/>
+        <source>%n indicator(s)</source>
+        <translation>
+            <numerusform>%n indicateur</numerusform>
+            <numerusform>%n indicateurs</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+180"/>
+        <source>Loading BIS data…</source>
+        <translation>Chargement des données BRI…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The BIS is turned off in Sources.</source>
+        <translation>La BRI est désactivée dans Sources.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Neither the BIS nor the OECD publishes house prices for this country.</source>
+        <translation>Ni la BRI ni l’OCDE ne publient de prix immobiliers pour ce pays.</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Real prices, 1 year</source>
+        <translation>Prix réels, 1 an</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Real prices, 10 years</source>
+        <translation>Prix réels, 10 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>At their peak</source>
+        <translation>Au plus haut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>From the %1 peak</source>
+        <translation>Depuis le pic de %1</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Real house prices (2010 = 100)</source>
+        <translation>Prix immobiliers réels (2010 = 100)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Price to income</source>
+        <translation>Prix / revenu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Price to rent</source>
+        <translation>Prix / loyer</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Real prices: BIS, %1 (national index deflated by consumer prices).</source>
+        <translation>Prix réels : BRI, %1 (indice national déflaté par les prix à la consommation).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ratios: OECD, %1, in % of their long-term average.</source>
+        <translation>Ratios : OCDE, %1, en % de leur moyenne de long terme.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source> pts</source>
+        <translation> pts</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>BIS, %1</source>
+        <translation>BRI, %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>IMF Global Debt Database, %1</source>
+        <translation>Global Debt Database du FMI, %1</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Households</source>
+        <translation>Ménages</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Companies</source>
+        <translation>Entreprises</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Government</source>
+        <translation>État</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>% GDP</source>
+        <translation>% PIB</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>10 years</source>
+        <translation>10 ans</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Total</source>
+        <translation>Total</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>&lt;b&gt;Debt service&lt;/b&gt;: households %1 of their income (%2 on average since %3)</source>
+        <translation>&lt;b&gt;Service de la dette&lt;/b&gt; : ménages %1 de leur revenu (%2 en moyenne depuis %3)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>, households and companies %1 (%2 on average).</source>
+        <translation>, ménages et entreprises %1 (%2 en moyenne).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;Debt service&lt;/b&gt;: households and companies %1 of their income (%2 on average).</source>
+        <translation>&lt;b&gt;Service de la dette&lt;/b&gt; : ménages et entreprises %1 de leur revenu (%2 en moyenne).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&lt;b&gt;Bank credit&lt;/b&gt; to the private sector: %1 of GDP (%2).</source>
+        <translation>&lt;b&gt;Crédit bancaire&lt;/b&gt; au secteur privé : %1 du PIB (%2).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>&lt;b&gt;Bad loans&lt;/b&gt;: %1 of bank loans (%2).</source>
+        <translation>&lt;b&gt;Créances douteuses&lt;/b&gt; : %1 des prêts bancaires (%2).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No debt figures for this country.</source>
+        <translation>Pas de chiffres d’endettement pour ce pays.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Households and companies: %1; median of the countries it covers.</source>
+        <translation>Ménages et entreprises : %1 ; médiane des pays couverts.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Government: IMF World Economic Outlook, %1 estimate.</source>
+        <translation>État : Perspectives de l’économie mondiale du FMI, estimation %1.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Debt service: BIS, %1.</source>
+        <translation>Service de la dette : BRI, %1.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Bank credit and bad loans: World Bank.</source>
+        <translation>Crédit bancaire et créances douteuses : Banque mondiale.</translation>
+    </message>
+    <message>
+        <location line="-1541"/>
+        <location line="+56"/>
+        <location line="+1109"/>
+        <source>Economic sectors</source>
+        <translation>Secteurs d’activité</translation>
+    </message>
+    <message>
+        <location line="-1276"/>
+        <source>Primary: working nature (agriculture, forestry, fishing). Secondary: transforming (industry, mining, energy, construction). Tertiary: services (trade, transport, finance, health, government…). Shares are measured in value added (output less what the sector buys from the others) and in jobs.</source>
+        <translation>Primaire : exploiter la nature (agriculture, sylviculture, pêche). Secondaire : transformer (industrie, mines, énergie, construction). Tertiaire : les services (commerce, transport, finance, santé, administration…). Les parts sont mesurées en valeur ajoutée (production moins ce que le secteur achète aux autres) et en emplois.</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>&lt;b&gt;Productivity&lt;/b&gt;: the primary sector has %1 of jobs but makes %2 of GDP, about %3 times less per job than the country&apos;s average. That gap is what pulls workers toward towns, industry and services as a country develops.</source>
+        <translation>&lt;b&gt;Productivité&lt;/b&gt; : le primaire compte %1 des emplois mais fait %2 du PIB, soit environ %3 fois moins par emploi que la moyenne du pays. C’est cet écart qui pousse les actifs vers les villes, l’industrie et les services à mesure qu’un pays se développe.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&lt;b&gt;Productivity&lt;/b&gt;: the %1 sector has %2 of jobs but makes %3 of GDP, about %4 times less per job than the country&apos;s average.</source>
+        <translation>&lt;b&gt;Productivité&lt;/b&gt; : le secteur %1 compte %2 des emplois mais fait %3 du PIB, soit environ %4 fois moins par emploi que la moyenne du pays.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A job in the secondary sector makes about %1 times the average: much capital or natural resources per worker (oil, gas, mines, heavy industry).</source>
+        <translation>Un emploi du secondaire produit environ %1 fois la moyenne : beaucoup de capital ou de ressources naturelles par travailleur (pétrole, gaz, mines, industrie lourde).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A job in services makes about %1 times the average: finance, telecoms, software and business services make much per job.</source>
+        <translation>Un emploi des services produit environ %1 fois la moyenne : finance, télécoms, logiciel et services aux entreprises produisent beaucoup par emploi.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A job in the primary sector makes about %1 times the average: large, mechanised farms or fisheries.</source>
+        <translation>Un emploi du primaire produit environ %1 fois la moyenne : grandes exploitations mécanisées ou pêcheries.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;b&gt;Deindustrialisation&lt;/b&gt;: the secondary sector lost %1 pts of GDP since %2: factories moved abroad, goods got cheaper with productivity gains, and services once done in-house are bought from outside.</source>
+        <translation>&lt;b&gt;Désindustrialisation&lt;/b&gt; : le secondaire a perdu %1 pts de PIB depuis %2 : usines délocalisées, biens moins chers grâce aux gains de productivité, et services autrefois faits en interne désormais achetés à l’extérieur.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>&lt;b&gt;Early deindustrialisation&lt;/b&gt;: the secondary sector lost %1 pts of GDP since %2 before the country got rich: services take over from farming without a large industrial stage (Rodrik).</source>
+        <translation>&lt;b&gt;Désindustrialisation précoce&lt;/b&gt; : le secondaire a perdu %1 pts de PIB depuis %2 avant que le pays ne soit riche : les services prennent le relais de l’agriculture sans grande étape industrielle (Rodrik).</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>As a country grows richer, farming mechanises, industry grows then shrinks, and services end up dominating (Clark, Fourastié). The structure tells where it stands and what its income depends on: commodity prices, world demand for goods or domestic spending.</source>
+        <translation>En s’enrichissant, un pays mécanise son agriculture, s’industrialise puis voit l’industrie reculer, et les services finissent par dominer (Clark, Fourastié). La structure dit où il en est et de quoi dépendent ses revenus : cours des matières premières, demande mondiale de biens ou dépenses intérieures.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Mining, oil and energy count in the secondary sector: an oil country looks industrial and its share follows the oil price. Shares of GDP don&apos;t add up to 100% (taxes less subsidies on products). Outsourcing moves industrial jobs to services. Jobs are ILO estimates, rough for the informal economy.</source>
+        <translation>Mines, pétrole et énergie comptent dans le secondaire : un pays pétrolier paraît industriel et sa part suit le prix du baril. Les parts du PIB n’additionnent pas 100 % (taxes moins subventions sur les produits). L’externalisation fait passer des emplois industriels dans les services. Les emplois sont des estimations de l’OIT, approximatives pour l’économie informelle.</translation>
+    </message>
+    <message>
+        <location line="+180"/>
+        <source>5-day high</source>
+        <translation>Haut sur 5 j</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>5-day low</source>
+        <translation>Bas sur 5 j</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>3-month high</source>
+        <translation>Haut sur 3 mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3-month low</source>
+        <translation>Bas sur 3 mois</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>2-year high</source>
+        <translation>Haut sur 2 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2-year low</source>
+        <translation>Bas sur 2 ans</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Close %1</source>
+        <translation>Clôture du %1</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>&lt;b&gt;Close of %1&lt;/b&gt; · %2 futures (%3), via Yahoo Finance, which only carries this contract&apos;s daily settlement.</source>
+        <translation>&lt;b&gt;Clôture du %1&lt;/b&gt; · contrat à terme %2 (%3), via Yahoo Finance, qui ne diffuse que la clôture quotidienne de ce contrat.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;Last trade %1&lt;/b&gt; · %2 futures (%3), about 10 minutes behind the exchange, via Yahoo Finance.</source>
+        <translation>&lt;b&gt;Dernière cotation : %1&lt;/b&gt; · contrat à terme %2 (%3), différé d&apos;environ 10 minutes, via Yahoo Finance.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>IMF monthly average for %1 (%2): %3 %4.</source>
+        <translation>Moyenne mensuelle du FMI en %1 (%2) : %3 %4.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;b&gt;Average of %1&lt;/b&gt; · IMF Primary Commodity Prices: %2.</source>
+        <translation>&lt;b&gt;Moyenne de %1&lt;/b&gt; · prix des matières premières du FMI : %2.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No free, current futures quote exists for it; the IMF publishes a month&apos;s average early the next month.</source>
+        <translation>Aucun contrat à terme n&apos;en donne de cotation gratuite et à jour ; le FMI publie la moyenne d&apos;un mois au début du mois suivant.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Its futures contract has no recent quote, so the IMF&apos;s monthly average is shown.</source>
+        <translation>Son contrat à terme n&apos;a pas de cotation récente : la moyenne mensuelle du FMI est affichée à la place.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No price loaded yet: see the Sources page.</source>
+        <translation>Aucun cours chargé pour l&apos;instant : voir l&apos;onglet Sources.</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>IMF monthly average price</source>
+        <translation>Prix moyen mensuel du FMI</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 futures</source>
+        <translation>Contrat à terme %1</translation>
+    </message>
+    <message>
+        <location line="+774"/>
+        <source>The World Bank is turned off in Sources.</source>
+        <translation>La Banque mondiale est désactivée dans Sources.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Loading World Bank data…</source>
+        <translation>Chargement des données de la Banque mondiale…</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>The World Bank has no figures for this country.</source>
+        <translation>La Banque mondiale n’a pas de chiffres pour ce pays.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Primary</source>
+        <translation>Primaire</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Secondary</source>
+        <translation>Secondaire</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tertiary</source>
+        <translation>Tertiaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>agriculture, forestry, fishing</source>
+        <translation>agriculture, sylviculture, pêche</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>industry, mining, energy, construction</source>
+        <translation>industrie, mines, énergie, construction</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>GDP</source>
+        <translation>PIB</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Jobs</source>
+        <translation>Emplois</translation>
+    </message>
+    <message>
+        <location line="-40"/>
+        <source>services</source>
+        <translation>services</translation>
+    </message>
+    <message>
+        <location line="-1634"/>
+        <location line="+185"/>
+        <location line="+67"/>
+        <location line="+36"/>
+        <location line="+1"/>
+        <location line="+7"/>
+        <location line="+25"/>
+        <location line="+1315"/>
+        <location line="+147"/>
+        <location line="+30"/>
+        <location line="+29"/>
+        <location line="+99"/>
+        <source>%1%</source>
+        <translation>%1 %</translation>
+    </message>
+    <message>
+        <location line="-530"/>
+        <source>The monthly and quarterly figures the markets follow, as the national statistical offices publish them, read from four free compilations: Eurostat (EU, EFTA and candidate countries), the OECD (its members and the large emerging economies), the IMF&apos;s consumer price database (nearly every country) and, for the United States, the Bureau of Labor Statistics directly. The most direct source available is used for each line.</source>
+        <translation>Les chiffres mensuels et trimestriels que suivent les marchés, tels que les publient les instituts statistiques nationaux, lus dans quatre compilations gratuites : Eurostat (UE, AELE et pays candidats), l&apos;OCDE (ses membres et les grands émergents), la base des prix à la consommation du FMI (presque tous les pays) et, pour les États-Unis, le Bureau of Labor Statistics directement. Chaque ligne prend la source la plus directe disponible.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&lt;b&gt;Source&lt;/b&gt; names the national office that publishes the figure for this country, then the compilation it was read from. Previous is the period before. Confidence indicators are in the units of the national survey (a balance of answers or an index), so they compare over time, not between countries.</source>
+        <translation>&lt;b&gt;Source&lt;/b&gt; nomme l&apos;institut national qui publie le chiffre pour ce pays, puis la compilation où il a été lu. Précédent est la période d&apos;avant. Les indices de confiance sont dans l&apos;unité de l&apos;enquête nationale (solde d&apos;opinions ou indice) : ils se comparent dans le temps, pas entre pays.</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>Trade by product</source>
+        <translation>Commerce par produit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The country&apos;s exports and imports by product (chapters of the Harmonised System) for the latest full year it has reported to UN Comtrade, as a share of its total. Without a Comtrade key the public preview endpoint is used, which allows a few requests a day; a free key (Sources) lifts the limit.</source>
+        <translation>Les exportations et importations du pays par produit (chapitres du Système harmonisé) pour la dernière année complète qu&apos;il a déclarée à UN Comtrade, en part de son total. Sans clé Comtrade, le point d&apos;accès public d&apos;aperçu est utilisé, qui n&apos;autorise que quelques requêtes par jour ; une clé gratuite (Sources) lève la limite.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Downloading from UN Comtrade…</source>
+        <translation>Téléchargement depuis UN Comtrade…</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+9"/>
+        <source>$%1 bn</source>
+        <translation>%1 Md$</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Exports %1</source>
+        <translation>Exportations %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports %1</source>
+        <translation>Importations %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Source: UN Comtrade, goods, as reported by the country, HS chapters.</source>
+        <translation>Source : UN Comtrade, marchandises, telles que déclarées par le pays, chapitres SH.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>The bodies behind this country&apos;s statistics (statistical office, central bank, ministries, international organisations, private institutes), with the number of indicators each one publishes. Click a name to open its site. The access notes say whether the data is free and how a program can read it; nearly all official bodies publish for free, private institutes publish their headline figures for free and sell the series. The whole list, with the state of each site, is in the Sources tab.</source>
+        <translation>Les organismes derrière les statistiques de ce pays (institut statistique, banque centrale, ministères, organisations internationales, instituts privés), avec le nombre d&apos;indicateurs que chacun publie. Cliquez sur un nom pour ouvrir son site. La mention d&apos;accès dit si les données sont gratuites et comment un programme peut les lire ; presque tous les organismes officiels publient gratuitement, les instituts privés publient leur chiffre-titre gratuitement et vendent les séries. La liste complète, avec l&apos;état de chaque site, est dans l&apos;onglet Sources.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+39"/>
+        <source>%n indicator(s) published by %1 sources.</source>
+        <translation>
+            <numerusform>%n indicateur publié par %1 sources.</numerusform>
+            <numerusform>%n indicateurs publiés par %1 sources.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Share of GDP · %1</source>
+        <translation>Part du PIB · %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 (%2): %3 of GDP, %4</source>
+        <translation>%1 (%2) : %3 du PIB, %4</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Share of jobs · %1</source>
+        <translation>Part des emplois · %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 (%2): %3 of jobs</source>
+        <translation>%1 (%2) : %3 des emplois</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Value</source>
+        <translation>Valeur</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>of which manufacturing</source>
+        <translation>dont manufacturier</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>%1 %2%3 pts</source>
+        <translation>%1 %2%3 pts</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Since %1, in share of GDP: %2.</source>
+        <translation>Depuis %1, en part du PIB : %2.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Primary: %1. Secondary: %2. Tertiary: %3.</source>
+        <translation>Primaire : %1. Secondaire : %2. Tertiaire : %3.</translation>
+    </message>
+</context>
+<context>
+    <name>DevToolsDock</name>
+    <message>
+        <location filename="../src/DevTools.cpp" line="+119"/>
+        <source>CODEBASE</source>
+        <translation>CODE</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Close</source>
+        <translation>Fermer</translation>
+    </message>
+</context>
+<context>
+    <name>EconomicCalendar</name>
+    <message>
+        <location filename="../src/CalendarData.cpp" line="-250"/>
+        <location line="+32"/>
+        <location line="+35"/>
+        <source>unexpected answer from TradingView</source>
+        <translation>réponse inattendue de TradingView</translation>
+    </message>
+</context>
+<context>
+    <name>EconomicView</name>
+    <message>
+        <location filename="../src/CalendarPage.cpp" line="-440"/>
+        <source>Economic events</source>
+        <translation>Événements économiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Refresh</source>
+        <translation>Actualiser</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Last week</source>
+        <translation>Semaine dernière</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Yesterday</source>
+        <translation>Hier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Today</source>
+        <translation>Aujourd&apos;hui</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tomorrow</source>
+        <translation>Demain</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Current week</source>
+        <translation>Cette semaine</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next week</source>
+        <translation>Semaine prochaine</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Specific date</source>
+        <translation>Date précise</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+35"/>
+        <source>Country</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="-32"/>
+        <source>All countries</source>
+        <translation>Tous les pays</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+23"/>
+        <source>Impact</source>
+        <translation>Impact</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Low</source>
+        <translation>Faible</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Medium</source>
+        <translation>Moyen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>High</source>
+        <translation>Élevé</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Time</source>
+        <translation>Heure</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Event</source>
+        <translation>Événement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Actual</source>
+        <translation>Publié</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Forecast</source>
+        <translation>Prévision</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Previous</source>
+        <translation>Précédent</translation>
+    </message>
+    <message>
+        <location line="+91"/>
+        <location line="+5"/>
+        <source>TradingView: %1</source>
+        <translation>TradingView : %1</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Loading %1 from TradingView…</source>
+        <translation>Chargement du %1 depuis TradingView…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Loading TradingView&apos;s economic calendar…</source>
+        <translation>Chargement du calendrier économique de TradingView…</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Source: %1</source>
+        <translation>Source : %1</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+7"/>
+        <source>No event for these filters</source>
+        <translation>Aucun événement pour ces filtres</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>%n event(s)</source>
+        <translation>
+            <numerusform>%n événement</numerusform>
+            <numerusform>%n événements</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>updated %1</source>
+        <translation>mis à jour %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>last refresh failed: %1</source>
+        <translation>dernière actualisation en échec : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>times in %1</source>
+        <translation>heures de %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>source: TradingView</source>
+        <translation>source : TradingView</translation>
+    </message>
+</context>
+<context>
+    <name>Economy</name>
+    <message>
+        <location filename="../src/EconomyData.cpp" line="+67"/>
+        <source>Stock market Fear &amp; Greed index</source>
+        <translation>Indice Fear &amp; Greed des actions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deepwater&apos;s estimate of the stock market&apos;s mood, built like CNN&apos;s index: momentum, volatility, safe haven demand, breadth and junk bond demand, each ranked against its last year (0 extreme fear, 100 extreme greed), averaged. An estimate, not CNN&apos;s own figure.</source>
+        <translation>Estimation par Deepwater de l&apos;humeur du marché actions, construite comme l&apos;indice de CNN : momentum, volatilité, demande de valeurs refuges, ampleur du marché et demande d&apos;obligations à haut rendement, chacun classé par rapport à sa dernière année (0 peur extrême, 100 avidité extrême), puis moyennés. Une estimation, pas le chiffre de CNN.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+9"/>
+        <source>Fear &amp; Greed – historical</source>
+        <translation>Fear &amp; Greed – historique</translation>
+    </message>
+    <message>
+        <location line="-6"/>
+        <source>Crypto Fear &amp; Greed</source>
+        <translation>Fear &amp; Greed crypto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>alternative.me&apos;s crypto Fear &amp; Greed index: volatility, momentum and volume, social media, bitcoin dominance and search trends, from 0 (extreme fear) to 100 (extreme greed). Updated daily.</source>
+        <translation>L&apos;indice Fear &amp; Greed crypto d&apos;alternative.me : volatilité, momentum et volumes, réseaux sociaux, dominance du bitcoin et tendances de recherche, de 0 (peur extrême) à 100 (avidité extrême). Mis à jour chaque jour.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Altcoin season index</source>
+        <translation>Indice de saison des altcoins</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CoinMarketCap&apos;s altcoin season index: the share of the 100 largest coins (less stablecoins and wrapped tokens) that did better than bitcoin over 90 days. 75 and above is an altcoin season, 25 and below a bitcoin season.</source>
+        <translation>L&apos;indice de saison des altcoins de CoinMarketCap : la part des 100 plus grandes cryptomonnaies (hors stablecoins et jetons « wrapped ») qui ont fait mieux que le bitcoin sur 90 jours. À 75 et plus, c&apos;est une saison des altcoins ; à 25 et moins, une saison du bitcoin.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Altcoin season – historical</source>
+        <translation>Saison des altcoins – historique</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sentiment</source>
+        <translation>Sentiment</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>VIX volatility index</source>
+        <translation>Indice de volatilité VIX</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The volatility of the S&amp;P 500 that options price for the next 30 days, in percent a year. Below 15 is calm, above 30 is stress.</source>
+        <translation>La volatilité du S&amp;P 500 que les options anticipent sur les 30 prochains jours, en pourcentage annuel. Sous 15 c&apos;est le calme, au-dessus de 30 le stress.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Michigan sentiment</source>
+        <translation>Sentiment Michigan</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The University of Michigan&apos;s index of consumer sentiment (1966 = 100): how households see their finances and the economy.</source>
+        <translation>L&apos;indice du sentiment des consommateurs de l&apos;université du Michigan (1966 = 100) : comment les ménages voient leurs finances et l&apos;économie.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Financial stress index</source>
+        <translation>Indice de stress financier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The St. Louis Fed&apos;s financial stress index, weekly, from 18 rates, spreads and volatilities. Zero is normal stress, above zero more.</source>
+        <translation>L&apos;indice de stress financier de la Fed de Saint-Louis, hebdomadaire, calculé sur 18 taux, spreads et volatilités. Zéro correspond à un stress normal, au-dessus à davantage de stress.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Financial conditions</source>
+        <translation>Conditions financières</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The Chicago Fed&apos;s national financial conditions index (NFCI), weekly. Negative: looser than average; positive: tighter.</source>
+        <translation>L&apos;indice national des conditions financières de la Fed de Chicago (NFCI), hebdomadaire. Négatif : plus souples que la moyenne ; positif : plus tendues.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>High yield spread</source>
+        <translation>Spread haut rendement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The extra yield of US high-yield corporate bonds over Treasuries (ICE BofA option-adjusted spread). It widens when credit risk is feared.</source>
+        <translation>Le rendement supplémentaire des obligations d&apos;entreprises américaines à haut rendement par rapport aux bons du Trésor (spread ajusté des options ICE BofA). Il s&apos;élargit quand on craint le risque de crédit.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Policy uncertainty</source>
+        <translation>Incertitude politique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The daily US economic policy uncertainty index (Baker, Bloom and Davis), from newspaper articles about policy and the economy.</source>
+        <translation>L&apos;indice quotidien d&apos;incertitude de la politique économique américaine (Baker, Bloom et Davis), tiré des articles de presse sur la politique et l&apos;économie.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Crypto</source>
+        <translation>Crypto</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Total crypto market cap</source>
+        <translation>Capitalisation crypto totale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The value of every listed cryptocurrency (CoinMarketCap), daily over the last year and weekly before.</source>
+        <translation>La valeur de toutes les cryptomonnaies cotées (CoinMarketCap), quotidienne sur la dernière année et hebdomadaire avant.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Bitcoin dominance</source>
+        <translation>Dominance du bitcoin</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bitcoin&apos;s share of the crypto market&apos;s total value (CoinMarketCap). It falls when money moves to other coins.</source>
+        <translation>La part du bitcoin dans la valeur totale du marché crypto (CoinMarketCap). Elle baisse quand l&apos;argent passe vers les autres cryptomonnaies.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Growth</source>
+        <translation>Croissance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>US GDP</source>
+        <translation>PIB des États-Unis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>US gross domestic product, quarterly, at a seasonally adjusted annual rate, in current dollars (BEA).</source>
+        <translation>Le produit intérieur brut des États-Unis, trimestriel, en rythme annuel corrigé des variations saisonnières, en dollars courants (BEA).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Real personal consumption</source>
+        <translation>Consommation réelle des ménages</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>What households spend, monthly, at an annual rate, in chained 2017 dollars (BEA): about two thirds of GDP.</source>
+        <translation>Les dépenses des ménages, mensuelles, en rythme annuel, en dollars chaînés de 2017 (BEA) : environ deux tiers du PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Capacity utilization</source>
+        <translation>Taux d&apos;utilisation des capacités</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The share of industry&apos;s capacity in use (Federal Reserve). Around 80% the economy runs hot; low readings mean slack.</source>
+        <translation>La part des capacités de l&apos;industrie en service (Réserve fédérale). Vers 80 % l&apos;économie tourne à plein ; des valeurs basses signalent des capacités inemployées.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Durable goods orders</source>
+        <translation>Commandes de biens durables</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New orders for goods meant to last three years or more (Census), monthly: a lead on business investment.</source>
+        <translation>Les nouvelles commandes de biens conçus pour durer trois ans ou plus (Census), mensuelles : un indicateur avancé de l&apos;investissement des entreprises.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Chicago Fed activity index</source>
+        <translation>Indice d&apos;activité de la Fed de Chicago</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The Chicago Fed national activity index (CFNAI), from 85 monthly series. Zero is trend growth; below -0.7 has often meant a recession.</source>
+        <translation>L&apos;indice national d&apos;activité de la Fed de Chicago (CFNAI), calculé sur 85 séries mensuelles. Zéro correspond à la croissance tendancielle ; sous -0,7, une récession a souvent commencé.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Manufacturing employment</source>
+        <translation>Emploi manufacturier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Jobs in US manufacturing (BLS payroll survey), monthly.</source>
+        <translation>Les emplois de l&apos;industrie manufacturière américaine (enquête auprès des entreprises du BLS), mensuels.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inflation</source>
+        <translation>Inflation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CPI headline</source>
+        <translation>IPC global</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The consumer price index for all urban consumers (BLS, 1982-84 = 100), seasonally adjusted.</source>
+        <translation>L&apos;indice des prix à la consommation de l&apos;ensemble des consommateurs urbains (BLS, 1982-84 = 100), corrigé des variations saisonnières.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>CPI core</source>
+        <translation>IPC sous-jacent</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The consumer price index less food and energy, the more stable part of inflation.</source>
+        <translation>L&apos;indice des prix à la consommation hors alimentation et énergie, la part la plus stable de l&apos;inflation.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Producer price index</source>
+        <translation>Indice des prix à la production</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prices producers get for all commodities (BLS, 1982 = 100): costs that often reach consumers later.</source>
+        <translation>Les prix que perçoivent les producteurs, toutes marchandises (BLS, 1982 = 100) : des coûts qui atteignent souvent les consommateurs plus tard.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>PCE price index</source>
+        <translation>Indice des prix PCE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The price index of personal consumption expenditures (BEA, 2017 = 100): the measure the Fed&apos;s 2% target is set on.</source>
+        <translation>L&apos;indice des prix des dépenses de consommation des ménages (BEA, 2017 = 100) : la mesure sur laquelle porte la cible de 2 % de la Fed.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inflation expectations (1Y)</source>
+        <translation>Anticipations d&apos;inflation (1 an)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The inflation households expect over the next year (University of Michigan survey, median).</source>
+        <translation>L&apos;inflation que les ménages attendent sur l&apos;année à venir (enquête de l&apos;université du Michigan, médiane).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inflation expectations (5Y)</source>
+        <translation>Anticipations d&apos;inflation (5 ans)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Expected inflation over five years, from the Cleveland Fed&apos;s model of Treasury yields, inflation swaps and surveys.</source>
+        <translation>L&apos;inflation attendue sur cinq ans, selon le modèle de la Fed de Cleveland (rendements du Trésor, swaps d&apos;inflation et enquêtes).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Employment</source>
+        <translation>Emploi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unemployment rate</source>
+        <translation>Taux de chômage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The share of the labor force without a job and looking for one (BLS household survey).</source>
+        <translation>La part de la population active sans emploi et qui en cherche un (enquête auprès des ménages du BLS).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Nonfarm payrolls</source>
+        <translation>Emplois non agricoles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Jobs on US payrolls outside farming (BLS establishment survey); the monthly change is the jobs report&apos;s headline.</source>
+        <translation>Les emplois salariés américains hors agriculture (enquête auprès des entreprises du BLS) ; leur variation mensuelle est le chiffre phare du rapport sur l&apos;emploi.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Initial jobless claims</source>
+        <translation>Inscriptions au chômage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New claims for unemployment insurance, weekly (Department of Labor): the quickest sign of layoffs.</source>
+        <translation>Les nouvelles demandes d&apos;allocations chômage, hebdomadaires (Département du Travail) : le signe le plus rapide des licenciements.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Continuing claims</source>
+        <translation>Allocataires du chômage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>People still claiming unemployment insurance, weekly: rises when finding a new job takes longer.</source>
+        <translation>Les personnes qui touchent toujours l&apos;allocation chômage, chaque semaine : le chiffre monte quand retrouver un emploi prend plus de temps.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Labor participation rate</source>
+        <translation>Taux de participation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The share of the population aged 16 and over working or looking for work.</source>
+        <translation>La part de la population de 16 ans et plus qui travaille ou cherche du travail.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>JOLTS job openings</source>
+        <translation>Offres d&apos;emploi JOLTS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Jobs open on the last business day of the month (BLS job openings and labor turnover survey).</source>
+        <translation>Les postes ouverts le dernier jour ouvré du mois (enquête JOLTS du BLS sur les offres d&apos;emploi et la rotation de la main-d&apos;œuvre).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Rates</source>
+        <translation>Taux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fed funds rate</source>
+        <translation>Taux des fonds fédéraux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The effective federal funds rate, daily: what banks pay each other overnight, steered by the Fed&apos;s target range.</source>
+        <translation>Le taux effectif des fonds fédéraux, quotidien : ce que les banques se paient entre elles au jour le jour, piloté par la fourchette cible de la Fed.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>10-year Treasury yield</source>
+        <translation>Rendement du Trésor à 10 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The yield of the 10-year US Treasury note at constant maturity, daily.</source>
+        <translation>Le rendement de l&apos;obligation du Trésor américain à 10 ans à maturité constante, quotidien.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>2-year Treasury yield</source>
+        <translation>Rendement du Trésor à 2 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The yield of the 2-year US Treasury note, daily: it follows where the market expects the Fed&apos;s rate to go.</source>
+        <translation>Le rendement de l&apos;obligation du Trésor américain à 2 ans, quotidien : il suit ce que le marché attend du taux de la Fed.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Yield curve (10Y-2Y)</source>
+        <translation>Courbe des taux (10 ans - 2 ans)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The 10-year yield less the 2-year. Below zero (an inverted curve) has come before most US recessions.</source>
+        <translation>Le rendement à 10 ans moins celui à 2 ans. Sous zéro (une courbe inversée), il a précédé la plupart des récessions américaines.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Yield curve (10Y-3M)</source>
+        <translation>Courbe des taux (10 ans - 3 mois)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The 10-year yield less the 3-month bill, the spread the New York Fed&apos;s recession model uses.</source>
+        <translation>Le rendement à 10 ans moins celui du bon à 3 mois, l&apos;écart qu&apos;utilise le modèle de récession de la Fed de New York.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Investment grade spread</source>
+        <translation>Spread investment grade</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The extra yield of US investment-grade corporate bonds over Treasuries (ICE BofA option-adjusted spread).</source>
+        <translation>Le rendement supplémentaire des obligations d&apos;entreprises américaines de qualité (investment grade) par rapport aux bons du Trésor (spread ajusté des options ICE BofA).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Housing</source>
+        <translation>Immobilier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Housing starts</source>
+        <translation>Mises en chantier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New homes whose construction began, monthly, at a seasonally adjusted annual rate (Census).</source>
+        <translation>Les logements neufs dont la construction a commencé, mensuels, en rythme annuel corrigé des variations saisonnières (Census).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Building permits</source>
+        <translation>Permis de construire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New homes authorized by permits, at an annual rate: they come before the starts.</source>
+        <translation>Les logements neufs autorisés par un permis, en rythme annuel : ils précèdent les mises en chantier.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>New home sales</source>
+        <translation>Ventes de logements neufs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales of new single-family homes, at an annual rate (Census).</source>
+        <translation>Les ventes de maisons individuelles neuves, en rythme annuel (Census).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Case-Shiller home price</source>
+        <translation>Prix immobiliers Case-Shiller</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The S&amp;P CoreLogic Case-Shiller US national home price index (January 2000 = 100), not seasonally adjusted.</source>
+        <translation>L&apos;indice national S&amp;P CoreLogic Case-Shiller des prix des logements aux États-Unis (janvier 2000 = 100), non corrigé des variations saisonnières.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Active listings</source>
+        <translation>Annonces actives</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Homes for sale in the US (Realtor.com), monthly: the supply buyers choose from.</source>
+        <translation>Les logements en vente aux États-Unis (Realtor.com), mensuels : l&apos;offre parmi laquelle les acheteurs choisissent.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>30-year mortgage rate</source>
+        <translation>Taux hypothécaire à 30 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The average 30-year fixed mortgage rate, weekly (Freddie Mac).</source>
+        <translation>Le taux moyen des prêts immobiliers à taux fixe sur 30 ans, hebdomadaire (Freddie Mac).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Consumer</source>
+        <translation>Consommation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sahm rule recession indicator</source>
+        <translation>Indicateur de récession (règle de Sahm)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The 3-month average unemployment rate less its low of the past year, in points. At 0.5 or more a recession has usually begun.</source>
+        <translation>Le taux de chômage moyen sur 3 mois moins son plus bas de l&apos;année écoulée, en points. À 0,5 ou plus, une récession a en général commencé.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Consumer confidence</source>
+        <translation>Confiance des ménages</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The OECD&apos;s consumer confidence indicator for the United States, monthly (long-term average = 100).</source>
+        <translation>L&apos;indicateur de confiance des consommateurs de l&apos;OCDE pour les États-Unis, mensuel (moyenne de long terme = 100).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Debt service ratio</source>
+        <translation>Ratio de service de la dette</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Household debt payments as a share of disposable income, quarterly (Federal Reserve).</source>
+        <translation>Les remboursements de dettes des ménages en part du revenu disponible, trimestriels (Réserve fédérale).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Consumer credit</source>
+        <translation>Crédit à la consommation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Credit owed by households outside mortgages (cards, car and student loans), monthly (Federal Reserve G.19).</source>
+        <translation>Le crédit dû par les ménages hors prêts immobiliers (cartes, prêts auto et étudiants), mensuel (Réserve fédérale, G.19).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Personal savings rate</source>
+        <translation>Taux d&apos;épargne des ménages</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Saving as a share of disposable personal income, monthly (BEA).</source>
+        <translation>L&apos;épargne en part du revenu disponible des ménages, mensuelle (BEA).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Real retail sales</source>
+        <translation>Ventes au détail réelles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Retail and food services sales deflated by the CPI, monthly, in 1982-84 dollars.</source>
+        <translation>Les ventes du commerce de détail et de la restauration déflatées par l&apos;IPC, mensuelles, en dollars de 1982-84.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Liquidity</source>
+        <translation>Liquidité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fed balance sheet</source>
+        <translation>Bilan de la Fed</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total assets of the Federal Reserve, weekly (H.4.1): it grows with quantitative easing and shrinks with tightening.</source>
+        <translation>Le total de l&apos;actif de la Réserve fédérale, hebdomadaire (H.4.1) : il grossit avec l&apos;assouplissement quantitatif et se réduit avec le resserrement.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Treasury general account</source>
+        <translation>Compte général du Trésor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The Treasury&apos;s cash at the Fed, weekly. When it rises it drains reserves from the banks.</source>
+        <translation>La trésorerie du Trésor à la Fed, hebdomadaire. Quand elle augmente, elle retire des réserves aux banques.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Reverse repo</source>
+        <translation>Prises en pension (reverse repo)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash money market funds and others park at the Fed overnight (reverse repurchase agreements), daily.</source>
+        <translation>L&apos;argent que les fonds monétaires et d&apos;autres placent à la Fed au jour le jour (prises en pension), quotidien.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Retail money funds</source>
+        <translation>Fonds monétaires de détail</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Retail money market fund balances, weekly (Federal Reserve H.6).</source>
+        <translation>Les encours des fonds monétaires des particuliers, hebdomadaires (Réserve fédérale, H.6).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>M2 money supply</source>
+        <translation>Masse monétaire M2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash, deposits and retail money funds, monthly, seasonally adjusted (Federal Reserve H.6).</source>
+        <translation>Billets, dépôts et fonds monétaires de détail, mensuels, corrigés des variations saisonnières (Réserve fédérale, H.6).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>M2 velocity</source>
+        <translation>Vitesse de M2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Nominal GDP divided by M2, quarterly: how many times a dollar of M2 is spent in a year.</source>
+        <translation>Le PIB nominal divisé par M2, trimestriel : combien de fois un dollar de M2 est dépensé dans l&apos;année.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Global</source>
+        <translation>Monde</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dollar index (DXY)</source>
+        <translation>Indice dollar (DXY)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The ICE dollar index: the dollar against six currencies, the euro for 58% (Yahoo Finance, daily close).</source>
+        <translation>L&apos;indice dollar d&apos;ICE : le dollar face à six devises, dont l&apos;euro pour 58 % (Yahoo Finance, clôture quotidienne).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>USD/JPY exchange rate</source>
+        <translation>Taux de change USD/JPY</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Yen per dollar at noon in New York, daily (Federal Reserve H.10).</source>
+        <translation>Yens pour un dollar à midi à New York, quotidien (Réserve fédérale, H.10).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Japan 10Y yield</source>
+        <translation>Rendement japonais à 10 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Japan&apos;s 10-year government bond yield, monthly average (OECD).</source>
+        <translation>Le rendement des obligations d&apos;État japonaises à 10 ans, moyenne mensuelle (OCDE).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Euro area CPI</source>
+        <translation>IPCH de la zone euro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The euro area&apos;s harmonised index of consumer prices (Eurostat, 2025 = 100), monthly.</source>
+        <translation>L&apos;indice des prix à la consommation harmonisé de la zone euro (Eurostat, 2025 = 100), mensuel.</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <location filename="../src/EconomyPage.cpp" line="+274"/>
+        <source>Altcoin season</source>
+        <translation>Saison des altcoins</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt leaning</source>
+        <translation>Penche altcoins</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>BTC leaning</source>
+        <translation>Penche BTC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/EconomyPage.cpp" line="-1"/>
+        <source>Bitcoin season</source>
+        <translation>Saison du bitcoin</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location filename="../src/EconomyPage.cpp" line="-3"/>
+        <source>Extreme fear</source>
+        <translation>Peur extrême</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/EconomyPage.cpp" line="+0"/>
+        <source>Fear</source>
+        <translation>Peur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/EconomyPage.cpp" line="+1"/>
+        <source>Neutral</source>
+        <translation>Neutre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/EconomyPage.cpp" line="+0"/>
+        <source>Greed</source>
+        <translation>Avidité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/EconomyPage.cpp" line="+1"/>
+        <source>Extreme greed</source>
+        <translation>Avidité extrême</translation>
+    </message>
+    <message>
+        <location line="+174"/>
+        <source>Momentum</source>
+        <translation>Momentum</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Volatility</source>
+        <translation>Volatilité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Safe haven demand</source>
+        <translation>Valeurs refuges</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Breadth</source>
+        <translation>Ampleur du marché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Junk bond demand</source>
+        <translation>Haut rendement</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>No S&amp;P 500 prices</source>
+        <translation>Pas de cours du S&amp;P 500</translation>
+    </message>
+    <message>
+        <location filename="../src/EconomyPage.cpp" line="-174"/>
+        <source>Deepwater estimate</source>
+        <translation>Estimation Deepwater</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>%1 pp</source>
+        <translation>%1 pt</translation>
+    </message>
+    <message>
+        <location line="+240"/>
+        <source>Latest: %1</source>
+        <translation>Dernier : %1</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+124"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="-69"/>
+        <source>Value: %1</source>
+        <translation>Valeur : %1</translation>
+    </message>
+    <message>
+        <location line="+136"/>
+        <source>Last: %1</source>
+        <translation>Dernier : %1</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Components (0 fear · 100 greed)</source>
+        <translation>Composantes (0 peur · 100 avidité)</translation>
+    </message>
+</context>
+<context>
+    <name>EconomyPage</name>
+    <message>
+        <location line="+61"/>
+        <source>Countries</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Refresh</source>
+        <translation>Actualiser</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Download every indicator of this section again</source>
+        <translation>Télécharger à nouveau tous les indicateurs de cette section</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>ESTIMATE</source>
+        <translation>ESTIMATION</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+28"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Updating…</source>
+        <translation>Mise à jour…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Unavailable: %1</source>
+        <translation>Indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Updated %1</source>
+        <translation>Mis à jour à %1</translation>
+    </message>
+</context>
+<context>
+    <name>EconomySectors</name>
+    <message>
+        <location filename="../src/MacroData.cpp" line="+574"/>
+        <source>No World Bank data</source>
+        <translation>Aucune donnée de la Banque mondiale</translation>
+    </message>
+</context>
+<context>
+    <name>ForexPage</name>
+    <message>
+        <location filename="../src/ForexPage.cpp" line="+38"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Main pairs</source>
+        <translation>Paires principales</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Policy rates</source>
+        <translation>Taux directeurs</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Capital flows · futures positioning</source>
+        <translation>Flux de capitaux · positionnement sur les contrats à terme</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Correlation of daily returns</source>
+        <translation>Corrélation des rendements quotidiens</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>1M</source>
+        <translation>1M</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3M</source>
+        <translation>3M</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>6M</source>
+        <translation>6M</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>1Y</source>
+        <translation>1A</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>European Central Bank reference rates via frankfurter.dev: one fix per business day around 16:00 CET, no intraday data.</source>
+        <translation>Taux de référence de la Banque centrale européenne via frankfurter.dev : un fixing par jour ouvré vers 16 h (heure de Paris), pas de données intrajournalières.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Latest fix: %1.</source>
+        <translation>Dernier fixing : %1.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Could not load rates: %1</source>
+        <translation>Impossible de charger les taux : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Pearson correlation of daily log returns over the last %1 fixes. Quote convention matters: EUR/USD and USD/CHF both measure the dollar, from opposite sides, so they correlate negatively.</source>
+        <translation>Corrélation de Pearson des rendements logarithmiques quotidiens sur les %1 derniers fixings. Le sens de cotation compte : EUR/USD et USD/CHF mesurent tous deux le dollar, chacun d’un côté, d’où leur corrélation négative.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Bank for International Settlements (BIS), daily series as reported by each central bank (for the US, the midpoint of the Fed funds target range). Pair cards show the carry: base minus quote policy rate.</source>
+        <translation>Banque des règlements internationaux (BRI), séries quotidiennes telles que publiées par chaque banque centrale (pour les États-Unis, le milieu de la fourchette cible de la Fed). Les cartes des paires indiquent le portage (carry) : taux directeur de la devise de base moins celui de la devise de cotation.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+7"/>
+        <source>Could not load: %1</source>
+        <translation>Chargement impossible : %1</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>CFTC Traders in Financial Futures, CME contracts vs USD, released every Friday for the previous Tuesday. Net position as % of open interest: asset managers (funds, pensions) and leveraged funds (hedge funds, CTAs). The weekly change shows money moving in or out.</source>
+        <translation>Rapport CFTC « Traders in Financial Futures », contrats du CME contre USD, publié chaque vendredi pour le mardi précédent. Position nette en % de l’intérêt ouvert : gérants d’actifs (fonds, caisses de retraite) et fonds à effet de levier (hedge funds, CTA). La variation hebdomadaire montre l’argent qui entre ou qui sort.</translation>
+    </message>
+</context>
+<context>
+    <name>FuturesQuotes</name>
+    <message>
+        <location filename="../src/CommodityPrices.cpp" line="-54"/>
+        <source>No futures quotes in Yahoo&apos;s answer</source>
+        <translation>Aucune cotation de contrat à terme dans la réponse de Yahoo</translation>
+    </message>
+</context>
+<context>
+    <name>FxData</name>
+    <message>
+        <location filename="../src/FxData.cpp" line="+102"/>
+        <source>No rates returned</source>
+        <translation>Aucun taux reçu</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Incomplete rate history</source>
+        <translation>Historique de taux incomplet</translation>
+    </message>
+</context>
+<context>
+    <name>FxPairCard</name>
+    <message>
+        <location filename="../src/ForexPage.cpp" line="-469"/>
+        <source>carry %1%2 pp</source>
+        <translation>portage %1%2 pts</translation>
+    </message>
+</context>
+<context>
+    <name>GlobeWidget</name>
+    <message>
+        <location filename="../src/GlobeWidget.cpp" line="+107"/>
+        <location line="+92"/>
+        <source>Pause rotation</source>
+        <translation>Mettre la rotation en pause</translation>
+    </message>
+    <message>
+        <location line="-91"/>
+        <source>Zoom in</source>
+        <translation>Zoom avant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Zoom out</source>
+        <translation>Zoom arrière</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reset view</source>
+        <translation>Réinitialiser la vue</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+23"/>
+        <location line="+253"/>
+        <source>Prism map: raise countries by value</source>
+        <translation>Carte en prismes : relief des pays selon la valeur</translation>
+    </message>
+    <message>
+        <location line="-265"/>
+        <location line="+144"/>
+        <source>Hide trade flows</source>
+        <translation>Masquer les flux commerciaux</translation>
+    </message>
+    <message>
+        <location line="-144"/>
+        <location line="+144"/>
+        <source>Flow map: trade in goods</source>
+        <translation>Carte des flux : commerce de biens</translation>
+    </message>
+    <message>
+        <location line="-137"/>
+        <location line="+157"/>
+        <source>Hide the supply chain layer</source>
+        <translation>Masquer la couche chaînes d’approvisionnement</translation>
+    </message>
+    <message>
+        <location line="-156"/>
+        <location line="+156"/>
+        <source>Supply chains: ports, oil storage, disruptions</source>
+        <translation>Chaînes d’approvisionnement : ports, stockage pétrolier, perturbations</translation>
+    </message>
+    <message>
+        <location line="-91"/>
+        <source>Resume rotation</source>
+        <translation>Reprendre la rotation</translation>
+    </message>
+    <message>
+        <location line="-61"/>
+        <location line="+253"/>
+        <source>Flat map</source>
+        <translation>Carte à plat</translation>
+    </message>
+    <message>
+        <location line="+184"/>
+        <source>Drag to spin · scroll to zoom · click a dot or a country</source>
+        <translation>Glisser pour tourner · molette pour zoomer · cliquer sur un point ou un pays</translation>
+    </message>
+    <message>
+        <location line="+1196"/>
+        <source>Tanker</source>
+        <translation>Pétrolier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cargo ship</source>
+        <translation>Cargo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unidentified ship</source>
+        <translation>Navire non identifié</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>… and %1 more</source>
+        <translation>… et %1 de plus</translation>
+    </message>
+</context>
+<context>
+    <name>GraphCanvas</name>
+    <message>
+        <location filename="../src/CodeGraphView.cpp" line="-671"/>
+        <source>No graph loaded</source>
+        <translation>Aucun graphe chargé</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+36"/>
+        <source>%n links</source>
+        <translation>
+            <numerusform>%n lien</numerusform>
+            <numerusform>%n liens</numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>HeaderBar</name>
+    <message>
+        <location filename="../src/HeaderBar.cpp" line="+157"/>
+        <source>Show a hidden tab</source>
+        <translation>Afficher un onglet masqué</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+184"/>
+        <source>Edit tabs</source>
+        <translation>Modifier les onglets</translation>
+    </message>
+    <message>
+        <location line="-158"/>
+        <source>Developer tools</source>
+        <translation>Outils de développement</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Settings</source>
+        <translation>Paramètres</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Hide this tab</source>
+        <translation>Masquer cet onglet</translation>
+    </message>
+    <message>
+        <location line="+98"/>
+        <source>Done</source>
+        <translation>Terminé</translation>
+    </message>
+</context>
+<context>
+    <name>HourlyChart</name>
+    <message>
+        <location filename="../src/ChokepointsPage.cpp" line="-276"/>
+        <source>−48 h</source>
+        <translation>−48 h</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>now</source>
+        <translation>maintenant</translation>
+    </message>
+</context>
+<context>
+    <name>HuggingFaceHub</name>
+    <message>
+        <location filename="../src/AiModels.cpp" line="+90"/>
+        <source>Gated repository: a Hub token that accepted its terms is needed (Sources › AI)</source>
+        <translation>Dépôt à accès restreint : il faut un jeton Hub ayant accepté ses conditions (Sources › IA)</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Can&apos;t write %1</source>
+        <translation>Impossible d&apos;écrire %1</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Cancelled</source>
+        <translation>Annulé</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Can&apos;t rename the downloaded file</source>
+        <translation>Impossible de renommer le fichier téléchargé</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>The file&apos;s SHA-256 doesn&apos;t match the Hub&apos;s: download it again</source>
+        <translation>Le SHA-256 du fichier ne correspond pas à celui du Hub : téléchargez-le à nouveau</translation>
+    </message>
+</context>
+<context>
+    <name>IndicatorItem</name>
+    <message>
+        <location filename="../src/MacroPanel.cpp" line="-228"/>
+        <source>Latest</source>
+        <translation>Dernier</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 · %2 countries</source>
+        <translation>%1 · %2 pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>median</source>
+        <translation>médiane</translation>
+    </message>
+</context>
+<context>
+    <name>IndicatorPanel</name>
+    <message>
+        <location line="-135"/>
+        <source>Macro</source>
+        <translation>Macro</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Indicators by country</source>
+        <translation>Indicateurs par pays</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Click an indicator to color the globe and rank countries.</source>
+        <translation>Cliquez sur un indicateur pour colorer le globe et classer les pays.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Economy</source>
+        <translation>Économie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Latest official figures</source>
+        <translation>Derniers chiffres officiels</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Supply chains</source>
+        <translation>Chaînes d’approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Capital flows and trade</source>
+        <translation>Flux de capitaux et échanges</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Loading IMF data…</source>
+        <translation>Chargement des données du FMI…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IMF data unavailable: %1</source>
+        <translation>Données du FMI indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>IMF World Economic Outlook and balance of payments · BIS policy rates</source>
+        <translation>Perspectives de l’économie mondiale et balance des paiements (FMI) · taux directeurs (BRI)</translation>
+    </message>
+</context>
+<context>
+    <name>KeyIndicators</name>
+    <message>
+        <location filename="../src/KeyIndicators.cpp" line="+324"/>
+        <source>GDP growth</source>
+        <translation>Croissance du PIB</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GDP growth over a year</source>
+        <translation>Croissance du PIB sur un an</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GDP growth, annualised</source>
+        <translation>Croissance du PIB, annualisée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Inflation</source>
+        <translation>Inflation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Core inflation</source>
+        <translation>Inflation sous-jacente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PCE inflation</source>
+        <translation>Inflation PCE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Unemployment rate</source>
+        <translation>Taux de chômage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non-farm payrolls</source>
+        <translation>Emplois non agricoles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Private payrolls (ADP)</source>
+        <translation>Emplois privés (ADP)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Initial jobless claims</source>
+        <translation>Inscriptions au chômage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Industrial production</source>
+        <translation>Production industrielle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Economic activity</source>
+        <translation>Activité économique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Retail sales</source>
+        <translation>Ventes au détail</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Housing starts</source>
+        <translation>Mises en chantier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Business confidence</source>
+        <translation>Confiance des entreprises</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer confidence</source>
+        <translation>Confiance des ménages</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leading indicator</source>
+        <translation>Indicateur avancé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Manufacturing PMI</source>
+        <translation>PMI manufacturier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Services PMI</source>
+        <translation>PMI services</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Composite PMI</source>
+        <translation>PMI composite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Business climate</source>
+        <translation>Climat des affaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Economic sentiment</source>
+        <translation>Sentiment économique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer sentiment</source>
+        <translation>Sentiment des ménages</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Producer prices</source>
+        <translation>Prix à la production</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wage growth</source>
+        <translation>Hausse des salaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>3-month interbank rate</source>
+        <translation>Taux interbancaire 3 mois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>10-year bond yield</source>
+        <translation>Rendement à 10 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current account</source>
+        <translation>Balance courante</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trade balance</source>
+        <translation>Balance commerciale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Government debt</source>
+        <translation>Dette publique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Budget balance</source>
+        <translation>Solde budgétaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crude oil stocks</source>
+        <translation>Stocks de brut</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crude oil production</source>
+        <translation>Production de brut</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gasoline price</source>
+        <translation>Prix de l&apos;essence</translation>
+    </message>
+    <message>
+        <location line="+156"/>
+        <source>%1%</source>
+        <translation>%1 %</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1k</source>
+        <translation>%1 k</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>$%1 bn</source>
+        <translation>%1 Md$</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 mb</source>
+        <translation>%1 Mb</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 kb/d</source>
+        <translation>%1 kb/j</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>$%1</source>
+        <translation>%1 $</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Q%1 %2</source>
+        <translation>T%1 %2</translation>
+    </message>
+</context>
+<context>
+    <name>KeyedSeriesSet</name>
+    <message>
+        <location filename="../src/KeyedSources.cpp" line="-401"/>
+        <source>No API key</source>
+        <translation>Pas de clé API</translation>
+    </message>
+</context>
+<context>
+    <name>LeftPanel</name>
+    <message>
+        <location filename="../src/LeftPanel.cpp" line="+55"/>
+        <source>%1 futures (%2), close of %3, via Yahoo Finance</source>
+        <translation>Contrat à terme %1 (%2), clôture du %3, via Yahoo Finance</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 futures (%2), %3, about 10 minutes delayed, via Yahoo Finance</source>
+        <translation>Contrat à terme %1 (%2), %3, différé d&apos;environ 10 minutes, via Yahoo Finance</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>IMF monthly average, %1</source>
+        <translation>Moyenne mensuelle du FMI, %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No price yet</source>
+        <translation>Pas encore de cours</translation>
+    </message>
+    <message>
+        <location line="+107"/>
+        <source>Overview</source>
+        <translation>Vue d&apos;ensemble</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Sites</source>
+        <translation>Sites</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Markets</source>
+        <translation>Marchés</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Top movers</source>
+        <translation>Plus fortes variations</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Layers</source>
+        <translation>Calques</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Hide all layers</source>
+        <translation>Masquer tous les calques</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Show all layers</source>
+        <translation>Afficher tous les calques</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Live shipping</source>
+        <translation>Trafic maritime en direct</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Tankers</source>
+        <translation>Pétroliers et méthaniers</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Crude, products, LNG and chemical tankers</source>
+        <translation>Pétroliers (brut, produits), méthaniers (GNL) et chimiquiers</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Cargo ships</source>
+        <translation>Cargos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dry bulk carriers (ores, coal, grain) and container ships</source>
+        <translation>Vraquiers (minerais, charbon, céréales) et porte-conteneurs</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unidentified</source>
+        <translation>Non identifiés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ships whose type has not been received yet (sent every ~6 minutes)</source>
+        <translation>Navires dont le type n’a pas encore été reçu (envoyé toutes les ~6 minutes)</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Real prices: delayed futures, IMF monthly averages · sample sites</source>
+        <translation>Cours réels : contrats à terme différés, moyennes mensuelles du FMI · sites : échantillon</translation>
+    </message>
+</context>
+<context>
+    <name>MacroIndicators</name>
+    <message>
+        <location filename="../src/MacroIndicators.cpp" line="+115"/>
+        <source>Consumer prices over the latest month published, against the same month a year before: the national offices&apos; figures as compiled by Eurostat, the OECD and the IMF (BLS for the United States).</source>
+        <translation>Les prix à la consommation du dernier mois publié, contre le même mois un an plus tôt : les chiffres des instituts nationaux compilés par Eurostat, l&apos;OCDE et le FMI (le BLS pour les États-Unis).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Latest monthly unemployment rate, seasonally adjusted, as compiled by Eurostat and the OECD (BLS for the United States): about 45 economies.</source>
+        <translation>Dernier taux de chômage mensuel, corrigé des variations saisonnières, compilé par Eurostat et l&apos;OCDE (le BLS pour les États-Unis) : environ 45 économies.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Crude oil stocks at the end of the latest month each country reported to JODI, against the same month a year before: about 60 countries, one to three months behind.</source>
+        <translation>Les stocks de brut à la fin du dernier mois déclaré par chaque pays à JODI, comparés au même mois un an plus tôt : une soixantaine de pays, avec un à trois mois de retard.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Latest month-end figure for each central bank.</source>
+        <translation>Dernier chiffre de fin de mois de chaque banque centrale.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>IMF World Economic Outlook</source>
+        <translation>Perspectives de l’économie mondiale (FMI)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank for International Settlements</source>
+        <translation>Banque des règlements internationaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IMF balance of payments statistics</source>
+        <translation>Statistiques de balance des paiements du FMI</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>National statistical offices, via Eurostat, OECD, IMF and BLS</source>
+        <translation>Instituts statistiques nationaux, via Eurostat, l&apos;OCDE, le FMI et le BLS</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>USDA Production, Supply and Distribution · Eurostat crop statistics (EU members)</source>
+        <translation>USDA Production, Supply and Distribution · statistiques agricoles d’Eurostat (membres de l’UE)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 yield per hectare against the year before.</source>
+        <translation>Rendement par hectare (%1) comparé à l’année précédente.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Wheat yield</source>
+        <translation>Rendement du blé</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wheat</source>
+        <translation>Blé</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Corn yield</source>
+        <translation>Rendement du maïs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Corn</source>
+        <translation>Maïs</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rice yield</source>
+        <translation>Rendement du riz</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rice</source>
+        <translation>Riz</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Soybean yield</source>
+        <translation>Rendement du soja</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Soybean</source>
+        <translation>Soja</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Road freight</source>
+        <translation>Fret routier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Goods carried by road in tonne-kilometres, against the year before.</source>
+        <translation>Marchandises transportées par route en tonnes-kilomètres, comparées à l’année précédente.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>International Transport Forum (OECD), annual transport trends</source>
+        <translation>Forum international des transports (OCDE), tendances annuelles des transports</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Crude oil stocks</source>
+        <translation>Stocks de pétrole brut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Crude stocks at the end of the latest month, against a year before.</source>
+        <translation>Stocks de brut à la fin du dernier mois, comparés à un an plus tôt.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Joint Organisations Data Initiative (JODI-Oil)</source>
+        <translation>Joint Organisations Data Initiative (JODI-Oil)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Inflation, latest month</source>
+        <translation>Inflation, dernier mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Consumer prices against a year before, latest month published.</source>
+        <translation>Prix à la consommation sur un an, dernier mois publié.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unemployment, latest month</source>
+        <translation>Chômage, dernier mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Share of the labour force without a job, latest month published.</source>
+        <translation>Part de la population active sans emploi, dernier mois publié.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Real GDP growth</source>
+        <translation>Croissance du PIB réel</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Annual change in output, adjusted for inflation.</source>
+        <translation>Variation annuelle de la production, corrigée de l’inflation.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inflation</source>
+        <translation>Inflation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Average consumer prices, annual change.</source>
+        <translation>Prix à la consommation moyens, variation annuelle.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unemployment</source>
+        <translation>Chômage</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Share of the labour force without a job.</source>
+        <translation>Part de la population active sans emploi.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Policy rate</source>
+        <translation>Taux directeur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Central bank policy rate at the end of the latest month.</source>
+        <translation>Taux directeur de la banque centrale à la fin du dernier mois.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Real policy rate</source>
+        <translation>Taux directeur réel</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Policy rate minus the IMF inflation estimate for this year. Positive means tight money.</source>
+        <translation>Taux directeur moins l’estimation d’inflation du FMI pour l’année. Positif : politique monétaire restrictive.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Current account</source>
+        <translation>Balance courante</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Balance of trade, income and transfers with the rest of the world, in % of GDP.</source>
+        <translation>Solde des échanges, revenus et transferts avec le reste du monde, en % du PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Budget balance</source>
+        <translation>Solde budgétaire</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>General government net lending (+) or borrowing (−), in % of GDP.</source>
+        <translation>Capacité (+) ou besoin (−) de financement des administrations publiques, en % du PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Public debt</source>
+        <translation>Dette publique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>General government gross debt, in % of GDP.</source>
+        <translation>Dette brute des administrations publiques, en % du PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>GDP per capita</source>
+        <translation>PIB par habitant</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>At purchasing power parity, in international dollars.</source>
+        <translation>En parité de pouvoir d’achat, en dollars internationaux.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>GDP</source>
+        <translation>PIB</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Size of the economy at current prices, in US dollars.</source>
+        <translation>Taille de l’économie à prix courants, en dollars US.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Net capital inflows</source>
+        <translation>Entrées nettes de capitaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Foreign investment into the country minus residents&apos; investment abroad (financial account), in % of GDP. Positive: the country imports capital, the counterpart of a current account deficit.</source>
+        <translation>Investissements étrangers dans le pays moins investissements des résidents à l’étranger (compte financier), en % du PIB. Positif : le pays importe des capitaux, contrepartie d’un déficit courant.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>FDI inflows</source>
+        <translation>IDE entrants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Direct investment by foreigners in the country (stakes of 10% or more, reinvested earnings, intra-group loans), in % of GDP. Negative: disinvestment.</source>
+        <translation>Investissements directs des étrangers dans le pays (participations d’au moins 10 %, bénéfices réinvestis, prêts intragroupe), en % du PIB. Négatif : désinvestissement.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Portfolio inflows</source>
+        <translation>Entrées de portefeuille</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Purchases of the country&apos;s shares and bonds by foreigners, net of sales, in % of GDP. The most volatile capital flows.</source>
+        <translation>Achats d’actions et d’obligations du pays par des étrangers, nets des ventes, en % du PIB. Les flux de capitaux les plus volatils.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Trade balance</source>
+        <translation>Balance commerciale</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Exports minus imports of goods and services, in % of GDP.</source>
+        <translation>Exportations moins importations de biens et services, en % du PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Trade openness</source>
+        <translation>Ouverture commerciale</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Exports plus imports of goods and services, in % of GDP.</source>
+        <translation>Exportations plus importations de biens et services, en % du PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Export volume</source>
+        <translation>Volume des exportations</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Annual change in exports of goods and services, at constant prices.</source>
+        <translation>Variation annuelle des exportations de biens et services, à prix constants.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>The change in the volume of everything the economy produces in a year (gross domestic product), with price increases stripped out.</source>
+        <translation>La variation du volume de tout ce que l’économie produit en un an (le produit intérieur brut), hors hausse des prix.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Around 2 to 3% is typical for advanced economies, 4 to 7% for fast-growing emerging ones. Below zero the economy is shrinking; two quarters of decline in a row are usually called a recession.</source>
+        <translation>Autour de 2 à 3 % pour les économies avancées, 4 à 7 % pour les émergents en forte croissance. Sous zéro, l’économie se contracte ; deux trimestres de baisse d’affilée sont en général qualifiés de récession.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rebounds after a crisis look strong because they start from a low base, and small economies built on one resource (oil, mining) can swing by double digits from one year to the next.</source>
+        <translation>Les rebonds après une crise paraissent forts car ils partent d’un niveau bas, et les petites économies reposant sur une seule ressource (pétrole, mines) peuvent varier de plus de 10 points d’une année à l’autre.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The average rise in consumer prices over the year, measured on a basket of the goods and services households buy.</source>
+        <translation>La hausse moyenne des prix à la consommation sur l’année, mesurée sur un panier de biens et services achetés par les ménages.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Most central banks aim for about 2%. Lasting higher inflation erodes purchasing power and usually brings higher interest rates; negative values (deflation) can signal weak demand.</source>
+        <translation>La plupart des banques centrales visent environ 2 %. Une inflation durablement plus élevée érode le pouvoir d’achat et entraîne en général une hausse des taux ; des valeurs négatives (déflation) peuvent signaler une demande faible.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>An annual average hides turning points: inflation can already be falling while the year&apos;s average is still high. Hyperinflation cases (hundreds of %) sit far beyond the color scale.</source>
+        <translation>Une moyenne annuelle masque les retournements : l’inflation peut déjà reculer alors que la moyenne de l’année reste élevée. Les cas d’hyperinflation (des centaines de %) sortent largement de l’échelle de couleurs.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The share of the labour force (people working or looking for work) who have no job and are actively looking for one.</source>
+        <translation>La part de la population active (personnes en emploi ou en recherche d’emploi) sans emploi et qui en cherche activement un.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>A low rate points to a tight labour market, which pushes wages up. Rising unemployment is one of the clearest signs of a downturn.</source>
+        <translation>Un taux bas signale un marché du travail tendu, qui pousse les salaires à la hausse. Une hausse du chômage est l’un des signes les plus nets d’un ralentissement.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Definitions and surveys differ between countries. Where most jobs are informal, few people register as unemployed, so the rate can look low. The IMF covers only about 100 countries.</source>
+        <translation>Les définitions et les enquêtes diffèrent d’un pays à l’autre. Là où l’emploi est surtout informel, peu de gens s’inscrivent au chômage et le taux peut paraître bas. Le FMI ne couvre qu’une centaine de pays.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The key interest rate set by the central bank, which steers the cost of borrowing for banks, firms and households.</source>
+        <translation>Le taux d’intérêt directeur fixé par la banque centrale, qui oriente le coût du crédit pour les banques, les entreprises et les ménages.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Central banks raise it to cool inflation and cut it to support activity. Higher rates also tend to attract foreign capital and support the currency.</source>
+        <translation>Les banques centrales le relèvent pour freiner l’inflation et le baissent pour soutenir l’activité. Des taux plus élevés attirent aussi les capitaux étrangers et soutiennent la monnaie.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Compare it with inflation (see the real policy rate): 5% is tight money with 2% inflation but loose with 10%. Euro area members all show the ECB rate.</source>
+        <translation>À comparer à l’inflation (voir le taux directeur réel) : 5 %, c’est une politique restrictive avec 2 % d’inflation mais accommodante avec 10 %. Les membres de la zone euro affichent tous le taux de la BCE.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The policy rate minus this year&apos;s expected inflation (IMF estimate): the cost of money once price increases are taken into account.</source>
+        <translation>Le taux directeur moins l’inflation attendue cette année (estimation du FMI) : le coût de l’argent une fois la hausse des prix prise en compte.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Positive: monetary policy is restrictive and saving pays. Negative: borrowing is cheap in real terms, which supports activity but can feed inflation.</source>
+        <translation>Positif : la politique monétaire est restrictive et l’épargne rapporte. Négatif : emprunter coûte peu en termes réels, ce qui soutient l’activité mais peut alimenter l’inflation.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>It combines the latest monthly rate with an annual inflation estimate, so it is an approximation, and the neutral level differs from one country to another.</source>
+        <translation>Il combine le dernier taux mensuel et une estimation annuelle de l’inflation : c’est une approximation, et le niveau neutre varie d’un pays à l’autre.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A country&apos;s transactions with the rest of the world: exports minus imports of goods and services, plus income (dividends, interest, wages) and transfers (remittances, aid) received minus paid.</source>
+        <translation>Les opérations d’un pays avec le reste du monde : exportations moins importations de biens et services, plus les revenus (dividendes, intérêts, salaires) et transferts (envois de fonds, aide) reçus moins versés.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>A surplus means the country earns more abroad than it spends and lends the difference to the rest of the world; a deficit means it borrows from abroad (see net capital inflows).</source>
+        <translation>Un excédent signifie que le pays gagne plus à l’étranger qu’il n’y dépense et prête la différence au reste du monde ; un déficit signifie qu’il emprunte à l’étranger (voir les entrées nettes de capitaux).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>A deficit is not bad in itself, since it can finance investment, but a large and lasting one funded by short-term capital leaves a country exposed if investors pull out.</source>
+        <translation>Un déficit n’est pas mauvais en soi, il peut financer l’investissement, mais un déficit important et durable financé par des capitaux à court terme expose le pays si les investisseurs se retirent.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Government revenue minus spending, all levels of government together. Negative values are deficits.</source>
+        <translation>Les recettes publiques moins les dépenses, toutes administrations confondues. Les valeurs négatives sont des déficits.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Deficits add to public debt. Many countries run deficits of 2 to 4% of GDP; the EU rule of thumb caps them at 3%.</source>
+        <translation>Les déficits s’ajoutent à la dette publique. Beaucoup de pays affichent des déficits de 2 à 4 % du PIB ; la règle européenne les plafonne à 3 %.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Deficits widen on their own in recessions (less tax, more benefits) and shrink in booms, and oil exporters&apos; budgets follow oil prices.</source>
+        <translation>Les déficits se creusent d’eux-mêmes en récession (moins d’impôts, plus de prestations) et se réduisent en période d’expansion, et les budgets des pays pétroliers suivent le prix du pétrole.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Everything the government owes (bonds, loans), without deducting the assets it holds.</source>
+        <translation>Tout ce que doivent les administrations publiques (obligations, prêts), sans déduire les actifs qu’elles détiennent.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>More debt means more interest to pay and less room to respond to the next crisis. Whether it is sustainable depends more on interest rates compared with growth than on any fixed threshold.</source>
+        <translation>Plus de dette, c’est plus d’intérêts à payer et moins de marge pour faire face à la prochaine crise. Sa soutenabilité dépend davantage des taux d’intérêt comparés à la croissance que d’un seuil fixe.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Japan carries more than 200% thanks to low rates and domestic savers, while some emerging countries get into trouble at 60% when their debt is in foreign currency.</source>
+        <translation>Le Japon supporte plus de 200 % grâce à des taux bas et à une épargne nationale, alors que certains pays émergents sont en difficulté dès 60 % quand leur dette est en devises.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>GDP divided by population, converted at purchasing power parity: prices are adjusted so that a dollar buys the same amount everywhere.</source>
+        <translation>Le PIB divisé par la population, converti en parité de pouvoir d’achat : les prix sont ajustés pour qu’un dollar achète la même chose partout.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The usual measure of average living standards. The color scale is logarithmic: each step is a multiplication, not an addition.</source>
+        <translation>La mesure habituelle du niveau de vie moyen. L’échelle de couleurs est logarithmique : chaque palier est une multiplication, pas une addition.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>It is an average and says nothing about inequality. Small financial centres and oil states rank very high because corporate profits or resource income count in their GDP.</source>
+        <translation>C’est une moyenne, qui ne dit rien des inégalités. Les petites places financières et les États pétroliers se classent très haut car les bénéfices des entreprises ou la rente des ressources comptent dans leur PIB.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The total value of what the economy produces in a year, at current prices, converted into US dollars at market exchange rates.</source>
+        <translation>La valeur totale de ce que l’économie produit en un an, à prix courants, convertie en dollars aux taux de change du marché.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The weight of the country in the world economy and in global markets. The color scale is logarithmic.</source>
+        <translation>Le poids du pays dans l’économie mondiale et sur les marchés internationaux. L’échelle de couleurs est logarithmique.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Market exchange rates make it swing with currencies: a 20% devaluation shrinks GDP in dollars by about as much, even if output has not changed.</source>
+        <translation>Les taux de change du marché le font varier avec les monnaies : une dévaluation de 20 % réduit d’autant le PIB en dollars, même si la production n’a pas changé.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Money invested in the country by foreigners (companies, shares, bonds, loans) minus money residents invest abroad over the year: the financial account of the balance of payments, with the sign flipped.</source>
+        <translation>Les capitaux investis dans le pays par des étrangers (entreprises, actions, obligations, prêts) moins ceux que les résidents investissent à l’étranger sur l’année : le compte financier de la balance des paiements, avec le signe inversé.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Positive: the country imports capital, the mirror image of a current account deficit. Negative: it exports capital, like the surplus countries (Germany, China, oil exporters) that lend to the rest of the world.</source>
+        <translation>Positif : le pays importe des capitaux, le reflet d’un déficit courant. Négatif : il exporte des capitaux, comme les pays excédentaires (Allemagne, Chine, pays pétroliers) qui prêtent au reste du monde.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Changes in central bank reserves are included. Because of errors and omissions in the statistics, it never matches the current account exactly.</source>
+        <translation>Les variations des réserves de la banque centrale sont incluses. À cause des erreurs et omissions statistiques, il ne correspond jamais exactement au compte courant.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Long-term investment by foreign companies in the country: building or buying plants, taking stakes of 10% or more, reinvesting profits and lending within the group.</source>
+        <translation>L’investissement de long terme des entreprises étrangères dans le pays : construction ou rachat d’usines, prises de participation d’au moins 10 %, bénéfices réinvestis et prêts intragroupe.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Seen as the most stable form of capital, bringing technology and jobs. Inflows of 2 to 5% of GDP are common in open emerging economies.</source>
+        <translation>Considéré comme la forme de capital la plus stable, qui apporte technologie et emplois. Des entrées de 2 à 5 % du PIB sont courantes dans les économies émergentes ouvertes.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Financial hubs and low-tax countries (Ireland, Luxembourg, the Netherlands…) show huge swings, driven by multinationals moving money through holding companies rather than by real investment.</source>
+        <translation>Les places financières et les pays à fiscalité faible (Irlande, Luxembourg, Pays-Bas…) affichent d’énormes variations, dues aux multinationales qui font transiter des fonds par des holdings plutôt qu’à de vrais investissements.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Purchases of the country&apos;s shares and bonds (government and corporate) by foreigners, net of their sales, over the year.</source>
+        <translation>Les achats d’actions et d’obligations du pays (publiques et privées) par des étrangers, nets de leurs ventes, sur l’année.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Large inflows lower borrowing costs and lift asset prices. Negative values mean foreigners are selling, often in a crisis or when global interest rates rise.</source>
+        <translation>De fortes entrées font baisser le coût d’emprunt et monter le prix des actifs. Des valeurs négatives signifient que les étrangers vendent, souvent pendant une crise ou quand les taux mondiaux montent.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>This &quot;hot money&quot; can reverse within weeks. Financial centres show very large figures compared with the size of their economy.</source>
+        <translation>Ces « capitaux spéculatifs » peuvent repartir en quelques semaines. Les places financières affichent des montants très élevés au regard de la taille de leur économie.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Exports minus imports of goods and services: merchandise, but also tourism, transport, financial and digital services.</source>
+        <translation>Les exportations moins les importations de biens et services : les marchandises, mais aussi le tourisme, les transports, les services financiers et numériques.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The main part of the current account. A surplus means the country sells more to the rest of the world than it buys from it.</source>
+        <translation>La principale composante du compte courant. Un excédent signifie que le pays vend davantage au reste du monde qu’il ne lui achète.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>A deficit can reflect strong domestic demand or heavy investment rather than weak competitiveness, and commodity exporters&apos; balances swing with prices.</source>
+        <translation>Un déficit peut refléter une demande intérieure forte ou un investissement élevé plutôt qu’un manque de compétitivité, et le solde des exportateurs de matières premières varie avec les prix.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Exports plus imports of goods and services compared with GDP: how much of the economy goes through international trade.</source>
+        <translation>Les exportations plus les importations de biens et services rapportées au PIB : la part de l’économie qui passe par le commerce international.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Small open economies and trade hubs exceed 100% (Singapore, Luxembourg, Ireland); large economies such as the United States or Brazil are around 25%.</source>
+        <translation>Les petites économies ouvertes et les plateformes commerciales dépassent 100 % (Singapour, Luxembourg, Irlande) ; les grandes économies comme les États-Unis ou le Brésil sont autour de 25 %.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Re-exported goods count twice, once coming in and once going out, which inflates the ratio for hubs. Large countries are naturally less open.</source>
+        <translation>Les biens réexportés comptent deux fois, à l’entrée et à la sortie, ce qui gonfle le ratio des plateformes. Les grands pays sont naturellement moins ouverts.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The change in the quantity of goods and services exported, with price changes stripped out (IMF estimates and projections).</source>
+        <translation>La variation de la quantité de biens et services exportés, hors effet prix (estimations et projections du FMI).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shows whether foreign demand for the country&apos;s products is growing; it follows world trade and the country&apos;s competitiveness.</source>
+        <translation>Indique si la demande étrangère pour les produits du pays progresse ; il suit le commerce mondial et la compétitivité du pays.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>For commodity exporters, revenue can fall while volumes rise when prices drop: look at the trade balance too.</source>
+        <translation>Pour les exportateurs de matières premières, les recettes peuvent baisser alors que les volumes montent quand les prix chutent : regardez aussi la balance commerciale.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The rise in consumer prices over the twelve months to the latest month published, as measured by the country&apos;s statistical office (the harmonised index for EU countries).</source>
+        <translation>La hausse des prix à la consommation sur les douze mois jusqu&apos;au dernier mois publié, mesurée par l&apos;institut statistique du pays (l&apos;indice harmonisé pour les pays de l&apos;UE).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The figure the central bank reacts to. Compare it with the annual average above: when the monthly figure is below the year&apos;s average, inflation is coming down.</source>
+        <translation>Le chiffre auquel réagit la banque centrale. À comparer à la moyenne annuelle ci-dessus : quand le chiffre mensuel est sous la moyenne de l&apos;année, l&apos;inflation reflue.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Each country publishes on its own calendar, so the months differ by one or two across the map. Baskets and methods differ too; the IMF&apos;s compilation covers most countries with a lag.</source>
+        <translation>Chaque pays publie selon son calendrier : les mois diffèrent d&apos;un ou deux d&apos;un pays à l&apos;autre sur la carte. Paniers et méthodes diffèrent aussi ; la compilation du FMI couvre la plupart des pays avec retard.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The share of the labour force without a job in the latest month, seasonally adjusted, on the harmonised (ILO) definition where the source applies it.</source>
+        <translation>La part de la population active sans emploi au dernier mois, corrigée des variations saisonnières, selon la définition harmonisée (BIT) quand la source l&apos;applique.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The timeliest reading of the labour market. A rise of half a point from its low has usually come with a recession in the United States.</source>
+        <translation>La lecture la plus rapide du marché du travail. Une hausse d&apos;un demi-point depuis son creux a presque toujours accompagné une récession aux États-Unis.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Only the countries Eurostat and the OECD compile monthly (about 45); elsewhere see the IMF&apos;s annual figure. Quarterly surveys are shown at the middle of their quarter.</source>
+        <translation>Seulement les pays qu&apos;Eurostat et l&apos;OCDE compilent chaque mois (environ 45) ; ailleurs, voir le chiffre annuel du FMI. Les enquêtes trimestrielles sont datées du milieu de leur trimestre.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The harvest per hectare of the crop (tonnes per hectare) in the marketing year, against the year before: the USDA&apos;s estimates and forecasts for most countries, revised every month with its World Agricultural Supply and Demand Estimates; Eurostat&apos;s harvest figures for each EU member.</source>
+        <translation>La récolte par hectare de la culture (tonnes par hectare) sur la campagne de commercialisation, comparée à la précédente : estimations et prévisions de l’USDA pour la plupart des pays, révisées chaque mois avec son rapport WASDE ; chiffres de récolte d’Eurostat pour chaque membre de l’UE.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Yields move with the weather more than with the area sown: a drought, a heat wave at flowering or a wet harvest shows here first, and a big producer&apos;s fall (the United States, Brazil, Russia, India, China) tightens world supply and lifts prices. Green is a better harvest than the year before.</source>
+        <translation>Les rendements suivent la météo plus que les surfaces semées : une sécheresse, une canicule à la floraison ou une récolte pluvieuse se voient ici d’abord, et la baisse d’un grand producteur (États-Unis, Brésil, Russie, Inde, Chine) resserre l’offre mondiale et fait monter les prix. Vert : meilleure récolte que l’année précédente.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The current marketing year is a forecast until the harvest is in, and southern hemisphere crops are harvested months after northern ones. A rebound after a bad year looks strong; small producers swing widely. The USDA gives the European Union as a whole, so EU members come from Eurostat, a year behind.</source>
+        <translation>La campagne en cours reste une prévision tant que la récolte n’est pas rentrée, et l’hémisphère Sud récolte des mois après le Nord. Un rebond après une mauvaise année paraît fort ; les petits producteurs varient beaucoup. L’USDA ne donne que l’Union européenne dans son ensemble : les membres de l’UE viennent d’Eurostat, avec un an de retard.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Goods carried by lorries on the country&apos;s roads, in tonne-kilometres (one tonne over one kilometre), over the year, against the year before.</source>
+        <translation>Les marchandises transportées par camion sur les routes du pays, en tonnes-kilomètres (une tonne sur un kilomètre), sur l’année, comparées à l’année précédente.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Road haulage moves most goods within a country, so it follows industrial output, retail and construction closely: a fall often comes with a slowdown, a rise with a pickup or with goods moving from rail to road.</source>
+        <translation>Le transport routier achemine l’essentiel des marchandises à l’intérieur d’un pays : il suit de près la production industrielle, le commerce de détail et la construction. Une baisse accompagne souvent un ralentissement, une hausse une reprise ou un report du rail vers la route.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Annual figures from national surveys, a year or more behind, about 45 countries. European figures count the country&apos;s own hauliers, wherever they drive, so a shift to foreign hauliers looks like a fall.</source>
+        <translation>Chiffres annuels issus d’enquêtes nationales, avec un an de retard ou plus, environ 45 pays. Les chiffres européens comptent les transporteurs du pays où qu’ils roulent : un report vers des transporteurs étrangers ressemble à une baisse.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Crude oil held in the country at the end of the month (refineries, terminals, tank farms and, where reported, strategic reserves), against the same month a year before.</source>
+        <translation>Le pétrole brut détenu dans le pays à la fin du mois (raffineries, terminaux, parcs de stockage et, quand elles sont déclarées, réserves stratégiques), comparé au même mois un an plus tôt.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rising stocks point to ample supply or weak refinery demand and weigh on prices; falling stocks point to a tight market. Importers build strategic stocks when prices are low.</source>
+        <translation>Des stocks en hausse signalent une offre abondante ou une demande des raffineries faible et pèsent sur les prix ; des stocks en baisse signalent un marché tendu. Les importateurs constituent des stocks stratégiques quand les prix sont bas.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Countries report to JODI themselves, with different coverage: some leave out strategic or military stocks, some report none (China, the United Arab Emirates, Singapore). A month&apos;s maintenance at a big refinery moves a small country&apos;s stocks a lot.</source>
+        <translation>Les pays déclarent eux-mêmes leurs chiffres à JODI, avec des périmètres différents : certains excluent les stocks stratégiques ou militaires, d’autres n’en déclarent aucun (Chine, Émirats arabes unis, Singapour). Un mois de maintenance dans une grande raffinerie fait beaucoup varier les stocks d’un petit pays.</translation>
+    </message>
+    <message>
+        <location line="+119"/>
+        <source>%1/%2 marketing year · USDA estimate or forecast</source>
+        <translation>Campagne %1/%2 · estimation ou prévision de l’USDA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1/%2 marketing year</source>
+        <translation>Campagne %1/%2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 against %2</source>
+        <translation>%1 par rapport à %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 · IMF projection</source>
+        <translation>%1 · projection FMI</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 · IMF estimate</source>
+        <translation>%1 · estimation FMI</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>%1 t/ha (%2 the year before) · %3</source>
+        <translation>%1 t/ha (%2 l’année précédente) · %3</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 bn tonne-km in %2</source>
+        <translation>%1 Md de tonnes-km en %2</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 million barrels at the end of %2</source>
+        <translation>%1 millions de barils fin %2</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>$%1</source>
+        <translation>%1 $</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>$%1 tn</source>
+        <translation>%1 Bn$</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>$%1 bn</source>
+        <translation>%1 Md$</translation>
+    </message>
+    <message>
+        <location filename="../src/DetailPanelSupply.cpp" line="-521"/>
+        <location filename="../src/MacroIndicators.cpp" line="+2"/>
+        <location line="+3"/>
+        <location line="+4"/>
+        <location filename="../src/MainWindow.cpp" line="+1008"/>
+        <source>%1%</source>
+        <translation>%1 %</translation>
+    </message>
+</context>
+<context>
+    <name>MainWindow</name>
+    <message>
+        <location filename="../src/MainWindow.cpp" line="-751"/>
+        <source>Deepwater — Commodity Markets</source>
+        <translation>Deepwater — Marchés des matières premières</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Map</source>
+        <translation>Carte</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Charts</source>
+        <translation>Graphiques</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>Overview</source>
+        <translation>Overview</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Economy</source>
+        <translation>Economy</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Calendar</source>
+        <translation>Calendrier</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>News</source>
+        <translation>News</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research</source>
+        <translation>Research</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quant</source>
+        <translation>Quant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>AI</source>
+        <translation>IA</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Sources</source>
+        <translation>Sources</translation>
+    </message>
+    <message>
+        <location line="+550"/>
+        <source>Trade in goods</source>
+        <translation>Commerce de biens</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Loading IMF data…</source>
+        <translation>Chargement des données du FMI…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IMF data unavailable: %1</source>
+        <translation>Données du FMI indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>of goods exports in %1</source>
+        <translation>d’exportations de biens en %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1: %2% of its exports</source>
+        <translation>%1 : %2 % de ses exportations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1: %2% of its imports</source>
+        <translation>%1 : %2 % de ses importations</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Trade in goods · %1</source>
+        <translation>Commerce de biens · %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The %1 largest flows, exporter → importer</source>
+        <translation>Les %1 plus grands flux, exportateur → importateur</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>%1 · trade in goods %2</source>
+        <translation>%1 · commerce de biens %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Exports to its %1 main customers</source>
+        <translation>Exportations vers ses %1 principaux clients</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports from its %1 main suppliers</source>
+        <translation>Importations depuis ses %1 principaux fournisseurs</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>No port calls reported over the last 7 days</source>
+        <translation>Aucune escale signalée sur les 7 derniers jours</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 port calls over 7 days, %2 on a year</source>
+        <translation>%1 escales sur 7 jours, %2 sur un an</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 port calls over 7 days</source>
+        <translation>%1 escales sur 7 jours</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+31"/>
+        <source>%n port(s) affected</source>
+        <translation>
+            <numerusform>%n port touché</numerusform>
+            <numerusform>%n ports touchés</numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>MarketCard</name>
+    <message>
+        <location filename="../src/CalendarPage.cpp" line="-267"/>
+        <source>%1d %2h %3m</source>
+        <translation>%1j %2h %3m</translation>
+    </message>
+    <message>
+        <location line="+569"/>
+        <source>Open</source>
+        <translation>Ouvert</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Break</source>
+        <translation>Pause</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Holiday</source>
+        <translation>Férié</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Closed</source>
+        <translation>Fermé</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <location line="+13"/>
+        <source>Hours:</source>
+        <translation>Horaires :</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <location line="+3"/>
+        <source>UTC:</source>
+        <translation>UTC :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Break:</source>
+        <translation>Pause :</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+3"/>
+        <source>Lunch:</source>
+        <translation>Midi :</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>none</source>
+        <translation>aucune</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Closes:</source>
+        <translation>Ferme :</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Resumes:</source>
+        <translation>Reprend :</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Opens:</source>
+        <translation>Ouvre :</translation>
+    </message>
+</context>
+<context>
+    <name>MarketHoursView</name>
+    <message>
+        <location line="+76"/>
+        <source>Euronext Amsterdam</source>
+        <translation>Euronext Amsterdam</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Euronext Brussels</source>
+        <translation>Euronext Bruxelles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Euronext Paris</source>
+        <translation>Euronext Paris</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Frankfurt Stock Exchange (Xetra)</source>
+        <translation>Bourse de Francfort (Xetra)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>London Stock Exchange</source>
+        <translation>Bourse de Londres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Euronext Lisbon</source>
+        <translation>Euronext Lisbonne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>B3 - Brasil Bolsa Balcão</source>
+        <translation>B3 - Brasil Bolsa Balcão</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>NASDAQ Stock Market</source>
+        <translation>NASDAQ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>New York Stock Exchange</source>
+        <translation>Bourse de New York (NYSE)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Toronto Stock Exchange</source>
+        <translation>Bourse de Toronto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>TSX Venture Exchange</source>
+        <translation>TSX Venture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Australian Securities Exchange</source>
+        <translation>Bourse australienne (ASX)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Korea Exchange</source>
+        <translation>Bourse de Corée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tokyo Stock Exchange</source>
+        <translation>Bourse de Tokyo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Singapore Exchange</source>
+        <translation>Bourse de Singapour</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hong Kong Stock Exchange</source>
+        <translation>Bourse de Hong Kong</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Shanghai Stock Exchange</source>
+        <translation>Bourse de Shanghai</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shenzhen Stock Exchange</source>
+        <translation>Bourse de Shenzhen</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Bombay Stock Exchange</source>
+        <translation>Bourse de Bombay</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>National Stock Exchange of India</source>
+        <translation>National Stock Exchange (Inde)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Johannesburg Stock Exchange</source>
+        <translation>Bourse de Johannesburg</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>CME Group (Globex)</source>
+        <translation>CME Group (Globex)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sun 17:00 - Fri 16:00 CT</source>
+        <translation>dim. 17:00 - ven. 16:00 CT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>daily 16:00 - 17:00 CT</source>
+        <translation>chaque jour 16:00 - 17:00 CT</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Eurex Exchange</source>
+        <translation>Eurex</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mon - Fri 01:00 - 22:00 CET</source>
+        <translation>lun. - ven. 01:00 - 22:00 HEC</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>overnight, 22:00 - 01:00</source>
+        <translation>la nuit, 22:00 - 01:00</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ICE Futures U.S.</source>
+        <translation>ICE Futures U.S.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sun 18:00 - Fri 17:00 ET</source>
+        <translation>dim. 18:00 - ven. 17:00 ET</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>daily 17:00 - 18:00 ET</source>
+        <translation>chaque jour 17:00 - 18:00 ET</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ICE Futures Europe</source>
+        <translation>ICE Futures Europe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mon - Fri 01:00 - 23:00 UK</source>
+        <translation>lun. - ven. 01:00 - 23:00 R.-U.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>overnight, ~2 hours</source>
+        <translation>la nuit, ~2 heures</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>London Metal Exchange (LMEselect)</source>
+        <translation>London Metal Exchange (LMEselect)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mon - Fri 01:00 - 19:00 UK</source>
+        <translation>lun. - ven. 01:00 - 19:00 R.-U.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>overnight, ~6 hours</source>
+        <translation>la nuit, ~6 heures</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Global Market Hours</source>
+        <translation>Horaires des marchés mondiaux</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Real-time status of markets around the world</source>
+        <translation>L&apos;état des marchés du monde entier en temps réel</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Stock Exchanges</source>
+        <translation>Bourses</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Futures Markets</source>
+        <translation>Marchés à terme</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Regular sessions in each exchange&apos;s local time; the time on the right of a card is yours. Holidays are caught on the day from Yahoo Finance (an exchange that hasn&apos;t opened when it should have); future ones aren&apos;t known, nor pre- and after-market sessions.</source>
+        <translation>Séances régulières à l&apos;heure locale de chaque bourse ; l&apos;heure à droite d&apos;une carte est la vôtre. Les jours fériés sont repérés le jour même grâce à Yahoo Finance (une bourse qui n&apos;a pas ouvert alors qu&apos;elle aurait dû) ; ceux à venir ne sont pas connus, ni les séances avant ouverture et après clôture.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>%1 markets · %2 open</source>
+        <translation>%1 marchés · %2 ouverts</translation>
+    </message>
+</context>
+<context>
+    <name>MarketSessions</name>
+    <message>
+        <location filename="../src/CalendarData.cpp" line="+246"/>
+        <source>no trading sessions in Yahoo&apos;s answer</source>
+        <translation>aucune séance dans la réponse de Yahoo</translation>
+    </message>
+</context>
+<context>
+    <name>MlDataExporter</name>
+    <message>
+        <location filename="../src/MlData.cpp" line="+226"/>
+        <source>Writing to %1</source>
+        <translation>Écriture dans %1</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1: couldn&apos;t write</source>
+        <translation>%1 : impossible d&apos;écrire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1: no data loaded yet, skipped</source>
+        <translation>%1 : pas encore de données chargées, ignoré</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>%1: %n row(s)</source>
+        <translation>
+            <numerusform>%1 : %n ligne</numerusform>
+            <numerusform>%1 : %n lignes</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Done.</source>
+        <translation>Terminé.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1: %2</source>
+        <translation>%1 : %2</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>no prices</source>
+        <translation>pas de prix</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+15"/>
+        <source>prices_%1.csv: %n row(s)</source>
+        <translation>
+            <numerusform>prices_%1.csv : %n ligne</numerusform>
+            <numerusform>prices_%1.csv : %n lignes</numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>MlEnvironment</name>
+    <message>
+        <location filename="../src/MlEnvironment.cpp" line="+135"/>
+        <source>No Python 3 found on this computer: install python.org&apos;s or Homebrew&apos;s, then try again</source>
+        <translation>Aucun Python 3 trouvé sur cet ordinateur : installez celui de python.org ou de Homebrew, puis réessayez</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Creating the environment with %1 in %2</source>
+        <translation>Création de l&apos;environnement avec %1 dans %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Packages installed. Checking the versions…</source>
+        <translation>Paquets installés. Vérification des versions…</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Installation failed (exit code %1)</source>
+        <translation>L&apos;installation a échoué (code %1)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Some packages are missing</source>
+        <translation>Des paquets manquent</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Couldn&apos;t start %1</source>
+        <translation>Impossible de lancer %1</translation>
+    </message>
+    <message>
+        <location line="+54"/>
+        <source>Stopped</source>
+        <translation>Arrêté</translation>
+    </message>
+</context>
+<context>
+    <name>NewsPage</name>
+    <message>
+        <location filename="../src/NewsPage.cpp" line="+164"/>
+        <source>MMM d, yyyy HH:mm</source>
+        <translation>d MMM yyyy HH:mm</translation>
+    </message>
+    <message>
+        <location line="+238"/>
+        <source>General</source>
+        <translation>Général</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Stocks</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Crypto</source>
+        <translation>Crypto</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Favorites</source>
+        <translation>Favoris</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Filter ticker...</source>
+        <translation>Filtrer un ticker...</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>News wire</source>
+        <translation>Fil d’actualité</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Grid</source>
+        <translation>Grille</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Column</source>
+        <translation>Colonne</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Refresh</source>
+        <translation>Actualiser</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <location line="+1"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>No favorite yet: star a card, or the article in the reader.</source>
+        <translation>Aucun favori pour l’instant : cliquez l’étoile d’une carte, ou celle de l’article dans le lecteur.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No article</source>
+        <translation>Aucun article</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n article(s)</source>
+        <translation>
+            <numerusform>%n article</numerusform>
+            <numerusform>%n articles</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>free feeds</source>
+        <translation>flux gratuits</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>favorites</source>
+        <translation>favoris</translation>
+    </message>
+</context>
+<context>
+    <name>OfficialSources</name>
+    <message>
+        <location filename="../src/OfficialSources.cpp" line="+160"/>
+        <source>Statistical office</source>
+        <translation>Institut statistique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central bank</source>
+        <translation>Banque centrale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ministry or agency</source>
+        <translation>Ministère ou agence</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>International organisation</source>
+        <translation>Organisation internationale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Private institute</source>
+        <translation>Institut privé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Exchange</source>
+        <translation>Bourse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trading Economics</source>
+        <translation>Trading Economics</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>free</source>
+        <translation>gratuit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>headline figure free, series paid</source>
+        <translation>chiffre-titre gratuit, séries payantes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>paid</source>
+        <translation>payant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>delayed quotes free, data paid</source>
+        <translation>cours différés gratuits, données payantes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>proprietary</source>
+        <translation>propriétaire</translation>
+    </message>
+</context>
+<context>
+    <name>OverviewPage</name>
+    <message>
+        <location filename="../src/OverviewPage.cpp" line="+112"/>
+        <source>Technology</source>
+        <translation>Technologie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Financials</source>
+        <translation>Finance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Health Care</source>
+        <translation>Santé</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Consumer Discretionary</source>
+        <translation>Consommation discrétionnaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer Staples</source>
+        <translation>Consommation de base</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Energy</source>
+        <translation>Énergie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Industrials</source>
+        <translation>Industrie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Materials</source>
+        <translation>Matériaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Utilities</source>
+        <translation>Services publics</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Real Estate</source>
+        <translation>Immobilier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Communication Services</source>
+        <translation>Services de communication</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <source>Index performance</source>
+        <translation>Performance des indices</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+54"/>
+        <source>TODAY</source>
+        <translation>JOUR</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Statistics</source>
+        <translation>Statistiques</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+11"/>
+        <location line="+18"/>
+        <location line="+45"/>
+        <location line="+23"/>
+        <location line="+26"/>
+        <location line="+229"/>
+        <location line="+63"/>
+        <location line="+224"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="-633"/>
+        <source>Sectors</source>
+        <translation>Secteurs</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>US indices</source>
+        <translation>Indices US</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>US bonds</source>
+        <translation>Obligations US</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Global</source>
+        <translation>Monde</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Crypto</source>
+        <translation>Crypto</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Commodities</source>
+        <translation>Matières premières</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Largest companies</source>
+        <translation>Plus grandes entreprises</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+50"/>
+        <source>Sym</source>
+        <translation>Sym</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <location line="+50"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <location line="+21"/>
+        <location line="+29"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <location line="+23"/>
+        <location line="+27"/>
+        <source>Chg%</source>
+        <translation>Var%</translation>
+    </message>
+    <message>
+        <location line="-49"/>
+        <source>Mcap</source>
+        <translation>Capi</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Volume</source>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Gainers</source>
+        <translation>Hausses</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Losers</source>
+        <translation>Baisses</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Active</source>
+        <translation>Plus actives</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>Top index gainers</source>
+        <translation>Plus fortes hausses de l&apos;indice</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Top index losers</source>
+        <translation>Plus fortes baisses de l&apos;indice</translation>
+    </message>
+    <message>
+        <location line="+104"/>
+        <source>No prices for this range</source>
+        <translation>Aucun cours sur cette période</translation>
+    </message>
+    <message>
+        <location line="+192"/>
+        <source>%1 · Select Sector SPDR fund</source>
+        <translation>%1 · fonds Select Sector SPDR</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>No yields</source>
+        <translation>Aucun taux</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>%1 Treasury par yield, %2; change in points since %3</source>
+        <translation>Taux au pair du Trésor %1, %2 ; variation en points depuis le %3</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>No listings</source>
+        <translation>Aucune cotation</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <location line="+34"/>
+        <location line="+89"/>
+        <source>%1 · open in Research</source>
+        <translation>%1 · ouvrir dans Research</translation>
+    </message>
+    <message>
+        <location line="-70"/>
+        <source>No index members</source>
+        <translation>Aucun membre de l&apos;indice</translation>
+    </message>
+</context>
+<context>
+    <name>PolicyRateCard</name>
+    <message>
+        <location filename="../src/ForexPage.cpp" line="+74"/>
+        <source>%1%2 bp on %3</source>
+        <translation>%1%2 pb le %3</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>unchanged over 3 years</source>
+        <translation>inchangé depuis 3 ans</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>1Y %1%2 bp</source>
+        <translation>1 an %1%2 pb</translation>
+    </message>
+</context>
+<context>
+    <name>PolicyRates</name>
+    <message>
+        <location filename="../src/MacroData.cpp" line="-728"/>
+        <location line="+29"/>
+        <source>No policy rate data</source>
+        <translation>Aucune donnée de taux directeur</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Unexpected policy rate format</source>
+        <translation>Format de taux directeur inattendu</translation>
+    </message>
+</context>
+<context>
+    <name>PortWatch</name>
+    <message>
+        <location filename="../src/PortWatch.cpp" line="+152"/>
+        <source>No data returned</source>
+        <translation>Aucune donnée reçue</translation>
+    </message>
+</context>
+<context>
+    <name>PositioningCard</name>
+    <message>
+        <location filename="../src/ForexPage.cpp" line="+54"/>
+        <source>%1 vs USD</source>
+        <translation>%1 contre USD</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>%1%2 /wk</source>
+        <translation>%1%2 /sem.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Asset managers</source>
+        <translation>Gérants d’actifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leveraged funds</source>
+        <translation>Fonds à levier</translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <location filename="../src/ResearchData.cpp" line="+629"/>
+        <source>Revenue</source>
+        <translation>Chiffre d&apos;affaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1327"/>
+        <source>Gross Profit</source>
+        <translation>Résultat brut</translation>
+    </message>
+    <message>
+        <location line="-1326"/>
+        <location line="+1331"/>
+        <source>Operating Income</source>
+        <translation>Résultat d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="-1330"/>
+        <location line="+1339"/>
+        <source>Net Income</source>
+        <translation>Résultat net</translation>
+    </message>
+    <message>
+        <location line="-1338"/>
+        <source>EBITDA</source>
+        <translation>EBITDA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS</source>
+        <translation>BPA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS Diluted</source>
+        <translation>BPA dilué</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gross Margin</source>
+        <translation>Marge brute</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operating Margin</source>
+        <translation>Marge d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Margin</source>
+        <translation>Marge nette</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1351"/>
+        <source>Total Assets</source>
+        <translation>Total de l&apos;actif</translation>
+    </message>
+    <message>
+        <location line="-1350"/>
+        <source>Total Liabilities</source>
+        <translation>Total des passifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Equity</source>
+        <translation>Fonds propres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1386"/>
+        <source>Total Debt</source>
+        <translation>Dette totale</translation>
+    </message>
+    <message>
+        <location line="-1385"/>
+        <source>Cash &amp; Equivalents</source>
+        <translation>Trésorerie et équivalents</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1390"/>
+        <source>Operating Cash Flow</source>
+        <translation>Flux de trésorerie d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="-1389"/>
+        <location line="+1437"/>
+        <source>Free Cash Flow</source>
+        <translation>Flux de trésorerie disponible</translation>
+    </message>
+    <message>
+        <location line="-1436"/>
+        <source>CapEx</source>
+        <translation>Investissements (CapEx)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividends per Share</source>
+        <translation>Dividende par action</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1309"/>
+        <source>Cost of Revenue</source>
+        <translation>Coût des ventes</translation>
+    </message>
+    <message>
+        <location line="-1308"/>
+        <source>Depreciation &amp; Amortization</source>
+        <translation>Dotations aux amortissements</translation>
+    </message>
+    <message>
+        <location line="+1307"/>
+        <source>Total Revenue</source>
+        <translation>Chiffre d&apos;affaires total</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Operating Revenue</source>
+        <translation>Produits d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Operating Expense</source>
+        <translation>Charges d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Selling General and Administrative</source>
+        <translation>Frais commerciaux, généraux et administratifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research &amp; Development</source>
+        <translation>Recherche et développement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Operating Expenses</source>
+        <translation>Autres charges d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Net Non Operating Interest Income</source>
+        <translation>Produits d&apos;intérêts nets hors exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Interest Income Non Operating</source>
+        <translation>Produits d&apos;intérêts hors exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Interest Expense Non Operating</source>
+        <translation>Charges d&apos;intérêts hors exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Income Expense</source>
+        <translation>Autres produits et charges</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Non Operating Income</source>
+        <translation>Autres produits hors exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Special Income Charges</source>
+        <translation>Produits et charges exceptionnels</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pretax Income</source>
+        <translation>Résultat avant impôt</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tax Provision</source>
+        <translation>Charge d&apos;impôt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Income Common Stockholders</source>
+        <translation>Résultat net part des actionnaires ordinaires</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Diluted NI Available to Com Stockholders</source>
+        <translation>Résultat net dilué attribuable aux actionnaires ordinaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Basic EPS</source>
+        <translation>BPA de base</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Diluted EPS</source>
+        <translation>BPA dilué</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Basic Average Shares</source>
+        <translation>Nombre moyen d&apos;actions (base)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Diluted Average Shares</source>
+        <translation>Nombre moyen d&apos;actions (dilué)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Operating Income as Reported</source>
+        <translation>Résultat d&apos;exploitation total publié</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Expenses</source>
+        <translation>Total des charges</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Income from Continuing &amp; Discontinued Operation</source>
+        <translation>Résultat net des activités poursuivies et abandonnées</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Normalized Income</source>
+        <translation>Résultat normalisé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Interest Income</source>
+        <translation>Produits d&apos;intérêts</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Interest Expense</source>
+        <translation>Charges d&apos;intérêts</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Interest Income</source>
+        <translation>Produits d&apos;intérêts nets</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reconciled Cost of Revenue</source>
+        <translation>Coût des ventes rapproché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reconciled Depreciation</source>
+        <translation>Amortissements rapprochés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Income from Continuing Operation Net Minority Interest</source>
+        <translation>Résultat net des activités poursuivies, hors intérêts minoritaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Normalized EBITDA</source>
+        <translation>EBITDA normalisé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tax Rate for Calcs</source>
+        <translation>Taux d&apos;imposition retenu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tax Effect of Unusual Items</source>
+        <translation>Effet fiscal des éléments inhabituels</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Current Assets</source>
+        <translation>Actif circulant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash, Cash Equivalents &amp; Short Term Investments</source>
+        <translation>Trésorerie, équivalents et placements à court terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash And Cash Equivalents</source>
+        <translation>Trésorerie et équivalents de trésorerie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash</source>
+        <translation>Trésorerie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cash Equivalents</source>
+        <translation>Équivalents de trésorerie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Short Term Investments</source>
+        <translation>Autres placements à court terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Receivables</source>
+        <translation>Créances</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Accounts receivable</source>
+        <translation>Créances clients</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Receivables</source>
+        <translation>Autres créances</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Inventory</source>
+        <translation>Stocks</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Current Assets</source>
+        <translation>Autres actifs circulants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total non-current assets</source>
+        <translation>Total des actifs non courants</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Net PPE</source>
+        <translation>Immobilisations corporelles nettes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gross PPE</source>
+        <translation>Immobilisations corporelles brutes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Accumulated Depreciation</source>
+        <translation>Amortissements cumulés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Goodwill And Other Intangible Assets</source>
+        <translation>Écarts d&apos;acquisition et autres immobilisations incorporelles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Goodwill</source>
+        <translation>Écarts d&apos;acquisition</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Other Intangible Assets</source>
+        <translation>Autres immobilisations incorporelles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Investments And Advances</source>
+        <translation>Participations et avances</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non Current Deferred Assets</source>
+        <translation>Actifs d&apos;impôt différé non courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Non Current Assets</source>
+        <translation>Autres actifs non courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Liabilities Net Minority Interest</source>
+        <translation>Total des passifs, hors intérêts minoritaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current Liabilities</source>
+        <translation>Passifs courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Payables And Accrued Expenses</source>
+        <translation>Dettes fournisseurs et charges à payer</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Payables</source>
+        <translation>Dettes fournisseurs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Accrued Expenses</source>
+        <translation>Charges à payer</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current Debt And Capital Lease Obligation</source>
+        <translation>Dette courante et dettes de location-financement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current Debt</source>
+        <translation>Dette courante</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current Deferred Liabilities</source>
+        <translation>Passifs différés courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current Deferred Revenue</source>
+        <translation>Produits constatés d&apos;avance courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Current Liabilities</source>
+        <translation>Autres passifs courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Non Current Liabilities Net Minority Interest</source>
+        <translation>Total des passifs non courants, hors intérêts minoritaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Long Term Debt And Capital Lease Obligation</source>
+        <translation>Dette à long terme et dettes de location-financement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Long Term Debt</source>
+        <translation>Dette à long terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trade and Other Payables Non Current</source>
+        <translation>Dettes fournisseurs et autres dettes non courantes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other Non Current Liabilities</source>
+        <translation>Autres passifs non courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Equity Gross Minority Interest</source>
+        <translation>Fonds propres, intérêts minoritaires inclus</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stockholders&apos; Equity</source>
+        <translation>Capitaux propres</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Capital Stock</source>
+        <translation>Capital social</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Common Stock</source>
+        <translation>Actions ordinaires</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Retained Earnings</source>
+        <translation>Réserves (bénéfices non distribués)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gains Losses Not Affecting Retained Earnings</source>
+        <translation>Gains et pertes hors bénéfices non distribués</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Minority Interest</source>
+        <translation>Intérêts minoritaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Capitalization</source>
+        <translation>Capitalisation totale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Common Stock Equity</source>
+        <translation>Capitaux propres (actions ordinaires)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Tangible Assets</source>
+        <translation>Actif net tangible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Capital</source>
+        <translation>Fonds de roulement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Invested Capital</source>
+        <translation>Capital investi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tangible Book Value</source>
+        <translation>Valeur comptable tangible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Debt</source>
+        <translation>Dette nette</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Share Issued</source>
+        <translation>Actions émises</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ordinary Shares Number</source>
+        <translation>Nombre d&apos;actions ordinaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Treasury Shares Number</source>
+        <translation>Nombre d&apos;actions auto-détenues</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Cash Flow from Continuing Operating Activities</source>
+        <translation>Flux de trésorerie des activités d&apos;exploitation poursuivies</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Income from Continuing Operations</source>
+        <translation>Résultat net des activités poursuivies</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Depreciation Amortization Depletion</source>
+        <translation>Amortissements, dépréciations et épuisement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Depreciation &amp; amortization</source>
+        <translation>Dotations aux amortissements</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deferred Tax</source>
+        <translation>Impôts différés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Deferred Income Tax</source>
+        <translation>Impôts sur le résultat différés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stock based compensation</source>
+        <translation>Rémunération en actions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other non-cash items</source>
+        <translation>Autres éléments sans effet de trésorerie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in working capital</source>
+        <translation>Variation du fonds de roulement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in Receivables</source>
+        <translation>Variation des créances</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in Inventory</source>
+        <translation>Variation des stocks</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in Payables And Accrued Expense</source>
+        <translation>Variation des dettes fournisseurs et charges à payer</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in Other Current Assets</source>
+        <translation>Variation des autres actifs circulants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in Other Current Liabilities</source>
+        <translation>Variation des autres passifs courants</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change in Other Working Capital</source>
+        <translation>Variation des autres éléments du fonds de roulement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Investing Cash Flow</source>
+        <translation>Flux de trésorerie d&apos;investissement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash Flow from Continuing Investing Activities</source>
+        <translation>Flux de trésorerie des activités d&apos;investissement poursuivies</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net PPE Purchase And Sale</source>
+        <translation>Acquisitions et cessions nettes d&apos;immobilisations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Purchase of PPE</source>
+        <translation>Acquisitions d&apos;immobilisations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Business Purchase and Sale</source>
+        <translation>Acquisitions et cessions nettes d&apos;activités</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Purchase of Business</source>
+        <translation>Acquisitions d&apos;activités</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Investment Purchase And Sale</source>
+        <translation>Achats et ventes nets de placements</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Purchase of Investment</source>
+        <translation>Achats de placements</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sale of Investment</source>
+        <translation>Ventes de placements</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Other Investing Changes</source>
+        <translation>Autres flux d&apos;investissement nets</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Financing Cash Flow</source>
+        <translation>Flux de trésorerie de financement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash Flow from Continuing Financing Activities</source>
+        <translation>Flux de trésorerie des activités de financement poursuivies</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Issuance Payments of Debt</source>
+        <translation>Émissions et remboursements nets de dette</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Long Term Debt Issuance</source>
+        <translation>Émission nette de dette à long terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Long Term Debt Issuance</source>
+        <translation>Émission de dette à long terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Long Term Debt Payments</source>
+        <translation>Remboursements de dette à long terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Short Term Debt Issuance</source>
+        <translation>Émission nette de dette à court terme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Common Stock Issuance</source>
+        <translation>Émission nette d&apos;actions ordinaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Common Stock Issuance</source>
+        <translation>Émission d&apos;actions ordinaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Common Stock Payments</source>
+        <translation>Rachats d&apos;actions ordinaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash Dividends Paid</source>
+        <translation>Dividendes versés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Common Stock Dividend Paid</source>
+        <translation>Dividendes versés sur actions ordinaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Other Financing Charges</source>
+        <translation>Autres flux de financement nets</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>End Cash Position</source>
+        <translation>Trésorerie de clôture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Changes in Cash</source>
+        <translation>Variation de la trésorerie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Beginning Cash Position</source>
+        <translation>Trésorerie d&apos;ouverture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Income Tax Paid Supplemental Data</source>
+        <translation>Impôts payés (information complémentaire)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Interest Paid Supplemental Data</source>
+        <translation>Intérêts payés (information complémentaire)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Capital Expenditure</source>
+        <translation>Dépenses d&apos;investissement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Issuance of Capital Stock</source>
+        <translation>Émission de capital</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Issuance of Debt</source>
+        <translation>Émission de dette</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Repayment of Debt</source>
+        <translation>Remboursement de dette</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Repurchase of Capital Stock</source>
+        <translation>Rachat de capital</translation>
+    </message>
+    <message>
+        <location line="+53"/>
+        <source>Two-stage discounted cash flow: the mean of trailing free cash flow and net income, growing %1 a year for five years, fading to 2.5% by year ten, discounted at %2 (4.25% + beta × 5%), plus cash less debt, per share.</source>
+        <translation>Actualisation des flux de trésorerie en deux étapes : la moyenne du flux de trésorerie disponible et du résultat net des douze derniers mois, en croissance de %1 par an pendant cinq ans puis décroissant vers 2,5 % la dixième année, actualisée à %2 (4,25 % + bêta × 5 %), plus la trésorerie moins la dette, par action.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not meaningful: no positive free cash flow to discount.</source>
+        <translation>Non significatif : aucun flux de trésorerie disponible positif à actualiser.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Not meaningful: debt exceeds the discounted cash flows.</source>
+        <translation>Non significatif : la dette dépasse les flux de trésorerie actualisés.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Not meaningful: the statements&apos; currency can&apos;t be converted.</source>
+        <translation>Non significatif : la devise des états financiers ne peut pas être convertie.</translation>
+    </message>
+    <message>
+        <location line="+115"/>
+        <source>Strong Buy</source>
+        <translation>Achat fort</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Buy</source>
+        <translation>Achat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hold</source>
+        <translation>Conserver</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sell</source>
+        <translation>Vente</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Strong Sell</source>
+        <translation>Vente forte</translation>
+    </message>
+    <message>
+        <location filename="../src/ResearchCompanyViews.cpp" line="+250"/>
+        <source>Experimental: Deepwater&apos;s own method, not validated against what prices did afterwards. Its assumptions are fixed and its results move a lot with them (one point of discount rate moves Apple&apos;s intrinsic value by about 17 %). Use it as a rough indication, next to the analysts&apos; figures.</source>
+        <translation>Expérimental : méthode propre à Deepwater, non validée contre l&apos;évolution ultérieure des cours. Ses hypothèses sont fixes et ses résultats en dépendent beaucoup (un point de taux d&apos;actualisation déplace la valeur intrinsèque d&apos;Apple d&apos;environ 17 %). À prendre comme une indication grossière, à côté des chiffres des analystes.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>EXPERIMENTAL</source>
+        <translation>EXPÉRIMENTAL</translation>
+    </message>
+    <message>
+        <location line="+905"/>
+        <source>No insider trades reported</source>
+        <translation>Aucune transaction d&apos;initié déclarée</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>%1 sold</source>
+        <translation>%1 vendu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 bought</source>
+        <translation>%1 acheté</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>none bought</source>
+        <translation>aucun achat</translation>
+    </message>
+    <message>
+        <location filename="../src/QuantMarketState.cpp" line="+97"/>
+        <source>today</source>
+        <translation>aujourd&apos;hui</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yesterday</source>
+        <translation>hier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 days ago</source>
+        <translation>il y a %1 jours</translation>
+    </message>
+    <message>
+        <location filename="../src/QuantMarkovView.cpp" line="+19"/>
+        <source>Single</source>
+        <translation>Unique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Calm</source>
+        <translation>Calme</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <location line="+1"/>
+        <source>Turbulent</source>
+        <translation>Turbulent</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+1"/>
+        <source>Normal</source>
+        <translation>Normal</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Volatile</source>
+        <translation>Volatil</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Crisis</source>
+        <translation>Crise</translation>
+    </message>
+    <message>
+        <location filename="../src/QuantMarkovJobs.cpp" line="+52"/>
+        <location line="+54"/>
+        <source>Not enough prices</source>
+        <translation>Pas assez de prix</translation>
+    </message>
+    <message>
+        <location filename="../src/QuantMarkovView.cpp" line="+22"/>
+        <source>MS-GARCH K=%1 · %2</source>
+        <translation>MS-GARCH K=%1 · %2</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Student-t</source>
+        <translation>Student-t</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>normal</source>
+        <translation>normale</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>GARCH(1,1) · %1</source>
+        <translation>GARCH(1,1) · %1</translation>
+    </message>
+    <message>
+        <location filename="../src/CodeGraphView.cpp" line="-493"/>
+        <source>Cannot read %1</source>
+        <translation>Impossible de lire %1</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Invalid graph.json: %1</source>
+        <translation>graph.json invalide : %1</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Community %1</source>
+        <translation>Communauté %1</translation>
+    </message>
+    <message>
+        <location filename="../src/AiModels.cpp" line="+78"/>
+        <source>%1 GB</source>
+        <translation>%1 Go</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 MB</source>
+        <translation>%1 Mo</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 KB</source>
+        <translation>%1 Ko</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 B</source>
+        <translation>%1 o</translation>
+    </message>
+</context>
+<context>
+    <name>QuantPage</name>
+    <message>
+        <location filename="../src/QuantPage.cpp" line="+32"/>
+        <source>Compare</source>
+        <translation>Comparer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Correlation</source>
+        <translation>Corrélation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Risk &amp; Beta</source>
+        <translation>Risque &amp; bêta</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Signals</source>
+        <translation>Signaux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Markov</source>
+        <translation>Markov</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Portfolio</source>
+        <translation>Portefeuille</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Commitments of Traders</source>
+        <translation>Commitments of Traders</translation>
+    </message>
+</context>
+<context>
+    <name>ResearchPage</name>
+    <message>
+        <location filename="../src/ResearchPage.cpp" line="+43"/>
+        <source>Symbol or company…</source>
+        <translation>Symbole ou société…</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Regime and volatility forecast from Quant › Markov</source>
+        <translation>Régime et prévision de volatilité de Quant › Markov</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Key Metrics</source>
+        <translation>Chiffres clés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Financials</source>
+        <translation>États financiers</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Financial Charts</source>
+        <translation>Graphiques financiers</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ownership</source>
+        <translation>Actionnariat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ratings</source>
+        <translation>Notations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Compare</source>
+        <translation>Comparer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Compare Charts</source>
+        <translation>Graphiques comparés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sectors</source>
+        <translation>Secteurs</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Industrial Classification System</source>
+        <translation>Classification industrielle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Supply chain</source>
+        <translation>Chaîne d&apos;approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <source>unknown symbol</source>
+        <translation>symbole inconnu</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>market open</source>
+        <translation>marché ouvert</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>at close</source>
+        <translation>à la clôture</translation>
+    </message>
+</context>
+<context>
+    <name>SectorHistoryChart</name>
+    <message>
+        <location filename="../src/MacroPanel.cpp" line="+499"/>
+        <source>%1%</source>
+        <translation>%1 %</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>%1: %2% of GDP</source>
+        <translation>%1 : %2 % du PIB</translation>
+    </message>
+</context>
+<context>
+    <name>SettingsDialog</name>
+    <message>
+        <location filename="../src/SettingsDialog.cpp" line="+154"/>
+        <source>Settings</source>
+        <translation>Paramètres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SETTINGS</source>
+        <translation>PARAMÈTRES</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+2"/>
+        <source>Language</source>
+        <translation>Langue</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <location line="+3"/>
+        <source>Theme</source>
+        <translation>Thème</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>Choose the language used across the interface and market data.</source>
+        <translation>Choisissez la langue de l&apos;interface et des données de marché.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Choose the color palette for the globe and panels.</source>
+        <translation>Choisissez la palette de couleurs du globe et des panneaux.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Warm bronze tones of the original design.</source>
+        <translation>Les tons bronze chaleureux du design d’origine.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deep-sea blues with bioluminescent accents.</source>
+        <translation>Bleus des grands fonds aux accents bioluminescents.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Forest-dark greens with polished jade accents.</source>
+        <translation>Verts de forêt profonde aux accents de jade poli.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Iron-oxide reds over dark rust.</source>
+        <translation>Rouges d’oxyde de fer sur fond de rouille sombre.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Night-sky purples with a lavender glow.</source>
+        <translation>Violets de ciel nocturne et lueur lavande.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Amber on black, after the Bloomberg Terminal.</source>
+        <translation>Ambre sur noir, d’après le terminal Bloomberg.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Light theme: ice whites and glacial blues.</source>
+        <translation>Thème clair : blancs de glace et bleus glaciaires.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Light theme: beige and sand with ochre accents.</source>
+        <translation>Thème clair : beiges et sable, accents ocre.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Light theme: cherry-blossom pinks over petal white.</source>
+        <translation>Thème clair : roses de cerisier en fleur sur blanc pétale.</translation>
+    </message>
+</context>
+<context>
+    <name>SourcesPage</name>
+    <message>
+        <location filename="../src/SourcesPage.cpp" line="+205"/>
+        <source>Sources</source>
+        <translation>Sources</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Test all</source>
+        <translation>Tout tester</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Map · shipping</source>
+        <translation>Carte · navigation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Live ship positions (AIS)</source>
+        <translation>Positions des navires en direct (AIS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: ships, their routes and the traffic through chokepoints</source>
+        <translation>Carte : navires, leurs routes et le trafic dans les points de passage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Chokepoint transits</source>
+        <translation>Transits aux points de passage</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Map · commodity prices</source>
+        <translation>Carte · prix des matières premières</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commodity futures</source>
+        <translation>Contrats à terme sur matières premières</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Yahoo Finance (NYMEX, COMEX, CBOT, ICE US)</source>
+        <translation>Yahoo Finance (NYMEX, COMEX, CBOT, ICE US)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Map: prices of 20 commodities, about 10 minutes behind the exchange</source>
+        <translation>Carte : cours de 20 matières premières, différés d&apos;environ 10 minutes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Monthly commodity prices</source>
+        <translation>Prix mensuels des matières premières</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>International Monetary Fund (PCPS)</source>
+        <translation>Fonds monétaire international (PCPS)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Map: monthly average benchmark prices; the only price of coal, uranium, nickel, zinc, lithium and cobalt</source>
+        <translation>Carte : prix de référence en moyenne mensuelle ; seul prix du charbon, de l&apos;uranium, du nickel, du zinc, du lithium et du cobalt</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reference exchange rates</source>
+        <translation>Taux de change de référence</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>European Central Bank, via Frankfurter</source>
+        <translation>Banque centrale européenne, via Frankfurter</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Forex: pairs, sparklines, correlations</source>
+        <translation>Forex : paires, courbes, corrélations</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Central bank policy rates</source>
+        <translation>Taux directeurs des banques centrales</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+114"/>
+        <location line="+117"/>
+        <location line="+8"/>
+        <source>Bank for International Settlements</source>
+        <translation>Banque des règlements internationaux</translation>
+    </message>
+    <message>
+        <location line="-238"/>
+        <source>Forex: policy rates and the carry on each pair</source>
+        <translation>Forex : taux directeurs et portage de chaque paire</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Futures positioning (COT)</source>
+        <translation>Positionnement sur les contrats à terme (COT)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Forex: capital flows of asset managers and leveraged funds</source>
+        <translation>Forex : flux de capitaux des gérants d’actifs et des fonds à effet de levier</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Head counts and supply chain</source>
+        <translation>Effectifs et chaîne d&apos;approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research: a company&apos;s number of employees over the years, and the makers of its products (SPLC)</source>
+        <translation>Research : le nombre de salariés d&apos;une société au fil des ans, et les fabricants de ses produits (SPLC)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Overview</source>
+        <translation>Overview</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Treasury yields</source>
+        <translation>Taux du Trésor américain</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Overview: the daily par yield curve (US bonds); the other quotes, sectors, movers and index charts come from Yahoo Finance (Research, above), the largest companies from Nasdaq&apos;s screener</source>
+        <translation>Overview : la courbe quotidienne des taux au pair (obligations US) ; les autres cours, les secteurs, les plus fortes variations et les graphiques d&apos;indices viennent de Yahoo Finance (Research, ci-dessus), les plus grandes entreprises du screener de Nasdaq</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Economy</source>
+        <translation>Economy</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>US economic series</source>
+        <translation>Séries économiques américaines</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Federal Reserve Bank of St. Louis (FRED)</source>
+        <translation>Federal Reserve Bank of St. Louis (FRED)</translation>
+    </message>
+    <message>
+        <source>Economy: about fifty US series (VIX, spreads, GDP, prices, jobs, rates, housing, money, the dollar against the yen…); through FRED&apos;s API with the key saved under Map · databases with a free key, else FRED&apos;s public CSV</source>
+        <translation type="vanished">Economy : une cinquantaine de séries américaines (VIX, spreads, PIB, prix, emploi, taux, immobilier, monnaie, le dollar face au yen…) ; par l&apos;API de FRED avec la clé enregistrée sous Carte · bases avec clé gratuite, sinon par le CSV public de FRED</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Consumer confidence</source>
+        <translation>Confiance des ménages</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Economy: the OECD&apos;s consumer confidence indicator for the United States (key economic indicators)</source>
+        <translation>Economy : l&apos;indicateur de confiance des consommateurs de l&apos;OCDE pour les États-Unis (principaux indicateurs économiques)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Crypto market</source>
+        <translation>Marché crypto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Economy: total crypto market cap, bitcoin dominance and the altcoin season index</source>
+        <translation>Economy : capitalisation crypto totale, dominance du bitcoin et indice de saison des altcoins</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Crypto Fear &amp; Greed</source>
+        <translation>Fear &amp; Greed crypto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Economy: the crypto Fear &amp; Greed index; the stock market&apos;s is Deepwater&apos;s estimate from Yahoo Finance prices and FRED spreads</source>
+        <translation>Economy : l&apos;indice Fear &amp; Greed crypto ; celui des actions est une estimation de Deepwater à partir des cours de Yahoo Finance et des spreads de FRED</translation>
+    </message>
+    <message>
+        <location line="+116"/>
+        <source>Quant</source>
+        <translation>Quant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commitments of Traders (legacy, futures only)</source>
+        <translation>Commitments of Traders (legacy, futures seulement)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quant: positions of non-commercial, commercial and non-reportable traders in index, bitcoin, gold and silver futures (COT); prices and key figures come from Yahoo Finance (Research, above)</source>
+        <translation>Quant : positions des opérateurs non commerciaux, commerciaux et non déclarables sur les futures d&apos;indices, de bitcoin, d&apos;or et d&apos;argent (COT) ; les prix et chiffres clés viennent de Yahoo Finance (Research, ci-dessus)</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Regimes and volatility forecasts</source>
+        <translation>Régimes et prévisions de volatilité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Deepwater (Quant › Markov)</source>
+        <translation>Deepwater (Quant › Markov)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>on this computer, prices from Yahoo Finance</source>
+        <translation>sur cet ordinateur, prix de Yahoo Finance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quant and Research: the HMM regime and MS-GARCH forecast of every symbol in the shared state (Portfolio, strips), re-estimated when older than the last trading day</source>
+        <translation>Quant et Research : le régime HMM et la prévision MS-GARCH de chaque symbole de l&apos;état partagé (Portefeuille, bandeaux), réestimés quand ils datent d&apos;avant le dernier jour de bourse</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Map · macroeconomics</source>
+        <translation>Carte · macroéconomie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>World Economic Outlook</source>
+        <translation>Perspectives de l’économie mondiale (WEO)</translation>
+    </message>
+    <message>
+        <location line="-127"/>
+        <location line="+127"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+18"/>
+        <source>International Monetary Fund</source>
+        <translation>Fonds monétaire international</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <source>Map: country indicators and heatmaps (growth, inflation, debt…)</source>
+        <translation>Carte : indicateurs par pays et cartes thermiques (croissance, inflation, dette…)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Balance of payments</source>
+        <translation>Balance des paiements</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: capital flows and trade balance of each country</source>
+        <translation>Carte : flux de capitaux et balance commerciale de chaque pays</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Trade in goods by partner</source>
+        <translation>Commerce de biens par partenaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: the trade flow arcs between countries</source>
+        <translation>Carte : les arcs des flux commerciaux entre pays</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Policy rates of every country</source>
+        <translation>Taux directeurs de tous les pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: the policy rate heatmap and country details</source>
+        <translation>Carte : la carte thermique des taux directeurs et le détail des pays</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Economic sectors</source>
+        <translation>Secteurs d’activité</translation>
+    </message>
+    <message>
+        <location line="-144"/>
+        <location line="+144"/>
+        <location line="+15"/>
+        <source>World Bank</source>
+        <translation>Banque mondiale</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Map: primary, secondary and tertiary sectors of each country (GDP and jobs)</source>
+        <translation>Carte : secteurs primaire, secondaire et tertiaire de chaque pays (PIB et emplois)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Property prices, credit and debt service</source>
+        <translation>Prix immobiliers, crédit et service de la dette</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Map: real house prices, household and company debt, debt service (about 50 countries)</source>
+        <translation>Carte : prix immobiliers réels, dette des ménages et des entreprises, service de la dette (environ 50 pays)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>House prices against incomes and rents</source>
+        <translation>Prix immobiliers rapportés aux revenus et aux loyers</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>OECD</source>
+        <translation>OCDE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: whether housing is dear or cheap against its long-term average</source>
+        <translation>Carte : logement cher ou bon marché par rapport à sa moyenne de long terme</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Global Debt Database</source>
+        <translation>Global Debt Database</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: debt of households and companies (about 90 countries)</source>
+        <translation>Carte : dette des ménages et des entreprises (environ 90 pays)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Bank credit and bad loans</source>
+        <translation>Crédit bancaire et créances douteuses</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: bank credit to the private sector and non-performing loans (nearly every country)</source>
+        <translation>Carte : crédit bancaire au secteur privé et prêts non performants (presque tous les pays)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Map · official statistics</source>
+        <translation>Carte · statistiques officielles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Key economic indicators</source>
+        <translation>Indicateurs économiques clés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>OECD (from the national offices)</source>
+        <translation>OCDE (depuis les instituts nationaux)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: latest inflation, unemployment, output, retail, confidence, rates, GDP and current account of about 45 economies (country sheet, two heatmaps)</source>
+        <translation>Carte : dernière inflation, chômage, production, ventes au détail, confiance, taux, PIB et balance courante d&apos;environ 45 économies (fiche pays, deux cartes thermiques)</translation>
+    </message>
+    <message>
+        <location line="-155"/>
+        <location line="+158"/>
+        <source>European statistics</source>
+        <translation>Statistiques européennes</translation>
+    </message>
+    <message>
+        <location line="-310"/>
+        <source>Map · supply chains</source>
+        <translation>Carte · chaînes d’approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Ports and disruptions</source>
+        <translation>Ports et perturbations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: ~2,000 ports with their port calls and cargo against a year before, and the disruptions that hit them (supply chain layer)</source>
+        <translation>Carte : environ 2 000 ports avec leurs escales et marchandises comparées à un an plus tôt, et les perturbations qui les touchent (couche chaînes d’approvisionnement)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Crop yields</source>
+        <translation>Rendements agricoles</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>USDA Foreign Agricultural Service (PSD) · Eurostat</source>
+        <translation>USDA Foreign Agricultural Service (PSD) · Eurostat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: wheat, corn, rice and soybean yields by country, with the current marketing year&apos;s forecasts</source>
+        <translation>Carte : rendements du blé, du maïs, du riz et du soja par pays, avec les prévisions de la campagne en cours</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Road freight</source>
+        <translation>Fret routier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>International Transport Forum (OECD)</source>
+        <translation>Forum international des transports (OCDE)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: goods carried by road in tonne-kilometres, about 45 countries, annual</source>
+        <translation>Carte : marchandises transportées par route en tonnes-kilomètres, environ 45 pays, annuel</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Crude oil stocks</source>
+        <translation>Stocks de pétrole brut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Joint Organisations Data Initiative (JODI-Oil)</source>
+        <translation>Joint Organisations Data Initiative (JODI-Oil)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: month-end crude stocks by country (a 23 MB download, weekly)</source>
+        <translation>Carte : stocks de brut en fin de mois par pays (téléchargement de 23 Mo, chaque semaine)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>US crude stocks</source>
+        <translation>Stocks de brut des États-Unis</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>U.S. Energy Information Administration (the EIA key)</source>
+        <translation>U.S. Energy Information Administration (la clé EIA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: weekly stocks at Cushing, on the Gulf Coast and in the Strategic Petroleum Reserve</source>
+        <translation>Carte : stocks hebdomadaires à Cushing, sur la côte du Golfe et dans la réserve stratégique</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Supply chain pressure</source>
+        <translation>Pression sur les chaînes d’approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Federal Reserve Bank of New York (GSCPI)</source>
+        <translation>Banque fédérale de réserve de New York (GSCPI)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: the Global Supply Chain Pressure Index, monthly</source>
+        <translation>Carte : l’indice mondial de pression sur les chaînes d’approvisionnement (GSCPI), mensuel</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>US freight</source>
+        <translation>Fret aux États-Unis</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>FRED (the FRED key): ATA, Cass, BTS, BLS</source>
+        <translation>FRED (la clé FRED) : ATA, Cass, BTS, BLS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: truck tonnage, freight shipments, freight services and deep sea freight prices</source>
+        <translation>Carte : tonnage routier, expéditions de fret, services de fret et prix du fret maritime hauturier</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Economy: about fifty US series (VIX, spreads, GDP, prices, jobs, rates, housing, money, the dollar against the yen…) and about 170 more in Countries › United States; through FRED&apos;s API with the key saved under Map · databases with a free key, else FRED&apos;s public CSV</source>
+        <translation>Economy : une cinquantaine de séries américaines (VIX, écarts de crédit, PIB, prix, emploi, taux, immobilier, monnaie, dollar contre yen…) et environ 170 de plus dans Pays › États-Unis ; par l’API de FRED avec la clé enregistrée sous Carte · bases à clé gratuite, sinon par le CSV public de FRED</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Economy · countries</source>
+        <translation>Économie · pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Development indicators and Global Economic Monitor</source>
+        <translation>Indicateurs du développement et Global Economic Monitor</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Countries: annual national accounts, labour, trade, public finance, energy and health (WDI) and the monthly Global Economic Monitor (core prices, industrial production, merchandise trade, reserves, retail sales, stock markets)</source>
+        <translation>Pays : comptes nationaux, travail, commerce, finances publiques, énergie et santé, annuels (WDI), et le Global Economic Monitor mensuel (prix sous-jacents, production industrielle, commerce de marchandises, réserves, ventes au détail, bourses)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Statistics department data sets and WEO</source>
+        <translation>Jeux du département des statistiques et WEO</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Countries: consumer and producer prices, production, labour, quarterly national accounts, money, central bank balance sheets, credit, interest rates, reserves and gold, exchange rates, trade, balance of payments, share prices; the World Economic Outlook&apos;s reported years</source>
+        <translation>Pays : prix à la consommation et à la production, production, travail, comptes nationaux trimestriels, monnaie, bilans des banques centrales, crédit, taux d’intérêt, réserves et or, changes, commerce, balance des paiements, cours des actions ; les années publiées des Perspectives de l’économie mondiale</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Countries (EU, EFTA, candidates): GDP, HICP, labour market, minimum wages, labour costs, production, prices, confidence, construction, house prices, public finance, tourism, car registrations</source>
+        <translation>Pays (UE, AELE, candidats) : PIB, IPCH, marché du travail, salaires minimums, coût du travail, production, prix, confiance, construction, prix immobiliers, finances publiques, tourisme, immatriculations</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Money, credit and bank rates</source>
+        <translation>Monnaie, crédit et taux bancaires</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>European Central Bank</source>
+        <translation>Banque centrale européenne</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Countries (euro area and members): M1, M2, M3, loans, mortgage, lending and deposit rates, central bank balance sheets</source>
+        <translation>Pays (zone euro et membres) : M1, M2, M3, crédits, taux hypothécaires, taux des prêts et des dépôts, bilans des banques centrales</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Policy rates, property prices and credit</source>
+        <translation>Taux directeurs, prix immobiliers et crédit</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Countries: policy rates, residential property prices, household and private debt in % of GDP</source>
+        <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Labour force surveys</source>
+        <translation>Enquêtes sur la population active</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>International Labour Organization (ILOSTAT)</source>
+        <translation>Organisation internationale du travail (ILOSTAT)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Countries: unemployment, employment and participation rates, unemployed and employed persons from the national labour force surveys, statutory minimum wages</source>
+        <translation>Pays : taux de chômage, d’emploi et d’activité, chômeurs et personnes en emploi des enquêtes nationales sur la population active, salaires minimums légaux</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Weekly petroleum and gas stocks</source>
+        <translation>Stocks hebdomadaires de pétrole et de gaz</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>U.S. Energy Information Administration</source>
+        <translation>Agence américaine d’information sur l’énergie (EIA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries (United States): crude, gasoline, distillate and gas stocks, refinery runs, production, net imports; with the EIA key saved under Map · databases with a free key</source>
+        <translation>Pays (États-Unis) : stocks de brut, d’essence, de distillats et de gaz, raffinage, production, importations nettes ; avec la clé EIA enregistrée sous Carte · bases à clé gratuite</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>United Kingdom statistics</source>
+        <translation>Statistiques du Royaume-Uni</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Office for National Statistics</source>
+        <translation>Office for National Statistics (ONS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › United Kingdom: prices, labour market, GDP, retail, public finance, trade, current account, production, saving, productivity</source>
+        <translation>Pays › Royaume-Uni : prix, marché du travail, PIB, ventes au détail, finances publiques, commerce, balance courante, production, épargne, productivité</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Money and mortgages</source>
+        <translation>Monnaie et crédit immobilier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bank of England</source>
+        <translation>Banque d’Angleterre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › United Kingdom: M4, mortgage approvals, fixed mortgage rates</source>
+        <translation>Pays › Royaume-Uni : M4, accords de prêts immobiliers, taux hypothécaires fixes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Brazilian time series (SGS)</source>
+        <translation>Séries temporelles brésiliennes (SGS)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Central Bank of Brazil</source>
+        <translation>Banque centrale du Brésil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Brazil: IPCA, Selic, unemployment, formal jobs, public debt, trade and current account, M0 to M4, reserves, credit and its rate, consumer confidence, industrial and vehicle production</source>
+        <translation>Pays › Brésil : IPCA, Selic, chômage, emploi formel, dette publique, commerce et balance courante, M0 à M4, réserves, crédit et son taux, confiance des consommateurs, production industrielle et automobile</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Canadian data tables</source>
+        <translation>Tableaux de données canadiens</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Statistics Canada</source>
+        <translation>Statistique Canada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Canada: labour force survey, CPI and the core measures, wages, housing starts, new housing prices</source>
+        <translation>Pays › Canada : enquête sur la population active, IPC et mesures de l’inflation fondamentale, salaires, mises en chantier, prix des logements neufs</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Rates and money</source>
+        <translation>Taux et monnaie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bank of Canada</source>
+        <translation>Banque du Canada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Canada: policy rate, 10-year yield, prime and 5-year mortgage rates, M2, the Bank&apos;s assets</source>
+        <translation>Pays › Canada : taux directeur, taux à 10 ans, taux préférentiel et hypothécaire à 5 ans, M2, actif de la Banque</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Time-series data</source>
+        <translation>Séries chronologiques</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bank of Japan</source>
+        <translation>Banque du Japon</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Japan: call rate, monetary base, M2, M3, producer, export and import prices, Tankan, the Bank&apos;s assets, bank loans and lending rate, balance of payments</source>
+        <translation>Pays › Japon : taux au jour le jour, base monétaire, M2, M3, prix à la production, à l’exportation et à l’importation, Tankan, actif de la Banque, crédits bancaires et leur taux, balance des paiements</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Data portal</source>
+        <translation>Portail de données</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Swiss National Bank</source>
+        <translation>Banque nationale suisse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Switzerland: M1, M2, M3, consumer prices, SARON</source>
+        <translation>Pays › Suisse : M1, M2, M3, prix à la consommation, SARON</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Australian statistics</source>
+        <translation>Statistiques australiennes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Australian Bureau of Statistics</source>
+        <translation>Bureau australien des statistiques (ABS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Australia: labour force, monthly CPI and trimmed mean, GDP, saving ratio, productivity, household spending, job vacancies</source>
+        <translation>Pays › Australie : population active, IPC mensuel et moyenne tronquée, PIB, taux d’épargne, productivité, dépenses des ménages, emplois vacants</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Time series database</source>
+        <translation>Base de séries chronologiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Germany: registered unemployment, employment, vacancies, production, factory orders, retail sales, consumer and producer prices, exports and imports (many from the Federal Statistical Office)</source>
+        <translation>Pays › Allemagne : chômage inscrit, emploi, postes vacants, production, commandes industrielles, ventes au détail, prix à la consommation et à la production, exportations et importations (beaucoup de l’Office fédéral de la statistique)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Macro-economic database (BDM)</source>
+        <translation>Banque de données macroéconomiques (BDM)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › France: business climate, household confidence, private payroll employment, household consumption of goods</source>
+        <translation>Pays › France : climat des affaires, confiance des ménages, emploi salarié privé, consommation des ménages en biens</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tempus database</source>
+        <translation>Base Tempus</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>National Statistics Institute (Spain)</source>
+        <translation>Institut national de la statistique (Espagne)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Spain: international tourist arrivals (FRONTUR)</source>
+        <translation>Pays › Espagne : arrivées de touristes internationaux (FRONTUR)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>PxWeb tables</source>
+        <translation>Tables PxWeb</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Statistics Norway · Statistics Sweden</source>
+        <translation>Statistiques Norvège · Statistiques Suède</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Norway: CPI-ATE, Mainland GDP growth; Sweden: CPIF excluding energy</source>
+        <translation>Pays › Norvège : IPC-ATE, croissance du PIB continental ; Suède : CPIF hors énergie</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Mexican indicators (BIE)</source>
+        <translation>Indicateurs mexicains (BIE)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>INEGI (free token)</source>
+        <translation>INEGI (jeton gratuit)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries › Mexico: the national statistics office&apos;s indicators, with Banxico&apos;s (Map · national offices)</source>
+        <translation>Pays › Mexique : les indicateurs de l’institut national de statistique, avec ceux de Banxico (Carte · instituts nationaux)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Free token at inegi.org.mx › Servicio web / API de indicadores</source>
+        <translation>Jeton gratuit sur inegi.org.mx › Servicio web / API de indicadores</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indonesian statistics</source>
+        <translation>Statistiques indonésiennes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Statistics Indonesia (BPS, free key)</source>
+        <translation>Statistics Indonesia (BPS, clé gratuite)</translation>
+    </message>
+    <message>
+        <source>Countries › Indonesia: the national statistics office&apos;s tables</source>
+        <translation type="vanished">Pays › Indonésie : les tableaux de l’institut national de statistique</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Free key at webapi.bps.go.id (register, then App ID)</source>
+        <translation>Clé gratuite sur webapi.bps.go.id (inscription, puis App ID)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Japanese government statistics</source>
+        <translation>Statistiques publiques japonaises</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>e-Stat (free application ID)</source>
+        <translation>e-Stat (identifiant d’application gratuit)</translation>
+    </message>
+    <message>
+        <source>Countries › Japan: the Statistics Bureau&apos;s and ministries&apos; tables, with the Bank of Japan&apos;s (above)</source>
+        <translation type="vanished">Pays › Japon : les tableaux du Bureau des statistiques et des ministères, avec ceux de la Banque du Japon (ci-dessus)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Free application ID at e-stat.go.jp › API (user registration)</source>
+        <translation>Identifiant d’application gratuit sur e-stat.go.jp › API (inscription)</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>Eurostat (from the national offices)</source>
+        <translation>Eurostat (depuis les instituts nationaux)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: harmonised inflation, unemployment, GDP, output, retail, confidence, producer prices, debt and deficit of the EU, EFTA and candidate countries</source>
+        <translation>Carte : inflation harmonisée, chômage, PIB, production, ventes au détail, confiance, prix à la production, dette et déficit de l&apos;UE, de l&apos;AELE et des pays candidats</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Consumer prices of every country</source>
+        <translation>Prix à la consommation de tous les pays</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>International Monetary Fund (CPI)</source>
+        <translation>Fonds monétaire international (CPI)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: monthly inflation of about 190 countries (heatmap and country sheet)</source>
+        <translation>Carte : inflation mensuelle d&apos;environ 190 pays (carte thermique et fiche pays)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>US labour and prices</source>
+        <translation>Emploi et prix aux États-Unis</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>U.S. Bureau of Labor Statistics</source>
+        <translation>U.S. Bureau of Labor Statistics</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: CPI, core CPI, unemployment, payrolls and earnings of the United States, straight from the source</source>
+        <translation>Carte : IPC, IPC sous-jacent, chômage, emplois et salaires des États-Unis, directement à la source</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Map · national offices, read directly</source>
+        <translation>Carte · instituts nationaux, lus directement</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Brazil</source>
+        <translation>Brésil</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Banco Central do Brasil (SGS) · IBGE (SIDRA)</source>
+        <translation>Banco Central do Brasil (SGS) · IBGE (SIDRA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: IPCA inflation, unemployment, industrial production and retail sales of Brazil, at the source</source>
+        <translation>Carte : inflation IPCA, chômage, production industrielle et ventes au détail du Brésil, à la source</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Argentina</source>
+        <translation>Argentine</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>INDEC, via datos.gob.ar</source>
+        <translation>INDEC, via datos.gob.ar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: inflation, monthly activity (EMAE) and unemployment of Argentina</source>
+        <translation>Carte : inflation, activité mensuelle (EMAE) et chômage de l&apos;Argentine</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>South Africa</source>
+        <translation>Afrique du Sud</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>South African Reserve Bank</source>
+        <translation>South African Reserve Bank</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: consumer and producer prices and the repo rate of South Africa</source>
+        <translation>Carte : prix à la consommation et à la production et taux repo de l&apos;Afrique du Sud</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Singapore</source>
+        <translation>Singapour</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Singapore Department of Statistics</source>
+        <translation>Singapore Department of Statistics</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: consumer prices of Singapore</source>
+        <translation>Carte : prix à la consommation de Singapour</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Mexico</source>
+        <translation>Mexique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Banco de México (SIE API, free token)</source>
+        <translation>Banco de México (API SIE, jeton gratuit)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: inflation and the target rate of Mexico</source>
+        <translation>Carte : inflation et taux cible du Mexique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free token at banxico.org.mx › SIE › API</source>
+        <translation>Jeton gratuit sur banxico.org.mx › SIE › API</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>South Korea</source>
+        <translation>Corée du Sud</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bank of Korea (ECOS API, free key)</source>
+        <translation>Banque de Corée (API ECOS, clé gratuite)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: consumer prices of South Korea</source>
+        <translation>Carte : prix à la consommation de la Corée du Sud</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free key at ecos.bok.or.kr › Open API</source>
+        <translation>Clé gratuite sur ecos.bok.or.kr › Open API</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Türkiye</source>
+        <translation>Turquie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Central Bank of the Republic of Türkiye (EVDS, free key)</source>
+        <translation>Banque centrale de Turquie (EVDS, clé gratuite)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: consumer prices of Türkiye</source>
+        <translation>Carte : prix à la consommation de la Turquie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free key at evds2.tcmb.gov.tr (account › API key)</source>
+        <translation>Clé gratuite sur evds2.tcmb.gov.tr (compte › clé API)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Map · databases with a free key</source>
+        <translation>Carte · bases à clé gratuite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>FRED</source>
+        <translation>FRED</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Federal Reserve Bank of St. Louis (free key)</source>
+        <translation>Federal Reserve Bank of St. Louis (clé gratuite)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: PCE inflation, housing starts, jobless claims, trade balance and consumer sentiment of the United States</source>
+        <translation>Carte : inflation PCE, mises en chantier, inscriptions au chômage, balance commerciale et sentiment des ménages des États-Unis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free key at fred.stlouisfed.org › My Account › API Keys</source>
+        <translation>Clé gratuite sur fred.stlouisfed.org › My Account › API Keys</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EIA</source>
+        <translation>EIA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>U.S. Energy Information Administration (free key)</source>
+        <translation>U.S. Energy Information Administration (clé gratuite)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: crude oil stocks and production, gasoline price of the United States (weekly)</source>
+        <translation>Carte : stocks et production de brut, prix de l&apos;essence des États-Unis (hebdomadaire)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free key at eia.gov/opendata</source>
+        <translation>Clé gratuite sur eia.gov/opendata</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>BEA</source>
+        <translation>BEA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>U.S. Bureau of Economic Analysis (free key)</source>
+        <translation>U.S. Bureau of Economic Analysis (clé gratuite)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: real GDP growth of the United States at an annual rate, as the BEA publishes it</source>
+        <translation>Carte : croissance du PIB réel des États-Unis en rythme annualisé, telle que publiée par le BEA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free key at apps.bea.gov/API/signup</source>
+        <translation>Clé gratuite sur apps.bea.gov/API/signup</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Optional: without a key the public preview endpoint is used (a few requests a day); free key at comtradeplus.un.org</source>
+        <translation>Facultatif : sans clé, le point d&apos;accès public d&apos;aperçu est utilisé (quelques requêtes par jour) ; clé gratuite sur comtradeplus.un.org</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>UN Comtrade</source>
+        <translation>UN Comtrade</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>United Nations (free key, optional)</source>
+        <translation>Nations unies (clé gratuite, facultative)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Map: a country&apos;s exports and imports by product, in its economy sheet (downloaded when shown)</source>
+        <translation>Carte : exportations et importations d&apos;un pays par produit, dans sa fiche économie (téléchargées à l&apos;affichage)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Map · private surveys (headline figures)</source>
+        <translation>Carte · enquêtes privées (chiffres-titres)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Survey releases</source>
+        <translation>Publications d&apos;enquêtes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Publishers&apos; headline figures, via TradingView&apos;s economic calendar</source>
+        <translation>Chiffres-titres des éditeurs, via le calendrier économique de TradingView</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Map: PMIs, business climate, economic and consumer sentiment, private payrolls over the last ten weeks; each publisher below can be turned off</source>
+        <translation>Carte : PMI, climat des affaires, sentiment économique et des ménages, emplois privés sur les dix dernières semaines ; chaque éditeur ci-dessous peut être désactivé</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Headline figures free, series paid</source>
+        <translation>Chiffres-titres gratuits, séries payantes</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>News</source>
+        <translation>News</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>News wire (free feeds)</source>
+        <translation>Fil d’actualité (flux gratuits)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CNBC, MarketWatch, BBC, Nasdaq, Seeking Alpha, Investing.com, Cointelegraph, Decrypt, CoinDesk, FXStreet</source>
+        <translation>CNBC, MarketWatch, BBC, Nasdaq, Seeking Alpha, Investing.com, Cointelegraph, Decrypt, CoinDesk, FXStreet</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>News: the headlines of each category when no Financial Modeling Prep key is saved, and the ticker filter (Yahoo Finance&apos;s and Nasdaq&apos;s feeds about one stock)</source>
+        <translation>News : les titres de chaque catégorie quand aucune clé Financial Modeling Prep n’est enregistrée, et le filtre par ticker (les flux de Yahoo Finance et du Nasdaq sur une action)</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Built without the ad blocker (no Rust toolchain)</source>
+        <translation>Compilé sans le bloqueur de publicités (pas de chaîne Rust)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Ad blocking filter lists</source>
+        <translation>Listes de filtres antipub</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Brave&apos;s default lists: uBlock Origin&apos;s, EasyList, EasyPrivacy, Brave&apos;s own, cookie notices</source>
+        <translation>Les listes par défaut de Brave : celles d’uBlock Origin, EasyList, EasyPrivacy, celles de Brave, bandeaux de cookies</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>News: the article reader blocks ads, trackers and cookie notices with Brave&apos;s engine (adblock-rust)</source>
+        <translation>News : le lecteur d’articles bloque publicités, traqueurs et bandeaux de cookies avec le moteur de Brave (adblock-rust)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Financial Modeling Prep</source>
+        <translation>Financial Modeling Prep</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>API key from financialmodelingprep.com (optional)</source>
+        <translation>Clé API de financialmodelingprep.com (facultative)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>News: general, stock, crypto and forex news with their tickers, filtered by the server; the free feeds otherwise</source>
+        <translation>News : actualités générales, actions, crypto et forex avec leurs tickers, filtrées par le serveur ; les flux gratuits sinon</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>AI</source>
+        <translation>IA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Anthropic (Claude)</source>
+        <translation>Anthropic (Claude)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>API key from console.anthropic.com</source>
+        <translation>Clé API de console.anthropic.com</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>AI: the conversation with Claude (Messages API, streamed)</source>
+        <translation>IA : la conversation avec Claude (API Messages, en flux)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hugging Face Hub</source>
+        <translation>Hub Hugging Face</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Access token from huggingface.co › Settings › Tokens (optional)</source>
+        <translation>Jeton d&apos;accès de huggingface.co › Settings › Tokens (facultatif)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>AI: model search and downloads; the token opens gated repositories</source>
+        <translation>IA : recherche et téléchargement de modèles ; le jeton ouvre les dépôts à accès restreint</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Charts · market data</source>
+        <translation>Graphiques · données de marché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Binance, its market data mirror, then Binance.US</source>
+        <translation>Binance, son miroir de données de marché, puis Binance.US</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Charts: crypto candles and quotes, the crypto screener</source>
+        <translation>Graphiques : bougies et cotations crypto, le screener crypto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Charts: crypto when Binance can&apos;t answer</source>
+        <translation>Graphiques : crypto quand Binance ne répond pas</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Charts: crypto and forex as a last resort</source>
+        <translation>Graphiques : crypto et forex en dernier recours</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Charts: stocks worldwide, indices, futures, forex, intraday</source>
+        <translation>Graphiques : actions du monde entier, indices, contrats à terme, forex, intrajournalier</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Charts: US stocks, screener, heatmap, earnings, dividends, news, financials</source>
+        <translation>Graphiques : actions américaines, screener, carte thermique, résultats, dividendes, actualités, états financiers</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+77"/>
+        <source>%n countries</source>
+        <translation>
+            <numerusform>%n pays</numerusform>
+            <numerusform>%n pays</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>and %1 more</source>
+        <translation>et %1 autres</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>no site known</source>
+        <translation>site inconnu</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>%n indicator(s): %1</source>
+        <translation>
+            <numerusform>%n indicateur : %1</numerusform>
+            <numerusform>%n indicateurs : %1</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Official statistics · every source</source>
+        <translation>Statistiques officielles · toutes les sources</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The bodies behind each country&apos;s figures, from the statistical offices and central banks to the private institutes: what each one publishes, whether its data is free and how a program reads it, and whether its site answered the last check. Open a group, or search above. The compilations above (OECD, Eurostat, IMF, BLS, World Bank, BIS) read these bodies for the map.</source>
+        <translation>Les organismes derrière les chiffres de chaque pays, des instituts statistiques et banques centrales aux instituts privés : ce que chacun publie, la gratuité de ses données, la façon dont un programme les lit, et si son site a répondu au dernier contrôle. Ouvrez un groupe, ou cherchez ci-dessus. Les compilations plus haut (OCDE, Eurostat, FMI, BLS, Banque mondiale, BRI) lisent ces organismes pour la carte.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Show more</source>
+        <translation>Afficher la suite</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Show %1 more</source>
+        <translation>Afficher %1 de plus</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+57"/>
+        <source>%n source(s)</source>
+        <translation>
+            <numerusform>%n source</numerusform>
+            <numerusform>%n sources</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 with a reachable site</source>
+        <translation>%1 au site joignable</translation>
+    </message>
+    <message>
+        <location line="+70"/>
+        <source>Open the site</source>
+        <translation>Ouvrir le site</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>sk-ant-…</source>
+        <translation>sk-ant-…</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>hf_…</source>
+        <translation>hf_…</translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>The key was refused (HTTP %1)</source>
+        <translation>La clé a été refusée (HTTP %1)</translation>
+    </message>
+    <message>
+        <location line="+138"/>
+        <source>Enter a free key below to turn this source on</source>
+        <translation>Saisissez une clé gratuite ci-dessous pour activer cette source</translation>
+    </message>
+    <message>
+        <location line="+85"/>
+        <source>Needed to talk to Claude in the AI tab</source>
+        <translation>Nécessaire pour parler à Claude dans l&apos;onglet IA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Optional: public repositories download without it</source>
+        <translation>Facultatif : les dépôts publics se téléchargent sans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Optional: the News tab reads the free feeds without it</source>
+        <translation>Facultative : sans elle, l’onglet News lit les flux gratuits</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Used by the AI tab</source>
+        <translation>Utilisée par l&apos;onglet IA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Used by the News tab</source>
+        <translation>Utilisée par l’onglet News</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Its figures are left out of the country sheets</source>
+        <translation>Ses chiffres sont exclus des fiches pays</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Waiting for the survey releases</source>
+        <translation>En attente des publications d&apos;enquêtes</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>%n figure(s) in the last ten weeks</source>
+        <translation>
+            <numerusform>%n chiffre sur les dix dernières semaines</numerusform>
+            <numerusform>%n chiffres sur les dix dernières semaines</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No release in the last ten weeks</source>
+        <translation>Aucune publication sur les dix dernières semaines</translation>
+    </message>
+    <message>
+        <location line="+103"/>
+        <source>%1 official sources listed, %2 free with a reachable site</source>
+        <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
+    </message>
+    <message>
+        <location line="-1289"/>
+        <location line="+394"/>
+        <source>Economic calendar</source>
+        <translation>Calendrier économique</translation>
+    </message>
+    <message>
+        <location line="-542"/>
+        <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
+        <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Search a source, a site, an indicator</source>
+        <translation>Chercher une source, un site, un indicateur</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Every country</source>
+        <translation>Tous les pays</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Free data</source>
+        <translation>Données gratuites</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Headline figure free, series paid</source>
+        <translation>Chiffre-titre gratuit, séries payantes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Paid</source>
+        <translation>Payant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Every access</source>
+        <translation>Tous les accès</translation>
+    </message>
+    <message>
+        <location line="+490"/>
+        <source>Charts: the Calendar tab</source>
+        <translation>Graphiques : l’onglet Calendar</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crypto news</source>
+        <translation>Actualités crypto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Charts: the News tab for crypto symbols</source>
+        <translation>Graphiques : l’onglet News des symboles crypto</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Charts · your own keys</source>
+        <translation>Graphiques · vos propres clés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free account at alpaca.markets</source>
+        <translation>Compte gratuit sur alpaca.markets</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Charts: US stocks first, before the free public sources</source>
+        <translation>Graphiques : actions américaines en premier, avant les sources publiques gratuites</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Account at massive.com</source>
+        <translation>Compte sur massive.com</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Charts: US stocks and CME futures first</source>
+        <translation>Graphiques : actions américaines et contrats à terme du CME en premier</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>On this computer</source>
+        <translation>Sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commodity sites, sea routes, ports, borders</source>
+        <translation>Sites de production, routes maritimes, ports, frontières</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bundled with the app</source>
+        <translation>Fournis avec l’application</translation>
+    </message>
+    <message>
+        <location line="-473"/>
+        <source>Map: daily transits through the chokepoints by vessel type, a few days behind</source>
+        <translation>Carte : transits quotidiens dans les points de passage par type de navire, avec quelques jours de retard</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Calendar</source>
+        <translation>Calendrier</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Calendar: economic releases of 21 economies and the euro area, with actual, forecast and previous</source>
+        <translation>Calendrier : publications économiques de 21 économies et de la zone euro, avec chiffre publié, prévision et précédent</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Corporate calendars</source>
+        <translation>Calendriers des entreprises</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Calendar: earnings, dividends, stock splits and IPOs of US listings</source>
+        <translation>Calendrier : résultats, dividendes, divisions d&apos;actions et introductions en bourse des sociétés cotées aux États-Unis</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Exchange sessions</source>
+        <translation>Séances des bourses</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Calendar: whether an exchange opened today (holidays) in Market hours</source>
+        <translation>Calendrier : si une bourse a ouvert aujourd&apos;hui (jours fériés) dans Horaires des marchés</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Research</source>
+        <translation>Research</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Company data and prices</source>
+        <translation>Données des sociétés et cours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research: profile, key statistics, statements, analysts&apos; ratings and targets, prices, peers</source>
+        <translation>Research : profil, statistiques clés, états financiers, notes et objectifs des analystes, cours, sociétés comparables</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Holders, insiders and listings</source>
+        <translation>Actionnaires, initiés et cotations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research: institutional holders (13F), insider trades (Form 4), every US listing with its sector and industry, the Nasdaq-100</source>
+        <translation>Research : investisseurs institutionnels (13F), transactions d&apos;initiés (Form 4), toutes les actions cotées aux États-Unis avec leur secteur et leur industrie, le Nasdaq-100</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Reported financials</source>
+        <translation>Comptes publiés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research: the history of the figures companies file in 10-K and 10-Q reports (XBRL)</source>
+        <translation>Research : l&apos;historique des chiffres déposés dans les rapports 10-K et 10-Q (XBRL)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Index members</source>
+        <translation>Composition des indices</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research: the S&amp;P 500 and the Dow, with their GICS sectors</source>
+        <translation>Research : le S&amp;P 500 et le Dow, avec leur secteur GICS</translation>
+    </message>
+    <message>
+        <location line="+141"/>
+        <source>Countries › Indonesia: monthly inflation, unemployment (February and August), exports, imports, foreign tourist visits; three years per request, so since 2015</source>
+        <translation>Pays › Indonésie : inflation mensuelle, chômage (février et août), exportations, importations, visites de touristes étrangers ; trois ans par requête, donc depuis 2015</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Countries › Japan: the Statistics Bureau&apos;s consumer price index (all items, less fresh food, less fresh food and energy, services), with the Bank of Japan&apos;s series (above)</source>
+        <translation>Pays › Japon : l’indice des prix à la consommation du Bureau des statistiques (ensemble, hors produits frais, hors produits frais et énergie, services), avec les séries de la Banque du Japon (ci-dessus)</translation>
+    </message>
+    <message>
+        <location line="+227"/>
+        <source>Map: production sites (a sample), routes and countries</source>
+        <translation>Carte : sites de production (un échantillon), routes et pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Your CSV imports</source>
+        <translation>Vos imports CSV</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Files you imported</source>
+        <translation>Fichiers que vous avez importés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Charts: CSV:… symbols</source>
+        <translation>Graphiques : symboles CSV:…</translation>
+    </message>
+    <message>
+        <location line="+292"/>
+        <source>Test</source>
+        <translation>Tester</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Ask the source for a little data now and time the answer</source>
+        <translation>Demander un peu de données à la source maintenant et chronométrer la réponse</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Refresh</source>
+        <translation>Actualiser</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Download the data again now</source>
+        <translation>Télécharger à nouveau les données maintenant</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Reconnect</source>
+        <translation>Reconnecter</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Turn this source on or off</source>
+        <translation>Activer ou désactiver cette source</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>aisstream.io API key</source>
+        <translation>Clé API aisstream.io</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The key is set by the AISSTREAM_API_KEY environment variable.</source>
+        <translation>La clé est définie par la variable d’environnement AISSTREAM_API_KEY.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Key ID</source>
+        <translation>ID de clé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Secret key</source>
+        <translation>Clé secrète</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>IEX feed (free)</source>
+        <translation>Flux IEX (gratuit)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SIP feed (paid)</source>
+        <translation>Flux SIP (payant)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <source>API key</source>
+        <translation>Clé API</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Connect</source>
+        <translation>Connecter</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>The keys couldn&apos;t be saved in %1</source>
+        <translation>Les clés n’ont pas pu être enregistrées dans %1</translation>
+    </message>
+    <message>
+        <location line="+63"/>
+        <source>Turned off</source>
+        <translation>Désactivée</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <location line="+248"/>
+        <source>No site known</source>
+        <translation>Site inconnu</translation>
+    </message>
+    <message>
+        <location line="-258"/>
+        <location line="+39"/>
+        <location line="+230"/>
+        <source>HTTP %1</source>
+        <translation>HTTP %1</translation>
+    </message>
+    <message>
+        <location line="-173"/>
+        <source>just now</source>
+        <translation>à l’instant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 min ago</source>
+        <translation>il y a %1 min</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 h ago</source>
+        <translation>il y a %1 h</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 days ago</source>
+        <translation>il y a %1 jours</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>checked every %1 days</source>
+        <translation>vérifié tous les %1 jours</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>checked every %1 h</source>
+        <translation>vérifié toutes les %1 h</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <location line="+25"/>
+        <location line="+33"/>
+        <location line="+29"/>
+        <location line="+14"/>
+        <source>Off</source>
+        <translation>Désactivée</translation>
+    </message>
+    <message>
+        <location line="-99"/>
+        <source>Using the copy saved %1</source>
+        <translation>Utilise la copie enregistrée %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No copy saved on this computer</source>
+        <translation>Aucune copie enregistrée sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Downloading…</source>
+        <translation>Téléchargement…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last copy %1</source>
+        <translation>Dernière copie %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+35"/>
+        <source>Error: %1</source>
+        <translation>Erreur : %1</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Using the copy saved %1 · retrying in a few minutes</source>
+        <translation>Utilise la copie enregistrée %1 · nouvel essai dans quelques minutes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No data yet · retrying in a few minutes</source>
+        <translation>Pas encore de données · nouvel essai dans quelques minutes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Up to date</source>
+        <translation>À jour</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Out of date</source>
+        <translation>Pas à jour</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Updated %1 · %2</source>
+        <translation>Mis à jour %1 · %2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Waiting for the first download</source>
+        <translation>En attente du premier téléchargement</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>No ships on the map while the feed is off</source>
+        <translation>Aucun navire sur la carte tant que le flux est désactivé</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No API key</source>
+        <translation>Pas de clé API</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Create a free account on aisstream.io and paste its key below</source>
+        <translation>Créez un compte gratuit sur aisstream.io et collez sa clé ci-dessous</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Live</source>
+        <translation>En direct</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 ships tracked</source>
+        <translation>%1 navires suivis</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Connecting…</source>
+        <translation>Connexion…</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Reconnecting on its own</source>
+        <translation>Reconnexion automatique</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Not connected</source>
+        <translation>Non connecté</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>key from AISSTREAM_API_KEY</source>
+        <translation>clé issue de AISSTREAM_API_KEY</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The charts use the next source in line</source>
+        <translation>Les graphiques utilisent la source suivante</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+99"/>
+        <source>Working</source>
+        <translation>Fonctionne</translation>
+    </message>
+    <message>
+        <location line="-97"/>
+        <source>Last answer %1</source>
+        <translation>Dernière réponse %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Failing: %1</source>
+        <translation>En échec : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The next source in line takes over</source>
+        <translation>La source suivante prend le relais</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Not used yet in this session</source>
+        <translation>Pas encore utilisée dans cette session</translation>
+    </message>
+    <message>
+        <location line="-235"/>
+        <location line="+160"/>
+        <location line="+86"/>
+        <source>No key</source>
+        <translation>Pas de clé</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Optional: the free public sources are used without it</source>
+        <translation>Facultatif : sans clé, les sources publiques gratuites sont utilisées</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Key kept, not used</source>
+        <translation>Clé conservée, non utilisée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Key saved</source>
+        <translation>Clé enregistrée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Charts ask it first</source>
+        <translation>Les graphiques l’interrogent en premier</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Not checked yet</source>
+        <translation>Pas encore contrôlé</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+42"/>
+        <source>Site reachable</source>
+        <translation>Site joignable</translation>
+    </message>
+    <message>
+        <location line="-40"/>
+        <source>Answered in %1 ms (HTTP %2) · checked %3</source>
+        <translation>A répondu en %1 ms (HTTP %2) · contrôlé le %3</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+45"/>
+        <source>Site unreachable</source>
+        <translation>Site injoignable</translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>unknown host</source>
+        <translation>hôte inconnu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>TLS error</source>
+        <translation>erreur TLS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>no answer</source>
+        <translation>pas de réponse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>connection refused</source>
+        <translation>connexion refusée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>network error</source>
+        <translation>erreur réseau</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 · checked %2</source>
+        <translation>%1 · contrôlé le %2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>the site refuses a client that isn&apos;t a browser</source>
+        <translation>le site refuse un client qui n&apos;est pas un navigateur</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+4"/>
+        <source>Available</source>
+        <translation>Disponible</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>None yet</source>
+        <translation>Aucun pour l’instant</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 files</source>
+        <translation>%1 fichiers</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Part of the app, no network needed</source>
+        <translation>Inclus dans l’application, sans réseau</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Testing…</source>
+        <translation>Test en cours…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Test: answered in %1 ms · %2</source>
+        <translation>Test : réponse en %1 ms · %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Test failed: %1</source>
+        <translation>Échec du test : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Failing</source>
+        <translation>En échec</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>%1 online sources</source>
+        <translation>%1 sources en ligne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 working</source>
+        <translation>%1 fonctionnent</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 failing</source>
+        <translation>%1 en échec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 off</source>
+        <translation>%1 désactivées</translation>
+    </message>
+</context>
+<context>
+    <name>Sparkline</name>
+    <message>
+        <location filename="../src/Sparkline.cpp" line="+88"/>
+        <source>H %1</source>
+        <translation>H %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>L %1</source>
+        <translation>B %1</translation>
+    </message>
+</context>
+<context>
+    <name>SurveyHeadlines</name>
+    <message>
+        <location filename="../src/SurveyHeadlines.cpp" line="+84"/>
+        <source>Purchasing managers&apos; indexes (manufacturing, services, composite) of some 40 economies, with HCOB, au Jibun Bank, Caixin, CIPS and Judo Bank</source>
+        <translation>Indices des directeurs d&apos;achat (manufacturier, services, composite) d&apos;une quarantaine d&apos;économies, avec HCOB, au Jibun Bank, Caixin, CIPS et Judo Bank</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ISM manufacturing and services PMIs (United States)</source>
+        <translation>PMI manufacturier et services de l&apos;ISM (États-Unis)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Official manufacturing and non-manufacturing PMIs (China)</source>
+        <translation>PMI officiels manufacturier et non manufacturier (Chine)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ifo business climate (Germany)</source>
+        <translation>Climat des affaires Ifo (Allemagne)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ZEW economic sentiment (Germany, euro area)</source>
+        <translation>Sentiment économique ZEW (Allemagne, zone euro)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer confidence (Germany, United Kingdom)</source>
+        <translation>Confiance des ménages (Allemagne, Royaume-Uni)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer sentiment (United States)</source>
+        <translation>Sentiment des ménages (États-Unis)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer confidence (United States)</source>
+        <translation>Confiance des ménages (États-Unis)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Investor confidence (euro area)</source>
+        <translation>Confiance des investisseurs (zone euro)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Business confidence (Australia)</source>
+        <translation>Confiance des entreprises (Australie)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer confidence (Australia)</source>
+        <translation>Confiance des ménages (Australie)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Business confidence (New Zealand), consumer confidence with Roy Morgan (Australia)</source>
+        <translation>Confiance des entreprises (Nouvelle-Zélande), confiance des ménages avec Roy Morgan (Australie)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quarterly business opinion (New Zealand)</source>
+        <translation>Enquête trimestrielle d&apos;opinion des entreprises (Nouvelle-Zélande)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Industrial trends and business optimism (United Kingdom)</source>
+        <translation>Tendances industrielles et optimisme des entreprises (Royaume-Uni)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Small business optimism (United States)</source>
+        <translation>Optimisme des petites entreprises (États-Unis)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Private payrolls (United States)</source>
+        <translation>Emplois privés (États-Unis)</translation>
+    </message>
+</context>
+<context>
+    <name>TimeSeriesChart</name>
+    <message>
+        <location filename="../src/MacroPanel.cpp" line="+151"/>
+        <source>%1 Q%2</source>
+        <translation>T%2 %1</translation>
+    </message>
+</context>
+<context>
+    <name>TradeFlows</name>
+    <message>
+        <location filename="../src/MacroData.cpp" line="+529"/>
+        <source>Unexpected IMF response</source>
+        <translation>Réponse du FMI inattendue</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>No IMF trade data</source>
+        <translation>Aucune donnée commerciale du FMI</translation>
+    </message>
+</context>
+<context>
+    <name>WorldEconomy</name>
+    <message>
+        <location line="-310"/>
+        <source>Unexpected IMF response</source>
+        <translation>Réponse du FMI inattendue</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>No IMF data</source>
+        <translation>Aucune donnée du FMI</translation>
+    </message>
+</context>
+<context>
+    <name>WorldPolicyRates</name>
+    <message>
+        <location line="+504"/>
+        <source>Unexpected policy rate format</source>
+        <translation>Format de taux directeur inattendu</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>No policy rate data</source>
+        <translation>Aucune donnée de taux directeur</translation>
+    </message>
+</context>
+<context>
+    <name>adblock::Blocker</name>
+    <message>
+        <location filename="../src/AdBlock.cpp" line="+197"/>
+        <source>No filter list</source>
+        <translation>Aucune liste de filtres</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>The filter lists couldn&apos;t be compiled</source>
+        <translation>Les listes de filtres n’ont pas pu être compilées</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Built without the ad blocker (no Rust toolchain)</source>
+        <translation>Compilé sans le bloqueur de publicités (pas de chaîne Rust)</translation>
+    </message>
+</context>
+<context>
+    <name>countries::CountryLoader</name>
+    <message>
+        <source>A free FRED key is needed (Sources)</source>
+        <translation type="vanished">Une clé FRED gratuite est nécessaire (Sources)</translation>
+    </message>
+    <message>
+        <location filename="../src/CountryData.cpp" line="+1525"/>
+        <source>A free EIA key is needed (Sources)</source>
+        <translation>Une clé EIA gratuite est nécessaire (Sources)</translation>
+    </message>
+    <message>
+        <location line="-780"/>
+        <source>World Bank</source>
+        <translation>Banque mondiale</translation>
+    </message>
+    <message>
+        <location line="-29"/>
+        <source>A free %1 key is needed (Sources)</source>
+        <translation>Une clé %1 gratuite est nécessaire (Sources)</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>IMF WEO</source>
+        <translation>FMI (WEO)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IMF</source>
+        <translation>FMI</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>OECD</source>
+        <translation>OCDE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>BIS</source>
+        <translation>BRI</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ILO</source>
+        <translation>OIT</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ECB</source>
+        <translation>BCE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bank of England</source>
+        <translation>Banque d&apos;Angleterre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central Bank of Brazil</source>
+        <translation>Banque centrale du Brésil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank of Canada</source>
+        <translation>Banque du Canada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank of Japan</source>
+        <translation>Banque du Japon</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Swiss National Bank</source>
+        <translation>Banque nationale suisse</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Bank of Korea</source>
+        <translation>Banque de Corée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central Bank of Türkiye</source>
+        <translation>Banque centrale de Turquie</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <location line="+94"/>
+        <location line="+12"/>
+        <location line="+12"/>
+        <location line="+40"/>
+        <location line="+22"/>
+        <location line="+25"/>
+        <location line="+29"/>
+        <location line="+31"/>
+        <location line="+48"/>
+        <location line="+14"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+21"/>
+        <location line="+12"/>
+        <location line="+23"/>
+        <location line="+21"/>
+        <location line="+20"/>
+        <location line="+30"/>
+        <location line="+38"/>
+        <location line="+12"/>
+        <location line="+20"/>
+        <location line="+33"/>
+        <location line="+35"/>
+        <location line="+67"/>
+        <source>Not published</source>
+        <translation>Non publié</translation>
+    </message>
+    <message>
+        <location line="-574"/>
+        <source>No key</source>
+        <translation>Pas de clé</translation>
+    </message>
+    <message>
+        <location line="+579"/>
+        <source>Unknown source</source>
+        <translation>Source inconnue</translation>
+    </message>
+</context>
+<context>
+    <name>news::Wire</name>
+    <message>
+        <location filename="../src/NewsData.cpp" line="+361"/>
+        <source>The news feeds are turned off in Sources</source>
+        <translation>Les flux d’actualité sont désactivés dans Sources</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Financial Modeling Prep refused the key (HTTP %1)</source>
+        <translation>Financial Modeling Prep a refusé la clé (HTTP %1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This endpoint isn&apos;t in your Financial Modeling Prep plan (HTTP 402)</source>
+        <translation>Ce point d’accès n’est pas dans votre offre Financial Modeling Prep (HTTP 402)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Financial Modeling Prep: HTTP %1</source>
+        <translation>Financial Modeling Prep : HTTP %1</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>No usable data in Financial Modeling Prep&apos;s answer</source>
+        <translation>Aucune donnée exploitable dans la réponse de Financial Modeling Prep</translation>
+    </message>
+    <message>
+        <location line="+73"/>
+        <source>%1: no article in the feed</source>
+        <translation>%1 : aucun article dans le flux</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>No article</source>
+        <translation>Aucun article</translation>
+    </message>
+    <message>
+        <location line="+125"/>
+        <source>now</source>
+        <translation>à l’instant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1m ago</source>
+        <translation>il y a %1 min</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1h ago</source>
+        <translation>il y a %1 h</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1d ago</source>
+        <translation>il y a %1 j</translation>
+    </message>
+</context>
+<context>
+    <name>newsui::Card</name>
+    <message>
+        <location filename="../src/NewsPage.cpp" line="-367"/>
+        <source>Remove from favorites</source>
+        <translation>Retirer des favoris</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Add to favorites</source>
+        <translation>Ajouter aux favoris</translation>
+    </message>
+</context>
+<context>
+    <name>newsui::Reader</name>
+    <message>
+        <location filename="../src/NewsReader.cpp" line="+52"/>
+        <source>Back</source>
+        <translation>Retour</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Open in the browser</source>
+        <translation>Ouvrir dans le navigateur</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Close (Esc)</source>
+        <translation>Fermer (Échap)</translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>%1 refuses the embedded view (HTTP %2): its bot protection does not accept this web engine. Use &quot;Open in the browser&quot;.</source>
+        <translation>%1 refuse l’affichage intégré (HTTP %2) : sa protection anti-bot n’accepte pas ce moteur web. Utilisez « Ouvrir dans le navigateur ».</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <source>MMM d, yyyy HH:mm</source>
+        <translation>d MMM yyyy HH:mm</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Remove from favorites</source>
+        <translation>Retirer des favoris</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Add to favorites</source>
+        <translation>Ajouter aux favoris</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>filters loading…</source>
+        <translation>filtres en cours de chargement…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Downloading and compiling Brave&apos;s filter lists</source>
+        <translation>Téléchargement et compilation des listes de filtres de Brave</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+7"/>
+        <source>%n blocked</source>
+        <translation>
+            <numerusform>%n bloquée</numerusform>
+            <numerusform>%n bloquées</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>filters active</source>
+        <translation>filtres actifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Brave&apos;s filter lists are applied by %1 (ads, trackers, cookie notices)</source>
+        <translation>Les listes de filtres de Brave sont appliquées par %1 (publicités, traqueurs, bandeaux de cookies)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Requests blocked on this page by Brave&apos;s filter lists (ads, trackers, cookie notices)</source>
+        <translation>Requêtes bloquées sur cette page par les listes de filtres de Brave (publicités, traqueurs, bandeaux de cookies)</translation>
+    </message>
+</context>
+<context>
+    <name>overview::PerfChart</name>
+    <message>
+        <location filename="../src/OverviewWidgets.cpp" line="+340"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+</context>
+<context>
+    <name>overview::StatsView</name>
+    <message>
+        <location line="+222"/>
+        <source>Ret:</source>
+        <translation>Rend. :</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>High:</source>
+        <translation>Haut :</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Low:</source>
+        <translation>Bas :</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Vol:</source>
+        <translation>Vol. :</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>CORRELATIONS</source>
+        <translation>CORRÉLATIONS</translation>
+    </message>
+</context>
+<context>
+    <name>quant::CompareView</name>
+    <message>
+        <location filename="../src/QuantCompareView.cpp" line="+292"/>
+        <source>1 Year</source>
+        <translation>1 an</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>6 Month</source>
+        <translation>6 mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Month</source>
+        <translation>3 mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>1 Month</source>
+        <translation>1 mois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Change %</source>
+        <translation>Variation %</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Checked: the change since the start of the range. Unchecked: prices rebased to 100.</source>
+        <translation>Coché : la variation depuis le début de la période. Décoché : prix rebasés à 100.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Add a ticker</source>
+        <translation>Ajouter un symbole</translation>
+    </message>
+    <message>
+        <location line="+100"/>
+        <source>Remove %1</source>
+        <translation>Retirer %1</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Add a ticker to compare.</source>
+        <translation>Ajoutez un symbole à comparer.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+65"/>
+        <source>METRIC</source>
+        <translation>INDICATEUR</translation>
+    </message>
+</context>
+<context>
+    <name>quant::CorrelationView</name>
+    <message>
+        <location filename="../src/QuantPairViews.cpp" line="+64"/>
+        <source>1 Year</source>
+        <translation>1 an</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>6 Month</source>
+        <translation>6 mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Month</source>
+        <translation>3 mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>1 Month</source>
+        <translation>1 mois</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Window (days):</source>
+        <translation>Fenêtre (jours) :</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Set</source>
+        <translation>Appliquer</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Y (buy):</source>
+        <translation>Y (achat) :</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>X (sell):</source>
+        <translation>X (vente) :</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Min/Max</source>
+        <translation>Min/Max</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+230"/>
+        <source>Z-Score</source>
+        <translation>Z-score</translation>
+    </message>
+    <message>
+        <location line="-215"/>
+        <source>Cointegration</source>
+        <translation>Cointégration</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>ADF p-value</source>
+        <translation>p-value ADF</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Test Statistic</source>
+        <translation>Statistique de test</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Mean Reversion</source>
+        <translation>Retour à la moyenne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Half-Life</source>
+        <translation>Demi-vie</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>days</source>
+        <translation>jours</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Hedge Ratio</source>
+        <translation>Ratio de couverture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+196"/>
+        <source>Beta (β)</source>
+        <translation>Bêta (β)</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <source>Signal</source>
+        <translation>Signal</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Current Z-Score</source>
+        <translation>Z-score actuel</translation>
+    </message>
+    <message>
+        <location line="+73"/>
+        <source>Enter two symbols.</source>
+        <translation>Saisissez deux symboles.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>no prices</source>
+        <translation>pas de prix</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Not enough overlapping prices (%1 days).</source>
+        <translation>Pas assez de prix communs (%1 jours).</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>STATIONARY</source>
+        <translation>STATIONNAIRE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>NON-STATIONARY</source>
+        <translation>NON STATIONNAIRE</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Augmented Dickey-Fuller test of the spread (constant, %1 lag): below 0.05 the spread is stationary, so the pair mean-reverts. MacKinnon&apos;s approximate p-value.</source>
+        <translation>Test de Dickey-Fuller augmenté du spread (constante, %1 retard) : sous 0,05 le spread est stationnaire, donc la paire revient à la moyenne. p-value approchée de MacKinnon.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>∞</source>
+        <translation>∞</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Time for a deviation of the spread to halve, from Δspread regressed on the lagged spread (-ln 2 / λ); ∞ when the spread doesn&apos;t revert.</source>
+        <translation>Temps pour qu&apos;un écart du spread se réduise de moitié, d&apos;après la régression de Δspread sur le spread retardé (-ln 2 / λ) ; ∞ quand le spread ne revient pas à la moyenne.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+20"/>
+        <source>Spread</source>
+        <translation>Spread</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Least-squares slope of %1 on %2 prices over the range: units of %2 to sell per unit of %1 bought.</source>
+        <translation>Pente des moindres carrés des prix de %1 sur ceux de %2 sur la période : unités de %2 à vendre par unité de %1 achetée.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>SELL %1 / BUY %2</source>
+        <translation>VENDRE %1 / ACHETER %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>BUY %1 / SELL %2</source>
+        <translation>ACHETER %1 / VENDRE %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>WATCH</source>
+        <translation>À SURVEILLER</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>NEUTRAL</source>
+        <translation>NEUTRE</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Z-score of the spread against its %1-day mean: beyond ±2σ the spread is stretched (sell it above, buy it below), beyond ±0.5σ it is worth watching.</source>
+        <translation>Z-score du spread par rapport à sa moyenne sur %1 jours : au-delà de ±2σ le spread est tendu (à vendre au-dessus, à acheter en dessous), au-delà de ±0,5σ il mérite d&apos;être surveillé.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Alpha (α)</source>
+        <translation>Alpha (α)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Pearson R</source>
+        <translation>R de Pearson</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>R-squared</source>
+        <translation>R²</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Std Dev Error</source>
+        <translation>Écart-type de l&apos;erreur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Std Error (α)</source>
+        <translation>Erreur standard (α)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Std Error (β)</source>
+        <translation>Erreur standard (β)</translation>
+    </message>
+</context>
+<context>
+    <name>quant::CotTable</name>
+    <message>
+        <location filename="../src/QuantCotView.cpp" line="+54"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Non-Commercial</source>
+        <translation>Non commerciaux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>LONG</source>
+        <translation>LONG</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>SHORT</source>
+        <translation>SHORT</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>SPREADS</source>
+        <translation>SPREADS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commercial</source>
+        <translation>Commerciaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total</source>
+        <translation>Total</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non-Reportable</source>
+        <translation>Non déclarables</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>POSITIONS</source>
+        <translation>POSITIONS</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>CHANGE</source>
+        <translation>VARIATION</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>% OF OI</source>
+        <translation>% POS. OUV.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TRADERS</source>
+        <translation>OPÉRATEURS</translation>
+    </message>
+</context>
+<context>
+    <name>quant::CotView</name>
+    <message>
+        <location line="+97"/>
+        <source>COT — Commitments of Traders: weekly CFTC report of futures positions (futures only, legacy format).</source>
+        <translation>COT — Commitments of Traders : rapport hebdomadaire de la CFTC sur les positions en futures (futures seulement, format legacy).</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>FUTURES ONLY POSITIONS</source>
+        <translation>POSITIONS FUTURES SEULEMENT</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Long vs. Short</source>
+        <translation>Long vs short</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Net Positions</source>
+        <translation>Positions nettes</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>HISTORICAL DATA</source>
+        <translation>HISTORIQUE</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>AS OF</source>
+        <translation>AU</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open Interest</source>
+        <translation>Positions ouvertes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Δ OI</source>
+        <translation>Δ pos. ouv.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>NC Net</source>
+        <translation>Net NC</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Comm Net</source>
+        <translation>Net comm.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>NR Net</source>
+        <translation>Net ND</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Loading the CFTC report…</source>
+        <translation>Chargement du rapport CFTC…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+9"/>
+        <source>Code %1</source>
+        <translation>Code %1</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Showing the last copy saved: %1</source>
+        <translation>Dernière copie enregistrée : %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>AS OF: %1</source>
+        <translation>AU : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>RELEASE: %1</source>
+        <translation>PUBLICATION : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The CFTC publishes Tuesday&apos;s positions on Friday at 15:30 ET, a day later on holiday weeks.</source>
+        <translation>La CFTC publie les positions du mardi le vendredi à 15 h 30 (heure de New York), un jour plus tard les semaines fériées.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Open Interest:</source>
+        <translation>Positions ouvertes :</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Traders:</source>
+        <translation>Opérateurs :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non-Commercial</source>
+        <translation>Non commerciaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+10"/>
+        <source>Commercial</source>
+        <translation>Commerciaux</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>Non-Reportable</source>
+        <translation>Non déclarables</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>NonCommercial</source>
+        <translation>Non comm.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non Rept</source>
+        <translation>Non décl.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>HISTORICAL DATA (%1 records)</source>
+        <translation>HISTORIQUE (%1 relevés)</translation>
+    </message>
+</context>
+<context>
+    <name>quant::ExecutionView</name>
+    <message>
+        <location filename="../src/QuantMarkovExecutionView.cpp" line="+118"/>
+        <source>Quantity:</source>
+        <translation>Quantité :</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Horizon (days):</source>
+        <translation>Horizon (jours) :</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Intervals:</source>
+        <translation>Intervalles :</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>λ (×1e-6):</source>
+        <translation>λ (×1e-6) :</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Risk aversion of the mean-variance objective E + λ V, in 1 / currency: 0 is TWAP, more sells sooner.</source>
+        <translation>Aversion au risque de l&apos;objectif moyenne-variance E + λ V, en 1 / devise : 0 donne un TWAP, plus élevé vend plus tôt.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Temp. impact:</source>
+        <translation>Impact temp. :</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Temporary impact in basis points of the price for trading at 1% of the average daily volume per day.</source>
+        <translation>Impact temporaire, en points de base du prix, pour traiter 1 % du volume quotidien moyen par jour.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Perm. impact:</source>
+        <translation>Impact perm. :</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Permanent impact in basis points per 1% of the average daily volume traded.</source>
+        <translation>Impact permanent, en points de base, par 1 % du volume quotidien moyen traité.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>½ spread (bp):</source>
+        <translation>½ spread (pb) :</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Paths:</source>
+        <translation>Trajectoires :</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Impact:</source>
+        <translation>Impact :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Linear</source>
+        <translation>Linéaire</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>√</source>
+        <translation>√</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Square-root impact: η (n / V)^½, concave in the participation; Almgren-Chriss is then linearized at the TWAP pace.</source>
+        <translation>Impact en racine carrée : η (n / V)^½, concave en la participation ; Almgren-Chriss est alors linéarisé au rythme du TWAP.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Regimes:</source>
+        <translation>Régimes :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>None</source>
+        <translation>Aucun</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Two volatility regimes from the HMM (module 1), read from the shared state when it is current, else estimated on two years of daily returns and published.</source>
+        <translation>Deux régimes de volatilité du HMM (module 1), lus dans l&apos;état partagé quand il est à jour, sinon estimés sur deux ans de rendements quotidiens et publiés.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Two regimes from the MS-GARCH (module 2): each regime&apos;s next-day volatility and the transition matrix.</source>
+        <translation>Deux régimes du MS-GARCH (module 2) : la volatilité du jour suivant de chaque régime et la matrice de transition.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Q-learning</source>
+        <translation>Q-learning</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Train a tabular Q-learning agent on the simulator (model-free) and compare it.</source>
+        <translation>Entraîner un agent de Q-learning tabulaire sur le simulateur (sans modèle) et le comparer.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Training episodes</source>
+        <translation>Épisodes d&apos;entraînement</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Regimes</source>
+        <translation>Régimes</translation>
+    </message>
+    <message>
+        <location line="-36"/>
+        <source>Run</source>
+        <translation>Lancer</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Market</source>
+        <translation>Marché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Decision price</source>
+        <translation>Prix de décision</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Average daily volume</source>
+        <translation>Volume quotidien moyen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Daily volatility</source>
+        <translation>Volatilité quotidienne</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Order / ADV</source>
+        <translation>Ordre / volume quotidien</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Almgren-Chriss</source>
+        <translation>Almgren-Chriss</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>κ (urgency, per day)</source>
+        <translation>κ (urgence, par jour)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Half-life of the schedule</source>
+        <translation>Demi-vie du programme</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Expected cost</source>
+        <translation>Coût attendu</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Risk (√V)</source>
+        <translation>Risque (√V)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Objective E + λV</source>
+        <translation>Objectif E + λV</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>MDP</source>
+        <translation>MDP</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Grid</source>
+        <translation>Grille</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Objective at the start</source>
+        <translation>Objectif au départ</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>vs Almgren-Chriss</source>
+        <translation>vs Almgren-Chriss</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dynamic programming on (intervals left × shares left × regime); same costs as Almgren-Chriss.</source>
+        <translation>Programmation dynamique sur (intervalles restants × titres restants × régime) ; mêmes coûts qu&apos;Almgren-Chriss.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Monte Carlo · implementation shortfall</source>
+        <translation>Monte Carlo · implementation shortfall</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Strategy</source>
+        <translation>Stratégie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mean cost</source>
+        <translation>Coût moyen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Std dev</source>
+        <translation>Écart-type</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>P95</source>
+        <translation>P95</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Analytic E</source>
+        <translation>E analytique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mean cost (currency)</source>
+        <translation>Coût moyen (devise)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shortfall against the decision price, in basis points of the order&apos;s value; every strategy on the same random paths.</source>
+        <translation>Écart au prix de décision, en points de base de la valeur de l&apos;ordre ; toutes les stratégies sur les mêmes trajectoires aléatoires.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Liquidation trajectories · shares left, % of the order</source>
+        <translation>Trajectoires de liquidation · titres restants, % de l&apos;ordre</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Simulated costs · basis points</source>
+        <translation>Coûts simulés · points de base</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Enter a symbol.</source>
+        <translation>Saisissez un symbole.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Loading prices…</source>
+        <translation>Chargement des prix…</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>not enough prices</source>
+        <translation>pas assez de prix</translation>
+    </message>
+    <message>
+        <location line="+28"/>
+        <source>Yahoo daily candles, last %1 days</source>
+        <translation>Chandeliers quotidiens Yahoo, %1 derniers jours</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>No volume data for this symbol: the impact can&apos;t be scaled.</source>
+        <translation>Aucune donnée de volume pour ce symbole : l&apos;impact ne peut pas être calibré.</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Invalid parameters: the temporary impact must exceed half the permanent impact in every interval.</source>
+        <translation>Paramètres invalides : l&apos;impact temporaire doit dépasser la moitié de l&apos;impact permanent à chaque intervalle.</translation>
+    </message>
+    <message>
+        <location line="+150"/>
+        <source>%1 now (%2%) · vols %3% / %4% · P(stay) %5% / %6% · %7%8</source>
+        <translation>%1 actuellement (%2 %) · vols %3 % / %4 % · P(rester) %5 % / %6 % · %7%8</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source> (shared state)</source>
+        <translation> (état partagé)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> (estimated now)</source>
+        <translation> (estimé à l&apos;instant)</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>No intraday volume data: flat profile, same as TWAP.</source>
+        <translation>Aucune donnée de volume intrajournalier : profil plat, comme le TWAP.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Trained on %1 episodes; mean cost per block fell from %2 to %3 bp.</source>
+        <translation>Entraîné sur %1 épisodes ; le coût moyen par bloc est passé de %2 à %3 pb.</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>(%1% ann.)</source>
+        <translation>(%1 % ann.)</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%1 days</source>
+        <translation>%1 jours</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 intervals × %2 levels%3</source>
+        <translation>%1 intervalles × %2 niveaux%3</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> × 2 regimes</source>
+        <translation> × 2 régimes</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>none</source>
+        <translation>aucun</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>path-dependent</source>
+        <translation>dépendant de la trajectoire</translation>
+    </message>
+</context>
+<context>
+    <name>quant::HistogramChart</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="+498"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>quant::HmmView</name>
+    <message>
+        <location filename="../src/QuantMarkovHmmView.cpp" line="+85"/>
+        <source>1 Year</source>
+        <translation>1 an</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Years</source>
+        <translation>2 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>5 Years</source>
+        <translation>5 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>10 Years</source>
+        <translation>10 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Max</source>
+        <translation>Max</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>States:</source>
+        <translation>États :</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Inputs:</source>
+        <translation>Entrées :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Returns</source>
+        <translation>Rendements</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Returns + Vol</source>
+        <translation>Rendements + vol</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Two variables per day: the return and the realized volatility (standard deviation of the last 10 returns), both in %.</source>
+        <translation>Deux variables par jour : le rendement et la volatilité réalisée (écart-type des 10 derniers rendements), tous deux en %.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Window (days):</source>
+        <translation>Fenêtre (jours) :</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>all</source>
+        <translation>tout</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Rolling estimation: the model is estimated on the last N days only, then applied to the whole range. 0 (all) estimates on the whole range.</source>
+        <translation>Estimation glissante : le modèle est estimé sur les N derniers jours seulement, puis appliqué à toute la période. 0 (tout) estime sur toute la période.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Fit</source>
+        <translation>Estimer</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>A posteriori (smoothed)</source>
+        <translation>A posteriori (lissé)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Off: filtered probabilities P(state | data up to that day), usable as a signal. On: smoothed probabilities and the Viterbi path, which use the whole sample (look-ahead): for reading history only.</source>
+        <translation>Décoché : probabilités filtrées P(état | données jusqu&apos;à ce jour), utilisables comme signal. Coché : probabilités lissées et chemin de Viterbi, qui utilisent tout l&apos;échantillon (anticipation) : pour lire l&apos;histoire seulement.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Current regime</source>
+        <translation>Régime actuel</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Filtered probability</source>
+        <translation>Probabilité filtrée</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Model</source>
+        <translation>Modèle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+15"/>
+        <source>Log-likelihood</source>
+        <translation>Log-vraisemblance</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>AIC</source>
+        <translation>AIC</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>BIC</source>
+        <translation>BIC</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Parameters</source>
+        <translation>Paramètres</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EM iterations</source>
+        <translation>Itérations EM</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Observations</source>
+        <translation>Observations</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of states</source>
+        <translation>Nombre d&apos;états</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>K</source>
+        <translation>K</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Lowest BIC in bold; the shown model is highlighted.</source>
+        <translation>BIC le plus bas en gras ; le modèle affiché est surligné.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Transition matrix</source>
+        <translation>Matrice de transition</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+189"/>
+        <source>From \ To</source>
+        <translation>De \ Vers</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <source>P(next regime | current regime), one row per current regime.</source>
+        <translation>P(régime suivant | régime actuel), une ligne par régime actuel.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Regimes</source>
+        <translation>Régimes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Regime</source>
+        <translation>Régime</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mean (daily %)</source>
+        <translation>Moyenne (% par jour)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Vol (daily %)</source>
+        <translation>Vol (% par jour)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Vol (ann. %)</source>
+        <translation>Vol (% ann.)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Expected duration</source>
+        <translation>Durée attendue</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Share of time</source>
+        <translation>Part du temps</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Expected duration = 1 / (1 − p_kk) days; share of time from the filtered probabilities.</source>
+        <translation>Durée attendue = 1 / (1 − p_kk) jours ; part du temps d&apos;après les probabilités filtrées.</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>Enter a symbol.</source>
+        <translation>Saisissez un symbole.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Loading prices…</source>
+        <translation>Chargement des prix…</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>not enough prices</source>
+        <translation>pas assez de prix</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Estimation failed.</source>
+        <translation>L&apos;estimation a échoué.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>%1 for %2 days (expected visit %3 days); P(stay) = %4%; most likely switch: %5 (%6%)%7</source>
+        <translation>%1 depuis %2 jours (visite attendue %3 jours) ; P(rester) = %4 % ; bascule la plus probable : %5 (%6 %)%7</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source> · estimated on the last %1 days</source>
+        <translation> · estimé sur les %1 derniers jours</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source> (not converged)</source>
+        <translation> (non convergé)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source> × 2 variables</source>
+        <translation> × 2 variables</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>price coloured by the Viterbi path (a posteriori)</source>
+        <translation>prix coloré par le chemin de Viterbi (a posteriori)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>price coloured by the filtered regime</source>
+        <translation>prix coloré par le régime filtré</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Smoothed probabilities P(state | whole sample) — a posteriori</source>
+        <translation>Probabilités lissées P(état | tout l&apos;échantillon) — a posteriori</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Filtered probabilities P(state | data up to the day)</source>
+        <translation>Probabilités filtrées P(état | données jusqu&apos;au jour)</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>%1 days</source>
+        <translation>%1 jours</translation>
+    </message>
+</context>
+<context>
+    <name>quant::JobBar</name>
+    <message>
+        <location filename="../src/QuantJob.cpp" line="+27"/>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Starting…</source>
+        <translation>Démarrage…</translation>
+    </message>
+</context>
+<context>
+    <name>quant::LongShortBars</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="+605"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Long: %1 (%2%)</source>
+        <translation>Long : %1 (%2 %)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Short: %1 (%2%)</source>
+        <translation>Short : %1 (%2 %)</translation>
+    </message>
+</context>
+<context>
+    <name>quant::MarketStateStrip</name>
+    <message>
+        <location filename="../src/QuantMarketState.cpp" line="+342"/>
+        <source>NO REGIME</source>
+        <translation>PAS DE RÉGIME</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>%1% · %2, %3 states · as of %4 (%5)%6</source>
+        <translation>%1 % · %2, %3 états · au %4 (%5)%6</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source> · refreshing…</source>
+        <translation> · actualisation…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Regime of %1 from the %2 fitted in Quant › Markov on %3: %4 with probability %5%, regime volatility %6% a day. Re-estimated in the background when older than the last trading day.</source>
+        <translation>Régime de %1 d&apos;après le %2 estimé dans Quant › Markov le %3 : %4 avec une probabilité de %5 %, volatilité du régime %6 % par jour. Réestimé en arrière-plan quand il date d&apos;avant le dernier jour de bourse.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>ESTIMATING…</source>
+        <translation>ESTIMATION…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>a symbol</source>
+        <translation>un symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>fit %1 in Quant › Markov › HMM regimes, or add it to the Portfolio</source>
+        <translation>estimez %1 dans Quant › Markov › Régimes HMM, ou ajoutez-le au Portefeuille</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>σ %1%/d · VaR95 %2%</source>
+        <translation>σ %1 %/j · VaR95 %2 %</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vol forecast %1%/day (%2% ann.) · %3 days: %4% · VaR 95%: %5% · ES 95%: %6% · %7 · as of %8</source>
+        <translation>Prévision de vol %1 %/jour (%2 % ann.) · %3 jours : %4 % · VaR 95 % : %5 % · ES 95 % : %6 % · %7 · au %8</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>From the %1 fitted in Quant › Markov on %2.</source>
+        <translation>D&apos;après le %1 estimé dans Quant › Markov le %2.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>· no volatility forecast: fit it in Quant › Markov › MS-GARCH</source>
+        <translation>· pas de prévision de volatilité : estimez-la dans Quant › Markov › MS-GARCH</translation>
+    </message>
+</context>
+<context>
+    <name>quant::MarkovView</name>
+    <message>
+        <location filename="../src/QuantMarkovView.cpp" line="+26"/>
+        <source>HMM regimes</source>
+        <translation>Régimes HMM</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>MS-GARCH</source>
+        <translation>MS-GARCH</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Execution</source>
+        <translation>Exécution</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hidden Markov regimes · Markov-switching GARCH volatility · optimal execution (MDP)</source>
+        <translation>Régimes de Markov cachés · volatilité GARCH à changement de régime · exécution optimale (MDP)</translation>
+    </message>
+</context>
+<context>
+    <name>quant::MsGarchView</name>
+    <message>
+        <location filename="../src/QuantMarkovGarchView.cpp" line="+116"/>
+        <source>1 Year</source>
+        <translation>1 an</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Years</source>
+        <translation>2 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>5 Years</source>
+        <translation>5 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>10 Years</source>
+        <translation>10 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Max</source>
+        <translation>Max</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Regimes:</source>
+        <translation>Régimes :</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>One regime: a plain GARCH(1,1).</source>
+        <translation>Un régime : un simple GARCH(1,1).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Innovations:</source>
+        <translation>Innovations :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Normal</source>
+        <translation>Normales</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+297"/>
+        <source>Student-t</source>
+        <translation>Student-t</translation>
+    </message>
+    <message>
+        <location line="-295"/>
+        <source>Horizon (days):</source>
+        <translation>Horizon (jours) :</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Fit</source>
+        <translation>Estimer</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Volatility forecast</source>
+        <translation>Prévision de volatilité</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>daily, next day</source>
+        <translation>quotidienne, jour suivant</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Annualized</source>
+        <translation>Annualisée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Over the horizon</source>
+        <translation>Sur l&apos;horizon</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Regime probability (next day)</source>
+        <translation>Probabilité du régime (jour suivant)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Risk · 1 day</source>
+        <translation>Risque · 1 jour</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>VaR 95%</source>
+        <translation>VaR 95 %</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>VaR 99%</source>
+        <translation>VaR 99 %</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ES 95%</source>
+        <translation>ES 95 %</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ES 99%</source>
+        <translation>ES 99 %</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Parametric, on the regime mixture of the next day; losses in % of the position.</source>
+        <translation>Paramétrique, sur le mélange de régimes du jour suivant ; pertes en % de la position.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Risk · horizon</source>
+        <translation>Risque · horizon</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Summed forecast variance as one normal or Student component.</source>
+        <translation>Variance prévue cumulée, traitée comme une seule composante normale ou de Student.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Position size</source>
+        <translation>Taille de position</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Capital</source>
+        <translation>Capital</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Target daily risk (%)</source>
+        <translation>Risque quotidien cible (%)</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Exposure / capital</source>
+        <translation>Exposition / capital</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Size = capital × target risk ÷ forecast daily volatility.</source>
+        <translation>Taille = capital × risque cible ÷ volatilité quotidienne prévue.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Model vs GARCH(1,1)</source>
+        <translation>Modèle vs GARCH(1,1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Model</source>
+        <translation>Modèle</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>LogL</source>
+        <translation>LogL</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>AIC</source>
+        <translation>AIC</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>BIC</source>
+        <translation>BIC</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Params</source>
+        <translation>Param.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Evals</source>
+        <translation>Éval.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Same sample and innovations; lowest BIC in bold.</source>
+        <translation>Même échantillon et mêmes innovations ; BIC le plus bas en gras.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Evals: likelihood evaluations of the best start.</source>
+        <translation>Éval. : évaluations de la vraisemblance du meilleur départ.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Regimes</source>
+        <translation>Régimes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Regime</source>
+        <translation>Régime</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>α + β</source>
+        <translation>α + β</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Long-run vol</source>
+        <translation>Vol de long terme</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>P(stay)</source>
+        <translation>P(rester)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Duration</source>
+        <translation>Durée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>σ²_k,t = ω_k + α_k ε²_t−1 + β_k σ²_k,t−1 in each regime (Haas, Mittnik &amp; Paolella); returns in %; long-run vol = √(ω / (1 − α − β)) annualized. Bounds: α + β ≤ 0.99, P(stay) ≥ 80%, ω ≥ 0.1% of the sample variance.</source>
+        <translation>σ²_k,t = ω_k + α_k ε²_t−1 + β_k σ²_k,t−1 dans chaque régime (Haas, Mittnik &amp; Paolella) ; rendements en % ; vol de long terme = √(ω / (1 − α − β)) annualisée. Bornes : α + β ≤ 0,99, P(rester) ≥ 80 %, ω ≥ 0,1 % de la variance de l&apos;échantillon.</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Conditional vol</source>
+        <translation>Vol conditionnelle</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Forecast</source>
+        <translation>Prévision</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Regime range</source>
+        <translation>Plage des régimes</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Enter a symbol.</source>
+        <translation>Saisissez un symbole.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Loading prices…</source>
+        <translation>Chargement des prix…</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>not enough prices</source>
+        <translation>pas assez de prix</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Estimation failed.</source>
+        <translation>L&apos;estimation a échoué.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>%1 (%2 days)</source>
+        <translation>%1 (%2 jours)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>single regime</source>
+        <translation>régime unique</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>RISK · %1 DAYS</source>
+        <translation>RISQUE · %1 JOURS</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>MS-GARCH K=%1 · %2</source>
+        <translation>MS-GARCH K=%1 · %2</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>normal</source>
+        <translation>normales</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+2"/>
+        <source>GARCH(1,1) · %1</source>
+        <translation>GARCH(1,1) · %1</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source> (not converged)</source>
+        <translation> (non convergé)</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>explosive</source>
+        <translation>explosif</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 days</source>
+        <translation>%1 jours</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>conditional volatility (one day ahead) against realized (%1-day), annualized</source>
+        <translation>volatilité conditionnelle (à un jour) contre réalisée (%1 jours), annualisées</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Conditional</source>
+        <translation>Conditionnelle</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Realized</source>
+        <translation>Réalisée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>conditional volatility (one day ahead) against realized (%1-day), annualized · ν = %2</source>
+        <translation>volatilité conditionnelle (à un jour) contre réalisée (%1 jours), annualisées · ν = %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Filtered regime probabilities P(regime | returns up to the day)</source>
+        <translation>Probabilités filtrées des régimes P(régime | rendements jusqu&apos;au jour)</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Volatility forecast · %1 days ahead, annualized</source>
+        <translation>Prévision de volatilité · à %1 jours, annualisée</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Size = capital × target risk ÷ forecast daily volatility: %1 × %2% ÷ %3% · one-day VaR 95%: %4</source>
+        <translation>Taille = capital × risque cible ÷ volatilité quotidienne prévue : %1 × %2 % ÷ %3 % · VaR 95 % à un jour : %4</translation>
+    </message>
+</context>
+<context>
+    <name>quant::MultiLineChart</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="-713"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>quant::OverlayChart</name>
+    <message>
+        <location line="+165"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>quant::PortfolioView</name>
+    <message>
+        <location filename="../src/QuantPortfolioView.cpp" line="+61"/>
+        <location line="+96"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="-94"/>
+        <source>Quantity:</source>
+        <translation>Quantité :</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Shares; negative for a short position.</source>
+        <translation>Nombre de titres ; négatif pour une position vendeuse.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Add</source>
+        <translation>Ajouter</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Estimate missing</source>
+        <translation>Estimer les manquants</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Fit the HMM and the MS-GARCH in the background for every position without a regime or a volatility forecast.</source>
+        <translation>Estimer en arrière-plan le HMM et le MS-GARCH de chaque position sans régime ou sans prévision de volatilité.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Refresh prices</source>
+        <translation>Actualiser les prix</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+61"/>
+        <source>Value</source>
+        <translation>Valeur</translation>
+    </message>
+    <message>
+        <location line="-61"/>
+        <source>Volatility (daily / annualized)</source>
+        <translation>Volatilité (quotidienne / annualisée)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+52"/>
+        <source>VaR 95%</source>
+        <translation>VaR 95 %</translation>
+    </message>
+    <message>
+        <location line="-52"/>
+        <source>VaR 99%</source>
+        <translation>VaR 99 %</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Sum of standalone VaR 95%</source>
+        <translation>Somme des VaR 95 % individuelles</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>Portfolio risk · 1 day</source>
+        <translation>Risque du portefeuille · 1 jour</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Diversification</source>
+        <translation>Diversification</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Method</source>
+        <translation>Méthode</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ES 95%</source>
+        <translation>ES 95 %</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ES 99%</source>
+        <translation>ES 99 %</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Parametric: σ_p = √(wᵀ Σ w), Σ from the correlations of a year of daily returns and each symbol&apos;s forecast volatility (MS-GARCH; realized when there is none), normal quantiles. Historical: the portfolio&apos;s daily P&amp;L over the year with today&apos;s positions; filtered: the same returns rescaled to the forecast volatilities (Hull &amp; White). Regime Monte Carlo: 20,000 days where each symbol draws its regime with the current probabilities and its volatility in it, shocks correlated as the history. Losses in currency (% of value).</source>
+        <translation>Paramétrique : σ_p = √(wᵀ Σ w), Σ d&apos;après les corrélations d&apos;un an de rendements quotidiens et la volatilité prévue de chaque symbole (MS-GARCH ; réalisée à défaut), quantiles normaux. Historique : le P&amp;L quotidien du portefeuille sur l&apos;année avec les positions d&apos;aujourd&apos;hui ; filtré : les mêmes rendements remis à l&apos;échelle des volatilités prévues (Hull &amp; White). Monte Carlo par régimes : 20 000 jours où chaque symbole tire son régime selon les probabilités actuelles et sa volatilité dans ce régime, chocs corrélés comme l&apos;historique. Pertes en devise (% de la valeur).</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Regimes</source>
+        <translation>Régimes</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Daily P&amp;L · a year of history against the regime Monte Carlo, % of value</source>
+        <translation>P&amp;L quotidien · un an d&apos;historique contre le Monte Carlo par régimes, % de la valeur</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Positions</source>
+        <translation>Positions</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Quantity</source>
+        <translation>Quantité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weight</source>
+        <translation>Poids</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Regime</source>
+        <translation>Régime</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Vol (daily)</source>
+        <translation>Vol (quotid.)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Source</source>
+        <translation>Source</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Regime and volatility come from Quant › Markov&apos;s shared state, re-estimated in the background when older than the last trading day; prices from Yahoo quotes.</source>
+        <translation>Le régime et la volatilité viennent de l&apos;état partagé de Quant › Markov, réestimé en arrière-plan quand il date d&apos;avant le dernier jour de bourse ; prix des cotations Yahoo.</translation>
+    </message>
+    <message>
+        <location line="+108"/>
+        <source>Add a position.</source>
+        <translation>Ajoutez une position.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Loading quotes and a year of prices…</source>
+        <translation>Chargement des cotations et d&apos;un an de prix…</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>realized, 1 year</source>
+        <translation>réalisée, 1 an</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>%1× (standalone / portfolio VaR)</source>
+        <translation>%1× (VaR individuelles / VaR du portefeuille)</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Parametric (normal)</source>
+        <translation>Paramétrique (normale)</translation>
+    </message>
+    <message>
+        <location line="+56"/>
+        <source>Historical (1 year)</source>
+        <translation>Historique (1 an)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Filtered historical</source>
+        <translation>Historique filtré</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <location line="+93"/>
+        <source>Regime Monte Carlo</source>
+        <translation>Monte Carlo par régimes</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Historical</source>
+        <translation>Historique</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>estimating…</source>
+        <translation>estimation…</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>—</source>
+        <translation>—</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>realized</source>
+        <translation>réalisée</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <location line="+1"/>
+        <source>no regime</source>
+        <translation>pas de régime</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>VALUE</source>
+        <translation>VALEUR</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>No valued position.</source>
+        <translation>Aucune position valorisée.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Share of the value by regime: %1</source>
+        <translation>Part de la valeur par régime : %1</translation>
+    </message>
+</context>
+<context>
+    <name>quant::RegimeChart</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="+658"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+</context>
+<context>
+    <name>quant::RiskBetaView</name>
+    <message>
+        <location filename="../src/QuantPairViews.cpp" line="+11"/>
+        <source>1 Year</source>
+        <translation>1 an</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>2 Years</source>
+        <translation>2 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3 Years</source>
+        <translation>3 ans</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>5 Years</source>
+        <translation>5 ans</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Period:</source>
+        <translation>Période :</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Daily</source>
+        <translation>Quotidienne</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weekly</source>
+        <translation>Hebdomadaire</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Y (Stock):</source>
+        <translation>Y (action) :</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>X (Index):</source>
+        <translation>X (indice) :</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Linear Beta Analysis</source>
+        <translation>Analyse linéaire du bêta</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Y =</source>
+        <translation>Y =</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>X =</source>
+        <translation>X =</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Raw BETA</source>
+        <translation>BÊTA brut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Adjusted BETA</source>
+        <translation>BÊTA ajusté</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ALPHA (Intercept)</source>
+        <translation>ALPHA (constante)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>R^2 (Correlation^2)</source>
+        <translation>R² (corrélation²)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>R (Correlation)</source>
+        <translation>R (corrélation)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Std Dev of Y</source>
+        <translation>Écart-type de Y</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Std Dev of X</source>
+        <translation>Écart-type de X</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Std Error of ALPHA</source>
+        <translation>Erreur standard de l&apos;ALPHA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Std Error of BETA</source>
+        <translation>Erreur standard du BÊTA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>t-Test</source>
+        <translation>Test t</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Significance</source>
+        <translation>Significativité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of Points</source>
+        <translation>Nombre de points</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Slope of the stock&apos;s returns on the index&apos;s: how much it moves for a 1% move of the index.</source>
+        <translation>Pente des rendements de l&apos;action sur ceux de l&apos;indice : de combien elle bouge pour 1 % de variation de l&apos;indice.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Blume&apos;s adjustment toward 1: 0.67 × raw beta + 0.33, a better forecast of the next period&apos;s beta.</source>
+        <translation>Ajustement de Blume vers 1 : 0,67 × bêta brut + 0,33, meilleure prévision du bêta de la période suivante.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Average return of the stock per period when the index is flat.</source>
+        <translation>Rendement moyen de l&apos;action par période quand l&apos;indice est stable.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Share of the stock&apos;s variance explained by the index.</source>
+        <translation>Part de la variance de l&apos;action expliquée par l&apos;indice.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Pearson correlation of the returns.</source>
+        <translation>Corrélation de Pearson des rendements.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Standard deviation of the stock&apos;s returns per period.</source>
+        <translation>Écart-type des rendements de l&apos;action par période.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Standard deviation of the index&apos;s returns per period.</source>
+        <translation>Écart-type des rendements de l&apos;indice par période.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Standard error of the intercept.</source>
+        <translation>Erreur standard de la constante.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Standard error of the slope.</source>
+        <translation>Erreur standard de la pente.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Beta over its standard error: above 2 the beta is significantly different from zero.</source>
+        <translation>Bêta sur son erreur standard : au-dessus de 2, le bêta est significativement différent de zéro.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Two-sided p-value of the t-test: the chance of a slope this large if the true beta were zero.</source>
+        <translation>p-value bilatérale du test t : la probabilité d&apos;une pente aussi grande si le vrai bêta était nul.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Returns in the regression.</source>
+        <translation>Rendements dans la régression.</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Performance Comparison</source>
+        <translation>Comparaison des performances</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Performance</source>
+        <translation>Performance</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Spread</source>
+        <translation>Spread</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Enter two symbols.</source>
+        <translation>Saisissez deux symboles.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>no prices</source>
+        <translation>pas de prix</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Not enough overlapping prices (%1 days).</source>
+        <translation>Pas assez de prix communs (%1 jours).</translation>
+    </message>
+</context>
+<context>
+    <name>quant::ScatterChart</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="-407"/>
+        <location line="+13"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>quant::SignalsView</name>
+    <message>
+        <location filename="../src/QuantSignalsView.cpp" line="+97"/>
+        <source>Filter by symbol (e.g., AAPL, TSLA)…</source>
+        <translation>Filtrer par symbole (ex. AAPL, TSLA)…</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>ALL</source>
+        <translation>TOUS</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+128"/>
+        <source>STREAK</source>
+        <translation>SÉRIE</translation>
+    </message>
+    <message>
+        <location line="-128"/>
+        <location line="+142"/>
+        <source>GAP</source>
+        <translation>GAP</translation>
+    </message>
+    <message>
+        <location line="-140"/>
+        <source>ALL TF</source>
+        <translation>TOUTES UT</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>RANK</source>
+        <translation>RANG</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>SYMBOL</source>
+        <translation>SYMBOLE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TIMEFRAME</source>
+        <translation>UNITÉ DE TEMPS</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>INDICATOR</source>
+        <translation>INDICATEUR</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>SIGNAL</source>
+        <translation>SIGNAL</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>VALUE</source>
+        <translation>VALEUR</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>TIME</source>
+        <translation>HEURE</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>No signals match.</source>
+        <translation>Aucun signal ne correspond.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Scanning %1 symbols on 5 timeframes… 0/%2</source>
+        <translation>Balayage de %1 symboles sur 5 unités de temps… 0/%2</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Scanning… %1/%2</source>
+        <translation>Balayage… %1/%2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Scanned %1 symbols on 5 timeframes at %2 · RSI(14) beyond 30/70, streaks of %3+ candles, gaps</source>
+        <translation>%1 symboles balayés sur 5 unités de temps à %2 · RSI(14) au-delà de 30/70, séries de %3 chandeliers ou plus, gaps</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>RSI OVERBOUGHT</source>
+        <translation>RSI SURACHAT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>RSI OVERSOLD</source>
+        <translation>RSI SURVENTE</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>STREAK UP</source>
+        <translation>SÉRIE HAUSSIÈRE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>STREAK DOWN</source>
+        <translation>SÉRIE BAISSIÈRE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 candles</source>
+        <translation>%1 chandeliers</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>GAP UP</source>
+        <translation>GAP HAUSSIER</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>GAP DOWN</source>
+        <translation>GAP BAISSIER</translation>
+    </message>
+</context>
+<context>
+    <name>quant::SpreadChart</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="-220"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <location line="+28"/>
+        <source>Spread</source>
+        <translation>Spread</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>High</source>
+        <translation>Haut</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Low</source>
+        <translation>Bas</translation>
+    </message>
+</context>
+<context>
+    <name>quant::StackedAreaChart</name>
+    <message>
+        <location line="+576"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>quant::StateRefresher</name>
+    <message>
+        <location filename="../src/QuantMarketState.cpp" line="-76"/>
+        <source>%1: not enough prices</source>
+        <translation>%1 : pas assez de prix</translation>
+    </message>
+</context>
+<context>
+    <name>quant::StepChart</name>
+    <message>
+        <location filename="../src/QuantCharts.cpp" line="-169"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>quant::ZScoreChart</name>
+    <message>
+        <location line="-382"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>SELL (+2σ)</source>
+        <translation>VENDRE (+2σ)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>BUY (-2σ)</source>
+        <translation>ACHETER (-2σ)</translation>
+    </message>
+</context>
+<context>
+    <name>research::BarChart</name>
+    <message>
+        <location filename="../src/ResearchCharts.cpp" line="+158"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>research::Client</name>
+    <message>
+        <location filename="../src/ResearchData.cpp" line="-1575"/>
+        <source>This source is turned off in Sources</source>
+        <translation>Cette source est désactivée dans Sources</translation>
+    </message>
+    <message>
+        <location line="+93"/>
+        <source>Yahoo session refused: %1</source>
+        <translation>Session Yahoo refusée : %1</translation>
+    </message>
+    <message>
+        <location line="+91"/>
+        <source>No usable data in the answer</source>
+        <translation>Aucune donnée exploitable dans la réponse</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Empty answer</source>
+        <translation>Réponse vide</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Unknown symbol</source>
+        <translation>Symbole inconnu</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>No quotes</source>
+        <translation>Aucune cotation</translation>
+    </message>
+    <message>
+        <location line="+160"/>
+        <location line="+38"/>
+        <location line="+31"/>
+        <location line="+21"/>
+        <source>No observations</source>
+        <translation>Aucune observation</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <source>FRED refused the download (%1). A free FRED key, saved in Sources › Map · databases with a free key › FRED, makes it use FRED&apos;s API.</source>
+        <translation>FRED a refusé le téléchargement (%1). Une clé FRED gratuite, enregistrée dans Sources › Carte · bases avec clé gratuite › FRED, lui fait utiliser l&apos;API de FRED.</translation>
+    </message>
+    <message>
+        <location line="+160"/>
+        <source>No statements for this symbol</source>
+        <translation>Aucun état financier pour ce symbole</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Not an SEC filer</source>
+        <translation>Pas de dépôts auprès de la SEC</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+7"/>
+        <source>No SEC filings</source>
+        <translation>Aucun dépôt SEC</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <location line="+29"/>
+        <source>No prices</source>
+        <translation>Aucun prix</translation>
+    </message>
+    <message>
+        <location line="+73"/>
+        <source>No institutional holders reported</source>
+        <translation>Aucun détenteur institutionnel déclaré</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>No insider trades reported</source>
+        <translation>Aucune transaction d&apos;initié déclarée</translation>
+    </message>
+    <message>
+        <location line="-537"/>
+        <location line="+836"/>
+        <location line="+30"/>
+        <source>Empty screener</source>
+        <translation>Screener vide</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <location line="+25"/>
+        <source>No index members</source>
+        <translation>Aucun membre d&apos;indice</translation>
+    </message>
+</context>
+<context>
+    <name>research::CompareChartsView</name>
+    <message>
+        <location filename="../src/ResearchMarketViews.cpp" line="+408"/>
+        <source>Quarterly</source>
+        <translation>Trimestriel</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Annual</source>
+        <translation>Annuel</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric:</source>
+        <translation>Indicateur :</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Symbols:</source>
+        <translation>Symboles :</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Values</source>
+        <translation>Valeurs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>% Growth</source>
+        <translation>Croissance %</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Loading %1…</source>
+        <translation>Chargement de %1…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No figures for %1: %2</source>
+        <translation>Aucun chiffre pour %1 : %2</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Source: %1. %2 Currencies: %3.</source>
+        <translation>Source : %1. %2 Devises : %3.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Growth is against the same period a year before.</source>
+        <translation>La croissance est par rapport à la même période un an plus tôt.</translation>
+    </message>
+</context>
+<context>
+    <name>research::CompareView</name>
+    <message>
+        <location line="-446"/>
+        <source>Peers</source>
+        <translation>Pairs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sector</source>
+        <translation>Secteur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>General</source>
+        <translation>Général</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+171"/>
+        <source>Valuation</source>
+        <translation>Valorisation</translation>
+    </message>
+    <message>
+        <location line="-171"/>
+        <source>Earning</source>
+        <translation>Résultats</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Growth</source>
+        <translation>Croissance</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Margins</source>
+        <translation>Marges</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ownership</source>
+        <translation>Actionnariat</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Fair value, valuation and quant score are Deepwater&apos;s own estimates (see Ratings).</source>
+        <translation>La juste valeur, la valorisation et le score quant sont des estimations propres à Deepwater (voir Notations).</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fair Value · Valuation · Quant Score</source>
+        <translation>Juste valeur · Valorisation · Score quant</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>* Experimental. Fair value: Deepwater&apos;s discounted cash flow estimate; quant score: Deepwater&apos;s rating from valuation, profitability, financial health and momentum (see Ratings). Peers: Yahoo Finance&apos;s related symbols, then the largest companies of the same industry. Sectors and industries: Nasdaq&apos;s classification.</source>
+        <translation>* Expérimental. Juste valeur : l&apos;estimation de Deepwater par actualisation des flux de trésorerie ; score quant : la note de Deepwater d&apos;après la valorisation, la rentabilité, la santé financière et le momentum (voir Notations). Pairs : les symboles liés selon Yahoo Finance, puis les plus grandes sociétés du même secteur d&apos;activité. Secteurs et industries : classification du Nasdaq.</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <location line="+42"/>
+        <source>All Industries</source>
+        <translation>Toutes les industries</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Loading the listings…</source>
+        <translation>Chargement des cotations…</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>All Sectors</source>
+        <translation>Tous les secteurs</translation>
+    </message>
+    <message>
+        <location line="+90"/>
+        <source>Company</source>
+        <translation>Société</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Market Cap</source>
+        <translation>Capitalisation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Fair Value</source>
+        <translation>Juste valeur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Analyst Target</source>
+        <translation>Objectif analystes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quant Score</source>
+        <translation>Score quant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>P/E</source>
+        <translation>PER</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Fwd P/E</source>
+        <translation>PER prév.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>PEG</source>
+        <translation>PEG</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>P/S</source>
+        <translation>P/S</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>P/B</source>
+        <translation>P/B</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EV/EBITDA</source>
+        <translation>VE/EBITDA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EV/Sales</source>
+        <translation>VE/CA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revenue</source>
+        <translation>Chiffre d&apos;affaires</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Gross Profit</source>
+        <translation>Résultat brut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+2"/>
+        <source>EBITDA</source>
+        <translation>EBITDA</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Net Income</source>
+        <translation>Résultat net</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EPS (TTM)</source>
+        <translation>BPA (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EPS Fwd</source>
+        <translation>BPA prév.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Next Earnings</source>
+        <translation>Prochains résultats</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales Y/Y</source>
+        <translation>CA a/a</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EPS Y/Y</source>
+        <translation>BPA a/a</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EPS This Yr</source>
+        <translation>BPA cette année</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EPS Next Yr</source>
+        <translation>BPA année prochaine</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>52W Change</source>
+        <translation>Var. 52 sem.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>vs S&amp;P 500</source>
+        <translation>vs S&amp;P 500</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gross</source>
+        <translation>Brute</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Operating</source>
+        <translation>D&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Net</source>
+        <translation>Nette</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ROE</source>
+        <translation>ROE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ROA</source>
+        <translation>ROA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insiders</source>
+        <translation>Initiés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Institutions</source>
+        <translation>Institutionnels</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short % Float</source>
+        <translation>VAD % flottant</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Shares Out</source>
+        <translation>Actions en circ.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Float</source>
+        <translation>Flottant</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>loading…</source>
+        <translation>chargement…</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>%1 OVERVALUED</source>
+        <translation>%1 SURÉVALUÉ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 UNDERVALUED</source>
+        <translation>%1 SOUS-ÉVALUÉ</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <location line="+3"/>
+        <source>N/M</source>
+        <translation>N/S</translation>
+    </message>
+</context>
+<context>
+    <name>research::FinancialChartsView</name>
+    <message>
+        <location filename="../src/ResearchCompanyViews.cpp" line="-154"/>
+        <source>Annual</source>
+        <translation>Annuel</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Quarterly</source>
+        <translation>Trimestriel</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Income Statement</source>
+        <translation>Compte de résultat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Margin (%)</source>
+        <translation>Marge (%)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Earnings per Share (EPS)</source>
+        <translation>Bénéfice par action (BPA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash Flow</source>
+        <translation>Flux de trésorerie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Balance Sheet</source>
+        <translation>Bilan</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Loading the reported figures…</source>
+        <translation>Chargement des chiffres publiés…</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>No figures: %1</source>
+        <translation>Aucun chiffre : %1</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Revenue</source>
+        <translation>Chiffre d&apos;affaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gross Profit</source>
+        <translation>Résultat brut</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operating Income</source>
+        <translation>Résultat d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Income</source>
+        <translation>Résultat net</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Gross Margin</source>
+        <translation>Marge brute</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operating Margin</source>
+        <translation>Marge d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Margin</source>
+        <translation>Marge nette</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>EPS (diluted)</source>
+        <translation>BPA (dilué)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operating Cash Flow</source>
+        <translation>Flux de trésorerie d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CapEx</source>
+        <translation>Investissements (CapEx)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free Cash Flow</source>
+        <translation>Flux de trésorerie disponible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Assets</source>
+        <translation>Total de l&apos;actif</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Liabilities</source>
+        <translation>Total des passifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Equity</source>
+        <translation>Fonds propres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Debt</source>
+        <translation>Dette totale</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Source: SEC EDGAR, XBRL figures as filed in 10-K / 10-Q reports (fourth quarters are the year less the first nine months). Years are fiscal years, named after the year they end in; quarters by the calendar quarter they end in.</source>
+        <translation>Source : SEC EDGAR, chiffres XBRL tels que déposés dans les rapports 10-K / 10-Q (les quatrièmes trimestres sont l&apos;année moins les neuf premiers mois). Les années sont des exercices, nommés d&apos;après l&apos;année où ils se terminent ; les trimestres d&apos;après le trimestre civil où ils se terminent.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Source: Yahoo Finance (the last four years and five quarters only).</source>
+        <translation>Source : Yahoo Finance (les quatre dernières années et cinq derniers trimestres seulement).</translation>
+    </message>
+</context>
+<context>
+    <name>research::FinancialsView</name>
+    <message>
+        <location line="-179"/>
+        <source>Income Statement</source>
+        <translation>Compte de résultat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Balance Sheet</source>
+        <translation>Bilan</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cash Flow</source>
+        <translation>Flux de trésorerie</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Annual</source>
+        <translation>Annuel</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Quarterly</source>
+        <translation>Trimestriel</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Metric</source>
+        <translation>Indicateur</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>No statements: %1</source>
+        <translation>Aucun état financier : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Source: Yahoo Finance (as reported, %1)</source>
+        <translation>Source : Yahoo Finance (tel que publié, %1)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>METRIC</source>
+        <translation>INDICATEUR</translation>
+    </message>
+</context>
+<context>
+    <name>research::Gauge</name>
+    <message>
+        <location filename="../src/ResearchCharts.cpp" line="+478"/>
+        <source>Strong
+Sell</source>
+        <translation>Vente
+forte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sell</source>
+        <translation>Vente</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hold</source>
+        <translation>Conserver</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Buy</source>
+        <translation>Achat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Strong
+Buy</source>
+        <translation>Achat
+fort</translation>
+    </message>
+</context>
+<context>
+    <name>research::IcsView</name>
+    <message>
+        <location filename="../src/ResearchMarketViews.cpp" line="+623"/>
+        <source>Classification Hierarchy</source>
+        <translation>Hiérarchie de la classification</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Count</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <source>Search for an industry…</source>
+        <translation type="vanished">Rechercher une industrie…</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Industrial Classification System - ICS</source>
+        <translation>Classification industrielle - ICS</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Total Sectors</source>
+        <translation>Secteurs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Total Companies</source>
+        <translation>Sociétés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+227"/>
+        <source>Total Market Cap</source>
+        <translation>Capitalisation totale</translation>
+    </message>
+    <message>
+        <location line="-213"/>
+        <source>Select an industry from the hierarchy to view member companies.</source>
+        <translation>Sélectionnez une industrie dans la hiérarchie pour voir ses sociétés.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Aggregate Statistics</source>
+        <translation>Statistiques agrégées</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Member Companies</source>
+        <translation>Sociétés membres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Company Name</source>
+        <translation>Société</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Country</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mkt Cap</source>
+        <translation>Capi.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Classification, market caps and volumes: Nasdaq stock screener (every US listing, %1 stocks); prices and changes: Yahoo Finance&apos;s last two daily closes.</source>
+        <translation>Classification, capitalisations et volumes : screener d&apos;actions du Nasdaq (toutes les cotations américaines, %1 actions) ; prix et variations : les deux dernières clôtures quotidiennes de Yahoo Finance.</translation>
+    </message>
+    <message>
+        <location line="+165"/>
+        <source>Last Session (cap-weighted)</source>
+        <translation>Dernière séance (pondérée par la capitalisation)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Of the %1 largest members</source>
+        <translation>Sur les %1 plus grands membres</translation>
+    </message>
+    <message>
+        <location line="-202"/>
+        <source>Volume</source>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location line="-59"/>
+        <source>Search for an industry or a company…</source>
+        <translation>Rechercher une industrie ou une société…</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Last Session</source>
+        <translation>Dernière séance</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Loading every US listing…</source>
+        <translation>Chargement de toutes les cotations américaines…</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+1"/>
+        <location line="+97"/>
+        <location line="+1"/>
+        <source>Unclassified</source>
+        <translation>Non classé</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Filter By &lt;span style=&apos;color:%1&apos;&gt;None&lt;/span&gt;</source>
+        <translation>Filtre : &lt;span style=&apos;color:%1&apos;&gt;aucun&lt;/span&gt;</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Filter By &lt;span style=&apos;color:%1&apos;&gt;%2&lt;/span&gt;</source>
+        <translation>Filtre : &lt;span style=&apos;color:%1&apos;&gt;%2&lt;/span&gt;</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Num Companies</source>
+        <translation>Nombre de sociétés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Median Market Cap</source>
+        <translation>Capitalisation médiane</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Advancing / Declining</source>
+        <translation>En hausse / en baisse</translation>
+    </message>
+</context>
+<context>
+    <name>research::KeyMetricsView</name>
+    <message>
+        <location filename="../src/ResearchCompanyViews.cpp" line="-523"/>
+        <location line="+170"/>
+        <source>Show more</source>
+        <translation>Voir plus</translation>
+    </message>
+    <message>
+        <location line="-156"/>
+        <source>GENERAL INFO</source>
+        <translation>INFORMATIONS GÉNÉRALES</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Employee Evolution</source>
+        <translation>Évolution de l&apos;effectif</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Financial Overview</source>
+        <translation>Aperçu financier</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Loading %1…</source>
+        <translation>Chargement de %1…</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Couldn&apos;t load %1: %2</source>
+        <translation>Impossible de charger %1 : %2</translation>
+    </message>
+    <message>
+        <location line="+83"/>
+        <source>CEO: %1</source>
+        <translation>PDG : %1</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Show less</source>
+        <translation>Voir moins</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Website</source>
+        <translation>Site web</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>First trade: %1</source>
+        <translation>Première cotation : %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Employees</source>
+        <translation>%1 employés</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+28"/>
+        <location line="+4"/>
+        <location line="+86"/>
+        <source>Market Cap</source>
+        <translation>Capitalisation</translation>
+    </message>
+    <message>
+        <location line="-117"/>
+        <location line="+118"/>
+        <source>Enterprise Value</source>
+        <translation>Valeur d&apos;entreprise</translation>
+    </message>
+    <message>
+        <location line="-117"/>
+        <location line="+118"/>
+        <source>P/E (TTM)</source>
+        <translation>PER (12 mois)</translation>
+    </message>
+    <message>
+        <location line="-116"/>
+        <location line="+117"/>
+        <source>Forward P/E</source>
+        <translation>PER prévisionnel</translation>
+    </message>
+    <message>
+        <location line="-116"/>
+        <location line="+201"/>
+        <source>Shares Outstanding</source>
+        <translation>Actions en circulation</translation>
+    </message>
+    <message>
+        <location line="-200"/>
+        <location line="+201"/>
+        <source>Shares Float</source>
+        <translation>Flottant</translation>
+    </message>
+    <message>
+        <location line="-200"/>
+        <source>Indexes</source>
+        <translation>Indices</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>None</source>
+        <translation>Aucun</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+92"/>
+        <source>Employees</source>
+        <translation>Employés</translation>
+    </message>
+    <message>
+        <location line="-94"/>
+        <source>EMPLOYEE EVOLUTION · WIKIDATA%1</source>
+        <translation>ÉVOLUTION DE L&apos;EFFECTIF · WIKIDATA%1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>   (today %1 · Yahoo Finance)</source>
+        <translation>   (aujourd&apos;hui %1 · Yahoo Finance)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Head counts recorded on Wikidata, by year; years without a record are missing</source>
+        <translation>Effectifs enregistrés sur Wikidata, par année ; les années sans enregistrement manquent</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Revenue</source>
+        <translation>Chiffre d&apos;affaires</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+110"/>
+        <source>Net Income</source>
+        <translation>Résultat net</translation>
+    </message>
+    <message>
+        <location line="-107"/>
+        <source>Revenue (TTM)</source>
+        <translation>Chiffre d&apos;affaires (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Income (TTM)</source>
+        <translation>Résultat net (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Balance sheet of %1 (Yahoo Finance)</source>
+        <translation>Bilan de %1 (Yahoo Finance)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Market cap + total debt − cash and short-term investments (%1)</source>
+        <translation>Capitalisation + dette totale − trésorerie et placements à court terme (%1)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Company Info</source>
+        <translation>Informations sur la société</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sector</source>
+        <translation>Secteur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Industry</source>
+        <translation>Industrie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Country</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CEO</source>
+        <translation>PDG</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>First trade</source>
+        <translation>Première cotation</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Key Stats</source>
+        <translation>Statistiques clés</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Beta</source>
+        <translation>Bêta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>52 Week High</source>
+        <translation>Plus haut 52 sem.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>52 Week Low</source>
+        <translation>Plus bas 52 sem.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Valuation Ratios</source>
+        <translation>Ratios de valorisation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PEG</source>
+        <translation>PEG</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>P/S (Price to Sales)</source>
+        <translation>P/S (cours / chiffre d&apos;affaires)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>P/B (Price to Book)</source>
+        <translation>P/B (cours / valeur comptable)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>P/C (Price to Cash)</source>
+        <translation>P/C (cours / trésorerie)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>P/CF (Price to Cash Flow)</source>
+        <translation>P/CF (cours / flux de trésorerie)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>P/FCF (Price to FCF)</source>
+        <translation>P/FCF (cours / FCF)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EV/EBIT</source>
+        <translation>VE/EBIT</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EV/EBITDA</source>
+        <translation>VE/EBITDA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EV/Sales</source>
+        <translation>VE/CA</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Earnings (TTM)</source>
+        <translation>Résultats (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next Earnings</source>
+        <translation>Prochains résultats</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revenue/Sales</source>
+        <translation>Chiffre d&apos;affaires</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Gross Profit</source>
+        <translation>Résultat brut</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operating Income</source>
+        <translation>Résultat d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EBITDA</source>
+        <translation>EBITDA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Free Cash Flow</source>
+        <translation>Flux de trésorerie disponible</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Per Share</source>
+        <translation>Par action</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS (TTM)</source>
+        <translation>BPA (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS Forward</source>
+        <translation>BPA prévisionnel</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Book Value per Share</source>
+        <translation>Valeur comptable par action</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash per Share</source>
+        <translation>Trésorerie par action</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>FCF per Share</source>
+        <translation>FCF par action</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Revenue per Share</source>
+        <translation>CA par action</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>TBVPS</source>
+        <translation>VCTPA</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tangible book value per share. %1</source>
+        <translation>Valeur comptable tangible par action. %1</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Levered FCF (TTM)</source>
+        <translation>FCF à effet de levier (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>EBIT after tax / invested capital</source>
+        <translation>EBIT après impôt / capital investi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EBIT / (total assets − current liabilities)</source>
+        <translation>EBIT / (total de l&apos;actif − passifs courants)</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>From the yearly figures (%1); per-share figures adjusted for stock splits</source>
+        <translation>D&apos;après les chiffres annuels (%1) ; chiffres par action ajustés des divisions d&apos;actions</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>Operating cash flow over the last twelve months / current liabilities (%1)</source>
+        <translation>Flux de trésorerie d&apos;exploitation des douze derniers mois / passifs courants (%1)</translation>
+    </message>
+    <message>
+        <location line="-117"/>
+        <source>Balance Sheet</source>
+        <translation>Bilan</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Balance Sheet · %1</source>
+        <translation>Bilan · %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Assets</source>
+        <translation>Total de l&apos;actif</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Liabilities</source>
+        <translation>Total des passifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equity</source>
+        <translation>Fonds propres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Total Debt</source>
+        <translation>Dette totale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Working Capital</source>
+        <translation>Fonds de roulement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash &amp; ST Investments</source>
+        <translation>Trésorerie et placements CT</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash Only</source>
+        <translation>Trésorerie seule</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Margins</source>
+        <translation>Marges</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gross Margin</source>
+        <translation>Marge brute</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Operating Margin</source>
+        <translation>Marge d&apos;exploitation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net/Profit Margin</source>
+        <translation>Marge nette</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EBITDA Margin</source>
+        <translation>Marge d&apos;EBITDA</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 · fiscal year ending %2</source>
+        <translation>%1 · exercice clos le %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 · no fiscal year has all the figures</source>
+        <translation>%1 · aucun exercice n&apos;a tous les chiffres</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Profitability</source>
+        <translation>Rentabilité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ROE</source>
+        <translation>ROE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ROA</source>
+        <translation>ROA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ROIC</source>
+        <translation>ROIC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ROCE</source>
+        <translation>ROCE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Return on Sales</source>
+        <translation>Rentabilité des ventes</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Debt/Leverage</source>
+        <translation>Dette / levier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Debt to Equity</source>
+        <translation>Dette / fonds propres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LT Debt to Equity</source>
+        <translation>Dette LT / fonds propres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Net Debt/EBITDA</source>
+        <translation>Dette nette / EBITDA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Debt − cash and short-term investments (%1) / EBITDA over the last twelve months</source>
+        <translation>Dette − trésorerie et placements à court terme (%1) / EBITDA des douze derniers mois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Debt/Assets</source>
+        <translation>Dette / actifs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LT Debt/Capital</source>
+        <translation>Dette LT / capitaux</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Dividends</source>
+        <translation>Dividendes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividend (TTM)</source>
+        <translation>Dividende (12 mois)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividend Yield</source>
+        <translation>Rendement du dividende</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividend Rate (fwd)</source>
+        <translation>Dividende annuel (prév.)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Payout Ratio</source>
+        <translation>Taux de distribution</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ex-Dividend Date</source>
+        <translation>Date de détachement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividend Growth 3Y/5Y</source>
+        <translation>Croissance du dividende 3 / 5 ans</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Shares &amp; Ownership</source>
+        <translation>Actions et actionnariat</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Short % of Float</source>
+        <translation>% du flottant vendu à découvert</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Insider Own %</source>
+        <translation>% détenu par les initiés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Institutional Own %</source>
+        <translation>% détenu par les institutionnels</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Growth (CAGR)</source>
+        <translation>Croissance (TCAM)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS CAGR 3Y</source>
+        <translation>TCAM du BPA 3 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS CAGR 5Y</source>
+        <translation>TCAM du BPA 5 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales CAGR 3Y</source>
+        <translation>TCAM du CA 3 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales CAGR 5Y</source>
+        <translation>TCAM du CA 5 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividend CAGR 3Y</source>
+        <translation>TCAM du dividende 3 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Dividend CAGR 5Y</source>
+        <translation>TCAM du dividende 5 ans</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Growth YoY/QoQ</source>
+        <translation>Croissance a/a et t/t</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales Y/Y</source>
+        <translation>CA a/a</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last quarter against the same quarter a year before</source>
+        <translation>Dernier trimestre contre le même trimestre un an plus tôt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS Y/Y</source>
+        <translation>BPA a/a</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales Q/Q</source>
+        <translation>CA t/t</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS Q/Q</source>
+        <translation>BPA t/t</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Fourth quarters are the year less the first nine months: approximate for EPS</source>
+        <translation>Les quatrièmes trimestres sont l&apos;année moins les neuf premiers mois : approximatif pour le BPA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales 3Y/5Y Growth</source>
+        <translation>Croissance du CA 3 / 5 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS 3Y/5Y Growth</source>
+        <translation>Croissance du BPA 3 / 5 ans</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sales QoQ Avg</source>
+        <translation>CA t/t moyen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Mean of the last four quarter-on-quarter changes</source>
+        <translation>Moyenne des quatre dernières variations trimestre sur trimestre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>EPS QoQ Avg</source>
+        <translation>BPA t/t moyen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Efficiency</source>
+        <translation>Efficacité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Asset Turnover</source>
+        <translation>Rotation des actifs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Revenue / total assets</source>
+        <translation>Chiffre d&apos;affaires / total de l&apos;actif</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Inventory Turnover</source>
+        <translation>Rotation des stocks</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cost of revenue / inventory</source>
+        <translation>Coût des ventes / stocks</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Receivables Turnover</source>
+        <translation>Rotation des créances</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Revenue / receivables</source>
+        <translation>Chiffre d&apos;affaires / créances</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Interest Coverage</source>
+        <translation>Couverture des intérêts</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>EBIT / interest expense</source>
+        <translation>EBIT / charges d&apos;intérêts</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Liquidity</source>
+        <translation>Liquidité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current Ratio</source>
+        <translation>Ratio de liquidité générale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quick Ratio</source>
+        <translation>Ratio de liquidité réduite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(Cash and short-term investments + receivables) / current liabilities. %1</source>
+        <translation>(Trésorerie et placements à court terme + créances) / passifs courants. %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cash Ratio</source>
+        <translation>Ratio de liquidité immédiate</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Op. CF Ratio</source>
+        <translation>Ratio de CF d&apos;exploitation</translation>
+    </message>
+</context>
+<context>
+    <name>research::LineChart</name>
+    <message>
+        <location filename="../src/ResearchCharts.cpp" line="-334"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>research::OwnershipView</name>
+    <message>
+        <location filename="../src/ResearchCompanyViews.cpp" line="+263"/>
+        <source>Ownership Breakdown</source>
+        <translation>Répartition de l&apos;actionnariat</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Institutions</source>
+        <translation>Institutionnels</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Individual Insiders</source>
+        <translation>Initiés (personnes physiques)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>General Public</source>
+        <translation>Public</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Top 25 Shareholders</source>
+        <translation>25 premiers actionnaires</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>% Own</source>
+        <translation>% détenu</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Holder</source>
+        <translation>Détenteur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Reported</source>
+        <translation>Déclaré le</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+12"/>
+        <source>Shares</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <location line="+12"/>
+        <source>Value</source>
+        <translation>Valeur</translation>
+    </message>
+    <message>
+        <location line="-12"/>
+        <source>Change</source>
+        <translation>Variation</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Insider Trading Volume</source>
+        <translation>Volume des transactions d&apos;initiés</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Recent Transactions</source>
+        <translation>Transactions récentes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Relationship</source>
+        <translation>Fonction</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Action</source>
+        <translation>Opération</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>%1 shares</source>
+        <translation>%1 actions</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>reported %1</source>
+        <translation>déclaré le %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>reported between %1 and %2 (the total mixes these dates)</source>
+        <translation>déclaré entre le %1 et le %2 (le total mélange ces dates)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Top %1 institutional holders own %2 of the company, %3 · %4 institutions file a 13F for it · value at today&apos;s price · source: Nasdaq (13F filings)</source>
+        <translation>Les %1 premiers détenteurs institutionnels possèdent %2 de la société, %3 · %4 institutions déposent un 13F pour elle · valeur au cours du jour · source : Nasdaq (dépôts 13F)</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Showing %1 transactions · source: Nasdaq (SEC Form 4 filings) · the quarterly volumes above count open-market sales and purchases only</source>
+        <translation>%1 transactions affichées · source : Nasdaq (formulaires 4 de la SEC) · les volumes trimestriels ci-dessus ne comptent que les ventes et achats sur le marché</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>SELL</source>
+        <translation>VENTE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>BUY</source>
+        <translation>ACHAT</translation>
+    </message>
+</context>
+<context>
+    <name>research::RatingScale</name>
+    <message>
+        <location filename="../src/ResearchCharts.cpp" line="+434"/>
+        <source>Strong Sell</source>
+        <translation>Vente forte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sell</source>
+        <translation>Vente</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hold</source>
+        <translation>Conserver</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Buy</source>
+        <translation>Achat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Strong Buy</source>
+        <translation>Achat fort</translation>
+    </message>
+</context>
+<context>
+    <name>research::RatingsView</name>
+    <message>
+        <location filename="../src/ResearchCompanyViews.cpp" line="+67"/>
+        <source>Analyst Recommendation</source>
+        <translation>Recommandation des analystes</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Average Analyst Rating</source>
+        <translation>Note moyenne des analystes</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Valuation &amp; Ratings</source>
+        <translation>Valorisation et notations</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Intrinsic value: a two-stage discounted cash flow (see the value&apos;s tooltip).</source>
+        <translation>Valeur intrinsèque : actualisation des flux de trésorerie en deux étapes (voir l&apos;infobulle de la valeur).</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Analysts Target Price</source>
+        <translation>Objectif de cours des analystes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>12 Month Consensus</source>
+        <translation>Consensus à 12 mois</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Factor Grades</source>
+        <translation>Notes par facteur</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Factor grades: letters from fixed thresholds, the same for every sector (banks, utilities and real estate come out worse by construction).</source>
+        <translation>Notes par facteur : des lettres d&apos;après des seuils fixes, les mêmes pour tous les secteurs (banques, services aux collectivités et immobilier ressortent moins bien par construction).</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Valuation</source>
+        <translation>Valorisation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Profitability</source>
+        <translation>Rentabilité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Financial Health</source>
+        <translation>Santé financière</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Quant Rating</source>
+        <translation>Note quant</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Quant rating: weights chosen by hand (valuation and profitability 30 % each, health 20 %, momentum and revisions 20 %), never tested on past prices.</source>
+        <translation>Note quant : pondérations choisies à la main (valorisation et rentabilité 30 % chacune, santé 20 %, momentum et révisions 20 %), jamais testées sur les cours passés.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>12 Month Price Forecast</source>
+        <translation>Prévision de cours à 12 mois</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Highest Target</source>
+        <translation>Objectif le plus haut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Average Target</source>
+        <translation>Objectif moyen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Lowest Target</source>
+        <translation>Objectif le plus bas</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Analyst Recommendations History</source>
+        <translation>Historique des recommandations</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rebuilt from each firm&apos;s rating changes, sorted into five buckets by Deepwater; it doesn&apos;t match Yahoo&apos;s own monthly counts exactly.</source>
+        <translation>Reconstitué d&apos;après les changements de note de chaque maison, répartis en cinq catégories par Deepwater ; il ne correspond pas exactement aux décomptes mensuels de Yahoo.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Max</source>
+        <translation>Max</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Recent Rating Changes</source>
+        <translation>Changements de note récents</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Action</source>
+        <translation>Action</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Analyst</source>
+        <translation>Analyste</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rating Change</source>
+        <translation>Changement de note</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Price Target</source>
+        <translation>Objectif de cours</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Based on %1 analysts this month · Yahoo Finance</source>
+        <translation>D&apos;après %1 analystes ce mois-ci · Yahoo Finance</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No analyst coverage</source>
+        <translation>Aucun suivi d&apos;analyste</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+187"/>
+        <location line="+1"/>
+        <source>Strong Buy</source>
+        <translation>Achat fort</translation>
+    </message>
+    <message>
+        <location line="-188"/>
+        <location line="+186"/>
+        <location line="+2"/>
+        <source>Buy</source>
+        <translation>Achat</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <location line="+185"/>
+        <location line="+2"/>
+        <source>Hold</source>
+        <translation>Conserver</translation>
+    </message>
+    <message>
+        <location line="-187"/>
+        <location line="+184"/>
+        <location line="+3"/>
+        <source>Sell</source>
+        <translation>Vente</translation>
+    </message>
+    <message>
+        <location line="-186"/>
+        <location line="+183"/>
+        <location line="+3"/>
+        <source>Strong Sell</source>
+        <translation>Vente forte</translation>
+    </message>
+    <message>
+        <location line="-180"/>
+        <source>%1 analysts&apos; mean recommendation (Yahoo Finance)</source>
+        <translation>Recommandation moyenne de %1 analystes (Yahoo Finance)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>INTRINSIC VALUE  %1</source>
+        <translation>VALEUR INTRINSÈQUE  %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CURRENT PRICE  %1</source>
+        <translation>COURS ACTUEL  %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 OVERVALUED</source>
+        <translation>%1 SURÉVALUÉ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 UNDERVALUED</source>
+        <translation>%1 SOUS-ÉVALUÉ</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>NOT MEANINGFUL</source>
+        <translation>NON SIGNIFICATIF</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Upside to the intrinsic value, forward P/E, PEG, EV/EBITDA</source>
+        <translation>Potentiel vers la valeur intrinsèque, PER prévisionnel, PEG, VE/EBITDA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Gross, operating and net margins, ROE, ROA</source>
+        <translation>Marges brute, d&apos;exploitation et nette, ROE, ROA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Current and quick ratios, debt/equity, net cash against the market cap, free cash flow/debt</source>
+        <translation>Ratios de liquidité générale et réduite, dette / fonds propres, trésorerie nette rapportée à la capitalisation, flux de trésorerie disponible / dette</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Deepwater&apos;s own scoring on fixed thresholds, from Yahoo Finance figures.</source>
+        <translation>Notation propre à Deepwater sur des seuils fixes, d&apos;après les chiffres de Yahoo Finance.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Deepwater&apos;s quant score %1 / 5: valuation and profitability 30 % each, financial health 20 %, momentum against the S&amp;P 500 and earnings revisions 20 %.</source>
+        <translation>Score quant de Deepwater %1 / 5 : valorisation et rentabilité 30 % chacune, santé financière 20 %, momentum face au S&amp;P 500 et révisions de résultats 20 %.</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>High Forecast</source>
+        <translation>Prévision haute</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Average Forecast</source>
+        <translation>Prévision moyenne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Low Forecast</source>
+        <translation>Prévision basse</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>UPGRADE</source>
+        <translation>RELÈVEMENT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>DOWNGRADE</source>
+        <translation>ABAISSEMENT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>INITIATE</source>
+        <translation>INITIATION</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>REITERATE</source>
+        <translation>RÉITÉRATION</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>MAINTAIN</source>
+        <translation>MAINTIEN</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source> (from %1)</source>
+        <translation> (depuis %1)</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>Avg Rating</source>
+        <translation>Note moyenne</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Based on %1 firms rating the stock in the last 12 months. Each month counts every firm&apos;s last rating of the twelve months before it, from the rating changes Yahoo Finance lists.</source>
+        <translation>D&apos;après %1 maisons ayant noté l&apos;action au cours des 12 derniers mois. Chaque mois compte la dernière note de chaque maison sur les douze mois précédents, d&apos;après les changements de note listés par Yahoo Finance.</translation>
+    </message>
+</context>
+<context>
+    <name>research::SectorsView</name>
+    <message>
+        <location filename="../src/ResearchMarketViews.cpp" line="-553"/>
+        <source>Percent Price Change by GICS Sector</source>
+        <translation>Variation des cours par secteur GICS</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Today</source>
+        <translation>Aujourd&apos;hui</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>NAME</source>
+        <translation>NOM</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%CHG</source>
+        <translation>% VAR.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>WEIGHT</source>
+        <translation>POIDS</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Loading index members and prices…</source>
+        <translation>Chargement des membres de l&apos;indice et des prix…</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Couldn&apos;t load the index members: %1</source>
+        <translation>Impossible de charger les membres de l&apos;indice : %1</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Loading the daily closes of %1 stocks…</source>
+        <translation>Chargement des clôtures quotidiennes de %1 actions…</translation>
+    </message>
+    <message>
+        <location line="+80"/>
+        <source>official index</source>
+        <translation>indice officiel</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>recomputed from members</source>
+        <translation>recalculé à partir des membres</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>%1 members (%2), weighted by %3; change %4. Members: Wikipedia (S&amp;P 500 and Dow, with their GICS sector) and Nasdaq (Nasdaq-100; members outside the S&amp;P 500 get the nearest GICS sector from Nasdaq&apos;s classification). Prices: Yahoo Finance daily closes; market caps: Nasdaq&apos;s screener. The index&apos;s official change differs a little: it weighs by free float. Click a sector to list its members, a member to open it.</source>
+        <translation>%1 membres (%2), pondérés par %3 ; variation %4. Membres : Wikipédia (S&amp;P 500 et Dow, avec leur secteur GICS) et Nasdaq (Nasdaq-100 ; les membres hors S&amp;P 500 reçoivent le secteur GICS le plus proche d&apos;après la classification du Nasdaq). Prix : clôtures quotidiennes de Yahoo Finance ; capitalisations : screener du Nasdaq. La variation officielle de l&apos;indice diffère un peu : elle pondère par le flottant. Cliquez un secteur pour lister ses membres, un membre pour l&apos;ouvrir.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>market capitalisation, share classes splitting their company&apos;s</source>
+        <translation>la capitalisation boursière, les classes d&apos;actions se partageant celle de leur société</translation>
+    </message>
+    <message>
+        <location line="-40"/>
+        <source>BY GICS</source>
+        <translation>PAR SECTEUR GICS</translation>
+    </message>
+    <message>
+        <location line="-317"/>
+        <source>Information Technology</source>
+        <translation>Technologies de l&apos;information</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Financials</source>
+        <translation>Finance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Health Care</source>
+        <translation>Santé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer Discretionary</source>
+        <translation>Consommation discrétionnaire</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Consumer Staples</source>
+        <translation>Consommation de base</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Industrials</source>
+        <translation>Industrie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Energy</source>
+        <translation>Énergie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Materials</source>
+        <translation>Matériaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Communication Services</source>
+        <translation>Services de communication</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Utilities</source>
+        <translation>Services publics</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Real Estate</source>
+        <translation>Immobilier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other</source>
+        <translation>Autre</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Technology</source>
+        <translation>Technologie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cons Discr</source>
+        <translation>Conso discr.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cons Staples</source>
+        <translation>Conso base</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Comm Svcs</source>
+        <translation>Services comm.</translation>
+    </message>
+    <message>
+        <location line="+325"/>
+        <source>today</source>
+        <translation>du jour</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>over a week</source>
+        <translation>sur une semaine</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>over a month</source>
+        <translation>sur un mois</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>over three months</source>
+        <translation>sur trois mois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>since the start of the year</source>
+        <translation>depuis le début de l&apos;année</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>price, like the index</source>
+        <translation>le prix, comme l&apos;indice</translation>
+    </message>
+</context>
+<context>
+    <name>research::SplcView</name>
+    <message>
+        <location line="+364"/>
+        <source>PRODUCTS</source>
+        <translation>PRODUITS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Loading the links recorded on Wikidata…</source>
+        <translation>Chargement des liens enregistrés sur Wikidata…</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Not listed</source>
+        <translation>Non coté</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Products: %1%2</source>
+        <translation>Produits : %1%2</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source> and %1 more</source>
+        <translation> et %1 autres</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>No Wikidata item lists the ticker %1, or none of its products names a maker.</source>
+        <translation>Aucun élément Wikidata ne mentionne le symbole %1, ou aucun de ses produits ne nomme de fabricant.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wikidata couldn&apos;t be reached: %1</source>
+        <translation>Wikidata est injoignable : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Wikidata records no manufacturer for this company&apos;s products, and no product it makes for others.</source>
+        <translation>Wikidata n&apos;enregistre aucun fabricant pour les produits de cette société, ni aucun produit qu&apos;elle fabrique pour d&apos;autres.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Source: Wikidata, through products: suppliers make the company&apos;s products (property P176, manufacturer); customers sell products it makes (P1716 brand, P178 developer). The number is how many products link them, not a share of revenue: Wikidata is edited by volunteers, its coverage is uneven and no revenue figure is recorded. Prices: Yahoo Finance. Click a listed company to open it.</source>
+        <translation>Source : Wikidata, via les produits : les fournisseurs fabriquent les produits de la société (propriété P176, fabricant) ; les clients vendent des produits qu&apos;elle fabrique (P1716 marque, P178 développeur). Le nombre est celui des produits qui les relient, pas une part du chiffre d&apos;affaires : Wikidata est édité par des bénévoles, sa couverture est inégale et aucun chiffre d&apos;affaires n&apos;y est enregistré. Prix : Yahoo Finance. Cliquez une société listée pour l&apos;ouvrir.</translation>
+    </message>
+</context>
+<context>
+    <name>research::StackedBarChart</name>
+    <message>
+        <location filename="../src/ResearchCharts.cpp" line="+76"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Number of Analysts</source>
+        <translation>Nombre d&apos;analystes</translation>
+    </message>
+</context>
+<context>
+    <name>research::SupplyChainGraph</name>
+    <message>
+        <location line="+131"/>
+        <source>SUPPLY CHAIN</source>
+        <translation>CHAÎNE D&apos;APPROVISIONNEMENT</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 Related Companies</source>
+        <translation>%1 sociétés liées</translation>
+    </message>
+    <message>
+        <location line="+68"/>
+        <source>SUPPLIERS</source>
+        <translation>FOURNISSEURS</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>CUSTOMERS</source>
+        <translation>CLIENTS</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Not listed on an exchange Yahoo Finance carries</source>
+        <translation>Non coté sur une bourse couverte par Yahoo Finance</translation>
+    </message>
+    <message>
+        <location line="-155"/>
+        <source>REVENUE IMPACT</source>
+        <translation>IMPACT SUR LE CA</translation>
+    </message>
+    <message>
+        <location line="+144"/>
+        <source>supplier</source>
+        <translation>fournisseur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>customer</source>
+        <translation>client</translation>
+    </message>
+</context>
+<context>
+    <name>supply</name>
+    <message>
+        <location filename="../src/SupplyChain.cpp" line="+150"/>
+        <source>Incomplete download</source>
+        <translation>Téléchargement incomplet</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Unreadable USDA file</source>
+        <translation>Fichier de l’USDA illisible</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <location line="+23"/>
+        <source>No yields in the download</source>
+        <translation>Aucun rendement dans le téléchargement</translation>
+    </message>
+    <message>
+        <location line="+216"/>
+        <source>Unreadable JODI file</source>
+        <translation>Fichier JODI illisible</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <location line="+24"/>
+        <source>No crude stocks in the download</source>
+        <translation>Aucun stock de brut dans le téléchargement</translation>
+    </message>
+</context>
+<context>
+    <name>supply::EiaOilStocks</name>
+    <message>
+        <location line="+96"/>
+        <source>A free EIA key is needed (Sources)</source>
+        <translation>Une clé EIA gratuite est nécessaire (Sources)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>No stocks in the answer</source>
+        <translation>Aucun stock dans la réponse</translation>
+    </message>
+</context>
+<context>
+    <name>supply::FreightIndices</name>
+    <message>
+        <location line="+63"/>
+        <source>Truck tonnage</source>
+        <translation>Tonnage routier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>American Trucking Associations, index 2015 = 100, seasonally adjusted</source>
+        <translation>American Trucking Associations, indice 2015 = 100, corrigé des variations saisonnières</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Freight shipments</source>
+        <translation>Expéditions de fret</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cass Freight Index, shipments, index January 1990 = 1</source>
+        <translation>Cass Freight Index, expéditions, indice janvier 1990 = 1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Freight transportation services</source>
+        <translation>Services de transport de fret</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>US Bureau of Transportation Statistics, index 2000 = 100</source>
+        <translation>Bureau des statistiques des transports des États-Unis, indice 2000 = 100</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deep sea freight prices</source>
+        <translation>Prix du fret maritime hauturier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Producer price index, deep sea freight transportation</source>
+        <translation>Indice des prix à la production, transport maritime hauturier de fret</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>A free FRED key is needed (Sources)</source>
+        <translation>Une clé FRED gratuite est nécessaire (Sources)</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>No figures in the answer</source>
+        <translation>Aucun chiffre dans la réponse</translation>
+    </message>
+</context>
+<context>
+    <name>supply::PortActivity</name>
+    <message>
+        <location line="+286"/>
+        <source>No date in the answer</source>
+        <translation>Aucune date dans la réponse</translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <source>PortWatch refused the request</source>
+        <translation>PortWatch a refusé la requête</translation>
+    </message>
+</context>
+<context>
+    <name>supply::PressureIndex</name>
+    <message>
+        <location line="-401"/>
+        <source>No index values in the answer</source>
+        <translation>Aucune valeur d’indice dans la réponse</translation>
+    </message>
+</context>
+<context>
+    <name>supply::RoadFreight</name>
+    <message>
+        <location line="-263"/>
+        <source>No road freight figures in the answer</source>
+        <translation>Aucun chiffre de fret routier dans la réponse</translation>
+    </message>
+</context>
+<context>
+    <name>supply::SupplyChain</name>
+    <message>
+        <location line="+860"/>
+        <source>Wheat</source>
+        <translation>Blé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Corn</source>
+        <translation>Maïs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rice</source>
+        <translation>Riz</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Soybeans</source>
+        <translation>Soja</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Storage and trading hub</source>
+        <translation>Pôle de stockage et de négoce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Strategic reserve</source>
+        <translation>Réserve stratégique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Export terminal</source>
+        <translation>Terminal d’exportation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Import terminal</source>
+        <translation>Terminal d’importation</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Earthquake</source>
+        <translation>Séisme</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tropical cyclone</source>
+        <translation>Cyclone tropical</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Flood</source>
+        <translation>Inondation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wildfire</source>
+        <translation>Feu de forêt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Volcano</source>
+        <translation>Éruption volcanique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Drought</source>
+        <translation>Sécheresse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Tsunami</source>
+        <translation>Tsunami</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other disruption</source>
+        <translation>Autre perturbation</translation>
+    </message>
+</context>
+</TS>

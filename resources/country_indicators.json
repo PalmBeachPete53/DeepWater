@@ -1,0 +1,946 @@
+{
+  "_comment": "Economy › Countries: the tabs of a country's page, the rows of their tables and where each row comes from. Sources are tried in order; the first that covers the country and answers wins. See README › Economy › Countries and src/CountryData.h for the fields.",
+
+  "groups": [
+    {"name": "G20", "countries": ["USA","EMU","CHN","JPN","DEU","GBR","FRA","IND","ITA","BRA","CAN","KOR","RUS","ESP","AUS","MEX","IDN","TUR","CHE","SAU","ARG","ZAF","SGP"]},
+    {"name": "America", "countries": ["ATG","ARG","ABW","BHS","BRB","BLZ","BMU","BOL","BRA","CAN","CYM","CHL","COL","CRI","CUB","DMA","DOM","ECU","SLV","GRD","GTM","GUY","HTI","HND","JAM","MEX","NIC","PAN","PRY","PER","PRI","SUR","TTO","USA","URY","VEN"]},
+    {"name": "Europe", "countries": ["ALB","AND","AUT","BLR","BEL","BIH","BGR","HRV","CYP","CZE","DNK","EST","EMU","FRO","FIN","FRA","DEU","GRC","HUN","ISL","IRL","IMN","ITA","XKX","LVA","LIE","LTU","LUX","MKD","MLT","MDA","MCO","MNE","NLD","NOR","POL","PRT","ROU","RUS","SRB","SVK","SVN","ESP","SWE","CHE","TUR","UKR","GBR"]},
+    {"name": "Africa", "countries": ["DZA","AGO","BEN","BWA","BFA","BDI","CMR","CPV","CAF","TCD","COM","COD","DJI","EGY","GNQ","ERI","ETH","GAB","GMB","GHA","GIN","GNB","CIV","KEN","LSO","LBR","LBY","MDG","MWI","MLI","MRT","MUS","MAR","MOZ","NAM","NER","NGA","COG","RWA","STP","SEN","SYC","SLE","SOM","ZAF","SSD","SDN","SWZ","TZA","TGO","TUN","UGA","ZMB","ZWE"]},
+    {"name": "Asia", "countries": ["AFG","ARM","AZE","BHR","BGD","BTN","BRN","KHM","CHN","TLS","GEO","HKG","IND","IDN","IRN","IRQ","ISR","JPN","JOR","KAZ","KWT","KGZ","LAO","LBN","MAC","MYS","MDV","MNG","MMR","NPL","PRK","OMN","PAK","PSE","PHL","QAT","SAU","SGP","KOR","LKA","SYR","TWN","TJK","THA","TKM","ARE","UZB","VNM","YEM"]},
+    {"name": "Oceania", "countries": ["AUS","FJI","KIR","NCL","NZL","PNG","WSM","SLB","TON","VUT"]}
+  ],
+
+  "extraNames": {"EMU": "Euro Area", "BMU": "Bermuda", "CYM": "Cayman Islands", "CUB": "Cuba", "FRO": "Faroe Islands", "IMN": "Isle of Man", "XKX": "Kosovo", "MCO": "Monaco", "ERI": "Eritrea", "SEN": "Senegal", "AFG": "Afghanistan", "LBN": "Lebanon", "PRK": "North Korea", "PSE": "Palestine", "SYR": "Syria", "NCL": "New Caledonia"},
+
+  "euroMembers": ["AUT","BEL","BGR","HRV","CYP","EST","FIN","FRA","DEU","GRC","IRL","ITA","LVA","LTU","LUX","MLT","NLD","PRT","SVK","SVN","ESP"],
+  "oecdAreas": ["AUS","AUT","BEL","CAN","CHL","COL","CRI","CZE","DNK","EST","FIN","FRA","DEU","GRC","HUN","ISL","IRL","ISR","ITA","JPN","KOR","LVA","LTU","LUX","MEX","NLD","NZL","NOR","POL","PRT","SVK","SVN","ESP","SWE","CHE","TUR","GBR","USA","ARG","BRA","BGR","CHN","HRV","IND","IDN","ROU","RUS","SAU","ZAF","EMU"],
+  "eurostatGeos": ["AUT","BEL","BGR","HRV","CYP","CZE","DNK","EST","FIN","FRA","DEU","GRC","HUN","IRL","ITA","LVA","LTU","LUX","MLT","NLD","POL","PRT","ROU","SVK","SVN","ESP","SWE","ISL","LIE","NOR","CHE","MKD","MNE","SRB","TUR","ALB","BIH","XKX","EMU"],
+
+  "currencies": {"USA": "DXY","EMU": "EUR","GBR": "GBP","AUS": "AUD","NZL": "NZD","JPN": "JPY","CHN": "CNY","IND": "INR","BRA": "BRL","CAN": "CAD","KOR": "KRW","RUS": "RUB","MEX": "MXN","IDN": "IDR","TUR": "TRY","CHE": "CHF","SAU": "SAR","ARG": "ARS","ZAF": "ZAR","SGP": "SGD","AUT": "EUR","BEL": "EUR","BGR": "EUR","HRV": "EUR","CYP": "EUR","EST": "EUR","FIN": "EUR","FRA": "EUR","DEU": "EUR","GRC": "EUR","IRL": "EUR","ITA": "EUR","LVA": "EUR","LTU": "EUR","LUX": "EUR","MLT": "EUR","NLD": "EUR","PRT": "EUR","SVK": "EUR","SVN": "EUR","ESP": "EUR","AND": "EUR","MCO": "EUR","MNE": "EUR","XKX": "EUR","ALB": "ALL","BLR": "BYN","BIH": "BAM","CZE": "CZK","DNK": "DKK","FRO": "DKK","HUN": "HUF","ISL": "ISK","IMN": "GBP","LIE": "CHF","MKD": "MKD","MDA": "MDL","NOR": "NOK","POL": "PLN","ROU": "RON","SRB": "RSD","SWE": "SEK","UKR": "UAH","ATG": "XCD","ABW": "AWG","BHS": "BSD","BRB": "BBD","BLZ": "BZD","BMU": "BMD","BOL": "BOB","CYM": "KYD","CHL": "CLP","COL": "COP","CRI": "CRC","CUB": "CUP","DMA": "XCD","DOM": "DOP","GRD": "XCD","GTM": "GTQ","GUY": "GYD","HTI": "HTG","HND": "HNL","JAM": "JMD","NIC": "NIO","PRY": "PYG","PER": "PEN","SUR": "SRD","TTO": "TTD","URY": "UYU","VEN": "VES","DZA": "DZD","AGO": "AOA","BEN": "XOF","BWA": "BWP","BFA": "XOF","BDI": "BIF","CMR": "XAF","CPV": "CVE","CAF": "XAF","TCD": "XAF","COM": "KMF","COD": "CDF","DJI": "DJF","EGY": "EGP","GNQ": "XAF","ERI": "ERN","ETH": "ETB","GAB": "XAF","GMB": "GMD","GHA": "GHS","GIN": "GNF","GNB": "XOF","CIV": "XOF","KEN": "KES","LSO": "LSL","LBR": "LRD","LBY": "LYD","MDG": "MGA","MWI": "MWK","MLI": "XOF","MRT": "MRU","MUS": "MUR","MAR": "MAD","MOZ": "MZN","NAM": "NAD","NER": "XOF","NGA": "NGN","COG": "XAF","RWA": "RWF","STP": "STN","SEN": "XOF","SYC": "SCR","SLE": "SLE","SOM": "SOS","SSD": "SSP","SDN": "SDG","SWZ": "SZL","TZA": "TZS","TGO": "XOF","TUN": "TND","UGA": "UGX","ZMB": "ZMW","ZWE": "ZWG","AFG": "AFN","ARM": "AMD","AZE": "AZN","BHR": "BHD","BGD": "BDT","BTN": "BTN","BRN": "BND","KHM": "KHR","GEO": "GEL","HKG": "HKD","IRN": "IRR","IRQ": "IQD","ISR": "ILS","JOR": "JOD","KAZ": "KZT","KWT": "KWD","KGZ": "KGS","LAO": "LAK","LBN": "LBP","MAC": "MOP","MYS": "MYR","MDV": "MVR","MNG": "MNT","MMR": "MMK","NPL": "NPR","PRK": "KPW","OMN": "OMR","PAK": "PKR","PHL": "PHP","QAT": "QAR","LKA": "LKR","SYR": "SYP","TWN": "TWD","TJK": "TJS","THA": "THB","TKM": "TMT","ARE": "AED","UZB": "UZS","VNM": "VND","YEM": "YER","FJI": "FJD","KIR": "AUD","NCL": "XPF","PNG": "PGK","WSM": "WST","SLB": "SBD","TON": "TOP","VUT": "VUV"},
+
+  "stockIndexes": {"USA": "^GSPC","EMU": "^STOXX50E","GBR": "^FTSE","DEU": "^GDAXI","FRA": "^FCHI","JPN": "^N225","CHN": "000001.SS","IND": "^BSESN","ITA": "FTSEMIB.MI","BRA": "^BVSP","CAN": "^GSPTSE","KOR": "^KS11","ESP": "^IBEX","AUS": "^AXJO","MEX": "^MXX","IDN": "^JKSE","TUR": "XU100.IS","CHE": "^SSMI","SAU": "^TASI.SR","SGP": "^STI","NLD": "^AEX","BEL": "^BFX","SWE": "^OMX","AUT": "^ATX","PRT": "PSI20.LS","IRL": "^ISEQ","POL": "WIG20.WA","ISR": "TA35.TA","EGY": "^CASE30","HKG": "^HSI","TWN": "^TWII","THA": "^SET.BK","MYS": "^KLSE","PHL": "PSEI.PS","NZL": "^NZ50","NOR": "OBX.OL","DNK": "^OMXC25","FIN": "^OMXH25","ZAF": "^J203.JO","GRC": "GD.AT","VNM": "^VNINDEX.VN","KWT": "^BKP.KW"},
+
+  "tabs": [
+    {"id": "overview", "name": "Overview", "tables": [["currency", "stock_market", "gdp_growth", "gdp_annual_growth", "unemployment", "non_farm_payrolls", "inflation", "inflation_mom", "interest_rate", "balance_of_trade", "current_account", "current_account_gdp", "gov_debt_gdp", "gov_budget", "business_confidence", "manufacturing_pmi", "services_pmi", "consumer_confidence", "retail_sales_mom", "building_permits", "corporate_tax", "personal_income_tax"]]},
+    {"id": "gdp", "name": "GDP", "tables": [["gdp_growth", "gdp_annual_growth", "gdp", "gdp_constant", "gnp", "gfcf", "gdp_per_capita", "gdp_per_capita_ppp", "full_year_gdp_growth", "gdp_contrib_consumer", "gdp_contrib_exports", "gdp_contrib_government", "gdp_contrib_imports", "gdp_contrib_investment", "gdp_sales_qoq", "gdpnow", "real_consumer_spending", "weekly_economic_index", "gdp_from_agriculture", "gdp_from_industry", "gdp_from_manufacturing", "gdp_from_services"]]},
+    {"id": "labour", "name": "Labour", "tables": [["unemployment", "non_farm_payrolls", "employment_change", "unemployment_change", "gov_payrolls", "private_payrolls", "manufacturing_payrolls", "initial_claims", "continuing_claims", "adp_change", "employed_persons", "unemployed_persons", "labour_force", "average_hourly_earnings", "average_weekly_hours", "participation_rate", "long_term_unemployment", "youth_unemployment", "labour_costs", "labour_cost_growth", "productivity", "job_offers", "job_vacancy_rate", "wages", "minimum_wages", "wage_growth", "wages_manufacturing", "employment_cost_index", "population", "ahe_yoy", "construction_payrolls", "eci_benefits", "eci_wages", "federal_payrolls", "financial_payrolls", "health_payrolls", "information_payrolls", "job_layoffs", "job_quits", "job_quits_rate", "leisure_payrolls", "mining_payrolls", "productivity_qoq", "professional_payrolls", "retail_payrolls", "social_payrolls", "transport_payrolls", "u6_unemployment", "unit_labour_costs_qoq", "wholesale_payrolls", "employment_rate", "full_time_employment", "claims_4week", "part_time_employment"]]},
+    {"id": "prices", "name": "Prices", "tables": [["inflation", "inflation_mom", "cpi", "core_cpi", "core_inflation", "gdp_deflator", "producer_prices", "producer_prices_change", "export_prices", "import_prices", "food_inflation", "core_inflation_mom", "core_pce_yoy", "core_pce_mom", "core_ppi_mom", "core_ppi_yoy", "cpi_clothing", "cpi_education", "cpi_food", "cpi_recreation", "cpi_sa", "energy_inflation", "export_prices_mom", "export_prices_yoy", "import_prices_mom", "import_prices_yoy", "inflation_expectations_1y", "inflation_expectations_5y", "michigan_inflation_expectations", "pce_yoy", "pce_mom", "ppi_mom", "rent_inflation", "services_inflation", "core_pce", "core_producer_prices", "cpi_housing", "cpi_median", "cpi_transportation", "cpi_trimmed_mean", "cpi_core_core", "pce_index", "inflation_annual"]]},
+    {"id": "money", "name": "Money", "tables": [["interest_rate", "interbank_rate", "bond_10y", "money_supply_m0", "money_supply_m1", "money_supply_m2", "money_supply_m3", "money_supply_m4", "banks_balance_sheet", "central_bank_balance_sheet", "fx_reserves", "loans_private_sector", "effective_fed_funds", "reverse_repo", "reserve_balances", "sofr", "private_debt_gdp", "lending_rate", "deposit_rate", "domestic_credit_gdp"]]},
+    {"id": "trade", "name": "Trade", "tables": [["balance_of_trade", "current_account", "current_account_gdp", "exports", "imports", "external_debt", "terms_of_trade", "fdi", "gold_reserves", "crude_oil_production", "current_account_goods", "current_account_services", "foreign_treasury_holdings", "goods_trade_balance", "tourism_revenues", "tourist_arrivals", "tourist_nights", "weapons_sales"]]},
+    {"id": "government", "name": "Government", "tables": [["gov_debt_gdp", "gov_budget", "gov_budget_value", "gov_spending", "gov_revenues", "gov_debt", "fiscal_expenditure", "treasury_cash", "gov_spending_gdp", "gov_revenues_gdp", "military_expenditure", "military_expenditure_gdp"], ["corporate_tax", "personal_income_tax", "withholding_tax"]]},
+    {"id": "business", "name": "Business", "tables": [["business_confidence", "manufacturing_pmi", "services_pmi", "composite_pmi", "industrial_production", "industrial_production_mom", "manufacturing_production", "capacity_utilization", "durable_goods", "durable_goods_ex_defense", "durable_goods_ex_transport", "factory_orders_ex_transport", "factory_orders", "new_orders", "business_inventories", "changes_in_inventories", "wholesale_inventories", "corporate_profits", "cfnai", "dallas_fed", "philly_fed", "total_vehicle_sales", "car_production", "car_registrations", "composite_leading", "coincident_index", "philly_employment", "philly_new_orders", "philly_prices", "manufacturing_production_mom", "nondefense_capital_goods", "mining_production", "retail_inventories", "construction_output", "economic_sentiment", "services_sentiment"]]},
+    {"id": "consumer", "name": "Consumer", "tables": [["consumer_confidence", "retail_sales_mom", "retail_sales_ex_autos", "retail_sales_yoy", "consumer_spending", "disposable_income", "personal_spending", "personal_income", "personal_savings", "consumer_credit", "private_sector_credit", "bank_lending_rate", "real_personal_spending", "rs_building", "rs_car_dealers", "rs_clothing", "rs_electronics", "rs_food_beverage", "rs_furniture", "rs_gasoline", "rs_general_merchandise", "rs_health", "rs_misc", "rs_online", "rs_restaurants", "rs_sporting", "gasoline_prices", "households_debt_gdp", "household_saving_rate"]]},
+    {"id": "housing", "name": "Housing", "tables": [["building_permits", "housing_starts", "new_home_sales", "existing_home_sales", "construction_spending", "housing_index", "mortgage_rate", "mortgage_approvals", "mortgage_rate_15y", "average_house_prices", "building_permits_mom", "case_shiller_mom", "case_shiller_yoy", "existing_home_sales_mom", "hpi_mom", "hpi_yoy", "housing_starts_mom", "housing_starts_multi", "housing_starts_single", "new_home_sales_mom", "case_shiller", "home_ownership", "median_house_price", "residential_property_prices", "house_listings"]]},
+    {"id": "energy", "name": "Energy", "tables": [["crude_oil_stocks_change", "gasoline_stocks_change", "natural_gas_stocks_change", "spr_stocks", "distillate_stocks_change", "gasoline_production", "refinery_crude_runs", "crude_oil_imports", "crude_oil_production_weekly", "wti_price", "electricity_access", "renewable_energy_share", "renewable_electricity_share", "energy_use_per_capita", "co2_per_capita"]]},
+    {"id": "health", "name": "Health", "tables": [["hospital_beds", "medical_doctors", "nurses", "life_expectancy", "health_expenditure"]]}
+  ],
+
+  "indicators": {
+    "currency": {"name": "Currency", "unit": "", "src": [
+      {"p": "yahoo", "kind": "currency"},
+      {"p": "imf", "flow": "ER", "key": "XDC_USD.EOP_RT.M"}]},
+    "stock_market": {"name": "Stock Market", "unit": "points", "src": [
+      {"p": "yahoo", "kind": "stock"},
+      {"p": "imf", "flow": "MFS_FMP", "key": "EQTS.EOP_IX.M", "unit": "index points"},
+      {"p": "wb", "source": "15", "id": "DSTKMKTXN", "unit": "index points"}]},
+    "gdp_growth": {"name": "GDP Growth Rate", "unit": "percent", "src": [
+      {"p": "ecos", "id": "200Y102/Q/10111"},
+      {"p": "pxweb", "flow": "ssb", "id": "09190", "q": "Makrost=bnpb.nr23_9fn&ContentsCode=VolumEndrSesJust", "note": "Mainland Norway"},
+      {"p": "abs", "flow": "ANA_AGG", "key": "M2.GPM.20.AUS.Q"},
+      {"p": "fred", "id": "A191RL1Q225SBEA", "note": "annualized"},
+      {"p": "ons", "id": "economy/grossdomesticproductgdp/timeseries/ihyq/qna"},
+      {"p": "eurostat", "ds": "namq_10_gdp", "q": "unit=CLV_PCH_PRE&s_adj=SCA&na_item=B1GQ"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.B1GQ_Q.GR._T.Y.G1"},
+      {"p": "imf", "flow": "QNEA", "key": "B1GQ.Q.SA.XDC.Q", "t": "pop"}]},
+    "gdp_annual_growth": {"name": "GDP Annual Growth Rate", "unit": "percent", "src": [
+      {"p": "abs", "flow": "ANA_AGG", "key": "M1.GPM.20.AUS.Q", "t": "yoy"},
+      {"p": "fred", "id": "A191RO1Q156NBEA"},
+      {"p": "ons", "id": "economy/grossdomesticproductgdp/timeseries/ihyr/qna"},
+      {"p": "eurostat", "ds": "namq_10_gdp", "q": "unit=CLV_PCH_SM&s_adj=SCA&na_item=B1GQ"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.B1GQ_Q.GR._T.Y.GY"},
+      {"p": "imf", "flow": "QNEA", "key": "B1GQ.Q.NSA.XDC.Q", "t": "yoy"}]},
+    "gdp": {"name": "GDP", "unit": "USD Billion", "src": [
+      {"p": "wb", "id": "NY.GDP.MKTP.CD", "scale": 1e-09}]},
+    "gdp_constant": {"name": "GDP Constant Prices", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "GDPC1", "unit": "USD Billion (2017)"},
+      {"p": "wb", "id": "NY.GDP.MKTP.KD", "scale": 1e-09, "unit": "USD Billion (2015)"}]},
+    "gnp": {"name": "Gross National Product", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "GNPC96", "unit": "USD Billion (2017)"},
+      {"p": "wb", "id": "NY.GNP.MKTP.CD", "scale": 1e-09}]},
+    "gfcf": {"name": "Gross Fixed Capital Formation", "unit": "USD Billion", "src": [
+      {"p": "wb", "id": "NE.GDI.FTOT.CD", "scale": 1e-09}]},
+    "gdp_per_capita": {"name": "GDP per Capita", "unit": "USD", "src": [
+      {"p": "wb", "id": "NY.GDP.PCAP.KD", "unit": "USD (2015)"}]},
+    "gdp_per_capita_ppp": {"name": "GDP per Capita PPP", "unit": "USD", "src": [
+      {"p": "wb", "id": "NY.GDP.PCAP.PP.KD", "unit": "USD (2021 PPP)"}]},
+    "full_year_gdp_growth": {"name": "Full Year GDP Growth", "unit": "percent", "src": [
+      {"p": "wb", "id": "NY.GDP.MKTP.KD.ZG"}]},
+    "gdp_contrib_consumer": {"name": "GDP Growth Contribution Consumer Spending", "unit": "percentage points", "src": [
+      {"p": "fred", "id": "DPCERY2Q224SBEA"}]},
+    "gdp_contrib_exports": {"name": "GDP Growth Contribution Exports", "unit": "percentage points", "src": [
+      {"p": "fred", "id": "A020RY2Q224SBEA"}]},
+    "gdp_contrib_government": {"name": "GDP Growth Contribution Government", "unit": "percentage points", "src": [
+      {"p": "fred", "id": "A822RY2Q224SBEA"}]},
+    "gdp_contrib_imports": {"name": "GDP Growth Contribution Imports", "unit": "percentage points", "src": [
+      {"p": "fred", "id": "A021RY2Q224SBEA"}]},
+    "gdp_contrib_investment": {"name": "GDP Growth Contribution Investment", "unit": "percentage points", "src": [
+      {"p": "fred", "id": "A006RY2Q224SBEA"}]},
+    "gdp_sales_qoq": {"name": "GDP Sales QoQ", "unit": "percent", "src": [
+      {"p": "fred", "id": "A190RL1Q225SBEA"}]},
+    "gdpnow": {"name": "GDPNow", "unit": "percent", "src": [
+      {"p": "fred", "id": "GDPNOW"}]},
+    "real_consumer_spending": {"name": "Real Consumer Spending", "unit": "percent", "src": [
+      {"p": "fred", "id": "DPCERL1Q225SBEA"}]},
+    "weekly_economic_index": {"name": "Weekly Economic Index", "unit": "percent", "src": [
+      {"p": "fred", "id": "WEI"}]},
+    "gdp_from_agriculture": {"name": "GDP from Agriculture", "unit": "USD Billion", "src": [
+      {"p": "wb", "id": "NV.AGR.TOTL.CD", "scale": 1e-09}]},
+    "gdp_from_industry": {"name": "GDP from Industry", "unit": "USD Billion", "src": [
+      {"p": "wb", "id": "NV.IND.TOTL.CD", "scale": 1e-09}]},
+    "gdp_from_manufacturing": {"name": "GDP from Manufacturing", "unit": "USD Billion", "src": [
+      {"p": "wb", "id": "NV.IND.MANF.CD", "scale": 1e-09}]},
+    "gdp_from_services": {"name": "GDP from Services", "unit": "USD Billion", "src": [
+      {"p": "wb", "id": "NV.SRV.TOTL.CD", "scale": 1e-09}]},
+    "unemployment": {"name": "Unemployment Rate", "unit": "percent", "src": [
+      {"p": "bps", "id": "543", "key": "9999/0", "note": "February and August surveys, since 2015"},
+      {"p": "ecos", "id": "901Y027/M/I61BC"},
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.UNE.UBA000.A0000.A01.D00.0.R00.A", "note": "registered (Federal Employment Agency)"},
+      {"p": "bcb", "id": "24369"},
+      {"p": "statcan", "id": "2062815"},
+      {"p": "abs", "flow": "LF", "key": "M13.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "UNRATE"},
+      {"p": "ons", "id": "employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms", "note": "three months to the month shown"},
+      {"p": "eurostat", "ds": "une_rt_m", "q": "s_adj=SA&age=TOTAL&unit=PC_ACT&sex=T"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.UNEMP.PT_LF._T.Y._Z"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.UNEMP.PT_LF._T.Y._Z"},
+      {"p": "imf", "flow": "LS", "key": "U.PT.M"},
+      {"p": "imf", "flow": "LS", "key": "U.PT.Q"},
+      {"p": "ilo", "id": "UNE_DEAP_SEX_AGE_RT_Q"},
+      {"p": "ilo", "id": "UNE_DEAP_SEX_AGE_RT_A"},
+      {"p": "weo", "id": "LUR"},
+      {"p": "wb", "id": "SL.UEM.TOTL.ZS", "note": "ILO modelled estimate"}]},
+    "non_farm_payrolls": {"name": "Non Farm Payrolls", "unit": "Thousand", "src": [
+      {"p": "insee", "id": "001796854", "t": "diff", "note": "private payroll employment, quarterly"},
+      {"p": "bcb", "id": "28763", "t": "diff", "scale": 0.001, "note": "formal jobs (CAGED)"},
+      {"p": "fred", "id": "PAYEMS", "t": "diff"}]},
+    "gov_payrolls": {"name": "Government Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USGOVT", "t": "diff"}]},
+    "private_payrolls": {"name": "Nonfarm Payrolls Private", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USPRIV", "t": "diff"}]},
+    "manufacturing_payrolls": {"name": "Manufacturing Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "MANEMP", "t": "diff"}]},
+    "initial_claims": {"name": "Initial Jobless Claims", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "ICSA", "scale": 0.001}]},
+    "continuing_claims": {"name": "Continuing Jobless Claims", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "CCSA", "scale": 0.001}]},
+    "adp_change": {"name": "ADP Employment Change", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "ADPMNUSNERSA", "t": "diff", "scale": 0.001}]},
+    "employed_persons": {"name": "Employed Persons", "unit": "Thousand", "src": [
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.EMP.EAA000.A0000.A00.D10.0.ABA.A"},
+      {"p": "statcan", "id": "2062811"},
+      {"p": "abs", "flow": "LF", "key": "M3.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "CE16OV"},
+      {"p": "ons", "id": "employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz/lms"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.EMP.PS._T.Y._Z"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.EMP.PS._T.Y._Z"},
+      {"p": "imf", "flow": "LS", "key": "E.PE.M", "scale": 0.001},
+      {"p": "imf", "flow": "LS", "key": "E.PE.Q", "scale": 0.001},
+      {"p": "ilo", "id": "EMP_TEMP_SEX_AGE_NB_Q"},
+      {"p": "ilo", "id": "EMP_TEMP_SEX_AGE_NB_A"}]},
+    "unemployed_persons": {"name": "Unemployed Persons", "unit": "Thousand", "src": [
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.UNE.UBA000.A0000.A01.D00.0.ABA.A", "note": "registered"},
+      {"p": "statcan", "id": "2062814"},
+      {"p": "abs", "flow": "LF", "key": "M6.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "UNEMPLOY"},
+      {"p": "ons", "id": "employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsc/lms"},
+      {"p": "imf", "flow": "LS", "key": "UP.PE.M", "scale": 0.001},
+      {"p": "imf", "flow": "LS", "key": "UP.PE.Q", "scale": 0.001},
+      {"p": "ilo", "id": "UNE_TUNE_SEX_AGE_NB_Q"},
+      {"p": "ilo", "id": "UNE_TUNE_SEX_AGE_NB_A"}]},
+    "labour_force": {"name": "Labour Force", "unit": "Thousand", "src": [
+      {"p": "abs", "flow": "LF", "key": "M9.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "CLF16OV"},
+      {"p": "imf", "flow": "LS", "key": "LF.PE.M", "scale": 0.001},
+      {"p": "imf", "flow": "LS", "key": "LF.PE.Q", "scale": 0.001},
+      {"p": "ilo", "id": "EAP_TEAP_SEX_AGE_NB_Q"},
+      {"p": "wb", "id": "SL.TLF.TOTL.IN", "scale": 0.001}]},
+    "average_hourly_earnings": {"name": "Average Hourly Earnings", "unit": "percent", "src": [
+      {"p": "fred", "id": "CES0500000003", "t": "pop"}]},
+    "average_weekly_hours": {"name": "Average Weekly Hours", "unit": "Hours", "src": [
+      {"p": "fred", "id": "AWHAETP"}]},
+    "participation_rate": {"name": "Labor Force Participation Rate", "unit": "percent", "src": [
+      {"p": "statcan", "id": "2062816"},
+      {"p": "abs", "flow": "LF", "key": "M12.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "CIVPART"},
+      {"p": "ilo", "id": "EAP_DWAP_SEX_AGE_RT_Q"},
+      {"p": "ilo", "id": "EAP_DWAP_SEX_AGE_RT_A"},
+      {"p": "wb", "id": "SL.TLF.CACT.ZS", "note": "ILO modelled estimate"}]},
+    "long_term_unemployment": {"name": "Long Term Unemployment Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "UEMP27OV", "div": "CLF16OV", "scale": 100},
+      {"p": "eurostat", "ds": "une_ltu_q", "q": "indic_em=LTU&sex=T&age=Y15-74&unit=PC_ACT&s_adj=SA"}]},
+    "youth_unemployment": {"name": "Youth Unemployment Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "LNS14024887"},
+      {"p": "ons", "id": "employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgwy/lms"},
+      {"p": "eurostat", "ds": "une_rt_m", "q": "s_adj=SA&age=Y_LT25&unit=PC_ACT&sex=T"},
+      {"p": "ilo", "id": "UNE_DEAP_SEX_AGE_RT_Q", "classif": "AGE_YTHADULT_Y15-24"},
+      {"p": "ilo", "id": "UNE_DEAP_SEX_AGE_RT_A", "classif": "AGE_YTHADULT_Y15-24"},
+      {"p": "wb", "id": "SL.UEM.1524.ZS", "note": "ILO modelled estimate"}]},
+    "labour_costs": {"name": "Labour Costs", "unit": "points", "src": [
+      {"p": "fred", "id": "ULCNFB"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.ULC.IX._T.Y._Z"}]},
+    "productivity": {"name": "Productivity", "unit": "points", "src": [
+      {"p": "abs", "flow": "ANA_AGG", "key": "M5.GPM_PHW.20.AUS.Q", "note": "GDP per hour worked"},
+      {"p": "fred", "id": "OPHNFB"},
+      {"p": "ons", "id": "employmentandlabourmarket/peopleinwork/labourproductivity/timeseries/lzvb/prdy"}]},
+    "job_offers": {"name": "Job Offers", "unit": "Thousand", "src": [
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.VAC.VBA000.A0000.A00.D00.0.ABA.A", "note": "vacancies"},
+      {"p": "abs", "flow": "JV", "key": "M1.7.TOT.20.AUS.Q", "note": "vacancies"},
+      {"p": "fred", "id": "JTSJOL"},
+      {"p": "ons", "id": "employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/ap2y/lms", "note": "vacancies"}]},
+    "wages": {"name": "Wages", "unit": "USD/Hour", "src": [
+      {"p": "statcan", "id": "2132579", "unit": "{CUR}/Hour"},
+      {"p": "fred", "id": "AHETPI"}]},
+    "minimum_wages": {"name": "Minimum Wages", "unit": "USD/Hour", "src": [
+      {"p": "fred", "id": "FEDMINNFRWG"},
+      {"p": "eurostat", "ds": "earn_mw_cur", "q": "currency=EUR", "unit": "EUR/Month"},
+      {"p": "ilo", "id": "EAR_INEE_NOC_NB_A", "classif": "-", "unit": "{CUR}/Month"}]},
+    "wage_growth": {"name": "Wage Growth", "unit": "percent", "src": [
+      {"p": "statcan", "id": "105812645", "t": "yoy"},
+      {"p": "fred", "id": "CES0500000003", "t": "yoy"},
+      {"p": "ons", "id": "employmentandlabourmarket/peopleinwork/earningsandworkinghours/timeseries/kac3/lms", "note": "average weekly earnings, three-month average"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.H_EARN.IX.C.Y._Z", "t": "yoy"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.H_EARN.IX.C.Y._Z", "t": "yoy"}]},
+    "wages_manufacturing": {"name": "Wages in Manufacturing", "unit": "USD/Hour", "src": [
+      {"p": "fred", "id": "CES3000000008"}]},
+    "employment_cost_index": {"name": "Employment Cost Index", "unit": "percent", "src": [
+      {"p": "fred", "id": "ECIALLCIV", "t": "pop"}]},
+    "population": {"name": "Population", "unit": "Million", "src": [
+      {"p": "wb", "id": "SP.POP.TOTL", "scale": 1e-06}]},
+    "ahe_yoy": {"name": "Average Hourly Earnings YoY", "unit": "percent", "src": [
+      {"p": "fred", "id": "CES0500000003", "t": "yoy"}]},
+    "construction_payrolls": {"name": "Construction Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USCONS", "t": "diff"}]},
+    "eci_benefits": {"name": "Employment Cost Index Benefits", "unit": "percent", "src": [
+      {"p": "fred", "id": "ECIBEN", "t": "pop"}]},
+    "eci_wages": {"name": "Employment Cost Index Wages", "unit": "percent", "src": [
+      {"p": "fred", "id": "ECIWAG", "t": "pop"}]},
+    "federal_payrolls": {"name": "Federal Government Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "CES9091000001", "t": "diff"}]},
+    "financial_payrolls": {"name": "Financial Activities Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USFIRE", "t": "diff"}]},
+    "health_payrolls": {"name": "Health Care Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "CES6562000001", "t": "diff"}]},
+    "information_payrolls": {"name": "Information Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USINFO", "t": "diff"}]},
+    "job_layoffs": {"name": "Job Layoffs and Discharges", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "JTSLDL"}]},
+    "job_quits": {"name": "Job Quits", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "JTSQUL"}]},
+    "job_quits_rate": {"name": "Job Quits Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "JTSQUR"}]},
+    "leisure_payrolls": {"name": "Leisure and Hospitality Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USLAH", "t": "diff"}]},
+    "mining_payrolls": {"name": "Mining and Energy Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "CES1021000001", "t": "diff"}]},
+    "productivity_qoq": {"name": "Nonfarm Productivity QoQ", "unit": "percent", "src": [
+      {"p": "fred", "id": "PRS85006092"}]},
+    "professional_payrolls": {"name": "Professional and Business Services Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USPBS", "t": "diff"}]},
+    "retail_payrolls": {"name": "Retail Trade Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USTRADE", "t": "diff"}]},
+    "social_payrolls": {"name": "Social Assistance Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "CES6562400001", "t": "diff"}]},
+    "transport_payrolls": {"name": "Transportation and Warehousing Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "CES4300000001", "t": "diff"}]},
+    "u6_unemployment": {"name": "U6 Unemployment Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "U6RATE"}]},
+    "unit_labour_costs_qoq": {"name": "Unit Labour Costs QoQ", "unit": "percent", "src": [
+      {"p": "fred", "id": "PRS85006112"}]},
+    "wholesale_payrolls": {"name": "Wholesale Trade Payrolls", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "USWTRADE", "t": "diff"}]},
+    "employment_rate": {"name": "Employment Rate", "unit": "percent", "src": [
+      {"p": "statcan", "id": "2062817"},
+      {"p": "abs", "flow": "LF", "key": "M16.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "EMRATIO"},
+      {"p": "ons", "id": "employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/lf24/lms", "note": "aged 16 to 64"},
+      {"p": "ilo", "id": "EMP_DWAP_SEX_AGE_RT_Q"},
+      {"p": "ilo", "id": "EMP_DWAP_SEX_AGE_RT_A"},
+      {"p": "wb", "id": "SL.EMP.TOTL.SP.ZS", "note": "ILO modelled estimate"}]},
+    "full_time_employment": {"name": "Full Time Employment", "unit": "Thousand", "src": [
+      {"p": "statcan", "id": "2062812"},
+      {"p": "abs", "flow": "LF", "key": "M1.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "LNS12500000"}]},
+    "claims_4week": {"name": "Jobless Claims 4-week Average", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "IC4WSA", "scale": 0.001}]},
+    "part_time_employment": {"name": "Part Time Employment", "unit": "Thousand", "src": [
+      {"p": "abs", "flow": "LF", "key": "M2.3.1599.20.AUS.M"},
+      {"p": "fred", "id": "LNS12600000"}]},
+    "inflation": {"name": "Inflation Rate", "unit": "percent", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0001&cdArea=00000"},
+      {"p": "ecos", "id": "901Y009/M/0", "t": "yoy"},
+      {"p": "bbk", "flow": "BBDP1", "key": "M.DE.N.VPI.C.A00000.VGJ.LV"},
+      {"p": "bcb", "id": "13522"},
+      {"p": "statcan", "id": "41690973", "t": "yoy"},
+      {"p": "snb", "flow": "plkopr", "key": "VVP"},
+      {"p": "abs", "flow": "CPI,2.0.0", "key": "3.10001.10.50.M"},
+      {"p": "fred", "id": "CPIAUCNS", "t": "yoy"},
+      {"p": "ons", "id": "economy/inflationandpriceindices/timeseries/d7g7/mm23"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=TOTAL&unit=RCH_A"},
+      {"p": "oecd", "flow": "OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0", "key": "{ISO3}.M.N.CPI.PA._T.N.GY"},
+      {"p": "imf", "flow": "CPI", "key": "CPI._T.YOY_PCH_PA_PT.M"},
+      {"p": "imf", "flow": "CPI", "key": "CPI._T.YOY_PCH_PA_PT.Q"},
+      {"p": "wb", "id": "FP.CPI.TOTL.ZG"}]},
+    "inflation_mom": {"name": "Inflation Rate MoM", "unit": "percent", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=1&cdCat01=0901&cdArea=00000", "t": "pop", "note": "seasonally adjusted"},
+      {"p": "bps", "id": "1", "key": "9999/0", "note": "since 2015"},
+      {"p": "ecos", "id": "901Y009/M/0", "t": "pop"},
+      {"p": "bbk", "flow": "BBDP1", "key": "M.DE.N.VPI.C.A00000.I20.A", "t": "pop"},
+      {"p": "bcb", "id": "433"},
+      {"p": "statcan", "id": "41690914", "t": "pop", "note": "seasonally adjusted"},
+      {"p": "abs", "flow": "CPI,2.0.0", "key": "2.999901.20.50.M", "note": "seasonally adjusted"},
+      {"p": "fred", "id": "CPIAUCSL", "t": "pop"},
+      {"p": "ons", "id": "economy/inflationandpriceindices/timeseries/d7oe/mm23"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=TOTAL&unit=RCH_M"},
+      {"p": "imf", "flow": "CPI", "key": "CPI._T.POP_PCH_PA_PT.M"}]},
+    "cpi": {"name": "Consumer Price Index CPI", "unit": "points", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=1&cdCat01=0001&cdArea=00000"},
+      {"p": "ecos", "id": "901Y009/M/0"},
+      {"p": "bbk", "flow": "BBDP1", "key": "M.DE.N.VPI.C.A00000.I20.A"},
+      {"p": "statcan", "id": "41690973"},
+      {"p": "snb", "flow": "plkopr", "key": "LD2010100"},
+      {"p": "abs", "flow": "CPI,2.0.0", "key": "1.10001.10.50.M"},
+      {"p": "fred", "id": "CPIAUCNS"},
+      {"p": "ons", "id": "economy/inflationandpriceindices/timeseries/d7bt/mm23"},
+      {"p": "imf", "flow": "CPI", "key": "CPI._T.IX.M"},
+      {"p": "imf", "flow": "CPI", "key": "CPI._T.IX.Q"},
+      {"p": "wb", "source": "15", "id": "CPTOTNSXN"}]},
+    "core_cpi": {"name": "Core Consumer Prices", "unit": "points", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=1&cdCat01=0161&cdArea=00000", "note": "all items less fresh food"},
+      {"p": "statcan", "id": "41691233", "note": "excluding food and energy"},
+      {"p": "fred", "id": "CPILFENS"},
+      {"p": "wb", "source": "15", "id": "CORENS"}]},
+    "core_inflation": {"name": "Core Inflation Rate", "unit": "percent", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0161&cdArea=00000", "note": "all items less fresh food"},
+      {"p": "pxweb", "flow": "ssb", "id": "05327", "q": "Konsumgrp=JAE_TOTAL&ContentsCode=Tolvmanedersendring", "note": "CPI-ATE"},
+      {"p": "pxweb", "flow": "scb", "id": "TAB6593", "q": "ContentsCode=000007ZV", "note": "CPIF excluding energy"},
+      {"p": "statcan", "id": "108785715", "note": "CPI-trim"},
+      {"p": "abs", "flow": "CPI,2.0.0", "key": "3.999902.20.50.M", "note": "trimmed mean"},
+      {"p": "fred", "id": "CPILFENS", "t": "yoy"},
+      {"p": "ons", "id": "economy/inflationandpriceindices/timeseries/dko8/mm23"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=TOT_X_NRG_FOOD&unit=RCH_A"},
+      {"p": "oecd", "flow": "OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0", "key": "{ISO3}.M.N.CPI.PA._TXCP01_NRG.N.GY"},
+      {"p": "wb", "source": "15", "id": "CORENS", "t": "yoy"}]},
+    "gdp_deflator": {"name": "GDP Deflator", "unit": "points", "src": [
+      {"p": "fred", "id": "GDPDEF"},
+      {"p": "wb", "id": "NY.GDP.DEFL.ZS"}]},
+    "producer_prices": {"name": "Producer Prices", "unit": "points", "src": [
+      {"p": "bbk", "flow": "BBDP1", "key": "M.DE.N.EPG.G.GP19SA000000.I21.A"},
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2200000000"},
+      {"p": "fred", "id": "PPIFIS"},
+      {"p": "eurostat", "ds": "sts_inppd_m", "q": "nace_r2=B-E36&s_adj=NSA&unit=I21"},
+      {"p": "imf", "flow": "PPI", "key": "PPI.IX.M"},
+      {"p": "imf", "flow": "PPI", "key": "PPI.IX.Q"}]},
+    "producer_prices_change": {"name": "Producer Prices Change", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDP1", "key": "M.DE.N.EPG.G.GP19SA000000.I21.A", "t": "yoy"},
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2200000000", "t": "yoy"},
+      {"p": "fred", "id": "PPIFIS", "t": "yoy"},
+      {"p": "eurostat", "ds": "sts_inppd_m", "q": "nace_r2=B-E36&s_adj=NSA&unit=PCH_SM"},
+      {"p": "imf", "flow": "PPI", "key": "PPI.YOY_PCH_PT.M"},
+      {"p": "imf", "flow": "PPI", "key": "PPI.YOY_PCH_PT.Q"}]},
+    "export_prices": {"name": "Export Prices", "unit": "points", "src": [
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2400000000"},
+      {"p": "fred", "id": "IQ"}]},
+    "import_prices": {"name": "Import Prices", "unit": "points", "src": [
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2600000000"},
+      {"p": "fred", "id": "IR"},
+      {"p": "eurostat", "ds": "sts_inpi_m", "q": "indic_bt=PRC_IMP&cpa2_1=CPA_B-E36&s_adj=NSA&unit=I21"}]},
+    "food_inflation": {"name": "Food Inflation", "unit": "percent", "src": [
+      {"p": "fred", "id": "CPIUFDNS", "t": "yoy"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=CP01&unit=RCH_A"},
+      {"p": "oecd", "flow": "OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0", "key": "{ISO3}.M.N.CPI.PA.CP01.N.GY"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP01.YOY_PCH_PA_PT.M"}]},
+    "core_inflation_mom": {"name": "Core Inflation Rate MoM", "unit": "percent", "src": [
+      {"p": "bcb", "id": "4466", "note": "trimmed means (MS)"},
+      {"p": "fred", "id": "CPILFESL", "t": "pop"}]},
+    "core_pce_yoy": {"name": "Core PCE Price Index Annual Change", "unit": "percent", "src": [
+      {"p": "fred", "id": "PCEPILFE", "t": "yoy"}]},
+    "core_pce_mom": {"name": "Core PCE Price Index MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "PCEPILFE", "t": "pop"}]},
+    "core_ppi_mom": {"name": "Core Producer Prices MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "PPIFES", "t": "pop"}]},
+    "core_ppi_yoy": {"name": "Core Producer Prices YoY", "unit": "percent", "src": [
+      {"p": "fred", "id": "PPIFES", "t": "yoy"}]},
+    "cpi_clothing": {"name": "CPI Clothing", "unit": "points", "src": [
+      {"p": "fred", "id": "CPIAPPNS"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP03.IX.M"}]},
+    "cpi_education": {"name": "CPI Education", "unit": "points", "src": [
+      {"p": "fred", "id": "CUUR0000SAE1"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP10.IX.M"}]},
+    "cpi_food": {"name": "CPI Food", "unit": "points", "src": [
+      {"p": "fred", "id": "CPIUFDNS"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP01.IX.M"}]},
+    "cpi_recreation": {"name": "CPI Recreation and Culture", "unit": "points", "src": [
+      {"p": "fred", "id": "CPIRECNS"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP09.IX.M"}]},
+    "cpi_sa": {"name": "CPI seasonally adjusted", "unit": "points", "src": [
+      {"p": "fred", "id": "CPIAUCSL"}]},
+    "energy_inflation": {"name": "Energy Inflation", "unit": "percent", "src": [
+      {"p": "fred", "id": "CPIENGNS", "t": "yoy"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=NRG&unit=RCH_A"},
+      {"p": "oecd", "flow": "OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0", "key": "{ISO3}.M.N.CPI.PA.CP045_0722.N.GY"}]},
+    "export_prices_mom": {"name": "Export Prices MoM", "unit": "percent", "src": [
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2400000000", "t": "pop"},
+      {"p": "fred", "id": "IQ", "t": "pop"}]},
+    "export_prices_yoy": {"name": "Export Prices YoY", "unit": "percent", "src": [
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2400000000", "t": "yoy"},
+      {"p": "fred", "id": "IQ", "t": "yoy"}]},
+    "import_prices_mom": {"name": "Import Prices MoM", "unit": "percent", "src": [
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2600000000", "t": "pop"},
+      {"p": "fred", "id": "IR", "t": "pop"},
+      {"p": "eurostat", "ds": "sts_inpi_m", "q": "indic_bt=PRC_IMP&cpa2_1=CPA_B-E36&s_adj=NSA&unit=PCH_PRE"}]},
+    "import_prices_yoy": {"name": "Import Prices YoY", "unit": "percent", "src": [
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2600000000", "t": "yoy"},
+      {"p": "fred", "id": "IR", "t": "yoy"},
+      {"p": "eurostat", "ds": "sts_inpi_m", "q": "indic_bt=PRC_IMP&cpa2_1=CPA_B-E36&s_adj=NSA&unit=PCH_SM"}]},
+    "inflation_expectations_1y": {"name": "Inflation Expectations 1Y", "unit": "percent", "src": [
+      {"p": "fred", "id": "EXPINF1YR", "note": "Cleveland Fed model"}]},
+    "inflation_expectations_5y": {"name": "Inflation Expectations 5Y", "unit": "percent", "src": [
+      {"p": "fred", "id": "EXPINF5YR", "note": "Cleveland Fed model"}]},
+    "michigan_inflation_expectations": {"name": "Michigan Inflation Expectations", "unit": "percent", "src": [
+      {"p": "fred", "id": "MICH"}]},
+    "pce_yoy": {"name": "PCE Price Index Annual Change", "unit": "percent", "src": [
+      {"p": "fred", "id": "PCEPI", "t": "yoy"}]},
+    "pce_mom": {"name": "PCE Price Index Monthly Change", "unit": "percent", "src": [
+      {"p": "fred", "id": "PCEPI", "t": "pop"}]},
+    "ppi_mom": {"name": "Producer Price Inflation MoM", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDP1", "key": "M.DE.N.EPG.G.GP19SA000000.I21.A", "t": "pop"},
+      {"p": "boj", "flow": "PR01", "id": "PRCG20_2200000000", "t": "pop"},
+      {"p": "fred", "id": "PPIFIS", "t": "pop"},
+      {"p": "imf", "flow": "PPI", "key": "PPI.POP_PCH_PT.M"}]},
+    "rent_inflation": {"name": "Rent Inflation", "unit": "percent", "src": [
+      {"p": "fred", "id": "CUUR0000SEHA", "t": "yoy"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=CP041&unit=RCH_A"}]},
+    "services_inflation": {"name": "Services Inflation", "unit": "percent", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0228&cdArea=00000", "note": "general services"},
+      {"p": "fred", "id": "CUUR0000SAS", "t": "yoy"},
+      {"p": "ons", "id": "economy/inflationandpriceindices/timeseries/d7nn/mm23"},
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=SERV&unit=RCH_A"}]},
+    "core_pce": {"name": "Core PCE Price Index", "unit": "points", "src": [
+      {"p": "fred", "id": "PCEPILFE"}]},
+    "core_producer_prices": {"name": "Core Producer Prices", "unit": "points", "src": [
+      {"p": "fred", "id": "PPIFES"}]},
+    "cpi_housing": {"name": "CPI Housing Utilities", "unit": "points", "src": [
+      {"p": "fred", "id": "CPIHOSNS"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP04.IX.M"}]},
+    "cpi_median": {"name": "CPI Median", "unit": "percent", "src": [
+      {"p": "statcan", "id": "108785714"},
+      {"p": "fred", "id": "MEDCPIM158SFRBCLE"}]},
+    "cpi_transportation": {"name": "CPI Transportation", "unit": "points", "src": [
+      {"p": "fred", "id": "CPITRNSL"},
+      {"p": "imf", "flow": "CPI", "key": "CPI.CP07.IX.M"}]},
+    "cpi_trimmed_mean": {"name": "CPI Trimmed-Mean", "unit": "percent", "src": [
+      {"p": "statcan", "id": "108785715"},
+      {"p": "abs", "flow": "CPI,2.0.0", "key": "3.999902.20.50.M"},
+      {"p": "fred", "id": "TRMMEANCPIM158SFRBCLE"}]},
+    "pce_index": {"name": "PCE Price Index", "unit": "points", "src": [
+      {"p": "fred", "id": "PCEPI"}]},
+    "inflation_annual": {"name": "Inflation Rate Annual Average", "unit": "percent", "src": [
+      {"p": "wb", "id": "FP.CPI.TOTL.ZG"}]},
+    "interest_rate": {"name": "Interest Rate", "unit": "percent", "src": [
+      {"p": "ecos", "id": "722Y001/M/0101000"},
+      {"p": "bcb", "id": "432", "kind": "daily", "note": "Selic target"},
+      {"p": "boc", "id": "V39079"},
+      {"p": "fred", "id": "DFEDTARU"},
+      {"p": "bis", "flow": "WS_CBPOL/1.0", "key": "M.{BIS}"},
+      {"p": "imf", "flow": "MFS_IR", "key": "MFS166_RT_PT_A_PT.M", "note": "monetary policy-related rate"}]},
+    "interbank_rate": {"name": "Interbank Rate", "unit": "percent", "src": [
+      {"p": "boj", "flow": "FM01", "id": "STRDCLUCON", "note": "uncollateralized overnight call rate"},
+      {"p": "snb", "flow": "zimoma", "key": "SARON", "note": "SARON"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.IR3TIB.PA._Z._Z._Z"},
+      {"p": "imf", "flow": "MFS_IR", "key": "IBRT_S3M_RT_PT_A_PT.M"},
+      {"p": "imf", "flow": "MFS_IR", "key": "MMRT_RT_PT_A_PT.M", "note": "money market rate"}]},
+    "bond_10y": {"name": "Government Bond 10Y", "unit": "percent", "src": [
+      {"p": "ecos", "id": "817Y002/D/010210000"},
+      {"p": "boc", "id": "BD.CDN.10YR.DQ.YLD"},
+      {"p": "fred", "id": "DGS10"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.IRLT.PA._Z._Z._Z"},
+      {"p": "imf", "flow": "MFS_IR", "key": "S13BONDS_RT_PT_A_PT.M", "note": "government bond yield"}]},
+    "money_supply_m0": {"name": "Money Supply M0", "unit": "USD Billion", "src": [
+      {"p": "bcb", "id": "1788", "scale": 1e-06, "unit": "{CUR} Billion", "note": "monetary base", "since": "1994-07"},
+      {"p": "boj", "flow": "MD01", "id": "MABS1AN11", "scale": 0.1, "unit": "{CUR} Billion", "note": "monetary base"},
+      {"p": "fred", "id": "BOGMBASE"},
+      {"p": "imf", "flow": "MFS_CBS", "key": "S121_L_CIC_IMB_CBS.XDC.M", "scale": 1e-09, "unit": "{CUR} Billion", "note": "currency in circulation"}]},
+    "money_supply_m1": {"name": "Money Supply M1", "unit": "USD Billion", "src": [
+      {"p": "bcb", "id": "27791", "scale": 1e-06, "unit": "{CUR} Billion", "since": "1994-07"},
+      {"p": "snb", "flow": "snbmonagg", "key": "B.GM1", "scale": 0.001, "unit": "{CUR} Billion"},
+      {"p": "fred", "id": "M1SL"},
+      {"p": "ecb", "flow": "BSI", "key": "M.U2.Y.V.M10.X.1.U2.2300.Z01.E", "scale": 0.001, "unit": "EUR Billion", "only": ["EMU"]},
+      {"p": "imf", "flow": "MFS_MA", "key": "NDMM1_MAI.XDC.M", "scale": 1e-09, "unit": "{CUR} Billion", "note": "national definition"}]},
+    "money_supply_m2": {"name": "Money Supply M2", "unit": "USD Billion", "src": [
+      {"p": "bcb", "id": "27810", "scale": 1e-06, "unit": "{CUR} Billion", "since": "1994-07"},
+      {"p": "boc", "id": "V41552796", "scale": 0.001, "unit": "{CUR} Billion"},
+      {"p": "boj", "flow": "MD02", "id": "MAM1NAM2M2MO", "scale": 0.1, "unit": "{CUR} Billion"},
+      {"p": "snb", "flow": "snbmonagg", "key": "B.GM2", "scale": 0.001, "unit": "{CUR} Billion"},
+      {"p": "fred", "id": "M2SL"},
+      {"p": "ecb", "flow": "BSI", "key": "M.U2.Y.V.M20.X.1.U2.2300.Z01.E", "scale": 0.001, "unit": "EUR Billion", "only": ["EMU"]},
+      {"p": "imf", "flow": "MFS_MA", "key": "BM_MAI.XDC.M", "scale": 1e-09, "unit": "{CUR} Billion", "note": "broad money"}]},
+    "banks_balance_sheet": {"name": "Banks Balance Sheet", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "TLAACBW027SBOG"}]},
+    "central_bank_balance_sheet": {"name": "Central Bank Balance Sheet", "unit": "USD Million", "src": [
+      {"p": "boc", "id": "V36610", "scale": 0.001, "unit": "{CUR} Billion"},
+      {"p": "boj", "flow": "BS01", "id": "MABJMTA", "scale": 0.1, "unit": "{CUR} Billion"},
+      {"p": "fred", "id": "WALCL"},
+      {"p": "ecb", "flow": "ILM", "key": "W.U2.C.T000000.Z5.Z01", "scale": 0.001, "unit": "EUR Billion", "note": "Eurosystem", "only": ["EMU"]},
+      {"p": "ecb", "flow": "ILM", "key": "M.{ECB}.N.T000000.Z5.Z01", "scale": 0.001, "unit": "EUR Billion"},
+      {"p": "imf", "flow": "MFS_CBS", "key": "S121_A_TA_ASEC_CB1SR.XDC.M", "scale": 1e-09, "unit": "{CUR} Billion"}]},
+    "fx_reserves": {"name": "Foreign Exchange Reserves", "unit": "USD Million", "src": [
+      {"p": "ecos", "id": "732Y001/M/99", "scale": 0.001},
+      {"p": "bcb", "id": "3546"},
+      {"p": "imf", "flow": "IL", "key": "TRGMV_REVS.USD.M", "scale": 1e-06, "note": "total reserves, gold at market value"},
+      {"p": "wb", "source": "15", "id": "TOTRESV"},
+      {"p": "wb", "id": "FI.RES.TOTL.CD", "scale": 1e-06}]},
+    "loans_private_sector": {"name": "Loans to Private Sector", "unit": "USD Billion", "src": [
+      {"p": "bcb", "id": "20539", "scale": 0.001, "unit": "{CUR} Billion", "note": "total credit outstanding", "since": "2007-03"},
+      {"p": "boj", "flow": "MD11", "id": "DLCLAEDBLTTO", "scale": 0.1, "unit": "{CUR} Billion", "note": "banks' loans and bills discounted"},
+      {"p": "fred", "id": "TOTCI", "note": "commercial and industrial loans"},
+      {"p": "ecb", "flow": "BSI", "key": "M.U2.Y.U.A20T.A.1.U2.2240.Z01.E", "scale": 0.001, "unit": "EUR Billion", "note": "loans to non-financial companies", "only": ["EMU"]},
+      {"p": "ecb", "flow": "BSI", "key": "M.{ECB}.N.A.A20.A.1.U2.2240.Z01.E", "scale": 0.001, "unit": "EUR Billion", "note": "loans to non-financial companies"},
+      {"p": "imf", "flow": "MFS_DC", "key": "ODCORP_A_ACO_PS.XDC.M", "scale": 1e-09, "unit": "{CUR} Billion", "note": "banks' claims on the private sector"}]},
+    "effective_fed_funds": {"name": "Effective Federal Funds Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "DFF"}]},
+    "reverse_repo": {"name": "Overnight Reverse Repo", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "RRPONTSYD"}]},
+    "reserve_balances": {"name": "Reserve Balances", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "WRESBAL", "scale": 1}]},
+    "sofr": {"name": "Secured Overnight Financing Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "SOFR"}]},
+    "private_debt_gdp": {"name": "Private Debt to GDP", "unit": "percent of GDP", "src": [
+      {"p": "bis", "flow": "WS_TC/2.0", "key": "Q.{ISO2}.P.A.M.770.A"}]},
+    "lending_rate": {"name": "Bank Lending Rate", "unit": "percent", "src": [
+      {"p": "bcb", "id": "20714", "note": "average rate on credit operations"},
+      {"p": "boc", "id": "V80691311", "note": "prime rate"},
+      {"p": "boj", "flow": "IR04", "id": "DLLR2CIDBNL1", "note": "new loans, domestically licensed banks"},
+      {"p": "fred", "id": "MPRIME"},
+      {"p": "ecb", "flow": "MIR", "key": "M.{ECB}.B.A2A.A.R.A.2240.EUR.N", "note": "loans to non-financial companies, new business"},
+      {"p": "imf", "flow": "MFS_IR", "key": "MFS162_RT_PT_A_PT.M"},
+      {"p": "wb", "id": "FR.INR.LEND"}]},
+    "domestic_credit_gdp": {"name": "Domestic Credit to Private Sector", "unit": "percent of GDP", "src": [
+      {"p": "wb", "id": "FS.AST.PRVT.GD.ZS"}]},
+    "balance_of_trade": {"name": "Balance of Trade", "unit": "USD Billion", "src": [
+      {"p": "bcb", "id": "22707", "scale": 0.001},
+      {"p": "boj", "flow": "BP01", "id": "BPBP6JYNTB", "scale": 0.1, "unit": "{CUR} Billion", "note": "goods, balance of payments basis"},
+      {"p": "fred", "id": "BOPGSTB", "scale": 0.001},
+      {"p": "ons", "id": "economy/nationalaccounts/balanceofpayments/timeseries/ikbj/mret", "scale": 0.001, "unit": "GBP Billion"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.EX.USD._T.Y._Z", "minus": "{ISO3}.M.IM.USD._T.Y._Z"},
+      {"p": "imf", "flow": "ITG", "key": "XG.FOB_USD.M", "minus": "MG.CIF_USD.M", "scale": 1e-09},
+      {"p": "imf", "flow": "ITG", "key": "XG.FOB_USD.Q", "minus": "MG.CIF_USD.Q", "scale": 1e-09},
+      {"p": "wb", "source": "15", "id": "DXGSRMRCHNSCD", "minus": "DMGSRMRCHNSCD", "scale": 0.001, "note": "merchandise"}]},
+    "current_account": {"name": "Current Account", "unit": "USD Billion", "src": [
+      {"p": "ecos", "id": "301Y013/M/000000", "scale": 0.001},
+      {"p": "bcb", "id": "22701", "scale": 0.001},
+      {"p": "boj", "flow": "BP01", "id": "BPBP6JYNCB", "scale": 0.1, "unit": "{CUR} Billion"},
+      {"p": "fred", "id": "IEABC", "scale": 0.001},
+      {"p": "ons", "id": "economy/nationalaccounts/balanceofpayments/timeseries/hbop/pnbp", "scale": 0.001, "unit": "GBP Billion"},
+      {"p": "imf", "flow": "BOP", "key": "NETCD_T.CAB.USD.Q", "scale": 1e-09},
+      {"p": "imf", "flow": "BOP", "key": "NETCD_T.CAB.USD.A", "scale": 1e-09}]},
+    "current_account_gdp": {"name": "Current Account to GDP", "unit": "percent of GDP", "src": [
+      {"p": "ons", "id": "economy/nationalaccounts/balanceofpayments/timeseries/aa6h/pnbp"},
+      {"p": "weo", "id": "BCA_NGDPD"},
+      {"p": "wb", "id": "BN.CAB.XOKA.GD.ZS"}]},
+    "exports": {"name": "Exports", "unit": "USD Billion", "src": [
+      {"p": "bps", "id": "196", "key": "9999/0", "note": "since 2015", "scale": 0.001, "unit": "USD Billion"},
+      {"p": "bbk", "flow": "BBDA1", "key": "M.DE.Y.EX.S.A.W1.A.V.ABA.A", "unit": "EUR Billion"},
+      {"p": "fred", "id": "BOPTEXP", "scale": 0.001},
+      {"p": "ons", "id": "economy/nationalaccounts/balanceofpayments/timeseries/ikbh/mret", "scale": 0.001, "unit": "GBP Billion"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.EX.USD._T.Y._Z"},
+      {"p": "imf", "flow": "ITG", "key": "XG.FOB_USD.M", "scale": 1e-09},
+      {"p": "imf", "flow": "ITG", "key": "XG.FOB_USD.Q", "scale": 1e-09},
+      {"p": "wb", "source": "15", "id": "DXGSRMRCHNSCD", "scale": 0.001, "note": "merchandise"}]},
+    "imports": {"name": "Imports", "unit": "USD Billion", "src": [
+      {"p": "bps", "id": "497", "key": "9999/0", "note": "since 2015", "scale": 0.001, "unit": "USD Billion"},
+      {"p": "bbk", "flow": "BBDA1", "key": "M.DE.Y.IM.S.A.W1.A.V.ABA.A", "unit": "EUR Billion"},
+      {"p": "fred", "id": "BOPTIMP", "scale": 0.001},
+      {"p": "ons", "id": "economy/nationalaccounts/balanceofpayments/timeseries/ikbi/mret", "scale": 0.001, "unit": "GBP Billion"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.IM.USD._T.Y._Z"},
+      {"p": "imf", "flow": "ITG", "key": "MG.CIF_USD.M", "scale": 1e-09},
+      {"p": "imf", "flow": "ITG", "key": "MG.CIF_USD.Q", "scale": 1e-09},
+      {"p": "wb", "source": "15", "id": "DMGSRMRCHNSCD", "scale": 0.001, "note": "merchandise"}]},
+    "external_debt": {"name": "External Debt", "unit": "USD Million", "src": [
+      {"p": "wb", "id": "DT.DOD.DECT.CD", "scale": 1e-06}]},
+    "terms_of_trade": {"name": "Terms of Trade", "unit": "points", "src": [
+      {"p": "wb", "source": "15", "id": "TOT"},
+      {"p": "wb", "id": "TT.PRI.MRCH.XD.WD"}]},
+    "fdi": {"name": "Foreign Direct Investment", "unit": "USD Million", "src": [
+      {"p": "imf", "flow": "BOP", "key": "L_NIL_T.D_F.USD.Q", "scale": 1e-06},
+      {"p": "wb", "id": "BX.KLT.DINV.CD.WD", "scale": 1e-06}]},
+    "gold_reserves": {"name": "Gold Reserves", "unit": "Tonnes", "src": [
+      {"p": "imf", "flow": "IL", "key": "RGV_REVS.FTO.M", "scale": 3.11034768e-05}]},
+    "crude_oil_production": {"name": "Crude Oil Production", "unit": "BBL/D/1K", "src": [
+      {"p": "eia", "id": "PET.MCRFPUS2.M"}]},
+    "current_account_goods": {"name": "Current Account Goods", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "IEABCG", "scale": 0.001},
+      {"p": "imf", "flow": "BOP", "key": "NETCD_T.G.USD.Q", "scale": 1e-09}]},
+    "current_account_services": {"name": "Current Account Services", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "IEABCS", "scale": 0.001},
+      {"p": "imf", "flow": "BOP", "key": "NETCD_T.S.USD.Q", "scale": 1e-09}]},
+    "foreign_treasury_holdings": {"name": "Foreign Treasury Holdings", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "FDHBFIN"}]},
+    "goods_trade_balance": {"name": "Goods Trade Balance", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "BOPGTB"}]},
+    "tourism_revenues": {"name": "Tourism Revenues", "unit": "USD Million", "src": [
+      {"p": "wb", "id": "ST.INT.RCPT.CD", "scale": 1e-06}]},
+    "tourist_arrivals": {"name": "Tourist Arrivals", "unit": "", "src": [
+      {"p": "bps", "id": "1150", "key": "36/0", "note": "since 2015"},
+      {"p": "ine", "id": "FREG337"},
+      {"p": "wb", "id": "ST.INT.ARVL"}]},
+    "weapons_sales": {"name": "Weapons Sales", "unit": "SIPRI TIV Million", "src": [
+      {"p": "wb", "id": "MS.MIL.XPRT.KD", "scale": 1e-06}]},
+    "gov_debt_gdp": {"name": "Government Debt to GDP", "unit": "percent of GDP", "src": [
+      {"p": "bcb", "id": "13762", "note": "general government gross debt"},
+      {"p": "ons", "id": "economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/hf6x/pusf", "note": "public sector net debt"},
+      {"p": "eurostat", "ds": "gov_10q_ggdebt", "q": "unit=PC_GDP&sector=S13&na_item=GD"},
+      {"p": "weo", "id": "GGXWDG_NGDP"}]},
+    "gov_budget": {"name": "Government Budget", "unit": "percent of GDP", "src": [
+      {"p": "eurostat", "ds": "gov_10q_ggnfa", "q": "unit=PC_GDP&sector=S13&na_item=B9&s_adj=NSA"},
+      {"p": "weo", "id": "GGXCNL_NGDP"}]},
+    "gov_budget_value": {"name": "Government Budget Value", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "MTSDS133FMS"}]},
+    "gov_spending": {"name": "Government Spending", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "GCEC1", "unit": "USD Billion (2017)"},
+      {"p": "wb", "id": "NE.CON.GOVT.CD", "scale": 1e-09}]},
+    "gov_revenues": {"name": "Government Revenues", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "MTSR133FMS"},
+      {"p": "eurostat", "ds": "gov_10q_ggnfa", "q": "unit=MIO_EUR&sector=S13&na_item=TR&s_adj=NSA", "unit": "EUR Million"}]},
+    "gov_debt": {"name": "Government Debt", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "GFDEBTN"},
+      {"p": "eurostat", "ds": "gov_10q_ggdebt", "q": "unit=MIO_EUR&sector=S13&na_item=GD", "unit": "EUR Million"}]},
+    "fiscal_expenditure": {"name": "Fiscal Expenditure", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "MTSO133FMS"},
+      {"p": "eurostat", "ds": "gov_10q_ggnfa", "q": "unit=MIO_EUR&sector=S13&na_item=TE&s_adj=NSA", "unit": "EUR Million"}]},
+    "treasury_cash": {"name": "Treasury Cash Balance", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "WTREGEN"}]},
+    "gov_spending_gdp": {"name": "Government Spending to GDP", "unit": "percent of GDP", "src": [
+      {"p": "weo", "id": "GGX_NGDP"}]},
+    "gov_revenues_gdp": {"name": "Government Revenues to GDP", "unit": "percent of GDP", "src": [
+      {"p": "weo", "id": "GGR_NGDP"}]},
+    "military_expenditure": {"name": "Military Expenditure", "unit": "USD Million", "src": [
+      {"p": "wb", "id": "MS.MIL.XPND.CD", "scale": 1e-06}]},
+    "military_expenditure_gdp": {"name": "Military Expenditure to GDP", "unit": "percent of GDP", "src": [
+      {"p": "wb", "id": "MS.MIL.XPND.GD.ZS"}]},
+    "corporate_tax": {"name": "Corporate Tax Rate", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.CTP.TPS,DSD_TAX_CIT@DF_CIT,2.0", "key": "{ISO3}.A.CIT_C.ST.PT_INC_TAX.S13._Z._Z._Z", "note": "combined central and sub-central statutory rate"}]},
+    "personal_income_tax": {"name": "Personal Income Tax Rate", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.CTP.TPS,DSD_TAX_PIT@DF_PIT_TOP_EARN_THRESH,1.0", "key": "{ISO3}.A._Z.TS_PIT.PT_WG_EARN_G.S13._Z._Z._Z._Z._Z._Z", "note": "top statutory rate"}]},
+    "withholding_tax": {"name": "Withholding Tax Rate", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.CTP.TPS,DSD_WHT@DF_WHT_STANDARD,1.0", "key": "{ISO3}._Z.A.WHT_DIV.PT_INC_TAX.STA._Z", "note": "dividends, standard rate"}]},
+    "business_confidence": {"name": "Business Confidence", "unit": "points", "src": [
+      {"p": "ecos", "id": "512Y014/M/99988/BA", "note": "business survey index, all industries"},
+      {"p": "insee", "id": "001565530", "note": "INSEE business climate, all sectors"},
+      {"p": "boj", "flow": "CO", "id": "TK99F1000601GCQ01000", "note": "Tankan, large manufacturers"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.BCICP.PB.C.Y._Z"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.BCICP.PB.C.Y._Z"},
+      {"p": "eurostat", "ds": "ei_bssi_m_r2", "q": "indic=BS-ICI-BAL&s_adj=SA"}]},
+    "manufacturing_pmi": {"name": "Manufacturing PMI", "unit": "points", "src": [
+      {"p": "survey", "id": "ManufacturingPmi"}]},
+    "services_pmi": {"name": "Services PMI", "unit": "points", "src": [
+      {"p": "survey", "id": "ServicesPmi"}]},
+    "composite_pmi": {"name": "Composite PMI", "unit": "points", "src": [
+      {"p": "survey", "id": "CompositePmi"}]},
+    "industrial_production": {"name": "Industrial Production", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDE1", "key": "M.DE.Y.BAA1.A2P000000.G.C.I21.A", "t": "yoy", "note": "production sector including construction"},
+      {"p": "bcb", "id": "21859", "t": "yoy"},
+      {"p": "fred", "id": "INDPRO", "t": "yoy"},
+      {"p": "ons", "id": "economy/economicoutputandproductivity/output/timeseries/k222/diop", "t": "yoy"},
+      {"p": "eurostat", "ds": "sts_inpr_m", "q": "nace_r2=B-D&s_adj=CA&unit=PCH_SM"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.PRVM.IX.BTE.Y._Z", "t": "yoy"},
+      {"p": "imf", "flow": "PI", "key": "IND.IX.M", "t": "yoy"},
+      {"p": "wb", "source": "15", "id": "IPTOTSAKD", "t": "yoy"}]},
+    "industrial_production_mom": {"name": "Industrial Production MoM", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDE1", "key": "M.DE.Y.BAA1.A2P000000.G.C.I21.A", "t": "pop", "note": "production sector including construction"},
+      {"p": "bcb", "id": "28503", "t": "pop"},
+      {"p": "fred", "id": "INDPRO", "t": "pop"},
+      {"p": "ons", "id": "economy/economicoutputandproductivity/output/timeseries/k222/diop", "t": "pop"},
+      {"p": "eurostat", "ds": "sts_inpr_m", "q": "nace_r2=B-D&s_adj=SCA&unit=PCH_PRE"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.PRVM.IX.BTE.Y._Z", "t": "pop"},
+      {"p": "imf", "flow": "PI", "key": "IND.SA_IX.M", "t": "pop"},
+      {"p": "wb", "source": "15", "id": "IPTOTSAKD", "t": "pop"}]},
+    "manufacturing_production": {"name": "Manufacturing Production", "unit": "percent", "src": [
+      {"p": "fred", "id": "IPMAN", "t": "yoy"},
+      {"p": "ons", "id": "economy/economicoutputandproductivity/output/timeseries/k22a/diop", "t": "yoy"},
+      {"p": "eurostat", "ds": "sts_inpr_m", "q": "nace_r2=C&s_adj=CA&unit=PCH_SM"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.PRVM.IX.C.Y._Z", "t": "yoy"}]},
+    "capacity_utilization": {"name": "Capacity Utilization", "unit": "percent", "src": [
+      {"p": "fred", "id": "TCU"},
+      {"p": "eurostat", "ds": "ei_bsin_q_r2", "q": "indic=BS-ICU-PC&s_adj=SA"}]},
+    "durable_goods": {"name": "Durable Goods Orders", "unit": "percent", "src": [
+      {"p": "fred", "id": "DGORDER", "t": "pop"}]},
+    "durable_goods_ex_defense": {"name": "Durable Goods Orders Ex Defense", "unit": "percent", "src": [
+      {"p": "fred", "id": "ADXDNO", "t": "pop"}]},
+    "durable_goods_ex_transport": {"name": "Durable Goods Orders Ex Transportation", "unit": "percent", "src": [
+      {"p": "fred", "id": "ADXTNO", "t": "pop"}]},
+    "factory_orders_ex_transport": {"name": "Factory Orders Ex Transportation", "unit": "percent", "src": [
+      {"p": "fred", "id": "AMXTNO", "t": "pop"}]},
+    "factory_orders": {"name": "Factory Orders", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDE1", "key": "M.DE.Y.AEA1.A2P300000.F.C.I21.A", "t": "pop", "note": "orders received by industry, constant prices"},
+      {"p": "fred", "id": "AMTMNO", "t": "pop"}]},
+    "new_orders": {"name": "New Orders", "unit": "USD Million", "src": [
+      {"p": "fred", "id": "AMTMNO"}]},
+    "business_inventories": {"name": "Business Inventories", "unit": "percent", "src": [
+      {"p": "fred", "id": "BUSINV", "t": "pop"}]},
+    "changes_in_inventories": {"name": "Changes in Inventories", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "CBIC1"}]},
+    "wholesale_inventories": {"name": "Wholesale Inventories", "unit": "percent", "src": [
+      {"p": "fred", "id": "WHLSLRIMSA", "t": "pop"}]},
+    "corporate_profits": {"name": "Corporate Profits", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "CP"}]},
+    "cfnai": {"name": "Chicago Fed National Activity Index", "unit": "points", "src": [
+      {"p": "fred", "id": "CFNAI"}]},
+    "dallas_fed": {"name": "Dallas Fed Manufacturing Index", "unit": "points", "src": [
+      {"p": "fred", "id": "BACTSAMFRBDAL"}]},
+    "philly_fed": {"name": "Philadelphia Fed Manufacturing Index", "unit": "points", "src": [
+      {"p": "fred", "id": "GACDFSA066MSFRBPHI"}]},
+    "total_vehicle_sales": {"name": "Total Vehicle Sales", "unit": "Million", "src": [
+      {"p": "fred", "id": "TOTALSA"}]},
+    "composite_leading": {"name": "Composite Leading Indicator", "unit": "points", "src": [
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.LI.IX._T.AA._Z"}]},
+    "coincident_index": {"name": "Coincident Index", "unit": "points", "src": [
+      {"p": "fred", "id": "USPHCI"}]},
+    "philly_employment": {"name": "Philly Fed Employment", "unit": "points", "src": [
+      {"p": "fred", "id": "NECDFSA066MSFRBPHI"}]},
+    "philly_new_orders": {"name": "Philly Fed New Orders", "unit": "points", "src": [
+      {"p": "fred", "id": "NOCDFSA066MSFRBPHI"}]},
+    "philly_prices": {"name": "Philly Fed Prices Paid", "unit": "points", "src": [
+      {"p": "fred", "id": "PPCDFSA066MSFRBPHI"}]},
+    "manufacturing_production_mom": {"name": "Manufacturing Production MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "IPMAN", "t": "pop"},
+      {"p": "ons", "id": "economy/economicoutputandproductivity/output/timeseries/k22a/diop", "t": "pop"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.PRVM.IX.C.Y._Z", "t": "pop"}]},
+    "nondefense_capital_goods": {"name": "Non Defense Capital Goods Orders Ex Aircraft", "unit": "percent", "src": [
+      {"p": "fred", "id": "NEWORDER", "t": "pop"}]},
+    "mining_production": {"name": "Mining Production", "unit": "percent", "src": [
+      {"p": "fred", "id": "IPMINE", "t": "yoy"}]},
+    "retail_inventories": {"name": "Retail Inventories to Sales", "unit": "", "src": [
+      {"p": "fred", "id": "RETAILIRSA"}]},
+    "construction_output": {"name": "Construction Output", "unit": "percent", "src": [
+      {"p": "eurostat", "ds": "sts_copr_m", "q": "nace_r2=F&s_adj=CA&unit=PCH_SM"}]},
+    "economic_sentiment": {"name": "Economic Sentiment Indicator", "unit": "points", "src": [
+      {"p": "eurostat", "ds": "ei_bssi_m_r2", "q": "indic=BS-ESI-I&s_adj=SA"}]},
+    "consumer_confidence": {"name": "Consumer Confidence", "unit": "points", "src": [
+      {"p": "ecos", "id": "511Y002/M/FME/99988", "note": "composite consumer sentiment index"},
+      {"p": "insee", "id": "001587668", "note": "INSEE household confidence"},
+      {"p": "bcb", "id": "4393", "note": "Fecomercio-SP"},
+      {"p": "fred", "id": "UMCSENT", "note": "University of Michigan"},
+      {"p": "eurostat", "ds": "ei_bssi_m_r2", "q": "indic=BS-CSMCI-BAL&s_adj=SA"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.CCICP.PB._Z.Y._Z"}]},
+    "retail_sales_mom": {"name": "Retail Sales MoM", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDE1", "key": "M.DE.Y.GUA1.N2G470000.A.C.I21.A", "t": "pop"},
+      {"p": "fred", "id": "RSAFS", "t": "pop"},
+      {"p": "ons", "id": "businessindustryandtrade/retailindustry/timeseries/j5ek/drsi", "t": "pop"},
+      {"p": "eurostat", "ds": "sts_trtu_m", "q": "nace_r2=G47&indic_bt=VOL_SLS&s_adj=SCA&unit=PCH_PRE"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.TOVM.IX.G47.Y._Z", "t": "pop"},
+      {"p": "wb", "source": "15", "id": "RETSALESSA", "t": "pop"}]},
+    "retail_sales_ex_autos": {"name": "Retail Sales Ex Autos", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSFSXMV", "t": "pop"}]},
+    "retail_sales_yoy": {"name": "Retail Sales YoY", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDE1", "key": "M.DE.Y.GUA1.N2G470000.A.C.I21.A", "t": "yoy"},
+      {"p": "fred", "id": "RSAFS", "t": "yoy"},
+      {"p": "ons", "id": "businessindustryandtrade/retailindustry/timeseries/j5eb/drsi"},
+      {"p": "eurostat", "ds": "sts_trtu_m", "q": "nace_r2=G47&indic_bt=VOL_SLS&s_adj=CA&unit=PCH_SM"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.TOVM.IX.G47.Y._Z", "t": "yoy"},
+      {"p": "wb", "source": "15", "id": "RETSALESSA", "t": "yoy"}]},
+    "consumer_spending": {"name": "Consumer Spending", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "PCEC96", "unit": "USD Billion (2017)"},
+      {"p": "wb", "id": "NE.CON.PRVT.KD", "scale": 1e-09, "unit": "USD Billion (2015)"}]},
+    "disposable_income": {"name": "Disposable Personal Income", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "DSPI"}]},
+    "personal_spending": {"name": "Personal Spending", "unit": "percent", "src": [
+      {"p": "insee", "id": "011794487", "t": "pop", "note": "household consumption of goods"},
+      {"p": "abs", "flow": "HSI_M", "key": "8.TOT.CUR.20.AUS.M", "note": "household spending indicator"},
+      {"p": "fred", "id": "PCE", "t": "pop"}]},
+    "personal_income": {"name": "Personal Income", "unit": "percent", "src": [
+      {"p": "fred", "id": "PI", "t": "pop"}]},
+    "personal_savings": {"name": "Personal Savings", "unit": "percent", "src": [
+      {"p": "fred", "id": "PSAVERT"}]},
+    "consumer_credit": {"name": "Consumer Credit", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "TOTALSL", "t": "diff", "scale": 0.001}]},
+    "private_sector_credit": {"name": "Private Sector Credit", "unit": "USD Billion", "src": [
+      {"p": "fred", "id": "TOTLL", "note": "loans and leases in bank credit"}]},
+    "bank_lending_rate": {"name": "Bank Lending Rate", "unit": "percent", "src": [
+      {"p": "bcb", "id": "20714", "note": "average rate on credit operations"},
+      {"p": "boc", "id": "V80691311", "note": "prime rate"},
+      {"p": "boj", "flow": "IR04", "id": "DLLR2CIDBNL1", "note": "new loans, domestically licensed banks"},
+      {"p": "fred", "id": "MPRIME"},
+      {"p": "ecb", "flow": "MIR", "key": "M.{ECB}.B.A2A.A.R.A.2240.EUR.N", "note": "loans to non-financial companies, new business"},
+      {"p": "imf", "flow": "MFS_IR", "key": "MFS162_RT_PT_A_PT.M"},
+      {"p": "wb", "id": "FR.INR.LEND"}]},
+    "real_personal_spending": {"name": "Real Personal Spending MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "PCEC96", "t": "pop"}]},
+    "rs_building": {"name": "Retail Sales Building and Garden Supply Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSBMGESD", "t": "pop"}]},
+    "rs_car_dealers": {"name": "Retail Sales Car Dealers MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSMVPD", "t": "pop"}]},
+    "rs_clothing": {"name": "Retail Sales Clothing Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSCCAS", "t": "pop"}]},
+    "rs_electronics": {"name": "Retail Sales Electronics Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSEAS", "t": "pop"}]},
+    "rs_food_beverage": {"name": "Retail Sales Food and Beverage Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSDBS", "t": "pop"}]},
+    "rs_furniture": {"name": "Retail Sales Furniture Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSFHFS", "t": "pop"}]},
+    "rs_gasoline": {"name": "Retail Sales Gasoline Stations MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSGASS", "t": "pop"}]},
+    "rs_general_merchandise": {"name": "Retail Sales General Merchandise Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSGMS", "t": "pop"}]},
+    "rs_health": {"name": "Retail Sales Health and Personal Care Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSHPCS", "t": "pop"}]},
+    "rs_misc": {"name": "Retail Sales Miscellaneous Store Retailers MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSMSR", "t": "pop"}]},
+    "rs_online": {"name": "Retail Sales Online Trade MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSNSR", "t": "pop"}]},
+    "rs_restaurants": {"name": "Retail Sales Restaurants and Bars MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSFSDP", "t": "pop"}]},
+    "rs_sporting": {"name": "Retail Sales Sporting Goods and Hobby Stores MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "RSSGHBMS", "t": "pop"}]},
+    "gasoline_prices": {"name": "Gasoline Prices", "unit": "USD/Liter", "src": [
+      {"p": "fred", "id": "GASREGW", "scale": 0.264172052}]},
+    "households_debt_gdp": {"name": "Households Debt to GDP", "unit": "percent of GDP", "src": [
+      {"p": "bis", "flow": "WS_TC/2.0", "key": "Q.{ISO2}.H.A.M.770.A"}]},
+    "household_saving_rate": {"name": "Household Saving Rate", "unit": "percent", "src": [
+      {"p": "abs", "flow": "ANA_AGG", "key": "M7.HSR.20.AUS.Q"},
+      {"p": "ons", "id": "economy/grossdomesticproductgdp/timeseries/nrjs/ukea"},
+      {"p": "eurostat", "ds": "nasq_10_ki", "q": "na_item=SRG_S14_S15&sector=S14_S15&s_adj=SCA&unit=PC"}]},
+    "building_permits": {"name": "Building Permits", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "PERMIT"},
+      {"p": "eurostat", "ds": "sts_cobp_q", "q": "indic_bt=BPRM_DW&cpa2_1=CPA_F41001_41002&s_adj=SCA&unit=I21", "unit": "points", "note": "dwellings, index 2021 = 100"}]},
+    "housing_starts": {"name": "Housing Starts", "unit": "Thousand units", "src": [
+      {"p": "statcan", "id": "52300157", "note": "annual rate"},
+      {"p": "fred", "id": "HOUST"}]},
+    "new_home_sales": {"name": "New Home Sales", "unit": "Thousand units", "src": [
+      {"p": "fred", "id": "HSN1F"}]},
+    "existing_home_sales": {"name": "Existing Home Sales", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "EXHOSLUSM495S", "scale": 0.001}]},
+    "construction_spending": {"name": "Construction Spending", "unit": "percent", "src": [
+      {"p": "fred", "id": "TTLCONS", "t": "pop"}]},
+    "housing_index": {"name": "Housing Index", "unit": "points", "src": [
+      {"p": "ecos", "id": "901Y062/M/P63AC", "note": "KB apartment price index"},
+      {"p": "statcan", "id": "111955442", "note": "new housing price index"},
+      {"p": "fred", "id": "HPIPONM226S"},
+      {"p": "eurostat", "ds": "prc_hpi_q", "q": "unit=I15_Q&purchase=TOTAL"},
+      {"p": "bis", "flow": "WS_SPP/1.0", "key": "Q.{ISO2}.N.628"}]},
+    "mortgage_rate": {"name": "Mortgage Rate", "unit": "percent", "src": [
+      {"p": "boc", "id": "V80691335", "note": "5-year conventional"},
+      {"p": "fred", "id": "MORTGAGE30US", "note": "30-year fixed"},
+      {"p": "boe", "id": "IUMBV34", "note": "2-year fixed, 75% loan-to-value"},
+      {"p": "ecb", "flow": "MIR", "key": "M.{ECB}.B.A2C.A.R.A.2250.EUR.N", "note": "loans for house purchase, new business"}]},
+    "mortgage_rate_15y": {"name": "15 Year Mortgage Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "MORTGAGE15US"}]},
+    "average_house_prices": {"name": "Average House Prices", "unit": "USD", "src": [
+      {"p": "fred", "id": "ASPNHSUS"}]},
+    "building_permits_mom": {"name": "Building Permits MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "PERMIT", "t": "pop"}]},
+    "case_shiller_mom": {"name": "Case Shiller Home Price Index MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "SPCS20RSA", "t": "pop"}]},
+    "case_shiller_yoy": {"name": "Case Shiller Home Price Index YoY", "unit": "percent", "src": [
+      {"p": "fred", "id": "SPCS20RSA", "t": "yoy"}]},
+    "existing_home_sales_mom": {"name": "Existing Home Sales MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "EXHOSLUSM495S", "t": "pop"}]},
+    "hpi_mom": {"name": "House Price Index MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "HPIPONM226S", "t": "pop"}]},
+    "hpi_yoy": {"name": "House Price Index YoY", "unit": "percent", "src": [
+      {"p": "fred", "id": "HPIPONM226S", "t": "yoy"},
+      {"p": "eurostat", "ds": "prc_hpi_q", "q": "unit=RCH_A&purchase=TOTAL"}]},
+    "housing_starts_mom": {"name": "Housing Starts MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "HOUST", "t": "pop"}]},
+    "housing_starts_multi": {"name": "Housing Starts Multi Family", "unit": "Thousand units", "src": [
+      {"p": "fred", "id": "HOUST5F"}]},
+    "housing_starts_single": {"name": "Housing Starts Single Family", "unit": "Thousand units", "src": [
+      {"p": "fred", "id": "HOUST1F"}]},
+    "new_home_sales_mom": {"name": "New Home Sales MoM", "unit": "percent", "src": [
+      {"p": "fred", "id": "HSN1F", "t": "pop"}]},
+    "case_shiller": {"name": "Case Shiller Home Price Index", "unit": "points", "src": [
+      {"p": "fred", "id": "SPCS20RSA"}]},
+    "home_ownership": {"name": "Home Ownership Rate", "unit": "percent", "src": [
+      {"p": "fred", "id": "RHORUSQ156N"},
+      {"p": "eurostat", "ds": "ilc_lvho02", "q": "tenure=OWN&hhcomp=TOTAL&rskpovth=TOTAL&unit=PC"}]},
+    "median_house_price": {"name": "Median House Price", "unit": "USD", "src": [
+      {"p": "fred", "id": "MSPUS"}]},
+    "residential_property_prices": {"name": "Residential Property Prices", "unit": "percent", "src": [
+      {"p": "bis", "flow": "WS_SPP/1.0", "key": "Q.{ISO2}.N.771"}]},
+    "house_listings": {"name": "Active Listings", "unit": "Thousand", "src": [
+      {"p": "fred", "id": "ACTLISCOUUS", "scale": 0.001}]},
+    "crude_oil_stocks_change": {"name": "Crude Oil Stocks Change", "unit": "BBL/1Million", "src": [
+      {"p": "eia", "id": "PET.WCESTUS1.W", "t": "diff", "scale": 0.001}]},
+    "gasoline_stocks_change": {"name": "Gasoline Stocks Change", "unit": "Thousand Barrels", "src": [
+      {"p": "eia", "id": "PET.WGTSTUS1.W", "t": "diff"}]},
+    "natural_gas_stocks_change": {"name": "Natural Gas Stocks Change", "unit": "billion cubic feet", "src": [
+      {"p": "eia", "id": "NG.NW2_EPG0_SWO_R48_BCF.W", "t": "diff"}]},
+    "spr_stocks": {"name": "Strategic Petroleum Reserve Crude Oil Stocks", "unit": "Thousand Barrels", "src": [
+      {"p": "eia", "id": "PET.WCSSTUS1.W"}]},
+    "distillate_stocks_change": {"name": "Distillate Stocks", "unit": "Thousand Barrels", "src": [
+      {"p": "eia", "id": "PET.WDISTUS1.W", "t": "diff"}]},
+    "gasoline_production": {"name": "Gasoline Production", "unit": "Thousand Barrels", "src": [
+      {"p": "eia", "id": "PET.WGFRPUS2.W", "t": "diff"}]},
+    "refinery_crude_runs": {"name": "Refinery Crude Runs", "unit": "Thousand Barrels", "src": [
+      {"p": "eia", "id": "PET.WCRRIUS2.W", "t": "diff"}]},
+    "crude_oil_imports": {"name": "Crude Oil Imports", "unit": "Thousand Barrels", "src": [
+      {"p": "eia", "id": "PET.WCRNTUS2.W", "t": "diff", "note": "net imports (imports less exports), change on the week"}]},
+    "crude_oil_production_weekly": {"name": "Weekly Crude Oil Production", "unit": "Thousand Barrels Per Day", "src": [
+      {"p": "eia", "id": "PET.WCRFPUS2.W"}]},
+    "wti_price": {"name": "WTI Crude Oil Price", "unit": "USD/BBL", "src": [
+      {"p": "fred", "id": "DCOILWTICO"}]},
+    "electricity_access": {"name": "Access to Electricity", "unit": "percent of population", "src": [
+      {"p": "wb", "id": "EG.ELC.ACCS.ZS"}]},
+    "renewable_energy_share": {"name": "Renewable Energy Consumption", "unit": "percent of final energy", "src": [
+      {"p": "wb", "id": "EG.FEC.RNEW.ZS"}]},
+    "renewable_electricity_share": {"name": "Renewable Electricity Output", "unit": "percent of electricity", "src": [
+      {"p": "wb", "id": "EG.ELC.RNEW.ZS"}]},
+    "energy_use_per_capita": {"name": "Energy Use per Capita", "unit": "kg of oil equivalent", "src": [
+      {"p": "wb", "id": "EG.USE.PCAP.KG.OE"}]},
+    "co2_per_capita": {"name": "CO2 Emissions per Capita", "unit": "tonnes", "src": [
+      {"p": "wb", "id": "EN.GHG.CO2.PC.CE.AR5"}]},
+    "hospital_beds": {"name": "Hospital Beds", "unit": "per 1000 people", "src": [
+      {"p": "wb", "id": "SH.MED.BEDS.ZS"}]},
+    "medical_doctors": {"name": "Medical Doctors", "unit": "per 1000 people", "src": [
+      {"p": "wb", "id": "SH.MED.PHYS.ZS"}]},
+    "nurses": {"name": "Nurses", "unit": "per 1000 people", "src": [
+      {"p": "wb", "id": "SH.MED.NUMW.P3"}]},
+    "life_expectancy": {"name": "Life Expectancy", "unit": "Years", "src": [
+      {"p": "wb", "id": "SP.DYN.LE00.IN"}]},
+    "health_expenditure": {"name": "Health Expenditure", "unit": "percent of GDP", "src": [
+      {"p": "wb", "id": "SH.XPD.CHEX.GD.ZS"}]},
+    "job_vacancy_rate": {"name": "Job Vacancy Rate", "unit": "percent", "src": [
+      {"p": "eurostat", "ds": "jvs_q_nace2", "q": "nace_r2=B-S&sizeclas=TOTAL&indic_em=JVR&s_adj=NSA"}]},
+    "labour_cost_growth": {"name": "Labour Cost Index YoY", "unit": "percent", "src": [
+      {"p": "eurostat", "ds": "lc_lci_r2_q", "q": "nace_r2=B-S&lcstruct=D1_D4_MD5&s_adj=SCA&unit=PCH_SM"}]},
+    "money_supply_m3": {"name": "Money Supply M3", "unit": "EUR Billion", "src": [
+      {"p": "bcb", "id": "27813", "scale": 1e-06, "unit": "{CUR} Billion", "since": "1994-07"},
+      {"p": "boj", "flow": "MD02", "id": "MAM1NAM3M3MO", "scale": 0.1, "unit": "{CUR} Billion"},
+      {"p": "snb", "flow": "snbmonagg", "key": "B.GM3", "scale": 0.001, "unit": "{CUR} Billion"},
+      {"p": "ecb", "flow": "BSI", "key": "M.U2.Y.V.M30.X.1.U2.2300.Z01.E", "scale": 0.001, "only": ["EMU"]}]},
+    "deposit_rate": {"name": "Deposit Interest Rate", "unit": "percent", "src": [
+      {"p": "ecb", "flow": "MIR", "key": "M.{ECB}.B.L22.A.R.A.2250.EUR.N", "note": "household deposits up to one year, new business"},
+      {"p": "imf", "flow": "MFS_IR", "key": "MFS135_RT_PT_A_PT.M"},
+      {"p": "wb", "id": "FR.INR.DPST"}]},
+    "tourist_nights": {"name": "Tourist Nights", "unit": "Nights", "src": [
+      {"p": "eurostat", "ds": "tour_occ_nim", "q": "c_resid=TOTAL&nace_r2=I551-I553&unit=NR"}]},
+    "services_sentiment": {"name": "Services Sentiment", "unit": "points", "src": [
+      {"p": "eurostat", "ds": "ei_bssi_m_r2", "q": "indic=BS-SCI-BAL&s_adj=SA"}]},
+    "car_registrations": {"name": "Car Registrations", "unit": "Units", "src": [
+      {"p": "eurostat", "ds": "road_eqr_carpda", "q": "mot_nrg=TOTAL&unit=NR", "note": "new passenger cars, a year"}]},
+    "money_supply_m4": {"name": "Money Supply M4", "unit": "GBP Million", "src": [
+      {"p": "bcb", "id": "27815", "scale": 1e-06, "unit": "{CUR} Billion", "since": "1994-07"},
+      {"p": "boe", "id": "LPMAUYN"}]},
+    "mortgage_approvals": {"name": "Mortgage Approvals", "unit": "Thousand", "src": [
+      {"p": "boe", "id": "LPMVTVX", "scale": 0.001, "note": "approvals for house purchase, a month"}]},
+    "employment_change": {"name": "Employment Change", "unit": "Thousand", "src": [
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.EMP.EAA000.A0000.A00.D10.0.ABA.A", "t": "diff"},
+      {"p": "statcan", "id": "2062811", "t": "diff"},
+      {"p": "abs", "flow": "LF", "key": "M3.3.1599.20.AUS.M", "t": "diff"}]},
+    "car_production": {"name": "Car Production", "unit": "Units", "src": [
+      {"p": "bcb", "id": "1373", "note": "vehicles, a month"}]},
+    "unemployment_change": {"name": "Unemployment Change", "unit": "Thousand", "src": [
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.UNE.UBA000.A0000.A01.D00.0.ABA.A", "t": "diff", "note": "registered"}]},
+    "cpi_core_core": {"name": "CPI Core Core", "unit": "percent", "src": [
+      {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0178&cdArea=00000", "note": "all items less fresh food and energy"}]}
+  }
+}

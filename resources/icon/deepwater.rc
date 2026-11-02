@@ -1,0 +1,2 @@
+// Windows: the executable icon (Explorer, taskbar), rendered from deepwater-512.png.
+IDI_ICON1 ICON "deepwater.ico"

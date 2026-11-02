@@ -1,0 +1,348 @@
+# Charts page audit: app.js, chart.js, drawings.js, volume-profile.js, index.html, app.css
+
+Port: `src/quant/ui/App.*`, `ChartPane.*`, `Legend.*`, `Drawings.*`, `VolumeProfile.*`, `Widgets.*`,
+`Text.*`, `Theme.*`, `Notifications.*`.
+
+How each item was checked: **R** = the JS and C++ read side by side; **S** = screenshots of the web
+app (`webshot.mjs`, port 3890) and `qtm_ui_demo` on fresh temp data, compared with `--compare`;
+**H** = driven in `qtm_ui_demo` and its state printed (`state`, `inds`, `range`, `csv`).
+
+Totals: 314 items: 299 OK, 11 FIXED (were DIFFERENT, fixed and re-verified), 4 DIFFERENT (left, see notes), 0 MISSING.
+
+Status: OK, DIFFERENT (behaviour or looks differ), MISSING (not ported). FIXED = was DIFFERENT and
+is now fixed by this audit (counted as fixed, re-verified).
+
+## index.html: top bar
+
+- OK S: brand mark (accent rounded square, white zigzag, 18px, title "Quant Terminal")
+- OK S: symbol button, 14px/600, label = ticker of the active chart
+- OK R: symbol button title "Change symbol (or just start typing)" at start
+- OK R: symbol button title "`SYMBOL` — change symbol (or just start typing)" after syncToolbar
+- OK S: separators (1x22, margin 0 6px)
+- OK S: quick timeframes 1m 5m 15m 1h 4h 1D 1W, gap 1px, min-width 34
+- OK S: active timeframe accent text + accent-soft background
+- OK S: custom timeframe input: placeholder "7m", 46x28, centred, margin-left 4
+- OK R: custom timeframe input title "Any timeframe: 1s, 7m, 2h, 3D, 2W, 3M"
+- OK S: chart type select, title "Chart type", the 15 CHART_TYPES labels in order
+- OK S: Indicators button (icon + text, title "Indicators")
+- OK S: Compare button (icon + text, title "Compare symbols")
+- OK S: layout select, title "Chart layout", options 1/2v/2h/3/4/6/8/16 with their labels
+- OK S: Sync checkbox label, muted, title "Change the symbol on every chart at once"
+- OK S: Replay button (title "Bar replay"), Alert button (title "Create alert")
+- OK S: spacer, Help link (title "What's new, how to update, and common questions") opens the help URL
+- OK S: Log button, title "Logarithmic price scale", accent when on
+- OK S: snapshot / CSV / settings / theme icon buttons with their titles
+- OK S: status dot (9px, muted / ok up / warn #f7a600 / bad down), title "Data status"
+- OK R: Academy ribbon (accepted removal)
+- OK S: main area: draw bar 44px, centre, side panel 300px, bottom panel collapsed 39px
+
+## app.js: App
+
+- OK R: constructor state (panes, active, tool "cursor", prices, priceListeners, saveTimer)
+- OK R: init: GET /api/state, failure = first run
+- OK R: default state: layout "1", one BTCUSDT 1D candles pane with EMA 21 + RSI
+- OK R: default watchlists Main (8 symbols, in order), activeWatchlist "Main"
+- OK R: default drawings {}, settings {}, paper null, strategies {}
+- OK R: saved state keys override defaults (`...state`)
+- OK R: settings defaults theme dark, volume true, bars 3000, utc false, stayInDrawMode false, syncCrosshair false
+- OK R: settings keep syncSymbol / syncReplay
+- DIFFERENT R: unknown keys inside `settings` are dropped on save (JS keeps them; none are used by the app)
+- OK R: theme applied before building the UI
+- OK R: custom indicators loaded before toolbar
+- OK R: init order toolbar, drawbar, setLayout(no save), panels, keys, alerts, health
+- OK R: checkHealth at start and every 60 s
+- OK R: Academy ribbon (showRibbon) not ported, on purpose
+- OK R: startup failure toast (no async init that can throw in C++)
+- OK R: persist(): panes cfg + active index, debounced 400 ms, PUT /api/state
+- OK R: persist failure toast "Couldn't save: <message>" (err)
+- OK R: getDrawings(symbol): a copy, [] when none
+- OK R: saveDrawings: keeps only id, type, points, text, color, rr
+- OK R: saveDrawings refreshes other panes on the same symbol, not the source pane
+- OK R: saveDrawings persists
+- OK R: loadCustomIndicators: GET /api/custom then import each; failure = none
+- OK R: importCustom id "custom:<file without .js>"
+- OK R: importCustom failure toast "Custom indicator <file> failed to load: <message>" (err)
+- OK R/H: setLayout count from LAYOUTS, unknown layout = 1
+- OK S: setLayout grid columns/rows for 1, 2v, 2h, 3, 4, 6, 8, 16 (gap 1px, border colour)
+- OK S: layout 3: first pane spans two rows, columns 2fr 1fr
+- OK H: setLayout keeps existing panes and their cfg, drops panes beyond the count
+- OK H: new panes copy pane 0's cfg with tf from [1D, 4h, 1h, 15m, 1W, 5m, 30m, 2h] and no indicators
+- OK R: new panes use saved cfgs first (state.panes) when the app starts
+- OK H: new panes load; existing panes keep their view (barSpacing kept on resize)
+- OK R: active pane after layout = panes[min(state.active, count-1)] or pane 0
+- OK S: layout select value synced, persist unless save=false
+- FIXED R: layout select fires only on a real change (JS onchange; Qt `activated` re-ran setLayout + persist on the same value)
+- OK R: setActive: no-op for the same pane, moves the active class, syncToolbar, panels.onActiveChange
+- OK S: active frame (accent 1px border) only when more than one pane
+- OK R: onPaneLoaded: syncToolbar + panels.onActiveChange for the active pane only
+- OK R/H: tf button click -> setTf
+- OK R: custom tf on Enter: trim, "Nd" -> "ND", "Nw" -> "NW", parseTf validates
+- OK R: custom tf valid: setTf, input cleared and blurred
+- OK R: custom tf invalid: toast with parseTf's message (err)
+- OK R: chart type change: cfg.type, render(true), persist
+- FIXED R: chart type select fires only on a real change (Qt `activated` re-rendered with resetView on the same type)
+- OK R: symbol button -> openSymbolSearch()
+- OK R: Indicators button -> openIndicatorPicker()
+- OK R: Compare button -> symbol search titled "Compare with…", push to compare, persist, load keepView
+- OK R: Compare allows duplicates / the main symbol (as in JS)
+- OK R: Sync checkbox initial state from settings.syncSymbol, change persists
+- OK R: Replay button: stops replay when the active pane replays (also a follower)
+- OK R: Replay button otherwise: tool replay-pick + toast "Click the bar you want replay to start from."
+- OK R: Alert button -> panels.openAlertDialog()
+- OK R: Log button toggles cfg.log, render(false), syncToolbar, persist
+- OK R: Snapshot: PNG named "<ticker>-<tf>.png" (save dialog instead of browser download, accepted)
+- FIXED R: snapshot label drawn in device pixels like on the canvas (was scaled by devicePixelRatio on HiDPI)
+- OK R: snapshot without crosshair (takeScreenshot(true) hides it), label "<ticker> · <tf>", 600 14px, --text colour, at (12, 22)
+- OK R/H: CSV button -> exportCsv
+- OK R: theme button toggles dark/light, re-themes panes and panels, persists
+- OK R: settings button -> openSettings
+- OK R: syncToolbar: label, title, tf buttons, custom tf placeholder (tf when not quick) and `on` class
+- OK R: syncToolbar: chart type value, Log on, Replay on
+- OK R/H: setTf: cfg.tf, load, syncToolbar, persist
+- OK R: setSymbol: one pane or every pane when Sync is on; removes the symbol from compare; load; persist
+- OK S: drawbar: cursor, <hr>, 13 tools with titles and icons, <hr>, alert, delete, clear
+- OK R: tool button toggles (same tool again -> cursor)
+- OK R: drawbar alert -> alertOnSelectedDrawing
+- OK H: drawbar delete; toast "Click a drawing first to select it." when nothing is selected
+- OK R: drawbar clear: confirm "Remove every drawing on <ticker>?" then clearDrawings
+- OK R: setTool: active button, every pane interactive only with the cursor, crosshair cursor otherwise
+- OK S: modal: title, close button (title "Close"), body, optional foot
+- OK S: modal width min(560, 94vw), wide min(780, 96vw), max-height 78vh, top 9vh
+- OK R: modal backdrop mousedown closes it
+- OK R: closeModal hides and empties
+- DIFFERENT S: modal bodies reserve an 8px scrollbar gutter when they scroll (Chrome's thin overlay scrollbars take no space); shared scrollbar styling, left as is
+- OK S: symbol search: title, placeholder "BTC, AAPL, EURUSD, ^FTSE, VOD.L…", the sources hint text
+- OK S: symbol search results: bold ticker, muted name, "type · exchange" meta, first selected
+- OK R: symbol search empty result with text: "Open <TEXT>" row, meta "press Enter"
+- OK R: symbol search: 180 ms debounce, stale results ignored, search failure = no results
+- OK R: symbol search: ArrowDown / ArrowUp move the selection (clamped)
+- OK R: symbol search: Enter picks the selection or the raw text
+- OK R: symbol search: click on a row picks it; click on the raw row picks the text
+- OK R: symbol search: pick closes, then onPick or setSymbol
+- OK S: symbol search: initial text from typing runs the search at once, caret at the end
+- OK S: indicator picker: placeholder "Search N indicators…" (N includes custom ones)
+- OK S: indicator picker groups, "Quant (bonus)" first and gold, others in definition order
+- OK S: indicator picker rows: name + "on price" / "own pane"
+- OK R: indicator picker filter on "name id group", case-insensitive
+- OK S: indicator picker foot: hint "No limit per chart. Write your own in the Indicator editor tab." + "New custom indicator"
+- OK R: picker click adds the indicator, keeps the modal open, toast "Added <name>"
+- OK H: picker click on an anchored indicator (time input): close, pickAnchor
+- OK R: "New custom indicator": close, panels.showBottom("editor")
+- OK R: pickAnchor: pendingAnchor, tool anchor-pick, toast "Click the bar to anchor it to."
+- OK S: indicator settings: title = indicator name
+- OK S: number inputs with value = param ?? default
+- FIXED R: number input that can't be parsed gives 0 (an <input type=number> value is then ""), not NaN
+- OK S: select inputs, the current option selected, the first one when the value is unknown
+- OK S: source input: Price group (close, open, high, low, hl2, hlc3, ohlc4, hlcc4)
+- OK S: source input: "Another indicator" group with every output of other indicators, labelled "<short> <params>: <output>"
+- OK R: source input excludes itself and indicators built on it, and those without outputs
+- OK R: source input: unknown value falls back to "close" (first option)
+- OK S: time input: local datetime, empty when 0
+- FIXED S: time input's "Pick on chart" button spans the field and uses the field's muted colour
+- FIXED S: form grid cells keep their content at the top (Source sat centred next to the taller Anchor field)
+- OK R: "Pick on chart": close, pickAnchor on that indicator
+- OK S: "No inputs." hint when the indicator has none
+- OK S: Timeframe select: "Same as chart (<tf>)", 5m, 15m, 1h, 4h, 1D, 1W, 1M
+- OK S: hint "A higher timeframe shows its value once each of its bars has closed, so history never peeks ahead."
+- OK S: "Colours" heading and a colour input per output (first 7 chars, invalid -> #000000)
+- FIXED S: a single colour input takes one of the two grid columns (was 5px wider: the empty column lost its gap)
+- OK S: foot "Defaults" + "Apply" (primary)
+- OK R: Apply: params rebuilt from the inputs (time -> epoch seconds, number -> Number, else text)
+- OK R: Apply: colours for every output, tf (empty -> none), close, render(false), persist
+- OK R: Defaults: params {} and colours {}, close, render, persist (tf kept)
+- OK S: settings modal: Bars to load per chart (200-20000, step 100)
+- OK S: settings: Time axis (My local time / UTC), Volume (Show / Hide), After placing a drawing (Back to cursor / Keep the tool), Crosshair (Independent / Synced)
+- OK S: settings hint with `data` in monospace
+- OK R: settings Save: bars = clamp(Number || 3000), the four flags, close, persist, reload every pane keeping the view
+- DIFFERENT R: a non-integer "bars" is truncated to an int (JS keeps e.g. 250.5); never reachable with the spin step
+- OK R: syncCrosshair: time of the logical index, nearest bar on every other non-empty pane, setCrosshairPosition(close, time, main)
+- OK H: exportCsv: shown bars + `<id>_<output>` columns for array outputs, same columns and values as series.js toCsv (diffed)
+- OK R: exportCsv file name "<ticker>-<tf>.csv"
+- OK R/H: Escape closes the modal first
+- OK H: Escape then returns to the cursor tool
+- OK R: Escape then clears the selected drawing
+- OK R: Escape works while typing
+- OK R/H: keys ignored while typing (input, textarea, select) or with Cmd/Ctrl/Alt
+- FIXED H: a focused checkbox counts as typing (JS INPUT); the Sync checkbox now takes focus on click like the browser's
+- OK H: Delete / Backspace delete the selected drawing
+- OK R: Delete / Backspace without selection: nothing
+- OK R: no symbol search while a modal is open
+- OK H: a letter, digit or ^ opens the symbol search with that character uppercased
+- OK R: lineOperandFor: hline value (toPrecision 8), hray, trend, ray, extended, channel; others null
+- OK R: alertOnSelectedDrawing: toast "Click a line on the chart first to select it."
+- OK R: alertOnSelectedDrawing: toast "Alerts work on trend lines, rays, extended and horizontal lines."
+- OK R: alertOnSelectedDrawing opens the alert dialog with close crosses <line>
+- OK R: syncReplayFrom: end = bar time + tf seconds; every other pane with bars that isn't leading a replay follows
+- OK S: onReplayStart: sync when enabled and not a follower, syncToolbar, panels.onReplayChange
+- OK R: onReplayBar: sync, panels.onReplayBar
+- OK R: onReplayStop: stops followers, syncToolbar, panels.onReplayChange
+- OK R: onPrice: prices map + listeners
+- OK R: alert event: toast "<b>Alert</b><br>text" (alert, 12 s), beep, notification "Quant Terminal alert", panels.onAlertFired
+- OK R: beep: 880 Hz, gain 0.08, 0.25 s
+- OK R: checkHealth: "Some sources are failing (a, b); fallbacks are in use." (warn) / "All data sources responding" (ok)
+- OK R: checkHealth failure: "The local server is not responding. Is it still running?" (bad)
+- OK R: setStatus keeps the title when none is given
+- OK S: toast: panel, accent left border (err down, alert #f7a600), 3.5 s default, bottom-right stack, max 360px
+
+## chart.js: ChartPane
+
+- OK R: CHART_TYPES list and labels
+- OK R: PRICE_ONLY (renko, linebreak, kagi, pnf): no volume
+- OK R: BINANCE_WS_TF map
+- OK S: legend icons gear / eye / x
+- OK R: newUid format "i<ms base36><seq base36>"
+- OK R: lineData: gaps hidden with transparent points, whitespace before the first value, nothing past the last bar
+- OK R: lineData: breaks make the point before transparent
+- OK R: histData: per-bar colours, whitespace for NaN
+- OK S: mapToChart: higher-tf values once their bar has closed, the forming bar inside the last one
+- OK R: mapToChart maps colours and breaks arrays too (JS maps every long-enough array)
+- OK R: cfg defaults (symbol, tf, type, indicators, compare, log)
+- OK R: mousedown anywhere in the pane makes it active
+- OK S: themeOptions: background, text, 11px, separators, grid, borders
+- OK R: createChart: crosshair Normal, rightOffset 8, timeVisible, price formatter fmtPrice
+- OK R: chart clicks in cursor mode go to onClick; drawing tools read native clicks (inPlot test, pane 0)
+- OK S: applyTheme re-renders
+- OK S: makeMainSeries for bars, line, linemarkers, step, kagi, area, baseline, columns, hollow, candles (colours as JS)
+- OK S: volume histogram on scale "vol", margins top 0.82, hidden for price-only types and when Volume is off
+- OK R: shift: local offset for intraday unless UTC
+- OK R: step, toChart, logicalOf, timeOfLogical, timeToX
+- OK S: load: "Loading <ticker>…" message, keeps the old chart meanwhile
+- OK R: load: stale responses ignored (token)
+- OK R: load: symbol/provider/notes/bars, mtf reset, replay ended, replay bar removed, drawings of the symbol
+- OK S: load: "No data for this symbol and timeframe." when empty
+- OK S: load failure: "Couldn't load <symbol> on <tf>.\n<message>" (double-escaped as in JS), chart cleared
+- FIXED S: pane message line height 1.4 (two-line errors were 3px tighter)
+- OK R: loadCompare: every compare symbol in parallel, failures = no data
+- OK R: visibleBars: replay cut, heikin, renko, linebreak, range, kagi, pnf
+- OK R: pointFor per type (kagi colour, columns up/down colour)
+- OK R: volPoint colours rgba(8,153,129,.45) / rgba(242,54,69,.45)
+- OK R: render: precision from the last close (2 / 4 / 6 / 8)
+- OK R: render: baseline base = close 150 bars back
+- OK R: render: timeVisible for intraday, seconds below 1m
+- OK S: render: percentage scale with compares, else log or normal
+- OK S: render(true): last 160 bars + 8
+- OK R: render(false) at the right edge or in replay: keep width (min 20), stick to the end
+- OK S: renderCompare: palette, width 2, title ticker, cut at the replay bar
+- OK S: computeIndicator on bars
+- OK S: computeIndicator on another indicator's output ("ind:<uid>:<key>")
+- OK S: missing source: "Its source indicator is missing"
+- OK S: higher tf: "loading…" while fetching, then values
+- OK S: lower tf than the chart: "Pick a timeframe at or above the chart's (<tf>)"
+- OK R: higher tf in replay: only higher-tf bars closed by the replayed bar
+- OK R: higher tf with an ind: source falls back to close
+- OK R: loadMtf: one request per tf, 2000 bars, error kept, re-render
+- OK R: renderIndicators: series removed, VP primitives detached, extra panes removed
+- OK R: dependency order (indicators on indicators after their source)
+- OK S: hidden indicators computed but not drawn
+- OK R: markers only without tf, merged with extraMarkers, cut in replay, sorted
+- OK S: volume profile and session volume profile primitives
+- OK S: output series: own pane per non-overlay indicator, children in their parent's pane
+- OK R: series options (noAutoscale, volumeFormat, colour, no price line, last value only in sub panes, dots)
+- OK S: levels as dashed muted price lines, not for children
+- OK S: pane stretch 1 / 0.28
+- OK S: indicatorParamsLabel: numbers, dates ("pick a bar"), " on <parent>" / " on (missing)", " (<tf>)"
+- FIXED R: a null parameter prints as "" in the label (Array#join), not "null"
+- OK R: onCrosshair: drawing preview follows the mouse
+- OK S: onCrosshair: legend for the hovered bar
+- OK R: onCrosshair: crosshair sync when enabled
+- OK S: legend title "<ticker> · <tf> · <provider|exchange>", 13px/600, clickable
+- OK S: legend OHLC + change, coloured up/down, "—" without a previous bar
+- OK S: legend compare rows "<ticker> (compare)" with a remove button on hover
+- OK S: legend indicator rows: short name + params, values in output colours, error (down) / "loading…" (muted)
+- OK S: legend hidden indicator at 45% opacity
+- OK S: legend actions on hover: settings, show/hide, remove
+- OK S: legend notes, #f7a600 11px, wrapped at 420px
+- OK R: legend: title click -> symbol search
+- OK R: legend: remove compare -> persist, load keepView
+- OK H: legend: remove indicator (dependents keep showing the missing-source error)
+- OK H: legend: hide toggles, render, persist
+- OK R: legend: settings -> openIndicatorSettings
+- OK S: legend max width pane - 90px
+- OK R: addIndicator / removeIndicator render + persist
+- OK R: pointAt: price pane only, time and price under the mouse
+- OK H: anchor pick: snaps to the raw bar under the click, toast "Anchored.", cursor tool
+- OK R: anchor pick: click before the first bar anchors to the last bar (JS findIndex quirk)
+- OK R: anchor pick: click on another pane or off the plot does nothing (tool stays)
+- OK R: replay pick: raw bar under the click, start at max(1, i)
+- OK H: cursor click selects the nearest drawing
+- OK S: drawing placement: 1, 2 and 3-point tools, preview between clicks
+- OK R: text note asks for the text (Qt card "Text note" instead of prompt(), accepted); empty = nothing, cursor
+- OK R: placed drawing is selected and saved; cursor tool unless "Keep the tool"
+- OK H: deleteSelectedDrawing returns false without a selection
+- OK R: clearDrawings
+- OK R: setInteractive: scroll/scale only with the cursor, preview dropped
+- OK R: startLive: Binance socket for Binance-served symbols on supported tf, otherwise polling
+- OK R: socket hosts stream.binance.com:9443 then data-stream.binance.vision, then polling
+- OK R: socket open -> status ok; kline -> merge
+- OK R: socket closed after opening: restart in 3 s
+- OK R: polling every 3 s (crypto exchanges) or 10 s, 5 bars, errors ignored
+- DIFFERENT R: polling stops for good after stopLive / a new load (JS keeps an in-flight poll loop alive); invisible except fewer requests
+- OK R: stopLive
+- OK R: merge: replace the last bar or append newer ones, nothing in replay
+- OK R: merge: onPrice, fast update for simple types, full render otherwise
+- OK R: merge: higher-tf data refreshed after 60 s, indicators every 1.5 s
+- OK S: startReplay: index clamped to [1, n-1], live stopped, bar shown
+- OK S: replay bar: "Replay", ◀◀, ▶, ▶▶, speed 0.5x/1x/2x/5x/10x (2x), "Jump to…", "All charts" (layouts > 1), "Exit", titles
+- OK S: replay bar position (centre, 36px from the bottom), panel background, shadow, wraps when narrow
+- OK R: replay step back / forward, stops playing at the ends (first bar index 1, last bar)
+- OK R: play/pause: interval 1000/speed, label ▶ / ❚❚
+- OK R: speed change restarts a playing replay
+- OK R: "Jump to…" -> replay-pick tool
+- OK R: "All charts" checkbox saves syncReplay, starts or stops the followers
+- OK S: follower: "Synced replay" tag, 80% opacity, click-through
+- OK R: replayTo: last bar closed by the end time
+- OK R: stopReplay: render(true), live again, followers stopped unless a follower
+- OK R: destroy: live and replay stopped
+- OK R: replay pick on a follower pane keeps its "Synced replay" tag (JS quirk, same)
+
+## drawings.js
+
+- OK R: TOOLS ids, labels, point counts, icons
+- OK R: FIB_LEVELS
+- OK R: colours (#2962ff, #787b86, up/down rgba)
+- OK R: setItems clears the selection
+- OK R: draw: 11px font, text tool switches to 13px for the rest of the frame
+- OK R: drawOne skips drawings with an unmappable point
+- OK S: trend, ray, extended (1e5 px extension)
+- OK S: hline / hray with right-aligned price label
+- OK S: vline
+- OK S: channel with parallel line and 8% fill
+- OK S: rectangle 12% fill + outline
+- OK S: fib levels with labels "<lv> (<price>)", 0.5 / 0.618 opaque, dashed diagonal
+- OK S: measure box, centre line, label "+diff (+pct%)  N bars"
+- OK S: long / short: target 2R (rr), stop, entry line, three labels
+- OK S: text note with background, "Note" when empty
+- OK S: selected / preview handles (white, 4px)
+- OK R: hitTest: 7px, per-type distances, boxes with 40px slack
+
+## volume-profile.js
+
+- OK R: VolumeProfile defaults rows 24, width 30, value area 70
+- OK R: profile(): rows, up/down split, POC, value area expansion, max
+- OK R: draw for the visible range, rows clamped 4..200, width 5..80%
+- OK R: colours in/out of the value area, POC dashed orange line + "POC" 10px
+- OK R: SessionVolumeProfile defaults (Auto, 24, 70, 70)
+- OK R: periodFor: day / month / year, explicit choice lowercased
+- OK R: sessions() grouping by periodKey
+- OK R: session draw: per session from its first bar, width % of the span, POC 1.5px line
+
+## api.js helpers used here (in Theme)
+
+- OK R: fmtPrice (locale grouping, 2/4/6/8 decimals, fmtNum from 1e6)
+- FIXED R: fmtNum / fmtPct round ties up like toFixed (were rounded to even by QString::number)
+- OK R: fmtPct "—" for null/NaN, sign for >= 0
+- OK R: esc, ticker (SPREAD:), exchange
+
+## app.css used by these parts
+
+- OK S: dark and light palettes
+- OK S: .tb, .tb.on, .tb.check, select.tb arrow, .tf-group, .tf-custom(.on)
+- OK S: .drawbar buttons and hr
+- OK S: .pane, .pane.active::after (hidden with one chart)
+- OK S: .legend rows, .ohlc, .ind hover, .acts, .note
+- OK S: .pane-msg
+- OK S: .replay-bar, .replay-bar.follower
+- OK S: .modal, .modal-card, .modal-head, .modal-body, .modal-foot
+- OK S: .search-in, .list .item(.sel), .list .group, .meta
+- OK S: .field, .form-grid, input.in / select.in, .btn, .btn.primary, .btn.small, .hint-text, h4
+- OK S: .toasts, .toast(.err, .alert)

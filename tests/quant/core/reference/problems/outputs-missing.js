@@ -1,0 +1,1 @@
+export default { name: 'Ok', calc: (bars) => ({ value: bars.map((b) => b.close) }) };

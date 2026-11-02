@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- Deepwater app icon: an orthographic globe in deep-sea tones (the Abyss palette), with the
+       ocean rising inside it. Drawn on the macOS icon grid (824 px tile, 100 px margins). -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123441"/>
+      <stop offset="1" stop-color="#050c10"/>
+    </linearGradient>
+    <radialGradient id="sphere" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#1c5566"/>
+      <stop offset="0.6" stop-color="#0b2a35"/>
+      <stop offset="1" stop-color="#061519"/>
+    </radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fe0d6" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#1f6a7c" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0.7" stop-color="#6fe0d6" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6fe0d6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#tile)"/>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="183.5" fill="none" stroke="#ffffff" stroke-opacity="0.07" stroke-width="3"/>
+
+  <circle cx="512" cy="512" r="330" fill="url(#glow)"/>
+  <circle cx="512" cy="512" r="262" fill="url(#sphere)"/>
+
+  <!-- the ocean rising inside the globe: a wave closed by the bottom arc of the sphere -->
+  <path d="M260.4 585 C 335 548, 410 552, 480 585 S 650 622, 763.6 585 A 262 262 0 0 1 260.4 585 Z"
+        fill="url(#sea)"/>
+  <path d="M286.3 645 C 350 618, 415 620, 485 647 S 650 676, 737.7 645"
+        fill="none" stroke="#d9ecef" stroke-opacity="0.35" stroke-width="7" stroke-linecap="round"/>
+  <!-- graticule (every line stays inside the sphere) -->
+  <g fill="none" stroke="#6fe0d6" stroke-opacity="0.38" stroke-width="7">
+    <ellipse cx="512" cy="512" rx="88" ry="262"/>
+    <ellipse cx="512" cy="512" rx="186" ry="262"/>
+    <line x1="512" y1="250" x2="512" y2="774"/>
+    <ellipse cx="512" cy="400" rx="236" ry="40"/>
+    <ellipse cx="512" cy="512" rx="262" ry="46"/>
+  </g>
+  <!-- light from the top left -->
+  <ellipse cx="440" cy="400" rx="100" ry="72" fill="#ffffff" fill-opacity="0.06"/>
+
+  <circle cx="512" cy="512" r="262" fill="none" stroke="#6fe0d6" stroke-width="10"/>
+</svg>

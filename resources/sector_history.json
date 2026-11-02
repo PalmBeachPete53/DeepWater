@@ -1,0 +1,1914 @@
+{
+ "ARE": {
+  "events": [
+   {
+    "en": "Oil price shocks of 1973 and 1979 → oil revenues dwarf the rest of the young federation's economy; the secondary sector reaches 74.0% of GDP in 1975.",
+    "fr": "Chocs pétroliers de 1973 et 1979 → les recettes pétrolières écrasent le reste de l’économie de la jeune fédération ; le secondaire atteint 74,0 % du PIB en 1975.",
+    "from": 1973,
+    "to": 1980
+   },
+   {
+    "en": "Oil price collapse while Dubai opens the Jebel Ali Free Zone (1985) → the secondary share falls from 72.7% of GDP in 1980 to 61.3% in 1985; services rise to 51.9%.",
+    "fr": "Chute du pétrole pendant que Dubaï ouvre la zone franche de Jebel Ali (1985) → le secondaire passe de 72,7 % du PIB en 1980 à 61,3 % en 1985 ; les services montent à 51,9 %.",
+    "from": 1985,
+    "to": 1986
+   },
+   {
+    "en": "Dubai's growth as an aviation, tourism, trade and finance hub → services rise from 51.5% to 65.1% of jobs, while industry falls from 42.8% to 31.8%.",
+    "fr": "Essor de Dubaï comme pôle aérien, touristique, commercial et financier → les services passent de 51,5 % à 65,1 % des emplois, l’industrie de 42,8 % à 31,8 %.",
+    "from": 2000,
+    "to": 2010
+   },
+   {
+    "en": "Oil price collapse → the secondary share drops to its low of 39.9% of GDP in 2016, and services reach 57.1% of GDP in 2015.",
+    "fr": "Effondrement des cours du pétrole → le secondaire tombe à son plus bas, 39,9 % du PIB en 2016, et les services atteignent 57,1 % du PIB en 2015.",
+    "from": 2014,
+    "to": 2016
+   },
+   {
+    "en": "Covid-19 halts travel and tourism while oil prices slump → services reach 69.0% of jobs and industry falls to its low of 28.9% of jobs.",
+    "fr": "Le Covid-19 paralyse voyages et tourisme et le pétrole chute → les services atteignent 69,0 % des emplois et l’industrie tombe à son plus bas, 28,9 %.",
+    "from": 2020,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "An oil economy turned trade, aviation and tourism hub: oil keeps industry large in GDP, but services have overtaken it in both output and jobs.",
+   "fr": "Une économie pétrolière devenue plaque tournante du commerce, de l’aérien et du tourisme : le pétrole pèse encore lourd, mais les services dominent désormais production et emplois."
+  }
+ },
+ "ARG": {
+  "events": [
+   {
+    "en": "Import-substitution industrialisation behind high tariffs → industry accounts for 48.4% of GDP in 1965 and peaks at 50.9% in 1976.",
+    "fr": "Industrialisation par substitution aux importations, derrière de hauts droits de douane → l’industrie pèse 48,4 % du PIB en 1965 et culmine à 50,9 % en 1976.",
+    "from": 1965,
+    "to": 1976
+   },
+   {
+    "en": "The military government cuts tariffs while an overvalued peso favours imports → manufacturing falls from 38.2% of GDP in 1975 to 29.5% in 1980.",
+    "fr": "Le gouvernement militaire baisse les droits de douane et un peso surévalué favorise les importations → le manufacturier passe de 38,2 % du PIB en 1975 à 29,5 % en 1980.",
+    "from": 1976,
+    "to": 1981
+   },
+   {
+    "en": "Convertibility plan pegs the peso to the dollar, with privatisation and trade opening → manufacturing falls from 26.8% of GDP in 1990 to 16.5% in 2000; services peak at 65.1% in 2001.",
+    "fr": "Le plan de convertibilité arrime le peso au dollar, avec privatisations et ouverture → le manufacturier passe de 26,8 % du PIB en 1990 à 16,5 % en 2000 ; les services culminent à 65,1 % en 2001.",
+    "from": 1991,
+    "to": 2001
+   },
+   {
+    "en": "Default and devaluation make exports and local production competitive, amid a soy boom → agriculture rises from 4.7% of GDP in 2000 to 7.9% in 2005, industry from 26.0% to 28.6%.",
+    "fr": "Défaut et dévaluation rendent exportations et production locale compétitives, sur fond de boom du soja → l’agriculture passe de 4,7 % du PIB en 2000 à 7,9 % en 2005, l’industrie de 26,0 % à 28,6 %.",
+    "from": 2002,
+    "to": 2005
+   }
+  ],
+  "summary": {
+   "en": "Argentina's protected industry peaked in the 1970s, then shrank through liberalisation and crises; agriculture-led exports and services now dominate.",
+   "fr": "L’industrie protégée de l’Argentine a culminé dans les années 1970, puis s’est réduite au fil des libéralisations et des crises ; exportations agricoles et services dominent désormais."
+  }
+ },
+ "AUS": {
+  "events": [
+   {
+    "en": "The dollar is floated in 1983 and tariffs are cut from the late 1980s, exposing protected factories to imports; manufacturing falls from 13.7% of GDP in 1990 to 11.4% in 2000.",
+    "fr": "Flottement du dollar en 1983 puis baisse des droits de douane dès la fin des années 1980 : les usines protégées affrontent les importations, et le manufacturier passe de 13,7 % du PIB en 1990 à 11,4 % en 2000.",
+    "from": 1983,
+    "to": 2000
+   },
+   {
+    "en": "The Millennium Drought cuts crop and livestock output in the south-east, contributing to agriculture's fall from 3.1% of GDP in 2000 to 2.2% in 2010.",
+    "fr": "La « sécheresse du millénaire » réduit les récoltes et l’élevage dans le Sud-Est et contribue au recul de l’agriculture, de 3,1 % du PIB en 2000 à 2,2 % en 2010.",
+    "from": 2001,
+    "to": 2009
+   },
+   {
+    "en": "China's demand for iron ore and coal drives a mining investment boom; a strong dollar squeezes factories and manufacturing falls from 10.2% of GDP in 2005 to 6.2% in 2015, while mining keeps industry near 25%.",
+    "fr": "La demande chinoise de fer et de charbon déclenche un boom minier ; le dollar fort pénalise les usines, le manufacturier passe de 10,2 % du PIB en 2005 à 6,2 % en 2015, et les mines maintiennent l’industrie vers 25 %.",
+    "from": 2003,
+    "to": 2013
+   },
+   {
+    "en": "Ford, Holden and Toyota end car production in Australia; manufacturing slips to 5.5% of GDP in 2020 and 5.3% in 2025.",
+    "fr": "Ford, Holden et Toyota cessent de produire des voitures en Australie ; le manufacturier tombe à 5,5 % du PIB en 2020 et à 5,3 % en 2025.",
+    "from": 2016,
+    "to": 2017
+   }
+  ],
+  "summary": {
+   "en": "A mining-rich services economy: manufacturing fell from 13.7% of GDP in 1990 to 5.3% after tariff cuts and the end of car making, while iron ore and coal exports boomed.",
+   "fr": "Économie de services riche en minerais : le manufacturier passe de 13,7 % du PIB en 1990 à 5,3 % avec la baisse des droits de douane et la fin de l’automobile."
+  }
+ },
+ "BEL": {
+  "events": [
+   {
+    "en": "Brussels becomes the seat of the new European institutions, and later of NATO (1967); public administration, lobbying and business services anchor a tertiary sector that reaches 71.2% of GDP in 2025.",
+    "fr": "Bruxelles devient le siège des nouvelles institutions européennes, puis de l’OTAN (1967) ; administration, lobbying et services aux entreprises ancrent un tertiaire qui atteint 71,2 % du PIB en 2025.",
+    "from": 1958,
+    "to": 0
+   },
+   {
+    "en": "The last coal mine, at Zolder, closes after decades of decline in Wallonia and Limburg against imported coal and oil; industry's share of jobs falls from 30.3% in 1991 to 25.8% in 2000.",
+    "fr": "La dernière mine de charbon, à Zolder, ferme après des décennies de déclin en Wallonie et dans le Limbourg face au charbon et au pétrole importés ; l’industrie passe de 30,3 % des emplois en 1991 à 25,8 % en 2000.",
+    "from": 1992,
+    "to": 0
+   },
+   {
+    "en": "Car plants close (Renault Vilvoorde 1997, Opel Antwerp 2010, Ford Genk 2014, Audi Brussels 2025) and Liège's blast furnaces shut; manufacturing falls from 18.3% of GDP in 1995 to 11.2% in 2025.",
+    "fr": "Fermetures d’usines automobiles (Renault Vilvorde en 1997, Opel Anvers en 2010, Ford Genk en 2014, Audi Bruxelles en 2025) et arrêt des hauts fourneaux liégeois : le manufacturier passe de 18,3 % du PIB en 1995 à 11,2 % en 2025.",
+    "from": 1997,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "The decline of coal, steel and car assembly left a services-heavy economy: industry fell from 26.0% of GDP in 1995 to 18.6% in 2025.",
+   "fr": "Le déclin du charbon, de l’acier et de l’automobile a laissé une économie de services : l’industrie est passée de 26,0 % du PIB en 1995 à 18,6 % en 2025."
+  }
+ },
+ "BGD": {
+  "events": [
+   {
+    "en": "Independence war and the 1974 famine leave a devastated, farm-based economy: industry is just 6.1% of GDP in 1972.",
+    "fr": "La guerre d’indépendance puis la famine de 1974 laissent une économie dévastée et essentiellement agricole : l’industrie ne pèse que 6,1 % du PIB en 1972.",
+    "from": 1971,
+    "to": 1974
+   },
+   {
+    "en": "The first export garment factories open in the late 1970s and grow under Multi-Fibre Arrangement quotas; manufacturing rises from 13.2% of GDP (1990) to 15.9% (1995).",
+    "fr": "Les premières usines de confection pour l’export ouvrent à la fin des années 1970 et prospèrent sous les quotas de l’Accord multifibres ; l’industrie manufacturière passe de 13,2 % du PIB (1990) à 15,9 % (1995).",
+    "from": 1978,
+    "to": 2004
+   },
+   {
+    "en": "Quotas end in 2005, yet low wages keep garment exports growing: manufacturing rises from 14.7% of GDP (2005) to 20.6% (2020), and industry’s share of jobs peaks at 20.8% in 2013.",
+    "fr": "Les quotas disparaissent en 2005, mais les bas salaires maintiennent l’essor de la confection : l’industrie manufacturière passe de 14,7 % du PIB (2005) à 20,6 % (2020), l’emploi industriel culmine à 20,8 % en 2013.",
+    "from": 2005,
+    "to": 2020
+   },
+   {
+    "en": "After the Rana Plaza collapse (2013), factory safety accords follow; industry keeps gaining in GDP (26.8% in 2015, 34% in 2025) while its share of jobs eases to 18%.",
+    "fr": "Après l’effondrement du Rana Plaza (2013), des accords sur la sécurité des usines sont signés ; l’industrie gagne encore du poids dans le PIB (26,8 % en 2015, 34 % en 2025) mais recule à 18 % des emplois.",
+    "from": 2013,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Born in 1971 as a largely agrarian economy, Bangladesh became a major garment exporter: manufacturing reached 22.4% of GDP in 2025, while farming still employs 44% of workers.",
+   "fr": "Pays surtout agricole à sa naissance en 1971, le Bangladesh est devenu un grand exportateur de vêtements : l’industrie manufacturière atteint 22,4 % du PIB en 2025 ; l’agriculture emploie 44 % des actifs."
+  }
+ },
+ "BRA": {
+  "events": [
+   {
+    "en": "The Second National Development Plan (1974) invests heavily in steel, petrochemicals and capital goods → industry reaches its peak of 46.6% of GDP in 1984.",
+    "fr": "Le IIe Plan national de développement (1974) investit massivement dans l’acier, la pétrochimie et les biens d’équipement → l’industrie culmine à 46,6 % du PIB en 1984.",
+    "from": 1974,
+    "to": 1984
+   },
+   {
+    "en": "Debt crisis and hyperinflation, then trade opening from 1990 and the 1994 Real Plan → the secondary share falls from 43.5% of GDP in 1985 to 23.4% in 1995; manufacturing from 32.4% to 14.5%.",
+    "fr": "Crise de la dette et hyperinflation, puis ouverture commerciale dès 1990 et plan Real de 1994 → le secondaire passe de 43,5 % du PIB en 1985 à 23,4 % en 1995, le manufacturier de 32,4 % à 14,5 %.",
+    "from": 1982,
+    "to": 1995
+   },
+   {
+    "en": "Mechanised, export-oriented agribusiness raises output with fewer workers → agriculture falls from 16.1% to 7.6% of jobs, yet its GDP share edges up from 4.1% in 2010 to 6.1% in 2025.",
+    "fr": "Un agronégoce mécanisé et exportateur produit plus avec moins de bras → l’agriculture passe de 16,1 % à 7,6 % des emplois, mais sa part du PIB remonte de 4,1 % en 2010 à 6,1 % en 2025.",
+    "from": 1991,
+    "to": 2025
+   },
+   {
+    "en": "Commodity supercycle boosts soy, iron ore and oil exports and a strong real hurts factories → manufacturing falls from 14.7% of GDP in 2005 to 10.5% in 2015.",
+    "fr": "Le super-cycle des matières premières dope soja, minerai de fer et pétrole, et un real fort pénalise les usines → le manufacturier passe de 14,7 % du PIB en 2005 à 10,5 % en 2015.",
+    "from": 2003,
+    "to": 2015
+   },
+   {
+    "en": "Commodity price slump and deep recession → industry falls to 19.4% of GDP in 2015, while services rise to 62.3%.",
+    "fr": "Chute des cours des matières premières et profonde récession → l’industrie tombe à 19,4 % du PIB en 2015, et les services montent à 62,3 %.",
+    "from": 2014,
+    "to": 2016
+   }
+  ],
+  "summary": {
+   "en": "Brazil industrialised fast until the early 1980s, then deindustrialised through debt crisis and trade opening; agribusiness and mining now drive exports while services dominate.",
+   "fr": "Industrialisé à marche forcée jusqu’au début des années 1980, le Brésil s’est ensuite désindustrialisé ; agronégoce et mines tirent les exportations, les services dominent."
+  }
+ },
+ "CAN": {
+  "events": [
+   {
+    "en": "Free trade with the US (1989), extended to Mexico by NAFTA (1994), integrates the car industry across borders; manufacturing peaks at 17.4% of GDP in 1999.",
+    "fr": "Le libre-échange avec les États-Unis (1989), élargi au Mexique par l’ALENA (1994), intègre l’industrie automobile par-delà les frontières ; le manufacturier culmine à 17,4 % du PIB en 1999.",
+    "from": 1989,
+    "to": 1994
+   },
+   {
+    "en": "Commodity boom: oil sands investment surges and a strong Canadian dollar, at par with the US dollar in 2007, squeezes exporters; with the 2009 car industry crisis, manufacturing falls from 17.3% of GDP in 2000 to 10.3% in 2010.",
+    "fr": "Boom des sables bitumineux : le dollar canadien, à parité avec le dollar américain en 2007, pénalise les exportateurs et, avec la crise automobile de 2009, le manufacturier tombe de 17,3 % du PIB en 2000 à 10,3 % en 2010.",
+    "from": 2003,
+    "to": 2009
+   },
+   {
+    "en": "Oil prices collapse and oil sands projects are cut back; industry's share of GDP drops to 24.8% in 2015 and services gain ground.",
+    "fr": "Effondrement des cours du pétrole et coupes dans les projets de sables bitumineux : la part de l’industrie tombe à 24,8 % du PIB en 2015, au profit des services.",
+    "from": 2014,
+    "to": 2016
+   },
+   {
+    "en": "Covid-19 and a brief oil price crash push industry to a low of 22.7% of GDP in 2020; the energy price surge after Russia invades Ukraine lifts it back to 27.4% in 2022.",
+    "fr": "Le Covid-19 et la chute passagère du pétrole ramènent l’industrie à un plancher de 22,7 % du PIB en 2020 ; la flambée de l’énergie après l’invasion de l’Ukraine par la Russie la fait remonter à 27,4 % en 2022.",
+    "from": 2020,
+    "to": 2022
+   }
+  ],
+  "summary": {
+   "en": "Services dominate; industry's GDP share swings with oil sands output and prices, while manufacturing shrank from 17.3% of GDP in 2000 to 9.3% in 2022.",
+   "fr": "Les services dominent ; l’industrie suit les prix du pétrole des sables bitumineux, et le manufacturier est passé de 17,3 % du PIB en 2000 à 9,3 % en 2022."
+  }
+ },
+ "CHE": {
+  "events": [
+   {
+    "en": "Cheap quartz watches from Japan and Hong Kong devastate Swiss mechanical watchmaking; the industry consolidates, and the Swatch (1983) starts a recovery built on higher-value products.",
+    "fr": "Les montres à quartz bon marché du Japon et de Hong Kong ravagent l’horlogerie mécanique suisse ; le secteur se concentre, et la Swatch (1983) amorce une reprise fondée sur des produits à plus forte valeur.",
+    "from": 1975,
+    "to": 1983
+   },
+   {
+    "en": "A property crash followed by years of stagnation hits construction and traditional industry; industry falls from 30.1% of GDP in 1990 to 25.4% in 2000.",
+    "fr": "Un krach immobilier suivi d’années de stagnation frappe la construction et l’industrie traditionnelle : l’industrie passe de 30,1 % du PIB en 1990 à 25,4 % en 2000.",
+    "from": 1991,
+    "to": 2000
+   },
+   {
+    "en": "Ciba-Geigy and Sandoz merge to form Novartis; with Roche, pharmaceuticals become the top export, keeping manufacturing around 18–19% of GDP, with a peak of 20.7% in 2021.",
+    "fr": "Ciba-Geigy et Sandoz fusionnent pour former Novartis ; avec Roche, la pharmacie devient le premier poste d’exportation et maintient le manufacturier vers 18-19 % du PIB, avec un pic à 20,7 % en 2021.",
+    "from": 1996,
+    "to": 0
+   },
+   {
+    "en": "The Swiss National Bank scraps its minimum exchange rate against the euro; the franc jumps, squeezing exporters, and manufacturing dips to 17.9% of GDP before recovering to 19.0% in 2020.",
+    "fr": "La Banque nationale suisse abandonne le taux plancher face à l’euro ; le franc s’envole, pénalisant les exportateurs, et le manufacturier tombe à 17,9 % du PIB avant de remonter à 19,0 % en 2020.",
+    "from": 2015,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "Industry has held near 25% of GDP since 2000 thanks to pharmaceuticals, precision instruments and watches, while banking and insurance anchor a large services sector.",
+   "fr": "L’industrie se maintient autour de 25 % du PIB depuis 2000 grâce à la pharmacie, aux instruments de précision et à l’horlogerie, tandis que banques et assurances ancrent un vaste tertiaire."
+  }
+ },
+ "CHL": {
+  "events": [
+   {
+    "en": "Copper mines nationalised (1971) and copper prices surge in 1973–1974 → the secondary sector peaks at 47.6% of GDP in 1974.",
+    "fr": "Nationalisation du cuivre (1971) et envolée de son cours en 1973-1974 → le secondaire culmine à 47,6 % du PIB en 1974.",
+    "from": 1971,
+    "to": 1974
+   },
+   {
+    "en": "Shock stabilisation and unilateral tariff cuts to a low uniform rate by 1979 → manufacturing falls from its 28.9% peak of GDP in 1974 to 19.8% in 1975.",
+    "fr": "Stabilisation brutale et baisse unilatérale des droits de douane jusqu’à un taux uniforme et bas en 1979 → le manufacturier passe de 28,9 % du PIB en 1974 à 19,8 % en 1975.",
+    "from": 1975,
+    "to": 1979
+   },
+   {
+    "en": "Export model built on mining, agri-food and services → agriculture falls from 16.7% to 6.1% of jobs and services rise from 56.5% to 72.4%; manufacturing drops to 9.0% of GDP.",
+    "fr": "Modèle exportateur fondé sur les mines, l’agroalimentaire et les services → l’agriculture passe de 16,7 % à 6,1 % des emplois, les services de 56,5 % à 72,4 % ; le manufacturier tombe à 9,0 % du PIB.",
+    "from": 1991,
+    "to": 2025
+   },
+   {
+    "en": "Commodity supercycle sends copper prices to records → the secondary share rebounds from 27.8% of GDP in 2000 to 34.0% in 2005.",
+    "fr": "Le super-cycle des matières premières porte le cuivre à des records → le secondaire remonte de 27,8 % du PIB en 2000 à 34,0 % en 2005.",
+    "from": 2003,
+    "to": 2011
+   },
+   {
+    "en": "Copper prices fall as Chinese demand slows → the secondary share drops to its low of 26.8% of GDP in 2016.",
+    "fr": "Recul du cuivre avec le ralentissement de la demande chinoise → le secondaire tombe à son plus bas, 26,8 % du PIB en 2016.",
+    "from": 2013,
+    "to": 2016
+   }
+  ],
+  "summary": {
+   "en": "Copper keeps Chile's industry share high and volatile, while manufacturing has shrunk since the 1970s liberalisation and services now employ most workers.",
+   "fr": "Le cuivre rend la part industrielle chilienne élevée et volatile ; le manufacturier recule depuis la libéralisation des années 1970 et les services emploient la majorité des actifs."
+  }
+ },
+ "CHN": {
+  "events": [
+   {
+    "en": "Great Leap Forward: a forced industrial push lifts industry to 44% of GDP in 1960; its collapse and the famine bring it down to 35% by 1965 as agriculture’s share rises.",
+    "fr": "Grand Bond en avant : l’industrialisation forcée porte l’industrie à 44 % du PIB en 1960 ; son échec et la famine la ramènent à 35 % en 1965, tandis que l’agriculture remonte.",
+    "from": 1958,
+    "to": 1962
+   },
+   {
+    "en": "Reform and opening: household farming raises rural incomes and markets reopen; services climb from 22.4% of GDP (1980) to 32.5% (1990) while industry eases from 48% to 41%.",
+    "fr": "Réforme et ouverture : la responsabilité familiale dans l’agriculture et le retour du marché relancent le commerce ; les services passent de 22,4 % du PIB (1980) à 32,5 % (1990), l’industrie de 48 % à 41 %.",
+    "from": 1978,
+    "to": 0
+   },
+   {
+    "en": "WTO accession turns China into the world’s factory: manufacturing peaks at 32% of GDP in 2006 and industry’s share of jobs rises from 21.4% (2002) to 28.7% (2010).",
+    "fr": "L’adhésion à l’OMC fait de la Chine l’atelier du monde : l’industrie manufacturière culmine à 32 % du PIB en 2006 et la part de l’industrie dans l’emploi passe de 21,4 % (2002) à 28,7 % (2010).",
+    "from": 2001,
+    "to": 2010
+   },
+   {
+    "en": "Rebalancing towards consumption and cuts to industrial overcapacity: services overtake industry in the early 2010s and reach 57.7% of GDP in 2025, while industry falls to 35.6%.",
+    "fr": "Rééquilibrage vers la consommation et réduction des surcapacités industrielles : les services dépassent l’industrie au début des années 2010 et atteignent 57,7 % du PIB en 2025, l’industrie revenant à 35,6 %.",
+    "from": 2012,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Industry dominated under central planning (48% of GDP in 1980); after the 1978 reforms farm jobs fell from 60% to 22%, and services became the largest sector.",
+   "fr": "L’industrie dominait sous la planification (48 % du PIB en 1980) ; après les réformes de 1978, l’agriculture passe de 60 % à 22 % des emplois et les services deviennent le premier secteur."
+  }
+ },
+ "COL": {
+  "events": [
+   {
+    "en": "The Caño Limón oilfield (producing from 1986) and Cerrejón coal mine come on stream → the secondary sector peaks at 36.9% of GDP in 1989.",
+    "fr": "Mise en production du gisement de Caño Limón (dès 1986) et de la mine de charbon du Cerrejón → le secondaire culmine à 36,9 % du PIB en 1989.",
+    "from": 1983,
+    "to": 1989
+   },
+   {
+    "en": "Collapse of the International Coffee Agreement quotas (1989) drives coffee prices down → agriculture falls from 17.1% of GDP in 1990 to 8.3% in 2000.",
+    "fr": "Fin des quotas de l’Accord international sur le café (1989) et chute des cours → l’agriculture passe de 17,1 % du PIB en 1990 à 8,3 % en 2000.",
+    "from": 1989,
+    "to": 2000
+   },
+   {
+    "en": "Trade opening (apertura) from 1990, then the 1999 recession → manufacturing falls from 18.0% of GDP in 1990 to 13.9% in 2000, and industry from 25.1% of jobs in 1995 to 18.8% in 1999.",
+    "fr": "Ouverture commerciale (apertura) dès 1990, puis récession de 1999 → le manufacturier passe de 18,0 % du PIB en 1990 à 13,9 % en 2000, l’industrie de 25,1 % des emplois en 1995 à 18,8 % en 1999.",
+    "from": 1990,
+    "to": 1999
+   },
+   {
+    "en": "Improved security and an oil and coal boom → the secondary share rises from 27.3% of GDP in 2000 to 31.4% in 2010.",
+    "fr": "Amélioration de la sécurité et boom du pétrole et du charbon → le secondaire passe de 27,3 % du PIB en 2000 à 31,4 % en 2010.",
+    "from": 2003,
+    "to": 2013
+   },
+   {
+    "en": "Oil price collapse in 2014, falling oil output and the Covid-19 shock → the secondary share falls to its low of 21.8% of GDP in 2025, while services reach 60.1% in 2020.",
+    "fr": "Chute du pétrole en 2014, baisse de la production et choc du Covid-19 → le secondaire tombe à son plus bas, 21,8 % du PIB en 2025, et les services atteignent 60,1 % en 2020.",
+    "from": 2014,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Colombia moved from a coffee economy to oil, coal and services; manufacturing has declined steadily since the 1970s and services now lead GDP and jobs.",
+   "fr": "La Colombie est passée d’une économie du café au pétrole, au charbon et aux services ; le manufacturier décline depuis les années 1970 et les services dominent PIB et emploi."
+  }
+ },
+ "DEU": {
+  "events": [
+   {
+    "en": "Reunification exposes East German factories to Western competition; the Treuhand privatises or closes them, and industry falls from 33.3% of GDP in 1991 to 29.3% in 1995, manufacturing from 24.6% to 20.2%.",
+    "fr": "La réunification expose les usines est-allemandes à la concurrence occidentale ; la Treuhand les privatise ou les ferme, et l’industrie passe de 33,3 % du PIB en 1991 à 29,3 % en 1995, le manufacturier de 24,6 % à 20,2 %.",
+    "from": 1990,
+    "to": 1995
+   },
+   {
+    "en": "Firms shift part of their production to lower-cost central Europe and services expand; industry's share of jobs falls from 36.0% in 1995 to 29.8% in 2005.",
+    "fr": "Les entreprises transfèrent une partie de la production vers l’Europe centrale, moins coûteuse, et les services progressent : la part de l’industrie dans l’emploi passe de 36,0 % en 1995 à 29,8 % en 2005.",
+    "from": 1995,
+    "to": 2005
+   },
+   {
+    "en": "The Hartz labour-market reforms (2003–2005), wage restraint and booming exports to China keep manufacturing around 20% of GDP from 2000 to 2015, unusually high for a rich economy.",
+    "fr": "Réformes Hartz du marché du travail (2003-2005), modération salariale et essor des exportations vers la Chine maintiennent le manufacturier autour de 20 % du PIB de 2000 à 2015, un niveau rare pour un pays riche.",
+    "from": 2003,
+    "to": 2015
+   },
+   {
+    "en": "World trade collapses during the financial crisis; industry drops to a low of 23.8% of GDP, but short-time work (Kurzarbeit) preserves factory jobs and the share rebounds to 26.0% in 2010.",
+    "fr": "Le commerce mondial s’effondre pendant la crise financière : l’industrie tombe à 23,8 % du PIB, son plus bas, mais le chômage partiel (Kurzarbeit) préserve les emplois et la part remonte à 26,0 % en 2010.",
+    "from": 2009,
+    "to": 0
+   },
+   {
+    "en": "The loss of cheap Russian gas raises costs for chemicals and other energy-intensive industries, and carmakers face the electric shift and Chinese competition; manufacturing slips from 18.5% of GDP in 2020 to 17.6% in 2025.",
+    "fr": "La perte du gaz russe bon marché renchérit l’énergie pour la chimie et les industries énergivores, et l’automobile affronte l’électrification et la concurrence chinoise : le manufacturier passe de 18,5 % du PIB en 2020 à 17,6 % en 2025.",
+    "from": 2022,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Germany kept an unusually large industrial base, with manufacturing still near 18% of GDP in 2025, though industry's share of jobs fell from 38% in 1991 to 26%.",
+   "fr": "L’Allemagne garde une base industrielle exceptionnelle : le manufacturier pèse encore près de 18 % du PIB en 2025, mais l’industrie est passée de 38 % à 26 % des emplois depuis 1991."
+  }
+ },
+ "DZA": {
+  "events": [
+   {
+    "en": "Nationalisation of oil and gas interests, with Sonatrach taking majority control → hydrocarbon rents fund state-led heavy industrialisation.",
+    "fr": "Nationalisation des hydrocarbures, Sonatrach prenant le contrôle majoritaire → la rente pétrolière et gazière finance une industrialisation lourde pilotée par l’État.",
+    "from": 1971,
+    "to": 0
+   },
+   {
+    "en": "Oil price collapse → falling export revenues lead to a debt crisis and, in 1994, an IMF-backed adjustment programme; sector data for GDP begin only in 1999.",
+    "fr": "Effondrement du prix du pétrole → la chute des recettes mène à une crise de la dette puis, en 1994, à un programme d’ajustement soutenu par le FMI ; les données sectorielles du PIB ne débutent qu’en 1999.",
+    "from": 1986,
+    "to": 1994
+   },
+   {
+    "en": "High oil and gas prices fund large public investment programmes → the secondary sector peaks at 53.3% of GDP in 2000; industry's share of jobs rises from 24.7% to 30.4%, farming's falls from 22.0% to 12.0%.",
+    "fr": "Les prix élevés des hydrocarbures financent de vastes plans d’investissement public → le secondaire culmine à 53,3 % du PIB en 2000 ; l’industrie passe de 24,7 % à 30,4 % des emplois, l’agriculture de 22,0 % à 12,0 %.",
+    "from": 2000,
+    "to": 2010
+   },
+   {
+    "en": "Oil price collapse, then the Covid-19 slump → the secondary share falls from 45.2% of GDP in 2010 to its low of 30.0% in 2020, while services reach 52.8%.",
+    "fr": "Effondrement du pétrole puis choc du Covid-19 → le secondaire passe de 45,2 % du PIB en 2010 à son plus bas, 30,0 % en 2020, et les services atteignent 52,8 %.",
+    "from": 2014,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "Hydrocarbons dominate Algeria's industry and exports, so the secondary share moves with oil and gas prices; farming's share of jobs has fallen sharply since 2000.",
+   "fr": "Les hydrocarbures dominent l’industrie et les exportations algériennes : la part du secondaire suit les prix du pétrole et du gaz ; l’agriculture a perdu beaucoup d’emplois depuis 2000."
+  }
+ },
+ "EGY": {
+  "events": [
+   {
+    "en": "Nasser's 1961 nationalisations launch state-led industrialisation → the secondary sector rises from 21.6% of GDP in 1960 to 24.1% in 1965.",
+    "fr": "Les nationalisations de Nasser en 1961 lancent une industrialisation dirigée par l’État → le secondaire passe de 21,6 % du PIB en 1960 à 24,1 % en 1965.",
+    "from": 1961,
+    "to": 1965
+   },
+   {
+    "en": "Sadat's open-door policy (Infitah), recovery of the Sinai oilfields and high oil prices → the secondary share climbs from its 20.5% low in 1973 to 33.4% in 1980; agriculture falls from 27.7% to 16.6%.",
+    "fr": "Ouverture économique de Sadate (Infitah), récupération des champs pétroliers du Sinaï et pétrole cher → le secondaire passe de 20,5 % du PIB en 1973 à 33,4 % en 1980 ; l’agriculture de 27,7 % à 16,6 %.",
+    "from": 1974,
+    "to": 1980
+   },
+   {
+    "en": "IMF- and World Bank-backed reform programme with privatisation → services rise from 38.4% to 47.6% of jobs, while agriculture falls from 39.7% to 30.5%.",
+    "fr": "Programme de réformes soutenu par le FMI et la Banque mondiale, avec privatisations → les services passent de 38,4 % à 47,6 % des emplois, l’agriculture de 39,7 % à 30,5 %.",
+    "from": 1991,
+    "to": 2000
+   },
+   {
+    "en": "Gas output and LNG exports grow from 2005 → the secondary share peaks at 39.9% of GDP in 2014; after the 2014 oil price fall, services peak at 54.5% in 2016.",
+    "fr": "Hausse de la production gazière et exportations de GNL dès 2005 → le secondaire culmine à 39,9 % du PIB en 2014 ; après la chute du pétrole de 2014, les services culminent à 54,5 % en 2016.",
+    "from": 2005,
+    "to": 2016
+   },
+   {
+    "en": "State-led megaprojects, including a new administrative capital and road networks → industry's share of jobs rises from 25.3% to 29.4%, while agriculture's falls to 17.5%.",
+    "fr": "Grands projets publics, dont une nouvelle capitale administrative et des réseaux routiers → l’industrie passe de 25,3 % à 29,4 % des emplois, et l’agriculture tombe à 17,5 %.",
+    "from": 2015,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Egypt moved from a farm economy to services and industry, with oil, gas and the Suez Canal driving swings; agriculture's share of jobs has more than halved since 1991.",
+   "fr": "D’économie agricole, l’Égypte est devenue une économie de services et d’industrie, rythmée par le pétrole, le gaz et le canal de Suez ; l’emploi agricole a fondu depuis 1991."
+  }
+ },
+ "ESP": {
+  "events": [
+   {
+    "en": "EEC accession brings foreign investment in car plants and EU farm and regional funds; farms modernise and shed labour, cutting agriculture's share of jobs from 10.6% in 1991 to 6.7% in 2000.",
+    "fr": "L’adhésion à la CEE attire les investissements étrangers dans l’automobile et apporte les fonds agricoles et régionaux européens ; les exploitations se modernisent, et l’agriculture passe de 10,6 % des emplois en 1991 à 6,7 % en 2000.",
+    "from": 1986,
+    "to": 2000
+   },
+   {
+    "en": "Cheap credit after euro entry fuels a housing boom; construction keeps industry at 28.0% of GDP in 2000 and 27.1% in 2005, even as manufacturing shrinks from 16.3% to 13.5%.",
+    "fr": "Le crédit bon marché après l’entrée dans l’euro alimente un boom immobilier : la construction maintient l’industrie à 28,0 % du PIB en 2000 et 27,1 % en 2005, alors que le manufacturier recule de 16,3 % à 13,5 %.",
+    "from": 1997,
+    "to": 2007
+   },
+   {
+    "en": "The housing bubble bursts, followed by the euro crisis and a 2012 bank rescue; construction collapses and industry's share of jobs falls from 29.6% in 2005 to a low of 19.2% in 2014.",
+    "fr": "L’éclatement de la bulle immobilière, puis la crise de l’euro et le sauvetage bancaire de 2012 : la construction s’effondre et la part de l’industrie dans l’emploi passe de 29,6 % en 2005 à 19,2 % en 2014.",
+    "from": 2008,
+    "to": 2013
+   },
+   {
+    "en": "A recovery led by exports and record tourism keeps services near 68% of GDP; Covid-19 hits tourism hard in 2020, yet services' share of jobs reaches 76.8% in 2025.",
+    "fr": "Une reprise tirée par les exportations et un tourisme record maintient les services vers 68 % du PIB ; le Covid-19 frappe durement le tourisme en 2020, mais les services atteignent 76,8 % des emplois en 2025.",
+    "from": 2014,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Spain moved from a construction-heavy boom to a services economy after the 2008 housing crash; farming's share of jobs fell from 10.6% in 1991 to 3.4% in 2025.",
+   "fr": "Après le krach immobilier de 2008, l’Espagne a basculé de la construction vers les services ; l’agriculture est passée de 10,6 % des emplois en 1991 à 3,4 % en 2025."
+  }
+ },
+ "ETH": {
+  "events": [
+   {
+    "en": "The Derg nationalises rural land and large firms (1975) and runs a command economy → agriculture stays dominant, at 53.4% of GDP in 1981, with industry at 8.5%.",
+    "fr": "Le Derg nationalise les terres et les grandes entreprises (1975) et impose une économie planifiée → l’agriculture reste dominante, à 53,4 % du PIB en 1981, l’industrie à 8,5 %.",
+    "from": 1975,
+    "to": 1991
+   },
+   {
+    "en": "Civil war ends with the fall of the Derg, leaving industry disrupted → agriculture peaks at 62.3% of GDP and the secondary sector hits its low of 5.9% in 1992.",
+    "fr": "La guerre civile s’achève avec la chute du Derg, laissant l’industrie désorganisée → l’agriculture culmine à 62,3 % du PIB et le secondaire tombe à 5,9 % en 1992.",
+    "from": 1991,
+    "to": 1992
+   },
+   {
+    "en": "Rapid growth draws workers out of farming → agriculture falls from 78.1% to 60.1% of jobs, while services rise from 14.5% to 33.4%.",
+    "fr": "Une croissance rapide tire la main-d’œuvre hors des champs → l’agriculture passe de 78,1 % à 60,1 % des emplois, tandis que les services montent de 14,5 % à 33,4 %.",
+    "from": 2005,
+    "to": 2025
+   },
+   {
+    "en": "Growth and Transformation Plans fund dams (including the Grand Ethiopian Renaissance Dam), railways, roads and housing → the secondary sector rises from 9.4% of GDP to 27.8%, mostly construction, as manufacturing stays near 4–5%.",
+    "fr": "Les plans de croissance et de transformation financent barrages (dont le Grand barrage de la Renaissance), rail, routes et logements → le secondaire passe de 9,4 % à 27,8 % du PIB, surtout grâce au BTP ; le manufacturier stagne.",
+    "from": 2010,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Long one of the world's most agrarian economies, Ethiopia saw industry's share of GDP triple after 2010 through state-led construction, while most people still farm.",
+   "fr": "Longtemps très agricole, l’Éthiopie a vu la part de l’industrie dans le PIB tripler après 2010 grâce aux chantiers publics, mais la majorité des actifs travaille encore la terre."
+  }
+ },
+ "FRA": {
+  "events": [
+   {
+    "en": "Trente Glorieuses: farm mechanisation and the Common Agricultural Policy (1962) move workers off the land into factories and offices; agriculture falls from 10.1% of GDP in 1960 to 6.3% in 1970.",
+    "fr": "Trente Glorieuses : la mécanisation agricole et la politique agricole commune (1962) poussent les actifs des champs vers les usines et les bureaux ; l’agriculture passe de 10,1 % du PIB en 1960 à 6,3 % en 1970.",
+    "from": 1945,
+    "to": 1973
+   },
+   {
+    "en": "The 1973 and 1979 oil shocks and competition from newly industrialised Asia force the restructuring of steel, coal, textiles and shipbuilding; industry falls from 28.5% of GDP in 1975 to 24.3% in 1990.",
+    "fr": "Les chocs pétroliers de 1973 et 1979 et la concurrence de l’Asie nouvellement industrialisée imposent la restructuration de la sidérurgie, des charbonnages, du textile et des chantiers navals : l’industrie passe de 28,5 % du PIB en 1975 à 24,3 % en 1990.",
+    "from": 1974,
+    "to": 1990
+   },
+   {
+    "en": "The single market (1993), the euro (1999) and China's WTO entry (2001) spur offshoring, while firms outsource services once done in-house; manufacturing falls from 14.4% of GDP in 2000 to 10.3% in 2010.",
+    "fr": "Marché unique (1993), euro (1999) et entrée de la Chine à l’OMC (2001) accélèrent les délocalisations, et les entreprises externalisent des services autrefois internes : le manufacturier passe de 14,4 % du PIB en 2000 à 10,3 % en 2010.",
+    "from": 1993,
+    "to": 2010
+   },
+   {
+    "en": "The global financial crisis hits manufacturing and construction; industry's share of jobs falls from 24.1% in 2005 to 22.3% in 2010, then to 20.4% in 2015.",
+    "fr": "La crise financière mondiale frappe l’industrie et le bâtiment : leur part dans l’emploi passe de 24,1 % en 2005 à 22,3 % en 2010, puis à 20,4 % en 2015.",
+    "from": 2008,
+    "to": 2009
+   },
+   {
+    "en": "Covid-19, then the 2022 energy crisis with many nuclear reactors offline, push industry to a low of 15.8% of GDP in 2022; the France 2030 plan (2021) targets reindustrialisation, and the share edges up to 16.8% in 2025.",
+    "fr": "Le Covid-19 puis la crise énergétique de 2022, avec de nombreux réacteurs nucléaires à l’arrêt, ramènent l’industrie à 15,8 % du PIB ; le plan France 2030 (2021) vise la réindustrialisation, et la part remonte à 16,8 % en 2025.",
+    "from": 2020,
+    "to": 2022
+   }
+  ],
+  "summary": {
+   "en": "From farms to services: agriculture fell from 10% of GDP in 1960 to under 2% in 2025, industry from 31% to 17%, while services rose from 47% to 71%.",
+   "fr": "De 1960 à 2025, l’agriculture passe de 10 % à moins de 2 % du PIB, l’industrie de 31 % à 17 %, les services de 47 % à 71 %."
+  }
+ },
+ "GBR": {
+  "events": [
+   {
+    "en": "Privatisations (British Telecom 1984, British Gas 1986, British Steel 1988) and pit closures after the 1984–85 miners' strike shrink coal, steel and shipbuilding; manufacturing employment falls sharply.",
+    "fr": "Privatisations (British Telecom en 1984, British Gas en 1986, British Steel en 1988) et fermetures de puits après la grève des mineurs de 1984-1985 : charbon, acier et chantiers navals déclinent, et l’emploi industriel chute.",
+    "from": 1979,
+    "to": 1990
+   },
+   {
+    "en": "The Big Bang deregulates the London Stock Exchange; the City draws global banks and finance becomes a main engine of growth, as services' share of jobs climbs from 66.8% in 1991 to 79.6% in 2010.",
+    "fr": "Le « Big Bang » dérégule la Bourse de Londres ; la City attire les banques mondiales et la finance devient un moteur de croissance, tandis que les services passent de 66,8 % des emplois en 1991 à 79,6 % en 2010.",
+    "from": 1986,
+    "to": 0
+   },
+   {
+    "en": "North Sea oil output peaks in 1999 and then declines, while factories face Asian competition; industry falls from 22.7% of GDP in 2000 to 18.6% in 2010 and manufacturing from 13.3% to 9.4%.",
+    "fr": "La production pétrolière de la mer du Nord culmine en 1999 puis décline, et les usines subissent la concurrence asiatique : l’industrie passe de 22,7 % du PIB en 2000 à 18,6 % en 2010, le manufacturier de 13,3 % à 9,4 %.",
+    "from": 1999,
+    "to": 2010
+   },
+   {
+    "en": "The global financial crisis forces state rescues of RBS and Lloyds; finance contracts, but services still edge up to 71.0% of GDP in 2010 because industry shrinks faster.",
+    "fr": "La crise financière mondiale impose le sauvetage public de RBS et de Lloyds ; la finance se contracte, mais les services montent tout de même à 71,0 % du PIB en 2010, car l’industrie recule plus vite.",
+    "from": 2008,
+    "to": 2009
+   },
+   {
+    "en": "The UK votes in 2016 to leave the EU and exits in 2020, adding trade frictions with its main export market; manufacturing keeps slipping, to 7.7% of GDP in 2025.",
+    "fr": "Le Royaume-Uni vote en 2016 pour quitter l’UE et en sort en 2020, ce qui complique les échanges avec son principal débouché ; le manufacturier continue de reculer, à 7,7 % du PIB en 2025.",
+    "from": 2016,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "An early deindustrialiser: industry fell from 27.6% of GDP in 1990 to 16.5% in 2025, and from 31% to 16% of jobs, as finance and business services expanded.",
+   "fr": "Pionnier de la désindustrialisation : l’industrie est passée de 27,6 % du PIB en 1990 à 16,5 % en 2025, et de 31 % à 16 % des emplois, au profit de la finance."
+  }
+ },
+ "GRC": {
+  "events": [
+   {
+    "en": "EEC accession brings Common Agricultural Policy subsidies that sustain many small farms; agriculture still employs 19.7% of workers in 1991.",
+    "fr": "L’adhésion à la CEE apporte les aides de la politique agricole commune, qui font vivre de nombreuses petites exploitations ; l’agriculture emploie encore 19,7 % des actifs en 1991.",
+    "from": 1981,
+    "to": 0
+   },
+   {
+    "en": "Euro entry (2001) brings cheap credit and the Athens Olympics (2004) drive a building boom; industry peaks at 20.5% of GDP in 2003, while agriculture falls to 11.3% of jobs in 2005.",
+    "fr": "L’entrée dans l’euro (2001) apporte un crédit bon marché et les Jeux olympiques d’Athènes (2004) dopent le bâtiment : l’industrie culmine à 20,5 % du PIB en 2003, et l’agriculture tombe à 11,3 % des emplois en 2005.",
+    "from": 2001,
+    "to": 2004
+   },
+   {
+    "en": "The sovereign debt crisis and three bailout programmes bring deep austerity; construction collapses, industry's share of jobs falls from 19.7% in 2010 to 15.0% in 2015, and some workers return to farming.",
+    "fr": "La crise de la dette souveraine et trois programmes d’aide imposent une austérité sévère ; la construction s’effondre, l’industrie passe de 19,7 % des emplois en 2010 à 15,0 % en 2015, et certains actifs retournent à la terre.",
+    "from": 2010,
+    "to": 2018
+   },
+   {
+    "en": "Covid-19 hits tourism in 2020; the recovery, supported by EU recovery funds, lifts industry from 14.3% of GDP in 2020 to 15.2% in 2025 and manufacturing to 9.1%.",
+    "fr": "Le Covid-19 frappe le tourisme en 2020 ; la reprise, soutenue par les fonds de relance européens, porte l’industrie de 14,3 % du PIB en 2020 à 15,2 % en 2025, et le manufacturier à 9,1 %.",
+    "from": 2020,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Tourism, shipping and trade dominate; the 2010s debt crisis gutted construction, while agriculture still employs about one worker in ten (10.7% in 2025).",
+   "fr": "Tourisme, transport maritime et commerce dominent ; la crise de la dette des années 2010 a laminé la construction, et l’agriculture emploie encore environ un actif sur dix (10,7 % en 2025)."
+  }
+ },
+ "HKG": {
+  "events": [
+   {
+    "en": "Capital and workers arriving from mainland China build export industries in textiles, garments, toys and electronics, making Hong Kong a manufacturing hub.",
+    "fr": "Capitaux et travailleurs venus de Chine continentale créent des industries d’exportation (textile, confection, jouets, électronique) : Hong Kong devient un centre manufacturier.",
+    "from": 1950,
+    "to": 1979
+   },
+   {
+    "en": "China’s reform and the Shenzhen special economic zone (1980) draw factories to the Pearl River Delta; Hong Kong turns to trade, logistics and finance, and industrial jobs fall from 35.3% (1991) to 21% (2000).",
+    "fr": "La réforme chinoise et la zone économique spéciale de Shenzhen (1980) attirent les usines dans le delta des Perles ; Hong Kong se tourne vers le négoce et la finance, et l’emploi industriel passe de 35,3 % (1991) à 21 % (2000).",
+    "from": 1978,
+    "to": 2000
+   },
+   {
+    "en": "Handover to China on 1 July 1997, then the Asian financial crisis and a long property slump: construction contracts and industry falls from 12.1% of GDP (2000) to 8.5% (2005).",
+    "fr": "Rétrocession à la Chine le 1er juillet 1997, puis crise asiatique et long repli de l’immobilier : le BTP se contracte et l’industrie passe de 12,1 % du PIB (2000) à 8,5 % (2005).",
+    "from": 1997,
+    "to": 2003
+   },
+   {
+    "en": "CEPA trade agreement and individual mainland visitor scheme (2003) boost tourism, retail and finance: services rise from 83.8% of GDP (2000) to a 91.9% peak in 2012; manufacturing falls to 1.7% (2010).",
+    "fr": "L’accord CEPA et l’ouverture aux visiteurs individuels du continent (2003) dopent tourisme, commerce et finance : les services passent de 83,8 % du PIB (2000) à 91,9 % en 2012 ; l’industrie manufacturière tombe à 1,7 % (2010).",
+    "from": 2003,
+    "to": 2012
+   }
+  ],
+  "summary": {
+   "en": "Hong Kong’s factories moved across the border after China opened up: industry fell from 35% of jobs in 1991 to 14%, and services produce about 90% of GDP.",
+   "fr": "Les usines de Hong Kong ont franchi la frontière après l’ouverture chinoise : l’industrie passe de 35 % des emplois en 1991 à 14 % ; les services produisent environ 90 % du PIB."
+  }
+ },
+ "IDN": {
+  "events": [
+   {
+    "en": "Oil price shocks make oil and gas the core of the economy: in 1983 industry is 41.9% of GDP, but manufacturing only 13.4%.",
+    "fr": "Les chocs pétroliers placent le pétrole et le gaz au cœur de l’économie : en 1983, l’industrie pèse 41,9 % du PIB, mais l’industrie manufacturière seulement 13,4 %.",
+    "from": 1973,
+    "to": 1981
+   },
+   {
+    "en": "Oil price collapse (industry falls to 33.8% of GDP in 1986) prompts deregulation and export manufacturing in textiles, footwear and electronics; manufacturing rises to 24.1% by 1995.",
+    "fr": "L’effondrement des cours du pétrole (l’industrie tombe à 33,8 % du PIB en 1986) pousse à déréglementer et à exporter textile, chaussures et électronique ; l’industrie manufacturière atteint 24,1 % en 1995.",
+    "from": 1986,
+    "to": 1996
+   },
+   {
+    "en": "Asian financial crisis and rupiah collapse: services fall to 33.4% of GDP in 2000, and the farm share of jobs rises from 44% (1995) to 45.3% (2000) as workers return to the land.",
+    "fr": "Crise asiatique et effondrement de la roupie : les services tombent à 33,4 % du PIB en 2000 et l’agriculture remonte de 44 % (1995) à 45,3 % des emplois (2000), des actifs retournant à la terre.",
+    "from": 1997,
+    "to": 1998
+   },
+   {
+    "en": "Commodity boom in coal and palm oil lifts industry to a 48.1% peak in 2008; afterwards manufacturing loses weight, from 27.4% of GDP (2005) to 19.9% (2020), and services pass half of jobs.",
+    "fr": "Le boom du charbon et de l’huile de palme porte l’industrie à 48,1 % du PIB en 2008 ; ensuite, l’industrie manufacturière recule de 27,4 % (2005) à 19,9 % (2020) et les services dépassent la moitié des emplois.",
+    "from": 2003,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "An oil and commodity exporter that built a manufacturing base: industry hovers around 40% of GDP, while farm jobs fell from 48% in 1991 to 27% in 2025.",
+   "fr": "Exportateur de pétrole et de matières premières devenu manufacturier : l’industrie oscille autour de 40 % du PIB et l’agriculture passe de 48 % des emplois (1991) à 27 % (2025)."
+  }
+ },
+ "IND": {
+  "events": [
+   {
+    "en": "Green Revolution raises crop yields while planned industrialisation continues: agriculture’s share of GDP falls from its 1967 peak of 42.8% to 27.6% in 1990, industry rises to 27.5%.",
+    "fr": "La révolution verte accroît les rendements tandis que l’industrialisation planifiée se poursuit : l’agriculture recule de 42,8 % du PIB (pic de 1967) à 27,6 % en 1990, l’industrie monte à 27,5 %.",
+    "from": 1966,
+    "to": 1990
+   },
+   {
+    "en": "Balance-of-payments crisis and liberalisation: IT and business services take off; services grow from 37% of GDP (1990) to 42.7% (2000) while industry stays near 27–28%.",
+    "fr": "Crise de la balance des paiements et libéralisation : essor de l’informatique et des services aux entreprises ; les services passent de 37 % du PIB (1990) à 42,7 % (2000), l’industrie restant vers 27-28 %.",
+    "from": 1991,
+    "to": 0
+   },
+   {
+    "en": "Investment and construction boom: industry peaks at 31.1% of GDP in 2008, and its share of jobs rises from 16.3% (2000) to 22.4% (2010) as building sites absorb farm labour.",
+    "fr": "Boom de l’investissement et du BTP : l’industrie culmine à 31,1 % du PIB en 2008 et sa part de l’emploi passe de 16,3 % (2000) à 22,4 % (2010), les chantiers absorbant la main-d’œuvre agricole.",
+    "from": 2003,
+    "to": 2008
+   },
+   {
+    "en": "Make in India (2014) aims to raise manufacturing, but its share slips from 15.6% of GDP in 2015 to 13.5% in 2025.",
+    "fr": "Le programme Make in India (2014) vise à relancer l’industrie manufacturière, mais sa part glisse de 15,6 % du PIB en 2015 à 13,5 % en 2025.",
+    "from": 2014,
+    "to": 2025
+   },
+   {
+    "en": "Covid lockdown sends migrant workers back to villages: agriculture’s share rises to 18.7% of GDP and 44.7% of jobs, up from 40.7% in 2019.",
+    "fr": "Le confinement lié au Covid renvoie les travailleurs migrants dans leurs villages : l’agriculture remonte à 18,7 % du PIB et 44,7 % des emplois, contre 40,7 % en 2019.",
+    "from": 2020,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "Agriculture fell from 42% of GDP in 1960 to 16%, yet still employs about 42% of workers; growth has been led by services rather than manufacturing.",
+   "fr": "L’agriculture est passée de 42 % du PIB en 1960 à 16 %, mais emploie encore environ 42 % des actifs ; la croissance est tirée par les services plutôt que par l’industrie manufacturière."
+  }
+ },
+ "IRL": {
+  "events": [
+   {
+    "en": "EEC membership (1973) and low corporate tax attract US electronics and pharmaceutical plants, while farming modernises; agriculture's share of jobs falls from 13.9% in 1991 to 12.0% in 1995.",
+    "fr": "L’adhésion à la CEE (1973) et une fiscalité des entreprises faible attirent les usines américaines d’électronique et de pharmacie, tandis que l’agriculture se modernise ; sa part dans l’emploi passe de 13,9 % en 1991 à 12,0 % en 1995.",
+    "from": 1973,
+    "to": 1995
+   },
+   {
+    "en": "Celtic Tiger boom: foreign investment lifts manufacturing to 23.1% of GDP in 2000, a construction boom keeps industry at 27.8% of jobs in 2005, and agriculture falls from 5.6% of GDP in 1995 to 1.0%.",
+    "fr": "Années du « Tigre celtique » : l’investissement étranger porte le manufacturier à 23,1 % du PIB en 2000, le boom de la construction maintient l’industrie à 27,8 % des emplois en 2005, et l’agriculture passe de 5,6 % à 1,0 % du PIB.",
+    "from": 1995,
+    "to": 2007
+   },
+   {
+    "en": "The property crash and banking crisis lead to an EU–IMF rescue in 2010; construction collapses, and industry falls from 27.8% of jobs in 2005 to 18.1% in 2010 and to 23.4% of GDP.",
+    "fr": "Le krach immobilier et la crise bancaire mènent au plan d’aide UE-FMI de 2010 ; la construction s’effondre, et l’industrie passe de 27,8 % des emplois en 2005 à 18,1 % en 2010, et à 23,4 % du PIB.",
+    "from": 2008,
+    "to": 2010
+   },
+   {
+    "en": "Multinationals move intellectual property and the related profits to Ireland; measured manufacturing jumps from 19.5% of GDP in 2010 to 34.9% in 2015, while industry's share of jobs stays near 18%.",
+    "fr": "Des multinationales transfèrent leur propriété intellectuelle et les profits associés en Irlande ; le manufacturier mesuré bondit de 19,5 % du PIB en 2010 à 34,9 % en 2015, alors que l’industrie reste vers 18 % des emplois.",
+    "from": 2015,
+    "to": 0
+   },
+   {
+    "en": "Strong global demand for pharmaceuticals and medical products during the Covid years lifts industry to a peak of 40.8% of GDP in 2022, with little change in industrial employment.",
+    "fr": "La forte demande mondiale de médicaments et de produits médicaux pendant les années Covid porte l’industrie à un pic de 40,8 % du PIB en 2022, sans grand effet sur l’emploi industriel.",
+    "from": 2020,
+    "to": 2022
+   }
+  ],
+  "summary": {
+   "en": "From farming to multinational hub: agriculture's share of jobs fell from 13.9% in 1991 to 3.9%, and since 2015 foreign-owned pharma and tech firms have inflated industry's share of GDP.",
+   "fr": "De la ferme aux multinationales : l’agriculture passe de 13,9 % des emplois en 1991 à 3,9 %, et depuis 2015 pharmacie et tech étrangères gonflent la part industrielle du PIB."
+  }
+ },
+ "IRN": {
+  "events": [
+   {
+    "en": "Land reform of the White Revolution (1963) and rising oil output → agriculture's share of GDP falls from 25.9% in 1960 to 6.7% in 1975.",
+    "fr": "Réforme agraire de la « révolution blanche » (1963) et hausse de la production pétrolière → la part de l’agriculture passe de 25,9 % du PIB en 1960 à 6,7 % en 1975.",
+    "from": 1963,
+    "to": 1975
+   },
+   {
+    "en": "Oil price shock → oil revenues soar; the secondary sector peaks at 62.3% of GDP in 1974.",
+    "fr": "Choc pétrolier → envolée des recettes ; le secondaire culmine à 62,3 % du PIB en 1974.",
+    "from": 1973,
+    "to": 1974
+   },
+   {
+    "en": "Islamic Revolution (1979), then the 1980–1988 war with Iraq and the 1986 oil price collapse → oil output falls; the secondary share drops to its low of 24.8% of GDP in 1988, services peak at 58.0%.",
+    "fr": "Révolution islamique (1979), guerre avec l’Irak (1980-1988) et chute du pétrole en 1986 → la production recule ; le secondaire tombe à 24,8 % du PIB en 1988, les services culminent à 58,0 %.",
+    "from": 1979,
+    "to": 1988
+   },
+   {
+    "en": "Post-war reconstruction, then the 2000s oil boom → the secondary share recovers to 49.6% of GDP in 2005, and manufacturing rises from 8.9% in 1985 to 16.6% in 2000.",
+    "fr": "Reconstruction d’après-guerre puis boom pétrolier des années 2000 → le secondaire remonte à 49,6 % du PIB en 2005, et l’industrie manufacturière passe de 8,9 % en 1985 à 16,6 % en 2000.",
+    "from": 1989,
+    "to": 2005
+   },
+   {
+    "en": "Oil sanctions (EU embargo in 2012, US sanctions reimposed in 2018) and the 2014 price collapse cut oil's weight → the secondary share falls to 32.2% in 2015; manufacturing's share peaks at 23.4% in 2021.",
+    "fr": "Sanctions pétrolières (embargo européen en 2012, sanctions américaines rétablies en 2018) et chute des cours en 2014 → le secondaire tombe à 32,2 % en 2015 ; le manufacturier culmine à 23,4 % en 2021.",
+    "from": 2012,
+    "to": 2021
+   }
+  ],
+  "summary": {
+   "en": "Oil made industry Iran's leading sector in the 1970s; revolution, war and sanctions then cut its weight, while agriculture's share of jobs keeps shrinking.",
+   "fr": "Le pétrole a fait de l’industrie le premier secteur iranien dans les années 1970 ; révolution, guerre et sanctions ont ensuite réduit son poids, tandis que l’agriculture perd des emplois."
+  }
+ },
+ "IRQ": {
+  "events": [
+   {
+    "en": "Nationalisation of the Iraq Petroleum Company (1972) and the oil shocks → the secondary sector rises from 46.1% of GDP in 1970 to 74.0% in 1980.",
+    "fr": "Nationalisation de l’Iraq Petroleum Company (1972) et chocs pétroliers → le secondaire passe de 46,1 % du PIB en 1970 à 74,0 % en 1980.",
+    "from": 1972,
+    "to": 1980
+   },
+   {
+    "en": "War with Iran damages export routes and the oil price collapses in 1986 → the secondary share falls to its low of 37.7% of GDP in 1986.",
+    "fr": "La guerre avec l’Iran entrave les exportations et le pétrole s’effondre en 1986 → le secondaire tombe à son plus bas, 37,7 % du PIB en 1986.",
+    "from": 1980,
+    "to": 1988
+   },
+   {
+    "en": "UN sanctions after the invasion of Kuwait nearly halt oil exports → agriculture's relative weight peaks at 20.6% of GDP in 1995 and manufacturing shrinks to 1.4%.",
+    "fr": "Les sanctions de l’ONU après l’invasion du Koweït bloquent presque les exportations de pétrole → l’agriculture culmine à 20,6 % du PIB en 1995 et le manufacturier tombe à 1,4 %.",
+    "from": 1990,
+    "to": 1996
+   },
+   {
+    "en": "The UN Oil-for-Food programme lets exports resume → oil pushes the secondary sector to its peak of 84.8% of GDP in 2000, while services fall to 10.9%.",
+    "fr": "Le programme « pétrole contre nourriture » de l’ONU relance les exportations → le pétrole porte le secondaire à son pic, 84,8 % du PIB en 2000, et les services tombent à 10,9 %.",
+    "from": 1996,
+    "to": 2003
+   },
+   {
+    "en": "After 2003 public-sector hiring expands, and the 2014 and 2020 oil price slumps cut oil's weight → services rise from 30.0% of GDP in 2005 to 54.8% in 2020.",
+    "fr": "Après 2003, l’emploi public s’étend, puis les chutes du pétrole de 2014 et 2020 réduisent son poids → les services passent de 30,0 % du PIB en 2005 à 54,8 % en 2020.",
+    "from": 2003,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "Iraq's sector shares track oil exports, repeatedly disrupted by wars and sanctions; since 2003 a large public payroll has pushed services above half of GDP.",
+   "fr": "Les parts sectorielles de l’Irak suivent ses exportations de pétrole, perturbées par guerres et sanctions ; depuis 2003, l’emploi public porte les services au-delà de la moitié du PIB."
+  }
+ },
+ "ISR": {
+  "events": [
+   {
+    "en": "Mass immigration from the former Soviet Union brings many engineers, and the Yozma programme (1993) seeds venture capital: high-tech manufacturing grows and reaches 16.6% of GDP in 2000.",
+    "fr": "L’immigration massive venue de l’ex-URSS apporte de nombreux ingénieurs et le programme Yozma (1993) lance le capital-risque : l’industrie de haute technologie progresse jusqu’à 16,6 % du PIB en 2000.",
+    "from": 1990,
+    "to": 2000
+   },
+   {
+    "en": "The dot-com bust hits tech hardware: manufacturing falls from 16.6% of GDP (2000) to 14.8% (2005) and industry’s share of jobs from 21.4% to 19.2%.",
+    "fr": "L’éclatement de la bulle internet frappe le matériel technologique : l’industrie manufacturière recule de 16,6 % du PIB (2000) à 14,8 % (2005), l’emploi industriel de 21,4 % à 19,2 %.",
+    "from": 2000,
+    "to": 2005
+   },
+   {
+    "en": "The tech sector shifts towards software, cybersecurity and R&D services: services rise from 66.7% of GDP (2010) to 72.8% (2024) while manufacturing slips to 11.2%.",
+    "fr": "La tech se tourne vers le logiciel, la cybersécurité et les services de R&D : les services passent de 66,7 % du PIB (2010) à 72,8 % (2024), l’industrie manufacturière glisse à 11,2 %.",
+    "from": 2010,
+    "to": 2024
+   }
+  ],
+  "summary": {
+   "en": "A high-tech services economy: services rose from 63% of GDP in 1995 to 73% in 2024, while industry’s share of jobs fell from 26% to 15%.",
+   "fr": "Économie de services de haute technologie : les services passent de 63 % du PIB en 1995 à 73 % en 2024, tandis que l’industrie tombe de 26 % à 15 % des emplois."
+  }
+ },
+ "ITA": {
+  "events": [
+   {
+    "en": "The 1992 lira crisis and budget pressure launch a wave of privatisations; state-run steel, chemicals and telecoms are restructured, and industry's share of GDP slips from 27.9% in 1990 to 24.1% in 2000.",
+    "fr": "La crise de la lire de 1992 et la contrainte budgétaire lancent une vague de privatisations ; sidérurgie, chimie et télécoms publiques sont restructurées, et l’industrie passe de 27,9 % du PIB en 1990 à 24,1 % en 2000.",
+    "from": 1992,
+    "to": 2000
+   },
+   {
+    "en": "With the euro ruling out devaluation, China's WTO entry (2001) and the end of textile quotas (2005) hit textiles, clothing and footwear; manufacturing falls from 17.7% of GDP in 2000 to 14.2% in 2010.",
+    "fr": "L’euro interdisant la dévaluation, l’entrée de la Chine à l’OMC (2001) et la fin des quotas textiles (2005) frappent le textile, l’habillement et la chaussure : le manufacturier passe de 17,7 % du PIB en 2000 à 14,2 % en 2010.",
+    "from": 2001,
+    "to": 2010
+   },
+   {
+    "en": "The global financial crisis and the 2011–2012 sovereign debt crisis cut investment and construction; industry hits a low of 20.2% of GDP in 2014 and its share of jobs falls from 28.6% in 2010 to 26.6% in 2015.",
+    "fr": "La crise financière puis celle des dettes souveraines (2011-2012) font chuter l’investissement et la construction : l’industrie touche 20,2 % du PIB en 2014, et sa part dans l’emploi passe de 28,6 % en 2010 à 26,6 % en 2015.",
+    "from": 2008,
+    "to": 2014
+   },
+   {
+    "en": "Covid-19 hits tourism, then the Superbonus tax credit for home renovation (2020) fuels a construction boom; industry rises from 21.0% of GDP in 2020 to 22.6% in 2025 while services ease to 64.5%.",
+    "fr": "Le Covid-19 frappe le tourisme, puis le Superbonus, crédit d’impôt pour la rénovation des logements (2020), dope la construction : l’industrie passe de 21,0 % du PIB en 2020 à 22,6 % en 2025, les services reculent à 64,5 %.",
+    "from": 2020,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Northern industrial districts keep manufacturing near 15% of GDP, but industry slipped from 28% in 1990 to about 23%, and farming's share of jobs fell from 8% to 3%.",
+   "fr": "Les districts du Nord maintiennent le manufacturier vers 15 % du PIB, mais l’industrie passe de 28 % en 1990 à environ 23 %, l’agriculture de 8 % à 3 % des emplois."
+  }
+ },
+ "JPN": {
+  "events": [
+   {
+    "en": "High-growth era: steel, shipbuilding, cars and electronics expand rapidly and rural workers move into factories, making industry the engine of the economy.",
+    "fr": "Haute croissance : sidérurgie, chantiers navals, automobile et électronique s’envolent ; les ruraux rejoignent les usines et l’industrie devient le moteur de l’économie.",
+    "from": 1955,
+    "to": 1973
+   },
+   {
+    "en": "Plaza Accord: the yen appreciates sharply, and manufacturers start moving production to other Asian countries, beginning a long erosion of manufacturing’s share.",
+    "fr": "Accords du Plaza : le yen s’apprécie fortement et les industriels délocalisent vers le reste de l’Asie, amorçant une lente érosion du poids de l’industrie manufacturière.",
+    "from": 1985,
+    "to": 0
+   },
+   {
+    "en": "Asset bubble bursts, followed by the lost decades: weak investment shrinks construction and factories; industry’s share of jobs falls from 33.3% (1991) to 25.5% (2010).",
+    "fr": "Éclatement de la bulle puis « décennies perdues » : l’investissement atone fait reculer BTP et usines ; l’industrie passe de 33,3 % des emplois (1991) à 25,5 % (2010).",
+    "from": 1991,
+    "to": 2010
+   },
+   {
+    "en": "Long-term care insurance (2000) and rapid ageing make health and care services a major employer; services reach 74% of jobs by 2025.",
+    "fr": "L’assurance dépendance (2000) et le vieillissement rapide font de la santé et des soins un grand employeur ; les services atteignent 74 % des emplois en 2025.",
+    "from": 2000,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "A mature industrial economy: since 1994 services rose from 63% to 71% of GDP as industry slipped from 35% to 27%, with farming near 1%.",
+   "fr": "Économie industrielle mûre : depuis 1994, les services passent de 63 % à 71 % du PIB, l’industrie recule de 35 % à 27 % et l’agriculture reste proche de 1 %."
+  }
+ },
+ "KAZ": {
+  "events": [
+   {
+    "en": "Soviet collapse and loss of Soviet supply chains and markets: industry falls from 39% of GDP (1992) to 25.6% (1996) and agriculture from 23.3% to 12.3% (1995).",
+    "fr": "Effondrement de l’URSS et perte des chaînes d’approvisionnement et des débouchés soviétiques : l’industrie passe de 39 % du PIB (1992) à 25,6 % (1996), l’agriculture de 23,3 % à 12,3 % (1995).",
+    "from": 1991,
+    "to": 1996
+   },
+   {
+    "en": "Foreign-led oil fields such as Tengiz and the CPC export pipeline (2001), plus high oil prices: industry rises from 37.8% of GDP (2000) to a 40.6% peak in 2010.",
+    "fr": "Gisements exploités avec des groupes étrangers comme Tengiz, oléoduc d’exportation CPC (2001) et pétrole cher : l’industrie passe de 37,8 % du PIB (2000) à un pic de 40,6 % en 2010.",
+    "from": 2000,
+    "to": 2010
+   },
+   {
+    "en": "Oil price slump and the 2015 tenge devaluation: industry drops to 30.9% of GDP in 2015 and services reach a 59.3% peak.",
+    "fr": "Chute des cours du pétrole et dévaluation du tenge en 2015 : l’industrie tombe à 30,9 % du PIB en 2015 et les services culminent à 59,3 %.",
+    "from": 2014,
+    "to": 2015
+   },
+   {
+    "en": "Oil output restarts at the giant Kashagan field (2016) and prices recover: industry climbs back to 33.1% of GDP in 2020.",
+    "fr": "Redémarrage de la production du gisement géant de Kashagan (2016) et remontée des cours : l’industrie revient à 33,1 % du PIB en 2020.",
+    "from": 2016,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "Since independence in 1991 Kazakhstan has relied on oil and metals: industry swings with commodity prices between 26% and 41% of GDP, while farm jobs fell from 38% to 11%.",
+   "fr": "Depuis l’indépendance (1991), le Kazakhstan repose sur le pétrole et les métaux : l’industrie suit les cours entre 26 % et 41 % du PIB, l’agriculture passe de 38 % à 11 % des emplois."
+  }
+ },
+ "KEN": {
+  "events": [
+   {
+    "en": "Independence (1963) and import-substitution policies → manufacturing rises from 8.7% of GDP in 1960 to 10.9% in 1970, while agriculture falls from its 38.4% peak in 1963 to 27.8% in 1980.",
+    "fr": "Indépendance (1963) et politique de substitution aux importations → le manufacturier passe de 8,7 % du PIB en 1960 à 10,9 % en 1970, l’agriculture de 38,4 % en 1963 à 27,8 % en 1980.",
+    "from": 1963,
+    "to": 1980
+   },
+   {
+    "en": "Donors suspend aid in 1991 and liberalisation removes protection → the secondary sector falls to its low of 13.6% of GDP in 1995, with manufacturing at 8.4%.",
+    "fr": "Suspension de l’aide des bailleurs en 1991 et libéralisation qui supprime les protections → le secondaire tombe à son plus bas, 13,6 % du PIB en 1995, le manufacturier à 8,4 %.",
+    "from": 1991,
+    "to": 1995
+   },
+   {
+    "en": "Urbanisation and the spread of informal urban trade → agriculture falls from 61.3% to 45.8% of jobs, while services rise from 27.8% to 41.7%.",
+    "fr": "Urbanisation et essor du commerce informel urbain → l’agriculture passe de 61,3 % à 45,8 % des emplois, tandis que les services montent de 27,8 % à 41,7 %.",
+    "from": 1991,
+    "to": 2025
+   },
+   {
+    "en": "M-Pesa mobile money launches in 2007 as telecoms boom, while drought and post-election unrest hit farming → services peak at 58.4% of GDP in 2009, agriculture falls to its low of 16.3%.",
+    "fr": "Lancement du paiement mobile M-Pesa en 2007 et essor des télécoms, tandis que sécheresse et violences post-électorales frappent l’agriculture → services à 58,4 % du PIB en 2009, agriculture à 16,3 %.",
+    "from": 2007,
+    "to": 2009
+   }
+  ],
+  "summary": {
+   "en": "Kenya remains farm-based in jobs (tea, coffee, horticulture), but services, boosted by mobile money, now produce over half of GDP.",
+   "fr": "Le Kenya reste agricole par l’emploi (thé, café, horticulture), mais les services, dopés par le paiement mobile, produisent désormais plus de la moitié du PIB."
+  }
+ },
+ "KOR": {
+  "events": [
+   {
+    "en": "First five-year plans promote export-led light industry (textiles, plywood, wigs): manufacturing rises from 11.4% of GDP (1960) to 17.3% (1970), agriculture falls from 36.4% to 26.3%.",
+    "fr": "Premiers plans quinquennaux tournés vers l’export d’industrie légère (textile, contreplaqué, perruques) : l’industrie manufacturière passe de 11,4 % du PIB (1960) à 17,3 % (1970), l’agriculture de 36,4 % à 26,3 %.",
+    "from": 1962,
+    "to": 1971
+   },
+   {
+    "en": "Heavy and chemical industry drive: steel, shipbuilding, petrochemicals and machinery expand; industry rises from 26.3% of GDP (1975) to 31.7% (1980) while agriculture drops to 14%.",
+    "fr": "Politique des industries lourdes et chimiques : acier, chantiers navals, pétrochimie et machines ; l’industrie passe de 26,3 % du PIB (1975) à 31,7 % (1980), l’agriculture tombe à 14 %.",
+    "from": 1973,
+    "to": 1979
+   },
+   {
+    "en": "Asian financial crisis and IMF programme force conglomerate restructuring; industry’s share of jobs falls from 34.5% (1995) to 29.1% (2000) as services absorb workers.",
+    "fr": "Crise financière asiatique et programme du FMI imposent la restructuration des conglomérats ; l’industrie tombe de 34,5 % des emplois (1995) à 29,1 % (2000), les services absorbant la main-d’œuvre.",
+    "from": 1997,
+    "to": 1998
+   },
+   {
+    "en": "Semiconductors, cars, ships and displays keep exports booming: unlike most rich economies, manufacturing’s share keeps rising, peaking at 29% of GDP in 2011.",
+    "fr": "Semi-conducteurs, automobile, navires et écrans portent les exportations : contrairement à la plupart des pays riches, le poids de l’industrie manufacturière progresse encore, jusqu’à 29 % du PIB en 2011.",
+    "from": 2000,
+    "to": 2011
+   }
+  ],
+  "summary": {
+   "en": "From a farm economy (36% of GDP in 1960) to an industrial exporter: manufacturing peaked at 29% of GDP in 2011, while services now provide 71.5% of jobs.",
+   "fr": "D’une économie agricole (36 % du PIB en 1960) à une puissance exportatrice : l’industrie manufacturière culmine à 29 % du PIB en 2011 ; les services fournissent 71,5 % des emplois."
+  }
+ },
+ "KWT": {
+  "events": [
+   {
+    "en": "The state takes full control of the Kuwait Oil Company → oil rents flow directly to the government, which funds a large public sector that later employs much of the workforce.",
+    "fr": "L’État prend le contrôle total de la Kuwait Oil Company → la rente pétrolière va directement au gouvernement, qui finance un vaste secteur public employant ensuite une grande part des actifs.",
+    "from": 1975,
+    "to": 0
+   },
+   {
+    "en": "Iraqi invasion and the oil-well fires → oil output collapses and must be rebuilt; sector data for GDP only begin later.",
+    "fr": "Invasion irakienne et incendies des puits → la production pétrolière s’effondre et doit être reconstruite ; les données sectorielles du PIB ne commencent que plus tard.",
+    "from": 1990,
+    "to": 1991
+   },
+   {
+    "en": "Oil price collapse → the secondary share falls from its 74.8% peak in 2012 to 55.9% of GDP in 2015, while services rise to 58.4%.",
+    "fr": "Effondrement des cours du pétrole → le secondaire passe de son pic de 74,8 % du PIB en 2012 à 55,9 % en 2015, et les services montent à 58,4 %.",
+    "from": 2014,
+    "to": 2016
+   },
+   {
+    "en": "Covid-19 demand slump and OPEC+ output cuts → the secondary share hits its low of 48.5% of GDP and services their high of 67.0%.",
+    "fr": "Chute de la demande liée au Covid-19 et baisses de production de l’OPEP+ → le secondaire touche son plus bas, 48,5 % du PIB, et les services leur plus haut, 67,0 %.",
+    "from": 2020,
+    "to": 0
+   },
+   {
+    "en": "Oil prices recover → the secondary sector climbs back to 54.1% of GDP in 2025.",
+    "fr": "Redressement des cours du pétrole → le secondaire remonte à 54,1 % du PIB en 2025.",
+    "from": 2021,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Kuwait's GDP rests on state-owned oil, so the industry share follows crude prices; most jobs are in services, largely public administration.",
+   "fr": "Le PIB koweïtien repose sur un pétrole d’État : la part de l’industrie suit les cours du brut, tandis que l’essentiel des emplois relève des services, surtout publics."
+  }
+ },
+ "MAR": {
+  "events": [
+   {
+    "en": "Phosphate prices jump after Morocco, the leading exporter, sharply raises them → mining lifts the secondary sector to its peak of 35.2% of GDP in 1975.",
+    "fr": "Envolée des prix du phosphate, fortement relevés par le Maroc, premier exportateur mondial → l’extraction minière porte le secondaire à son pic, 35,2 % du PIB en 1975.",
+    "from": 1974,
+    "to": 1975
+   },
+   {
+    "en": "Rural exodus and urbanisation → agriculture falls from 52.0% to 27.9% of jobs, while services rise from 27.3% to 48.3%.",
+    "fr": "Exode rural et urbanisation → l’agriculture passe de 52,0 % à 27,9 % des emplois, tandis que les services montent de 27,3 % à 48,3 %.",
+    "from": 1991,
+    "to": 2025
+   },
+   {
+    "en": "End of global textile quotas (Multi-Fibre Arrangement) exposes Moroccan clothing to Asian competition → manufacturing falls from 18.1% of GDP in 2000 to its low of 14.4% in 2012.",
+    "fr": "Fin des quotas textiles mondiaux (accord multifibres) : l’habillement marocain affronte la concurrence asiatique → le manufacturier passe de 18,1 % du PIB en 2000 à son plus bas, 14,4 % en 2012.",
+    "from": 2005,
+    "to": 2012
+   },
+   {
+    "en": "Tanger Med port (2007) and a Renault plant near Tangier (2012) build an automotive export industry → manufacturing stabilises near 15% of GDP and industry's share of jobs rises from 19.9% in 2005 to 23.8% in 2025.",
+    "fr": "Port de Tanger Med (2007) et usine Renault près de Tanger (2012) créent une filière automobile exportatrice → le manufacturier se stabilise vers 15 % du PIB et l’industrie passe de 19,9 % à 23,8 % des emplois (2005-2025).",
+    "from": 2007,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Morocco's economy relies on rain-fed farming, phosphates and services; farm jobs have roughly halved since 1991 as export manufacturing and services grew.",
+   "fr": "L’économie marocaine repose sur une agriculture pluviale, les phosphates et les services ; la part des emplois agricoles a presque diminué de moitié depuis 1991."
+  }
+ },
+ "MEX": {
+  "events": [
+   {
+    "en": "Falling oil prices and soaring US interest rates trigger the debt crisis → manufacturing drops to its low of 17.0% of GDP.",
+    "fr": "Baisse du pétrole et flambée des taux américains déclenchent la crise de la dette → le manufacturier tombe à son plus bas, 17,0 % du PIB.",
+    "from": 1982,
+    "to": 0
+   },
+   {
+    "en": "NAFTA (1994) and the 1994–1995 peso devaluation boost export assembly plants → industry rises from 26.1% of GDP in 1990 to 34.4% in 2000; manufacturing peaks at 22.4% in 1997.",
+    "fr": "L’ALENA (1994) et la dévaluation du peso de 1994-1995 dopent les usines d’assemblage exportatrices → l’industrie passe de 26,1 % du PIB en 1990 à 34,4 % en 2000 ; le manufacturier culmine à 22,4 % en 1997.",
+    "from": 1994,
+    "to": 2000
+   },
+   {
+    "en": "NAFTA opens farming to US imports while factories hire → agriculture falls from 26.0% of jobs in 1991 to 17.5% in 2000, and industry rises from 20.3% in 1995 to a peak of 25.3%.",
+    "fr": "L’ALENA ouvre l’agriculture aux importations américaines tandis que les usines embauchent → l’agriculture passe de 26,0 % des emplois en 1991 à 17,5 % en 2000, l’industrie de 20,3 % en 1995 à 25,3 %.",
+    "from": 1994,
+    "to": 2000
+   },
+   {
+    "en": "China joins the WTO and competes with Mexican assembly plants for the US market → manufacturing falls from 21.0% of GDP in 2000 to 18.1% in 2005.",
+    "fr": "L’entrée de la Chine à l’OMC concurrence les usines d’assemblage mexicaines sur le marché américain → le manufacturier passe de 21,0 % du PIB en 2000 à 18,1 % en 2005.",
+    "from": 2001,
+    "to": 2005
+   },
+   {
+    "en": "High oil prices lift industry to its peak of 34.8% of GDP in 2008; then declining output from the Cantarell field and the 2014 oil price collapse → 30.8% in 2015.",
+    "fr": "Le pétrole cher porte l’industrie à son pic, 34,8 % du PIB en 2008 ; puis le déclin du gisement de Cantarell et la chute des cours de 2014 → 30,8 % en 2015.",
+    "from": 2008,
+    "to": 2015
+   }
+  ],
+  "summary": {
+   "en": "Mexico combines oil with export manufacturing tied to the US market; NAFTA reshaped jobs away from farming, while services hold close to 60% of GDP.",
+   "fr": "Le Mexique associe pétrole et industrie exportatrice tournée vers les États-Unis ; l’ALENA a déplacé l’emploi hors de l’agriculture, et les services pèsent près de 60 % du PIB."
+  }
+ },
+ "MYS": {
+  "events": [
+   {
+    "en": "New Economic Policy and free trade zones attract electronics assembly, while Petronas (1974) develops oil and gas: industry rises from 30.3% of GDP (1970) to 41.8% (1980).",
+    "fr": "La Nouvelle politique économique et les zones franches attirent l’assemblage électronique, tandis que Petronas (1974) développe pétrole et gaz : l’industrie passe de 30,3 % du PIB (1970) à 41,8 % (1980).",
+    "from": 1971,
+    "to": 1980
+   },
+   {
+    "en": "The 1985 commodity slump and recession lead to new investment incentives; foreign electronics firms flock in and manufacturing rises from 19.7% of GDP (1985) to 26.4% (1995).",
+    "fr": "L’effondrement des matières premières et la récession de 1985 entraînent de nouvelles incitations à l’investissement ; l’électronique étrangère afflue et l’industrie manufacturière passe de 19,7 % du PIB (1985) à 26,4 % (1995).",
+    "from": 1985,
+    "to": 1997
+   },
+   {
+    "en": "Asian financial crisis and capital controls (1998): construction and services contract, and manufacturing’s share reaches its 30.9% peak in 1999.",
+    "fr": "Crise financière asiatique et contrôle des capitaux (1998) : le BTP et les services se contractent, et la part de l’industrie manufacturière atteint son pic, 30,9 % du PIB, en 1999.",
+    "from": 1997,
+    "to": 1998
+   },
+   {
+    "en": "Assembly work moves to cheaper countries such as China: manufacturing falls from 30.9% of GDP (2000) to 22.2% (2020) while services rise from 44.2% (2005) to 54.8%.",
+    "fr": "L’assemblage part vers des pays moins chers comme la Chine : l’industrie manufacturière recule de 30,9 % du PIB (2000) à 22,2 % (2020), les services passent de 44,2 % (2005) à 54,8 %.",
+    "from": 2000,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "Rubber and tin gave way to oil, palm oil and electronics: agriculture fell from 44% of GDP in 1960 to 8%, and services now provide 65% of jobs.",
+   "fr": "Le caoutchouc et l’étain ont cédé la place au pétrole, à l’huile de palme et à l’électronique : l’agriculture tombe de 44 % à 8 % du PIB ; services : 65 % des emplois."
+  }
+ },
+ "NGA": {
+  "events": [
+   {
+    "en": "1970s oil boom after Nigeria joins OPEC (1971) → by 1981, the first year of data, oil helps put the secondary sector at its peak of 39.2% of GDP.",
+    "fr": "Boom pétrolier des années 1970 après l’adhésion à l’OPEP (1971) → en 1981, première année de données, le pétrole porte le secondaire à son pic, 39,2 % du PIB.",
+    "from": 1973,
+    "to": 1981
+   },
+   {
+    "en": "Oil price collapse and the Structural Adjustment Programme (naira devaluation, end of commodity marketing boards) → agriculture's share rises from 12.2% of GDP in 1981 to 25.5% in 1995.",
+    "fr": "Chute du pétrole et programme d’ajustement structurel (dévaluation du naira, fin des offices de commercialisation) → l’agriculture passe de 12,2 % du PIB en 1981 à 25,5 % en 1995.",
+    "from": 1986,
+    "to": 1995
+   },
+   {
+    "en": "Mobile licences auctioned in 2001 spark a telecom boom → services rise from 43.8% of GDP in 2000 to 50.8% in 2010, while manufacturing shrinks to its low of 6.6%.",
+    "fr": "Licences de téléphonie mobile attribuées en 2001 → essor des télécoms ; les services passent de 43,8 % du PIB en 2000 à 50,8 % en 2010, le manufacturier tombe à son plus bas, 6,6 %.",
+    "from": 2001,
+    "to": 2010
+   },
+   {
+    "en": "Oil price collapse leads to the 2016 recession → the secondary share falls to 20.2% of GDP in 2015 and services peak at 59.8% in 2016.",
+    "fr": "L’effondrement du pétrole entraîne la récession de 2016 → le secondaire tombe à 20,2 % du PIB en 2015 et les services culminent à 59,8 % en 2016.",
+    "from": 2014,
+    "to": 2016
+   },
+   {
+    "en": "Crude output stagnates amid pipeline theft and underinvestment → the secondary share falls to its low of 16.4% of GDP in 2025; agriculture drops to 33.5% of jobs.",
+    "fr": "Production de brut en panne (vols sur les oléoducs, sous-investissement) → le secondaire tombe à son plus bas, 16,4 % du PIB en 2025 ; l’agriculture recule à 33,5 % des emplois.",
+    "from": 2016,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Oil dominates Nigeria's exports but its weight in GDP has shrunk; agriculture and fast-growing services now dominate output, and farm jobs are steadily declining.",
+   "fr": "Le pétrole domine les exportations nigérianes, mais son poids dans le PIB a reculé ; l’agriculture et des services en plein essor dominent la production, et l’emploi agricole décline."
+  }
+ },
+ "NLD": {
+  "events": [
+   {
+    "en": "Gas from the giant Groningen field (found 1959) flows from 1963; export revenues strengthen the guilder and squeeze manufacturing, which falls from 22.3% of GDP in 1969 to 15.6% in 1980, the origin of the term Dutch disease.",
+    "fr": "Le gaz du gisement géant de Groningue (découvert en 1959) est exploité dès 1963 ; les exportations renforcent le florin et pénalisent le manufacturier, qui passe de 22,3 % du PIB en 1969 à 15,6 % en 1980 : c’est le « mal hollandais ».",
+    "from": 1963,
+    "to": 1980
+   },
+   {
+    "en": "The Wassenaar Agreement trades wage restraint for job creation; employment grows mainly in services, often part-time, and services rise from 60.0% of GDP in 1985 to 64.4% in 1995.",
+    "fr": "L’accord de Wassenaar échange modération salariale contre création d’emplois ; l’emploi progresse surtout dans les services, souvent à temps partiel, et leur part passe de 60,0 % du PIB en 1985 à 64,4 % en 1995.",
+    "from": 1982,
+    "to": 1995
+   },
+   {
+    "en": "Rotterdam's port, logistics, trade and finance expand while production moves to lower-cost countries; industry falls from 25.5% of GDP in 1990 to 19.0% in 2010.",
+    "fr": "Le port de Rotterdam, la logistique, le négoce et la finance se développent tandis que la production part vers des pays moins coûteux : l’industrie passe de 25,5 % du PIB en 1990 à 19,0 % en 2010.",
+    "from": 1990,
+    "to": 2010
+   },
+   {
+    "en": "Earthquakes linked to extraction lead the government to cap Groningen gas output from 2014 and halt production in 2023; mining shrinks and industry's share of jobs drops to 13.8% in 2025.",
+    "fr": "Des séismes liés à l’extraction conduisent l’État à plafonner la production de Groningue dès 2014, puis à l’arrêter en 2023 ; l’extraction recule et la part de l’industrie dans l’emploi tombe à 13,8 % en 2025.",
+    "from": 2014,
+    "to": 2023
+   }
+  ],
+  "summary": {
+   "en": "A gas-rich trading nation turned services hub: industry fell from 32.9% of GDP in 1969 to 17.7% in 2025, and services employ 84.5% of workers.",
+   "fr": "Nation commerçante riche en gaz devenue plaque tournante des services : l’industrie est passée de 32,9 % du PIB en 1969 à 17,7 % en 2025, et les services emploient 84,5 % des actifs."
+  }
+ },
+ "NOR": {
+  "events": [
+   {
+    "en": "Ekofisk, discovered in 1969, starts producing in 1971; North Sea oil and gas lift industry from 27.0% of GDP in 1970 to 35.8% in 1985, while manufacturing shrinks from 17.8% to 11.4%.",
+    "fr": "Découvert en 1969, Ekofisk produit dès 1971 ; le pétrole et le gaz de la mer du Nord portent l’industrie de 27,0 % du PIB en 1970 à 35,8 % en 1985, tandis que le manufacturier recule de 17,8 % à 11,4 %.",
+    "from": 1969,
+    "to": 1985
+   },
+   {
+    "en": "The 1986 oil price collapse, followed by a banking crisis, cuts industry's share to 29.6% of GDP in 1990 and lifts services to 56.2%.",
+    "fr": "L’effondrement des prix du pétrole en 1986, suivi d’une crise bancaire, ramène l’industrie à 29,6 % du PIB en 1990 et porte les services à 56,2 %.",
+    "from": 1986,
+    "to": 1992
+   },
+   {
+    "en": "High oil prices lift industry to 38.3% of GDP in 2005; a 2001 fiscal rule channels petroleum revenue into the sovereign wealth fund and limits spending to the fund's expected return.",
+    "fr": "Des prix du pétrole élevés portent l’industrie à 38,3 % du PIB en 2005 ; une règle budgétaire de 2001 verse les recettes pétrolières au fonds souverain et limite les dépenses à son rendement attendu.",
+    "from": 2000,
+    "to": 2008
+   },
+   {
+    "en": "The 2014 oil price slump and the 2020 Covid crash reduce petroleum's weight; industry falls from 34.8% of GDP in 2010 to 26.0% in 2020, and services peak at 61.1%.",
+    "fr": "La chute des cours du pétrole en 2014 puis le choc du Covid-19 en 2020 réduisent le poids des hydrocarbures : l’industrie passe de 34,8 % du PIB en 2010 à 26,0 % en 2020, et les services culminent à 61,1 %.",
+    "from": 2014,
+    "to": 2020
+   },
+   {
+    "en": "After Russia invades Ukraine, Norway becomes Europe's main gas supplier and prices soar; industry jumps to a peak of 47.9% of GDP and services fall to 43.5%.",
+    "fr": "Après l’invasion de l’Ukraine par la Russie, la Norvège devient le premier fournisseur de gaz de l’Europe et les prix flambent : l’industrie bondit à 47,9 % du PIB, un record, et les services tombent à 43,5 %.",
+    "from": 2022,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "Oil and gas dominate: industry's share of GDP swings with petroleum prices, from 26.0% in 2020 to 47.9% in 2022, while manufacturing has shrunk steadily since the 1970s.",
+   "fr": "Le pétrole et le gaz dominent : l’industrie suit les prix des hydrocarbures, de 26,0 % du PIB en 2020 à 47,9 % en 2022, le manufacturier déclinant depuis les années 1970."
+  }
+ },
+ "NZL": {
+  "events": [
+   {
+    "en": "Britain joins the EEC, ending guaranteed access for New Zealand butter and lamb; farmers seek new markets, notably in Asia, and agriculture falls from 11.4% of GDP in 1971 to 9.9% in 1975.",
+    "fr": "Le Royaume-Uni entre dans la CEE, ce qui met fin à l’accès garanti du beurre et de l’agneau néo-zélandais ; les éleveurs cherchent d’autres débouchés, notamment en Asie, et l’agriculture passe de 11,4 % du PIB en 1971 à 9,9 % en 1975.",
+    "from": 1973,
+    "to": 0
+   },
+   {
+    "en": "Sweeping reforms float the dollar, scrap farm subsidies and cut import protection; sheltered factories close and manufacturing falls from 23.1% of GDP in 1985 to 17.8% in 1990.",
+    "fr": "De vastes réformes font flotter le dollar, suppriment les subventions agricoles et réduisent la protection douanière ; les usines abritées ferment et le manufacturier passe de 23,1 % du PIB en 1985 à 17,8 % en 1990.",
+    "from": 1984,
+    "to": 1990
+   },
+   {
+    "en": "Dairy cooperatives merge into Fonterra and conversion of sheep farms to dairy accelerates; agriculture's GDP share now swings with world dairy prices (7.8% in 2000, 4.5% in 2005).",
+    "fr": "Les coopératives laitières fusionnent dans Fonterra et la conversion des élevages ovins au lait s’accélère ; la part de l’agriculture dans le PIB suit désormais les cours mondiaux du lait (7,8 % en 2000, 4,5 % en 2005).",
+    "from": 2001,
+    "to": 0
+   },
+   {
+    "en": "A free trade agreement with China, the first China signed with a developed country, makes dairy exports soar; agriculture reaches 6.6% of GDP in 2010, then falls to 4.5% in 2015 as dairy prices slump.",
+    "fr": "Accord de libre-échange avec la Chine, le premier signé par Pékin avec un pays développé : les exportations laitières s’envolent, l’agriculture atteint 6,6 % du PIB en 2010, puis retombe à 4,5 % en 2015 avec la chute des cours laitiers.",
+    "from": 2008,
+    "to": 0
+   },
+   {
+    "en": "Earthquakes devastate Christchurch; the rebuild lifts construction, and industry's share of jobs rises from 21.0% in 2010 to 22.0% in 2015.",
+    "fr": "Des séismes dévastent Christchurch ; la reconstruction dope le bâtiment, et la part de l’industrie dans l’emploi passe de 21,0 % en 2010 à 22,0 % en 2015.",
+    "from": 2010,
+    "to": 2011
+   }
+  ],
+  "summary": {
+   "en": "Once a protected farm-and-factory economy, New Zealand liberalised after 1984: manufacturing fell from 25.5% of GDP in 1971 to 8.3% in 2023, and services rose to 68.2%.",
+   "fr": "Jadis protégée, l’économie néo-zélandaise se libéralise après 1984 : le manufacturier passe de 25,5 % du PIB en 1971 à 8,3 % en 2023, les services montent à 68,2 %."
+  }
+ },
+ "PAK": {
+  "events": [
+   {
+    "en": "State-backed industrialisation and the Green Revolution: manufacturing rises from 11.3% of GDP (1960) to 14.6% (1970) while agriculture falls from 43.2% to 33.4%.",
+    "fr": "Industrialisation soutenue par l’État et révolution verte : l’industrie manufacturière passe de 11,3 % du PIB (1960) à 14,6 % (1970), l’agriculture de 43,2 % à 33,4 %.",
+    "from": 1960,
+    "to": 1970
+   },
+   {
+    "en": "Secession of East Pakistan (1971) and nationalisation of industry and banks (1972–1974): private investment stalls and manufacturing stays near 14% of GDP until 1985.",
+    "fr": "Sécession du Pakistan oriental (1971) et nationalisations de l’industrie et des banques (1972-1974) : l’investissement privé stagne et l’industrie manufacturière reste vers 14 % du PIB jusqu’en 1985.",
+    "from": 1971,
+    "to": 1985
+   },
+   {
+    "en": "Growth spurt driven by telecoms, banking and consumer credit: services reach a 56.2% peak of GDP in 2008.",
+    "fr": "Accélération de la croissance portée par les télécoms, la banque et le crédit à la consommation : les services culminent à 56,2 % du PIB en 2008.",
+    "from": 2002,
+    "to": 2008
+   },
+   {
+    "en": "Chronic electricity shortages and recurrent balance-of-payments crises hold back factories: manufacturing slips from 13% of GDP (2010) to 11.4% (2020).",
+    "fr": "Pénuries chroniques d’électricité et crises récurrentes de la balance des paiements freinent les usines : l’industrie manufacturière glisse de 13 % du PIB (2010) à 11,4 % (2020).",
+    "from": 2008,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "Agriculture fell from 43% of GDP in 1960 to about 22% and has stalled there; industry has never exceeded 23% of GDP, and farming still employs 36% of workers.",
+   "fr": "L’agriculture est passée de 43 % du PIB en 1960 à environ 22 % et n’en bouge plus ; l’industrie n’a jamais dépassé 23 % du PIB et l’agriculture emploie encore 36 % des actifs."
+  }
+ },
+ "PER": {
+  "events": [
+   {
+    "en": "Agrarian reform (1969) breaks up large estates, and the anchoveta fishery collapses in 1972 → the primary sector falls from 16.7% of GDP in 1970 to 14.8% in 1975.",
+    "fr": "Réforme agraire (1969) qui démantèle les grands domaines, puis effondrement de la pêche à l’anchois en 1972 → le primaire passe de 16,7 % du PIB en 1970 à 14,8 % en 1975.",
+    "from": 1969,
+    "to": 1975
+   },
+   {
+    "en": "Stabilisation after hyperinflation, privatisation and opening of mining to foreign investment → the secondary share recovers from its low of 25.9% of GDP in 1991 to 29.1% in 1995.",
+    "fr": "Stabilisation après l’hyperinflation, privatisations et ouverture des mines aux investisseurs étrangers → le secondaire remonte de son plus bas, 25,9 % du PIB en 1991, à 29,1 % en 1995.",
+    "from": 1990,
+    "to": 1995
+   },
+   {
+    "en": "Commodity supercycle and new large copper and gold mines → the secondary share rises from 29.0% of GDP in 2000 to 35.8% in 2010.",
+    "fr": "Super-cycle des matières premières et nouvelles grandes mines de cuivre et d’or → le secondaire passe de 29,0 % du PIB en 2000 à 35,8 % en 2010.",
+    "from": 2003,
+    "to": 2013
+   },
+   {
+    "en": "Metal prices fall, cutting the secondary share to 30.3% of GDP in 2015; new copper mines such as Las Bambas (2016) then lift it back to 34.3% in 2024.",
+    "fr": "La baisse des métaux ramène le secondaire à 30,3 % du PIB en 2015 ; de nouvelles mines de cuivre comme Las Bambas (2016) le relèvent ensuite à 34,3 % en 2024.",
+    "from": 2014,
+    "to": 2024
+   },
+   {
+    "en": "Strict Covid-19 lockdown pushes urban workers back to farming → agriculture jumps to 31.6% of jobs and services fall to 52.8%, before recovering to 60.1% in 2025.",
+    "fr": "Un confinement strict renvoie des travailleurs urbains vers l’agriculture → celle-ci bondit à 31,6 % des emplois et les services tombent à 52,8 %, avant de remonter à 60,1 % en 2025.",
+    "from": 2020,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "Mining drives Peru's industry and exports, so the secondary share follows metal prices; farming still employs about a quarter of workers.",
+   "fr": "Les mines tirent l’industrie et les exportations péruviennes : la part du secondaire suit les cours des métaux ; l’agriculture emploie encore environ un quart des actifs."
+  }
+ },
+ "PHL": {
+  "events": [
+   {
+    "en": "Import substitution and heavy foreign borrowing fund industrial investment: industry rises from 35.4% of GDP (1970) to a 43.1% peak in 1981.",
+    "fr": "Substitution aux importations et fort endettement extérieur financent l’investissement industriel : l’industrie passe de 35,4 % du PIB (1970) à un pic de 43,1 % en 1981.",
+    "from": 1970,
+    "to": 1981
+   },
+   {
+    "en": "Debt crisis and deep recession: investment collapses and industry falls back to 38.8% of GDP in 1985, while services start to grow.",
+    "fr": "Crise de la dette et profonde récession : l’investissement s’effondre et l’industrie retombe à 38,8 % du PIB en 1985, tandis que les services commencent à progresser.",
+    "from": 1983,
+    "to": 1985
+   },
+   {
+    "en": "Remittances from millions of overseas workers fuel consumption and retail: services rise from 39.3% of jobs (1991) to 59.5% (2025), while farm jobs fall from 44.1% to 20.5%.",
+    "fr": "Les transferts de millions de travailleurs expatriés alimentent consommation et commerce : les services passent de 39,3 % des emplois (1991) à 59,5 % (2025), l’agriculture de 44,1 % à 20,5 %.",
+    "from": 1991,
+    "to": 2025
+   },
+   {
+    "en": "Call centres and business process outsourcing boom: services rise from 51.1% of GDP (2000) to 58.5% (2015) while manufacturing slips from 25.3% to 19.9%.",
+    "fr": "Essor des centres d’appels et de l’externalisation des processus d’entreprise : les services passent de 51,1 % du PIB (2000) à 58,5 % (2015), l’industrie manufacturière glisse de 25,3 % à 19,9 %.",
+    "from": 2000,
+    "to": 2015
+   }
+  ],
+  "summary": {
+   "en": "Industry peaked at 43% of GDP in 1981 and has declined since; services, boosted by outsourcing and remittance-fuelled spending, reached 64% of GDP and 60% of jobs.",
+   "fr": "L’industrie a culminé à 43 % du PIB en 1981 puis reculé ; portés par l’externalisation et les transferts des émigrés, les services atteignent 64 % du PIB et 60 % des emplois."
+  }
+ },
+ "POL": {
+  "events": [
+   {
+    "en": "The Balcerowicz plan frees prices and trade; obsolete heavy industry and state farms shrink, industry falls from 33.7% of GDP in 1995 to 28.8% in 2000, and services rise from 48.8% to 56.8%.",
+    "fr": "Le plan Balcerowicz libère les prix et les échanges ; l’industrie lourde obsolète et les fermes d’État se contractent : l’industrie passe de 33,7 % du PIB en 1995 à 28,8 % en 2000, les services de 48,8 % à 56,8 %.",
+    "from": 1990,
+    "to": 2000
+   },
+   {
+    "en": "EU accession opens the single market and brings farm and regional funds; foreign carmakers and appliance makers invest, lifting manufacturing from a low of 14.1% of GDP in 2002 to 17.7% in 2015.",
+    "fr": "L’adhésion à l’UE ouvre le marché unique et apporte fonds agricoles et régionaux ; constructeurs automobiles et fabricants d’électroménager étrangers investissent, et le manufacturier remonte de 14,1 % du PIB en 2002 à 17,7 % en 2015.",
+    "from": 2004,
+    "to": 0
+   },
+   {
+    "en": "Farm consolidation and migration to cities and to other EU countries cut agriculture's share of jobs from 18.2% in 2005 to 11.5% in 2015.",
+    "fr": "Concentration des exploitations et départs vers les villes et les autres pays de l’UE : la part de l’agriculture dans l’emploi passe de 18,2 % en 2005 à 11,5 % en 2015.",
+    "from": 2005,
+    "to": 2015
+   },
+   {
+    "en": "Poland is the only EU economy to avoid recession in the global financial crisis, helped by a weaker zloty and EU-funded investment; industry holds at 29.7% of GDP in 2010.",
+    "fr": "Seule économie de l’UE à éviter la récession pendant la crise financière mondiale, aidée par la baisse du zloty et les investissements financés par l’UE, la Pologne maintient l’industrie à 29,7 % du PIB en 2010.",
+    "from": 2009,
+    "to": 0
+   },
+   {
+    "en": "Business-service and IT centres multiply in Kraków, Warsaw and Wrocław; services reach 59.7% of GDP and 63.8% of jobs in 2025, while industry slips to 25.8% of GDP.",
+    "fr": "Les centres de services aux entreprises et d’informatique se multiplient à Cracovie, Varsovie et Wrocław ; les services atteignent 59,7 % du PIB et 63,8 % des emplois en 2025, et l’industrie recule à 25,8 % du PIB.",
+    "from": 2015,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "After 1989 Poland moved from a planned to a market economy: farming fell from 26.3% of jobs in 1991 to 6.2% in 2025, while factories joined European supply chains.",
+   "fr": "Après 1989, la Pologne passe du plan au marché : l’agriculture tombe de 26,3 % des emplois en 1991 à 6,2 % en 2025, et ses usines rejoignent les chaînes de valeur européennes."
+  }
+ },
+ "PRT": {
+  "events": [
+   {
+    "en": "EEC accession brings structural funds for motorways and other infrastructure; construction booms up to Lisbon's Expo 98, and industry's share of jobs peaks at 36.7% in 1998.",
+    "fr": "L’adhésion à la CEE apporte des fonds structurels pour les autoroutes et les infrastructures ; le bâtiment prospère jusqu’à l’Expo 98 de Lisbonne, et la part de l’industrie dans l’emploi culmine à 36,7 % en 1998.",
+    "from": 1986,
+    "to": 1998
+   },
+   {
+    "en": "China's WTO entry (2001) and the end of textile quotas (2005) hit textiles, clothing and footwear; manufacturing falls from 15.0% of GDP in 2000 to 12.6% in 2005, and industry from 35.7% to 31.4% of jobs.",
+    "fr": "L’entrée de la Chine à l’OMC (2001) et la fin des quotas textiles (2005) frappent textile, habillement et chaussure : le manufacturier passe de 15,0 % du PIB en 2000 à 12,6 % en 2005, l’industrie de 35,7 % à 31,4 % des emplois.",
+    "from": 2001,
+    "to": 2005
+   },
+   {
+    "en": "The euro crisis leads to an EU–IMF bailout and austerity; construction collapses and industry's share of jobs falls to a low of 23.9% in 2014.",
+    "fr": "La crise de l’euro débouche sur un plan d’aide UE-FMI et sur l’austérité ; la construction s’effondre et la part de l’industrie dans l’emploi tombe à 23,9 % en 2014, son plus bas.",
+    "from": 2011,
+    "to": 2014
+   },
+   {
+    "en": "A tourism boom centred on Lisbon, Porto and the Algarve drives the recovery; services reach 66.6% of GDP and 72.7% of jobs in 2025.",
+    "fr": "Un essor touristique centré sur Lisbonne, Porto et l’Algarve porte la reprise ; les services atteignent 66,6 % du PIB et 72,7 % des emplois en 2025.",
+    "from": 2014,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "EU funds, the euro and tourism reshaped Portugal: textiles and footwear met Asian competition, construction collapsed in the debt crisis, and services reached about 73% of jobs.",
+   "fr": "Fonds européens, euro et tourisme ont transformé le Portugal : textile et chaussure face à l’Asie, construction effondrée en 2011-2014, services occupant environ 73 % des emplois."
+  }
+ },
+ "QAT": {
+  "events": [
+   {
+    "en": "Second oil shock → crude revenues peak; the secondary sector reaches its maximum of 76.1% of GDP in 1980, with services at only 24.5%.",
+    "fr": "Second choc pétrolier → les recettes du brut culminent ; le secondaire atteint son maximum, 76,1 % du PIB en 1980, les services n’en pesant que 24,5 %.",
+    "from": 1979,
+    "to": 1980
+   },
+   {
+    "en": "Oil price collapse → the secondary share falls to its low of 46.1% of GDP in 1988, while services peak at 54.7%.",
+    "fr": "Effondrement des cours du pétrole → le secondaire tombe à son plus bas, 46,1 % du PIB en 1988, et les services culminent à 54,7 %.",
+    "from": 1986,
+    "to": 1988
+   },
+   {
+    "en": "LNG exports from the giant North Field begin in the late 1990s → the secondary share rebounds from 53.2% of GDP in 1995 to 70.7% in 2000 and 74.5% in 2005.",
+    "fr": "Début des exportations de GNL du gisement géant North Field à la fin des années 1990 → le secondaire remonte de 53,2 % du PIB en 1995 à 70,7 % en 2000 et 74,5 % en 2005.",
+    "from": 1996,
+    "to": 2005
+   },
+   {
+    "en": "Gas-funded construction boom staffed largely by migrant workers → industry's share of jobs jumps from 36.9% in 2000 to a peak of 59.6% in 2008.",
+    "fr": "Boom de la construction financé par le gaz et porté par une main-d’œuvre largement immigrée → la part de l’industrie dans l’emploi passe de 36,9 % en 2000 à un pic de 59,6 % en 2008.",
+    "from": 2000,
+    "to": 2008
+   },
+   {
+    "en": "Lower oil and gas prices after 2014, then the end of World Cup 2022 construction → the secondary share falls to 52.3% of GDP in 2020 and industry's share of jobs to 38.0% in 2025.",
+    "fr": "Baisse des prix du pétrole et du gaz après 2014, puis fin des chantiers de la Coupe du monde 2022 → le secondaire tombe à 52,3 % du PIB en 2020 et à 38,0 % des emplois en 2025.",
+    "from": 2014,
+    "to": 2022
+   }
+  ],
+  "summary": {
+   "en": "Gas and oil make industry Qatar's largest sector; liquefied natural gas exports from the late 1990s and a construction boom shaped both GDP and jobs.",
+   "fr": "Gaz et pétrole font de l’industrie le premier secteur qatari ; le GNL exporté depuis la fin des années 1990 et un boom du bâtiment ont façonné PIB et emploi."
+  }
+ },
+ "RUS": {
+  "events": [
+   {
+    "en": "Soviet collapse, price liberalisation (1992) and privatisation: factories and collective farms shrink; industry falls from 45% of GDP (1990) to 34.5% (1995) and services rise from 32.6% to 52.2%.",
+    "fr": "Effondrement de l’URSS, libéralisation des prix (1992) et privatisations : usines et fermes collectives déclinent ; l’industrie passe de 45 % du PIB (1990) à 34,5 % (1995), les services de 32,6 % à 52,2 %.",
+    "from": 1991,
+    "to": 1995
+   },
+   {
+    "en": "After the 1998 default and rouble devaluation, an oil price boom fuels consumption: manufacturing slips from 15.7% of GDP (2005) to 12.8% (2010) and farm jobs fall from 14.2% (2000) to 7.8% (2010).",
+    "fr": "Après le défaut de 1998 et la dévaluation du rouble, l’envolée du pétrole dope la consommation : l’industrie manufacturière glisse de 15,7 % du PIB (2005) à 12,8 % (2010), l’emploi agricole de 14,2 % à 7,8 %.",
+    "from": 1998,
+    "to": 2008
+   },
+   {
+    "en": "Western sanctions over Crimea, Russia’s ban on Western food imports and the oil price fall: domestic farming expands, and agriculture’s share of GDP rises from 3.3% (2010) to 3.9% (2015).",
+    "fr": "Sanctions occidentales liées à la Crimée, embargo russe sur les produits alimentaires occidentaux et chute du pétrole : l’agriculture nationale se développe et passe de 3,3 % du PIB (2010) à 3,9 % (2015).",
+    "from": 2014,
+    "to": 0
+   },
+   {
+    "en": "Full-scale war in Ukraine and broad sanctions: military production expands and manufacturing edges up from 13.4% of GDP (2020) to 13.7% (2025).",
+    "fr": "Guerre à grande échelle en Ukraine et sanctions étendues : la production militaire s’accroît et l’industrie manufacturière passe de 13,4 % du PIB (2020) à 13,7 % (2025).",
+    "from": 2022,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Soviet heavy industry made up 46.6% of GDP in 1989; after 1991 it shrank to about 30%, with oil and gas central and services rising to 58.9%.",
+   "fr": "L’industrie lourde soviétique pesait 46,6 % du PIB en 1989 ; après 1991, elle retombe vers 30 %, le pétrole et le gaz restant centraux, et les services montent à 58,9 %."
+  }
+ },
+ "SAU": {
+  "events": [
+   {
+    "en": "1973 oil embargo and the quadrupling of crude prices → oil revenues soar; since oil counts as industry, the secondary sector peaks at 83.1% of GDP in 1974.",
+    "fr": "Embargo pétrolier de 1973 et quadruplement du prix du brut → envolée des recettes ; le pétrole relevant de l’industrie, le secondaire culmine à 83,1 % du PIB en 1974.",
+    "from": 1973,
+    "to": 1974
+   },
+   {
+    "en": "Saudi Arabia gives up its swing-producer role and the oil price collapses → the secondary share falls to its low of 37.1% of GDP in 1986, while services peak at 57.0%.",
+    "fr": "L’Arabie saoudite renonce à son rôle de producteur d’appoint et le prix du pétrole s’effondre → le secondaire tombe à son plus bas, 37,1 % du PIB en 1986, et les services culminent à 57,0 %.",
+    "from": 1985,
+    "to": 1986
+   },
+   {
+    "en": "Commodity boom lifts oil prices → the secondary sector climbs back from 53.5% of GDP in 2000 to 61.7% in 2005.",
+    "fr": "Le super-cycle des matières premières fait grimper le pétrole → le secondaire remonte de 53,5 % du PIB en 2000 à 61,7 % en 2005.",
+    "from": 2003,
+    "to": 2008
+   },
+   {
+    "en": "Oil price collapse → the secondary share drops from 58.0% of GDP in 2010 to 44.6% in 2015, and services rise to 51.6%.",
+    "fr": "Effondrement des cours du pétrole → le secondaire recule de 58,0 % du PIB en 2010 à 44,6 % en 2015, et les services montent à 51,6 %.",
+    "from": 2014,
+    "to": 2016
+   },
+   {
+    "en": "Vision 2030 launched to diversify away from crude → petrochemicals and other industries expand; manufacturing rises from 13.1% of GDP in 2015 to 15.8% in 2025.",
+    "fr": "Lancement de Vision 2030 pour sortir de la dépendance au brut → essor de la pétrochimie et d’autres industries ; la part manufacturière passe de 13,1 % du PIB en 2015 à 15,8 % en 2025.",
+    "from": 2016,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "Oil dominates Saudi output: the secondary share rises and falls with crude prices, services employ most workers, and Vision 2030 slowly lifts manufacturing.",
+   "fr": "Le pétrole domine l’économie saoudienne : la part du secondaire suit les cours du brut, les services emploient l’essentiel des actifs et Vision 2030 renforce peu à peu l’industrie manufacturière."
+  }
+ },
+ "SGP": {
+  "events": [
+   {
+    "en": "After independence, the Economic Development Board (1961) courts multinational factories: manufacturing rises from 13.5% of GDP (1965) to 26.5% (1980).",
+    "fr": "Après l’indépendance, l’Economic Development Board (1961) attire les usines des multinationales : l’industrie manufacturière passe de 13,5 % du PIB (1965) à 26,5 % (1980).",
+    "from": 1965,
+    "to": 1980
+   },
+   {
+    "en": "First recession since independence: construction and manufacturing slump, and manufacturing falls from 26.5% of GDP (1980) to 20.1% (1985).",
+    "fr": "Première récession depuis l’indépendance : le BTP et l’industrie plongent, et l’industrie manufacturière tombe de 26,5 % du PIB (1980) à 20,1 % (1985).",
+    "from": 1985,
+    "to": 0
+   },
+   {
+    "en": "Upgrading to wafer fabs, petrochemicals and pharmaceuticals: manufacturing peaks at 27.1% of GDP in 2004, but labour-intensive assembly leaves and industry’s share of jobs falls from 35.1% to 23.9%.",
+    "fr": "Montée en gamme vers les semi-conducteurs, la pétrochimie et la pharmacie : l’industrie manufacturière culmine à 27,1 % du PIB en 2004, mais l’assemblage part et l’emploi industriel passe de 35,1 % à 23,9 %.",
+    "from": 1991,
+    "to": 2005
+   },
+   {
+    "en": "Growth of finance, wealth management, logistics and tourism: services rise from 64.1% of GDP (2005) to 72.2% (2020) and reach 85.1% of jobs.",
+    "fr": "Essor de la finance, de la gestion de fortune, de la logistique et du tourisme : les services passent de 64,1 % du PIB (2005) à 72,2 % (2020) et atteignent 85,1 % des emplois.",
+    "from": 2005,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "An entrepôt port that industrialised after 1965: industry peaked at 35.2% of GDP in 1984, then finance, trade and business services took over and now employ 86% of workers.",
+   "fr": "Port d’entrepôt industrialisé après 1965 : l’industrie culmine à 35,2 % du PIB en 1984, puis finance, commerce et services aux entreprises prennent le relais et emploient 86 % des actifs."
+  }
+ },
+ "SWE": {
+  "events": [
+   {
+    "en": "The shipbuilding crisis closes most large Swedish yards despite state support, and steel and textiles also contract; heavy industry gives way to engineering and, later, services.",
+    "fr": "La crise de la construction navale ferme la plupart des grands chantiers suédois malgré l’aide publique, et l’acier comme le textile se contractent ; l’industrie lourde cède la place à la mécanique, puis aux services.",
+    "from": 1975,
+    "to": 1985
+   },
+   {
+    "en": "A property and banking crisis causes a deep recession; after the krona is floated in 1992 its fall boosts exports, and manufacturing recovers from 18.2% of GDP in 1990 to 19.9% in 2000, led by Ericsson.",
+    "fr": "Une crise immobilière et bancaire provoque une profonde récession ; après le flottement de la couronne en 1992, sa chute dope les exportations et le manufacturier remonte de 18,2 % du PIB en 1990 à 19,9 % en 2000, porté par Ericsson.",
+    "from": 1990,
+    "to": 1994
+   },
+   {
+    "en": "The telecom bust shrinks Ericsson, then the 2008–2009 crisis hits carmakers (Volvo Cars sold to Geely in 2010, Saab bankrupt in 2011); manufacturing falls from 19.9% of GDP in 2000 to 14.9% in 2010.",
+    "fr": "L’éclatement de la bulle des télécoms réduit Ericsson, puis la crise de 2008-2009 frappe l’automobile (Volvo Cars vendu à Geely en 2010, faillite de Saab en 2011) : le manufacturier passe de 19,9 % du PIB en 2000 à 14,9 % en 2010.",
+    "from": 2001,
+    "to": 2011
+   },
+   {
+    "en": "Software, gaming and fintech firms such as Spotify and Klarna grow alongside public services; services rise from 62.9% of GDP in 2010 to 67.0% in 2025 and employ 81.4% of workers.",
+    "fr": "Logiciel, jeux vidéo et fintech (Spotify, Klarna) se développent aux côtés des services publics : les services passent de 62,9 % du PIB en 2010 à 67,0 % en 2025 et emploient 81,4 % des actifs.",
+    "from": 2010,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "A high-tech export economy: manufacturing slipped from 20.7% of GDP in 1980 to 12.5% in 2025 as IT, business and welfare services expanded.",
+   "fr": "Économie exportatrice de haute technologie : le manufacturier est passé de 20,7 % du PIB en 1980 à 12,5 % en 2025, au profit des services informatiques, aux entreprises et sociaux."
+  }
+ },
+ "THA": {
+  "events": [
+   {
+    "en": "National development plans and import-substituting industry: industry rises from 18.5% of GDP (1960) to 28.7% (1980) as agriculture falls from 36.4% to 23.2%.",
+    "fr": "Plans nationaux de développement et industrialisation par substitution aux importations : l’industrie passe de 18,5 % du PIB (1960) à 28,7 % (1980), l’agriculture de 36,4 % à 23,2 %.",
+    "from": 1961,
+    "to": 1980
+   },
+   {
+    "en": "After the Plaza Accord, Japanese firms relocate electronics and car plants to Thailand: manufacturing jumps from 21.9% of GDP (1985) to 27.2% (1990) and agriculture drops to 9.1% by 1995.",
+    "fr": "Après les accords du Plaza, les firmes japonaises installent électronique et automobile en Thaïlande : l’industrie manufacturière bondit de 21,9 % du PIB (1985) à 27,2 % (1990), l’agriculture tombe à 9,1 % en 1995.",
+    "from": 1985,
+    "to": 1996
+   },
+   {
+    "en": "The baht float triggers the Asian financial crisis; finance and construction collapse, but the cheaper currency helps exports, and manufacturing keeps rising to 30.9% of GDP in 2010.",
+    "fr": "Le flottement du baht déclenche la crise asiatique ; finance et BTP s’effondrent, mais la monnaie dépréciée soutient les exportations et l’industrie manufacturière monte jusqu’à 30,9 % du PIB en 2010.",
+    "from": 1997,
+    "to": 2010
+   },
+   {
+    "en": "Export manufacturing slows as costs rise, while tourism expands through the 2010s: manufacturing slips to 23.7% of GDP in 2025 and services reach 60.2%.",
+    "fr": "L’industrie exportatrice ralentit avec la hausse des coûts, tandis que le tourisme progresse dans les années 2010 : l’industrie manufacturière glisse à 23,7 % du PIB en 2025, les services atteignent 60,2 %.",
+    "from": 2010,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Thailand moved from rice and rubber to export manufacturing: manufacturing rose from 12.5% of GDP in 1960 to 30.9% in 2010, before services regained ground.",
+   "fr": "Du riz et du caoutchouc à l’industrie exportatrice : l’industrie manufacturière passe de 12,5 % du PIB en 1960 à 30,9 % en 2010, avant que les services ne reprennent l’avantage."
+  }
+ },
+ "TUR": {
+  "events": [
+   {
+    "en": "Five-year plans and import-substituting industrialisation: industry rises from 17.3% of GDP (1960) to 23.5% (1980) while agriculture falls from 54.9% to 26.1%.",
+    "fr": "Plans quinquennaux et industrialisation par substitution aux importations : l’industrie passe de 17,3 % du PIB (1960) à 23,5 % (1980), l’agriculture de 54,9 % à 26,1 %.",
+    "from": 1960,
+    "to": 1979
+   },
+   {
+    "en": "January 1980 liberalisation turns the economy towards exports of textiles, cars and appliances: manufacturing rises from 17.1% of GDP (1980) to a 25.7% peak in 1995.",
+    "fr": "Les décisions de libéralisation de janvier 1980 tournent l’économie vers l’export de textile, d’automobiles et d’électroménager : l’industrie manufacturière passe de 17,1 % du PIB (1980) à un pic de 25,7 % en 1995.",
+    "from": 1980,
+    "to": 1995
+   },
+   {
+    "en": "After the 2001 banking crisis, IMF-backed reforms and a credit boom fuel urban growth: farm jobs fall from 34.6% (2000) to 22.5% (2010) and services rise to 48.8% of jobs.",
+    "fr": "Après la crise bancaire de 2001, réformes appuyées par le FMI et boom du crédit dopent la croissance urbaine : l’agriculture passe de 34,6 % des emplois (2000) à 22,5 % (2010), les services montent à 48,8 %.",
+    "from": 2001,
+    "to": 2010
+   },
+   {
+    "en": "A construction boom lifts industry from 24.5% of GDP (2010) to 28% (2015); after the 2018 currency crisis building slows and industry falls back to 24% in 2025.",
+    "fr": "Un boom de la construction porte l’industrie de 24,5 % du PIB (2010) à 28 % (2015) ; après la crise monétaire de 2018, le BTP ralentit et l’industrie retombe à 24 % en 2025.",
+    "from": 2010,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "From a farm economy (55% of GDP in 1960) to a diversified one: farm jobs fell from 46% in 1991 to 14% in 2025; services now produce 59% of GDP.",
+   "fr": "D’une économie agricole (55 % du PIB en 1960) à une économie diversifiée : l’agriculture passe de 46 % des emplois en 1991 à 14 % en 2025 ; les services font 59 % du PIB."
+  }
+ },
+ "UKR": {
+  "events": [
+   {
+    "en": "Independence, the break-up of Soviet supply chains and the 1993 hyperinflation: manufacturing collapses from a 44.6% peak of GDP in 1992 to 17.4% in 2000.",
+    "fr": "Indépendance, rupture des chaînes d’approvisionnement soviétiques et hyperinflation de 1993 : l’industrie manufacturière s’effondre, de 44,6 % du PIB en 1992 à 17,4 % en 2000.",
+    "from": 1991,
+    "to": 2000
+   },
+   {
+    "en": "Recovery driven by steel exports and consumer spending: services grow from 39.7% of GDP (2000) to 55.5% (2010) as industry keeps losing weight.",
+    "fr": "Reprise portée par les exportations d’acier et la consommation : les services passent de 39,7 % du PIB (2000) à 55,5 % (2010), tandis que l’industrie continue de perdre du poids.",
+    "from": 2000,
+    "to": 2008
+   },
+   {
+    "en": "Annexation of Crimea by Russia and war in the Donbas, the coal and steel heartland: industry falls from 25.6% of GDP (2010) to 21.7% (2015), while grain-led agriculture rises to 12.1%.",
+    "fr": "Annexion de la Crimée par la Russie et guerre dans le Donbass, cœur du charbon et de l’acier : l’industrie passe de 25,6 % du PIB (2010) à 21,7 % (2015), l’agriculture, portée par les céréales, monte à 12,1 %.",
+    "from": 2014,
+    "to": 2015
+   },
+   {
+    "en": "Russia’s full-scale invasion destroys or occupies major plants and disrupts ports: manufacturing falls to 7.6% of GDP in 2022 and industry to 17.9% in 2025.",
+    "fr": "L’invasion russe à grande échelle détruit ou place sous occupation de grands sites industriels et perturbe les ports : l’industrie manufacturière tombe à 7,6 % du PIB en 2022, l’industrie à 17,9 % en 2025.",
+    "from": 2022,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Once a Soviet industrial base, Ukraine saw industry shrink from 45% of GDP in 1987 to 18% in 2025, while services rose to 61%.",
+   "fr": "Ancien bastion industriel soviétique, l’Ukraine voit l’industrie passer de 45 % du PIB en 1987 à 18 % en 2025, tandis que les services montent à 61 %."
+  }
+ },
+ "USA": {
+  "events": [
+   {
+    "en": "NAFTA takes effect and supply chains extend into Mexico; together with automation, this helps cut industry's share of jobs from 24.4% in 1991 to 22.7% in 2000.",
+    "fr": "Entrée en vigueur de l’ALENA : les chaînes d’approvisionnement s’étendent au Mexique ; avec l’automatisation, la part de l’industrie dans l’emploi recule de 24,4 % en 1991 à 22,7 % en 2000.",
+    "from": 1994,
+    "to": 0
+   },
+   {
+    "en": "China joins the WTO in 2001; import competition hits furniture, textiles and electronics, and manufacturing falls from 15.1% of GDP in 2000 to 11.9% in 2010.",
+    "fr": "Adhésion de la Chine à l’OMC en 2001 : la concurrence des importations frappe le meuble, le textile et l’électronique, et l’industrie manufacturière passe de 15,1 % du PIB en 2000 à 11,9 % en 2010.",
+    "from": 2001,
+    "to": 2010
+   },
+   {
+    "en": "The housing bust and financial crisis wipe out construction and factory jobs; industry's share of employment drops from 22.1% in 2005 to 19.5% in 2010 and does not recover.",
+    "fr": "L’éclatement de la bulle immobilière et la crise financière détruisent des emplois dans le bâtiment et l’industrie : leur part dans l’emploi tombe de 22,1 % en 2005 à 19,5 % en 2010, sans rebond ensuite.",
+    "from": 2007,
+    "to": 2009
+   },
+   {
+    "en": "The shale revolution (horizontal drilling and fracking) makes the US the world's largest oil and gas producer, yet industry's GDP share keeps edging down, from 19.3% in 2010 to 17.6% in 2021.",
+    "fr": "La révolution du schiste (forage horizontal et fracturation hydraulique) fait des États-Unis le premier producteur mondial de pétrole et de gaz, mais la part de l’industrie dans le PIB recule encore, de 19,3 % en 2010 à 17,6 % en 2021.",
+    "from": 2008,
+    "to": 2019
+   },
+   {
+    "en": "Covid-19 lockdowns hit factories and energy demand; industry falls to its low of 17.3% of GDP while services reach 77.0%.",
+    "fr": "Les confinements liés au Covid-19 pèsent sur les usines et la demande d’énergie : l’industrie touche son plus bas, 17,3 % du PIB, et les services atteignent 77,0 %.",
+    "from": 2020,
+    "to": 0
+   }
+  ],
+  "summary": {
+   "en": "A services-led economy where industry slid from 23% of GDP in 1997 to under 18% in 2021 as manufacturing offshored and automated, despite the shale oil and gas boom.",
+   "fr": "Économie de services : l’industrie est passée de 23 % du PIB en 1997 à moins de 18 % en 2021, avec les délocalisations et l’automatisation, malgré l’essor du schiste."
+  }
+ },
+ "VEN": {
+  "events": [
+   {
+    "en": "First oil shock, then nationalisation of the oil industry and creation of PDVSA (1976) → the secondary sector peaks at 58.3% of GDP in 1974.",
+    "fr": "Premier choc pétrolier, puis nationalisation du pétrole et création de PDVSA (1976) → le secondaire culmine à 58,3 % du PIB en 1974.",
+    "from": 1973,
+    "to": 1976
+   },
+   {
+    "en": "The 1983 devaluation (\"Black Friday\") and the 1986 oil price collapse → the secondary share falls from 51.2% of GDP in 1980 to 45.2% in 1985.",
+    "fr": "Dévaluation de 1983 (« Vendredi noir ») et effondrement du pétrole en 1986 → le secondaire passe de 51,2 % du PIB en 1980 à 45,2 % en 1985.",
+    "from": 1983,
+    "to": 1986
+   },
+   {
+    "en": "Gulf crisis oil price spike → the secondary sector climbs back to 57.7% of GDP, the last year of the GDP series.",
+    "fr": "Flambée du pétrole lors de la crise du Golfe → le secondaire remonte à 57,7 % du PIB, dernière année de la série.",
+    "from": 1990,
+    "to": 0
+   },
+   {
+    "en": "Oil price collapse, falling oil output, hyperinflation and US sanctions (2019) → industry falls from 21.3% of jobs in 2015 to 16.8% in 2025, and farming rises from 6.4% to 9.8% by 2020.",
+    "fr": "Chute du pétrole, production en baisse, hyperinflation et sanctions américaines (2019) → l’industrie passe de 21,3 % des emplois en 2015 à 16,8 % en 2025, l’agriculture de 6,4 % à 9,8 % en 2020.",
+    "from": 2014,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Venezuela's economy rose and fell with oil; World Bank sector shares of GDP stop after 1990, but jobs data show industry shrinking during the post-2014 collapse.",
+   "fr": "L’économie vénézuélienne a suivi le pétrole ; les parts sectorielles du PIB de la Banque mondiale s’arrêtent en 1990, mais l’emploi montre le recul de l’industrie après 2014."
+  }
+ },
+ "VNM": {
+  "events": [
+   {
+    "en": "Đổi Mới market reforms end collective farming and open trade: agriculture falls from 38.7% of GDP (1990) to 24.5% (2000), while services peak at 44.1% in 1995.",
+    "fr": "Les réformes du Đổi Mới mettent fin à l’agriculture collective et ouvrent le commerce : l’agriculture passe de 38,7 % du PIB (1990) à 24,5 % (2000), les services culminant à 44,1 % en 1995.",
+    "from": 1986,
+    "to": 0
+   },
+   {
+    "en": "ASEAN membership (1995) and the US trade agreement (2001) attract investment in garments and footwear, alongside offshore oil: industry rises from 28.8% of GDP (1995) to a 40.2% peak in 2004.",
+    "fr": "L’entrée dans l’ASEAN (1995) et l’accord commercial avec les États-Unis (2001) attirent textile et chaussure, à côté du pétrole offshore : l’industrie passe de 28,8 % du PIB (1995) à 40,2 % en 2004.",
+    "from": 1995,
+    "to": 2004
+   },
+   {
+    "en": "WTO accession brings large foreign investment in electronics assembly: manufacturing rises from 17.1% of GDP (2010) to 24.5% (2025), and industrial jobs from 21.7% to 34.8%.",
+    "fr": "L’adhésion à l’OMC attire d’importants investissements étrangers dans l’assemblage électronique : l’industrie manufacturière passe de 17,1 % du PIB (2010) à 24,5 % (2025), l’emploi industriel de 21,7 % à 34,8 %.",
+    "from": 2007,
+    "to": 2025
+   },
+   {
+    "en": "US–China tariffs push firms to move part of their production to Viet Nam: manufacturing peaks at 24.7% of GDP in 2022 and farm jobs drop from 32.6% (2020) to 25% (2025).",
+    "fr": "Les droits de douane entre États-Unis et Chine poussent des entreprises à déplacer une partie de leur production au Viêt Nam : l’industrie manufacturière culmine à 24,7 % du PIB en 2022 et l’emploi agricole passe de 32,6 % (2020) à 25 % (2025).",
+    "from": 2018,
+    "to": 2025
+   }
+  ],
+  "summary": {
+   "en": "Since Đổi Mới, Viet Nam has shifted from farming to export manufacturing: farm jobs fell from 74% in 1991 to 25% in 2025, industrial jobs rose to 35%.",
+   "fr": "Depuis le Đổi Mới, le Viêt Nam est passé de l’agriculture à l’industrie exportatrice : l’agriculture tombe de 74 % des emplois en 1991 à 25 % en 2025, l’industrie monte à 35 %."
+  }
+ },
+ "ZAF": {
+  "events": [
+   {
+    "en": "Gold price surge → mining lifts the secondary sector to its peak of 42.4% of GDP in 1980, while services fall to their low of 46.9%.",
+    "fr": "Envolée du cours de l’or → les mines portent le secondaire à son pic, 42,4 % du PIB en 1980, et les services tombent à leur plus bas, 46,9 %.",
+    "from": 1979,
+    "to": 1980
+   },
+   {
+    "en": "Debt standstill (1985) and international sanctions against apartheid, with gold prices well below 1980 → the secondary share falls from 42.4% of GDP in 1980 to 35.6% in 1990.",
+    "fr": "Moratoire sur la dette (1985) et sanctions internationales contre l’apartheid, avec un or bien moins cher qu’en 1980 → le secondaire passe de 42,4 % du PIB en 1980 à 35,6 % en 1990.",
+    "from": 1985,
+    "to": 1990
+   },
+   {
+    "en": "End of apartheid and trade liberalisation expose protected factories to imports while finance grows → manufacturing falls from 23.7% of GDP in 1990 to 13.9% in 2010; services rise to 64.3%.",
+    "fr": "Fin de l’apartheid et libéralisation des échanges : les usines protégées affrontent les importations et la finance grandit → le manufacturier passe de 23,7 % du PIB en 1990 à 13,9 % en 2010 ; les services à 64,3 %.",
+    "from": 1994,
+    "to": 2010
+   },
+   {
+    "en": "Recurrent power cuts (load-shedding) and declining gold output weigh on industry, then Covid-19 hits → the secondary share and manufacturing reach their lows of 23.3% and 11.7% of GDP in 2020.",
+    "fr": "Délestages électriques récurrents et déclin de l’or pèsent sur l’industrie, puis vient le Covid-19 → le secondaire et le manufacturier touchent leurs plus bas, 23,3 % et 11,7 % du PIB en 2020.",
+    "from": 2008,
+    "to": 2020
+   }
+  ],
+  "summary": {
+   "en": "Mining, especially gold, made South Africa's industry strong until 1980; since then mining and manufacturing have shrunk relative to finance and other services.",
+   "fr": "Les mines, l’or en tête, ont fait la force de l’industrie sud-africaine jusqu’en 1980 ; depuis, mines et manufacturier reculent face à la finance et aux autres services."
+  }
+ }
+}

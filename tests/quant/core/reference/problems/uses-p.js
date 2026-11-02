@@ -1,0 +1,1 @@
+export default { name: 'P', inputs: [{ key: 'n', type: 'int', default: 3 }, { key: 'm', label: 'M', type: 'select', options: ['x', 'y'], default: 'y' }, { key: 't', type: 'time', default: 0 }], calc(bars, p) { return { value: bars.map(() => p.n + (p.m === 'y' ? 0.5 : 0) + p.t) }; } };
