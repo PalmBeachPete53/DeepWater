@@ -80,6 +80,10 @@ jobs:
           arch: win64_msvc2022_64
           modules: ${{ env.QT_MODULES }}
           cache: true
+          # Qt 6.11+ splits its Windows repository by compiler (qt6_6120/qt6_6120_msvc2022_64/), which aqtinstall
+          # 3.3.0, the last release on PyPI, can't read: aqtinstall's master has the fix (PR #1000), pinned here.
+          # Back to the default once aqtinstall 3.4 is out.
+          aqtsource: git+https://github.com/miurahr/aqtinstall.git@5a49f2b391ae8ee1d3c0dd87f8b33c1d49a4deb7
 
       # zlib (the World Bank / USDA / JODI zip archives), static so there is no DLL to ship.
       - name: Install zlib
