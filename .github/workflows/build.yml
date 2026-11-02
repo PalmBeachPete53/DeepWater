@@ -128,7 +128,10 @@ jobs:
         shell: pwsh
         run: |
           $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
-          Get-ChildItem $dir -File | ForEach-Object { "{0,12:N0}  {1}" -f $_.Length, $_.Name }
+          Get-ChildItem $dir | Format-Table -AutoSize Mode, Length, Name | Out-String -Width 200
+          foreach ($f in 'deepwater.exe', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
+            if (-not (Test-Path "$dir\$f")) { throw "$f isn't at the top of the packed folder" }
+          }
           $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
           Remove-Item Env:QT_PLUGIN_PATH, Env:QML2_IMPORT_PATH, Env:QT_ROOT_DIR -ErrorAction SilentlyContinue
           $shot = "$PWD\build\dist\smoke-windows.png"

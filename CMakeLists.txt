@@ -188,10 +188,11 @@ if(APPLE)
     install(TARGETS deepwater BUNDLE DESTINATION .)
 else()
     # Flat, as windeployqt lays it out: deepwater.exe, the Qt DLLs and qt.conf at the top, plugins/, translations/,
-    # resources/ beside. Qt's deploy script puts the DLLs in CMAKE_INSTALL_BINDIR ("bin" by default), where
-    # Windows wouldn't look for them next to an exe at the top.
-    set(CMAKE_INSTALL_BINDIR .)
+    # resources/ beside. Qt's deploy script puts the DLLs in QT_DEPLOY_BIN_DIR, which defaults to the
+    # CMAKE_INSTALL_BINDIR seen by find_package(Qt6) ("bin"), where Windows wouldn't look for them next to an exe at
+    # the top; the script keeps a value set before it runs.
     install(TARGETS deepwater RUNTIME DESTINATION .)
+    install(CODE "set(QT_DEPLOY_BIN_DIR .)")
     # The Visual C++ runtime (msvcp140.dll, vcruntime140*.dll) next to the exe, which Microsoft allows: a fresh
     # Windows 11 may not have it, and the portable .zip has no installer to run vc_redist. The UCRT is part of
     # Windows 10 and later.
