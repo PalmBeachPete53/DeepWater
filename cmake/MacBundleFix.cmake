@@ -6,14 +6,19 @@
 # still names a library outside the system gets that name rewritten to @rpath (the helper's rpath reaches
 # Contents/Frameworks, where the copy is). With Qt from the online installer (the CI build) there is nothing to do.
 # The virtual keyboard input plugin, pulled in from Homebrew's plugin folder, needs QtVirtualKeyboard, which isn't
-# deployed: it is removed. The bundle is signed again afterwards (install_name_tool voids signatures).
+# deployed, and so does the NMEA positioning plugin with QtSerialPort: both are removed. Qt from the online installer
+# is universal (arm64 + x86_64) while deepwater itself is built for one architecture (DEEPWATER_ARCH, set by
+# CMakeLists.txt): the other half of every library is dropped, which halves the .dmg. The bundle is signed again
+# afterwards (install_name_tool and lipo void signatures).
 
 set(app "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/deepwater.app")
-file(REMOVE "${app}/Contents/PlugIns/platforminputcontexts/libqtvirtualkeyboardplugin.dylib")
+file(REMOVE "${app}/Contents/PlugIns/platforminputcontexts/libqtvirtualkeyboardplugin.dylib"
+            "${app}/Contents/PlugIns/position/libqtposition_nmea.dylib")
 
 file(GLOB_RECURSE files LIST_DIRECTORIES false "${app}/Contents/MacOS/*" "${app}/Contents/Frameworks/*"
      "${app}/Contents/PlugIns/*")
 set(fixed 0)
+set(thinned 0)
 foreach(f IN LISTS files)
     if(IS_SYMLINK "${f}" OR f MATCHES "\\.(pak|dat|bin|plist|qm|json|png|icns|strings|nib|prl)$" OR f MATCHES "/Resources/")
         continue()
@@ -21,6 +26,13 @@ foreach(f IN LISTS files)
     execute_process(COMMAND otool -L "${f}" OUTPUT_VARIABLE deps ERROR_QUIET RESULT_VARIABLE rc)
     if(NOT rc EQUAL 0 OR deps MATCHES "is not an object file")
         continue()
+    endif()
+    if(DEEPWATER_ARCH)
+        execute_process(COMMAND lipo -archs "${f}" OUTPUT_VARIABLE archs OUTPUT_STRIP_TRAILING_WHITESPACE ERROR_QUIET)
+        if(archs MATCHES " " AND archs MATCHES "${DEEPWATER_ARCH}")
+            execute_process(COMMAND lipo "${f}" -thin ${DEEPWATER_ARCH} -output "${f}" COMMAND_ERROR_IS_FATAL ANY)
+            math(EXPR thinned "${thinned} + 1")
+        endif()
     endif()
     string(REGEX MATCHALL "\n\t/[^\n]+ \\(compatibility" lines "${deps}")
     foreach(line IN LISTS lines)
@@ -38,6 +50,6 @@ foreach(f IN LISTS files)
         math(EXPR fixed "${fixed} + 1")
     endforeach()
 endforeach()
-message(STATUS "Bundle: ${fixed} library path(s) outside the system rewritten to @rpath")
+message(STATUS "Bundle: ${fixed} library path(s) outside the system rewritten to @rpath, ${thinned} file(s) thinned to ${DEEPWATER_ARCH}")
 
 execute_process(COMMAND codesign --force --deep --sign - "${app}" COMMAND_ERROR_IS_FATAL ANY)

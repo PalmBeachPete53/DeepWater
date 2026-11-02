@@ -194,6 +194,15 @@ install(SCRIPT ${deepwater_deploy})
 if(APPLE)
     # Library paths macdeployqt leaves pointing at Homebrew, then the ad-hoc signature again: macdeployqt rewrites
     # load paths, which voids signatures, and an Apple silicon Mac refuses to load an unsigned binary.
+    if(CMAKE_OSX_ARCHITECTURES)
+        set(_arch ${CMAKE_OSX_ARCHITECTURES})
+    else()
+        set(_arch ${CMAKE_HOST_SYSTEM_PROCESSOR})
+    endif()
+    list(LENGTH _arch _narch)
+    if(_narch EQUAL 1)   # a universal build (arm64;x86_64) keeps both halves
+        install(CODE "set(DEEPWATER_ARCH ${_arch})")
+    endif()
     install(SCRIPT cmake/MacBundleFix.cmake)
 endif()
 

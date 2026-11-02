@@ -38,8 +38,8 @@ namespace {
 
 // ---------------------------------------------------------------- JS glue
 // The built-ins V4 lacks and the helpers of rewritten code: CustomIndicatorsJs.cpp.
-using detail::JS_POLYFILLS;
-using detail::JS_RUNTIME;
+using detail::jsPolyfills;
+using detail::jsRuntime;
 
 // Calls fn with `self` as this, catching what it throws: { ok, value } or { ok: false, error }.
 // (QJSValue::call hands back a thrown value without saying it was thrown.)
@@ -704,8 +704,8 @@ std::shared_ptr<Module> importFresh(const QString &path, const QString &id, cons
     auto m = std::make_shared<Module>();
     m->engine = std::make_unique<QJSEngine>();
     m->engine->installExtensions(QJSEngine::ConsoleExtension);
-    m->engine->evaluate(QString::fromUtf8(JS_POLYFILLS), QStringLiteral("qtm-polyfills.js"));
-    m->engine->evaluate(QString::fromUtf8(JS_RUNTIME), QStringLiteral("qtm-runtime.js"));
+    m->engine->evaluate(jsPolyfills(), QStringLiteral("qtm-polyfills.js"));
+    m->engine->evaluate(jsRuntime(), QStringLiteral("qtm-runtime.js"));
     m->host = std::make_unique<ModuleHost>(m.get());
     QJSEngine::setObjectOwnership(m->host.get(), QJSEngine::CppOwnership);
     m->engine->globalObject().property(QStringLiteral("__qtm")).setProperty(QStringLiteral("host"), m->engine->newQObject(m->host.get()));

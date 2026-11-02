@@ -20,6 +20,9 @@ target_link_libraries(qtm_core PUBLIC Qt6::Core Qt6::Qml)
 qt_add_resources(qtm_core pinets PREFIX /pinets BASE ${CMAKE_SOURCE_DIR}/third_party/pinets
     FILES ${CMAKE_SOURCE_DIR}/third_party/pinets/pinets.min.es.js ${CMAKE_SOURCE_DIR}/third_party/pinets/deepwater-pinets.mjs)
 
+# The JavaScript every custom indicator engine runs first (core/CustomIndicatorsJs.cpp).
+qt_add_resources(qtm_core qtmjs PREFIX /qtm BASE core/js FILES core/js/qtm-polyfills.js core/js/qtm-runtime.js)
+
 add_library(qtm_server STATIC ${QTM_SERVER_SOURCES})
 target_compile_features(qtm_server PUBLIC cxx_std_20)
 target_link_libraries(qtm_server PUBLIC qtm_core Qt6::Network Qt6::WebSockets Qt6::HttpServer Qt6::Concurrent)
