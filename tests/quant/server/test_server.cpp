@@ -1225,6 +1225,19 @@ static void testServer(Backend &backend, const QString &customDir)
         request("DELETE", "/api/custom/test-double-close.js", {}, H);
     }
 
+    test("a Pine Script is recognised and saved as .pine");
+    {
+        // Saved as .pine whether or not Node.js is there to run it (without, the answer is a 400 naming the file).
+        // Both ways of spotting Pine: the //@version line, and an indicator() declaration alone.
+        for (const auto &[name, code] : { std::pair<QString, QString> { "Test pine head", "//@version=6\nindicator(\"T\")\nplot(close)\n" },
+                                          std::pair<QString, QString> { "Test pine decl", "indicator(\"T\", overlay=true)\nplot(close)\n" } }) {
+            const QJsonValue r = post("/api/custom", J(QJsonObject { { "name", name }, { "code", code } })).json();
+            const QString file = QString(name).toLower().replace(' ', '-') + ".pine";
+            CHECK_EQ(r["file"].toString(), file);
+            request("DELETE", "/api/custom/" + file, {}, H);
+        }
+    }
+
     test("screener and scan work");
     {
         CHECK(get("/api/screener?universe=crypto").json().toArray().size() > 0);

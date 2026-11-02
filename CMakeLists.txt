@@ -187,9 +187,20 @@ endif()
 if(APPLE)
     install(TARGETS deepwater BUNDLE DESTINATION .)
 else()
+    # Flat, as windeployqt lays it out: deepwater.exe, the Qt DLLs and qt.conf at the top, plugins/, translations/,
+    # resources/ beside. Qt's deploy script puts the DLLs in CMAKE_INSTALL_BINDIR ("bin" by default), where
+    # Windows wouldn't look for them next to an exe at the top.
+    set(CMAKE_INSTALL_BINDIR .)
     install(TARGETS deepwater RUNTIME DESTINATION .)
+    # The Visual C++ runtime (msvcp140.dll, vcruntime140*.dll) next to the exe, which Microsoft allows: a fresh
+    # Windows 11 may not have it, and the portable .zip has no installer to run vc_redist. The UCRT is part of
+    # Windows 10 and later.
+    set(CMAKE_INSTALL_SYSTEM_RUNTIME_DESTINATION .)
+    set(CMAKE_INSTALL_UCRT_LIBRARIES OFF)
+    include(InstallRequiredSystemLibraries)
 endif()
-qt_generate_deploy_app_script(TARGET deepwater OUTPUT_SCRIPT deepwater_deploy NO_UNSUPPORTED_PLATFORM_ERROR)
+qt_generate_deploy_app_script(TARGET deepwater OUTPUT_SCRIPT deepwater_deploy NO_UNSUPPORTED_PLATFORM_ERROR
+                              NO_COMPILER_RUNTIME)
 install(SCRIPT ${deepwater_deploy})
 if(APPLE)
     # Library paths macdeployqt leaves pointing at Homebrew, then the ad-hoc signature again: macdeployqt rewrites

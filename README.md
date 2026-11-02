@@ -38,7 +38,10 @@ bundle again, ad-hoc. The version in the names is `DEEPWATER_PACKAGE_VERSION` (d
 
 GitHub Actions (`.github/workflows/build.yml`) does both at every push to `main` or a `ci/...` branch: a macOS runner
 (Apple silicon) makes the .dmg, a Windows runner (Visual Studio 2022, Qt from the online installer, zlib from
-vcpkg, static) makes the .exe; they are in the run's *Artifacts* for 5 days. Pushing a tag `v1.2` builds
+vcpkg, static) makes the .exe, then launches the packed folder with Qt off the PATH and opens the News reader (Qt
+WebEngine) as a smoke test (its screenshot is the *smoke-windows* artifact); the packages are in the run's
+*Artifacts* for 5 days. The Windows folder is flat (deepwater.exe, Qt DLLs, `qt.conf`, `plugins/`, `resources/`) and
+carries the Visual C++ runtime DLLs (app-local), so neither the installer nor the .zip needs vc_redist. Pushing a tag `v1.2` builds
 `Deepwater-1.2-*` and publishes the .dmg, .exe and .zip in a GitHub Release. Qt's version and modules are at the
 top of the workflow.
 

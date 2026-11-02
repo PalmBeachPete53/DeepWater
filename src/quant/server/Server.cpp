@@ -616,9 +616,9 @@ Response Backend::handle(const QString &method, const QString &p, const QHash<QS
                 static const QRegularExpression exportDefault(QStringLiteral("export[" QTM_JS_SPACE "]+default"));
                 // A Pine Script source (`//@version=N`, or an indicator()/strategy() declaration and no
                 // export) is saved as .pine and run by PineTS.
-                static const QRegularExpression pineHead(QStringLiteral("^[ \t]*//[ \t]*@version[ \t]*=[ \t]*\d"),
+                static const QRegularExpression pineHead(QStringLiteral("^[ \t]*//[ \t]*@version[ \t]*=[ \t]*\\d"),
                                                          QRegularExpression::MultilineOption);
-                static const QRegularExpression pineDecl(QStringLiteral("^[ \t]*(indicator|strategy)[ \t]*\("),
+                static const QRegularExpression pineDecl(QStringLiteral("^[ \t]*(indicator|strategy)[ \t]*\\("),
                                                          QRegularExpression::MultilineOption);
                 const QString text = jsv::toString(code);
                 const bool isJs = exportDefault.match(text).hasMatch();

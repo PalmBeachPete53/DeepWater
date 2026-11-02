@@ -122,6 +122,32 @@ jobs:
       - name: Build and package
         run: cmake --build build --target dist -- -k 0
 
+      # The packed folder must run on its own: launch it with Qt off the PATH and no Qt variables, open the News
+      # reader on a page (Qt WebEngine and its QtWebEngineProcess.exe on Windows), and take a screenshot.
+      - name: Smoke test
+        shell: pwsh
+        run: |
+          $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
+          Get-ChildItem $dir -File | ForEach-Object { "{0,12:N0}  {1}" -f $_.Length, $_.Name }
+          $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
+          Remove-Item Env:QT_PLUGIN_PATH, Env:QML2_IMPORT_PATH, Env:QT_ROOT_DIR -ErrorAction SilentlyContinue
+          $shot = "$PWD\build\dist\smoke-windows.png"
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -ArgumentList `
+               '--page', 'news', '--news-url', 'https://example.com', '--delay', '20000', '--screenshot', "`"$shot`""
+          $null = $p.Handle   # without it, ExitCode stays empty after WaitForExit
+          if (-not $p.WaitForExit(120000)) { $p.Kill(); throw "deepwater.exe didn't exit within 2 minutes" }
+          if ($p.ExitCode -ne 0) { throw "deepwater.exe exited with code $($p.ExitCode)" }
+          if (-not (Test-Path $shot)) { throw "no screenshot" }
+          "Screenshot: $((Get-Item $shot).Length) bytes"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-windows
+          path: build/dist/smoke-windows.png
+          retention-days: 5
+          if-no-files-found: ignore
+
       - uses: actions/upload-artifact@v4
         with:
           name: deepwater-windows
