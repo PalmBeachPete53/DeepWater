@@ -26,6 +26,28 @@ iconset (16 to 1024 px, e.g. with QSvgRenderer) into `deepwater.iconset/` and ru
 `iconutil -c icns deepwater.iconset -o resources/icon/deepwater.icns`; also refresh
 `resources/icon/deepwater-512.png` (the window icon). Avoid SVG clip paths and filters: Qt's SVG renderer ignores them.
 
+### Packaging (.dmg, .exe)
+
+`cmake --build build --target dist` builds the app and packs it with CPack into `build/dist/`: on macOS
+`Deepwater-<version>-macOS-arm64.dmg` (deepwater.app and a link to Applications), on Windows an installer
+`Deepwater-<version>-windows-x64.exe` (NSIS: Program Files, Start menu and desktop shortcuts, uninstaller) and the
+same folder as a portable `.zip`. The install step behind it (`cmake --install build --prefix <dir>`) runs
+macdeployqt / windeployqt, so the result runs on a machine without Qt; on macOS, `cmake/MacBundleFix.cmake` then
+points the library paths macdeployqt leaves on Homebrew (QtWebEngineProcess) at the bundle's own copies and signs the
+bundle again, ad-hoc. The version in the names is `DEEPWATER_PACKAGE_VERSION` (default: the project version).
+
+GitHub Actions (`.github/workflows/build.yml`) does both at every push to `main` or a `ci/...` branch: a macOS runner
+(Apple silicon) makes the .dmg, a Windows runner (Visual Studio 2022, Qt from the online installer, zlib from
+vcpkg, static) makes the .exe; they are in the run's *Artifacts* for 5 days. Pushing a tag `v1.2` builds
+`Deepwater-1.2-*` and publishes the .dmg, .exe and .zip in a GitHub Release. Qt's version and modules are at the
+top of the workflow.
+
+Neither package is signed with a developer certificate. On macOS the app is ad-hoc signed only: a downloaded .dmg
+is quarantined and Gatekeeper refuses it the first time (System Settings › Privacy & Security › *Open Anyway*, or
+`xattr -dr com.apple.quarantine /Applications/deepwater.app`); notarisation would need an Apple Developer ID. On
+Windows, SmartScreen shows *Windows protected your PC* (*More info* › *Run anyway*). The .dmg is arm64 only (no
+Intel Macs).
+
 ### Windows 11
 
 The sources build with MSVC (Qt WebEngine has no MinGW build on Windows); the port is done but has not been built

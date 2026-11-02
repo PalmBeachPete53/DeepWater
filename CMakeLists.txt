@@ -174,15 +174,67 @@ if(APPLE)
         COMMENT "Signing deepwater.app (ad-hoc)")
 endif()
 
-# Windows: the icon (resources/icon/deepwater.ico, rendered from the same PNG) and a folder the app runs from on any
-# PC: `cmake --install build --prefix <dir>` copies deepwater.exe and runs windeployqt (Qt DLLs, plugins, the
-# WebEngine process and its resources, translations).
+# Windows: the executable icon (resources/icon/deepwater.ico, rendered from the same PNG).
 if(WIN32)
     target_sources(deepwater PRIVATE resources/icon/deepwater.rc)
-    install(TARGETS deepwater RUNTIME DESTINATION .)
-    qt_generate_deploy_app_script(TARGET deepwater OUTPUT_SCRIPT deepwater_deploy NO_UNSUPPORTED_PLATFORM_ERROR)
-    install(SCRIPT ${deepwater_deploy})
 endif()
+
+# Install and packaging. `cmake --install build --prefix <dir>` gives an app that runs on a machine without Qt:
+# deepwater.app with the Qt frameworks inside (macdeployqt) on macOS, deepwater.exe next to the Qt DLLs, plugins,
+# QtWebEngineProcess and its resources (windeployqt) on Windows. `cmake --build build --target dist` builds the app
+# and packs that folder with CPack into build/dist: a .dmg on macOS, an installer .exe (NSIS) and a portable .zip on
+# Windows. .github/workflows/build.yml runs it on GitHub's macOS and Windows machines at every push.
+if(APPLE)
+    install(TARGETS deepwater BUNDLE DESTINATION .)
+else()
+    install(TARGETS deepwater RUNTIME DESTINATION .)
+endif()
+qt_generate_deploy_app_script(TARGET deepwater OUTPUT_SCRIPT deepwater_deploy NO_UNSUPPORTED_PLATFORM_ERROR)
+install(SCRIPT ${deepwater_deploy})
+if(APPLE)
+    # Library paths macdeployqt leaves pointing at Homebrew, then the ad-hoc signature again: macdeployqt rewrites
+    # load paths, which voids signatures, and an Apple silicon Mac refuses to load an unsigned binary.
+    install(SCRIPT cmake/MacBundleFix.cmake)
+endif()
+
+# The version in the package names; the CI build sets it from the git tag (v1.2 → 1.2) or the commit.
+set(DEEPWATER_PACKAGE_VERSION ${PROJECT_VERSION} CACHE STRING "Version in the .dmg / .exe / .zip names")
+set(CPACK_PACKAGE_NAME Deepwater)
+set(CPACK_PACKAGE_VERSION ${DEEPWATER_PACKAGE_VERSION})
+set(CPACK_PACKAGE_VENDOR Deepwater)
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Markets, macro and shipping terminal")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY Deepwater)
+set(CPACK_PACKAGE_DIRECTORY ${CMAKE_BINARY_DIR}/dist)
+set(CPACK_STRIP_FILES OFF)
+if(APPLE)
+    set(CPACK_GENERATOR DragNDrop)          # deepwater.app and a link to /Applications
+    set(CPACK_DMG_VOLUME_NAME Deepwater)
+    set(CPACK_DMG_FORMAT UDBZ)
+    set(CPACK_PACKAGE_FILE_NAME "Deepwater-${DEEPWATER_PACKAGE_VERSION}-macOS-${CMAKE_SYSTEM_PROCESSOR}")
+elseif(WIN32)
+    set(CPACK_GENERATOR NSIS ZIP)
+    set(CPACK_PACKAGE_FILE_NAME "Deepwater-${DEEPWATER_PACKAGE_VERSION}-windows-x64")
+    set(CPACK_NSIS_PACKAGE_NAME Deepwater)
+    set(CPACK_NSIS_DISPLAY_NAME Deepwater)
+    set(CPACK_NSIS_INSTALL_ROOT "$PROGRAMFILES64")
+    set(CPACK_NSIS_MUI_ICON ${CMAKE_SOURCE_DIR}/resources/icon/deepwater.ico)
+    set(CPACK_NSIS_MUI_UNIICON ${CMAKE_SOURCE_DIR}/resources/icon/deepwater.ico)
+    set(CPACK_NSIS_INSTALLED_ICON_NAME deepwater.exe)
+    set(CPACK_NSIS_EXECUTABLES_DIRECTORY .)  # deepwater.exe sits at the root of the install folder, not in bin
+    set(CPACK_PACKAGE_EXECUTABLES deepwater Deepwater)   # Start menu shortcut
+    set(CPACK_CREATE_DESKTOP_LINKS deepwater)
+    set(CPACK_NSIS_MUI_FINISHPAGE_RUN deepwater.exe)
+    set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL ON)
+endif()
+include(CPack)
+get_property(_multi GLOBAL PROPERTY GENERATOR_IS_MULTI_CONFIG)
+add_custom_target(dist
+    COMMAND ${CMAKE_CPACK_COMMAND} --config ${CMAKE_BINARY_DIR}/CPackConfig.cmake
+            $<$<BOOL:${_multi}>:-C> $<$<BOOL:${_multi}>:$<CONFIG>>
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+    DEPENDS deepwater
+    USES_TERMINAL
+    COMMENT "Packaging Deepwater into build/dist")
 
 # The Charts page (Quant Terminal port) seeds its custom indicator folder from here on first run.
 qt_add_resources(deepwater quant PREFIX /quant BASE resources/quant FILES resources/quant/ema-ribbon-squeeze.js)

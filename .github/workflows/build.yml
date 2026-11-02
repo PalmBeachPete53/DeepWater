@@ -1,0 +1,133 @@
+# Builds Deepwater on GitHub's machines and packs it: a .dmg on macOS (Apple silicon), an installer .exe and a
+# portable .zip on Windows. The packages are in the run's "Artifacts" (kept 5 days); a tag v* also publishes them
+# in a GitHub Release. Locally, the same packaging is `cmake --build build --target dist` (README › Packaging).
+name: Build
+
+on:
+  push:
+    branches: [main, 'ci/**']
+    tags: ['v*']
+  workflow_dispatch:
+
+# A newer push on the same branch cancels the run in progress (the Actions minutes of a private repo are counted).
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  QT_VERSION: 6.12.0
+  QT_MODULES: qtwebengine qtwebchannel qtpositioning qtwebsockets qthttpserver qtmultimedia
+
+jobs:
+  macos:
+    name: macOS (.dmg)
+    runs-on: macos-15
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package version
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then v="${GITHUB_REF_NAME#v}"; else v="0.1-${GITHUB_SHA::7}"; fi
+          echo "PKG_VERSION=$v" >> "$GITHUB_ENV"
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          host: mac
+          target: desktop
+          arch: clang_64
+          modules: ${{ env.QT_MODULES }}
+          cache: true
+
+      - name: Configure
+        run: >
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$QT_ROOT_DIR"
+          -DCMAKE_OSX_ARCHITECTURES=arm64 -DDEEPWATER_PACKAGE_VERSION="$PKG_VERSION"
+
+      - name: Build and package
+        run: cmake --build build --target dist --parallel 4
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deepwater-macos
+          path: build/dist/*.dmg
+          retention-days: 5
+          compression-level: 0
+          if-no-files-found: error
+
+  windows:
+    name: Windows 11 (.exe)
+    runs-on: windows-2022
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package version
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then v="${GITHUB_REF_NAME#v}"; else v="0.1-${GITHUB_SHA::7}"; fi
+          echo "PKG_VERSION=$v" >> "$GITHUB_ENV"
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: ${{ env.QT_VERSION }}
+          host: windows
+          target: desktop
+          arch: win64_msvc2022_64
+          modules: ${{ env.QT_MODULES }}
+          cache: true
+
+      # zlib (the World Bank / USDA / JODI zip archives), static so there is no DLL to ship.
+      - name: Install zlib
+        shell: pwsh
+        run: '& "$env:VCPKG_INSTALLATION_ROOT\vcpkg.exe" install zlib:x64-windows-static-md'
+
+      # CPack's NSIS generator needs makensis; the runner image normally has it.
+      - name: Check NSIS
+        shell: pwsh
+        run: |
+          if (-not (Get-Command makensis -ErrorAction SilentlyContinue) -and
+              -not (Test-Path "${env:ProgramFiles(x86)}\NSIS\makensis.exe")) { choco install nsis -y --no-progress }
+
+      - name: Configure
+        shell: pwsh
+        run: >
+          cmake -S . -B build -G "Visual Studio 17 2022" -A x64
+          -DCMAKE_PREFIX_PATH="$env:QT_ROOT_DIR"
+          -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT\scripts\buildsystems\vcpkg.cmake"
+          -DVCPKG_TARGET_TRIPLET=x64-windows-static-md
+          -DDEEPWATER_PACKAGE_VERSION="$env:PKG_VERSION"
+
+      - name: Build and package
+        run: cmake --build build --config Release --target dist --parallel
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deepwater-windows
+          path: |
+            build/dist/*.exe
+            ${{ startsWith(github.ref, 'refs/tags/') && 'build/dist/*.zip' || '' }}
+          retention-days: 5
+          compression-level: 0
+          if-no-files-found: error
+
+  release:
+    name: GitHub Release
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [macos, windows]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" --title "Deepwater $GITHUB_REF_NAME" --generate-notes
