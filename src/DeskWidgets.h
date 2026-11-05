@@ -100,6 +100,7 @@ public:
     void setData(const QStringList &names, const QVector<double> &values);
     // Empty values take the second shape away. `label` and `overlayLabel` name the two shapes in the legend.
     void setOverlay(const QString &label, const QString &overlayLabel, const QVector<double> &values);
+    static QColor overlayColor();   // in the current theme
     QString aiRead() const override;
     QSize minimumSizeHint() const override { return {200, 190}; }
 

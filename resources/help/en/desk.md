@@ -57,7 +57,7 @@ Eight currencies on six themes: rates, inflation, growth, labour, activity and s
 
 ## Technicals
 
-Every market on six signals: trend (EMA 20 against EMA 50), momentum (RSI), volatility, volume, structure (higher highs, lower lows) and liquidity. Filter by class, trend and name; a click opens the market's signal file with its radar, and **Compare with** lays a second market over it, dashed, with its readings under the first's. Volume is the market's own, or an ETF's as a proxy for FX and some commodities; a dash means there is none.
+Every market on six signals: trend (EMA 20 against EMA 50), momentum (RSI), volatility, volume, structure (higher highs, lower lows) and liquidity. Filter by class, trend and name; a click opens the market's signal file with its radar. A click on another market lays it over the first, dashed, with its readings under the first's, and marks both rows; a third replaces the second, and a click on one of the two takes it out. Volume is the market's own, or an ETF's as a proxy for FX and some commodities; a dash means there is none.
 
 ## Liquidity
 

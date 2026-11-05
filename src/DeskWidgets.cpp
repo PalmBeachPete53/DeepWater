@@ -352,6 +352,13 @@ void RadarChart::setOverlay(const QString &label, const QString &overlayLabel, c
     update();
 }
 
+QColor RadarChart::overlayColor()
+{
+    // Blue, except where the accent is too near it: measured in each theme, colour-blind vision included.
+    const QString theme = Theme::current().id;
+    return theme == "nova" || theme == "glacier" ? research::palette::orange() : research::palette::blue();
+}
+
 QString RadarChart::aiRead() const
 {
     const auto read = [this](const QVector<double> &values) {
@@ -396,9 +403,8 @@ void RadarChart::paintEvent(QPaintEvent *)
     }
     for (int i = 0; i < n; ++i)
         p.drawLine(center, at(i, radius));
-    // The second shape: blue, except where the accent is too near it (measured in each theme, colour-blind vision
-    // included); dashed with square points as well, so that its colour isn't all that tells them apart.
-    const QColor second = c.id == "nova" || c.id == "glacier" ? research::palette::orange() : research::palette::blue();
+    // The second shape is dashed with square points as well, so that its colour isn't all that tells them apart.
+    const QColor second = overlayColor();
     const auto drawShape = [&](const QVector<double> &values, const QColor &color, bool dashed) {
         QPolygonF shape;
         for (int i = 0; i < n; ++i)

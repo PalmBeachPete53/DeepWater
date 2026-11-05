@@ -19,6 +19,7 @@
 #include <QLineEdit>
 #include <QLocale>
 #include <QMessageBox>
+#include <QPainter>
 #include <QSettings>
 #include <QTableWidget>
 #include <QTimeZone>
@@ -78,15 +79,10 @@ public:
         m_fileTitle = quant::label("—", "qtTitle");
         m_fileTitle->setWordWrap(true);
         body->addWidget(m_fileTitle);
-        auto *compareRow = new QHBoxLayout;
-        compareRow->addWidget(quant::label(tr("Compare with"), "qtCardLabel"));
-        m_compare = deskCombo();
-        m_compare->addItem(tr("No other market"), QString());
-        for (const desk::Instrument &i : desk::instruments())
-            m_compare->addItem(i.label, i.id);
-        m_compare->setCurrentIndex(std::max(0, m_compare->findData(QSettings().value("desk/technical/compare", QString()))));
-        compareRow->addWidget(m_compare, 1);
-        body->addLayout(compareRow);
+        m_fileHint = quant::label({}, "qtNote");
+        m_fileHint->setWordWrap(true);
+        body->addWidget(m_fileHint);
+        m_compared = QSettings().value("desk/technical/compare").toString();
         m_radar = new RadarChart;
         m_radar->setMinimumHeight(280);
         body->addWidget(m_radar);
@@ -104,11 +100,7 @@ public:
         connect(m_trend, &QButtonGroup::idClicked, this, &TechnicalView::fill);
         connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
             if (auto *item = m_table->item(row, 0))
-                select(item->data(Qt::UserRole).toString());
-        });
-        connect(m_compare, &QComboBox::currentIndexChanged, this, [this] {
-            QSettings().setValue("desk/technical/compare", m_compare->currentData());
-            select(m_selected);
+                clickMarket(item->data(Qt::UserRole).toString());
         });
     }
 
@@ -142,9 +134,13 @@ protected:
     void showEvent(QShowEvent *e) override
     {
         View::showEvent(e);
-        // The Markets section chooses the market before showing this one.
-        if (!m_signals.isEmpty())
-            select(QSettings().value("desk/technical/selected", "EURUSD").toString());
+        // The Markets section chooses the market before showing this one: it comes alone.
+        if (!m_signals.isEmpty()) {
+            const QString chosen = QSettings().value("desk/technical/selected", "EURUSD").toString();
+            if (chosen != m_selected)
+                setCompared({});
+            select(chosen);
+        }
     }
 
 private:
@@ -222,6 +218,73 @@ private:
             m_table->setItem(r, 8, cell(liquidityName(s), s.liquidity == desk::LiquidityState::Near || s.liquidity == desk::LiquidityState::Swept ? pal.Accent : pal.TextDim));
         }
         fitHeight(m_table);
+        markRows();
+    }
+
+    void setCompared(const QString &id)
+    {
+        m_compared = id;
+        QSettings().setValue("desk/technical/compare", id);
+    }
+
+    // A click adds a market to the comparison, or takes the place of the second; a click on one of the two takes it out,
+    // the other staying. There is always one market in the file.
+    void clickMarket(const QString &id)
+    {
+        if (id == m_selected && m_compared.isEmpty())
+            return;
+        if (id == m_selected) {
+            const QString remaining = m_compared;
+            setCompared({});
+            select(remaining);
+            return;
+        }
+        setCompared(id == m_compared ? QString() : id);
+        select(m_selected);
+    }
+
+    // The two markets stand out in the list, with the point and the colour they have on the radar.
+    void markRows()
+    {
+        const auto marker = [](const QColor &color, bool square) {
+            QPixmap pixmap(20, 20);
+            pixmap.setDevicePixelRatio(2);
+            pixmap.fill(Qt::transparent);
+            if (color.isValid()) {
+                QPainter p(&pixmap);
+                p.setRenderHint(QPainter::Antialiasing);
+                p.setPen(Qt::NoPen);
+                p.setBrush(color);
+                if (square)
+                    p.drawRect(QRectF(1.5, 1.5, 7, 7));
+                else
+                    p.drawEllipse(QRectF(1, 1, 8, 8));
+            }
+            return QIcon(pixmap);
+        };
+        const QColor first = Theme::current().Accent, second = RadarChart::overlayColor();
+        const QIcon none = marker({}, false), firstMark = marker(first, false), secondMark = marker(second, true);
+        const bool comparing = compared() != nullptr;
+        for (int r = 0; r < m_table->rowCount(); ++r) {
+            QTableWidgetItem *name = m_table->item(r, 0);
+            if (!name)
+                continue;
+            const QString id = name->data(Qt::UserRole).toString();
+            const bool isFirst = id == m_selected, isSecond = comparing && id == m_compared;
+            QColor tint = isFirst ? first : second;
+            tint.setAlpha(36);
+            for (int col = 0; col < m_table->columnCount(); ++col)
+                if (QTableWidgetItem *item = m_table->item(r, col))
+                    item->setBackground(isFirst || isSecond ? QBrush(tint) : QBrush());
+            name->setIcon(isFirst ? firstMark : isSecond ? secondMark : none);
+        }
+    }
+
+    // The market compared with the selected one, if there is one to show.
+    const desk::Instrument *compared() const
+    {
+        const desk::Instrument *other = desk::findInstrument(m_compared);
+        return other && other->id != m_selected && m_signals.value(other->id).valid ? other : nullptr;
     }
 
     void select(const QString &id)
@@ -232,16 +295,16 @@ private:
         m_selected = i->id;
         QSettings().setValue("desk/technical/selected", i->id);
         const desk::Signals s = m_signals.value(i->id);
-        // The same market twice, or one without prices, leaves the file as it is alone.
-        const desk::Instrument *other = desk::findInstrument(m_compare->currentData().toString());
-        if (other && (other->id == i->id || !m_signals.value(other->id).valid))
-            other = nullptr;
+        const desk::Instrument *other = compared();
         const desk::Signals o = other ? m_signals.value(other->id) : desk::Signals {};
         const auto radar = [](const desk::Signals &v) { return QVector<double> {v.radar[0], v.radar[1], v.radar[2], v.radar[3], v.radar[4], v.radar[5]}; };
         m_fileTitle->setText(other ? tr("%1 vs %2").arg(i->label, other->label).toUpper() : i->label.toUpper());
         m_radar->setData({tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")}, radar(s));
         m_radar->setOverlay(i->label, other ? other->label : QString(), other ? radar(o) : QVector<double> {});
         m_fileText->setText(other ? QString("%1\n%2\n\n%3\n%4").arg(i->label, fileLines(s), other->label, fileLines(o)) : fileLines(s));
+        m_fileHint->setText(other ? tr("Click another market to replace %1, or one of these two to take it out.").arg(other->label)
+                                  : tr("Click another market in the list to compare it with this one."));
+        markRows();
     }
 
     QString fileLines(const desk::Signals &s) const
@@ -264,9 +327,8 @@ private:
     QLineEdit *m_search;
     QButtonGroup *m_class, *m_trend;
     QTableWidget *m_table;
-    QLabel *m_fileTitle, *m_fileText;
-    QComboBox *m_compare;
-    QString m_selected;
+    QLabel *m_fileTitle, *m_fileHint, *m_fileText;
+    QString m_selected, m_compared;
     RadarChart *m_radar;
     deskdata::Candles m_candles;
     QHash<QString, desk::Signals> m_signals;
