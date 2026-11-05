@@ -91,13 +91,15 @@ private:
     double m_xLo = 0, m_xHi = 0;
 };
 
-// Values from 0 to 100 on spokes.
+// Values from 0 to 100 on spokes, with an optional second shape over the first and a legend naming both.
 class RadarChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
     explicit RadarChart(QWidget *parent = nullptr);
     void setData(const QStringList &names, const QVector<double> &values);
+    // Empty values take the second shape away. `label` and `overlayLabel` name the two shapes in the legend.
+    void setOverlay(const QString &label, const QString &overlayLabel, const QVector<double> &values);
     QString aiRead() const override;
     QSize minimumSizeHint() const override { return {200, 190}; }
 
@@ -107,6 +109,8 @@ protected:
 private:
     QStringList m_names;
     QVector<double> m_values;
+    QString m_label, m_overlayLabel;
+    QVector<double> m_overlay;
 };
 
 // A half dial from 0 to 100, red to the accent, with the value in the middle.

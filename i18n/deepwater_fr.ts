@@ -14303,7 +14303,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::BarsChart</name>
     <message>
-        <location filename="../src/DeskWidgets.cpp" line="+153"/>
+        <location filename="../src/DeskWidgets.cpp" line="+155"/>
         <source>No data</source>
         <translation>Aucune donnée</translation>
     </message>
@@ -15080,7 +15080,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LevelsChart</name>
     <message>
-        <location line="+281"/>
+        <location line="+326"/>
         <source>No data</source>
         <translation>Aucune donnée</translation>
     </message>
@@ -15088,7 +15088,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LiquidityView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+261"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+291"/>
         <source>Daily</source>
         <translation>Journalier</translation>
     </message>
@@ -16324,33 +16324,33 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::TechnicalView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-493"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-523"/>
         <location line="+16"/>
-        <location line="+75"/>
+        <location line="+89"/>
         <source>Bullish</source>
         <translation>Haussier</translation>
     </message>
     <message>
-        <location line="-90"/>
+        <location line="-104"/>
         <location line="+15"/>
-        <location line="+75"/>
+        <location line="+89"/>
         <source>Bearish</source>
         <translation>Baissier</translation>
     </message>
     <message>
-        <location line="-89"/>
-        <location line="+90"/>
+        <location line="-103"/>
+        <location line="+104"/>
         <source>Overbought</source>
         <translation>Suracheté</translation>
     </message>
     <message>
-        <location line="-89"/>
-        <location line="+89"/>
+        <location line="-103"/>
+        <location line="+103"/>
         <source>Oversold</source>
         <translation>Survendu</translation>
     </message>
     <message>
-        <location line="-88"/>
+        <location line="-102"/>
         <source>Near liquidity</source>
         <translation>Près de la liquidité</translation>
     </message>
@@ -16401,13 +16401,13 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+75"/>
+        <location line="+89"/>
         <location line="+1"/>
         <source>Neutral</source>
         <translation>Neutre</translation>
     </message>
     <message>
-        <location line="-68"/>
+        <location line="-82"/>
         <source>Market</source>
         <translation>Marché</translation>
     </message>
@@ -16423,52 +16423,62 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+151"/>
+        <location line="+172"/>
         <source>Trend</source>
         <translation>Tendance</translation>
     </message>
     <message>
-        <location line="-151"/>
-        <location line="+151"/>
+        <location line="-172"/>
+        <location line="+172"/>
         <source>Momentum</source>
         <translation>Momentum</translation>
     </message>
     <message>
-        <location line="-151"/>
-        <location line="+151"/>
+        <location line="-172"/>
+        <location line="+172"/>
         <source>Volatility</source>
         <translation>Volatilité</translation>
     </message>
     <message>
-        <location line="-151"/>
-        <location line="+151"/>
+        <location line="-172"/>
+        <location line="+172"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location line="-151"/>
-        <location line="+151"/>
+        <location line="-172"/>
+        <location line="+172"/>
         <source>Structure</source>
         <translation>Structure</translation>
     </message>
     <message>
-        <location line="-151"/>
-        <location line="+151"/>
+        <location line="-172"/>
+        <location line="+172"/>
         <source>Liquidity</source>
         <translation>Liquidité</translation>
     </message>
     <message>
-        <location line="-145"/>
+        <location line="-166"/>
         <source>Signal file</source>
         <translation>Fiche de signaux</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+6"/>
+        <source>Compare with</source>
+        <translation>Comparer avec</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No other market</source>
+        <translation>Aucun autre marché</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Computed here from Yahoo Finance&apos;s daily candles: EMA 20 against EMA 50, RSI 14, 20-day volatility against the year&apos;s, volume over 5 days against 60 (a listed fund stands in for markets without volume, or none), the last swings, the nearest stop pool. Plain readings, not signals to trade.</source>
         <translation>Calculé ici d&apos;après les bougies journalières de Yahoo Finance : EMA 20 contre EMA 50, RSI 14, volatilité sur 20 jours contre celle de l&apos;année, volume sur 5 jours contre 60 (un fonds coté remplace les marchés sans volume, ou aucun), les derniers swings, la zone de stops la plus proche. Des lectures simples, pas des signaux de trading.</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+26"/>
         <source>Loading the markets: 0 of %1…</source>
         <translation>Chargement des marchés : 0 sur %1…</translation>
     </message>
@@ -16583,7 +16593,12 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>équilibré</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+35"/>
+        <source>%1 vs %2</source>
+        <translation>%1 face à %2</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>Trend: %1, EMA 20 at %2 from EMA 50.</source>
         <translation>Tendance : %1, EMA 20 à %2 de l&apos;EMA 50.</translation>
     </message>
@@ -16601,6 +16616,11 @@ heure locale %2, horaires %3–%4 là-bas
         <location line="+2"/>
         <source>Volume: %1 times its 60-day average.</source>
         <translation>Volume : %1 fois sa moyenne sur 60 jours.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Volume: none for this market, drawn at the middle of the web.</source>
+        <translation>Volume : aucun pour ce marché, placé au milieu de la toile.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -16728,7 +16748,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::WorkspacesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+358"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+360"/>
         <source>WORKSPACE</source>
         <translation>ESPACE</translation>
     </message>

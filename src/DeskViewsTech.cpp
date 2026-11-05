@@ -76,9 +76,19 @@ public:
         auto *fileCard = quant::card(tr("Signal file"), &body);
         fileCard->setMinimumWidth(360);
         m_fileTitle = quant::label("—", "qtTitle");
+        m_fileTitle->setWordWrap(true);
         body->addWidget(m_fileTitle);
+        auto *compareRow = new QHBoxLayout;
+        compareRow->addWidget(quant::label(tr("Compare with"), "qtCardLabel"));
+        m_compare = deskCombo();
+        m_compare->addItem(tr("No other market"), QString());
+        for (const desk::Instrument &i : desk::instruments())
+            m_compare->addItem(i.label, i.id);
+        m_compare->setCurrentIndex(std::max(0, m_compare->findData(QSettings().value("desk/technical/compare", QString()))));
+        compareRow->addWidget(m_compare, 1);
+        body->addLayout(compareRow);
         m_radar = new RadarChart;
-        m_radar->setMinimumHeight(250);
+        m_radar->setMinimumHeight(280);
         body->addWidget(m_radar);
         m_fileText = quant::label({}, "qtCardLabel");
         m_fileText->setWordWrap(true);
@@ -95,6 +105,10 @@ public:
         connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
             if (auto *item = m_table->item(row, 0))
                 select(item->data(Qt::UserRole).toString());
+        });
+        connect(m_compare, &QComboBox::currentIndexChanged, this, [this] {
+            QSettings().setValue("desk/technical/compare", m_compare->currentData());
+            select(m_selected);
         });
     }
 
@@ -215,21 +229,35 @@ private:
         const desk::Instrument *i = desk::findInstrument(id);
         if (!i || !m_signals.contains(i->id))
             return;
+        m_selected = i->id;
         QSettings().setValue("desk/technical/selected", i->id);
         const desk::Signals s = m_signals.value(i->id);
-        m_fileTitle->setText(i->label.toUpper());
-        m_radar->setData({tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")},
-                         {s.radar[0], s.radar[1], s.radar[2], s.radar[3], s.radar[4], s.radar[5]});
+        // The same market twice, or one without prices, leaves the file as it is alone.
+        const desk::Instrument *other = desk::findInstrument(m_compare->currentData().toString());
+        if (other && (other->id == i->id || !m_signals.value(other->id).valid))
+            other = nullptr;
+        const desk::Signals o = other ? m_signals.value(other->id) : desk::Signals {};
+        const auto radar = [](const desk::Signals &v) { return QVector<double> {v.radar[0], v.radar[1], v.radar[2], v.radar[3], v.radar[4], v.radar[5]}; };
+        m_fileTitle->setText(other ? tr("%1 vs %2").arg(i->label, other->label).toUpper() : i->label.toUpper());
+        m_radar->setData({tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")}, radar(s));
+        m_radar->setOverlay(i->label, other ? other->label : QString(), other ? radar(o) : QVector<double> {});
+        m_fileText->setText(other ? QString("%1\n%2\n\n%3\n%4").arg(i->label, fileLines(s), other->label, fileLines(o)) : fileLines(s));
+    }
+
+    QString fileLines(const desk::Signals &s) const
+    {
         QStringList lines;
         lines << tr("Trend: %1, EMA 20 at %2 from EMA 50.").arg(trendName(s.trend), pct(s.trendGapPct));
         lines << tr("Momentum: RSI %1, %2.").arg(amount(s.rsi, 0), momentumName(s.momentum).toLower());
         lines << tr("Volatility: %1% a year on 20 days, %2% over the period.").arg(amount(s.volAnnual, 1), amount(s.volBaseline, 1));
         if (s.volume != desk::VolumeState::NoData)
             lines << tr("Volume: %1 times its 60-day average.").arg(amount(s.volumeRatio));
+        else
+            lines << tr("Volume: none for this market, drawn at the middle of the web.");
         lines << tr("Structure: %1.").arg(structureName(s.structure).toLower());
         if (s.liquidity != desk::LiquidityState::None)
             lines << tr("Liquidity: %1.").arg(liquidityName(s));
-        m_fileText->setText(lines.join("\n"));
+        return lines.join("\n");
     }
 
     QLabel *m_bullish, *m_bullishSub, *m_bearish, *m_bearishSub, *m_overbought, *m_overboughtSub, *m_oversold, *m_oversoldSub, *m_near, *m_nearSub, *m_lean, *m_leanSub;
@@ -237,6 +265,8 @@ private:
     QButtonGroup *m_class, *m_trend;
     QTableWidget *m_table;
     QLabel *m_fileTitle, *m_fileText;
+    QComboBox *m_compare;
+    QString m_selected;
     RadarChart *m_radar;
     deskdata::Candles m_candles;
     QHash<QString, desk::Signals> m_signals;

@@ -1,5 +1,7 @@
 #include "DeskWidgets.h"
 
+#include "ResearchCharts.h"
+
 #include "QuantViews.h"
 #include "Theme.h"
 
@@ -342,12 +344,25 @@ void RadarChart::setData(const QStringList &names, const QVector<double> &values
     update();
 }
 
+void RadarChart::setOverlay(const QString &label, const QString &overlayLabel, const QVector<double> &values)
+{
+    m_label = label;
+    m_overlayLabel = overlayLabel;
+    m_overlay = values;
+    update();
+}
+
 QString RadarChart::aiRead() const
 {
-    QStringList parts;
-    for (int i = 0; i < m_names.size() && i < m_values.size(); ++i)
-        parts << QString("%1=%2").arg(m_names[i], aiNumber(m_values[i]));
-    return parts.join(", ");
+    const auto read = [this](const QVector<double> &values) {
+        QStringList parts;
+        for (int i = 0; i < m_names.size() && i < values.size(); ++i)
+            parts << QString("%1=%2").arg(m_names[i], aiNumber(values[i]));
+        return parts.join(", ");
+    };
+    if (m_overlay.isEmpty())
+        return read(m_values);
+    return QString("%1: %2\n%3: %4").arg(m_label, read(m_values), m_overlayLabel, read(m_overlay));
 }
 
 void RadarChart::paintEvent(QPaintEvent *)
@@ -358,13 +373,15 @@ void RadarChart::paintEvent(QPaintEvent *)
     const Palette &c = Theme::current();
     QPainter p(this);
     p.setRenderHint(QPainter::Antialiasing);
-    const QPointF center(width() / 2.0, height() / 2.0 + 2);
+    const bool two = m_overlay.size() == n;
+    const double legendHeight = two ? 22 : 0;
+    const QPointF center(width() / 2.0, legendHeight + (height() - legendHeight) / 2.0 + 2);
     // Room for the longest name beside the web: names differ a lot in length between languages.
     const QFontMetricsF labels(quant::chartFont(10));
     double longest = 0;
     for (const QString &name : m_names)
         longest = std::max(longest, labels.horizontalAdvance(name));
-    const double radius = std::max(30.0, std::min(width() / 2.0 - std::max(62.0, longest * 0.87 + 16), height() / 2.0 - 24));
+    const double radius = std::max(30.0, std::min(width() / 2.0 - std::max(62.0, longest * 0.87 + 16), (height() - legendHeight) / 2.0 - 24));
     const auto at = [&](int i, double r) {
         const double a = -M_PI / 2 + 2 * M_PI * i / n;
         return center + QPointF(std::cos(a) * r, std::sin(a) * r);
@@ -379,18 +396,48 @@ void RadarChart::paintEvent(QPaintEvent *)
     }
     for (int i = 0; i < n; ++i)
         p.drawLine(center, at(i, radius));
-    QPolygonF shape;
-    for (int i = 0; i < n; ++i)
-        shape << at(i, radius * std::clamp(m_values[i], 0.0, 100.0) / 100.0);
-    QColor fill = c.Accent;
-    fill.setAlpha(60);
-    p.setBrush(fill);
-    p.setPen(QPen(c.Accent, 1.6));
-    p.drawPolygon(shape);
-    p.setBrush(c.Accent);
-    for (const QPointF &pt : shape)
-        p.drawEllipse(pt, 2.5, 2.5);
+    // The second shape: blue, except where the accent is too near it (measured in each theme, colour-blind vision
+    // included); dashed with square points as well, so that its colour isn't all that tells them apart.
+    const QColor second = c.id == "nova" || c.id == "glacier" ? research::palette::orange() : research::palette::blue();
+    const auto drawShape = [&](const QVector<double> &values, const QColor &color, bool dashed) {
+        QPolygonF shape;
+        for (int i = 0; i < n; ++i)
+            shape << at(i, radius * std::clamp(values[i], 0.0, 100.0) / 100.0);
+        QColor fill = color;
+        fill.setAlpha(two ? 40 : 60);
+        p.setBrush(fill);
+        p.setPen(QPen(color, 1.6, dashed ? Qt::DashLine : Qt::SolidLine));
+        p.drawPolygon(shape);
+        p.setBrush(color);
+        p.setPen(two ? QPen(c.Panel, 1.2) : QPen(color, 1.6));   // two shapes: a ring keeps points that fall together apart
+        for (const QPointF &pt : shape) {
+            if (dashed)
+                p.drawRect(QRectF(pt.x() - 3.5, pt.y() - 3.5, 7, 7));
+            else
+                p.drawEllipse(pt, two ? 3.5 : 2.5, two ? 3.5 : 2.5);
+        }
+    };
+    drawShape(m_values, c.Accent, false);
+    if (two)
+        drawShape(m_overlay, second, true);
     p.setFont(quant::chartFont(10));
+    if (two) {
+        const QFontMetricsF metrics(p.font());
+        const double sample = 20, gap = 6, between = 18;
+        const double room = std::max(40.0, (width() - 2 * (sample + gap) - between) / 2);
+        const QString a = metrics.elidedText(m_label, Qt::ElideRight, room), b = metrics.elidedText(m_overlayLabel, Qt::ElideRight, room);
+        double x = (width() - (2 * (sample + gap) + between + metrics.horizontalAdvance(a) + metrics.horizontalAdvance(b))) / 2;
+        const auto entry = [&](const QString &text, const QColor &color, bool dashed) {
+            p.setPen(QPen(color, 1.6, dashed ? Qt::DashLine : Qt::SolidLine));
+            p.drawLine(QPointF(x, 10), QPointF(x + sample, 10));
+            x += sample + gap;
+            p.setPen(c.Text);
+            p.drawText(QRectF(x, 0, metrics.horizontalAdvance(text) + 2, 20), Qt::AlignLeft | Qt::AlignVCenter, text);
+            x += metrics.horizontalAdvance(text) + between;
+        };
+        entry(a, c.Accent, false);
+        entry(b, second, true);
+    }
     p.setPen(c.TextDim);
     for (int i = 0; i < n; ++i) {
         const QPointF pt = at(i, radius + 12);
