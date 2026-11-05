@@ -210,7 +210,10 @@ jobs:
           New-Item -Path 'HKLM:\SOFTWARE\Khronos\Vulkan\Drivers' -Force | Out-Null
           New-ItemProperty -Path 'HKLM:\SOFTWARE\Khronos\Vulkan\Drivers' -Name $icd -Value 0 -PropertyType DWord -Force | Out-Null
           $log = "$PWD\build\dist\engine-vulkan.log"
+          # llama.cpp skips a driver that says it's a CPU, as this one does, unless told to use it. A real graphics card needs no such thing.
+          $env:GGML_VK_VISIBLE_DEVICES = '0'
           $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--llm-check', "`"$model`""
+          Remove-Item Env:GGML_VK_VISIBLE_DEVICES
           Get-Content $log
           if ($p.ExitCode -ne 0) { throw "the model didn't run on Vulkan in the sandbox (exit $($p.ExitCode))" }
           if (-not (Select-String -Path $log -Pattern '"Vulkan' -Quiet)) { throw "the engine didn't use the Vulkan driver" }

@@ -137,7 +137,10 @@ void LocalEngine::start(const QString &model, const QStringList &files, int cont
     // Windows won't create a process in an AppContainer without these, which locate the system and the container's folder.
     // None holds anything of the app's; the keys stay out as on macOS.
     const QProcessEnvironment system = QProcessEnvironment::systemEnvironment();
-    for (const char *name : {"SystemRoot", "SystemDrive", "USERPROFILE", "LOCALAPPDATA", "APPDATA", "TEMP", "TMP"})
+    // GGML_VK_VISIBLE_DEVICES picks the graphics card when a PC has several; the CI uses it for its software driver, which
+    // llama.cpp otherwise skips as not being a GPU.
+    for (const char *name : {"SystemRoot", "SystemDrive", "USERPROFILE", "LOCALAPPDATA", "APPDATA", "TEMP", "TMP",
+                             "GGML_VK_VISIBLE_DEVICES"})
         if (system.contains(name)) env.insert(name, system.value(name));
     if (cpuOnly)
         env.insert("VK_LOADER_DRIVERS_DISABLE", "*");   // the Vulkan loader then opens no driver at all

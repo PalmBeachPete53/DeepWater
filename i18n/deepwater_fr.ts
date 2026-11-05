@@ -391,7 +391,7 @@ Durée %5
     <message>
         <location line="+3"/>
         <source>A conversation with a model of this computer, run by llama.cpp. Only the models in a bound slot (Models › Slots) can run. The engine runs in a sandbox: it reads its own model file and nothing else of yours, has no network, writes nowhere and starts no other program. opencode, when a slot holds it, can be chosen too: it runs outside the sandbox, with its own tools turned off.</source>
-        <translation>Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp. Seuls les modèles d’un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d’autre de vos fichiers, n’a pas de réseau, n’écrit nulle part et ne lance aucun autre programme.</translation>
+        <translation>Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp. Seuls les modèles d&apos;un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d&apos;autre de vos fichiers, n&apos;a pas de réseau, n&apos;écrit nulle part et ne lance aucun autre programme. opencode, quand un emplacement le tient, peut aussi être choisi : il tourne hors du bac à sable, avec ses propres outils désactivés.</translation>
     </message>
     <message>
         <location line="+14"/>
