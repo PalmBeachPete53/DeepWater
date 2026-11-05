@@ -57,7 +57,7 @@ Huit devises sur six thèmes : taux, inflation, croissance, emploi, activité et
 
 ## Technique
 
-Chaque marché sur six signaux : tendance (EMA 20 contre EMA 50), momentum (RSI), volatilité, volume, structure (plus hauts, plus bas) et liquidité. Filtrez par classe, tendance et nom ; un clic ouvre la fiche de signaux du marché avec son radar. Un clic sur un autre marché le superpose au premier, en pointillés, avec ses lectures sous celles du premier, et marque les deux lignes ; un troisième remplace le second, et un clic sur l'un des deux le retire. Le volume est celui du marché, ou celui d'un ETF comme approximation pour le forex et certaines matières premières ; un tiret signifie qu'il n'y en a pas.
+Chaque marché sur six signaux : tendance (EMA 20 contre EMA 50), momentum (RSI), volatilité, volume, structure (plus hauts, plus bas) et liquidité. Filtrez par classe, tendance et nom ; un clic ouvre la fiche de signaux du marché avec son radar. **Maj+clic** sur un autre marché le superpose au premier, en pointillés, avec ses lectures sous celles du premier, et marque les deux lignes ; sur un troisième, il remplace le second, et sur l'un des deux, il le retire. Un simple clic revient à un seul marché. Le volume est celui du marché, ou celui d'un ETF comme approximation pour le forex et certaines matières premières ; un tiret signifie qu'il n'y en a pas.
 
 ## Liquidité
 

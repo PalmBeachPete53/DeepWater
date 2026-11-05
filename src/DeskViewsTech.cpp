@@ -19,6 +19,7 @@
 #include <QLineEdit>
 #include <QLocale>
 #include <QMessageBox>
+#include <QMouseEvent>
 #include <QPainter>
 #include <QSettings>
 #include <QTableWidget>
@@ -102,6 +103,7 @@ public:
             if (auto *item = m_table->item(row, 0))
                 clickMarket(item->data(Qt::UserRole).toString());
         });
+        m_table->viewport()->installEventFilter(this);
     }
 
 protected:
@@ -129,6 +131,14 @@ protected:
                                   if (finished % 10 == 0)
                                       setStatus(tr("Loading the markets: %1 of %2…").arg(finished).arg(total));
                               });
+    }
+
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        // Shift as it was for this very click: cellClicked doesn't say.
+        if (watched == m_table->viewport() && event->type() == QEvent::MouseButtonRelease)
+            m_shiftClick = static_cast<QMouseEvent *>(event)->modifiers().testFlag(Qt::ShiftModifier);
+        return View::eventFilter(watched, event);
     }
 
     void showEvent(QShowEvent *e) override
@@ -227,10 +237,15 @@ private:
         QSettings().setValue("desk/technical/compare", id);
     }
 
-    // A click adds a market to the comparison, or takes the place of the second; a click on one of the two takes it out,
-    // the other staying. There is always one market in the file.
+    // A click shows a market alone. Shift+click adds one to the comparison, or takes the place of the second; on one of
+    // the two, it takes it out and the other stays. There is always one market in the file.
     void clickMarket(const QString &id)
     {
+        if (!m_shiftClick) {
+            setCompared({});
+            select(id);
+            return;
+        }
         if (id == m_selected && m_compared.isEmpty())
             return;
         if (id == m_selected) {
@@ -302,8 +317,8 @@ private:
         m_radar->setData({tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")}, radar(s));
         m_radar->setOverlay(i->label, other ? other->label : QString(), other ? radar(o) : QVector<double> {});
         m_fileText->setText(other ? QString("%1\n%2\n\n%3\n%4").arg(i->label, fileLines(s), other->label, fileLines(o)) : fileLines(s));
-        m_fileHint->setText(other ? tr("Click another market to replace %1, or one of these two to take it out.").arg(other->label)
-                                  : tr("Click another market in the list to compare it with this one."));
+        m_fileHint->setText(other ? tr("Shift+click another market to replace %1, or one of these two to take it out.").arg(other->label)
+                                  : tr("Shift+click another market in the list to compare it with this one."));
         markRows();
     }
 
@@ -329,6 +344,7 @@ private:
     QTableWidget *m_table;
     QLabel *m_fileTitle, *m_fileHint, *m_fileText;
     QString m_selected, m_compared;
+    bool m_shiftClick = false;
     RadarChart *m_radar;
     deskdata::Candles m_candles;
     QHash<QString, desk::Signals> m_signals;

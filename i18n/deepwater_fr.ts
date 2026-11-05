@@ -15088,7 +15088,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LiquidityView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+353"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+369"/>
         <source>Daily</source>
         <translation>Journalier</translation>
     </message>
@@ -16324,33 +16324,33 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::TechnicalView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-584"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-599"/>
         <location line="+16"/>
-        <location line="+84"/>
+        <location line="+93"/>
         <source>Bullish</source>
         <translation>Haussier</translation>
     </message>
     <message>
-        <location line="-99"/>
+        <location line="-108"/>
         <location line="+15"/>
-        <location line="+84"/>
+        <location line="+93"/>
         <source>Bearish</source>
         <translation>Baissier</translation>
     </message>
     <message>
-        <location line="-98"/>
-        <location line="+99"/>
+        <location line="-107"/>
+        <location line="+108"/>
         <source>Overbought</source>
         <translation>Suracheté</translation>
     </message>
     <message>
-        <location line="-98"/>
-        <location line="+98"/>
+        <location line="-107"/>
+        <location line="+107"/>
         <source>Oversold</source>
         <translation>Survendu</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-106"/>
         <source>Near liquidity</source>
         <translation>Près de la liquidité</translation>
     </message>
@@ -16401,13 +16401,13 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+84"/>
+        <location line="+93"/>
         <location line="+1"/>
         <source>Neutral</source>
         <translation>Neutre</translation>
     </message>
     <message>
-        <location line="-77"/>
+        <location line="-86"/>
         <source>Market</source>
         <translation>Marché</translation>
     </message>
@@ -16423,44 +16423,54 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+231"/>
+        <location line="+245"/>
         <source>Trend</source>
         <translation>Tendance</translation>
     </message>
     <message>
-        <location line="-231"/>
-        <location line="+231"/>
+        <location line="-245"/>
+        <location line="+245"/>
         <source>Momentum</source>
         <translation>Momentum</translation>
     </message>
     <message>
-        <location line="-231"/>
-        <location line="+231"/>
+        <location line="-245"/>
+        <location line="+245"/>
         <source>Volatility</source>
         <translation>Volatilité</translation>
     </message>
     <message>
-        <location line="-231"/>
-        <location line="+231"/>
+        <location line="-245"/>
+        <location line="+245"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location line="-231"/>
-        <location line="+231"/>
+        <location line="-245"/>
+        <location line="+245"/>
         <source>Structure</source>
         <translation>Structure</translation>
     </message>
     <message>
-        <location line="-231"/>
-        <location line="+231"/>
+        <location line="-245"/>
+        <location line="+245"/>
         <source>Liquidity</source>
         <translation>Liquidité</translation>
     </message>
     <message>
-        <location line="-225"/>
+        <location line="-239"/>
         <source>Signal file</source>
         <translation>Fiche de signaux</translation>
+    </message>
+    <message>
+        <location line="+242"/>
+        <source>Shift+click another market to replace %1, or one of these two to take it out.</source>
+        <translation>Maj+clic sur un autre marché pour remplacer %1, ou sur l&apos;un de ces deux pour le retirer.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Shift+click another market in the list to compare it with this one.</source>
+        <translation>Maj+clic sur un autre marché de la liste pour le comparer à celui-ci.</translation>
     </message>
     <message>
         <source>Compare with</source>
@@ -16471,12 +16481,12 @@ heure locale %2, horaires %3–%4 là-bas
         <translation type="vanished">Aucun autre marché</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="-226"/>
         <source>Computed here from Yahoo Finance&apos;s daily candles: EMA 20 against EMA 50, RSI 14, 20-day volatility against the year&apos;s, volume over 5 days against 60 (a listed fund stands in for markets without volume, or none), the last swings, the nearest stop pool. Plain readings, not signals to trade.</source>
         <translation>Calculé ici d&apos;après les bougies journalières de Yahoo Finance : EMA 20 contre EMA 50, RSI 14, volatilité sur 20 jours contre celle de l&apos;année, volume sur 5 jours contre 60 (un fonds coté remplace les marchés sans volume, ou aucun), les derniers swings, la zone de stops la plus proche. Des lectures simples, pas des signaux de trading.</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>Loading the markets: 0 of %1…</source>
         <translation>Chargement des marchés : 0 sur %1…</translation>
     </message>
@@ -16491,7 +16501,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>Chargement des marchés : %1 sur %2…</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+27"/>
         <source>High</source>
         <translation>Élevée</translation>
     </message>
@@ -16591,22 +16601,20 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>équilibré</translation>
     </message>
     <message>
-        <location line="+99"/>
+        <location line="+104"/>
         <source>%1 vs %2</source>
         <translation>%1 face à %2</translation>
     </message>
     <message>
-        <location line="+4"/>
         <source>Click another market to replace %1, or one of these two to take it out.</source>
-        <translation>Cliquez sur un autre marché pour remplacer %1, ou sur l&apos;un de ces deux pour le retirer.</translation>
+        <translation type="vanished">Cliquez sur un autre marché pour remplacer %1, ou sur l&apos;un de ces deux pour le retirer.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Click another market in the list to compare it with this one.</source>
-        <translation>Cliquez sur un autre marché de la liste pour le comparer à celui-ci.</translation>
+        <translation type="vanished">Cliquez sur un autre marché de la liste pour le comparer à celui-ci.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+12"/>
         <source>Trend: %1, EMA 20 at %2 from EMA 50.</source>
         <translation>Tendance : %1, EMA 20 à %2 de l&apos;EMA 50.</translation>
     </message>
@@ -16756,7 +16764,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::WorkspacesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+359"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+360"/>
         <source>WORKSPACE</source>
         <translation>ESPACE</translation>
     </message>

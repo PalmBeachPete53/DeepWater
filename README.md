@@ -1307,7 +1307,7 @@ holds no figures, and the model reads the section through `read_page`.
   Dragging on the year's path picks the months (`SeasonalPathChart`).
 - **Fundamentals**: six themes per currency from 150 days of calendar releases and BIS rates (`desk/Fundamentals`).
   The bias of a list is against its mean (`scoreAll`): with absolute rules nearly every currency read bullish.
-- **Technicals**: six signals per market (`computeSignals`), filters, radar; a click on a second row lays that market over it (`desk/technical/compare`).
+- **Technicals**: six signals per market (`computeSignals`), filters, radar; Shift+click on a second row lays that market over it (`desk/technical/compare`).
 - **Liquidity**: stop pools from equal highs and lows (`findLiquidity`), an estimate from candles, not an order book.
 - **Notes**: ING Think, Fed, ECB, BoE and BIS speeches, from their feeds, opened in the News reader. Banks' client research has no public feed.
 - **Forecasts**: ING Think by quarter (`parseIngForecasts`; ING's terms allow reuse with attribution), IMF WEO and OECD Economic
