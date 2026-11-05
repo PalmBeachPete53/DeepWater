@@ -79,6 +79,18 @@ DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy 
     showSection(std::clamp(QSettings().value("desk/section", 0).toInt(), 0, m_stack->count() - 1));
 }
 
+void DeskPage::openWorkspace(int index)
+{
+    const QVector<deskui::Workspace> spaces = deskui::loadWorkspaces();
+    if (index < 0 || index >= spaces.size())
+        return;
+    deskui::saveWorkspaces(spaces, index);
+    QWidget *holder = m_stack->widget(deskui::sectionCount());
+    if (holder->layout())   // otherwise it reads them when it is built
+        deskui::refreshWorkspaces(holder->layout()->itemAt(0)->widget());
+    showSection(deskui::sectionCount());
+}
+
 void DeskPage::showSection(int index)
 {
     if (index < 0 || index >= m_stack->count())

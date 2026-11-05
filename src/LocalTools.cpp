@@ -90,6 +90,12 @@ QJsonObject fit(QJsonObject result, const QString &key)
 
 } // namespace
 
+static LocalTools::Organizer &organizer()
+{
+    static LocalTools::Organizer instance;
+    return instance;
+}
+
 LocalTools::LocalTools(const MlDataExporter::Sources &sources, QObject *parent)
     : QObject(parent)
     , m_s(sources)
@@ -109,7 +115,7 @@ const QVector<LocalTools::Tool> &LocalTools::tools()
          "not: the user's screen doesn't move, and a section not open may take a few seconds to load. Call it when the user speaks of "
          "\"this table\", \"this chart\" or what a page shows. Without arguments: what is on screen. Sources and AI can't be read. A "
          "long page comes in parts.",
-         schema({{"page", prop("string", "map, overview, economy, forex, charts, calendar, news, research or quant; omit for the page on screen")},
+         schema({{"page", prop("string", "map, overview, economy, forex, charts, calendar, news, research, quant, desk or journal; omit for the page on screen")},
                  {"section", prop("string", "A section of that page, as the result's `sections` lists them, e.g. Inflation")},
                  {"country", prop("string", country + ": a country's sheet in Economy")},
                  {"tab", prop("string", "The tab of that sheet, e.g. Energy, Prices")},
@@ -117,7 +123,7 @@ const QVector<LocalTools::Tool> &LocalTools::tools()
                  {"part", prop("integer", "Which part of a long page, from 1 (default 1)")}})},
         {"open_page", "read_data",
          "Takes the user to a page, a section or a sheet of Deepwater: it moves their screen. Call it only when they ask to be taken there.",
-         schema({{"page", prop("string", "map, overview, economy, forex, charts, calendar, news, research or quant; omit for the page on screen")},
+         schema({{"page", prop("string", "map, overview, economy, forex, charts, calendar, news, research, quant, desk or journal; omit for the page on screen")},
                  {"section", prop("string", "A section of that page, as the result's `sections` lists them, e.g. Inflation")},
                  {"country", prop("string", country + ": a country's sheet in Economy")},
                  {"tab", prop("string", "The tab of that sheet, e.g. Energy, Prices")},
@@ -173,6 +179,37 @@ const QVector<LocalTools::Tool> &LocalTools::tools()
                 {"symbol"})},
 
         // ---- trade: the Charts tab's tester and live paper account
+        {"list_workspaces", "organize",
+         "The Desk's workspaces with their panels, the sections a panel can be, and the Journal's accounts. Call it first when unsure of a name.",
+         schema({})},
+        {"open_workspace", "organize",
+         "Shows a Desk workspace: it moves the user's screen. Call it only when they ask.",
+         schema({{"name", prop("string", "The workspace's name, as list_workspaces gives it")}}, {"name"})},
+        {"create_workspace", "organize",
+         "Makes a new Desk workspace and shows it: it moves the user's screen. Call it only when they ask. Nothing existing changes.",
+         schema({{"name", prop("string", "Its name, 1 to 40 characters, not one that exists")},
+                 {"panels", QJsonObject {{"type", "array"}, {"items", QJsonObject {{"type", "string"}}},
+                                         {"description", "1 to 6 section names, as list_workspaces gives them"}}}},
+                {"name", "panels"})},
+        {"switch_journal_account", "organize",
+         "Changes the Journal's current account. Call it only when the user asks.",
+         schema({{"name", prop("string", "The account's name, as list_workspaces gives it")}}, {"name"})},
+        {"draft_journal_trade", "organize",
+         "Opens the Journal's trade form filled in, for the user to check. Nothing is written unless they press Save: the result says "
+         "whether they did. Only for a trade the user described: never invent a figure, leave out what they didn't give.",
+         schema({{"symbol", prop("string", "As their broker writes it, e.g. EURUSD")},
+                 {"side", prop("string", "long or short")},
+                 {"volume", prop("number", "Lots")},
+                 {"open_time", prop("string", "ISO date and time; omit for now")},
+                 {"close_time", prop("string", "ISO date and time; omit while the trade is open")},
+                 {"open_price", prop("number", "Entry price")},
+                 {"close_price", prop("number", "Exit price")},
+                 {"stop_loss", prop("number", "Stop loss")},
+                 {"take_profit", prop("number", "Take profit")},
+                 {"profit", prop("number", "Gross result in the account's currency")},
+                 {"strategy", prop("string", "The strategy's name")},
+                 {"notes", prop("string", "The user's notes")}},
+                {"symbol", "side", "volume"})},
         {"backtest_help", "trade",
          "How to write a strategy for run_backtest: the JSON format, the operators, the price fields, the indicators "
          "(id, default params, outputs), ready-made examples and the user's saved strategies. Call it before writing "
@@ -258,6 +295,10 @@ QString LocalTools::systemPrompt(const QStringList &skills, const QString &userP
                  "money). Call backtest_help before writing a strategy. Place, close or cancel paper orders only when "
                  "the user asks you to trade, and report every order you placed. At most " + QString::number(MaxOrders) +
                  " orders per question.";
+        if (skills.contains("organize"))
+            p += " You can open and create Desk workspaces and change the Journal's account, only when the user asks. "
+                 "draft_journal_trade opens a form the user must save: never say a trade is saved unless the result says so, "
+                 "and never invent one of its figures.";
         p += "\n\n# Tools\n\nYou may call one or more "
              "functions to assist with the user query.\n\nYou are provided with function signatures within "
              "<tools></tools> XML tags:\n<tools>\n";
@@ -342,6 +383,11 @@ void LocalTools::call(const Call &c, const QStringList &skills, const Done &done
     else if (c.name == "golden_series") done(golden(a));
     else if (c.name == "prices") prices(a, done);
     else if (tool->skill == "trade") trade(c, done);
+    else if (tool->skill == "organize") {
+        if (!organizer())
+            return done(error("the app isn't ready"));
+        organizer()(c.name, a, c.question, done);
+    }
 }
 
 void LocalTools::trade(const Call &c, const Done &done)
@@ -406,6 +452,11 @@ LocalTools::PageOpener &pageOpener()
     return opener;
 }
 } // namespace
+
+void LocalTools::setOrganizer(Organizer o)
+{
+    organizer() = std::move(o);
+}
 
 void LocalTools::setPageAccess(PageReader reader, PageOpener opener)
 {

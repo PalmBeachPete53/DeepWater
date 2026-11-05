@@ -19,6 +19,8 @@ public:
     DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, CotReport *cot, QWidget *parent = nullptr);
 
     void showSection(int index);
+    // Shows a workspace by its position in loadWorkspaces().
+    void openWorkspace(int index);
 
 signals:
     // A question for the AI side panel. The prompt names what to read and holds no data: the model reads the page's
@@ -44,6 +46,15 @@ struct Context {
     WorldEconomy *economy = nullptr;
     CotReport *cot = nullptr;
 };
+// Named sets of live panels, saved in the settings. `panels` are indexes in sectionNames().
+struct Workspace {
+    QString name;
+    QVector<int> panels;
+};
+QVector<Workspace> loadWorkspaces(int *current = nullptr);
+void saveWorkspaces(const QVector<Workspace> &spaces, int current);
+void refreshWorkspaces(QWidget *view);   // a view from makeWorkspaces reads them again
+
 QStringList sectionNames();
 // A new view of a section; `index` in sectionNames(), the workspaces section excluded.
 QWidget *makeSection(int index, const Context &context);

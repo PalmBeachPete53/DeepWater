@@ -216,6 +216,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/LocalChat.h src/LocalChat.cpp
     src/OpencodeRun.h src/OpencodeRun.cpp
     src/AiRead.h src/AiRead.cpp
+    src/AiOrganize.h src/AiOrganize.cpp
     src/AiDock.h src/AiDock.cpp
     src/LocalTools.h src/LocalTools.cpp
     src/ToolJournal.h src/ToolJournal.cpp

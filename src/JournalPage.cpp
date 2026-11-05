@@ -233,12 +233,14 @@ public:
         m_volume = number(trade.volume, 2, 0);
         const QDateTime now = QDateTime::currentDateTime();
         m_open = new QDateTimeEdit(trade.openTime.isValid() ? trade.openTime.toLocalTime() : now);
+        m_open->setObjectName("qtSpin");
         m_open->setDisplayFormat("yyyy-MM-dd HH:mm");
         m_closed = combo();
         m_closed->addItem(tr("Closed"), true);
         m_closed->addItem(tr("Still open"), false);
         m_closed->setCurrentIndex(trade.id.isEmpty() || trade.isClosed() ? 0 : 1);
         m_close = new QDateTimeEdit(trade.closeTime.isValid() ? trade.closeTime.toLocalTime() : now);
+        m_close->setObjectName("qtSpin");
         m_close->setDisplayFormat("yyyy-MM-dd HH:mm");
         m_openPrice = number(trade.openPrice, 5, 0);
         m_closePrice = number(trade.closePrice, 5, 0);
@@ -266,6 +268,8 @@ public:
         row(tr("Strategy"), m_strategy);
         row(tr("Notes"), m_notes);
         auto *buttons = new QDialogButtonBox(QDialogButtonBox::Save | QDialogButtonBox::Cancel);
+        buttons->button(QDialogButtonBox::Save)->setText(tr("Save"));
+        buttons->button(QDialogButtonBox::Cancel)->setText(tr("Cancel"));
         connect(buttons, &QDialogButtonBox::accepted, this, &QDialog::accept);
         connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
         form->addRow(buttons);
@@ -276,6 +280,25 @@ public:
         connect(m_symbol, &QLineEdit::textChanged, this, update);
         connect(m_closed, &QComboBox::currentIndexChanged, this, update);
         update();
+    }
+
+    // Over the form of a trade a model described: what it wrote and what it left out.
+    void setDraftNotice(const QStringList &emptied, bool checked)
+    {
+        const QHash<QString, QString> names {
+            {"volume", tr("Volume (lots)")}, {"open_price", tr("Open price")}, {"close_price", tr("Close price")}, {"stop_loss", tr("Stop loss")},
+            {"take_profit", tr("Take profit")}, {"profit", tr("Profit")}, {"strategy", tr("Strategy")}, {"notes", tr("Notes")},
+        };
+        QStringList left;
+        for (const QString &field : emptied)
+            left << names.value(field, field);
+        QString text = checked ? tr("Prepared by the AI from your message. Check every field: nothing is written until you save.")
+                               : tr("Prepared by an AI outside the app: its figures couldn't be compared with what you asked. Check every field: nothing is written until you save.");
+        if (!left.isEmpty())
+            text += "\n" + tr("Left empty, as your message didn't say them or the trade is open: %1.").arg(left.join(", "));
+        auto *notice = quant::label(text, "qtNote");
+        notice->setWordWrap(true);
+        static_cast<QFormLayout *>(layout())->insertRow(0, notice);
     }
 
     desk::Trade trade() const
@@ -1241,6 +1264,21 @@ private:
 };
 
 } // namespace
+
+void JournalPage::draftTrade(const desk::Trade &trade, const QStringList &emptied, bool checked, QWidget *parent, std::function<void(bool, const desk::Trade &)> done)
+{
+    auto *dialog = new TradeDialog(trade, parent);
+    dialog->setDraftNotice(emptied, checked);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setWindowTitle(TradeDialog::tr("Check this entry, prepared by the AI"));
+    QObject::connect(dialog, &QDialog::finished, parent, [dialog, done](int result) {
+        const desk::Trade checked = dialog->trade();
+        if (result == QDialog::Accepted)
+            JournalStore::instance()->saveTrade(checked);
+        done(result == QDialog::Accepted, checked);
+    });
+    dialog->open();
+}
 
 JournalPage::JournalPage(QWidget *parent)
     : QWidget(parent)

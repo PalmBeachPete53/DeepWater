@@ -89,6 +89,9 @@ const QVector<Skill> &skills()
                                              "reads their trades as the CSV export, and buys and sells on the live paper "
                                              "account: simulated money only, at most 5 orders per question, none above the "
                                              "account's equity.")},
+        {"organize", QT_TRANSLATE_NOOP("ModelSlotsView", "Organize"),
+         QT_TRANSLATE_NOOP("ModelSlotsView", "Opens and creates Desk workspaces, changes the Journal's account, and prepares a journal entry: its form "
+                                             "opens filled in, and nothing is written unless you press Save. No access to your broker.")},
     };
     return list;
 }

@@ -472,11 +472,11 @@ QPushButton#qtChip {
 QPushButton#qtChip:hover { background: @Hover; }
 QPushButton#qtIconButton { background: transparent; border: none; color: @TextDim; font-size: 10px; padding: 0 4px; }
 QPushButton#qtIconButton:hover { color: @Text; }
-QLineEdit#qtInput, QLineEdit#qtSymbol, QSpinBox#qtSpin, QDoubleSpinBox#qtSpin {
+QLineEdit#qtInput, QLineEdit#qtSymbol, QSpinBox#qtSpin, QDoubleSpinBox#qtSpin, QDateTimeEdit#qtSpin {
     background: @Background; border: 1px solid @ControlBorder; border-radius: 3px;
     color: @Text; font-size: 11px; padding: 4px 8px; selection-background-color: @Accent;
 }
-QLineEdit#qtInput:focus, QLineEdit#qtSymbol:focus, QSpinBox#qtSpin:focus, QDoubleSpinBox#qtSpin:focus { border-color: @Accent; }
+QLineEdit#qtInput:focus, QLineEdit#qtSymbol:focus, QSpinBox#qtSpin:focus, QDoubleSpinBox#qtSpin:focus, QDateTimeEdit#qtSpin:focus { border-color: @Accent; }
 QLineEdit#qtSymbol { font-weight: 700; }
 QSpinBox#qtSpin::up-button, QSpinBox#qtSpin::down-button, QDoubleSpinBox#qtSpin::up-button, QDoubleSpinBox#qtSpin::down-button { width: 12px; border: none; background: transparent; }
 QCheckBox#qtCheck { color: @TextDim; font-size: 11px; spacing: 5px; }

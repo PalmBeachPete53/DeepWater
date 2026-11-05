@@ -682,6 +682,56 @@ void testPositioning()
     eqs("Invalid email or password.", message, "says why");
 }
 
+void testDraftCheck()
+{
+    const auto holds = [](const QString &text, double v) {
+        const QVector<double> n = numbersInText(text);
+        return std::any_of(n.begin(), n.end(), [&](double x) { return std::abs(x - v) < 1e-9; });
+    };
+    check(holds("vendu à 1,1225 ici", 1.1225), "a decimal comma");
+    check(holds("sold at 1.1225.", 1.1225), "a decimal point, the sentence's end apart");
+    check(holds("0,5 lot", 0.5), "half a lot");
+    check(holds("1 234,5 dollars", 1234.5), "a space between thousands");
+    check(holds("100 lots", 100), "a whole number");
+    check(holds("gain de 1,125", 1125) && holds("gain de 1,125", 1.125), "either reading");
+    check(!holds("EURUSD", 1), "no number");
+    const QString question = "Prépare une entrée de journal : je viens de vendre 0,5 lot d'EURUSD à 1,1225 avec un stop à 1,13.";
+    Trade t;   // what a real model sent for this question
+    t.symbol = "EURUSD";
+    t.volume = 0.5;
+    t.closePrice = 1.1225;
+    t.stopLoss = 1.13;
+    t.takeProfit = 1.12;
+    t.profit = 4.25;
+    t.strategy = "Breakout & Trade";
+    t.notes = "Entry after a break above 1.1200; stopped at 1.1300.";
+    QStringList emptied = keepStated(t, question);
+    near(1.1225, t.openPrice, 1e-9, "the lone price of an open trade is its entry");
+    near(0, t.closePrice, 1e-9, "an open trade has no exit");
+    near(1.13, t.stopLoss, 1e-9, "a stated stop stays");
+    near(0.5, t.volume, 1e-9, "a stated volume stays");
+    near(0, t.takeProfit, 1e-9, "an invented target goes");
+    near(0, t.profit, 1e-9, "an invented profit goes");
+    check(t.strategy.isEmpty() && t.notes.isEmpty(), "invented texts go");
+    check(emptied.contains("take_profit") && emptied.contains("profit") && emptied.contains("strategy") && emptied.contains("notes"), "and they are named");
+    Trade closed;
+    closed.volume = 1;
+    closed.openPrice = 100;
+    closed.closePrice = 110;
+    closed.profit = 50;
+    closed.closeTime = QDateTime(QDate(2026, 11, 5), QTime(10, 0), QTimeZone::UTC);
+    closed.strategy = "breakout";
+    emptied = keepStated(closed, "1 lot acheté à 100 revendu à 110, gain de 50, stratégie Breakout");
+    check(emptied.isEmpty(), "a trade fully described keeps everything");
+    near(50, closed.profit, 1e-9, "its profit");
+    Trade far;
+    far.volume = 3;
+    far.closePrice = 2;
+    emptied = keepStated(far, "");
+    near(3, far.volume, 1e-9, "no question, nothing to compare with");
+    near(2, far.openPrice, 1e-9, "but an open trade still has no exit");
+}
+
 void testIndicatorRead()
 {
     const double nan = std::nan("");
@@ -913,6 +963,7 @@ int main(int argc, char **argv)
     testRates();
     testSweepsSince();
     testPositioning();
+    testDraftCheck();
     testIndicatorRead();
     testHistory();
     testMarketSheet();

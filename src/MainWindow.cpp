@@ -47,6 +47,7 @@
 #include "MacroIndicators.h"
 #include "MacroPanel.h"
 #include "OverviewPage.h"
+#include "AiOrganize.h"
 #include "DeskHistory.h"
 #include "NewsPage.h"
 #include "NewsReader.h"
@@ -393,6 +394,15 @@ void MainWindow::buildUi()
     LocalTools::setPageAccess(
         [this](const AiPageRequest &request, std::function<void(const AiPageRead &)> done) { aiReadPage(request, std::move(done)); },
         [this](const AiPageRequest &request, QString *error) { return aiOpenPage(request, error); });
+    LocalTools::setOrganizer([this](const QString &tool, const QJsonObject &arguments, const QString &question, LocalTools::Done done) {
+        const aiorganize::Context context {
+            [this] {
+                showPage("desk");
+                return qobject_cast<DeskPage *>(m_pages->currentWidget());
+            },
+            this};
+        aiorganize::run(context, tool, arguments, question, std::move(done));
+    });
     m_aiDock->setDevFlapShown(devEnabled);
     m_aiDock->setOpen(QSettings().value("ai/dockOpen", false).toBool(), false);
     connect(m_aiDock, &AiDock::openChanged, this, [](bool open) { QSettings().setValue("ai/dockOpen", open); });
@@ -815,7 +825,7 @@ void MainWindow::showPage(const QString &id)
 
 namespace {
 
-constexpr char AiPages[] = "map, overview, economy, forex, charts, calendar, news, research or quant";
+constexpr char AiPages[] = "map, overview, economy, forex, charts, calendar, news, research, quant, desk or journal";
 constexpr int AiReadTick = 1500;
 constexpr int AiReadTicks = 8;
 

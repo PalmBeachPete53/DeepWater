@@ -789,47 +789,24 @@ public:
         build();
     }
 
+    static QVector<Workspace> defaults() { return {{tr("Macro desk"), {1, 2, 4, 5}}}; }
+
+    void reload()
+    {
+        m_spaces = loadWorkspaces(&m_current);
+        sync();
+        build();
+    }
+
 private:
-    struct Space {
-        QString name;
-        QVector<int> panels;
-    };
-
-    QVector<Space> defaults() const { return {{tr("Macro desk"), {1, 2, 4, 5}}}; }
-
-    void load()
-    {
-        const QJsonObject root = QJsonDocument::fromJson(QSettings().value("desk/workspaces").toByteArray()).object();
-        for (const QJsonValue &v : root.value("spaces").toArray()) {
-            Space s;
-            s.name = v.toObject().value("name").toString();
-            for (const QJsonValue &p : v.toObject().value("panels").toArray())
-                if (p.toInt() >= 0 && p.toInt() < sectionCount())
-                    s.panels << p.toInt();
-            m_spaces << s;
-        }
-        if (m_spaces.isEmpty())
-            m_spaces = defaults();
-        m_current = std::clamp(root.value("current").toInt(), 0, int(m_spaces.size()) - 1);
-    }
-
-    void save() const
-    {
-        QJsonArray spaces;
-        for (const Space &s : m_spaces) {
-            QJsonArray panels;
-            for (int p : s.panels)
-                panels.append(p);
-            spaces.append(QJsonObject {{"name", s.name}, {"panels", panels}});
-        }
-        QSettings().setValue("desk/workspaces", QJsonDocument(QJsonObject {{"spaces", spaces}, {"current", m_current}}).toJson(QJsonDocument::Compact));
-    }
+    void load() { m_spaces = loadWorkspaces(&m_current); }
+    void save() const { saveWorkspaces(m_spaces, m_current); }
 
     void sync()
     {
         m_syncing = true;
         m_list->clear();
-        for (const Space &s : m_spaces)
+        for (const Workspace &s : m_spaces)
             m_list->addItem(s.name);
         m_list->setCurrentIndex(m_current);
         m_syncing = false;
@@ -883,7 +860,7 @@ private:
     QComboBox *m_list, *m_panelChoice;
     QWidget *m_gridHost;
     QGridLayout *m_grid;
-    QVector<Space> m_spaces;
+    QVector<Workspace> m_spaces;
     int m_current = 0;
     bool m_syncing = false;
 };
@@ -1272,6 +1249,43 @@ private:
 };
 
 } // namespace
+
+QVector<Workspace> loadWorkspaces(int *current)
+{
+    QVector<Workspace> spaces;
+    const QJsonObject root = QJsonDocument::fromJson(QSettings().value("desk/workspaces").toByteArray()).object();
+    for (const QJsonValue &v : root.value("spaces").toArray()) {
+        Workspace s;
+        s.name = v.toObject().value("name").toString();
+        for (const QJsonValue &p : v.toObject().value("panels").toArray())
+            if (p.toInt() >= 0 && p.toInt() < sectionCount())
+                s.panels << p.toInt();
+        spaces << s;
+    }
+    if (spaces.isEmpty())
+        spaces = WorkspacesView::defaults();
+    if (current)
+        *current = std::clamp(root.value("current").toInt(), 0, int(spaces.size()) - 1);
+    return spaces;
+}
+
+void saveWorkspaces(const QVector<Workspace> &spaces, int current)
+{
+    QJsonArray list;
+    for (const Workspace &s : spaces) {
+        QJsonArray panels;
+        for (int p : s.panels)
+            panels.append(p);
+        list.append(QJsonObject {{"name", s.name}, {"panels", panels}});
+    }
+    QSettings().setValue("desk/workspaces", QJsonDocument(QJsonObject {{"spaces", list}, {"current", current}}).toJson(QJsonDocument::Compact));
+}
+
+void refreshWorkspaces(QWidget *view)
+{
+    if (auto *workspaces = qobject_cast<WorkspacesView *>(view))
+        workspaces->reload();
+}
 
 void openMarketSheet(const QString &id, const Context &c, QWidget *view)
 {

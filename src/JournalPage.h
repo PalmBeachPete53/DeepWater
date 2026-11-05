@@ -1,6 +1,10 @@
 #pragma once
 
+#include "desk/Journal.h"
+
 #include <QWidget>
+
+#include <functional>
 
 class QButtonGroup;
 class QStackedWidget;
@@ -15,6 +19,9 @@ public:
     explicit JournalPage(QWidget *parent = nullptr);
 
     void showSection(int index);
+    // The form of a trade a model described, for the user to check: saved only if they press Save; `done` says which.
+    // `emptied` names the fields left out as not stated (desk::keepStated); `checked`: there was a question to compare with.
+    static void draftTrade(const desk::Trade &trade, const QStringList &emptied, bool checked, QWidget *parent, std::function<void(bool saved, const desk::Trade &)> done);
 
 private:
     QButtonGroup *m_tabs;

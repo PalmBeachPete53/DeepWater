@@ -4,7 +4,7 @@
 <context>
     <name>AccountDialog</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+332"/>
+        <location filename="../src/JournalPage.cpp" line="+355"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -5858,7 +5858,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>ImportDialog</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="-620"/>
+        <location filename="../src/JournalPage.cpp" line="-643"/>
         <source>Import trades</source>
         <translation>Importer des trades</translation>
     </message>
@@ -6128,7 +6128,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>JournalBar</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+185"/>
+        <location filename="../src/JournalPage.cpp" line="+208"/>
         <source>Long and short</source>
         <translation>Long et short</translation>
     </message>
@@ -6233,7 +6233,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>JournalPage</name>
     <message>
-        <location line="+771"/>
+        <location line="+786"/>
         <source>Dashboard</source>
         <translation>Tableau de bord</translation>
     </message>
@@ -6614,7 +6614,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Ce modèle demande environ %1 de mémoire et ce Mac en a %2 : il ne tiendrait pas.</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+76"/>
         <source>You</source>
         <translation>Vous</translation>
     </message>
@@ -6692,7 +6692,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         </translation>
     </message>
     <message numerus="yes">
-        <location line="+14"/>
+        <location line="+18"/>
         <source>%n tool call(s)</source>
         <translation>
             <numerusform>%n appel d’outil</numerusform>
@@ -7415,7 +7415,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1371"/>
+        <location filename="../src/MainWindow.cpp" line="+1381"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -7423,7 +7423,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-1089"/>
+        <location filename="../src/MainWindow.cpp" line="-1098"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
@@ -7493,7 +7493,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+881"/>
+        <location line="+890"/>
         <source>Trade in goods</source>
         <translation>Commerce de biens</translation>
     </message>
@@ -7972,7 +7972,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Lance des stratégies dans le testeur de l’onglet Graphiques (qui peut changer le graphique actif), lit leurs trades dans l’export CSV, et achète et vend sur le compte paper trading en direct : de l’argent simulé uniquement, 5 ordres au plus par question, aucun au-delà de l’équité du compte.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+67"/>
         <source>Slot %1</source>
         <translation>Emplacement %1</translation>
     </message>
@@ -8002,12 +8002,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Lecture seule : les tableaux et graphiques de toutes les pages sauf Sources et IA, les séries des pays et des indicateurs, les jeux de données de la carte, les cours et les calendriers, par l&apos;application ; aucun fichier, aucun réseau, aucune écriture.</translation>
     </message>
     <message>
-        <location line="-105"/>
+        <location line="-108"/>
         <source>Read only: the tables and charts of every page but Sources and AI, open or not (and taking you to a page when you ask), the series of the countries and indicators, the map&apos;s data sets, prices and calendars, through the app; no file, no network, no writing.</source>
         <translation>Lecture seule : les tableaux et graphiques de toutes les pages sauf Sources et IA, ouvertes ou non (et vous emmener sur une page quand vous le demandez), les séries des pays et des indicateurs, les jeux de données de la carte, les cours et les calendriers, par l&apos;application ; aucun fichier, aucun réseau, aucune écriture.</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+7"/>
+        <source>Organize</source>
+        <translation>Organiser</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Opens and creates Desk workspaces, changes the Journal&apos;s account, and prepares a journal entry: its form opens filled in, and nothing is written unless you press Save. No access to your broker.</source>
+        <translation>Ouvre et crée des espaces de travail du Desk, change le compte du Journal et prépare une entrée de journal : son formulaire s&apos;ouvre rempli, et rien n&apos;est écrit tant que vous n&apos;appuyez pas sur Enregistrer. Aucun accès à votre courtier.</translation>
+    </message>
+    <message>
+        <location line="+70"/>
         <source>Take it out of this slot</source>
         <translation>Le retirer de cet emplacement</translation>
     </message>
@@ -9697,7 +9707,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 o</translation>
     </message>
     <message>
-        <location filename="../src/JournalPage.cpp" line="-1185"/>
+        <location filename="../src/JournalPage.cpp" line="-1223"/>
         <source>%1 min</source>
         <translation>%1 min</translation>
     </message>
@@ -9877,7 +9887,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>RiskView</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+919"/>
+        <location filename="../src/JournalPage.cpp" line="+942"/>
         <source>Trade parameters</source>
         <translation>Paramètres du trade</translation>
     </message>
@@ -10673,11 +10683,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+162"/>
         <source>Journal</source>
         <translation>Journal</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-161"/>
         <source>Charts</source>
         <translation>Graphiques</translation>
     </message>
@@ -10780,6 +10791,21 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+1"/>
         <source>Reads the Charts tab&apos;s live paper account and places, closes and cancels its orders: simulated money.</source>
         <translation>Lit le compte paper en direct de l’onglet Graphiques, place, clôture et annule ses ordres : de l’argent simulé.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Workspaces</source>
+        <translation>Espaces de travail</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Opens and creates the Desk&apos;s workspaces, which moves the screen; nothing existing changes.</source>
+        <translation>Ouvre et crée les espaces de travail du Desk, ce qui déplace l&apos;écran ; rien d&apos;existant ne change.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Changes the Journal&apos;s account, and opens a trade&apos;s form filled in: nothing is written unless you press Save.</source>
+        <translation>Change le compte du Journal et ouvre le formulaire d&apos;un trade rempli : rien n&apos;est écrit tant que vous n&apos;appuyez pas sur Enregistrer.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -13624,7 +13650,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>TradeDialog</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="-1012"/>
+        <location filename="../src/JournalPage.cpp" line="-1035"/>
         <source>Log a trade</source>
         <translation>Saisir un trade</translation>
     </message>
@@ -13644,18 +13670,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Short</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <location line="+21"/>
+        <location line="+8"/>
+        <location line="+22"/>
         <source>Closed</source>
         <translation>Clôturé</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-21"/>
         <source>Still open</source>
         <translation>Encore ouvert</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Symbol</source>
         <translation>Symbole</translation>
     </message>
@@ -13666,11 +13692,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+31"/>
         <source>Volume (lots)</source>
         <translation>Volume (lots)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-30"/>
         <source>Opened</source>
         <translation>Ouvert le</translation>
     </message>
@@ -13681,43 +13708,80 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <location line="+27"/>
         <source>Open price</source>
         <translation>Prix d&apos;ouverture</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-26"/>
+        <location line="+26"/>
         <source>Close price</source>
         <translation>Prix de clôture</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-25"/>
+        <location line="+25"/>
         <source>Stop loss</source>
         <translation>Stop loss</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-24"/>
+        <location line="+25"/>
         <source>Take profit</source>
         <translation>Take profit</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-24"/>
         <source>Commission and swap</source>
         <translation>Commission et swap</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+23"/>
         <source>Profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-22"/>
+        <location line="+22"/>
         <source>Strategy</source>
         <translation>Stratégie</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-21"/>
+        <location line="+21"/>
         <source>Notes</source>
         <translation>Notes</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cancel</source>
+        <translation>Annuler</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Prepared by the AI from your message. Check every field: nothing is written until you save.</source>
+        <translation>Préparé par l&apos;IA à partir de votre message. Vérifiez chaque champ : rien n&apos;est écrit tant que vous n&apos;enregistrez pas.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Prepared by an AI outside the app: its figures couldn&apos;t be compared with what you asked. Check every field: nothing is written until you save.</source>
+        <translation>Préparé par une IA extérieure à l&apos;application : ses chiffres n&apos;ont pas pu être comparés à votre demande. Vérifiez chaque champ : rien n&apos;est écrit tant que vous n&apos;enregistrez pas.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Left empty, as your message didn&apos;t say them or the trade is open: %1.</source>
+        <translation>Laissés vides, car votre message ne les donne pas ou le trade est ouvert : %1.</translation>
+    </message>
+    <message>
+        <location line="+975"/>
+        <source>Check this entry, prepared by the AI</source>
+        <translation>Vérifiez cette entrée, préparée par l&apos;IA</translation>
     </message>
 </context>
 <context>
@@ -13736,7 +13800,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>TradeLogView</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+474"/>
+        <location filename="../src/JournalPage.cpp" line="-509"/>
         <source>Trades</source>
         <translation>Trades</translation>
     </message>
@@ -15588,7 +15652,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::MarketSheet</name>
     <message>
-        <location line="+374"/>
+        <location line="+351"/>
         <source>Technicals</source>
         <translation>Technique</translation>
     </message>
@@ -15980,7 +16044,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::NotesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-661"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-638"/>
         <source>All publishers</source>
         <translation>Tous les éditeurs</translation>
     </message>
@@ -17467,12 +17531,12 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>Un espace contient six panneaux au maximum.</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+11"/>
         <source>Macro desk</source>
         <translation>Desk macro</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+45"/>
         <source>Remove this panel</source>
         <translation>Retirer ce panneau</translation>
     </message>

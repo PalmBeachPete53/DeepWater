@@ -269,6 +269,7 @@ void LocalChat::addEntry(const Entry &e)
 
 void LocalChat::send(const QString &question, const QString &context)
 {
+    m_question = question;
     const QString text = question.trimmed();
     if (text.isEmpty() || state() != LocalEngine::State::Ready) return;
     m_turnStart = int(m_messages.size());
@@ -454,7 +455,11 @@ void LocalChat::runCalls(QVector<LocalTools::Call> calls, QVector<QJsonObject> r
     if (LocalTools::isOrder(call.name) && m_orders >= LocalTools::MaxOrders)
         handle({{"error", QString("not allowed: at most %1 paper orders per question").arg(LocalTools::MaxOrders)}});
     else
-        m_tools->call(call, skills, handle);
+    {
+        LocalTools::Call asked = call;
+        asked.question = m_question;
+        m_tools->call(asked, skills, handle);
+    }
 }
 
 void LocalChat::finishTurn(const QString &note)

@@ -34,6 +34,7 @@ public:
         QString name;
         QJsonObject arguments;
         QString error;          // the call couldn't be read
+        QString question;       // what the user asked, when the app knows it (not through MCP)
     };
     using Done = std::function<void(const QJsonObject &result)>;   // {"error": …} when it failed or was refused
 
@@ -48,6 +49,9 @@ public:
     using PageReader = std::function<void(const AiPageRequest &request, std::function<void(const AiPageRead &)> done)>;
     using PageOpener = std::function<QString(const AiPageRequest &request, QString *error)>;   // where the user now is
     static void setPageAccess(PageReader reader, PageOpener opener);
+    // The Organize skill's tools, from MainWindow: Desk workspaces and the Journal.
+    using Organizer = std::function<void(const QString &tool, const QJsonObject &arguments, const QString &question, Done done)>;
+    static void setOrganizer(Organizer organizer);
     static QString systemPrompt(const QStringList &skills, const QString &userPrompt, bool local = true);
     // The tool calls written in an answer (without its thinking), in order.
     static QVector<Call> parseCalls(const QString &answer);

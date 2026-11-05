@@ -55,6 +55,15 @@ QDateTime parseTradeTime(const QString &text);
 // --- Merging: a trade with a known ticket is replaced, so importing a statement twice adds nothing.
 QVector<Trade> mergeTrades(const QVector<Trade> &existing, const QVector<Trade> &incoming, int *added = nullptr, int *updated = nullptr);
 
+// --- A trade described to a model. Models invent figures even when told not to, so what reaches the form is checked.
+
+// The numbers written in a text, each as it can be read: "1,1225" and "1.1225" both give 1.1225; "0,5" gives 0.5.
+QVector<double> numbersInText(const QString &text);
+// Keeps only what `question` states: a figure or a text it doesn't hold is emptied, and named in the result by its
+// field ("take_profit"). An open trade has no exit, so no close price or profit; a lone price given as its exit is its
+// entry. Without a question there is nothing to compare with, and nothing changes.
+QStringList keepStated(Trade &trade, const QString &question);
+
 // --- Statistics of closed trades.
 
 struct Filter {

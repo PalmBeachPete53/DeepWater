@@ -329,6 +329,77 @@ double parseAmount(const QString &text)
     return negative ? -v : v;
 }
 
+QVector<double> numbersInText(const QString &text)
+{
+    QVector<double> numbers;
+    static const QRegularExpression pattern("\\d+(?:[.,\\s\\x{00A0}\\x{202F}]\\d+)*");
+    auto it = pattern.globalMatch(text);
+    while (it.hasNext()) {
+        QString token = it.next().captured();
+        token.remove(QRegularExpression("[\\s\\x{00A0}\\x{202F}]"));
+        const int comma = token.lastIndexOf(','), dot = token.lastIndexOf('.');
+        // The last separator as the decimal one, and also none: "1,125" may be either.
+        const int last = std::max(comma, dot);
+        QString digits = token;
+        digits.remove(',').remove('.');
+        bool ok = false;
+        const double whole = digits.toDouble(&ok);
+        if (ok)
+            numbers << whole;
+        if (last >= 0) {
+            const double decimal = (token.left(last).remove(',').remove('.') + "." + token.mid(last + 1)).toDouble(&ok);
+            if (ok)
+                numbers << decimal;
+        }
+    }
+    return numbers;
+}
+
+QStringList keepStated(Trade &trade, const QString &question)
+{
+    QStringList emptied;
+    // An open trade: its one price is its entry, whatever field the model chose.
+    if (!trade.closeTime.isValid()) {
+        if (trade.openPrice == 0 && trade.closePrice != 0)
+            trade.openPrice = trade.closePrice;
+        if (trade.closePrice != 0) {
+            trade.closePrice = 0;
+            emptied << "close_price";
+        }
+        if (trade.profit != 0) {
+            trade.profit = 0;
+            emptied << "profit";
+        }
+    }
+    if (question.trimmed().isEmpty())
+        return emptied;
+    const QVector<double> numbers = numbersInText(question);
+    const auto stated = [&](double v) {
+        return std::any_of(numbers.begin(), numbers.end(), [&](double n) { return std::abs(n - std::abs(v)) < 1e-9; });
+    };
+    const auto number = [&](double &field, const char *name) {
+        if (field != 0 && !stated(field)) {
+            field = 0;
+            emptied << name;
+        }
+    };
+    number(trade.volume, "volume");
+    number(trade.openPrice, "open_price");
+    number(trade.closePrice, "close_price");
+    number(trade.stopLoss, "stop_loss");
+    number(trade.takeProfit, "take_profit");
+    number(trade.profit, "profit");
+    const auto words = [&](QString &field, const char *name) {
+        if (!field.isEmpty() && !question.contains(field, Qt::CaseInsensitive)) {
+            field.clear();
+            emptied << name;
+        }
+    };
+    words(trade.strategy, "strategy");
+    words(trade.notes, "notes");
+    return emptied;
+}
+
 QDateTime parseTradeTime(const QString &text)
 {
     const QString s = text.trimmed();

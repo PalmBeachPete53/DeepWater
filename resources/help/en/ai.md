@@ -30,6 +30,8 @@ The engine is llama.cpp with Metal, run as a separate helper in a **sandbox**: i
 
 *Trade*: `backtest_help` (the strategy format, the operators, every indicator, the examples and your saved strategies), `run_backtest` (loads a strategy into the tester and runs it on the active chart, switching symbol or timeframe when asked), `backtest_trades_csv` (exports the trades and summarizes them), `paper_account` (cash, equity, positions, working orders, last fills), `paper_order`, `paper_close` and `paper_cancel` (the ticket's own code, so fills, brackets and fees behave the same). Limits: the live paper account only (never the replay's practice account), no order above the account's equity, at most five orders, closes or cancels per question, and the system prompt tells the model to trade only when asked. Paper trading is simulated; real execution has no tool.
 
+*Organize*: `list_workspaces`, `open_workspace` and `create_workspace` (the Desk's workspaces: opening one moves your screen, so the model does it only when you ask), `switch_journal_account`, and `draft_journal_trade`, which opens the Journal's form filled in: nothing is written unless you press **Save**, and you can correct it first. Models invent figures even when told not to, so a figure or a text your message doesn't hold is left empty, and the form says which.
+
 **Journal.** Every call, run, refused or failed, is one line in `ai/tool-journal.jsonl` (time, model, slot, tool, arguments, outcome, size, duration); the last 200 are shown under the conversation, with **Show the file**.
 
 ## Side panel

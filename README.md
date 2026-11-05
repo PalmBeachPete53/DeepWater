@@ -1359,7 +1359,7 @@ Claude settings and opencode, with the slots under both (either can be dragged i
     local engine's format: another is refused with the reason above the slots) into a slot, or from one slot to
     another, or an integration from Models › Integration (Claude, opencode: no files to bind, one slot at a time, a
     second drop moves it); tick the skills the slot grants (**Read Deepwater's data**: read only, through the app, no file, network
-    or writing; **Trade**: the Charts tab's tester and live paper account, below). The skills belong to the slot: a model dropped in gets that slot's skills, the slot it
+    or writing; **Trade**: the Charts tab's tester and live paper account, below; **Organize** (`src/AiOrganize.*`): the Desk's workspaces, the Journal's account, and a journal entry whose form opens filled in and writes nothing unless the user presses Save; `desk::keepStated` empties any figure or text the user's message doesn't hold, since a real model invented some despite being told not to). The skills belong to the slot: a model dropped in gets that slot's skills, the slot it
     left keeps its own, ✕ takes the model out, and a new slot grants nothing until a box is ticked.
     A slot is **bound to the model's files**: dropping a model from the list takes the SHA-256 of each of its files
     (on the thread pool) with their sizes and dates. When the page shows, a slot compares them with the files on

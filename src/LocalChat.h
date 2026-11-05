@@ -127,6 +127,7 @@ private:
     int m_round = 0;         // the rounds of tool calls of that question
     int m_toolCalls = 0;
     int m_orders = 0;        // paper orders placed, closed or cancelled for that question (LocalTools::MaxOrders)
+    QString m_question;      // the user's last question: a tool checks what a model wrote against it
     bool m_cancelled = false;
     int m_failedRounds = 0;  // rounds in a row where every call failed or was refused
 };
