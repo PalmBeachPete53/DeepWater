@@ -63,6 +63,7 @@ QWidget *makeTechnical(const Context &c);
 QWidget *makeLiquidity(const Context &c);
 QWidget *makeNotes(const Context &c);
 QWidget *makeForecasts(const Context &c);
+QWidget *makeIndicators(const Context &c);
 QWidget *makeWorkspaces(const Context &c);
 
 } // namespace deskui

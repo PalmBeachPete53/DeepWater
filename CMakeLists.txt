@@ -260,7 +260,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/JournalPage.h src/JournalPage.cpp
     src/DeskData.h src/DeskData.cpp
     src/DeskPage.h src/DeskPage.cpp
-    src/DeskViews.h src/DeskViewsMarket.cpp src/DeskViewsMacro.cpp src/DeskViewsTech.cpp
+    src/DeskViewsIndicators.cpp src/DeskViews.h src/DeskViewsMarket.cpp src/DeskViewsMacro.cpp src/DeskViewsTech.cpp
     resources/resources.qrc
     resources/icon/deepwater.icns
 )

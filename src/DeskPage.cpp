@@ -15,19 +15,19 @@ QStringList sectionNames()
 {
     return {DeskPage::tr("Markets"), DeskPage::tr("Strength"), DeskPage::tr("Sessions"), DeskPage::tr("Recap"), DeskPage::tr("Wire"), DeskPage::tr("Rates"),
             DeskPage::tr("Positioning"), DeskPage::tr("Risk appetite"), DeskPage::tr("Seasonality"), DeskPage::tr("Fundamentals"), DeskPage::tr("Technicals"),
-            DeskPage::tr("Liquidity"), DeskPage::tr("Notes"), DeskPage::tr("Forecasts"), DeskPage::tr("Workspaces")};
+            DeskPage::tr("Liquidity"), DeskPage::tr("Notes"), DeskPage::tr("Forecasts"), DeskPage::tr("Indicators"), DeskPage::tr("Workspaces")};
 }
 
 int sectionCount()
 {
-    return 14;   // the workspaces aren't a panel of a workspace
+    return 15;   // the workspaces aren't a panel of a workspace
 }
 
 QWidget *makeSection(int index, const Context &c)
 {
     using Maker = QWidget *(*)(const Context &);
     static const Maker makers[] = {makeMarkets, makeStrength, makeSessions, makeRecap, makeWire, makeRates, makePositioning,
-                                   makeAppetite, makeSeasonality, makeFundamentals, makeTechnical, makeLiquidity, makeNotes, makeForecasts};
+                                   makeAppetite, makeSeasonality, makeFundamentals, makeTechnical, makeLiquidity, makeNotes, makeForecasts, makeIndicators};
     return index >= 0 && index < sectionCount() ? makers[index](c) : nullptr;
 }
 

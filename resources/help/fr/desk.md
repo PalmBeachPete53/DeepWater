@@ -75,6 +75,10 @@ Les titres d'ING Think, de la Fed, de la BCE, de la Banque d'Angleterre et des d
 
 Les prévisions des autres, côte à côte. **ING Think** par trimestre, pour la croissance, l'inflation, les taux directeurs, les taux à trois mois, les obligations, le change et les matières premières, avec la date de sa dernière mise à jour ; dans l'onglet change, un clic sur une paire trace le chemin d'ING après un an de prix. Le **FMI** et l'**OCDE** par année pour la croissance, l'inflation et le chômage des huit grandes économies ; un clic sur une ligne trace ses chiffres passés et les prévisions. Les **projections de la Fed**, qui demandent la clé FRED gratuite dans [Sources](help:sources). **L'écart entre prévisionnistes** donne la réponse la plus basse, la médiane et la plus haute des dernières enquêtes de prévisionnistes professionnels, celles de la BCE et de la Fed de Philadelphie : des chiffres annuels. Aucune source gratuite ne publie cette fourchette pour une publication précise du calendrier. TD, KBC, MUFG et RBC publient aussi des tableaux de change, mais leurs conditions n'autorisent pas ou n'indiquent pas de droit de reprendre leurs chiffres : ce sont des liens vers leurs sites.
 
+## Indicateurs
+
+Un marché à travers six indicateurs courants, en clôtures quotidiennes : Supertrend, bandes de Bollinger, deux moyennes mobiles, RSI, MACD et ADX. Chaque carte dit en clair où en est l'indicateur, et ses réglages se changent dans son coin, y compris les deux lignes du RSI. Ils sont mémorisés. Ce sont des lectures simples, pas des signaux de trading.
+
 ## Espaces
 
 Vos propres écrans : jusqu'à six panneaux en direct de sections du Desk, dans autant d'espaces nommés que vous voulez. Les panneaux se chargent quand l'espace est affiché. Ils ont moins de place que la section : un tableau large peut être coupé au bord du panneau.

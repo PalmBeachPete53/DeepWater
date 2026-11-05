@@ -1274,7 +1274,7 @@ under Research). The page is translated; numbers keep the English grouping (`1,2
 
 ## Desk
 
-The **Desk** tab is a trader's reading of the markets in 15 sub-tabs built when first shown (`desk/section`, `--section <name>`).
+The **Desk** tab is a trader's reading of the markets in 16 sub-tabs built when first shown (`desk/section`, `--section <name>`).
 Market logic is in `src/desk/` (static library `desk`, Qt Core only, tested by `qtm_test_desk`), the views in
 `src/DeskPage.*` and `src/DeskViews{Market,Macro,Tech}.cpp`, the shared pieces in `src/DeskWidgets.*` and `src/DeskData.*`.
 Public sources only, listed in **Sources › Desk**. Texts are fixed rules; an **Ask the AI** button sends a question that
@@ -1316,6 +1316,7 @@ holds no figures, and the model reads the section through `read_page`.
   so they are links. How far apart forecasters are: lowest, median and highest individual answers of the ECB's SPF (`parseEcbSpf`) and the
   Philadelphia Fed's (`parsePhillyIndividual`, an xlsx); no free source gives this for a single calendar release. A click on a pair draws ING's path on a year of prices, on an economy its past figures and forecasts.
   Kalshi's public API is **not used**: its Developer Agreement limits the API to a member's own trading.
+- **Indicators**: one market through Supertrend, Bollinger Bands, two EMAs, RSI, MACD and ADX, computed with the Charts tab's indicators (`qtm::compute`), each with its settings (`desk/indicators/...`) and its state in words (`desk/IndicatorRead`).
 - **Workspaces**: named sets of up to six live panels (`desk/workspaces`).
 
 ## Journal

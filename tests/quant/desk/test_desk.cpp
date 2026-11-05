@@ -1,4 +1,5 @@
 // The Desk and Journal logic (src/desk) on made-up data. Plain checks, a count at the end, non-zero exit on any failure.
+#include "desk/IndicatorRead.h"
 #include "desk/History.h"
 #include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
@@ -681,6 +682,42 @@ void testPositioning()
     eqs("Invalid email or password.", message, "says why");
 }
 
+void testIndicatorRead()
+{
+    const double nan = std::nan("");
+    eqi(3, barsOnSameSide({1, 5, 6, 7}, {2, 2, 2, 2}), "three bars above");
+    eqi(1, barsOnSameSide({5, 5, 1}, {2, 2, 2}), "just crossed down");
+    eqi(2, barsOnSameSide({nan, 5, 6}, {2, 2, 2}), "a gap ends the count");
+    eqi(0, barsOnSameSide({5, nan}, {2, 2}), "nothing on the last bar");
+    TrendReading t = readSupertrend({1, 1, -1, -1, -1});
+    eqi(1, t.side, "a negative direction is an uptrend");
+    eqi(3, t.bars, "for three bars");
+    eqi(-1, readSupertrend({-1, 1}).side, "positive is down");
+    eqi(0, readSupertrend({}).side, "no data");
+    t = readCross({1, 3, 4}, {2, 2, 2});
+    eqi(1, t.side, "fast above");
+    eqi(2, t.bars, "for two bars");
+    near(2, t.gap, 1e-9, "the gap");
+    RsiReading r = readRsi({50, 50, 50, 50, 50, 75}, 30, 70);
+    check(r.valid && r.zone == 1 && r.rising, "overbought and rising");
+    eqi(-1, readRsi({20}, 30, 70).zone, "oversold");
+    eqi(0, readRsi({20}, 10, 70).zone, "the lines can be moved");
+    check(!readRsi({nan}, 30, 70).valid, "no value");
+    QVector<double> close(30, 100), up(30, 110), low(30, 90);
+    BandsReading b = readBands(close, up, low);
+    check(b.valid, "bands read");
+    near(50, b.position, 1e-9, "in the middle");
+    close.last() = 112;
+    check(readBands(close, up, low).position > 100, "outside them, beyond 100");
+    up.last() = 101;
+    low.last() = 99;
+    b = readBands(close, up, low);
+    check(b.squeeze && b.widthRank == 0, "the narrowest of the period");
+    DmiReading d = readDmi({30}, {25}, {10});
+    check(d.valid && d.strong && d.side == 1, "strong and up");
+    check(!readDmi({20}, {25}, {10}).strong, "under 25 isn't strong");
+}
+
 void testHistory()
 {
     History h;
@@ -876,6 +913,7 @@ int main(int argc, char **argv)
     testRates();
     testSweepsSince();
     testPositioning();
+    testIndicatorRead();
     testHistory();
     testMarketSheet();
     testCentralBanks();

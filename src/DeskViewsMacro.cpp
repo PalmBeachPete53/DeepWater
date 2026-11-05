@@ -296,6 +296,7 @@ private:
         if (!gbp.isEmpty())
             lines.push_back({meetingName(tr("Bank of England"), "GBP"), quant::seriesColor(6), line(gbp)});
         m_pricingHistory->setData(dates, lines, [](double v) { return tr("%1 bp").arg(signedAmount(v, 0)); });
+        m_pricingHistory->setVisible(dates.size() >= 2);
         m_pricingNote->setText(dates.size() < 2
                                    ? tr("Noted on this computer each weekday while the app is open, since no free source keeps it. The line appears after a second day.")
                                    : tr("Noted on this computer each weekday while the app is open, since %1. The move priced for each bank's next meeting; a day the app stayed shut is a gap.").arg(QLocale().toString(dates.first(), QLocale::ShortFormat)));
@@ -717,6 +718,7 @@ private:
             values << p.value;
         }
         m_history->setData(dates, {{tr("Long"), Theme::current().Up, values}}, [](double v) { return QString("%1%").arg(amount(v, 0)); });
+        m_history->setVisible(points.size() >= 2);
         m_historyNote->setText(points.size() < 2
                                    ? tr("Noted on this computer each weekday while the app is open, since Myfxbook keeps no history. The line appears after a second day. A click on a row chooses the symbol.")
                                    : tr("Noted on this computer each weekday while the app is open, since %1; a day the app stayed shut is a gap. Symbols with fewer than %2 positions aren't noted. A click on a row chooses the symbol.")

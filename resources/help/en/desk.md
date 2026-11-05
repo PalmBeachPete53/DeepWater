@@ -75,6 +75,10 @@ Titles from ING Think, the Fed, the ECB, the Bank of England and the BIS's centr
 
 Other people's forecasts, side by side. **ING Think** by quarter, for growth, inflation, policy rates, three-month rates, bonds, FX and commodities, with the date of its last update; in the FX tab, a click on a pair draws ING's path after a year of its price. The **IMF** and the **OECD** by year for growth, inflation and unemployment in the eight main economies; a click on a row draws its past figures and the forecasts. The **Fed's own projections**, which need the free FRED key in [Sources](help:sources). **How far apart forecasters are** gives the lowest, median and highest answer in the latest surveys of professional forecasters, the ECB's and the Philadelphia Fed's: yearly figures. No free source publishes that range for a single release on the calendar. TD, KBC, MUFG and RBC also publish FX tables, but their terms don't allow or don't state a right to reuse their figures, so they are links to their sites.
 
+## Indicators
+
+One market through six usual indicators on daily closes: Supertrend, Bollinger Bands, two moving averages, RSI, MACD and ADX. Each card says where the indicator stands in plain words, and its settings can be changed in its corner, RSI's two lines included. They are remembered. These are plain readings, not signals to trade.
+
 ## Workspaces
 
 Your own screens: up to six live panels of Desk sections, in as many named workspaces as you want. Panels load when the workspace is shown. They run in less room than the section, so a wide table may be cut at the panel's edge.

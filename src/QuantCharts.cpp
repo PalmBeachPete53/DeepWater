@@ -171,7 +171,7 @@ void Chart::drawDateAxis(QPainter &p, const QRectF &plot, const QVector<QDate> &
     const Palette &c = Theme::current();
     QString format = m_dateFormat;
     if (format.isEmpty())
-        format = dates.first().daysTo(dates.last()) > 400 ? "MMM yyyy" : "MMM d";
+        format = dates.first().daysTo(dates.last()) > 400 ? "MMM yyyy" : QLocale().language() == QLocale::French ? "d MMM" : "MMM d";
     const int count = std::max(2, int(plot.width() / 130));
     p.setFont(chartFont(9));
     for (int k = 0; k < count; ++k) {
