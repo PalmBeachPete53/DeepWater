@@ -10,6 +10,8 @@
 #include <QTimer>
 #include <QWidget>
 
+class QComboBox;
+
 class QButtonGroup;
 class QCheckBox;
 class QGridLayout;
@@ -171,14 +173,25 @@ class CotView : public View
 public:
     explicit CotView(CotReport *report, QWidget *parent = nullptr);
 
+signals:
+    void askAi(const QString &prompt);
+
 protected:
     void load() override;
 
 private:
     void fill();
+    void fillReading(const CotReport::Series &s);
+    void fetchTff(const CotReport::Market &market);
 
     CotReport *m_report;
-    QButtonGroup *m_market;
+    QComboBox *m_market;
+    QLabel *m_specNet, *m_specNetSub, *m_specLong, *m_specLongSub, *m_specRange, *m_specRangeSub, *m_commRange, *m_commRangeSub, *m_reading;
+    QFrame *m_tffCard;
+    QTableWidget *m_tff;
+    MultiLineChart *m_tffChart;
+    QLabel *m_tffDate;
+    int m_tffSerial = 0;
     QLabel *m_title, *m_code, *m_asOf, *m_release, *m_units, *m_totals, *m_historyTitle;
     CotTable *m_table;
     LongShortBars *m_longShort;

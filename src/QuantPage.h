@@ -16,6 +16,9 @@ public:
 
     void showSection(int index);
 
+signals:
+    void askAi(const QString &prompt);   // a request for the AI side panel: holds no data
+
 private:
     QButtonGroup *m_tabs;
     QStackedWidget *m_stack;

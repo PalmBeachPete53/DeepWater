@@ -48,7 +48,9 @@ QuantPage::QuantPage(CotReport *cot, QWidget *parent)
     m_stack->addWidget(new quant::CompareView);
     m_stack->addWidget(new quant::CorrelationView);
     m_stack->addWidget(new quant::RiskBetaView);
-    m_stack->addWidget(new quant::CotView(cot));
+    auto *cotView = new quant::CotView(cot);
+    connect(cotView, &quant::CotView::askAi, this, &QuantPage::askAi);
+    m_stack->addWidget(cotView);
     m_stack->addWidget(new quant::SignalsView);
     m_stack->addWidget(new quant::MarkovView);
     m_stack->addWidget(new quant::PortfolioView);

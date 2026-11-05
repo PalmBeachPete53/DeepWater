@@ -80,6 +80,7 @@ public:
         QString id;      // "sp500"
         QString label;   // "S&P 500"
         QString code;    // CFTC contract market code, "13874+"
+        QString tff;     // its code in the Traders in Financial Futures report, financial markets only
     };
     struct Week {
         QDate date;

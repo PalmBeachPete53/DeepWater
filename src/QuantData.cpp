@@ -361,12 +361,20 @@ Prices weekly(const Prices &daily)
 // ---------------------------------------------------------------- CotReport
 
 CotReport::CotReport(QObject *parent)
-    : RemoteDataSet("cftc_legacy", 12 * 3600, parent)
+    : RemoteDataSet("cftc_legacy_full", 12 * 3600, parent)   // not "cftc_legacy": that copy lacks the markets added since
 {
+    // Saved sections and AI tools refer to these by position and id: new markets go at the end.
     m_markets = {
-        {"sp500", "S&P 500", "13874+"}, {"nasdaq", "NASDAQ", "20974+"}, {"dow", "DOW", "12460+"},
-        {"russell", "RUSSELL", "239742"}, {"bitcoin", "BITCOIN", "133741"}, {"gold", "GOLD", "088691"},
-        {"silver", "SILVER", "084691"},
+        {"sp500", "S&P 500", "13874+", "13874A"}, {"nasdaq", "NASDAQ", "20974+", "209742"}, {"dow", "DOW", "12460+", "124603"},
+        {"russell", "RUSSELL", "239742", "239742"}, {"bitcoin", "BITCOIN", "133741", "133741"}, {"gold", "GOLD", "088691", {}},
+        {"silver", "SILVER", "084691", {}},
+        {"eur", "EURO", "099741", "099741"}, {"gbp", "BRITISH POUND", "096742", "096742"}, {"jpy", "JAPANESE YEN", "097741", "097741"},
+        {"chf", "SWISS FRANC", "092741", "092741"}, {"cad", "CANADIAN DOLLAR", "090741", "090741"},
+        {"aud", "AUSTRALIAN DOLLAR", "232741", "232741"}, {"nzd", "NEW ZEALAND DOLLAR", "112741", "112741"},
+        {"dxy", "US DOLLAR INDEX", "098662", "098662"},
+        {"wti", "WTI CRUDE", "067651", {}}, {"natgas", "NATURAL GAS", "023651", {}}, {"copper", "COPPER", "085692", {}},
+        {"platinum", "PLATINUM", "076651", {}}, {"palladium", "PALLADIUM", "075651", {}},
+        {"corn", "CORN", "002602", {}}, {"wheat", "WHEAT", "001602", {}}, {"soybeans", "SOYBEANS", "005602", {}},
     };
     loadCached();
 }

@@ -1,9 +1,13 @@
 #include "QuantViews.h"
 
+#include "DeskWidgets.h"
 #include "ResearchCharts.h"
+#include "ResearchData.h"
 #include "Theme.h"
+#include "desk/Rates.h"
 
 #include <QButtonGroup>
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <QHeaderView>
 #include <QPainter>
@@ -176,10 +180,13 @@ CotView::CotView(CotReport *report, QWidget *parent)
     const Palette &c = Theme::current();
     QHBoxLayout *h;
     auto *top = bar(&h);
-    QStringList names;
+    m_market = new QComboBox;
+    m_market->setObjectName("resCombo");
+    m_market->setCursor(Qt::PointingHandCursor);
+    m_market->setMinimumWidth(220);
     for (const CotReport::Market &m : m_report->markets())
-        names << m.label;
-    h->addWidget(segments(names, &m_market));
+        m_market->addItem(m.label);
+    h->addWidget(m_market);
     h->addStretch(1);
     h->addWidget(label(tr("COT — Commitments of Traders: weekly CFTC report of futures positions (futures only, legacy format)."), "qtNote"));
     content()->addWidget(top);
@@ -240,6 +247,50 @@ CotView::CotView(CotReport *report, QWidget *parent)
     body->addLayout(charts);
     content()->addWidget(main);
 
+    // How stretched the positioning is: this week against the last 52.
+    auto *tiles = new QHBoxLayout;
+    tiles->setSpacing(10);
+    tiles->addWidget(deskui::tile(tr("Speculators, net"), &m_specNet, &m_specNetSub), 1);
+    tiles->addWidget(deskui::tile(tr("Speculators long"), &m_specLong, &m_specLongSub), 1);
+    tiles->addWidget(deskui::tile(tr("Speculators in their 52-week range"), &m_specRange, &m_specRangeSub), 1);
+    tiles->addWidget(deskui::tile(tr("Commercials in their 52-week range"), &m_commRange, &m_commRangeSub), 1);
+    content()->addLayout(tiles);
+    QHBoxLayout *readHead;
+    QVBoxLayout *readBody;
+    auto *readCard = card(tr("Plain reading"), &readBody, &readHead);
+    auto *askButton = new QPushButton(tr("Ask the AI to read it"));
+    askButton->setObjectName("qtChip");
+    askButton->setCursor(Qt::PointingHandCursor);
+    readHead->addWidget(askButton);
+    connect(askButton, &QPushButton::clicked, this, [this] {
+        emit askAi(tr("Read the COT section of the Quant page with your tool for reading pages, then say in a few sentences what the positioning of %1 shows and what it doesn't. Don't predict the price.").arg(m_market->currentText()));
+    });
+    m_reading = label({}, "qtNote");
+    m_reading->setWordWrap(true);
+    readBody->addWidget(m_reading);
+    content()->addWidget(readCard);
+
+    // Who holds it, for the financial markets: the Traders in Financial Futures report.
+    QVBoxLayout *tffBody;
+    QHBoxLayout *tffHead;
+    m_tffCard = card(tr("Traders in financial futures"), &tffBody, &tffHead);
+    m_tffDate = label({}, "qtNote");
+    tffHead->addWidget(m_tffDate);
+    auto *tffRow = new QHBoxLayout;
+    tffRow->setSpacing(10);
+    m_tff = deskui::table({tr("Category"), tr("Long"), tr("Short"), tr("Net"), tr("Change"), tr("% of OI"), tr("52-week range")});
+    tffRow->addWidget(m_tff, 3, Qt::AlignTop);
+    m_tffChart = new MultiLineChart;
+    m_tffChart->setMinimumHeight(190);
+    m_tffChart->setZeroLine(true);
+    m_tffChart->setLegend(true);
+    tffRow->addWidget(m_tffChart, 2);
+    tffBody->addLayout(tffRow);
+    auto *tffNote = label(tr("The CFTC's split of a financial future's holders, published with the legacy report. Asset managers are mostly hedged long-term money; leveraged funds are the fast money. Where a market has several contracts, this is its main one."), "qtNote");
+    tffNote->setWordWrap(true);
+    tffBody->addWidget(tffNote);
+    content()->addWidget(m_tffCard);
+
     QHBoxLayout *hh;
     auto *history = card({}, &body, &hh);
     body->setContentsMargins(0, 0, 0, 0);
@@ -274,9 +325,9 @@ CotView::CotView(CotReport *report, QWidget *parent)
     content()->addWidget(history);
     content()->addStretch(1);
 
-    m_market->button(std::clamp(QSettings().value("quant/cot/market", 0).toInt(), 0, int(names.size()) - 1))->setChecked(true);
-    connect(m_market, &QButtonGroup::idClicked, this, [this] {
-        QSettings().setValue("quant/cot/market", m_market->checkedId());
+    m_market->setCurrentIndex(std::clamp(QSettings().value("quant/cot/market", 0).toInt(), 0, m_market->count() - 1));
+    connect(m_market, &QComboBox::currentIndexChanged, this, [this](int index) {
+        QSettings().setValue("quant/cot/market", index);
         fill();
     });
     connect(m_historyToggle, &QPushButton::clicked, this, [this] {
@@ -288,14 +339,116 @@ CotView::CotView(CotReport *report, QWidget *parent)
 
 void CotView::load()
 {
+    m_report->refreshIfStale();
     fill();
+}
+
+void CotView::fillReading(const CotReport::Series &s)
+{
+    const CotReport::Week &w = s.weeks.last();
+    QVector<double> spec, comm;
+    for (const CotReport::Week &k : s.weeks) {
+        spec.push_back(k.ncNet());
+        comm.push_back(k.cNet());
+    }
+    const double specRange = desk::rangePosition(spec), commRange = desk::rangePosition(comm);
+    const double change = s.weeks.size() >= 2 ? spec.last() - spec[spec.size() - 2] : 0;
+    const qint64 gross = w.ncLong + w.ncShort;
+    const double longShare = gross > 0 ? 100.0 * w.ncLong / gross : 0;
+    deskui::setSigned(m_specNet, signedThousands(w.ncNet()), w.ncNet());
+    m_specNetSub->setText(tr("%1 this week").arg(signedThousands(change)));
+    m_specLong->setText(QString("%1%").arg(deskui::amount(longShare, 0)));
+    m_specLongSub->setText(tr("of their long and short contracts"));
+    m_specRange->setText(QString("%1%").arg(deskui::amount(specRange, 0)));
+    m_specRangeSub->setText(tr("0 the lowest net of the year, 100 the highest"));
+    m_commRange->setText(QString("%1%").arg(deskui::amount(commRange, 0)));
+    m_commRangeSub->setText(tr("usually the other side of the speculators"));
+
+    QStringList text;
+    text << (w.ncNet() >= 0 ? tr("Speculators are net long %1 contracts").arg(thousands(w.ncNet()))
+                            : tr("Speculators are net short %1 contracts").arg(thousands(-w.ncNet())));
+    if (specRange >= 80)
+        text << tr("close to the most long they have been in a year");
+    else if (specRange <= 20)
+        text << tr("close to the most short they have been in a year");
+    else
+        text << tr("inside their range of the last year");
+    QString sentence = text.join(", ") + ". ";
+    if (s.weeks.size() >= 2)
+        sentence += change > 0 ? tr("Their net position rose by %1 this week. ").arg(thousands(change))
+                  : change < 0 ? tr("Their net position fell by %1 this week. ").arg(thousands(-change))
+                               : tr("Their net position didn't change this week. ");
+    sentence += tr("Positions are as of Tuesday, so a few days old, and an extreme says the trade is crowded, not when it turns.");
+    m_reading->setText(sentence);
+}
+
+void CotView::fetchTff(const CotReport::Market &market)
+{
+    const int serial = ++m_tffSerial;
+    m_tffCard->setVisible(!market.tff.isEmpty());
+    if (market.tff.isEmpty())
+        return;
+    m_tff->setRowCount(0);
+    m_tffDate->setText(tr("Loading…"));
+    const QString since = QDate::currentDate().addDays(-2 * 365).toString(Qt::ISODate);
+    const QString where = QString("cftc_contract_market_code='%1' AND report_date_as_yyyy_mm_dd>='%2'").arg(market.tff, since);
+    QUrl url("https://publicreporting.cftc.gov/resource/gpe5-46if.json");
+    url.setQuery(QString("$where=%1&$order=report_date_as_yyyy_mm_dd&$limit=200").arg(QString::fromLatin1(QUrl::toPercentEncoding(where))), QUrl::StrictMode);
+    research::Client::instance()->raw("cftc:tff:" + market.tff, url, 12 * 3600, true, this, [this, serial](const QByteArray &body, const QString &error) {
+        if (serial != m_tffSerial)
+            return;
+        const QVector<desk::TffWeek> weeks = desk::parseTff(body);
+        const Palette &pal = Theme::current();
+        if (weeks.isEmpty()) {
+            m_tffDate->setText(tr("Unavailable: %1").arg(error.isEmpty() ? tr("no data") : error));
+            return;
+        }
+        m_tffDate->setText(tr("as of %1").arg(weeks.last().date.toString(Qt::ISODate)));
+        struct Row {
+            QString name;
+            std::function<qint64(const desk::TffWeek &)> lg, sh;
+        };
+        const QVector<Row> rows {
+            {tr("Dealers"), [](const desk::TffWeek &w) { return w.dealerLong; }, [](const desk::TffWeek &w) { return w.dealerShort; }},
+            {tr("Asset managers"), [](const desk::TffWeek &w) { return w.assetLong; }, [](const desk::TffWeek &w) { return w.assetShort; }},
+            {tr("Leveraged funds"), [](const desk::TffWeek &w) { return w.levLong; }, [](const desk::TffWeek &w) { return w.levShort; }},
+            {tr("Other reportable"), [](const desk::TffWeek &w) { return w.otherLong; }, [](const desk::TffWeek &w) { return w.otherShort; }},
+            {tr("Non-reportable"), [](const desk::TffWeek &w) { return w.nonReptLong; }, [](const desk::TffWeek &w) { return w.nonReptShort; }},
+        };
+        const desk::TffWeek &w = weeks.last();
+        m_tff->setRowCount(rows.size());
+        for (int r = 0; r < rows.size(); ++r) {
+            const qint64 lg = rows[r].lg(w), sh = rows[r].sh(w), net = lg - sh;
+            QVector<double> nets;
+            for (const desk::TffWeek &k : weeks)
+                nets.push_back(rows[r].lg(k) - rows[r].sh(k));
+            const double change = nets.size() >= 2 ? nets.last() - nets[nets.size() - 2] : 0;
+            m_tff->setItem(r, 0, deskui::cell(rows[r].name, {}, Qt::AlignLeft, true));
+            m_tff->setItem(r, 1, deskui::cell(thousands(lg)));
+            m_tff->setItem(r, 2, deskui::cell(thousands(sh)));
+            m_tff->setItem(r, 3, deskui::cell(signedThousands(net), net >= 0 ? pal.Up : pal.Down));
+            m_tff->setItem(r, 4, deskui::cell(signedThousands(change), change >= 0 ? pal.Up : pal.Down));
+            m_tff->setItem(r, 5, deskui::cell(w.openInterest > 0 ? QString("%1%").arg(deskui::amount(100.0 * (lg + sh) / w.openInterest / 2, 1)) : "—", pal.TextDim));
+            m_tff->setItem(r, 6, deskui::cell(QString("%1%").arg(deskui::amount(desk::rangePosition(nets), 0))));
+        }
+        deskui::fitHeight(m_tff);
+        QVector<QDate> dates;
+        QVector<double> asset, lev;
+        for (const desk::TffWeek &k : weeks) {
+            dates.push_back(k.date);
+            asset.push_back(k.assetLong - k.assetShort);
+            lev.push_back(k.levLong - k.levShort);
+        }
+        m_tffChart->setData(dates, {{tr("Asset managers"), pal.Accent, asset}, {tr("Leveraged funds"), pal.Up, lev}}, [](double v) { return shortNumber(v); });
+    });
 }
 
 void CotView::fill()
 {
     const Palette &c = Theme::current();
-    const CotReport::Market &market = m_report->markets()[m_market->checkedId()];
+    const CotReport::Market &market = m_report->markets()[m_market->currentIndex()];
     const CotReport::Series &s = m_report->series(market.id);
+    fetchTff(market);
     if (s.weeks.isEmpty()) {
         setStatus(m_report->errorString().isEmpty() ? tr("Loading the CFTC report…") : m_report->errorString());
         m_table->clear();
@@ -315,6 +468,7 @@ void CotView::fill()
     m_release->setText(tr("RELEASE: %1").arg(w.date.addDays(3).toString(Qt::ISODate)));
     m_release->setToolTip(tr("The CFTC publishes Tuesday's positions on Friday at 15:30 ET, a day later on holiday weeks."));
     m_table->setWeek(w, havePrev, prev);
+    fillReading(s);
     m_units->setText(s.units);
     const qint64 dOi = havePrev ? w.openInterest - prev.openInterest : 0;
     m_totals->setText(QString("%1 <b style='color:%2'>%3</b> · Δ OI: <b style='color:%4'>%5</b> · %6 <b style='color:%2'>%7</b>")
