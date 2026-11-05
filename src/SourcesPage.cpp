@@ -13,6 +13,7 @@
 #include "CalendarData.h"
 #include "QuantData.h"
 #include "QuantMarketState.h"
+#include "Myfxbook.h"
 #include "ResearchData.h"
 #include "CommodityPrices.h"
 #include "DomesticFinance.h"
@@ -177,6 +178,7 @@ void SourcesPage::applySaved(const Targets &t)
                               "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "inegi", "bps", "estat",
                               "fed", "cftc", "binance", "investinglive", "ing"})
         research::Client::instance()->setEnabled(group, on(QByteArray("research_") + group));
+    Myfxbook::instance()->setEnabled(on("myfxbook"));
     news::Wire::instance()->setEnabled("rss", on("news_feeds"));
     news::Wire::instance()->setEnabled("fmp", on("fmp"));
     adblock::Blocker::instance()->setEnabled(on("adblock"));
@@ -623,6 +625,21 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     add(buildRow({"research_binance", Kind::Dataset, tr("Long and short accounts"), "Binance", "fapi.binance.com",
                   tr("Desk › Positioning: the share of accounts long and short on twelve USDT perpetuals")},
                  research("binance", QUrl("https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=BTCUSDT&period=1d&limit=1"))));
+    {
+        // Not through the Research client: its session travels in the URL (Myfxbook.h). Connected in Desk › Positioning.
+        D d;
+        Myfxbook *m = Myfxbook::instance();
+        d.fetchedAt = [m] { return m->fetchedAt(); };
+        d.error = [m] { return m->errorString(); };
+        d.fetching = [m] { return m->isFetching(); };
+        d.refresh = [m] { m->refreshNow(); };
+        d.everySecs = 30 * 60;
+        d.probeUrl = QUrl("https://www.myfxbook.com/api/get-community-outlook.json");
+        add(buildRow({"myfxbook", Kind::Dataset, tr("Community outlook"), tr("Myfxbook (free account)"), "www.myfxbook.com",
+                      tr("Desk › Positioning: the share of long and short positions of its community on forex and CFDs. "
+                         "Connect the account there: the password isn't kept")},
+                     d));
+    }
     add(buildRow({"research_investinglive", Kind::Dataset, tr("Market headlines"), "InvestingLive", "investinglive.com",
                   tr("Desk › Wire and Recap: its public feed of market headlines")},
                  research("investinglive", QUrl("https://investinglive.com/feed/"))));

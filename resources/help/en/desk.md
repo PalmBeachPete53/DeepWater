@@ -34,7 +34,10 @@ Only the Fed has probabilities: no free source publishes rate futures for the ot
 
 ## Positioning
 
-Binance's public ratio of accounts long and short on twelve USDT perpetuals, with the last 30 days: a measure of the crowd, not of money. **Forex and CFD retail positioning isn't here**: the brokers' and communities' figures aren't published for free to a program. For futures positions, see [Quant](help:quant) › COT.
+Two lists, for two crowds. For futures positions, see [Quant](help:quant) › COT.
+
+- **Forex and CFDs**: Myfxbook's community outlook, through its official API and your free account: the share long and short, lots, positions and average prices by symbol. Connect here with your email and password. The password goes once to Myfxbook, over HTTPS, to open a session, and isn't kept. The session ends after a month or when your internet address changes, and the section then asks again. Figures are asked at most every half hour, and there is no history. It is one community of retail traders, not the whole market.
+- **Crypto**: Binance's public ratio of accounts long and short on twelve USDT perpetuals, with the last 30 days: a measure of the crowd, not of money.
 
 ## Risk appetite
 

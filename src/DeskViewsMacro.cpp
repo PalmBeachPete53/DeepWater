@@ -2,6 +2,7 @@
 #include "DeskViews.h"
 
 #include "desk/Fundamentals.h"
+#include "Myfxbook.h"
 #include "desk/Rates.h"
 
 #include <QButtonGroup>
@@ -12,9 +13,11 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLabel>
+#include <QLineEdit>
 #include <QLocale>
 #include <QRegularExpression>
 #include <QSettings>
+#include <QStackedWidget>
 #include <QTableWidget>
 #include <QTimeZone>
 #include <QTimer>
@@ -298,13 +301,46 @@ private:
 
 // ------------------------------------------------------------------ Positioning
 
-class PositioningView : public quant::View
+// Forex and CFD positioning of Myfxbook's community, with the user's free account.
+class FxPositioningPanel : public QWidget
 {
     Q_OBJECT
 public:
-    explicit PositioningView(QWidget *parent = nullptr)
-        : View(parent)
+    explicit FxPositioningPanel(QWidget *parent = nullptr)
+        : QWidget(parent)
     {
+        auto *v = new QVBoxLayout(this);
+        v->setContentsMargins(0, 0, 0, 0);
+        v->setSpacing(10);
+
+        QVBoxLayout *body;
+        m_login = quant::card(tr("Connect your Myfxbook account"), &body);
+        auto *explain = quant::label(tr("Myfxbook publishes its community's positions to accounts through its official API. A free account is enough. Your password goes once to Myfxbook, over HTTPS, to open a session, and isn't kept: only the session is. It ends after a month or when your internet address changes, and then this asks again. The figures are asked at most every half hour."), "qtNote");
+        explain->setWordWrap(true);
+        body->addWidget(explain);
+        auto *form = new QHBoxLayout;
+        form->setSpacing(8);
+        m_email = new QLineEdit;
+        m_email->setObjectName("qtInput");
+        m_email->setPlaceholderText(tr("Email of the account"));
+        form->addWidget(m_email, 1);
+        m_password = new QLineEdit;
+        m_password->setObjectName("qtInput");
+        m_password->setEchoMode(QLineEdit::Password);
+        m_password->setPlaceholderText(tr("Password"));
+        form->addWidget(m_password, 1);
+        m_connect = deskAction(tr("Connect"));
+        form->addWidget(m_connect);
+        body->addLayout(form);
+        m_loginError = quant::label({}, "qtNote");
+        m_loginError->setWordWrap(true);
+        body->addWidget(m_loginError);
+        v->addWidget(m_login);
+
+        m_board = new QWidget;
+        auto *bv = new QVBoxLayout(m_board);
+        bv->setContentsMargins(0, 0, 0, 0);
+        bv->setSpacing(10);
         auto *tiles = new QHBoxLayout;
         tiles->setSpacing(10);
         tiles->addWidget(tile(tr("Crowded long"), &m_crowdedLong, &m_crowdedLongSub), 1);
@@ -312,7 +348,167 @@ public:
         tiles->addWidget(tile(tr("Most long"), &m_mostLong, &m_mostLongSub), 1);
         tiles->addWidget(tile(tr("Most short"), &m_mostShort, &m_mostShortSub), 1);
         tiles->addWidget(tile(tr("Crowd lean"), &m_lean, &m_leanSub), 1);
-        content()->addLayout(tiles);
+        bv->addLayout(tiles);
+        QHBoxLayout *head;
+        auto *card = quant::card(tr("Myfxbook community: positions long and short"), &body, &head);
+        m_updated = quant::label({}, "qtNote");
+        head->addWidget(m_updated);
+        auto *disconnect = deskAction(tr("Disconnect"));
+        head->addWidget(disconnect);
+        m_table = table({tr("Symbol"), tr("Positioning"), tr("Long"), tr("Short"), tr("Long lots"), tr("Short lots"), tr("Positions"), tr("Avg long price"), tr("Avg short price"), tr("Status")});
+        useSplitBars(m_table, 1);
+        m_table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+        body->addWidget(m_table);
+        bv->addWidget(card);
+        v->addWidget(m_board);
+        m_message = quant::label({}, "qtNote");
+        m_message->setWordWrap(true);
+        v->addWidget(m_message);
+        auto *note = quant::label(tr("The share of positions of the traders whose accounts are connected to Myfxbook: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Myfxbook's own figures, under its terms of use. COT positions are in Quant › COT."), "qtNote");
+        note->setWordWrap(true);
+        v->addWidget(note);
+        v->addStretch(1);
+
+        Myfxbook *m = Myfxbook::instance();
+        const auto submit = [this, m] {
+            const QString email = m_email->text().trimmed(), password = m_password->text();
+            if (email.isEmpty() || password.isEmpty())
+                return;
+            m_connect->setEnabled(false);
+            m_loginError->setText(tr("Connecting…"));
+            m->logIn(email, password);
+            m_password->clear();
+        };
+        connect(m_connect, &QPushButton::clicked, this, submit);
+        connect(m_password, &QLineEdit::returnPressed, this, submit);
+        connect(disconnect, &QPushButton::clicked, m, &Myfxbook::logOut);
+        connect(m, &Myfxbook::changed, this, &FxPositioningPanel::fill);
+        connect(m, &Myfxbook::loginFailed, this, [this](const QString &message) {
+            m_connect->setEnabled(true);
+            m_loginError->setText(message);
+        });
+        m_clock.setInterval(5 * 60 * 1000);
+        connect(&m_clock, &QTimer::timeout, m, &Myfxbook::refreshIfStale);
+        fill();
+    }
+
+protected:
+    void showEvent(QShowEvent *) override
+    {
+        Myfxbook::instance()->refreshIfStale();
+        m_clock.start();
+    }
+    void hideEvent(QHideEvent *) override { m_clock.stop(); }
+
+private:
+    void fill()
+    {
+        Myfxbook *m = Myfxbook::instance();
+        const Palette &pal = Theme::current();
+        const bool connected = m->isConnected();
+        m_login->setVisible(!connected);
+        m_connect->setEnabled(true);
+        if (connected)
+            m_loginError->clear();
+        else if (!m->errorString().isEmpty())
+            m_loginError->setText(m->errorString());
+        QVector<desk::OutlookRow> rows = m->outlook().rows;
+        // Without a session the last figures stay hidden: they would look current.
+        m_board->setVisible(connected && !rows.isEmpty());
+        m_message->setVisible(connected);
+        m_message->setText(m->errorString().isEmpty() ? (rows.isEmpty() ? tr("Loading Myfxbook's figures…") : QString()) : m->errorString());
+        if (!connected || rows.isEmpty())
+            return;
+        std::sort(rows.begin(), rows.end(), [](const auto &a, const auto &b) { return std::abs(a.longPct - 50) > std::abs(b.longPct - 50); });
+        m_updated->setText(tr("updated %1").arg(QLocale().toString(m->fetchedAt().toLocalTime().time(), "HH:mm")));
+        m_table->setRowCount(rows.size());
+        int crowdedLong = 0, crowdedShort = 0;
+        double sum = 0;
+        const desk::OutlookRow *mostLong = nullptr, *mostShort = nullptr;
+        for (int r = 0; r < rows.size(); ++r) {
+            const desk::OutlookRow &row = rows[r];
+            sum += row.longPct;
+            if (!mostLong || row.longPct > mostLong->longPct) mostLong = &row;
+            if (!mostShort || row.longPct < mostShort->longPct) mostShort = &row;
+            crowdedLong += row.longPct >= 70;
+            crowdedShort += row.longPct <= 30;
+            QString status = tr("BALANCED");
+            QColor color = pal.TextDim;
+            if (row.longPct >= 70) { status = tr("CROWDED LONG"); color = pal.Up; }
+            else if (row.longPct <= 30) { status = tr("CROWDED SHORT"); color = pal.Down; }
+            else if (row.longPct >= 55) { status = tr("LEANING LONG"); color = pal.Up; }
+            else if (row.longPct <= 45) { status = tr("LEANING SHORT"); color = pal.Down; }
+            m_table->setItem(r, 0, cell(row.symbol, {}, Qt::AlignLeft, true));
+            auto *split = cell({});
+            split->setData(Qt::UserRole, row.longPct);
+            m_table->setItem(r, 1, split);
+            m_table->setItem(r, 2, cell(QString("%1%").arg(amount(row.longPct, 0)), pal.Up));
+            m_table->setItem(r, 3, cell(QString("%1%").arg(amount(row.shortPct, 0)), pal.Down));
+            m_table->setItem(r, 4, cell(amount(row.longVolume, 0)));
+            m_table->setItem(r, 5, cell(amount(row.shortVolume, 0)));
+            m_table->setItem(r, 6, cell(amount(row.longPositions + row.shortPositions, 0), pal.TextDim));
+            const int decimals = priceDecimals(row.avgLongPrice > 0 ? row.avgLongPrice : row.avgShortPrice);
+            m_table->setItem(r, 7, cell(row.avgLongPrice > 0 ? QLocale().toString(row.avgLongPrice, 'f', decimals) : "—"));
+            m_table->setItem(r, 8, cell(row.avgShortPrice > 0 ? QLocale().toString(row.avgShortPrice, 'f', decimals) : "—"));
+            m_table->setItem(r, 9, cell(status, color, Qt::AlignCenter, true));
+        }
+        fitHeight(m_table);
+        m_crowdedLong->setText(QString::number(crowdedLong));
+        m_crowdedLongSub->setText(tr("of %1, at 70% or more").arg(rows.size()));
+        m_crowdedShort->setText(QString::number(crowdedShort));
+        m_crowdedShortSub->setText(tr("of %1, at 30% or less").arg(rows.size()));
+        m_mostLong->setText(mostLong->symbol);
+        m_mostLongSub->setText(tr("%1% long").arg(amount(mostLong->longPct, 0)));
+        m_mostShort->setText(mostShort->symbol);
+        m_mostShortSub->setText(tr("%1% short").arg(amount(mostShort->shortPct, 0)));
+        m_lean->setText(tr("%1% long").arg(amount(sum / rows.size(), 0)));
+        m_leanSub->setText(tr("the mean of these markets"));
+    }
+
+    QFrame *m_login;
+    QLineEdit *m_email, *m_password;
+    QPushButton *m_connect;
+    QLabel *m_loginError, *m_updated, *m_message;
+    QWidget *m_board;
+    QLabel *m_crowdedLong, *m_crowdedLongSub, *m_crowdedShort, *m_crowdedShortSub, *m_mostLong, *m_mostLongSub, *m_mostShort, *m_mostShortSub, *m_lean, *m_leanSub;
+    QTableWidget *m_table;
+    QTimer m_clock;
+};
+
+class PositioningView : public quant::View
+{
+    Q_OBJECT
+public:
+    explicit PositioningView(QWidget *parent = nullptr)
+        : View(parent)
+    {
+        QHBoxLayout *h;
+        auto *top = quant::bar(&h);
+        QButtonGroup *markets;
+        h->addWidget(quant::segments({tr("Forex and CFDs · Myfxbook"), tr("Crypto · Binance")}, &markets, std::clamp(QSettings().value("desk/positioning/market", 0).toInt(), 0, 1)));
+        h->addStretch(1);
+        content()->addWidget(top);
+        auto *stack = new QStackedWidget;
+        stack->addWidget(new FxPositioningPanel);
+        auto *crypto = new QWidget;
+        auto *page = new QVBoxLayout(crypto);
+        page->setContentsMargins(0, 0, 0, 0);
+        page->setSpacing(10);
+        stack->addWidget(crypto);
+        stack->setCurrentIndex(markets->checkedId());
+        content()->addWidget(stack);
+        connect(markets, &QButtonGroup::idClicked, this, [this, stack](int id) {
+            QSettings().setValue("desk/positioning/market", id);
+            stack->setCurrentIndex(id);
+        });
+        auto *tiles = new QHBoxLayout;
+        tiles->setSpacing(10);
+        tiles->addWidget(tile(tr("Crowded long"), &m_crowdedLong, &m_crowdedLongSub), 1);
+        tiles->addWidget(tile(tr("Crowded short"), &m_crowdedShort, &m_crowdedShortSub), 1);
+        tiles->addWidget(tile(tr("Most long"), &m_mostLong, &m_mostLongSub), 1);
+        tiles->addWidget(tile(tr("Most short"), &m_mostShort, &m_mostShortSub), 1);
+        tiles->addWidget(tile(tr("Crowd lean"), &m_lean, &m_leanSub), 1);
+        page->addLayout(tiles);
         auto *row = new QHBoxLayout;
         row->setSpacing(10);
         QVBoxLayout *body;
@@ -328,10 +524,11 @@ public:
         m_history->setZeroLine(false);
         body->addWidget(m_history);
         row->addWidget(historyCard, 2);
-        content()->addLayout(row);
-        auto *note = quant::label(tr("Binance's public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. Forex and CFD positioning isn't here: the brokers' and communities' figures aren't published for free to a program (Myfxbook refuses programs). COT positions are in Quant › COT."), "qtNote");
+        page->addLayout(row);
+        auto *note = quant::label(tr("Binance's public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. COT positions are in Quant › COT."), "qtNote");
         note->setWordWrap(true);
-        content()->addWidget(note);
+        page->addWidget(note);
+        page->addStretch(1);
         content()->addStretch(1);
         connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
             if (row >= 0 && row < m_rows.size())

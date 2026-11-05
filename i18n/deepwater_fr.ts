@@ -2654,7 +2654,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <source>Open the Desk&apos;s risk appetite</source>
-        <translation>Ouvrir l'appétit pour le risque du Desk</translation>
+        <translation>Ouvrir l&apos;appétit pour le risque du Desk</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -8131,6 +8131,35 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>Myfxbook</name>
+    <message>
+        <location filename="../src/Myfxbook.cpp" line="+61"/>
+        <location line="+76"/>
+        <source>Myfxbook can&apos;t be reached.</source>
+        <translation>Myfxbook est injoignable.</translation>
+    </message>
+    <message>
+        <location line="-70"/>
+        <source>Myfxbook refused the login (HTTP %1).</source>
+        <translation>Myfxbook a refusé la connexion (HTTP %1).</translation>
+    </message>
+    <message>
+        <location line="+65"/>
+        <source>The Myfxbook session has ended: log in again.</source>
+        <translation>La session Myfxbook est terminée : reconnectez-vous.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Myfxbook: %1</source>
+        <translation>Myfxbook : %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Myfxbook answered HTTP %1.</source>
+        <translation>Myfxbook a répondu HTTP %1.</translation>
+    </message>
+</context>
+<context>
     <name>NewsPage</name>
     <message>
         <location filename="../src/NewsPage.cpp" line="+167"/>
@@ -10445,6 +10474,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Myfxbook</source>
+        <translation>Myfxbook</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>ING Think</source>
         <translation>ING Think</translation>
     </message>
@@ -10612,7 +10646,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>IA</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+125"/>
         <source>Country series</source>
         <translation>Séries par pays</translation>
     </message>
@@ -11307,7 +11341,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>SourcesPage</name>
     <message>
-        <location filename="../src/SourcesPage.cpp" line="+239"/>
+        <location filename="../src/SourcesPage.cpp" line="+241"/>
         <source>Sources</source>
         <translation>Sources</translation>
     </message>
@@ -11399,13 +11433,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <location line="+115"/>
-        <location line="+137"/>
+        <location line="+152"/>
         <location line="+8"/>
         <source>Bank for International Settlements</source>
         <translation>Banque des règlements internationaux</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="-274"/>
         <source>Forex: policy rates and the carry on each pair</source>
         <translation>Forex : taux directeurs et portage de chaque paire</translation>
     </message>
@@ -11528,7 +11562,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Quant et Research : le régime HMM et la prévision MS-GARCH de chaque symbole de l&apos;état partagé (Portefeuille, bandeaux), réestimés quand ils datent d&apos;avant le dernier jour de bourse</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+39"/>
         <source>Map · macroeconomics</source>
         <translation>Carte · macroéconomie</translation>
     </message>
@@ -11538,8 +11572,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Perspectives de l’économie mondiale (WEO)</translation>
     </message>
     <message>
-        <location line="-147"/>
-        <location line="+147"/>
+        <location line="-162"/>
+        <location line="+162"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+18"/>
@@ -11587,8 +11621,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Secteurs d’activité</translation>
     </message>
     <message>
-        <location line="-164"/>
-        <location line="+164"/>
+        <location line="-179"/>
+        <location line="+179"/>
         <location line="+15"/>
         <source>World Bank</source>
         <translation>Banque mondiale</translation>
@@ -11664,13 +11698,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Carte : dernière inflation, chômage, production, ventes au détail, confiance, taux, PIB et balance courante d&apos;environ 45 économies (fiche pays, deux cartes thermiques)</translation>
     </message>
     <message>
-        <location line="-175"/>
-        <location line="+178"/>
+        <location line="-190"/>
+        <location line="+193"/>
         <source>European statistics</source>
         <translation>Statistiques européennes</translation>
     </message>
     <message>
-        <location line="-463"/>
+        <location line="-478"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
@@ -12157,7 +12191,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Desk › Positionnement : la part des comptes long et short sur douze perpétuels USDT</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+12"/>
+        <source>Community outlook</source>
+        <translation>Community Outlook</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Myfxbook (free account)</source>
+        <translation>Myfxbook (compte gratuit)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Desk › Positioning: the share of long and short positions of its community on forex and CFDs. Connect the account there: the password isn&apos;t kept</source>
+        <translation>Desk › Positionnement : la part de positions long et short de sa communauté sur le forex et les CFD. Le compte se connecte là-bas : le mot de passe n'est pas conservé</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Market headlines</source>
         <translation>Titres de marché</translation>
     </message>
@@ -12722,13 +12771,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1394"/>
-        <location line="+415"/>
+        <location line="-1409"/>
+        <location line="+430"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
     </message>
     <message>
-        <location line="-574"/>
+        <location line="-589"/>
         <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
         <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
     </message>
@@ -12763,7 +12812,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tous les accès</translation>
     </message>
     <message>
-        <location line="+522"/>
+        <location line="+537"/>
         <source>Charts: the Calendar tab</source>
         <translation>Graphiques : l’onglet Calendar</translation>
     </message>
@@ -12818,7 +12867,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Fournis avec l’application</translation>
     </message>
     <message>
-        <location line="-494"/>
+        <location line="-509"/>
         <source>Map: daily transits through the chokepoints by vessel type, a few days behind</source>
         <translation>Carte : transits quotidiens dans les points de passage par type de navire, avec quelques jours de retard</translation>
     </message>
@@ -12907,7 +12956,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pays › Japon : l’indice des prix à la consommation du Bureau des statistiques (ensemble, hors produits frais, hors produits frais et énergie, services), avec les séries de la Banque du Japon (ci-dessus)</translation>
     </message>
     <message>
-        <location line="+246"/>
+        <location line="+261"/>
         <source>Map: production sites (a sample), routes and countries</source>
         <translation>Carte : sites de production (un échantillon), routes et pays</translation>
     </message>
@@ -13027,12 +13076,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>HTTP %1</translation>
     </message>
     <message>
-        <location line="-1203"/>
+        <location line="-1218"/>
         <source>Countries: policy rates, residential property prices, household and private debt in % of GDP. Desk › Notes: central bankers&apos; speeches</source>
         <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
     </message>
     <message>
-        <location line="+1029"/>
+        <location line="+1044"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -13971,7 +14020,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::AppetiteView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+460"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+657"/>
         <source>Composite risk appetite</source>
         <translation>Appétit pour le risque composite</translation>
     </message>
@@ -14395,6 +14444,190 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>deskui::FxPositioningPanel</name>
+    <message>
+        <location line="-852"/>
+        <source>Connect your Myfxbook account</source>
+        <translation>Connecter votre compte Myfxbook</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Myfxbook publishes its community&apos;s positions to accounts through its official API. A free account is enough. Your password goes once to Myfxbook, over HTTPS, to open a session, and isn&apos;t kept: only the session is. It ends after a month or when your internet address changes, and then this asks again. The figures are asked at most every half hour.</source>
+        <translation>Myfxbook publie les positions de sa communauté pour les comptes, par son API officielle. Un compte gratuit suffit. Votre mot de passe part une seule fois vers Myfxbook, en HTTPS, pour ouvrir une session, et n'est pas conservé : seule la session l'est. Elle se termine après un mois ou quand votre adresse internet change, et la section redemande alors. Les chiffres sont demandés au plus toutes les demi-heures.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Email of the account</source>
+        <translation>E-mail du compte</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Password</source>
+        <translation>Mot de passe</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Connect</source>
+        <translation>Se connecter</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Crowded long</source>
+        <translation>Long encombré</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crowded short</source>
+        <translation>Short encombré</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Most long</source>
+        <translation>Le plus long</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Most short</source>
+        <translation>Le plus short</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crowd lean</source>
+        <translation>Penchant de la foule</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Myfxbook community: positions long and short</source>
+        <translation>Communauté Myfxbook : positions long et short</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Disconnect</source>
+        <translation>Se déconnecter</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Positioning</source>
+        <translation>Positionnement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Long lots</source>
+        <translation>Lots long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short lots</source>
+        <translation>Lots short</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Positions</source>
+        <translation>Positions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Avg long price</source>
+        <translation>Prix moyen long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Avg short price</source>
+        <translation>Prix moyen short</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Status</source>
+        <translation>Statut</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>The share of positions of the traders whose accounts are connected to Myfxbook: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Myfxbook&apos;s own figures, under its terms of use. COT positions are in Quant › COT.</source>
+        <translation>La part de positions des traders dont les comptes sont reliés à Myfxbook : une communauté de particuliers, pas tout le marché, et cela ne dit pas quand une position encombrée se retourne. Chiffres de Myfxbook, selon ses conditions d'utilisation. Les positions COT sont dans Quant › COT.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Connecting…</source>
+        <translation>Connexion…</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>Loading Myfxbook&apos;s figures…</source>
+        <translation>Chargement des chiffres de Myfxbook…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>updated %1</source>
+        <translation>mis à jour %1</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>BALANCED</source>
+        <translation>ÉQUILIBRÉ</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CROWDED LONG</source>
+        <translation>LONG ENCOMBRÉ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CROWDED SHORT</source>
+        <translation>SHORT ENCOMBRÉ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LEANING LONG</source>
+        <translation>PENCHE LONG</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LEANING SHORT</source>
+        <translation>PENCHE SHORT</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>of %1, at 70% or more</source>
+        <translation>sur %1, à 70 % ou plus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>of %1, at 30% or less</source>
+        <translation>sur %1, à 30 % ou moins</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+3"/>
+        <source>%1% long</source>
+        <translation>%1 % long</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>%1% short</source>
+        <translation>%1 % short</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>the mean of these markets</source>
+        <translation>la moyenne de ces marchés</translation>
+    </message>
+</context>
+<context>
     <name>deskui::HBarsChart</name>
     <message>
         <location filename="../src/DeskWidgets.cpp" line="-77"/>
@@ -14405,7 +14638,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LevelsChart</name>
     <message>
-        <location line="+276"/>
+        <location line="+281"/>
         <source>No data</source>
         <translation>Aucune donnée</translation>
     </message>
@@ -14413,7 +14646,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LiquidityView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+255"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+256"/>
         <source>Daily</source>
         <translation>Journalier</translation>
     </message>
@@ -14721,7 +14954,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::PositioningView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="-662"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+23"/>
+        <source>Forex and CFDs · Myfxbook</source>
+        <translation>Forex et CFD · Myfxbook</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Crypto · Binance</source>
+        <translation>Crypto · Binance</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Crowded long</source>
         <translation>Long encombré</translation>
     </message>
@@ -14762,12 +15005,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+116"/>
+        <location line="+117"/>
         <source>Long</source>
         <translation>Long</translation>
     </message>
     <message>
-        <location line="-116"/>
+        <location line="-117"/>
         <source>Short</source>
         <translation>Short</translation>
     </message>
@@ -14788,11 +15031,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Binance&apos;s public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. Forex and CFD positioning isn&apos;t here: the brokers&apos; and communities&apos; figures aren&apos;t published for free to a program (Myfxbook refuses programs). COT positions are in Quant › COT.</source>
-        <translation>Ratio public de Binance des comptes long et short sur ses perpétuels USDT, une mesure de la foule, pas de l&apos;argent. Le positionnement forex et CFD n&apos;est pas ici : les chiffres des courtiers et des communautés ne sont pas publiés gratuitement pour un programme (Myfxbook refuse les programmes). Les positions COT sont dans Quant › COT.</translation>
+        <source>Binance&apos;s public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. COT positions are in Quant › COT.</source>
+        <translation>Le ratio public de Binance des comptes long et short sur ses perpétuels USDT, une mesure de la foule, pas de l'argent. Les positions COT sont dans Quant › COT.</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <source>Binance&apos;s public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. Forex and CFD positioning isn&apos;t here: the brokers&apos; and communities&apos; figures aren&apos;t published for free to a program (Myfxbook refuses programs). COT positions are in Quant › COT.</source>
+        <translation type="vanished">Ratio public de Binance des comptes long et short sur ses perpétuels USDT, une mesure de la foule, pas de l&apos;argent. Le positionnement forex et CFD n&apos;est pas ici : les chiffres des courtiers et des communautés ne sont pas publiés gratuitement pour un programme (Myfxbook refuse les programmes). Les positions COT sont dans Quant › COT.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Loading Binance&apos;s ratios…</source>
         <translation>Chargement des ratios de Binance…</translation>
     </message>
@@ -14861,7 +15108,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::RatesView</name>
     <message>
-        <location line="-381"/>
+        <location line="-575"/>
         <source>Fed funds, implied today</source>
         <translation>Fed funds, implicite aujourd&apos;hui</translation>
     </message>
@@ -15237,7 +15484,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::SeasonalityView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+355"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+549"/>
         <source>YEARS</source>
         <translation>ANNÉES</translation>
     </message>
@@ -15440,33 +15687,33 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::TechnicalView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-428"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-429"/>
         <location line="+16"/>
-        <location line="+74"/>
+        <location line="+75"/>
         <source>Bullish</source>
         <translation>Haussier</translation>
     </message>
     <message>
-        <location line="-89"/>
+        <location line="-90"/>
         <location line="+15"/>
-        <location line="+74"/>
+        <location line="+75"/>
         <source>Bearish</source>
         <translation>Baissier</translation>
     </message>
     <message>
-        <location line="-88"/>
-        <location line="+89"/>
+        <location line="-89"/>
+        <location line="+90"/>
         <source>Overbought</source>
         <translation>Suracheté</translation>
     </message>
     <message>
-        <location line="-88"/>
-        <location line="+88"/>
+        <location line="-89"/>
+        <location line="+89"/>
         <source>Oversold</source>
         <translation>Survendu</translation>
     </message>
     <message>
-        <location line="-87"/>
+        <location line="-88"/>
         <source>Near liquidity</source>
         <translation>Près de la liquidité</translation>
     </message>
@@ -15517,13 +15764,13 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+74"/>
+        <location line="+75"/>
         <location line="+1"/>
         <source>Neutral</source>
         <translation>Neutre</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-68"/>
         <source>Market</source>
         <translation>Marché</translation>
     </message>
@@ -15539,37 +15786,37 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+150"/>
+        <location line="+151"/>
         <source>Trend</source>
         <translation>Tendance</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+150"/>
+        <location line="-151"/>
+        <location line="+151"/>
         <source>Momentum</source>
         <translation>Momentum</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+150"/>
+        <location line="-151"/>
+        <location line="+151"/>
         <source>Volatility</source>
         <translation>Volatilité</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+150"/>
+        <location line="-151"/>
+        <location line="+151"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+150"/>
+        <location line="-151"/>
+        <location line="+151"/>
         <source>Structure</source>
         <translation>Structure</translation>
     </message>
     <message>
-        <location line="-150"/>
-        <location line="+150"/>
+        <location line="-151"/>
+        <location line="+151"/>
         <source>Liquidity</source>
         <translation>Liquidité</translation>
     </message>
@@ -16569,7 +16816,7 @@ Résumé : %1</translation>
         <translation>Fourchette 52 sem.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>The CFTC&apos;s split of a financial future&apos;s holders, published with the legacy report. Asset managers are mostly hedged long-term money; leveraged funds are the fast money. Where a market has several contracts, this is its main one.</source>
         <translation>La répartition par la CFTC des détenteurs d&apos;un contrat à terme financier, publiée avec le rapport legacy. Les gérants d&apos;actifs sont surtout de l&apos;argent à long terme couvert ; les fonds à levier sont l&apos;argent rapide. Quand un marché a plusieurs contrats, c&apos;est le principal.</translation>
     </message>

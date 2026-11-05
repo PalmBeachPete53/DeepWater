@@ -4,6 +4,7 @@
 #include "desk/Journal.h"
 #include "desk/Market.h"
 #include "desk/NewsTags.h"
+#include "desk/Positioning.h"
 #include "desk/Rates.h"
 #include "desk/Risk.h"
 #include "desk/Sessions.h"
@@ -613,6 +614,31 @@ void testRates()
     eqi(7, tff.last().levLong, "a field");
 }
 
+void testPositioning()
+{
+    CAT = "positioning";
+    Outlook o = parseOutlook(R"({"error":false,"message":"","symbols":[
+        {"name":"EURUSD","shortPercentage":65,"longPercentage":35,"shortVolume":1500.5,"longVolume":800,"longPositions":100,"shortPositions":220,"totalPositions":320,"avgShortPrice":1.1,"avgLongPrice":1.2},
+        {"name":"","shortPercentage":50,"longPercentage":50},{"name":"GBPUSD","shortPercentage":0,"longPercentage":0}],"general":{}})");
+    check(o.ok, "an answer");
+    eqi(1, o.rows.size(), "rows without a name or a share are left out");
+    eqs("EURUSD", o.rows.first().symbol, "the symbol");
+    eqi(220, o.rows.first().shortPositions, "positions");
+    o = parseOutlook(R"({"outlook":[{"symbol":"USDJPY","longPercent":"71.5","shortPercent":"28.5","longVolumeLots":10}]})");
+    check(o.ok && o.rows.first().longPct == 71.5, "the other names, and numbers as strings");
+    check(o.rows.first().longVolume == 10, "lots");
+    o = parseOutlook(R"({"error":true,"message":"Invalid session."})");
+    check(!o.ok && o.sessionInvalid, "an ended session is told apart");
+    o = parseOutlook(R"({"error":true,"message":"Too many requests."})");
+    check(!o.ok && !o.sessionInvalid && o.message == "Too many requests.", "another refusal keeps the session");
+    check(!parseOutlook("<html>").ok, "not JSON");
+    check(!parseOutlook(R"({"error":false,"symbols":[]})").ok, "nothing in it");
+    QString message;
+    eqs("abc", parseLogin(R"({"error":false,"message":"","session":"abc"})", &message), "a session");
+    check(parseLogin(R"({"error":true,"message":"Invalid email or password."})", &message).isEmpty(), "refused");
+    eqs("Invalid email or password.", message, "says why");
+}
+
 } // namespace
 
 int main(int argc, char **argv)
@@ -632,6 +658,7 @@ int main(int argc, char **argv)
     testSessions();
     testNews();
     testRates();
+    testPositioning();
     std::cout << checks << " checks, " << fails << " failed\n";
     return fails ? 1 : 0;
 }

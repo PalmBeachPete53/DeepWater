@@ -1289,8 +1289,12 @@ holds no figures, and the model reads the section through `read_page`.
   (`desk/Rates`: 100 minus the price, each month's average solved for the meeting's move, split between the two nearest
   quarter points); BIS policy rates with next decisions (the economic calendar lists few ahead: `fetchRange` over 125 days,
   the Fed from its page); US Treasury and ECB AAA yield curves.
-- **Positioning**: Binance's public long/short account ratio on twelve USDT perpetuals. Myfxbook refuses programs (403),
-  so there is no FX retail positioning.
+- **Positioning**: Binance's public long/short account ratio on twelve USDT perpetuals, and Myfxbook's community outlook on
+  forex and CFDs through its official API (`src/Myfxbook.*`, `desk/Positioning`). That needs the user's free account: the password
+  goes once to `login.json` and isn't kept, only the session (`desk/myfxbook/session`), which ends after a month or when the
+  address changes. The session travels in the URL, so this has its own requests instead of `research::Client`, and shows HTTP
+  statuses rather than `errorString()`, which would hold the URL. A free account has 100 requests a day: answers are cached
+  (`myfxbook_outlook`) and asked at most every 30 minutes, across launches. `--myfxbook-sample <file>` shows an answer in memory.
 - **Risk appetite**: seven markets ranked over 252 days and averaged (`computeAppetite`); this app's own estimate.
 - **Seasonality**: `computeSeasonal` over 25 years of daily closes; `range=max` would make Yahoo answer monthly bars.
 - **Fundamentals**: six themes per currency from 150 days of calendar releases and BIS rates (`desk/Fundamentals`).
@@ -1684,6 +1688,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/OpencodeRun.*` | opencode as the model of that conversation: `opencode run --standalone` with its own tools denied, the same session from one message to the next |
 | `src/DeskPage.*`, `src/DeskViews*.cpp`, `src/DeskWidgets.*`, `src/DeskData.*` | The Desk tab: 14 sections, shared tables, tiles and charts, candle and feed loading |
 | `src/desk/` | Market logic without UI (library `desk`): instruments, risk, journal parsing and statistics, strength, signals, liquidity, seasonality, appetite, sessions, fundamentals, headline tags, Fed path, TFF |
+| `src/Myfxbook.*` | Myfxbook's API with the user's free account: login, session, community outlook, cache |
 | `src/JournalPage.*`, `src/JournalData.*` | The Journal tab and its store |
 | `src/Voice.h`, `src/VoiceMac.mm`, `src/VoiceStub.cpp` | Push-to-talk and spoken answers of the side panel: on-device recognition, system voices; `cmake/Info.plist.in` holds the permission texts |
 | `src/AiDock.*` | The AI side panel: a flap on the right edge, a panel to ask a model of the slots from any page with a context line |

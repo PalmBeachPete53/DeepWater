@@ -34,7 +34,10 @@ Seule la Fed a des probabilités : aucune source gratuite ne publie de contrats 
 
 ## Positionnement
 
-Le ratio public de Binance des comptes acheteurs et vendeurs sur douze perpétuels USDT, avec les 30 derniers jours : une mesure de la foule, pas de l'argent. **Le positionnement des particuliers sur le forex et les CFD n'est pas ici** : les chiffres des courtiers et des communautés ne sont pas publiés gratuitement pour un programme. Pour les positions sur contrats à terme, voir [Quant](help:quant) › COT.
+Deux listes, pour deux foules. Pour les positions sur contrats à terme, voir [Quant](help:quant) › COT.
+
+- **Forex et CFD** : la Community Outlook de Myfxbook, par son API officielle et votre compte gratuit : la part long et short, les lots, les positions et les prix moyens par symbole. Connectez-vous ici avec votre e-mail et votre mot de passe. Le mot de passe part une seule fois vers Myfxbook, en HTTPS, pour ouvrir une session, et n'est pas conservé. La session se termine après un mois ou quand votre adresse internet change, et la section redemande alors. Les chiffres sont demandés au plus toutes les demi-heures, sans historique. C'est une communauté de particuliers, pas tout le marché.
+- **Crypto** : le ratio public de Binance des comptes long et short sur douze perpétuels USDT, avec les 30 derniers jours : une mesure de la foule, pas de l'argent.
 
 ## Appétit pour le risque
 

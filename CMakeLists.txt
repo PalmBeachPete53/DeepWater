@@ -251,6 +251,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/NewsWebHost.h src/NewsWebHost.cpp src/NewsWebHostQt.cpp
     src/Voice.h
     src/DeskStrip.h src/DeskStrip.cpp
+    src/Myfxbook.h src/Myfxbook.cpp
     src/HelpWindow.h src/HelpWindow.cpp
     src/DeskWidgets.h src/DeskWidgets.cpp
     src/JournalData.h src/JournalData.cpp
