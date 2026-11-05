@@ -1,0 +1,1178 @@
+sector	sector_name_es	idCuadro	kind	name_en
+4	Banco de México	CA13	analytic	Information on Banco de Mexico's international assets
+4	Banco de México	CA1	analytic	Monetary base
+4	Banco de México	CF100	structure	Programmed intervention in the money market
+4	Banco de México	CF120	structure	Monetary base, currency in circulation and current account bank deposits
+4	Banco de México	CF104	structure	Sources and uses of Monetary Base
+4	Banco de México	CF106	structure	International Assets, Net Domestic Credit and Monetary Base
+4	Banco de México	CF2	structure	Monetary Base
+4	Banco de México	CF139	structure	International Assets, Net Domestic Credit and Monetary Base
+4	Banco de México	CF105	structure	Summarized Balance Sheet of Banco de México
+4	Banco de México	CF894	structure	Outstanding amounts of liquidity facility operations announced on April 21, 2020
+4	Banco de México	CF1	structure	Banco de México assets and liabilities
+4	Banco de México	CF893	structure	Outstanding amounts of liquidity facility operations announced on April 21, 2020
+4	Banco de México	CF169	structure	Information on Banco de Mexico´s International Assets
+4	Banco de México	CF456	structure	Data Template on International Reserves and Foreign Currency Liquidity
+23	Información histórica del mercado cambiario y de valores	CF364	structure	Historical Exercise of U.S. Dollar sale options (Daily)
+23	Información histórica del mercado cambiario y de valores	CF365	structure	Historical Information of the daily US Dollar sale Auction
+23	Información histórica del mercado cambiario y de valores	CF372	structure	Historical exchange rate markets
+23	Información histórica del mercado cambiario y de valores	CF375	structure	USD loan auctions
+23	Información histórica del mercado cambiario y de valores	CF359	structure	Historical Exercise of U.S. Dollar Sale Options sold by Banco de México
+23	Información histórica del mercado cambiario y de valores	CF366	structure	General Results from IPAB Securities Purchase Auctions
+23	Información histórica del mercado cambiario y de valores	CF367	structure	General Results of the Interest Rate Swap Auction
+23	Información histórica del mercado cambiario y de valores	CF892	structure	Government securities term repo facility
+23	Información histórica del mercado cambiario y de valores	CF887	structure	Corporate securities term repo facility
+6	Tipos de cambio y resultados históricos de las subastas	CA18	analytic	48-Hour Interbank Exchange Rate
+6	Tipos de cambio y resultados históricos de las subastas	CA91	analytic	Exchange rates of SDR basket currencies and SDR against to the Mexican peso
+6	Tipos de cambio y resultados históricos de las subastas	CA113	analytic	Global Foreign Exchange
+6	Tipos de cambio y resultados históricos de las subastas	CA736	analytic	Global Foreign Exchange at Close of Business Price
+6	Tipos de cambio y resultados históricos de las subastas	CF102	structure	Daily Exchange rates
+6	Tipos de cambio y resultados históricos de las subastas	CF372	structure	Historical exchange rate markets
+6	Tipos de cambio y resultados históricos de las subastas	CF373	structure	Daily U.S. dollar-MXN exchange rate historical series
+6	Tipos de cambio y resultados históricos de las subastas	CF361	structure	Daily Auction of US Dollars
+6	Tipos de cambio y resultados históricos de las subastas	CF374	structure	US Dollars auctions without a minimum price
+6	Tipos de cambio y resultados históricos de las subastas	CF362	structure	Extraordinary Auctions of US Dollars
+6	Tipos de cambio y resultados históricos de las subastas	CF210	structure	Daily Auction of US Dollars
+6	Tipos de cambio y resultados históricos de las subastas	CF777	structure	Auctions of sales of Foreign Exchange hedges
+6	Tipos de cambio y resultados históricos de las subastas	CF782	structure	Foreign exchange hedges rollover
+6	Tipos de cambio y resultados históricos de las subastas	CF449	structure	US Options auction
+6	Tipos de cambio y resultados históricos de las subastas	CF450	structure	Historical Exercise of U.S. Dollar Sale Options sold by Banco de México
+6	Tipos de cambio y resultados históricos de las subastas	CF307	structure	Exchange rates of SDR basket currencies and SDR against to the Mexican peso
+6	Tipos de cambio y resultados históricos de las subastas	CF86	structure	Exchange rate, monthly average
+6	Tipos de cambio y resultados históricos de las subastas	CF85	structure	Exchange rate, end of period
+6	Tipos de cambio y resultados históricos de las subastas	CF336	structure	Global Foreign Exchange
+6	Tipos de cambio y resultados históricos de las subastas	CF909	structure	Global Foreign Exchange at Close of Business Price
+6	Tipos de cambio y resultados históricos de las subastas	CR60	structure	Real exchange rate with respect to 111 countries
+18	Tasas y precios de referencia	CA51	analytic	Representative interest rates
+18	Tasas y precios de referencia	CA684	analytic	Overnight TIIE funding rate
+18	Tasas y precios de referencia	CA52	analytic	Bank funding rate
+18	Tasas y precios de referencia	CA53	analytic	Government funding rate
+18	Tasas y precios de referencia	CA766	analytic	Overnight Funding TIIE indexes and compounded in advance Overnight Funding TIIE
+18	Tasas y precios de referencia	CF349	structure	Government funding rate
+18	Tasas y precios de referencia	CF300	structure	Prices of sovereign securities (on the run)
+18	Tasas y precios de referencia	CF347	structure	Interest Rates and Placement Prices of Public Securities Auctions
+18	Tasas y precios de referencia	CF114	structure	Public Securities
+18	Tasas y precios de referencia	CF348	structure	Interest Rate of Short Term Private Debt Instruments
+18	Tasas y precios de referencia	CF302	structure	Private Debt Instruments Interest Rates
+18	Tasas y precios de referencia	CF101	structure	Money Market Representative Interest Rates
+18	Tasas y precios de referencia	CF370	structure	Amounts and interest rates of one-day maturity settled through INDEVAL
+18	Tasas y precios de referencia	CF111	structure	Interbank Interest Rates
+18	Tasas y precios de referencia	CF113	structure	Interbank and Funding Interest Rates
+18	Tasas y precios de referencia	CF112	structure	Average costs of bank term-deposits
+18	Tasas y precios de referencia	CF117	structure	Interest Rates of Bank Instruments
+18	Tasas y precios de referencia	CF303	structure	Interest rates on household credit
+18	Tasas y precios de referencia	CF815	structure	Weighted average interest rate for non-revolving
+18	Tasas y precios de referencia	CI34	structure	Foreign Interest Rates
+22	Subastas y colocación de valores	CF346	structure	Monetary Policy Auction Results (BONDES D)
+22	Subastas y colocación de valores	CF904	structure	Monetary Policy Auction Results (BONDES F)
+22	Subastas y colocación de valores	CF875	structure	Extraordinary Monetary Policy Auction Results (CETES, BONDES D, BONDES F)
+22	Subastas y colocación de valores	CF108	structure	BREMS Auction Results
+22	Subastas y colocación de valores	CF624	structure	BREMS R Auction Results. Weekly auctions results on its date of circulation
+22	Subastas y colocación de valores	CF107	structure	Government Securities Auction Results
+22	Subastas y colocación de valores	CF377	structure	Market makers option results to buy government securities
+22	Subastas y colocación de valores	CF908	structure	Market makers Syndicated option results to buy government securities
+22	Subastas y colocación de valores	CF916	structure	Government Securities ESG Syndicated Auction
+22	Subastas y colocación de valores	CF447	structure	Government Securities assigned to SIEFORES-SAR transfers
+22	Subastas y colocación de valores	CF115	structure	Saving Protection Bonds Auction Results
+22	Subastas y colocación de valores	CF371	structure	Banco de México's daily intervention in the money market
+22	Subastas y colocación de valores	CF133	structure	Indicators of Short Term Private Debt Instruments
+22	Subastas y colocación de valores	CF304	structure	Issuance of Private and Other Public Debt Instruments
+22	Subastas y colocación de valores	CF577	structure	Stripped coupons auction
+7	Valores en circulación	CA192	analytic	Debt securities issues classified by issuer, maturity, interest rate, credit rating and currency
+7	Valores en circulación	CA727	analytic	Debt Securities Issues by Sector, Currency, Maturity, Interest Rate and Market of Issuance
+7	Valores en circulación	CA726	analytic	
+7	Valores en circulación	CA209	analytic	Domestic market debt securities' holdings by original maturity
+7	Valores en circulación	CA210	analytic	Domestic market debt securities' holdings by remaining maturity
+7	Valores en circulación	CA211	analytic	Domestic market debt securities' holdings by type of interest rate
+7	Valores en circulación	CA212	analytic	Domestic market debt securities' holdings by domestic credit rating
+7	Valores en circulación	CA213	analytic	Domestic market debt securities' holdings by type of currency
+7	Valores en circulación	CA214	analytic	Domestic market mortgage backed securities' holdings
+7	Valores en circulación	CA728	analytic	Debt Securities Holdings by Sector, Issuer Residency, Currency, Maturity, Interest Rate and Market
+7	Valores en circulación	CA725	analytic	
+7	Valores en circulación	CA138	analytic	Total government securities
+7	Valores en circulación	CA129	analytic	Cetes
+7	Valores en circulación	CA740	analytic	BONDES G (Stocks in millions of pesos at nominal value)
+7	Valores en circulación	CA137	analytic	Total Udibonos
+7	Valores en circulación	CA135	analytic	Non-stripped Udibonos
+7	Valores en circulación	CA136	analytic	Stripped Udibonos
+7	Valores en circulación	CA134	analytic	Total Bonos
+7	Valores en circulación	CA132	analytic	Non-stripped Bonos
+7	Valores en circulación	CA133	analytic	Stripped Bonos
+7	Valores en circulación	CA765	analytic	BONOS MS (Stocks in millions of pesos at nominal value)
+7	Valores en circulación	CA131	analytic	Bondes
+7	Valores en circulación	CA253	analytic	Ajustabonos
+7	Valores en circulación	CA254	analytic	Tesobonos
+7	Valores en circulación	CA255	analytic	Pagafes
+7	Valores en circulación	CA130	analytic	Bondes D
+7	Valores en circulación	CA145	analytic	Total outstanding
+7	Valores en circulación	CA170	analytic	Banking Sector
+7	Valores en circulación	CA175	analytic	Foreign Residents
+7	Valores en circulación	CA146	analytic	Domestic Residents
+7	Valores en circulación	CA171	analytic	Siefores
+7	Valores en circulación	CA172	analytic	Mutual funds
+7	Valores en circulación	CA147	analytic	Repos with Banxico
+7	Valores en circulación	CA169	analytic	Guarantees Received by Banxico
+7	Valores en circulación	CA173	analytic	Insurance and Surety Companies
+7	Valores en circulación	CA174	analytic	Other Domestic Residents
+7	Valores en circulación	CA256	analytic	Securities held by Banco de México
+7	Valores en circulación	CA144	analytic	Total IPAB securities
+7	Valores en circulación	CA141	analytic	BPA's
+7	Valores en circulación	CA143	analytic	BPAT
+7	Valores en circulación	CA142	analytic	BPA182
+7	Valores en circulación	CA200	analytic	BPAG28
+7	Valores en circulación	CA201	analytic	BPAG91
+7	Valores en circulación	CA158	analytic	Total outstanding
+7	Valores en circulación	CA163	analytic	Banking Sector
+7	Valores en circulación	CA168	analytic	Foreign Residents
+7	Valores en circulación	CA159	analytic	Domestic Residents
+7	Valores en circulación	CA164	analytic	Siefores
+7	Valores en circulación	CA165	analytic	Mutual funds
+7	Valores en circulación	CA160	analytic	Repos with Banxico
+7	Valores en circulación	CA162	analytic	Securities Bought by Banxico
+7	Valores en circulación	CA161	analytic	Guarantees Received by Banxico
+7	Valores en circulación	CA166	analytic	Insurance and Surety Companies
+7	Valores en circulación	CA167	analytic	Other Domestic Residents
+7	Valores en circulación	CA140	analytic	Total Banxico securities
+7	Valores en circulación	CA139	analytic	BREMS
+7	Valores en circulación	CA148	analytic	Total outstanding
+7	Valores en circulación	CA152	analytic	Banking Sector
+7	Valores en circulación	CA157	analytic	Foreign Residents
+7	Valores en circulación	CA149	analytic	Domestic Residents
+7	Valores en circulación	CA153	analytic	Siefores
+7	Valores en circulación	CA154	analytic	Mutual funds
+7	Valores en circulación	CA150	analytic	Repos with Banxico
+7	Valores en circulación	CA151	analytic	Guarantees Received by Banxico
+7	Valores en circulación	CA155	analytic	Insurance and Surety Companies
+7	Valores en circulación	CA156	analytic	Other Domestic Residents
+7	Valores en circulación	CA54	analytic	Mexican stock market index
+7	Valores en circulación	CF460	structure	Debt securities issues classified by issuer, maturity, interest rate, credit rating and currency
+7	Valores en circulación	CF457	structure	Tenure of government securities (new presentation)
+7	Valores en circulación	CF478	structure	Volume tenure of government securities
+7	Valores en circulación	CF70	structure	Holdings of Federal Government Domestic Securities
+7	Valores en circulación	CF69	structure	Total Federal Government Domestic Securities by Residence of the Holder
+7	Valores en circulación	CG11	structure	Average Maturity of Government Securities
+7	Valores en circulación	CF133	structure	Indicators of Short-Term Private Debt Instruments
+7	Valores en circulación	CF301	structure	Outstanding Stock of Private and Other Public Debt Instruments
+7	Valores en circulación	CF304	structure	Monthly Issuance of Private and Other Public Debt Instruments
+7	Valores en circulación	CF103	structure	Mexican Stock Market Indicators
+7	Valores en circulación	CF57	structure	Mexican Stock Market Index
+7	Valores en circulación	CF56	structure	Stock Market Capitalization
+7	Valores en circulación	CF58	structure	Capital Market Trading Statistics
+7	Valores en circulación	CF448	structure	Non-Residents' Holdings of Equity Shares Issued by Mexican Enterprises
+3	Agregados monetarios y activos financieros internos	CA1	analytic	Monetary base
+3	Agregados monetarios y activos financieros internos	CA452	analytic	Monetary aggregates
+3	Agregados monetarios y activos financieros internos	CA453	analytic	Domestic financial assets
+3	Agregados monetarios y activos financieros internos	CF120	structure	Monetary base, currency in circulation and current account bank deposits
+3	Agregados monetarios y activos financieros internos	CF104	structure	Sources and uses of Monetary Base
+3	Agregados monetarios y activos financieros internos	CF106	structure	International Assets, Net Domestic Credit and Monetary Base
+3	Agregados monetarios y activos financieros internos	CF139	structure	International Assets, Net Domestic Credit and Monetary Base
+3	Agregados monetarios y activos financieros internos	CF2	structure	Monetary Base
+3	Agregados monetarios y activos financieros internos	CF807	structure	Monetary aggregates
+3	Agregados monetarios y activos financieros internos	CF886	structure	Monetary aggregate M2 by holding sector
+3	Agregados monetarios y activos financieros internos	CF76	structure	Monetary aggregates
+3	Agregados monetarios y activos financieros internos	CF77	structure	Monetary aggregates including public sector
+3	Agregados monetarios y activos financieros internos	CF808	structure	Domestic financial assets
+3	Agregados monetarios y activos financieros internos	CF834	structure	Savings funds for housing and retirement
+3	Agregados monetarios y activos financieros internos	CF7	structure	Savings funds for housing and retirement
+3	Agregados monetarios y activos financieros internos	CF851	structure	Financial resources of the economy, sources and uses (quarterly)
+3	Agregados monetarios y activos financieros internos	CF316	structure	Financial resources of the economy, sources and uses (quarterly)
+3	Agregados monetarios y activos financieros internos	CF341	structure	Financial resources of the economy, sources and uses (annual)
+19	Financiamiento e información financiera de intermediarios financieros	CA111	analytic	Flow of funds matrix of the institutional financial system
+19	Financiamiento e información financiera de intermediarios financieros	CA393	analytic	FX Swaps on US Dollar Vs Mexican Peso
+19	Financiamiento e información financiera de intermediarios financieros	CA394	analytic	Average Exchange Rates different from FX Swaps on US Dollar Vs Mexican Peso
+19	Financiamiento e información financiera de intermediarios financieros	CA395	analytic	Turnover in Forwards on US Dollar Vs Mexican Peso related to FX Swaps
+19	Financiamiento e información financiera de intermediarios financieros	CA396	analytic	Turnover in Forwards on US Dollar Vs Mexican Peso different from FX Swaps
+19	Financiamiento e información financiera de intermediarios financieros	CA454	analytic	Main Results of the Survey on General Conditions and Standards in the Banking Credit Market
+19	Financiamiento e información financiera de intermediarios financieros	CF150	structure	Central bank
+19	Financiamiento e información financiera de intermediarios financieros	CF151	structure	Other depository corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF152	structure	Depository corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF153	structure	Other financial corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF154	structure	Other financial corporations, exclude agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF155	structure	Other financial corporations, include agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF832	structure	Principal assets and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF480	structure	Resources and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF481	structure	Domestic banks
+19	Financiamiento e información financiera de intermediarios financieros	CF483	structure	Agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF833	structure	Principal assets and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF482	structure	Resources and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF806	structure	Savings and popular loan entities
+19	Financiamiento e información financiera de intermediarios financieros	CF631	structure	Cooperative savings and loan societies
+19	Financiamiento e información financiera de intermediarios financieros	CF632	structure	Popular financial companies
+19	Financiamiento e información financiera de intermediarios financieros	CF140	structure	Credit unions
+19	Financiamiento e información financiera de intermediarios financieros	CF805	structure	Investment funds
+19	Financiamiento e información financiera de intermediarios financieros	CF837	structure	Debt
+19	Financiamiento e información financiera de intermediarios financieros	CF838	structure	Equity securities
+19	Financiamiento e información financiera de intermediarios financieros	CF353	structure	Multiple-purpose non-bank financial corporations, regulated entities
+19	Financiamiento e información financiera de intermediarios financieros	CF356	structure	Subsidiaries of financial groups
+19	Financiamiento e información financiera de intermediarios financieros	CF357	structure	Subsidiaries of banks institutions
+19	Financiamiento e información financiera de intermediarios financieros	CF630	structure	Others institutions
+19	Financiamiento e información financiera de intermediarios financieros	CF44	structure	Bonded warehouses
+19	Financiamiento e información financiera de intermediarios financieros	CF43	structure	Economic development funds
+19	Financiamiento e información financiera de intermediarios financieros	CF45	structure	Brokerage firms
+19	Financiamiento e información financiera de intermediarios financieros	CF796	structure	Investment funds specialized in retirement savings
+19	Financiamiento e información financiera de intermediarios financieros	CF797	structure	Basic siefores
+19	Financiamiento e información financiera de intermediarios financieros	CF798	structure	Additional siefores
+19	Financiamiento e información financiera de intermediarios financieros	CF847	structure	Social service agencies
+19	Financiamiento e información financiera de intermediarios financieros	CF848	structure	Infonavit
+19	Financiamiento e información financiera de intermediarios financieros	CF849	structure	Fovissste
+19	Financiamiento e información financiera de intermediarios financieros	CF850	structure	Infonacot
+19	Financiamiento e información financiera de intermediarios financieros	CF297	structure	Total financing to the non-financial private sector
+19	Financiamiento e información financiera de intermediarios financieros	CF88	structure	Financing to the private sector in the country from the banking and others alternative sources
+19	Financiamiento e información financiera de intermediarios financieros	CF616	structure	Summary, methodology 2018
+19	Financiamiento e información financiera de intermediarios financieros	CF615	structure	Methodology 2018
+19	Financiamiento e información financiera de intermediarios financieros	CF835	structure	Current loans to the no-banking private sector (methodology 2018)
+19	Financiamiento e información financiera de intermediarios financieros	CF762	structure	Credit by main activity of debtor (total)
+19	Financiamiento e información financiera de intermediarios financieros	CF763	structure	Domestic currency
+19	Financiamiento e información financiera de intermediarios financieros	CF764	structure	Foreign currency
+19	Financiamiento e información financiera de intermediarios financieros	CF765	structure	In force credit
+19	Financiamiento e información financiera de intermediarios financieros	CF766	structure	Overdue credit
+19	Financiamiento e información financiera de intermediarios financieros	CF767	structure	Total agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF829	structure	Credit by states, economic sector and situation of the portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF455	structure	Summary, methodology 2018
+19	Financiamiento e información financiera de intermediarios financieros	CF454	structure	Methodology 2018
+19	Financiamiento e información financiera de intermediarios financieros	CF836	structure	Current loans to the no-banking private sector (methodology 2018)
+19	Financiamiento e información financiera de intermediarios financieros	CF768	structure	Credit by main activity of debtor (total)
+19	Financiamiento e información financiera de intermediarios financieros	CF769	structure	Domestic currency
+19	Financiamiento e información financiera de intermediarios financieros	CF809	structure	Foreign currency
+19	Financiamiento e información financiera de intermediarios financieros	CF810	structure	In force credit
+19	Financiamiento e información financiera de intermediarios financieros	CF811	structure	Overdue credit
+19	Financiamiento e información financiera de intermediarios financieros	CF830	structure	Credit by states, economic sector and situation of the portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF662	structure	Balances of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF661	structure	Number of the contracts of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF664	structure	Balances of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF663	structure	Number of the contracts of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF209	structure	Ranks (domestic currency)
+19	Financiamiento e información financiera de intermediarios financieros	CF667	structure	Balances of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF666	structure	Number of the contracts of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF669	structure	Balances of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF668	structure	Number of the contracts of the main instruments of deposit
+19	Financiamiento e información financiera de intermediarios financieros	CF660	structure	Commercial banks
+19	Financiamiento e información financiera de intermediarios financieros	CF665	structure	Development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF910	structure	Survey results. Sample design Economic Censuses 2019
+19	Financiamiento e información financiera de intermediarios financieros	CF471	structure	Survey results. Sample design Economic Censuses 2009
+19	Financiamiento e información financiera de intermediarios financieros	CF795	structure	Credit to Large Non Financial Companies
+19	Financiamiento e información financiera de intermediarios financieros	CF842	structure	Credit to Small and medium-sized non-financial enterprises
+19	Financiamiento e información financiera de intermediarios financieros	CF843	structure	Credit to Non-bank financial intermediaries
+19	Financiamiento e información financiera de intermediarios financieros	CF844	structure	Consumer credit
+19	Financiamiento e información financiera de intermediarios financieros	CF845	structure	Mortgage credit
+19	Financiamiento e información financiera de intermediarios financieros	CF846	structure	Factors related to the demand and / or supply for credit
+19	Financiamiento e información financiera de intermediarios financieros	CF578	structure	Derivatives traded by domestic banks and brokerage houses
+19	Financiamiento e información financiera de intermediarios financieros	CF579	structure	Derivatives traded by domestic brokerage houses
+19	Financiamiento e información financiera de intermediarios financieros	CF580	structure	Derivatives traded by domestic banks
+19	Financiamiento e información financiera de intermediarios financieros	CF581	structure	Outstanding derivatives at end of month from domestic brokerage houses, commercial and development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF582	structure	Outstanding derivatives at end of month from domestic brokerage houses
+19	Financiamiento e información financiera de intermediarios financieros	CF583	structure	Outstanding derivatives at end of month from domestic commercial and development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF772	structure	Forwards on main currencies traded by domestic brokerage houses, commercial and development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF775	structure	Main indicators on US Dollar and Euro Options traded by domestic brokerage houses, commercial and development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF792	structure	Main indicators on Standardized IRS traded by domestic brokerage houses, commercial and development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF317	structure	Central bank
+19	Financiamiento e información financiera de intermediarios financieros	CF318	structure	Domestic banks
+19	Financiamiento e información financiera de intermediarios financieros	CF319	structure	Development banks
+19	Financiamiento e información financiera de intermediarios financieros	CF320	structure	Leasing corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF321	structure	Factoring corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF322	structure	Limited object financial societies (Sofoles)
+19	Financiamiento e información financiera de intermediarios financieros	CF323	structure	Savings and loan associations (SAPs)
+19	Financiamiento e información financiera de intermediarios financieros	CF332	structure	Investment funds (equity)
+19	Financiamiento e información financiera de intermediarios financieros	CF333	structure	Investment funds (debt securities)
+19	Financiamiento e información financiera de intermediarios financieros	CF334	structure	Investment funds (capital)
+19	Financiamiento e información financiera de intermediarios financieros	CF324	structure	Credit unions
+19	Financiamiento e información financiera de intermediarios financieros	CF344	structure	Other depository corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF345	structure	Other financial corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF325	structure	Insurance corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF326	structure	Pension insurance corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF327	structure	Health insurance corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF335	structure	Bonding institutions
+19	Financiamiento e información financiera de intermediarios financieros	CF331	structure	Deposit warehouses
+19	Financiamiento e información financiera de intermediarios financieros	CF329	structure	Trust funds
+19	Financiamiento e información financiera de intermediarios financieros	CF328	structure	Investment funds specialized in retirement savings
+19	Financiamiento e información financiera de intermediarios financieros	CF330	structure	Brokerage houses
+19	Financiamiento e información financiera de intermediarios financieros	CF338	structure	Agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF339	structure	Financial corporations, excluding agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF340	structure	Financial corporations, including agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF172	structure	Principal assets and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF124	structure	Resources and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF445	structure	Summary
+19	Financiamiento e información financiera de intermediarios financieros	CF125	structure	Domestic banks
+19	Financiamiento e información financiera de intermediarios financieros	CF145	structure	Agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF144	structure	Methodology 1997
+19	Financiamiento e información financiera de intermediarios financieros	CF174	structure	Principal assets and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF126	structure	Resources and liabilities
+19	Financiamiento e información financiera de intermediarios financieros	CF446	structure	Summary
+19	Financiamiento e información financiera de intermediarios financieros	CF294	structure	Other non-bank depository corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF39	structure	Methodology 1990
+19	Financiamiento e información financiera de intermediarios financieros	CF128	structure	Methodology 2000
+19	Financiamiento e información financiera de intermediarios financieros	CF73	structure	Loan portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF38	structure	Methodology 1990
+19	Financiamiento e información financiera de intermediarios financieros	CF127	structure	Methodology 2000
+19	Financiamiento e información financiera de intermediarios financieros	CF40	structure	Loan portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF80	structure	Limited object financial societies (Sofoles)
+19	Financiamiento e información financiera de intermediarios financieros	CF78	structure	Mortgage
+19	Financiamiento e información financiera de intermediarios financieros	CF79	structure	Non mortgage
+19	Financiamiento e información financiera de intermediarios financieros	CF74	structure	Savings and popular loan entities
+19	Financiamiento e información financiera de intermediarios financieros	CF47	structure	Investment funds
+19	Financiamiento e información financiera de intermediarios financieros	CF46	structure	Investment funds at market prices portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF839	structure	Capitals
+19	Financiamiento e información financiera de intermediarios financieros	CF295	structure	Other financial corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF42	structure	Private sector
+19	Financiamiento e información financiera de intermediarios financieros	CF41	structure	Public sector
+19	Financiamiento e información financiera de intermediarios financieros	CF98	structure	Insurance corporations specialized in pensions
+19	Financiamiento e información financiera de intermediarios financieros	CF97	structure	Surety bonding institutions
+19	Financiamiento e información financiera de intermediarios financieros	CF296	structure	Insurance corporations specialized in health
+19	Financiamiento e información financiera de intermediarios financieros	CF633	structure	Financial guarantee insurance corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF634	structure	Housing credit insurance corporations
+19	Financiamiento e información financiera de intermediarios financieros	CF68	structure	Investment funds specialized in retirement savings
+19	Financiamiento e información financiera de intermediarios financieros	CF597	structure	Total methodology 2016
+19	Financiamiento e información financiera de intermediarios financieros	CF596	structure	Detailed methodology 2016
+19	Financiamiento e información financiera de intermediarios financieros	CF598	structure	Current loans to the no-banking private sector (methodology 2016)
+19	Financiamiento e información financiera de intermediarios financieros	CF129	structure	Total methodology 2000
+19	Financiamiento e información financiera de intermediarios financieros	CF92	structure	Detailed methodology 2000
+19	Financiamiento e información financiera de intermediarios financieros	CF249	structure	Current loans to the no-banking private sector (methodology 2000)
+19	Financiamiento e información financiera de intermediarios financieros	CF29	structure	Credit by main activity of debtor (total)
+19	Financiamiento e información financiera de intermediarios financieros	CF31	structure	Foreign currency
+19	Financiamiento e información financiera de intermediarios financieros	CF245	structure	In force credit
+19	Financiamiento e información financiera de intermediarios financieros	CF34	structure	Overdue credit
+19	Financiamiento e información financiera de intermediarios financieros	CF33	structure	By agencies abroad
+19	Financiamiento e información financiera de intermediarios financieros	CF246	structure	Credit by states, economic sector and situation of the portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF131	structure	Financing methodology 2000
+19	Financiamiento e información financiera de intermediarios financieros	CF93	structure	Detailed
+19	Financiamiento e información financiera de intermediarios financieros	CF30	structure	Credit by main activity of debtor (total)
+19	Financiamiento e información financiera de intermediarios financieros	CF32	structure	Foreign currency
+19	Financiamiento e información financiera de intermediarios financieros	CF35	structure	Overdue credit
+19	Financiamiento e información financiera de intermediarios financieros	CF248	structure	Credit by states, economic sector and situation of the portfolio
+19	Financiamiento e información financiera de intermediarios financieros	CF378	structure	Total, Republic and Agencies (methodology 2008)
+19	Financiamiento e información financiera de intermediarios financieros	CF380	structure	Aguascalientes
+19	Financiamiento e información financiera de intermediarios financieros	CF381	structure	Baja California Norte
+19	Financiamiento e información financiera de intermediarios financieros	CF382	structure	Baja California Sur
+19	Financiamiento e información financiera de intermediarios financieros	CF383	structure	Campeche
+19	Financiamiento e información financiera de intermediarios financieros	CF384	structure	Coahuila
+19	Financiamiento e información financiera de intermediarios financieros	CF385	structure	Colima
+19	Financiamiento e información financiera de intermediarios financieros	CF386	structure	Chiapas
+19	Financiamiento e información financiera de intermediarios financieros	CF387	structure	Chihuahua
+19	Financiamiento e información financiera de intermediarios financieros	CF388	structure	Distrito Federal
+19	Financiamiento e información financiera de intermediarios financieros	CF389	structure	Durango
+19	Financiamiento e información financiera de intermediarios financieros	CF390	structure	Guanajuato
+19	Financiamiento e información financiera de intermediarios financieros	CF391	structure	Guerrero
+19	Financiamiento e información financiera de intermediarios financieros	CF392	structure	Hidalgo
+19	Financiamiento e información financiera de intermediarios financieros	CF393	structure	Jalisco
+19	Financiamiento e información financiera de intermediarios financieros	CF394	structure	México
+19	Financiamiento e información financiera de intermediarios financieros	CF395	structure	Michoacán
+19	Financiamiento e información financiera de intermediarios financieros	CF396	structure	Morelos
+19	Financiamiento e información financiera de intermediarios financieros	CF397	structure	Nayarit
+19	Financiamiento e información financiera de intermediarios financieros	CF398	structure	Nuevo León
+19	Financiamiento e información financiera de intermediarios financieros	CF399	structure	Oaxaca
+19	Financiamiento e información financiera de intermediarios financieros	CF400	structure	Puebla
+19	Financiamiento e información financiera de intermediarios financieros	CF401	structure	Querétaro
+19	Financiamiento e información financiera de intermediarios financieros	CF402	structure	Quintana Roo
+19	Financiamiento e información financiera de intermediarios financieros	CF403	structure	San Luis Potosí
+19	Financiamiento e información financiera de intermediarios financieros	CF404	structure	Sinaloa
+19	Financiamiento e información financiera de intermediarios financieros	CF405	structure	Sonora
+19	Financiamiento e información financiera de intermediarios financieros	CF406	structure	Tabasco
+19	Financiamiento e información financiera de intermediarios financieros	CF407	structure	Tamaulipas
+19	Financiamiento e información financiera de intermediarios financieros	CF408	structure	Tlaxcala
+19	Financiamiento e información financiera de intermediarios financieros	CF409	structure	Veracruz
+19	Financiamiento e información financiera de intermediarios financieros	CF410	structure	Yucatán
+19	Financiamiento e información financiera de intermediarios financieros	CF411	structure	Zacatecas
+19	Financiamiento e información financiera de intermediarios financieros	CF208	structure	Agencies abroad (methodology 2008)
+19	Financiamiento e información financiera de intermediarios financieros	CF175	structure	Total, Republic and Agencies (methodology 2002)
+19	Financiamiento e información financiera de intermediarios financieros	CF176	structure	Aguascalientes
+19	Financiamiento e información financiera de intermediarios financieros	CF177	structure	Baja California Norte
+19	Financiamiento e información financiera de intermediarios financieros	CF178	structure	Baja California Sur
+19	Financiamiento e información financiera de intermediarios financieros	CF179	structure	Campeche
+19	Financiamiento e información financiera de intermediarios financieros	CF180	structure	Coahuila
+19	Financiamiento e información financiera de intermediarios financieros	CF181	structure	Colima
+19	Financiamiento e información financiera de intermediarios financieros	CF182	structure	Chiapas
+19	Financiamiento e información financiera de intermediarios financieros	CF183	structure	Chihuahua
+19	Financiamiento e información financiera de intermediarios financieros	CF184	structure	Distrito Federal
+19	Financiamiento e información financiera de intermediarios financieros	CF185	structure	Durango
+19	Financiamiento e información financiera de intermediarios financieros	CF186	structure	Guanajuato
+19	Financiamiento e información financiera de intermediarios financieros	CF187	structure	Guerrero
+19	Financiamiento e información financiera de intermediarios financieros	CF188	structure	Hidalgo
+19	Financiamiento e información financiera de intermediarios financieros	CF189	structure	Jalisco
+19	Financiamiento e información financiera de intermediarios financieros	CF190	structure	México
+19	Financiamiento e información financiera de intermediarios financieros	CF191	structure	Michoacán
+19	Financiamiento e información financiera de intermediarios financieros	CF192	structure	Morelos
+19	Financiamiento e información financiera de intermediarios financieros	CF193	structure	Nayarit
+19	Financiamiento e información financiera de intermediarios financieros	CF194	structure	Nuevo León
+19	Financiamiento e información financiera de intermediarios financieros	CF195	structure	Oaxaca
+19	Financiamiento e información financiera de intermediarios financieros	CF196	structure	Puebla
+19	Financiamiento e información financiera de intermediarios financieros	CF197	structure	Querétaro
+19	Financiamiento e información financiera de intermediarios financieros	CF198	structure	Quintana Roo
+19	Financiamiento e información financiera de intermediarios financieros	CF199	structure	San Luis Potosí
+19	Financiamiento e información financiera de intermediarios financieros	CF200	structure	Sinaloa
+19	Financiamiento e información financiera de intermediarios financieros	CF201	structure	Sonora
+19	Financiamiento e información financiera de intermediarios financieros	CF202	structure	Tabasco
+19	Financiamiento e información financiera de intermediarios financieros	CF203	structure	Tamaulipas
+19	Financiamiento e información financiera de intermediarios financieros	CF204	structure	Tlaxcala
+19	Financiamiento e información financiera de intermediarios financieros	CF205	structure	Veracruz
+19	Financiamiento e información financiera de intermediarios financieros	CF206	structure	Yucatán
+19	Financiamiento e información financiera de intermediarios financieros	CF207	structure	Zacatecas
+19	Financiamiento e información financiera de intermediarios financieros	CF412	structure	Total, Republic and Agencies (methodology 2008)
+19	Financiamiento e información financiera de intermediarios financieros	CF413	structure	Aguascalientes
+19	Financiamiento e información financiera de intermediarios financieros	CF414	structure	Baja California Norte
+19	Financiamiento e información financiera de intermediarios financieros	CF415	structure	Baja California Sur
+19	Financiamiento e información financiera de intermediarios financieros	CF416	structure	Campeche
+19	Financiamiento e información financiera de intermediarios financieros	CF417	structure	Coahuila
+19	Financiamiento e información financiera de intermediarios financieros	CF418	structure	Colima
+19	Financiamiento e información financiera de intermediarios financieros	CF419	structure	Chiapas
+19	Financiamiento e información financiera de intermediarios financieros	CF420	structure	Chihuahua
+19	Financiamiento e información financiera de intermediarios financieros	CF421	structure	Distrito Federal
+19	Financiamiento e información financiera de intermediarios financieros	CF422	structure	Durango
+19	Financiamiento e información financiera de intermediarios financieros	CF423	structure	Guanajuato
+19	Financiamiento e información financiera de intermediarios financieros	CF424	structure	Guerrero
+19	Financiamiento e información financiera de intermediarios financieros	CF425	structure	Hidalgo
+19	Financiamiento e información financiera de intermediarios financieros	CF426	structure	Jalisco
+19	Financiamiento e información financiera de intermediarios financieros	CF427	structure	México
+19	Financiamiento e información financiera de intermediarios financieros	CF428	structure	Michoacán
+19	Financiamiento e información financiera de intermediarios financieros	CF429	structure	Morelos
+19	Financiamiento e información financiera de intermediarios financieros	CF430	structure	Nayarit
+19	Financiamiento e información financiera de intermediarios financieros	CF431	structure	Nuevo León
+19	Financiamiento e información financiera de intermediarios financieros	CF432	structure	Oaxaca
+19	Financiamiento e información financiera de intermediarios financieros	CF433	structure	Puebla
+19	Financiamiento e información financiera de intermediarios financieros	CF434	structure	Querétaro
+19	Financiamiento e información financiera de intermediarios financieros	CF435	structure	Quintana Roo
+19	Financiamiento e información financiera de intermediarios financieros	CF436	structure	San Luis Potosí
+19	Financiamiento e información financiera de intermediarios financieros	CF437	structure	Sinaloa
+19	Financiamiento e información financiera de intermediarios financieros	CF438	structure	Sonora
+19	Financiamiento e información financiera de intermediarios financieros	CF439	structure	Tabasco
+19	Financiamiento e información financiera de intermediarios financieros	CF440	structure	Tamaulipas
+19	Financiamiento e información financiera de intermediarios financieros	CF441	structure	Tlaxcala
+19	Financiamiento e información financiera de intermediarios financieros	CF442	structure	Veracruz
+19	Financiamiento e información financiera de intermediarios financieros	CF443	structure	Yucatán
+19	Financiamiento e información financiera de intermediarios financieros	CF444	structure	Zacatecas
+19	Financiamiento e información financiera de intermediarios financieros	CF89	structure	Survey's result (old presentation)
+11	Billetes y monedas	CA611	analytic	Pieces received in Banco de México for being analyzed, by denomination
+11	Billetes y monedas	CA612	analytic	Pieces received in Banco de México for being analyzed, by institution
+11	Billetes y monedas	CA613	analytic	Pieces received in Banco de México for being analyzed, by credit institutions
+11	Billetes y monedas	CA614	analytic	Pieces received in Banco de México for being analyzed, by Federal Entity
+11	Billetes y monedas	CA615	analytic	Counterfeit by imitation technique
+11	Billetes y monedas	CA617	analytic	Counterfeit notes detected in circulation and parts per million
+11	Billetes y monedas	CF315	structure	Banknotes and coins in circulation
+11	Billetes y monedas	CM1	structure	Banknotes in circulation
+11	Billetes y monedas	CM2	structure	Coins in circulation
+11	Billetes y monedas	CM17	structure	New coins
+11	Billetes y monedas	CM24	structure	New banknotes
+11	Billetes y monedas	CM3	structure	Unfit banknote in deposit
+11	Billetes y monedas	CM4	structure	Average banknote lifetime
+11	Billetes y monedas	CM10	structure	Annual
+11	Billetes y monedas	CM11	structure	Quarterly
+11	Billetes y monedas	CM12	structure	Monthly
+11	Billetes y monedas	CM29	structure	Annual counterfeit notes detected per denomination (domestic banknotes)
+11	Billetes y monedas	CM25	structure	Annual counterfeit coins detected per denomination (domestic coins)
+11	Billetes y monedas	CM8	structure	Parts per millon - conterfeit notes detected in circulation (annual, Jan-Dec)
+11	Billetes y monedas	CM9	structure	Parts per millon - conterfeit notes detected in circulation (annual, July-June)
+11	Billetes y monedas	CM5	structure	Parts Per Millon - conterfeit notes detected in circulation (annual), valid until 2014
+11	Billetes y monedas	CM30	structure	Parts per millon - counterfeit coins detected in circulation (annual, Jan-Dec)
+11	Billetes y monedas	CM14	structure	Pieces received in Banco de México for being analyzed, by several criteria
+11	Billetes y monedas	CM16	structure	Counterfeit by printing technique
+11	Billetes y monedas	CM6	structure	Quarterly Survey
+11	Billetes y monedas	CM7	structure	Quarterly Survey - yearly average of quarterly data
+11	Billetes y monedas	CM21	structure	Minting of Legal Tender Coins
+11	Billetes y monedas	CM22	structure	Commemorative coins
+11	Billetes y monedas	CM26	structure	Gold
+11	Billetes y monedas	CM27	structure	Silver
+11	Billetes y monedas	CM28	structure	Bimetallic
+9	Finanzas públicas	CG1	structure	Public Sector Revenues and Expenditures
+9	Finanzas públicas	CG8	structure	Public Sector Revenues
+9	Finanzas públicas	CG9	structure	Public Sector Expenditures
+9	Finanzas públicas	CG2	structure	Revenues and Expenditures of the Federal Government
+9	Finanzas públicas	CG3	structure	Revenues and Expenditures of Public Enterprises under Direct Budgetary Control
+9	Finanzas públicas	CG4	structure	Revenues and Expenditures of Pemex
+9	Finanzas públicas	CG5	structure	Revenues and Expenditures of Public Enterprises other than Pemex
+9	Finanzas públicas	CG6	structure	Revenues and Expenditures of Public Enterprises under Indirect Budgetary Control
+9	Finanzas públicas	CF72	structure	Financial Intermediation Deficit
+9	Finanzas públicas	CG7	structure	Total Net Debt of the Public Sector
+9	Finanzas públicas	CG11	structure	Average Maturity of Government Securities
+8	Índices de Precios al Consumidor y UDIS	CP150	structure	UDI value
+8	Índices de Precios al Consumidor y UDIS	CP154	structure	monthly
+8	Índices de Precios al Consumidor y UDIS	CP155	structure	fortnightly
+8	Índices de Precios al Consumidor y UDIS	CP151	structure	monthly
+8	Índices de Precios al Consumidor y UDIS	CP195	structure	fortnightly
+8	Índices de Precios al Consumidor y UDIS	CP194	structure	Otros Indicadores de Precios
+8	Índices de Precios al Consumidor y UDIS	CP193	structure	Otros Indicadores de Precios
+20	Índices de Precios Productor y de Comercio Exterior	CA77	analytic	INPP finished goods and services, by origin
+20	Índices de Precios Productor y de Comercio Exterior	CA78	analytic	INPP finished goods and services, by destiny
+20	Índices de Precios Productor y de Comercio Exterior	CP37	structure	Finished goods and services
+20	Índices de Precios Productor y de Comercio Exterior	CP175	structure	Intermediate materials, by origin
+20	Índices de Precios Productor y de Comercio Exterior	CP169	structure	Intermediate materials, by destination
+20	Índices de Precios Productor y de Comercio Exterior	CP152	structure	International trade price indexes
+2	Producción	CR196	structure	Aggregate supply and demand (Quarterly)
+2	Producción	CR151	structure	Aggregate supply and demand (2008=100)
+2	Producción	CR152	structure	Aggregate supply and demand (2008=100, current prices)
+2	Producción	CR153	structure	Aggregate supply and demand (2008=100, constant prices, seasonally adjusted)
+2	Producción	CR201	structure	Gross Domestic Product (current prices)
+2	Producción	CR199	structure	Gross domestic product
+2	Producción	CR200	structure	Gross domestic product, Seasonally adjusted
+2	Producción	CR145	structure	Gross Domestic Product (current prices)
+2	Producción	CR142	structure	Gross Domestic Product
+2	Producción	CR197	structure	Gross fixed investment, volume index
+2	Producción	CR198	structure	Monthly Indicator of Domestic Private Consumption
+2	Producción	CR205	structure	Industrial production, volume index
+2	Producción	CR202	structure	Industrial activity general index
+2	Producción	CR203	structure	Industrial activity general index, Seasonally adjusted
+2	Producción	CR204	structure	Industrial activity general index, trend series
+2	Producción	CR206	structure	Manufacturing production volume index
+2	Producción	CR207	structure	Mining production volume index
+2	Producción	CR208	structure	Electrical industry volume index
+2	Producción	CR209	structure	Construction industry volume index
+2	Producción	CR137	structure	Industrial production, volume index
+2	Producción	CR134	structure	Industrial activity general index
+2	Producción	CR135	structure	Industrial activity general index, Seasonally adjusted
+2	Producción	CR136	structure	Industrial activity general index, trend series
+2	Producción	CR138	structure	Manufacturing production volume index
+2	Producción	CR139	structure	Mining production volume index
+2	Producción	CR140	structure	Electrical industry volume index
+2	Producción	CR141	structure	Construction industry volume index
+2	Producción	CR1	structure	Business Tendency Survey, Production manufacturing sector
+2	Producción	CR2	structure	Business Tendency Survey, Sales manufacturing sector
+2	Producción	CR3	structure	Business Tendency Survey, Stocks, employment and working days
+2	Producción	CR67	structure	Business Tendency Survey, Confidence indicators (percentage of responses)
+2	Producción	CR88	structure	Business Tendency Survey, Confidence index
+2	Producción	CR85	structure	Business Tendency Survey, Labor hiring indicators manufacturing sector
+2	Producción	CR89	structure	Consumer confidence index
+2	Producción	CR354	structure	Consumer confidence balance
+2	Producción	CR72	structure	National Accounts (values, structure of 1993)
+2	Producción	CR119	structure	Gross Fixed Capital Formation (Financing as a percent of GDP at curent prices)
+10	Laboral	CA14	analytic	Contractual wages revision
+10	Laboral	CA15	analytic	Minimum Wages (Geographic regions valid until November 2012)
+10	Laboral	CA208	analytic	Minimum Wages (Geographic regions from December 2012 to December 2018)
+10	Laboral	CA601	analytic	Minimum Wages
+10	Laboral	CA16	analytic	Compensation and productivity
+10	Laboral	CL10	structure	Contractual wages revision
+10	Laboral	CL88	structure	Minimum Wages (Geographic regions valid until November 2012)
+10	Laboral	CL279	structure	Minimum Wages (Geographic regions from December 2012 to December 2018)
+10	Laboral	CL289	structure	Minimum Wages
+10	Laboral	CL293	structure	Compensation and Productivity (Base 2013)
+10	Laboral	CL89	structure	Compensation and productivity (Information until February 2019. Base 2008.)
+10	Laboral	CE90	structure	By product
+10	Laboral	CE91	structure	Average employment by municipality
+1	Balanza de pagos	CA410	analytic	Balance of Payments - BPM6 basis (start date: 2002)
+1	Balanza de pagos	CA176	analytic	Merchandise trade balance of Mexico (without breakdown for maquila)
+1	Balanza de pagos	CA179	analytic	Merchandise trade balance of Mexico (with breakdown for maquila, until December 2006)
+1	Balanza de pagos	CA181	analytic	Manufacturing products trade balance
+1	Balanza de pagos	CA81	analytic	Manufacturing products trade balance maquila
+1	Balanza de pagos	CA180	analytic	Manufacturing products trade balance non maquila
+1	Balanza de pagos	CA186	analytic	Agricultural products trade balance
+1	Balanza de pagos	CA187	analytic	Agricultural, agroindustrial and fishing products trade balance
+1	Balanza de pagos	CA188	analytic	Oil products balance
+1	Balanza de pagos	CA189	analytic	Petrochemicals and products of petrochemical origin trade balance
+1	Balanza de pagos	CA7	analytic	Total
+1	Balanza de pagos	CA177	analytic	Oil
+1	Balanza de pagos	CA178	analytic	Non oil
+1	Balanza de pagos	CA6	analytic	Total
+1	Balanza de pagos	CA182	analytic	Oil
+1	Balanza de pagos	CA183	analytic	Non oil
+1	Balanza de pagos	CA8	analytic	Total
+1	Balanza de pagos	CA184	analytic	Oil
+1	Balanza de pagos	CA185	analytic	Non oil
+1	Balanza de pagos	CA739	analytic	Terms of Trade, Unit Value and Implicit Volume Indices
+1	Balanza de pagos	CA198	analytic	International Travelers Revenues
+1	Balanza de pagos	CA199	analytic	International Travelers Expenditures
+1	Balanza de pagos	CA11	analytic	Workers' Remittances
+1	Balanza de pagos	CA79	analytic	Workers' Remittances Distribution by State
+1	Balanza de pagos	CA737	analytic	Integrated International Investment Position Statement (quarterly)
+1	Balanza de pagos	CE174	structure	Balance of Payments - BPM6 basis (start date: 2002)
+1	Balanza de pagos	CE139	structure	Balance of Payments (1980 - 2001)
+1	Balanza de pagos	CE175	structure	Balance of Payments (1950 - 1979)
+1	Balanza de pagos	CE204	structure	Background of Mexico's Official Balance of Payments Statistics: 1930-1949
+1	Balanza de pagos	CE158	structure	Main aggregates of the balance of payments as a share of GDP
+1	Balanza de pagos	CE203	structure	Main annual aggregates of the balance of payments
+1	Balanza de pagos	CE159	structure	International reserve variation
+1	Balanza de pagos	CE125	structure	Merchandise trade balance of Mexico (without breakdown for maquila)
+1	Balanza de pagos	CE130	structure	Merchandise trade balance of Mexico (with breakdown for maquila, until December 2006)
+1	Balanza de pagos	CE132	structure	Merchandise trade balance of Mexico (1980 to 1992)
+1	Balanza de pagos	CE134	structure	Merchandise trade balance of Mexico, seasonally adjusted data
+1	Balanza de pagos	CE135	structure	Merchandise trade balance of Mexico, summary trend data
+1	Balanza de pagos	CE160	structure	Indicators on Merchandise Trade Balance of Mexico
+1	Balanza de pagos	CE171	structure	Exports of Manufacturing Goods
+1	Balanza de pagos	CE172	structure	Exports of Manufacturing Goods, Seasonally Adjusted
+1	Balanza de pagos	CE173	structure	Exports of Manufacturing Goods, Trend Data
+1	Balanza de pagos	CE127	structure	Manufacturing products trade balance
+1	Balanza de pagos	CE79	structure	Manufacturing products trade balance maquila
+1	Balanza de pagos	CE126	structure	Manufacturing products trade balance non maquila
+1	Balanza de pagos	CE122	structure	Agricultural products trade balance
+1	Balanza de pagos	CE121	structure	Oil products balance
+1	Balanza de pagos	CE124	structure	Petrochemicals and products of petrochemical origin trade balance
+1	Balanza de pagos	CE123	structure	Agricultural, agroindustrial and fishing products trade balance
+1	Balanza de pagos	CE37	structure	Total exports
+1	Balanza de pagos	CE45	structure	Total exports -maquila-
+1	Balanza de pagos	CE41	structure	Total exports -non maquila-
+1	Balanza de pagos	CE49	structure	Total imports
+1	Balanza de pagos	CE55	structure	Total imports -maquila-
+1	Balanza de pagos	CE51	structure	Total imports -non maquila-
+1	Balanza de pagos	CE86	structure	Total
+1	Balanza de pagos	CE114	structure	Oil
+1	Balanza de pagos	CE115	structure	Non oil
+1	Balanza de pagos	CE85	structure	Total
+1	Balanza de pagos	CE116	structure	Oil
+1	Balanza de pagos	CE117	structure	Non oil
+1	Balanza de pagos	CE87	structure	Total
+1	Balanza de pagos	CE128	structure	Oil
+1	Balanza de pagos	CE129	structure	Non oil
+1	Balanza de pagos	CE187	structure	Unit Value, Volume and Terms of Trade Indexes
+1	Balanza de pagos	CE36	structure	International Travelers Balance
+1	Balanza de pagos	CE81	structure	Revenues by Workers' Remittances
+1	Balanza de pagos	CE164	structure	Revenues by Workers' Remittances by Banks and Nonbanks
+1	Balanza de pagos	CE165	structure	Expenditures by Workers' Remittances
+1	Balanza de pagos	CE181	structure	Income, Expenditure and Balance of Workers' Remittances Account (Seasonally Adjusted and Trend-Cycle Data)
+1	Balanza de pagos	CE80	structure	Revenues by Workers' Remittances
+1	Balanza de pagos	CE190	structure	Revenues by Workers' Remittances (Electronic Transfers), Cash Payment and Account Deposit
+1	Balanza de pagos	CE100	structure	Revenues by Workers' Remittances, Distribution by State
+1	Balanza de pagos	CE99	structure	Revenues by Workers' Remittances, Percent Distribution by State
+1	Balanza de pagos	CE166	structure	Revenues by Workers' Remittances, Distribution by Municipality
+1	Balanza de pagos	CE167	structure	Revenues by Workers' Remittances by Country
+1	Balanza de pagos	CE168	structure	Revenues by Workers' Remittances by State of US
+1	Balanza de pagos	CE169	structure	Expenditures by Workers' Remittances by Country
+1	Balanza de pagos	CE179	structure	Annual Survey about Remittances
+1	Balanza de pagos	CE183	structure	Supplemental Information on Portfolio and Other Investment Financial Flows
+1	Balanza de pagos	CE131	structure	Direct Investment in Mexico (directional basis)
+1	Balanza de pagos	CF448	structure	Non-Residents' Holdings of Equity Shares Issued by Mexican Enterprises
+1	Balanza de pagos	CE89	structure	Non-Residents' Holdings of Government Securities
+1	Balanza de pagos	CE97	structure	Annual international investment position
+1	Balanza de pagos	CE170	structure	Quarterly international investment position
+1	Balanza de pagos	CE182	structure	Gross External Debt Position
+1	Balanza de pagos	CE188	structure	Gross External Debt Position. Public and Private Sector (Bridge Table)
+1	Balanza de pagos	CE101	structure	Gross external debt position. By residence criteria.
+1	Balanza de pagos	CE103	structure	Gross external debt position. Classification of adjustments.
+1	Balanza de pagos	CR60	structure	Real exchange rate with respect to 111 countries
+5	Sistemas de pago	CF252	structure	Large-value payment systems
+5	Sistemas de pago	CF872	structure	Funs transfer SPID sent and received by participant
+5	Sistemas de pago	CF874	structure	Funs transfer SPEI sent and received by participant
+5	Sistemas de pago	CF311	structure	Directo a México 1/
+5	Sistemas de pago	CF256	structure	Cards 3/
+5	Sistemas de pago	CF262	structure	Operations in ATMs
+5	Sistemas de pago	CF266	structure	Number of ATMs by State
+5	Sistemas de pago	CF268	structure	Operations in POS
+5	Sistemas de pago	CF272	structure	Number of POS by State
+5	Sistemas de pago	CF274	structure	Swift 5/
+5	Sistemas de pago	CF258	structure	Internet 6/
+5	Sistemas de pago	CF282	structure	Checks 7/
+5	Sistemas de pago	CF286	structure	Direct debits 8/
+5	Sistemas de pago	CF254	structure	Liquidity in the payment system
+21	Sistemas de pago de bajo valor	CF282	structure	Checks 1/
+21	Sistemas de pago de bajo valor	CF256	structure	Number of credit and debit cards 2/
+21	Sistemas de pago de bajo valor	CF873	structure	Operations with cards processed by switches 3/
+21	Sistemas de pago de bajo valor	CF888	structure	Amount operated through cards
+21	Sistemas de pago de bajo valor	CF914	structure	Amount operated through cards
+21	Sistemas de pago de bajo valor	CF889	structure	Number of transactions operated through cards
+21	Sistemas de pago de bajo valor	CF915	structure	Number of transactions operated through cards
+21	Sistemas de pago de bajo valor	CF262	structure	Operations in ATMs
+21	Sistemas de pago de bajo valor	CF266	structure	Number of ATMs by state
+21	Sistemas de pago de bajo valor	CF268	structure	Operations in POS
+21	Sistemas de pago de bajo valor	CF621	structure	Operations in POS from Electronic Commerce 6/
+21	Sistemas de pago de bajo valor	CF272	structure	Number of POS by state
+21	Sistemas de pago de bajo valor	CF258	structure	Transfers by mean of access 7/
+21	Sistemas de pago de bajo valor	CF620	structure	Same-day interbank transfers by amount operated (SPEI) II/
+21	Sistemas de pago de bajo valor	CF890	structure	Amount of person to person payments- SPEI
+21	Sistemas de pago de bajo valor	CF891	structure	Number of person to person payments - SPEI
+21	Sistemas de pago de bajo valor	CF818	structure	Daily information
+21	Sistemas de pago de bajo valor	CF819	structure	Annual information in court per hour
+21	Sistemas de pago de bajo valor	CF820	structure	Annual information per participant
+21	Sistemas de pago de bajo valor	CF816	structure	Daily information
+21	Sistemas de pago de bajo valor	CF817	structure	Annual information per participant
+21	Sistemas de pago de bajo valor	CF286	structure	Direct debits 8/
+21	Sistemas de pago de bajo valor	CF358	structure	International operations 9/
+21	Sistemas de pago de bajo valor	CF274	structure	Swift 10/
+21	Sistemas de pago de bajo valor	CF311	structure	Directo a México 11/
+21	Sistemas de pago de bajo valor	CF881	structure	Validated Accounts
+21	Sistemas de pago de bajo valor	CF882	structure	Accounts that have realized at least one transaction
+21	Sistemas de pago de bajo valor	CF883	structure	Mobile devices of the participants enrolled in CoDi
+21	Sistemas de pago de bajo valor	CF884	structure	Transactions realized through CoDi
+21	Sistemas de pago de bajo valor	CF885	structure	Amount transferred through CoDi
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA769	analytic	Revenues associated with the exploration of hydrocarbons (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA712	analytic	Volume produced from contracts and entitlements by type of hydrocarbon (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA770	analytic	Revenues associated with the production of hydrocarbons (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA357	analytic	Summary of the information of hydrocarbon exploration and extraction contracts
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA272	analytic	Revenues earned by the Mexican State for the payment of contractual fees for the exploration phase
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA405	analytic	Origins and destinations of the Mexican State oil revenues managed by the FMP
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA466	analytic	Volume of hydrocarbons produced, production sharing contracts (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA467	analytic	Volume of hydrocarbons produced, production sharing contracts (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA468	analytic	Volume of hydrocarbons delivered at the measurement point (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA469	analytic	Volume of hydrocarbons commercialized (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA470	analytic	Average contractual price of hydrocarbons
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA471	analytic	Determination of considerations in kind for production sharing contracts
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA472	analytic	Revenues from the commercialization of Hydrocarbons and payments to the Mexican State trader (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA361	analytic	Investment amounts reported by contractors for cost recovery
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA273	analytic	Contractual fee for the exploration phase of contract RF-C001-2015-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA358	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C001-2015-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA274	analytic	Contractual fee for the exploration phase of contract RF-C002-2015-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA359	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C002-2015-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA653	analytic	Volume of hydrocarbons produced, production sharing contract RF-C003-2015-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA652	analytic	Volume of hydrocarbons produced, production sharing contract RF-C003-2015-003 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA654	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C003-2015-003 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA655	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C003-2015-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA656	analytic	Contractual price of hydrocarbons, production sharing contract RF-C003-2015-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA275	analytic	Contractual fee for the exploration phase of contract RF-C003-2015-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA657	analytic	Determination of the considerations in kind for production sharing contract RF-C003-2015-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA722	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA658	analytic	Revenues from the commercialization of Mexican State liquid hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA659	analytic	Revenues from the commercialization of Mexican State gaseous hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA360	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C003-2015-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA733	analytic	Volume of hydrocarbons produced, production sharing contract RF-C004-2016-001 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA734	analytic	Volume of hydrocarbons produced, production sharing contract RF-C004-2016-001 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA735	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C004-2016-001 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA731	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C004-2016-001 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA730	analytic	Contractual price of hydrocarbons, production sharing contract RF-C004-2016-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA276	analytic	Contractual fee for the exploration phase of contract RF-C004-2016-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA729	analytic	Determination of the considerations in kind for production sharing contract RF-C004-2016-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA732	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA404	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C004-2016-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA702	analytic	Volume of hydrocarbons produced, production sharing contract RF-C005-2016-002 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA703	analytic	Volume of hydrocarbons produced, production sharing contract RF-C005-2016-002 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA704	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C005-2016-002 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA705	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C005-2016-002 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA706	analytic	Contractual price of hydrocarbons, production sharing contract RF-C005-2016-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA277	analytic	Contractual fee for the exploration phase of contract RF-C005-2016-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA707	analytic	Determination of the considerations in kind for production sharing contract RF-C005-2016-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA723	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA708	analytic	Revenues from the commercialization of Mexican State liquid hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA709	analytic	Revenues from the commercialization of Mexican State gaseous hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA376	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C005-2016-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA455	analytic	Contractual fee for the exploration phase of contract RF-C003-2017-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA619	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C003-2017-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA456	analytic	Contractual fee for the exploration phase of contract RF-C033-2017-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA660	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C033-2017-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA457	analytic	Contractual fee for the exploration phase of contract RF-C034-2017-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA620	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C034-2017-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA458	analytic	Contractual fee for the exploration phase of contract RF-C035-2017-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA621	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C035-2017-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA459	analytic	Contractual fee for the exploration phase of contract RF-C036-2017-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA622	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C036-2017-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA460	analytic	Contractual fee for the exploration phase of contract RF-C037-2017-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA623	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C037-2017-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA461	analytic	Contractual fee for the exploration phase of contract RF-C038-2017-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA624	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C038-2017-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA462	analytic	Contractual fee for the exploration phase of contract RF-C039-2017-017
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA625	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C039-2017-017
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA463	analytic	Contractual fee for the exploration phase of contract RF-C040-2017-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA626	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C040-2017-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA464	analytic	Contractual fee for the exploration phase of contract RF-C041-2017-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA627	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C041-2017-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA578	analytic	Contractual fee for the exploration phase of contract RF-C032-2018-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA696	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C032-2018-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA579	analytic	Contractual fee for the exploration phase of contract RF-C059-2018-039
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA713	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C059-2018-039
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA580	analytic	Contractual fee for the exploration phase of contract RF-C062-2018-025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA689	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C062-2018-025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA581	analytic	Contractual fee for the exploration phase of contract RF-C063-2018-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA760	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C063-2018-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA582	analytic	Contractual fee for the exploration phase of contract RF-C064-2018-027
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA693	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C064-2018-027
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA583	analytic	Contractual fee for the exploration phase of contract RF-C064-2018-028
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA694	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C064-2018-028
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA584	analytic	Contractual fee for the exploration phase of contract RF-C065-2018-029
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA695	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C065-2018-029
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA585	analytic	Contractual fee for the exploration phase of contract RF-C066-2018-030
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA697	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C066-2018-030
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA586	analytic	Contractual fee for the exploration phase of contract RF-C066-2018-038
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA698	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C066-2018-038
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA587	analytic	Contractual fee for the exploration phase of contract RF-C067-2018-031
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA688	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C067-2018-031
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA588	analytic	Contractual fee for the exploration phase of contract RF-C068-2018-032
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA699	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C068-2018-032
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA589	analytic	Contractual fee for the exploration phase of contract RF-C069-2018-033
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA761	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C069-2018-033
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA590	analytic	Contractual fee for the exploration phase of contract RF-C069-2018-034
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA762	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C069-2018-034
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA591	analytic	Contractual fee for the exploration phase of contract RF-C070-2018-035
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA692	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C070-2018-035
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA592	analytic	Contractual fee for the exploration phase of contract RF-C071-2018-036
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA715	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C071-2018-036
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA593	analytic	Contractual fee for the exploration phase of contract RF-C071-2018-037
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA714	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C071-2018-037
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA421	analytic	Volume of hydrocarbons produced, production sharing contract RF-C032-2017-010 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA422	analytic	Volume of hydrocarbons produced, production sharing contract RF-C032-2017-010 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA423	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C032-2017-010 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA424	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C032-2017-010 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA425	analytic	Contractual price of hydrocarbons, production sharing contract RF-C032-2017-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA420	analytic	Contractual fee for the exploration phase of contract RF-C032-2017-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA427	analytic	Determination of the considerations in kind for production sharing contract RF-C032-2017-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA718	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA451	analytic	Revenues from the commercialization of Mexican State liquid hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA465	analytic	Revenues from the commercialization of Mexican State gaseous hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA426	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C032-2017-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA494	analytic	Volume of hydrocarbons produced, production sharing contract RF-C049-2017-041 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA495	analytic	Volume of hydrocarbons produced, production sharing contract RF-C049-2017-041 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA496	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C049-2017-041 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA497	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C049-2017-041 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA498	analytic	Contractual price of hydrocarbons, production sharing contract RF-C049-2017-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA493	analytic	Contractual fee for the exploration phase of contract RF-C049-2017-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA499	analytic	Determination of the considerations in kind for production sharing contract RF-C049-2017-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA719	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA500	analytic	Revenues from the commercialization of Mexican State liquid hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA501	analytic	Revenues from the commercialization of Mexican State gaseous hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA628	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C049-2017-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA537	analytic	Volume of hydrocarbons produced, production sharing contract RF-C050-2018-002 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA538	analytic	Volume of hydrocarbons produced, production sharing contract RF-C050-2018-002 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA539	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C050-2018-002 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA540	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C050-2018-002 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA541	analytic	Contractual price of hydrocarbons, production sharing contract RF-C050-2018-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA543	analytic	Contractual fee for the exploration phase of contract RF-C050-2018-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA542	analytic	Determination of the considerations in kind for production sharing contract RF-C050-2018-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA720	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA558	analytic	Revenues from the commercialization of Mexican State liquid hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA559	analytic	Revenues from the commercialization of Mexican State gaseous hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA618	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C050-2018-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA595	analytic	Volume of hydrocarbons produced, production sharing contract RF-C072-2018-040 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA596	analytic	Volume of hydrocarbons produced, production sharing contract RF-C072-2018-040 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA597	analytic	Volume of hydrocarbons delivered at the measurement point for production sharing contract RF-C072-2018-040 (monthly flow
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA598	analytic	Volume of hydrocarbons commercialized, production sharing contract RF-C072-2018-040 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA599	analytic	Contractual price of hydrocarbons, production sharing contract RF-C072-2018-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA594	analytic	Contractual fee for the exploration phase of contract RF-C072-2018-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA600	analytic	Determination of the considerations in kind for production sharing contract RF-C072-2018-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA721	analytic	Revenues from the commercialization of Mexican State hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA609	analytic	Revenues from the commercialization of Mexican State liquid hydrocarbons and payments to the trader related to
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA668	analytic	Investment amounts reported by the contractor for cost recovery of contract RF-C072-2018-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA354	analytic	Volume of hydrocarbons produced, license contracts (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA392	analytic	Volume of hydrocarbons produced, license contracts (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA355	analytic	Volume of hydrocarbons commercialized (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA356	analytic	Average contractual price of hydrocarbons
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA353	analytic	Revenues associated with the production of hydrocarbons (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA610	analytic	Investment amounts reported by license contractors
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA301	analytic	Volume of hydrocarbons produced, license contract RF-C006-2016-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA377	analytic	Volume of hydrocarbons produced, license contract RF-C006-2016-003 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA314	analytic	Volume of hydrocarbons commercialized, license contract RF-C006-2016-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA327	analytic	Contractual price of hydrocarbons, license contract RF-C006-2016-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA282	analytic	Contractual fee for the exploration phase of contract RF-C006-2016-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA340	analytic	Revenues associated with the production of hydrocarbons from contract RF-C006-2016-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA428	analytic	Investment amounts reported by the contractor of contract RF-C006-2016-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA302	analytic	Volume of hydrocarbons produced, license contract RF-C007-2016-004 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA378	analytic	Volume of hydrocarbons produced, license contract RF-C007-2016-004 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA315	analytic	Volume of hydrocarbons commercialized, license contract RF-C007-2016-004 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA328	analytic	Contractual price of hydrocarbons, license contract RF-C007-2016-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA283	analytic	Contractual fee for the exploration phase of contract RF-C007-2016-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA341	analytic	Revenues associated with the production of hydrocarbons from contract RF-C007-2016-004 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA429	analytic	Investment amounts reported by the contractor of contract RF-C007-2016-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA442	analytic	Investment amounts reported by the contractor of contract RF-C007-2016-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA362	analytic	Contractual fee for the exploration phase of contract RF-C007-2016-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA443	analytic	Investment amounts reported by the contractor of contract RF-C008-2016-005
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA284	analytic	Contractual fee for the exploration phase of contract RF-C008-2016-005
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA444	analytic	Investment amounts reported by the contractor of contract RF-C009-2016-006
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA285	analytic	Contractual fee for the exploration phase of contract RF-C009-2016-006
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA445	analytic	Investment amounts reported by the contractor of contract RF-C010-2016-007
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA286	analytic	Contractual fee for the exploration phase of contract RF-C010-2016-007
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA446	analytic	Investment amounts reported by the contractor of contract RF-C011-2016-008
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA287	analytic	Contractual fee for the exploration phase of contract RF-C011-2016-008
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA447	analytic	Investment amounts reported by the contractor of contract RF-C012-2016-009
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA288	analytic	Contractual fee for the exploration phase of contract RF-C012-2016-009
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA303	analytic	Volume of hydrocarbons produced, license contract RF-C013-2016-010 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA379	analytic	Volume of hydrocarbons produced, license contract RF-C013-2016-010 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA316	analytic	Volume of hydrocarbons commercialized, license contract RF-C013-2016-010 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA329	analytic	Contractual price of hydrocarbons, license contract RF-C013-2016-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA289	analytic	Contractual fee for the exploration phase of contract RF-C013-2016-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA342	analytic	Revenues associated with the production of hydrocarbons from contract RF-C013-2016-010 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA430	analytic	Investment amounts reported by the contractor of contract RF-C013-2016-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA304	analytic	Volume of hydrocarbons produced, license contract RF-C013-2016-011 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA380	analytic	Volume of hydrocarbons produced, license contract RF-C013-2016-011 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA317	analytic	Volume of hydrocarbons commercialized, license contract RF-C013-2016-011 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA330	analytic	Contractual price of hydrocarbons, license contract RF-C013-2016-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA290	analytic	Contractual fee for the exploration phase of contract RF-C013-2016-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA343	analytic	Revenues associated with the production of hydrocarbons from contract RF-C013-2016-011 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA431	analytic	Investment amounts reported by the contractor of contract RF-C013-2016-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA305	analytic	Volume of hydrocarbons produced, license contract RF-C014-2016-012 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA381	analytic	Volume of hydrocarbons produced, license contract RF-C014-2016-012 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA318	analytic	Volume of hydrocarbons commercialized, license contract RF-C014-2016-012 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA331	analytic	Contractual price of hydrocarbons, license contract RF-C014-2016-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA291	analytic	Contractual fee for the exploration phase of contract RF-C014-2016-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA344	analytic	Revenues associated with the production of hydrocarbons from contract RF-C014-2016-012 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA432	analytic	Investment amounts reported by the contractor of contract RF-C014-2016-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA306	analytic	Volume of hydrocarbons produced, license contract RF-C014-2016-013 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA382	analytic	Volume of hydrocarbons produced, license contract RF-C014-2016-013 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA319	analytic	Volume of hydrocarbons commercialized, license contract RF-C014-2016-013 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA332	analytic	Contractual price of hydrocarbons, license contract RF-C014-2016-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA292	analytic	Contractual fee for the exploration phase of contract RF-C014-2016-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA345	analytic	Revenues associated with the production of hydrocarbons from contract RF-C014-2016-013 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA433	analytic	Investment amounts reported by the contractor of contract RF-C014-2016-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA307	analytic	Volume of hydrocarbons produced, license contract RF-C014-2016-014 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA383	analytic	Volume of hydrocarbons produced, license contract RF-C014-2016-014 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA320	analytic	Volume of hydrocarbons commercialized, license contract RF-C014-2016-014 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA333	analytic	Contractual price of hydrocarbons, license contract RF-C014-2016-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA293	analytic	Contractual fee for the exploration phase of contract RF-C014-2016-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA346	analytic	Revenues associated with the production of hydrocarbons from contract RF-C014-2016-014 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA434	analytic	Investment amounts reported by the contractor of contract RF-C014-2016-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA363	analytic	Contractual fee for the exploration phase of contract RF-C014-2016-027
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA308	analytic	Volume of hydrocarbons produced, license contract RF-C015-2016-015 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA384	analytic	Volume of hydrocarbons produced, license contract RF-C015-2016-015 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA321	analytic	Volume of hydrocarbons commercialized, license contract RF-C015-2016-015 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA334	analytic	Contractual price of hydrocarbons, license contract RF-C015-2016-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA294	analytic	Contractual fee for the exploration phase of contract RF-C015-2016-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA347	analytic	Revenues associated with the production of hydrocarbons from contract RF-C015-2016-015 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA435	analytic	Investment amounts reported by the contractor of contract RF-C015-2016-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA309	analytic	Volume of hydrocarbons produced, license contract RF-C015-2016-016 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA385	analytic	Volume of hydrocarbons produced, license contract RF-C015-2016-016 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA322	analytic	Volume of hydrocarbons commercialized, license contract RF-C015-2016-016 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA335	analytic	Contractual price of hydrocarbons, license contract RF-C015-2016-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA295	analytic	Contractual fee for the exploration phase of contract RF-C015-2016-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA348	analytic	Revenues associated with the production of hydrocarbons from contract RF-C015-2016-016 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA436	analytic	Investment amounts reported by the contractor of contract RF-C015-2016-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA629	analytic	Investment amounts reported by the contractor of contract RF-C016-2016-017
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA296	analytic	Contractual fee for the exploration phase of contract RF-C016-2016-017
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA310	analytic	Volume of hydrocarbons produced, license contract RF-C017-2016-018 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA386	analytic	Volume of hydrocarbons produced, license contract RF-C017-2016-018 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA323	analytic	Volume of hydrocarbons commercialized, license contract RF-C017-2016-018 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA336	analytic	Contractual price of hydrocarbons, license contract RF-C017-2016-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA297	analytic	Contractual fee for the exploration phase of contract RF-C017-2016-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA349	analytic	Revenues associated with the production of hydrocarbons from contract RF-C017-2016-018 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA437	analytic	Investment amounts reported by the contractor of contract RF-C017-2016-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA311	analytic	Volume of hydrocarbons produced, license contract RF-C018-2016-019 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA387	analytic	Volume of hydrocarbons produced, license contract RF-C018-2016-019 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA324	analytic	Volume of hydrocarbons commercialized, license contract RF-C018-2016-019 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA337	analytic	Contractual price of hydrocarbons, license contract RF-C018-2016-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA298	analytic	Contractual fee for the exploration phase of contract RF-C018-2016-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA350	analytic	Revenues associated with the production of hydrocarbons from contract RF-C018-2016-019 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA438	analytic	Investment amounts reported by the contractor of contract RF-C018-2016-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA312	analytic	Volume of hydrocarbons produced, license contract RF-C019-2016-020 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA388	analytic	Volume of hydrocarbons produced, license contract RF-C019-2016-020 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA325	analytic	Volume of hydrocarbons commercialized, license contract RF-C019-2016-020 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA338	analytic	Contractual price of hydrocarbons, license contract RF-C019-2016-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA299	analytic	Contractual fee for the exploration phase of contract RF-C019-2016-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA351	analytic	Revenues associated with the production of hydrocarbons from contract RF-C019-2016-020 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA439	analytic	Investment amounts reported by the contractor of contract RF-C019-2016-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA313	analytic	Volume of hydrocarbons produced, license contract RF-C020-2016-021 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA389	analytic	Volume of hydrocarbons produced, license contract RF-C020-2016-021 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA326	analytic	Volume of hydrocarbons commercialized, license contract RF-C020-2016-021 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA339	analytic	Contractual price of hydrocarbons, license contract RF-C020-2016-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA300	analytic	Contractual fee for the exploration phase of contract RF-C020-2016-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA352	analytic	Revenues associated with the production of hydrocarbons from contract RF-C020-2016-021 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA440	analytic	Investment amounts reported by the contractor of contract RF-C020-2016-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA747	analytic	Volume of hydrocarbons produced, license contract RF-C021-2016-022 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA748	analytic	Volume of hydrocarbons produced, license contract RF-C021-2016-022 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA750	analytic	Volume of hydrocarbons commercialized, license contract RF-C021-2016-022 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA749	analytic	Contractual price of hydrocarbons, license contract RF-C021-2016-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA364	analytic	Contractual fee for the exploration phase of contract RF-C021-2016-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA751	analytic	Revenues associated with the production of hydrocarbons from contract RF-C021-2016-022 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA630	analytic	Investment amounts reported by the contractor of contract RF-C021-2016-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA368	analytic	Volume of hydrocarbons produced, license contract RF-C022-2016-023 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA390	analytic	Volume of hydrocarbons produced, license contract RF-C022-2016-023 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA370	analytic	Volume of hydrocarbons commercialized, license contract RF-C022-2016-023 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA372	analytic	Contractual price of hydrocarbons, license contract RF-C022-2016-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA365	analytic	Contractual fee for the exploration phase of contract RF-C022-2016-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA374	analytic	Revenues associated with the production of hydrocarbons from contract RF-C022-2016-023 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA448	analytic	Investment amounts reported by the contractor of contract RF-C022-2016-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA369	analytic	Volume of hydrocarbons produced, license contract RF-C023-2016-024 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA391	analytic	Volume of hydrocarbons produced, license contract RF-C023-2016-024 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA371	analytic	Volume of hydrocarbons commercialized, license contract RF-C023-2016-024 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA373	analytic	Contractual price of hydrocarbons, license contract RF-C023-2016-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA366	analytic	Contractual fee for the exploration phase of contract RF-C023-2016-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA375	analytic	Revenues associated with the production of hydrocarbons from contract RF-C023-2016-024 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA449	analytic	Investment amounts reported by the contractor of contract RF-C023-2016-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA450	analytic	Investment amounts reported by the contractor of contract RF-C024-2016-025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA367	analytic	Contractual fee for the exploration phase of contract RF-C024-2016-025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA661	analytic	Investment amounts reported by the contractor of contract RF-C026-2017-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA412	analytic	Contractual fee for the exploration phase of contract RF-C026-2017-002
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA651	analytic	Investment amounts reported by the contractor of contract RF-C027-2017-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA413	analytic	Contractual fee for the exploration phase of contract RF-C027-2017-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA650	analytic	Investment amounts reported by the contractor of contract RF-C027-2017-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA414	analytic	Contractual fee for the exploration phase of contract RF-C027-2017-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA645	analytic	Investment amounts reported by the contractor of contract RF-C028-2017-005
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA415	analytic	Contractual fee for the exploration phase of contract RF-C028-2017-005
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA647	analytic	Investment amounts reported by the contractor of contract RF-C029-2017-006
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA416	analytic	Contractual fee for the exploration phase of contract RF-C029-2017-006
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA632	analytic	Investment amounts reported by the contractor of contract RF-C030-2017-007
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA417	analytic	Contractual fee for the exploration phase of contract RF-C030-2017-007
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA648	analytic	Investment amounts reported by the contractor of contract RF-C030-2017-008
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA418	analytic	Contractual fee for the exploration phase of contract RF-C030-2017-008
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA649	analytic	Investment amounts reported by the contractor of contract RF-C031-2017-009
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA419	analytic	Contractual fee for the exploration phase of contract RF-C031-2017-009
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA633	analytic	Investment amounts reported by the contractor of contract RF-C042-2017-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA473	analytic	Contractual fee for the exploration phase of contract RF-C042-2017-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA679	analytic	Investment amounts reported by the contractor of contract RF-C042-2017-034
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA474	analytic	Contractual fee for the exploration phase of contract RF-C042-2017-034
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA741	analytic	Investment amounts reported by the contractor of contract RF-C042-2017-035
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA475	analytic	Contractual fee for the exploration phase of contract RF-C042-2017-035
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA502	analytic	Volume of hydrocarbons produced, license contract RF-C042-2017-036 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA509	analytic	Volume of hydrocarbons produced, license contract RF-C042-2017-036 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA516	analytic	Volume of hydrocarbons commercialized, license contract RF-C042-2017-036 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA523	analytic	Contractual price of hydrocarbons, license contract RF-C042-2017-036
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA476	analytic	Contractual fee for the exploration phase of contract RF-C042-2017-036
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA530	analytic	Revenues associated with the production of hydrocarbons from contract RF-C042-2017-036 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA640	analytic	Investment amounts reported by the contractor of contract RF-C042-2017-036
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA503	analytic	Volume of hydrocarbons produced, license contract RF-C042-2017-037 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA510	analytic	Volume of hydrocarbons produced, license contract RF-C042-2017-037 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA517	analytic	Volume of hydrocarbons commercialized, license contract RF-C042-2017-037 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA524	analytic	Contractual price of hydrocarbons, license contract RF-C042-2017-037
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA477	analytic	Contractual fee for the exploration phase of contract RF-C042-2017-037
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA531	analytic	Revenues associated with the production of hydrocarbons from contract RF-C042-2017-037 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA631	analytic	Investment amounts reported by the contractor of contract RF-C042-2017-037
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA504	analytic	Volume of hydrocarbons produced, license contract RF-C042-2017-038 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA511	analytic	Volume of hydrocarbons produced, license contract RF-C042-2017-038 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA518	analytic	Volume of hydrocarbons commercialized, license contract RF-C042-2017-038 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA525	analytic	Contractual price of hydrocarbons, license contract RF-C042-2017-038
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA478	analytic	Contractual fee for the exploration phase of contract RF-C042-2017-038
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA532	analytic	Revenues associated with the production of hydrocarbons from contract RF-C042-2017-038 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA678	analytic	Investment amounts reported by the contractor of contract RF-C042-2017-038
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA506	analytic	Volume of hydrocarbons produced, license contract RF-C043-2017-040 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA513	analytic	Volume of hydrocarbons produced, license contract RF-C043-2017-040 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA520	analytic	Volume of hydrocarbons commercialized, license contract RF-C043-2017-040 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA527	analytic	Contractual price of hydrocarbons, license contract RF-C043-2017-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA481	analytic	Contractual fee for the exploration phase of contract RF-C043-2017-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA534	analytic	Revenues associated with the production of hydrocarbons from contract RF-C043-2017-040 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA643	analytic	Investment amounts reported by the contractor of contract RF-C043-2017-040
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA505	analytic	Volume of hydrocarbons produced, license contract RF-C043-2017-022 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA512	analytic	Volume of hydrocarbons produced, license contract RF-C043-2017-022 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA519	analytic	Volume of hydrocarbons commercialized, license contract RF-C043-2017-022 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA526	analytic	Contractual price of hydrocarbons, license contract RF-C043-2017-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA479	analytic	Contractual fee for the exploration phase of contract RF-C043-2017-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA533	analytic	Revenues associated with the production of hydrocarbons from contract RF-C043-2017-022 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA641	analytic	Investment amounts reported by the contractor of contract RF-C043-2017-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA642	analytic	Investment amounts reported by the contractor of contract RF-C043-2017-039
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA480	analytic	Contractual fee for the exploration phase of contract RF-C043-2017-039
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA644	analytic	Investment amounts reported by the contractor of contract RF-C044-2017-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA483	analytic	Contractual fee for the exploration phase of contract RF-C044-2017-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA635	analytic	Investment amounts reported by the contractor of contract RF-C044-2017-030
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA482	analytic	Contractual fee for the exploration phase of contract RF-C044-2017-030
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA742	analytic	Volume of hydrocarbons produced, license contract RF-C045-2017-024 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA743	analytic	Volume of hydrocarbons produced, license contract RF-C045-2017-024 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA745	analytic	Volume of hydrocarbons commercialized, license contract RF-C045-2017-024 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA744	analytic	Contractual price of hydrocarbons, license contract RF-C045-2017-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA484	analytic	Contractual fee for the exploration phase of contract RF-C045-2017-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA746	analytic	Revenues associated with the production of hydrocarbons from contract RF-C045-2017-024 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA636	analytic	Investment amounts reported by the contractor of contract RF-C045-2017-024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA507	analytic	Volume of hydrocarbons produced, license contract RF-C045-2017-026 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA514	analytic	Volume of hydrocarbons produced, license contract RF-C045-2017-026 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA521	analytic	Volume of hydrocarbons commercialized, license contract RF-C045-2017-026 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA528	analytic	Contractual price of hydrocarbons, license contract RF-C045-2017-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA485	analytic	Contractual fee for the exploration phase of contract RF-C045-2017-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA535	analytic	Revenues associated with the production of hydrocarbons from contract RF-C045-2017-026 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA637	analytic	Investment amounts reported by the contractor of contract RF-C045-2017-026
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA677	analytic	Investment amounts reported by the contractor of contract RF-C045-2017-031
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA486	analytic	Contractual fee for the exploration phase of contract RF-C045-2017-031
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA676	analytic	Investment amounts reported by the contractor of contract RF-C045-2017-032
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA487	analytic	Contractual fee for the exploration phase of contract RF-C045-2017-032
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA508	analytic	Volume of hydrocarbons produced, license contract RF-C045-2017-033 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA515	analytic	Volume of hydrocarbons produced, license contract RF-C045-2017-033 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA522	analytic	Volume of hydrocarbons commercialized, license contract RF-C045-2017-033 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA529	analytic	Contractual price of hydrocarbons, license contract RF-C045-2017-033
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA488	analytic	Contractual fee for the exploration phase of contract RF-C045-2017-033
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA536	analytic	Revenues associated with the production of hydrocarbons from contract RF-C045-2017-033 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA638	analytic	Investment amounts reported by the contractor of contract RF-C045-2017-033
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA701	analytic	Investment amounts reported by the contractor of contract RF-C046-2017-025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA489	analytic	Contractual fee for the exploration phase of contract RF-C046-2017-025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA700	analytic	Investment amounts reported by the contractor of contract RF-C046-2017-029
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA490	analytic	Contractual fee for the exploration phase of contract RF-C046-2017-029
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA639	analytic	Investment amounts reported by the contractor of contract RF-C047-2017-027
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA491	analytic	Contractual fee for the exploration phase of contract RF-C047-2017-027
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA634	analytic	Investment amounts reported by the contractor of contract RF-C048-2017-028
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA492	analytic	Contractual fee for the exploration phase of contract RF-C048-2017-028
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA771	analytic	Volume of hydrocarbons produced, license contract RF-C052-2018-004 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA772	analytic	Volume of hydrocarbons produced, license contract RF-C052-2018-004 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA774	analytic	Volume of hydrocarbons commercialized, license contract RF-C052-2018-004 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA773	analytic	Contractual price of hydrocarbons, license contract RF-C052-2018-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA551	analytic	Contractual fee for the exploration phase of contract RF-C052-2018-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA775	analytic	Revenues associated with the production of hydrocarbons from contract RF-C052-2018-004 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA675	analytic	Investment amounts reported by the contractor of contract RF-C052-2018-004
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA681	analytic	Investment amounts reported by the contractor of contract RF-C026-2018-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA552	analytic	Contractual fee for the exploration phase of contract RF-C026-2018-021
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA687	analytic	Investment amounts reported by the contractor of contract RF-C032-2018-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA560	analytic	Contractual fee for the exploration phase of contract RF-C032-2018-022
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA680	analytic	Investment amounts reported by the contractor of contract RF-C032-2018-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA561	analytic	Contractual fee for the exploration phase of contract RF-C032-2018-023
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA674	analytic	Investment amounts reported by the contractor of contract RF-C053-2018-005
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA562	analytic	Contractual fee for the exploration phase of contract RF-C053-2018-005
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA673	analytic	Investment amounts reported by the contractor of contract RF-C053-2018-006
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA563	analytic	Contractual fee for the exploration phase of contract RF-C053-2018-006
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA672	analytic	Investment amounts reported by the contractor of contract RF-C053-2018-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA564	analytic	Contractual fee for the exploration phase of contract RF-C053-2018-012
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA666	analytic	Investment amounts reported by the contractor of contract RF-C053-2018-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA565	analytic	Contractual fee for the exploration phase of contract RF-C053-2018-013
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA667	analytic	Investment amounts reported by the contractor of contract RF-C054-2018-007
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA566	analytic	Contractual fee for the exploration phase of contract RF-C054-2018-007
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA682	analytic	Investment amounts reported by the contractor of contract RF-C054-2018-008
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA567	analytic	Contractual fee for the exploration phase of contract RF-C054-2018-008
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA683	analytic	Investment amounts reported by the contractor of contract RF-C054-2018-009
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA568	analytic	Contractual fee for the exploration phase of contract RF-C054-2018-009
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA669	analytic	Investment amounts reported by the contractor of contract RF-C054-2018-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA569	analytic	Contractual fee for the exploration phase of contract RF-C054-2018-014
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA670	analytic	Investment amounts reported by the contractor of contract RF-C055-2018-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA570	analytic	Contractual fee for the exploration phase of contract RF-C055-2018-010
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA671	analytic	Investment amounts reported by the contractor of contract RF-C056-2018-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA571	analytic	Contractual fee for the exploration phase of contract RF-C056-2018-011
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA662	analytic	Investment amounts reported by the contractor of contract RF-C057-2018-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA572	analytic	Contractual fee for the exploration phase of contract RF-C057-2018-015
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA663	analytic	Investment amounts reported by the contractor of contract RF-C058-2018-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA573	analytic	Contractual fee for the exploration phase of contract RF-C058-2018-016
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA664	analytic	Investment amounts reported by the contractor of contract RF-C059-2018-017
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA577	analytic	Contractual fee for the exploration phase of contract RF-C059-2018-017
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA665	analytic	Investment amounts reported by the contractor of contract RF-C060-2018-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA574	analytic	Contractual fee for the exploration phase of contract RF-C060-2018-018
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA686	analytic	Investment amounts reported by the contractor of contract RF-C060-2018-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA575	analytic	Contractual fee for the exploration phase of contract RF-C060-2018-019
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA685	analytic	Investment amounts reported by the contractor of contract RF-C061-2018-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA576	analytic	Contractual fee for the exploration phase of contract RF-C061-2018-020
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA603	analytic	Volume of hydrocarbons produced, license contract RF-C073-2018-041 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA604	analytic	Volume of hydrocarbons produced, license contract RF-C073-2018-041 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA605	analytic	Volume of hydrocarbons commercialized, license contract RF-C073-2018-041 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA606	analytic	Contractual price of hydrocarbons, license contract RF-C073-2018-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA608	analytic	Contractual fee for the exploration phase of contract RF-C073-2018-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA607	analytic	Revenues associated with the production of hydrocarbons from contract RF-C073-2018-041 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA716	analytic	Investment amounts reported by the contractor of contract RF-C073-2018-041
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA646	analytic	Investment amounts reported by the contractor of contract RF-C025-2017-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA411	analytic	Contractual fee for the exploration phase of contract RF-C025-2017-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA545	analytic	Volume of hydrocarbons produced, license contract RF-C036-2018-001 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA546	analytic	Volume of hydrocarbons produced, license contract RF-C036-2018-001 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA547	analytic	Volume of hydrocarbons commercialized, license contract RF-C036-2018-001 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA548	analytic	Contractual price of hydrocarbons, license contract RF-C036-2018-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA544	analytic	Contractual fee for the exploration phase of contract RF-C036-2018-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA549	analytic	Revenues associated with the production of hydrocarbons from contract RF-C036-2018-001 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA691	analytic	Investment amounts reported by the contractor of contract RF-C036-2018-001
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA553	analytic	Volume of hydrocarbons produced, license contract RF-C051-2018-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA554	analytic	Volume of hydrocarbons produced, license contract RF-C051-2018-003 (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA555	analytic	Volume of hydrocarbons commercialized, license contract RF-C051-2018-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA556	analytic	Contractual price of hydrocarbons, license contract RF-C051-2018-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA550	analytic	Contractual fee for the exploration phase of contract RF-C051-2018-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA557	analytic	Revenues associated with the production of hydrocarbons from contract RF-C051-2018-003 (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA690	analytic	Investment amounts reported by the contractor of contract RF-C051-2018-003
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA278	analytic	Monthly flows, figures in million pesos
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA279	analytic	Cumulative annual figures as percentage of GDP
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA776	analytic	Summary of entitlement information for hydrocarbon exploration and extraction (effective as of 2025)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA260	analytic	Summary of entitlement information for hydrocarbon exploration and extraction (effective until 2024)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA261	analytic	Volume of hydrocarbons produced, entitlements (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA262	analytic	Volume of hydrocarbons produced, entitlements (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA263	analytic	Volume of hydrocarbons produced, entitlements disaggregated by area (monthly flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA264	analytic	Volume of hydrocarbons produced, entitlements disaggregated by area (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA265	analytic	Revenue from commercialization
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA266	analytic	Revenues from commercialization of entitlements disaggregated by area
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA778	analytic	Fees effective as of 2025
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA779	analytic	Fees effective as of 2025 disaggregated by area
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA267	analytic	Fees effective until 2024
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA268	analytic	Fees effective until 2024 disaggregated by fiscal region
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA269	analytic	Amounts of investments, expenditure and costs reported by the Assignee
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA270	analytic	Amounts of investments, expenses and costs reported by the Assignee disaggregated by area
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA271	analytic	Income Tax (ISR) and tax credits
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA796	analytic	Annual return on the Assignee?s Oil Fee for Welfare (DEPEBI)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CA281	analytic	Annual return on the Assignee's Profit-Sharing Fee (DUC)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CN1	structure	Origins and destinations of the Mexican State oil revenues managed by the FMP
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CN2	structure	Revenues associated with the production of hydrocarbons from contracts
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CN3	structure	Volume of liquid hydrocarbons produced by contracts and entitlements (daily flows)
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CN4	structure	Statement of Financial Position
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CN5	structure	Statement of Activities
+25	Fondo Mexicano del Petróleo (Banxico como Fiduciario)	CN6	structure	Statement of Cash Flows
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CA797	analytic	Payment systems
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CA798	analytic	Securities Settlement Systems (SSS)
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CA799	analytic	Domestic card transactions
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CA800	analytic	Domestic electronic transactions
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CA801	analytic	International electronic transactions
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CA802	analytic	Checks
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF937	structure	Operational activities
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF949	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF872	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF944	structure	Operational activities
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF256	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF272	structure	Number of POS terminals by operating entity
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF621	structure	By e-commerce
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF958	structure	By Merchant Category Code (MCC)
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF953	structure	By Merchant Category Code (MCC)
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF954	structure	By institution
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF955	structure	By MCC and institution
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF939	structure	Weighted interchange fee
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF286	structure	Direct debits
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF945	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF950	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF951	structure	Amount range in mexican pesos
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF946	structure	Average daily volume
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF938	structure	Totals
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF960	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF952	structure	By participant
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF942	structure	Operational activities by institution
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF311	structure	Totals
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF948	structure	Physical checks
+27	Sistemas de Pagos e Infraestructuras de los Mercados Financieros	CF947	structure	Physical checks

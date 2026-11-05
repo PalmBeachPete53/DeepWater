@@ -1,0 +1,814 @@
+dataset	dataset_name	indicator_code	label
+PLFS	Periodic Labour Force Survey	1	LFPR (Labour Force Participation Rate, in per cent)
+PLFS	Periodic Labour Force Survey	2	WPR (Worker Population Ratio, in per cent)
+PLFS	Periodic Labour Force Survey	3	UR (Unemployment Rate, in per cent)
+PLFS	Periodic Labour Force Survey	4	Percentage distribution of workers
+PLFS	Periodic Labour Force Survey	6	Average wage/salary earnings (Rs. 0.00) during the preceding calendar month from regular wage/salaried employment
+PLFS	Periodic Labour Force Survey	7	Average wage earnings (Rs. 0.00) per day from casual labour work other than public works
+PLFS	Periodic Labour Force Survey	8	Average gross earnings (Rs. 0.00) during last 30 days from self-employment
+ISP	Index of Service Production	2024-25	2024-25 (current)
+ISP	Index of Service Production	1	Yearly
+ISP	Index of Service Production	2	Monthly
+NAS	National Accounts Statistics	1	Gross Value Added
+NAS	National Accounts Statistics	2	Net Taxes on Products
+NAS	National Accounts Statistics	3	Taxes on Products
+NAS	National Accounts Statistics	4	Subsidies on Products
+NAS	National Accounts Statistics	5	Gross Domestic Product
+NAS	National Accounts Statistics	6	Consumption of Fixed Capital
+NAS	National Accounts Statistics	7	Net Domestic Product
+NAS	National Accounts Statistics	8	Gross Capital Formation by Industry of Use
+NAS	National Accounts Statistics	9	Gross Fixed Capital Formation
+NAS	National Accounts Statistics	10	Private Final Consumption Expenditure
+NAS	National Accounts Statistics	11	Government Final Consumption Expenditure
+NAS	National Accounts Statistics	12	Change in Stock
+NAS	National Accounts Statistics	13	Valuables
+NAS	National Accounts Statistics	14	Export of Goods and Services
+NAS	National Accounts Statistics	15	Import of Goods and Services
+NAS	National Accounts Statistics	16	Primary Income Receivable Net From Row
+NAS	National Accounts Statistics	17	Gross National Income
+NAS	National Accounts Statistics	18	Other Current Transfers Net From Row
+NAS	National Accounts Statistics	19	Gross National Disposable Income
+NAS	National Accounts Statistics	20	Gross Saving
+NAS	National Accounts Statistics	21	GVA Growth Rate
+NAS	National Accounts Statistics	22	GDP Growth Rate
+NAS	National Accounts Statistics	23	Gross State Domestic Product
+NAS	National Accounts Statistics	24	Net State Domestic Product
+NAS	National Accounts Statistics	25	Per Capita Net State Domestic Product
+NAS	National Accounts Statistics	26	Gross State Domestic Product Growth Rate
+NAS	National Accounts Statistics	27	Net State Domestic Product Growth Rate
+NAS	National Accounts Statistics	28	Per Capita Net State Domestic Product Growth Rate
+NAS	National Accounts Statistics	29	Gross State Value Added
+NAS	National Accounts Statistics	30	Net State Value Added
+NAS	National Accounts Statistics	31	Per Capita Gross State Domestic Product (Rs.)
+NAS	National Accounts Statistics	33	Taxes on Products
+NAS	National Accounts Statistics	34	Subsidies on Products
+ENERGY	Energy Statistics	1	Energy Balance ( in KToE )
+ENERGY	Energy Statistics	2	Energy Balance ( in PetaJoules )
+AISHE	All India Survey on Higher Education	1	Number of Universities 
+AISHE	All India Survey on Higher Education	2	Number of Colleges
+AISHE	All India Survey on Higher Education	3	Estimated Student Enrolment 
+AISHE	All India Survey on Higher Education	4	Social Group-wise Enrolment
+AISHE	All India Survey on Higher Education	5	PWD & Minority Community-wise Enrolment
+AISHE	All India Survey on Higher Education	6	Social Group wise Gross Enrolment Ratio (GER)
+AISHE	All India Survey on Higher Education	7	Social Group wise Gender Parity Index (GPI)
+AISHE	All India Survey on Higher Education	8	Mode of Education wise Pupil Teacher Ratio (PTR) 
+AISHE	All India Survey on Higher Education	9	Number of Teachers
+ASUSE	Annual Survey of Unincorporated Enterprises	1	Estimated Number of Establishments Pursuing Mixed Activities
+ASUSE	Annual Survey of Unincorporated Enterprises	2	State/UT-wise Estimated Number of Establishments Pursuing Mixed Activities
+ASUSE	Annual Survey of Unincorporated Enterprises	3	Per 1000 Distribution of Establishments by Type of Ownership
+ASUSE	Annual Survey of Unincorporated Enterprises	4	State/UT-wise Per 1000 Distribution of Establishments by Type of Ownership
+ASUSE	Annual Survey of Unincorporated Enterprises	5	Per 1000 Distribution of Proprietary and Partnership Establishments by Level of General Education of Owner-Major Partner
+ASUSE	Annual Survey of Unincorporated Enterprises	6	Per 1000 Distribution of Prop. & Partnership Establishments by Social Group of Owner-Major Partner
+ASUSE	Annual Survey of Unincorporated Enterprises	7	State/UT-wise Per 1000 Distribution of Prop. & Partnership Establishments by Social Group of Owner-Major Partner
+ASUSE	Annual Survey of Unincorporated Enterprises	8	Per 1000 Distribution of Prop. & Partnership Estt. by Number of Other Economic Activities
+ASUSE	Annual Survey of Unincorporated Enterprises	9	State/UT-wise Number Per 1000 of Establishments Maintaining any Bank Account-Post Office Savings Bank Account
+ASUSE	Annual Survey of Unincorporated Enterprises	10	Per 1000 Distribution of Establishments by Type of Location 
+ASUSE	Annual Survey of Unincorporated Enterprises	11	State/UT-wise Per 1000 Distribution of Establishments by Type of Location
+ASUSE	Annual Survey of Unincorporated Enterprises	12	Per 1000 Distribution of Establishments by Nature of Operation
+ASUSE	Annual Survey of Unincorporated Enterprises	13	State/UT-wise Per 1000 Distribution of Establishments by Nature of Operation
+ASUSE	Annual Survey of Unincorporated Enterprises	14	Per 1000 Distribution of Establishments by Number of Months Operated During Last 365 Days
+ASUSE	Annual Survey of Unincorporated Enterprises	15	State/UT-wise Per 1000 Distribution of Establishments by Number of Months Operated During Last 365 Days
+ASUSE	Annual Survey of Unincorporated Enterprises	16	Per 1000 Distribution of Establishments by Number of Hours Normally Worked in a Day
+ASUSE	Annual Survey of Unincorporated Enterprises	17	State/UT-wise Per 1000 Distribution of Establishments by Number of Hours Normally Worked in a Day
+ASUSE	Annual Survey of Unincorporated Enterprises	18	Per 1000 distribution of establishments maintaining audited accounts 
+ASUSE	Annual Survey of Unincorporated Enterprises	19	Number of Per 1000 of Establishments which are NPIs (by type of major receipts) and non-NPIs
+ASUSE	Annual Survey of Unincorporated Enterprises	20	Number Per 1000 of Establishments Using Computers and Using Internet During Last 365 Days
+ASUSE	Annual Survey of Unincorporated Enterprises	21	State/UT-wise Number Per 1000 of Establishments Using Computers and Using Internet During Last 365 Days
+ASUSE	Annual Survey of Unincorporated Enterprises	22	Number Per 1000 of Establishments Registered Under Different Acts-Authorities
+ASUSE	Annual Survey of Unincorporated Enterprises	23	State/UT-wise Number Per 1000 of Establishments Registered Under Different Acts-Authorities
+ASUSE	Annual Survey of Unincorporated Enterprises	24	Per 1000 distribution of Establishments providing manufacturing/other services on contract 
+ASUSE	Annual Survey of Unincorporated Enterprises	25	State/UT-wise Estimated Number of Establishments Serving as Franchisee Outlet
+ASUSE	Annual Survey of Unincorporated Enterprises	26	Estimated Number of Workers by Nature of Employment and Gender
+ASUSE	Annual Survey of Unincorporated Enterprises	27	State/UT-wise Estimated Number of Workers by Nature of Employment and Gender
+ASUSE	Annual Survey of Unincorporated Enterprises	28	Estimated Number of Workers by Type of Workers
+ASUSE	Annual Survey of Unincorporated Enterprises	29	State/UT-wise Estimated Number of Workers by Type of Workers
+ASUSE	Annual Survey of Unincorporated Enterprises	30	Estimated Annual Emoluments (Rs.) Per Hired Worker
+ASUSE	Annual Survey of Unincorporated Enterprises	31	State/UT-wise Estimated Annual Emoluments (Rs.) Per Hired Worker
+ASUSE	Annual Survey of Unincorporated Enterprises	32	Estimated Annual Gross Value Added (GVA) Per Worker (Rs.)
+ASUSE	Annual Survey of Unincorporated Enterprises	33	State/UT-wise Estimated Annual Gross Value Added (GVA) Per Worker (Rs.)
+ASUSE	Annual Survey of Unincorporated Enterprises	34	Estimated Annual Gross Value Added (GVA) Per Establishment (Rs.)
+ASUSE	Annual Survey of Unincorporated Enterprises	35	State/UT-wise Estimated Annual Gross Value Added (GVA) Per Establishment (Rs.)
+ASUSE	Annual Survey of Unincorporated Enterprises	36	Estimated market value of land and fixed assets and outstanding loans per establishments (in Rs.) for each activity category
+ASUSE	Annual Survey of Unincorporated Enterprises	37	State/UT-wise estimated market value of land and fixed assets and outstanding loans per establishments (in Rs.) 
+ASUSE	Annual Survey of Unincorporated Enterprises	38	Number Per 1000 of Establishments Using Internet by Type of Its Use
+ASUSE	Annual Survey of Unincorporated Enterprises	39	Estimated Value of Key Characteristics by Number of Workers
+ASUSE	Annual Survey of Unincorporated Enterprises	56	Estimated number of establishments classified as MSME/non-MSME for each activity category
+ASUSE	Annual Survey of Unincorporated Enterprises	59	Percentage distribution of outstanding loan (as on last day of reference period) by source
+ASUSE	Annual Survey of Unincorporated Enterprises	60	Estimated number of establishments classified as MSME/non-MSME for each State/UT
+ASUSE	Annual Survey of Unincorporated Enterprises	40	Percentage of proprietary and partnership establishments
+ASUSE	Annual Survey of Unincorporated Enterprises	41	Percentage of hired worker establishments
+ASUSE	Annual Survey of Unincorporated Enterprises	42	Percentage of market establishments
+ASUSE	Annual Survey of Unincorporated Enterprises	46	Percentage Share of Working Owner
+ASUSE	Annual Survey of Unincorporated Enterprises	47	No. of establishments (in ’00)
+ASUSE	Annual Survey of Unincorporated Enterprises	48	No. of workers (in ’00)
+ASUSE	Annual Survey of Unincorporated Enterprises	49	Percentage Share of Hired worker
+ASUSE	Annual Survey of Unincorporated Enterprises	50	Percentage Share of Other Workers (including unpaid family members)
+GENDER	Gender Statistics	1	Trend in Population
+GENDER	Gender Statistics	2	Sex Ratio
+GENDER	Gender Statistics	3	Average Annual Growth Rate of Population
+GENDER	Gender Statistics	4	Percentage Distribution of Projected Population
+GENDER	Gender Statistics	5	Sex ratio in context of developmental planning
+GENDER	Gender Statistics	6	Sex Ratio at birth based on registered events
+GENDER	Gender Statistics	7	Sex ratio at birth for bigger States based on Sample Registration System
+GENDER	Gender Statistics	8	General Fertility Rate
+GENDER	Gender Statistics	9	Age-specific Fertility rate
+GENDER	Gender Statistics	10	Total Fertility Rate 
+GENDER	Gender Statistics	11	Percentage distribution of live births
+GENDER	Gender Statistics	12	Adolescent (15-19) Fertility Rates
+GENDER	Gender Statistics	13	Age Specific Fertility Rate by level of education of women
+GENDER	Gender Statistics	14	Women's Mean Age at Marriage
+GENDER	Gender Statistics	15	Year Wise Infant Mortality Rate
+GENDER	Gender Statistics	16	State/UT Wise Infant Mortality Rate
+GENDER	Gender Statistics	17	Under-Five Mortality Rates (U5MR)
+GENDER	Gender Statistics	18	Year Wise Life Expectancy at birth
+GENDER	Gender Statistics	19	State/UT wise Life Expectancy at birth
+GENDER	Gender Statistics	20	Life Expectation at age 60
+GENDER	Gender Statistics	21	Maternal Mortality Ratio
+GENDER	Gender Statistics	22	Maternity Care Indicators
+GENDER	Gender Statistics	23	Percentage of Births Attended by Skilled Health Personnel
+GENDER	Gender Statistics	24	Percentage of currently married women aged 15-49 years who use any modern method of family planning
+GENDER	Gender Statistics	25	Unmet Need for Family Planning 
+GENDER	Gender Statistics	26	Need for Family Planning Satisfied with Modern Methods(Proportion of Women)
+GENDER	Gender Statistics	27	Current tobacco use (15years or above)
+GENDER	Gender Statistics	28	Proportion of Adults who are Obese (BMI >= 30.0)
+GENDER	Gender Statistics	29	Number of new HIV infections per 1000 uninfected population
+GENDER	Gender Statistics	30	Number of PLHIV alive and on ART at the end of November 2025
+GENDER	Gender Statistics	31	Cases and Deaths due to Acute Diarrhoeal Diseases
+GENDER	Gender Statistics	50	Women undergone a screening test for cervical cancer and breast cancer (%)
+GENDER	Gender Statistics	51	Women who have comprehensive knowledge of HIV/AIDS (%)
+GENDER	Gender Statistics	52	Women whose Body Mass Index is below normal and who are overweight or obese 
+GENDER	Gender Statistics	53	Ayush Registered Practitioners (Doctors) 
+GENDER	Gender Statistics	54	Number of Registered Nurses 
+GENDER	Gender Statistics	55	Literacy Rates for persons aged 7 years and above
+GENDER	Gender Statistics	56	Gender Gap in Literacy Rate for persons of age 7 years and above
+GENDER	Gender Statistics	57	State/UT wise Gender Gap in Literacy Rate for persons of age 7 years and above
+GENDER	Gender Statistics	58	Literacy Rate of Youth in the Age Group of 15-24 Years
+GENDER	Gender Statistics	59	Percentage of persons able to read and write short simple statements
+GENDER	Gender Statistics	60	Gross Enrolment Ratio
+GENDER	Gender Statistics	61	Adjusted Net Enrolment Rate
+GENDER	Gender Statistics	62	Gender Parity Index (GPI) 
+GENDER	Gender Statistics	63	Gender Parity Index (GPI-As Per NEP Structure) 
+GENDER	Gender Statistics	64	Gender Parity Indices (GPI) in Higher Education
+GENDER	Gender Statistics	65	Enrolment at Under Graduate Level 
+GENDER	Gender Statistics	66	Enrolment at Ph.D., M.Phil. & Post Graduate Level 
+GENDER	Gender Statistics	67	Female per 100 Male Students in important Programmes at Under Graduate & Post Graduate Level - Regular Mode of Education
+GENDER	Gender Statistics	68	Average years completed in formal education (pre-primary or above)
+GENDER	Gender Statistics	69	Mean years of schooling in formal education (including pre-primary level of education)
+GENDER	Gender Statistics	70	Mean years of schooling in formal education (15 years and above)
+GENDER	Gender Statistics	71	Mean years of schooling in formal education (25 years and above)
+GENDER	Gender Statistics	72	Population(age 25 years & above) with at least secondary as the highest level of education successfully completed
+GENDER	Gender Statistics	73	Examination Result Level-wise Out-turn/Pass out in Higher Education 
+GENDER	Gender Statistics	74	Dropout Rate
+GENDER	Gender Statistics	77	Number of Female Teachers per 100 Male Teachers
+GENDER	Gender Statistics	78	Proportion of females among tertiary education teachers or professors
+GENDER	Gender Statistics	79	Number of Male & Female Teacher
+GENDER	Gender Statistics	80	Labour Force Participation Rate (LFPR) (in percent) in usual status (ps+ss) 
+GENDER	Gender Statistics	81	Labour Force Participation Rate for persons of all ages
+GENDER	Gender Statistics	82	Labour Force Participation Rate for persons aged 15 years & above
+GENDER	Gender Statistics	83	Worker Population Ratio for persons of all ages
+GENDER	Gender Statistics	84	Worker Population Ratio for Persons Aged 15 Years & Above
+GENDER	Gender Statistics	85	Worker Population Ratio (WPR) in usual status (ps+ss) for persons of age 15 years and above
+GENDER	Gender Statistics	86	Age group wise Worker Population Ratio (WPR)
+GENDER	Gender Statistics	87	Average Wage Earning (in Rs.) received per day by Casual Labourers in works other than Public Works
+GENDER	Gender Statistics	88	Average Wage (in Rs.) Per Hour Earned by Occupation Divisions
+GENDER	Gender Statistics	89	Percentage Distribution of Workers According to Broad Employment Status
+GENDER	Gender Statistics	90	Percentage distribution of workers in usual status (ps+ss) by broad status in employment
+GENDER	Gender Statistics	91	Percentage distribution of workers in usual status (ps+ss) by broad industry division 
+GENDER	Gender Statistics	92	Proportion (in per cent) of worker in usual status (ps+ss) in informal sector 
+GENDER	Gender Statistics	93	Year Wise Unemployment rates in the labour force-usual status
+GENDER	Gender Statistics	94	Age Wise Unemployment rates in the labour force-usual status
+GENDER	Gender Statistics	95	Unemployment Rate for Persons aged 15 years & above
+GENDER	Gender Statistics	96	Percentage of persons participating in different activities in a day
+GENDER	Gender Statistics	97	Percentage of persons of age 6 years and above participating in different activities in a day
+GENDER	Gender Statistics	98	Average time (in minutes) spent in a day in different activities
+GENDER	Gender Statistics	99	Average time (in minutes) spent in a day per participant in different activities (TUS 2019)
+GENDER	Gender Statistics	100	Percentage of persons in different age groups participating in the activities in a day (TUS 2019)
+GENDER	Gender Statistics	101	Percentage of persons participating in learning activities and average time (in minutes) spent in a day per participant in learning activities
+GENDER	Gender Statistics	102	Average Time (in Minutes)spent per day per person– Unpaid, Paid & Residual activities
+GENDER	Gender Statistics	103	Average Time (in Minutes)spent per day per person– Unpaid, Paid & Residual activities (6 years & above) (TUS 2019)
+GENDER	Gender Statistics	104	Average time (in minutes) spent in a day in unpaid and paid activities (TUS 2024)
+GENDER	Gender Statistics	105	Women employed in Scheduled Commercial Banks
+GENDER	Gender Statistics	106	Distribution of Employees of Scheduled Commercial Banks
+GENDER	Gender Statistics	107	Population Group Wise Deposits of Scheduled Commercial Banks
+GENDER	Gender Statistics	108	State/UT Wise Deposits of Scheduled Commercial Banks
+GENDER	Gender Statistics	109	Cumulative Enrolments in PMJJBY, PMSBY
+GENDER	Gender Statistics	110	Indicators of Pradhan Mantri Vaya Vandana Yojana (PMVVY)
+GENDER	Gender Statistics	111	No. of Accounts under Pradhan Mantri Jan Dhan Yojan (PMJDY)
+GENDER	Gender Statistics	112	Indicators of Pradhan Mantri Mudra Yojna (PMMY)
+GENDER	Gender Statistics	113	Subscribers under Atal Pension Yojana (APY)
+GENDER	Gender Statistics	114	Indicators of Stand Up India (SUPI) 
+GENDER	Gender Statistics	115	Details of Demat accounts with CDSL
+GENDER	Gender Statistics	116	Progress under Microfinance - Savings of SHGs with banks
+GENDER	Gender Statistics	117	Progress under Microfinance - Bank loans disbursed by banks to SHGs 
+GENDER	Gender Statistics	118	Distribution of individual investors
+GENDER	Gender Statistics	119	Percentage Share of estimated number of Female Workers for top 3 States (all-India)
+GENDER	Gender Statistics	120	Share of female headed estimated proprietary establishments of major states by broad activity category
+GENDER	Gender Statistics	121	Per 1000 distribution of number of establishments of major states 
+GENDER	Gender Statistics	122	Percentage share of female workers to total number of workers 
+GENDER	Gender Statistics	123	Representation of Women in the Central Council of Ministers
+GENDER	Gender Statistics	124	Persons Contesting and Elected in Various Lok Sabha Elections
+GENDER	Gender Statistics	125	Women Elected in 18th Lok Sabha 2024
+GENDER	Gender Statistics	126	Women and Men Elected in State Assemblies
+GENDER	Gender Statistics	127	Status of representation of women in Panchayati Raj Institutions (PRIs)
+GENDER	Gender Statistics	128	Number of Electors and Percentage of Electors Voting in Various General Elections
+GENDER	Gender Statistics	129	Women Voters Turnout for General Election - 2024
+GENDER	Gender Statistics	130	Women Judges in Supreme Court and High Courts
+GENDER	Gender Statistics	131	Persons Engaged at Managerial Positions in Companies
+GENDER	Gender Statistics	132	Strength of Female Police Officers in India
+GENDER	Gender Statistics	133	Number of Women-led Start-ups
+GENDER	Gender Statistics	134	Participation of officers in Indian Army, Navy and Airforce
+GENDER	Gender Statistics	135	Intake of Women & Men officers in Various All India Central Group B & C Services
+GENDER	Gender Statistics	136	Total Women Owned MSMEs Registered & Classified and their Employment, Investment & Turnover Under Udyam
+GENDER	Gender Statistics	137	Women IMEs and employment data for the women IMEs
+GENDER	Gender Statistics	138	Women Participation in Household Decision-Making
+GENDER	Gender Statistics	140	Status of Major Crimes Committed Against Women
+GENDER	Gender Statistics	141	Rate (per Lakh Women) of Incidence of Various Crimes Committed against Women
+GENDER	Gender Statistics	142	Distribution of Rape Victims
+GENDER	Gender Statistics	143	Percentage of Married Women age 18-49 years Experienced Violence by their Husband
+GENDER	Gender Statistics	144	Disposal of Crimes Committed Against Women Cases by Police
+GENDER	Gender Statistics	145	Disposal of Crimes Committed Against Women Cases by Courts
+GENDER	Gender Statistics	146	Percentage of women aged 20-24 years married before age 18 years
+GENDER	Gender Statistics	147	Percentage of Men aged 25-29 years who were married before age 21 years
+GENDER	Gender Statistics	149	Incidence of Suicides
+GENDER	Gender Statistics	150	Profile of Suicide Victims by various Parameters
+GENDER	Gender Statistics	151	Cyber Crimes against Women 
+GENDER	Gender Statistics	152	Percentage of Disabled (Differently abled persons)
+GENDER	Gender Statistics	153	Percentage of persons with broad type of disabilities
+GENDER	Gender Statistics	154	Percentage of Disabled persons to Total population
+GENDER	Gender Statistics	155	Percentage of females by type of disability
+GENDER	Gender Statistics	156	Cases Filed by Women
+GENDER	Gender Statistics	157	Year wise Cyber Crimes against Women
+GENDER	Gender Statistics	159	TB cases notified for the year 2024
+GENDER	Gender Statistics	160	Distribution of Deaths by Major Cause Groups in India
+GENDER	Gender Statistics	161	State-wise Gender Parity Indices (GPI)
+GENDER	Gender Statistics	162	Percentage of students reported expenditure on course fees
+GENDER	Gender Statistics	163	Average expenditure (Rs.) per reported student on school education
+GENDER	Gender Statistics	164	Results Of Secondary Examination (Class X) - Regular Board
+GENDER	Gender Statistics	165	Results Of Secondary Examination (Class X) - Open Board
+GENDER	Gender Statistics	166	Results Of Secondary Examination (Class XII) - Regular Board
+GENDER	Gender Statistics	167	Results Of Secondary Examination (Class XII) - Open Board
+GENDER	Gender Statistics	168	State-wise Enrolment in STEM courses
+GENDER	Gender Statistics	169	Number of Indian Students Pursuing Education Abroad
+GENDER	Gender Statistics	170	Overall Performance Comparison - Grades 3, 6, and 9
+GENDER	Gender Statistics	171	National Social Assistance Programme
+GENDER	Gender Statistics	172	Strength of Women Police, Reservation of Women Police, Women Population Per Woman Police
+GENDER	Gender Statistics	173	Gender-wise number of officers
+GENDER	Gender Statistics	174	Distribution of Proprietary MSME by Gender of Owners Under Udyam and Udyam Assist Portal
+GENDER	Gender Statistics	175	Percentage of persons able to complain about cybercrime/ report cyber fraud in the cybercrime reporting portal
+GENDER	Gender Statistics	176	Data regarding Women Help Desks set up in Police Stations
+GENDER	Gender Statistics	177	Progress under Microfinance - Bank Loans outstanding against SHGs
+NFHS	National Family Health Survey	1	Population and Household Profile
+NFHS	National Family Health Survey	2	Characteristics of Adults (age 15-49 years)
+NFHS	National Family Health Survey	3	Marriage and Fertility
+NFHS	National Family Health Survey	4	Infant and Child Mortality Rates (per 1,000 live births)
+NFHS	National Family Health Survey	5	Current Use of Family Planning Methods (currently married women age 15–49 years)
+NFHS	National Family Health Survey	6	Unmet Need for Family Planning (currently married women age 15–49 years)
+NFHS	National Family Health Survey	7	Quality of Family Planning Services
+NFHS	National Family Health Survey	8	Maternity Care (for last birth in the 5 years before the survey)
+NFHS	National Family Health Survey	9	Delivery Care (for births in the 5 years before the survey)
+NFHS	National Family Health Survey	10	Child Vaccinations and Vitamin A Supplementation
+NFHS	National Family Health Survey	11	Treatment of Childhood Diseases (children under age 5 years)
+NFHS	National Family Health Survey	12	Child Feeding Practices and Nutritional Status of Children
+NFHS	National Family Health Survey	13	Nutritional Status of Adults (age 15-49 years)
+NFHS	National Family Health Survey	14	Anaemia among Children and Adults
+NFHS	National Family Health Survey	15	Blood Sugar Level among Adults (age 15 years and above)
+NFHS	National Family Health Survey	16	Hypertension among Adults (age 15 years and above)
+NFHS	National Family Health Survey	17	Screening for Cancer among Adults (age 30-49 years)
+NFHS	National Family Health Survey	18	Knowledge of HIV/AIDS among Adults (age 15-49 years)
+NFHS	National Family Health Survey	19	Women's Empowerment (women age 15-49 years)
+NFHS	National Family Health Survey	20	Gender Based Violence (age 18-49 years)
+NFHS	National Family Health Survey	21	Tobacco Use and Alcohol Consumption among Adults (age 15 years and above)
+ENVSTATS	Environment Statistics	1	Annual and Seasonal Mean Temperature
+ENVSTATS	Environment Statistics	2	Annual and Seasonal Minimum and Maximum Temperature
+ENVSTATS	Environment Statistics	3	Annual and Monthly Rainfall
+ENVSTATS	Environment Statistics	4	Wetland distribution in India
+ENVSTATS	Environment Statistics	5	Number and Area of Wetlands
+ENVSTATS	Environment Statistics	6	Water Sheds in India
+ENVSTATS	Environment Statistics	7	Catchment Area of major River Basins
+ENVSTATS	Environment Statistics	8	Length of Coastline and Coastal Population of India
+ENVSTATS	Environment Statistics	9	Occurrence of Major Soils in India
+ENVSTATS	Environment Statistics	10	Category-wise distribution of land degradation in different States of India
+ENVSTATS	Environment Statistics	11	Area under land use and land cover classes in India
+ENVSTATS	Environment Statistics	12	State-wise area by land cover classes
+ENVSTATS	Environment Statistics	13	List of ramsar sties in india
+ENVSTATS	Environment Statistics	14	Terrestrial Protected Areas
+ENVSTATS	Environment Statistics	16	Faunal diversity in India and the world
+ENVSTATS	Environment Statistics	17	Category -wise status summary of plants at global level
+ENVSTATS	Environment Statistics	18	State-wise Forest Area
+ENVSTATS	Environment Statistics	19	Forest Cover in India under various forest classes
+ENVSTATS	Environment Statistics	20	Forest Cover
+ENVSTATS	Environment Statistics	21	Number of forest fire detected
+ENVSTATS	Environment Statistics	22	Carbon Stock in different forest carbon pools
+ENVSTATS	Environment Statistics	23	Forest type and density wise carbon stock in different carbon pools
+ENVSTATS	Environment Statistics	24	Tree Cover
+ENVSTATS	Environment Statistics	25	Ambient Air Quality in cities of the country under NAMP & CAAQMS (Integrated)
+ENVSTATS	Environment Statistics	26	Ambient Air Quality in major cities
+ENVSTATS	Environment Statistics	27	Water Quality in Indian Rivers
+ENVSTATS	Environment Statistics	28	River Water Quality
+ENVSTATS	Environment Statistics	30	Status of Critically Polluted industrial clusters
+ENVSTATS	Environment Statistics	31	Status of Ambient Noise Level in Metropolitan Cities
+ENVSTATS	Environment Statistics	32	Mineral Reserves and Resources
+ENVSTATS	Environment Statistics	33	Production of Minerals
+ENVSTATS	Environment Statistics	34	Import of Ores and Minerals
+ENVSTATS	Environment Statistics	35	Export of Ores and Minerals (including re-export)
+ENVSTATS	Environment Statistics	36	Inventory of geological reserves of coal by type
+ENVSTATS	Environment Statistics	37	Inventory of geological reserves of coal
+ENVSTATS	Environment Statistics	38	Inventory of geological reserve of Lignite
+ENVSTATS	Environment Statistics	39	Total Primary Supply of Coal & Lignite
+ENVSTATS	Environment Statistics	40	Power Supply Position
+ENVSTATS	Environment Statistics	41	Annual gross generation of power by source and by sector
+ENVSTATS	Environment Statistics	42	Import and Export of Electricity
+ENVSTATS	Environment Statistics	43	Land Use Classification
+ENVSTATS	Environment Statistics	44	Net area irrigated from different sources and gross irrigated area
+ENVSTATS	Environment Statistics	45	State-wise area under organic farming (Registered under accredited certification bodies)
+ENVSTATS	Environment Statistics	46	Value of Output - Forestry (At Current Prices)
+ENVSTATS	Environment Statistics	47	Value of Output - Industrial Wood (At Current Prices)
+ENVSTATS	Environment Statistics	48	Value of Output - Fuelwood(At Current Pric
+ENVSTATS	Environment Statistics	49	Value of Output - Non-Timber Forest Products (At Current Prices)
+ENVSTATS	Environment Statistics	50	Area under major crops
+ENVSTATS	Environment Statistics	51	Production of major crops
+ENVSTATS	Environment Statistics	52	Production of Biofertilizers
+ENVSTATS	Environment Statistics	53	Capacity and production of insecticides
+ENVSTATS	Environment Statistics	54	Consumption, Production and Import of Fertilisers
+ENVSTATS	Environment Statistics	55	Nutrient-wise consumption of Fertilizers
+ENVSTATS	Environment Statistics	56	Consumption of Chemical Pesticides in India
+ENVSTATS	Environment Statistics	57	Consumption of Pesticides (Technical Grade Material)
+ENVSTATS	Environment Statistics	58	Consumption of bio pesticides formulation
+ENVSTATS	Environment Statistics	59	Import of Agricultural Products
+ENVSTATS	Environment Statistics	60	Export of Agricultural Products
+ENVSTATS	Environment Statistics	61	Livestock population in India
+ENVSTATS	Environment Statistics	62	Number of animals slaughtered and Quantity of Meat Production
+ENVSTATS	Environment Statistics	63	Import and Export of Livestock & Marine Products
+ENVSTATS	Environment Statistics	64	Fish Production-India
+ENVSTATS	Environment Statistics	65	Fish Production
+ENVSTATS	Environment Statistics	66	Water availability in India
+ENVSTATS	Environment Statistics	67	Water resources -Basinwise
+ENVSTATS	Environment Statistics	68	Projected Water Demand in India
+ENVSTATS	Environment Statistics	69	Water flow in stream
+ENVSTATS	Environment Statistics	70	Basin- Wise dynamic ground water resources
+ENVSTATS	Environment Statistics	71	Ground water resources
+ENVSTATS	Environment Statistics	72	Basin-wise Storage Status of Reservoirs of the Country
+ENVSTATS	Environment Statistics	73	Storage Status of Reservoirs of the Country
+ENVSTATS	Environment Statistics	74	River basin-wise catchment area, average water resources potential and utilisable water resources potential
+ENVSTATS	Environment Statistics	75	Greenhouse gas emission by source and removal by sinks from India
+ENVSTATS	Environment Statistics	76	Consumption of Ozone Depleting Substances (ODSs) and Hydrofluorocarbons (HFCs) in India
+ENVSTATS	Environment Statistics	77	Summary of Sewage Management
+ENVSTATS	Environment Statistics	78	Status of grossly polluting industries discharging their effluents into rivers and lakes
+ENVSTATS	Environment Statistics	80	Municipal Solid Waste Generation in India
+ENVSTATS	Environment Statistics	81	Municipal Solid Waste Generation in Metro Cities / State Capitals
+ENVSTATS	Environment Statistics	82	Amount of Waste Generated by Quantity of Hazardous Waste
+ENVSTATS	Environment Statistics	83	Details on Hazardous Waste generation
+ENVSTATS	Environment Statistics	84	Status of Bio-medical Waste Generation and its Management
+ENVSTATS	Environment Statistics	85	Status on Imports & Exports of Hazardous Waste
+ENVSTATS	Environment Statistics	86	Status of Industrial Waste Water Treatment Plants
+ENVSTATS	Environment Statistics	87	Average Number of Heat Wave Days reported during the Summer Season
+ENVSTATS	Environment Statistics	88	Average Number of Cold Wave Days Reported during the Winter Season (December of Previous Year to February of Current Year)
+ENVSTATS	Environment Statistics	89	Number of Cyclonic Storms formed over the North Indian Ocean
+ENVSTATS	Environment Statistics	91	Major Earthquakes in India
+ENVSTATS	Environment Statistics	92	Damage due to Natural Extreme Events in India
+ENVSTATS	Environment Statistics	93	Damage due to Natural Extreme Events
+ENVSTATS	Environment Statistics	94	Number of Deaths due to Forces of Nature
+ENVSTATS	Environment Statistics	95	Government Expenditure on account of Natural Calamities
+ENVSTATS	Environment Statistics	96	Houses, Households and Population in India
+ENVSTATS	Environment Statistics	97	Coastal Fishing Population in India
+ENVSTATS	Environment Statistics	98	Distribution of Households by Major Source of Drinking Water
+ENVSTATS	Environment Statistics	99	Percentage of households getting safe and adequate drinking water within premises through pipe water supply (Rural)
+ENVSTATS	Environment Statistics	100	Percentage of households getting safe and adequate drinking water within premises through pipe water supply (Urban)
+ENVSTATS	Environment Statistics	101	Distribution of Households with Access to Sanitation
+ENVSTATS	Environment Statistics	102	Percentage distribution of Households by sanitation facilities
+ENVSTATS	Environment Statistics	103	Number of Towns/ Cities Reporting Slums and Percentage of Slum Population
+ENVSTATS	Environment Statistics	104	Percentage of Districsts achieving Open Defecation free (ODF) target
+ENVSTATS	Environment Statistics	105	Proportion of households having access to toilet facility
+ENVSTATS	Environment Statistics	107	Population connected to wastewater collecting system
+ENVSTATS	Environment Statistics	108	Slum households by source and location of drinking water
+ENVSTATS	Environment Statistics	110	All india weighted average rate of sale of power (WARSP) from conventional power generating stations
+ENVSTATS	Environment Statistics	111	Statistics related to Road Transport
+ENVSTATS	Environment Statistics	112	Status of registered Motor Vehicles
+ENVSTATS	Environment Statistics	113	Number of passengers carried by state road transport undertakings
+ENVSTATS	Environment Statistics	114	Cases & Deaths - Cholera
+ENVSTATS	Environment Statistics	115	Cases and deaths - Acute Diarrhoeal Disease
+ENVSTATS	Environment Statistics	116	Cases and deaths - Enteric Fever (Typhoid)
+ENVSTATS	Environment Statistics	117	Cases and Deaths - Viral Hepatitis
+ENVSTATS	Environment Statistics	118	Cases and Deaths - Acute Respiratory Infection
+ENVSTATS	Environment Statistics	119	Cases and deaths - Malaria
+ENVSTATS	Environment Statistics	120	Cases and death - Dengue
+ENVSTATS	Environment Statistics	121	Cases - Chikungunya fever
+ENVSTATS	Environment Statistics	122	Cases and deaths - Acute Encephalitis Syndrome (AES)
+ENVSTATS	Environment Statistics	123	Expenditure on Centrally Sponsored Schemes for Protection of Environment
+ENVSTATS	Environment Statistics	124	Annual Government Expenditure on Environmental Protection
+ENVSTATS	Environment Statistics	125	Annual Corporate Expenditure on Environment Protection- Conservation of Natural Resources Sector
+ENVSTATS	Environment Statistics	126	Annual Corporate Expenditure on Environment Protection- Agro Forestry Sector
+ENVSTATS	Environment Statistics	127	Annual Corporate Expenditure on Environment Protection- Environmental Sustainability sector
+ENVSTATS	Environment Statistics	128	Annual Corporate Expenditure on Environment Protection- Across 3 sectors
+ENVSTATS	Environment Statistics	129	Subsidies (including Environment-related Subsidies) under Indian Budget
+ENVSTATS	Environment Statistics	130	Number of Students pursuing environment-related higher education at Ph.D.,M.Phil. & Post Graduate Level
+ENVSTATS	Environment Statistics	131	Amount of Waste Generated by Total Quantity of Bio-medical Waste
+ENVSTATS	Environment Statistics	132	Amount of Waste Generated by Estimated Plastic Waste
+RBI	RBI Statistics	22	Balance of Payments ‑ Indicators
+RBI	RBI Statistics	24	Broad Commodity Composition of India's Merchandise Trade ‑ Oil and Non oil Exports and Imports ‑ Rupees
+RBI	RBI Statistics	42	Broad Commodity Composition of India’s Merchandise Trade - Oil and Non-Oil Exports and Imports - US Dollar
+RBI	RBI Statistics	1	Direction of Foreign Trade ‑ Rupees
+RBI	RBI Statistics	11	Direction of Foreign Trade ‑ US Dollars
+RBI	RBI Statistics	32	Exchange Rate of the Indian Rupee Vis‑a‑Vis the SDR, US Dollar, Pound Sterling, D.M./Euro and Japanese Yen (Calendar Year ‑ Annual Average)
+RBI	RBI Statistics	31	Exchange Rate of the Indian Rupee Vis‑A‑Vis the SDR, US Dollar, Pound Sterling, D.M./Euro and Japanese Yen (Financial Year ‑ Annual Average and End‑Year Rates)
+RBI	RBI Statistics	35	Exchange Rate of the Indian Rupee vis-à-vis the SDR, US Dollar, Pound Sterling, Euro and Japanese Yen (High and Low During the Month)
+RBI	RBI Statistics	33	Exchange Rate of the Indian Rupee vis-à-vis the SDR, US Dollar, Pound Sterling, Euro and Japanese Yen (Monthly Average and end-Month Rates)
+RBI	RBI Statistics	43	EXPORTS OF MAJOR COMMODITIES - RUPEES
+RBI	RBI Statistics	44	EXPORTS OF MAJOR COMMODITIES - US Dollars
+RBI	RBI Statistics	2	Exports of Select Commodities to Principal Countries ‑ Rupees
+RBI	RBI Statistics	20	Exports of Select Commodities to Principal Countries ‑ US Dollars
+RBI	RBI Statistics	27	External Debt of India ‑ Quarterly
+RBI	RBI Statistics	48	Foreign Exchange Reserve Annual
+RBI	RBI Statistics	47	 Foreign Exchange Reserve Monthly
+RBI	RBI Statistics	29	Forex Rates ‑ Month‑High / Month‑Low
+RBI	RBI Statistics	34	Forward Premia (Inter‑Bank) (Monthly Average)
+RBI	RBI Statistics	45	Imports of Major Commodities - Rupees
+RBI	RBI Statistics	46	Imports of Major Commodities - US Dollars
+RBI	RBI Statistics	26	India's External Debt ‑ Rupees (End‑March)
+RBI	RBI Statistics	25	India's External Debt ‑ US Dollars (End‑March)
+RBI	RBI Statistics	13	India's Foreign Trade – Rupees
+RBI	RBI Statistics	17	India's Foreign Trade – Rupees-Annual
+RBI	RBI Statistics	12	India's Foreign Trade ‑ US Dollars
+RBI	RBI Statistics	16	India's Foreign Trade ‑ US Dollars - Annual
+RBI	RBI Statistics	10	India’s Overall Balance of Payments – Quarterly – Rupees
+RBI	RBI Statistics	4	India's Overall Balance of Payments ‑ Quarterly ‑ US Dollars
+RBI	RBI Statistics	6	India's Overall Balance of Payments – Rupees
+RBI	RBI Statistics	5	India's Overall Balance of Payments ‑ US Dollars
+RBI	RBI Statistics	14	Invisibles by Category of Transactions – Rupees
+RBI	RBI Statistics	9	Invisibles by Category of Transactions – US Dollars
+RBI	RBI Statistics	7	Key Components of India's Balance of Payments – Rupees
+RBI	RBI Statistics	8	Key Components of India's Balance of Payments ‑ US Dollars
+RBI	RBI Statistics	37	Monthly Average Exchange Rate (155 Currencies)
+RBI	RBI Statistics	36	Monthly Average Exchange Rates (EURO, GBP, JPY, USD)
+RBI	RBI Statistics	40	NRI Deposits - Outstandings and Inflows(+) / Outflows(-)
+RBI	RBI Statistics	28	Sale/ Purchase of U.S. Dollar by the RBI
+RBI	RBI Statistics	30	Turnover in Foreign Exchange Market
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	16	Estimated No. of Hhs for Each Size Class (ha.) of Land Possessed
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	17	Estimated No. of Hhs for Different Social Groups
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	18	Distribution of Hhs by Hh Classification for Different Size Classes of Land Possessed
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	19	No. Per Hh Operational Holding by Size Class of Hh Operational Holding
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	21	No. Per 1000 Crop Producing Agricultural Hhs Disposals of Crop by Agency and Satisfaction Level of Sale Outcomes
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	22	Agricultural Hhs Reporting Use of Different Farming Resources
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	23	Agricultural Hhs Reporting Use of Purchased Seed by their Quality
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	24	Avg. Monthly Income (in Rs.) Per Agricultural Hh (only the Paid Out Expenditure)
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	25	Avg. Monthly Income (in Rs.) Per Agricultural Hh (both the Paid Out and Imputed Expenditure)
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	26	Avg. Monthly Net Expenditure on Productive Assets
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	27	Avg. Expenditure and Receipts on Farm and Non-farm Assets
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	28	Avg. Monthly Expenses and Receipts for Crop Production
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	29	Avg. Monthly Total Expenses for Crop Production
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	31	Average Monthly Total Expenses and Receipts on Animal Farming During a Period of 30 Days
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	32	Average Expenses and Receipts From Non-farm Business
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	33	Distribution of Amount of Loan Outstanding by Source of Loan Taken
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	34	Distribution of Hhs by Size Class of Hh Ownership Holding, Average Area of Homestead Land Owned/land Owned (excluding Homestead Land)/area Owned and Estimated Area of Hh Ownership Holding
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	35	Distribution of Hhs Reporting Leasing-out of Land and Average Area of such Land for Each Social Group
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	36	Distribution of Hhs Reporting Leasing-in of Land and Average Area of such Land for Each Social Group
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	37	Percentage Distribution of Leased Out Land by Terms of Lease
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	39	No. of Hhs Owning of Livestock of Different Types
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	40	Percentage Distribution of Area of Land for the Hhs Belonging of Operational Holding by Kind of Possession
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	41	Distribution of Operational Holdings by Type of Possession of Hh Operational Holding
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	42	Average Gross Cropped Area / Value of Total Crop Production / Quantity of Crop Production Reporting Crop Production
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	43	Distribution of Agricultural Hhs Reporting Sale of Crops and Distribution of Quantity Sold by Agency of Major Disposal
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	44	Distribution of Agricultural Hhs Reporting Sale of Selected Crop by Level of Satisfaction
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	45	Distribution of Agricultural Hhs Reporting Use of Seed by their Agency of Procurement for Selected Crops
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	46	Distribution of Agricultural Hhs Reporting Use of Purchased Seed by their Quality
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	47	Per 1000 Distribution of Agricultural Households Reporting Sale of Crops by Awareness About Msp for Selected Crops
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	48	Distribution of Agricultural Hhs not Insuring their Crops by Reason for Selected Crops
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	49	Distribution of Agricultural Hh by Status of Crop Insurance for Selected Crops
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	50	No. Per 1000 of Agricultural Hh Crop Loss Per 1000 Agricultural Hhs and Cause-wise Distribution for Selected Crops
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	51	No. Per 1000 Agricultural Hh Which Insured Experienced Crop Loss for Selected Crops
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	2	Average value of assets and amount of cash loan per household by occupational category of the households
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	3	Average value of assets and amount of cash loan per household by household type 
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	4	Average value of assets and amount of cash loan per household by household asset holding class
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	5	Average value of assets and amount of cash loan per household by Quintile class of household expenditure
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	6	Average value of assets and amount of cash loan per household by social group
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	8	Per 1000 number of households reporting fixed asset, financial asset and valuables and cash loan outstanding by occupational category of the households
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	9	Average value of fixed assets, financial assets by occupational category of the households
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	10	Per 1000 number of households reporting assets of specified categories and cash loan outstanding as on 30.6.18 by occupational category of the households
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	11	Average value of assets by asset category and average value of cash loan outstanding by occupational category of the households
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	12	Per 1000 number of households reported having bullion and ornaments and average amount of bullion and ornaments per household
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	16	Number of households reporting fixed capital expenditure and expenditure on purchase of land and fixed capital formation by occupational category and household asset holding class
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	17	Number of households reporting fixed capital expenditure and expenditure on purchase of land and fixed capital formation by household type
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	18	Number of households reporting fixed capital expenditure and expenditure on purchase of land and fixed capital formation by household asset holding class
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	19	Per 1000 number of households reporting fixed capital expenditure on broad item categories and average value of expenditure by broad item categories
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	24	Proportion per 1000 of household reporting borrowing and average amount of borrowing per household for capital expenditure by major head of borrowing
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	26	Number of households reporting cash loans outstanding and per Rs.1000 break-up of outstanding amount of cash loans by occupational category of the households
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	29	Number of households reporting cash loans outstanding as on 30.06.18 per thousand households and per Rs.1000 break-up of amount of cash loans outstanding by credit agency
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	30	Number of households reporting cash loans outstanding as on 30.06.18 by credit agency and rate of interest
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	32	Number of households reporting cash loans outstanding as on 30.06.18 by household asset holding class and credit agency
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	34	No. of hhs reporting cash loans outstanding as on 30.06.18 per thousand households and per Rs.1000 break-up of amt. of cash loans including interest outstanding by purpose of loan and credit agency
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	36	Number of households reporting cash loans outstanding as on 30.06.2018 by tenure of loan
+NSS77	NSS77 (77th Round - Land & Livestock + AIDIS)	38	Number of households per 1000 reporting cash loans outstanding as on 30.06.18 by size class of cash loan outstanding
+NSS78	NSS78 (78th Round - Living Conditions)	2	Percentage of Persons Reported to Have Access to Piped Water into Dwelling or Yard/plot and Reported to Have Access to Improved Source of Drinking Water
+NSS78	NSS78 (78th Round - Living Conditions)	3	Percentage of Persons Reported Access to Drinking Water, Exclusive Access to Drinking Water, Access to Improved Source of Drinking Water and Sufficiency of Drinking Water
+NSS78	NSS78 (78th Round - Living Conditions)	4	Percentage of Persons Reported Access to Improved Latrine and Exclusive Access to Improved Latrine for Each State, Among Persons Reported to Have Access to Latrine
+NSS78	NSS78 (78th Round - Living Conditions)	5	Percentage Distribution of Persons by Availability of Hand Washing Facility Within the Premises
+NSS78	NSS78 (78th Round - Living Conditions)	6	Percentage of Persons Who Used Mobile Telephone with Active Sim Card at Least Once During Last Three Months Preceding the Date of the Survey
+NSS78	NSS78 (78th Round - Living Conditions)	7	Percentage of Households Reported Access to Broadband Within the Premises and Mass Media (any of Internet, Newspaper, Magazine, Radio, Television Etc)
+NSS78	NSS78 (78th Round - Living Conditions)	8	Percentage Distribution of Households by the Availabilty of Basic Transport and Public Facility
+NSS78	NSS78 (78th Round - Living Conditions)	9	Percentage of Households Which Have Purchased/ Constructed New House/flat for Residential Purpose After 31.03.2014, Purchased for the First Time and Owned that House/flat as on Date of Survey
+NSS78	NSS78 (78th Round - Living Conditions)	10	Percentage Distribution of Different Sources of Finance From Which Maximum Amount was Financed by the Household for New House/flat
+NSS78	NSS78 (78th Round - Living Conditions)	11	Percentage of Persons* Whose Current Place of Residence is Different From the Last Usual Place of Residence
+NSS78	NSS78 (78th Round - Living Conditions)	12	Percentage Distribution of Persons by Main Reason for Leaving Last Usual Place of Residence
+NSS78	NSS78 (78th Round - Living Conditions)	13	Percentage Distribution of Persons Reporting as Earner in the Last Usual Place of Residence by Change in Income Due to Migration
+NSS78	NSS78 (78th Round - Living Conditions)	14	Percentage of Persons Willing to Move Out From the Present Place of Residence and Percentage Distribution of such Persons by Main Reason# for Leaving Present Place of Residence
+NSS78	NSS78 (78th Round - Living Conditions)	15	Percentage of Households Reporting Possession of Air Conditioner and Air Cooler
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	1	Percentage of persons able to read and write short simple statements in their everyday life with understanding
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	2	Percentage of persons able to read and write short simple statements in their everyday life with understanding and also able to perform simple arithmetic calculations
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	3	Mean years of schooling in formal education
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	4	Percentage of persons of age 6 to 10 years currently enrolled in primary education (Class I to Class V)
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	5	Percentage of persons (25 years and above) with some secondary education
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	6	Percentage distribution of persons of age 6 to 18 years who never enrolled in formal education at the time of survey
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	7	Percentage of persons graduated in science and technology among all graduates
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	8	Percentage of youth in formal and non-formal education and training in the previous 12 months
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	9	Percentage of youth not in education, employment, or training
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	10	Average medical expenditure (Rs.) on hospitalised treatment (including institutional delivery) during the last 365 days
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	11	Average medical expenditure (Rs.) on non-hospitalised treatment during the last 30 days
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	12	Average out-of-pocket medical expenditure (OOPME) for treatment on hospitalisation (including institutional delivery) during last 365 days 
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	13	Average out-of-pocket medical expenditure (OOPME) for treatment non- hospitalisation during last 30 days
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	14	Percentage of persons who have an account individually or jointly in any bank/ other financial institution/mobile money service provider (age 18 years & above)
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	15	Number of borrowers per 1,00,000 persons (age 18 years & above)
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	16	Percentage of persons able to use mobile (including smartphone)
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	17	Percentage of persons who used mobile telephone during the last 3 months preceding the date of survey
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	18	Percentage of persons able to use internet
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	19	Percentage of persons who used internet during the last 3 months preceding the date of survey
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	20	Percentage of population covered by 4G or above mobile technology
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	21	Percentage of persons who send messages (e.g., e-mail, messaging service, SMS) with attached files (e.g., documents, pictures, video) using mobile or computer-like devices during last three months preceding the date of s
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	22	Percentage of persons who performed copy and paste tools to duplicate or move data, information, documents, etc using mobile or computer-like devices during last three months preceding the date of survey
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	23	Percentage of persons who can search internet for information and percentage of persons who can send or receive emails and percentage of persons who can perform online banking transactions
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	24	Percentage of households possessing different assets as on date of survey
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	25	Percentage of population having convenient access to transport facilities and all-weather roads
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	26	Percentage of persons of age less than 5 years who have registered with civil authority for the birth certificate ever
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	27	Percentage of households using clean fuel for cooking
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	28	Percentage of households having access to improved principal sources of drinking water and improved latrine
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	29	Persons (per 1000) aware of Ayush (age 15 years & above)
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	30	Persons (per 1000) used Ayush during last 365 days (age 15 years & above)
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	31	Persons (per 1000) using Ayush during last 365 days by type of treatment
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	32	Households (per 1000) reported at least one member of the household aware about AYUSH Therapy
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	33	Households (per 1000) reported at least one member of the household have knowledge about AYUSH Therapy
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	34	Persons (per 1,000) availing Ayush treatment and average expenditure incurred per person for treatment
+NSS79	NSS79 (79th Round - CAMS + AYUSH)	35	Proportion (per 1000) of households using Ayush by reason
+CPIALRL	CPI for Agricultural/Rural Labourers	1	General Index
+CPIALRL	CPI for Agricultural/Rural Labourers	2	Group Index
+HCES	Household Consumption Expenditure Survey	1	Average monthly per capita consumption expenditure (MPCE)
+HCES	Household Consumption Expenditure Survey	2	Average monthly per capita consumption expenditure (MPCE) Over 12 Fractile Classes
+HCES	Household Consumption Expenditure Survey	3	Monthly Per Capita Consumption Expenditure (MPCE) over Broad Categories in 30 Days
+HCES	Household Consumption Expenditure Survey	4	Percentage Share of Monthly Per Capita Consumption Expenditure (MPCE) over Broad Categories in 30 Days
+HCES	Household Consumption Expenditure Survey	5	Average Per Capita Monthly Quantity Consumption 
+HCES	Household Consumption Expenditure Survey	6	Average Monthly Per Capita Value of Consumption (Rs.)
+HCES	Household Consumption Expenditure Survey	7	Average Monthly Per Capita Consumption Expenditure (MPCE) across different Household Type
+HCES	Household Consumption Expenditure Survey	8	Average Monthly Per Capita Consumption Expenditure (MPCE) across different Social Group
+HCES	Household Consumption Expenditure Survey	9	Gini Coefficient for Per Capita Consumption Expenditure
+TUS	Time Use Survey	4	Percentage of persons in different activity in a day as major activity (age 6 years and above)
+TUS	Time Use Survey	5	Minutes spent on an average per participant in different activity in a day as major activity (age 6 years and above)
+TUS	Time Use Survey	6	Percentage of persons in different activity in a day irrespective of major activity (age 6 years and above)
+TUS	Time Use Survey	7	Minutes spent on an average per participant in different activity in a day irrespective of major activity
+TUS	Time Use Survey	8	Minutes spent on an average per person in different activity in a day irrespective of major activity
+TUS	Time Use Survey	9	Percentage of persons in unpaid activities, paid activities and other activities as major activity (age 6 years and above)
+TUS	Time Use Survey	10	Minutes spent in a day on an average per participant in unpaid activities, paid activities and other activtities as major activity (age 6 years and above)
+TUS	Time Use Survey	11	Minutes spent in a day on an average per person in unpaid activities, paid activities and other activtities as a major activity (age 6 years and above)
+TUS	Time Use Survey	12	Percentage of persons in unpaid activities, paid activities and other activtities irrespective of major activity (age 6 years and above)
+TUS	Time Use Survey	13	Minutes spent in a day on an average per person in unpaid activities, paid activities and other activtities irrespective of major activity (age 6 years and above)
+TUS	Time Use Survey	14	Minutes spent in a day on an average per participant in unpaid activities, paid activities and other activtities irrespective of major activity (age 6 years and above)
+TUS	Time Use Survey	15	Percentage of persons in different activity where the activity was a major activity for different usual principal activity status of the person (age 6 years and above)
+TUS	Time Use Survey	16	Minutes spent in a day on an average per participant in different activity where the activity was a major activity for each usual principal activity status of the person (age 6 years and above)
+TUS	Time Use Survey	17	Percentage of persons in different activity in a day irrespective of major activity for each usual principal activity status of the person (age 6 years and above)
+TUS	Time Use Survey	18	Minutes spent in a day on an average per participant in different activity irrespective of major activity for each usual principal activity status of the person (age 6 years and above)
+TUS	Time Use Survey	19	Percentage of persons in different activity as major activity in a day for each marital status of the person (age 6 years and above)
+TUS	Time Use Survey	20	Minutes spent in a day on an average per participant in different activity as major activity for each marital status of the person (age 6 years and above) 
+TUS	Time Use Survey	21	Percentage of persons in different activity in a day irrespective of major activity for each marital status of the person (age 6 years and above) 
+TUS	Time Use Survey	22	Minutes spent in a day on an average per participant in different activity irrespective of major activity for each marital status of the person (age 6 years and above) 
+TUS	Time Use Survey	23	Percentage of persons in different activity as major activity in a day for different UMPCE quintile classes (age 6 years and above) 
+TUS	Time Use Survey	24	Minutes spent in a day on an average per participant in different activity where the activity was done as a major activity for different UMPCE quintile classes (age 6 years and above) 
+TUS	Time Use Survey	25	Percentage of persons in different activity irrespective of major activity in a day for different UMPCE quintile classes 
+TUS	Time Use Survey	26	Minutes spent in a day on an average per participant in different activity irrespective of major activity for different UMPCE quintile classes (age 6 years and above) 
+TUS	Time Use Survey	27	Percentage of persons in different activity where the activity was a major activity for different level of education (age 6 years and above) 
+TUS	Time Use Survey	28	Minutes spent in a day on an average per participant in different activity where the activity was performed as a major activity for different level of education (age 6 years and above) 
+TUS	Time Use Survey	29	Percentage of persons in different activity irrespective of major activity for different level of education (age 6 years and above) 
+TUS	Time Use Survey	30	Minutes spent in a day on an average per participant in different activity irrespective of major activity for different level of education (age 6 years and above) 
+TUS	Time Use Survey	31	Percentage of persons in different activity as major activity in a day for different household social groups 
+TUS	Time Use Survey	32	Minutes spent in a day on an average per participant in different activity where the activity was done as a major activity for different household social groups (age 6 years and above) 
+TUS	Time Use Survey	33	Percentage of persons in different activity irrespective of major activity in a day for different household social groups
+TUS	Time Use Survey	34	Minutes spent in a day on an average per participant in different activity irrespective of major activity for different household social groups (age 6 years and above)
+TUS	Time Use Survey	35	Percentage of persons and minutes in a day spent on an average per participant in SNA activities, Non-SNA activities and residual other activities where the activity was a major activity for each broad principal activity
+TUS	Time Use Survey	36	Percentage of persons and minutes spent in a day on an average per participant in SNA activities, Non-SNA activities and residual other activities irrespective of major activity for each broad principal activity status (
+TUS	Time Use Survey	37	Percentage of persons and minutes in a day spent on an average per participant of different age groups in SNA activites,Non-SNA activities and residual Residual other activities where the activity was a major activity by
+TUS	Time Use Survey	38	Percentage of persons and minutes in a day spent on an average per participant of different age groups in SNA activities, Non-SNA activities and residual Residual other activities irrespective of major activity by type o
+TUS	Time Use Survey	39	Percentage of persons in different unpaid and paid activities where the activity was a major activity by place of activity (age 6 years and above) 
+TUS	Time Use Survey	40	Minutes in a day spent on an average per participant in different unpaid and paid activities where the activity was a major activity by place of activity (age 6 years and above) 
+TUS	Time Use Survey	41	Percentage of persons and minutes spent in a day on an average per person /per participant in unpaid activities, paid activities and other activities where the activity was a major activity (age 6 years and above) 
+TUS	Time Use Survey	42	Percentage of persons and minutes spent in a day on an average per person/per participant in unpaid activites, paid activites and other activities irrespective of major activity (age 6 years and above) 
+TUS	Time Use Survey	43	Percentage of persons and minutes spent in a day on an average per person/per participant for each household social group in unpaid activites, paid activites and other activites where the activity was a major activity al
+TUS	Time Use Survey	44	Percentage of persons and minutes spent in a day on an average per person/per participant for each household social group in unpaid activities, paid activities and other activities irrespective of major activity (age 6 y
+EC	Economic Census	1	District-wise establishment and worker counts. 36 States/UTs, 24 activity sectors, source of finance, ownership type.
+EC	Economic Census	2	District-wise establishment and worker counts. 35 States/UTs, 313 NIC-based activity codes, nature of operation, source of finance, ownership type.
+EC	Economic Census	3	District-wise establishment and worker counts. 35 States/UTs, 18 activity sectors, nature of operation, source of finance, ownership type.
+UDISE	UDISE+ (Unified District Information System for Education)	1	Total number of School
+UDISE	UDISE+ (Unified District Information System for Education)	2	Total number of Enrolments
+UDISE	UDISE+ (Unified District Information System for Education)	3	Total number of Teachers
+UDISE	UDISE+ (Unified District Information System for Education)	4	Percentage Share of Schools by Category
+UDISE	UDISE+ (Unified District Information System for Education)	5	Percentage Share of Enrolments by level
+UDISE	UDISE+ (Unified District Information System for Education)	6	Percentage Share of Teachers by School Category
+UDISE	UDISE+ (Unified District Information System for Education)	7	Pupil Teacher Ratio
+UDISE	UDISE+ (Unified District Information System for Education)	8	Average Teachers Per School
+UDISE	UDISE+ (Unified District Information System for Education)	9	Average Enrolments Per School
+UDISE	UDISE+ (Unified District Information System for Education)	10	Schools with Zero Enrolments
+UDISE	UDISE+ (Unified District Information System for Education)	11	Teachers in schools having zero Enrolments
+UDISE	UDISE+ (Unified District Information System for Education)	12	Schools with Single Teachers
+UDISE	UDISE+ (Unified District Information System for Education)	13	Enrolments in Single Teacher Schools
+UDISE	UDISE+ (Unified District Information System for Education)	14	Percentage of Schools having Enrolments across various Enrolment brackets
+UDISE	UDISE+ (Unified District Information System for Education)	15	Proportion of Enrolments to Total Enrolments (Pre-Primary to Higher Secondary)
+UDISE	UDISE+ (Unified District Information System for Education)	16	Number of Schools having infrastructure facility
+UDISE	UDISE+ (Unified District Information System for Education)	18	Number of schools by level of school education
+UDISE	UDISE+ (Unified District Information System for Education)	19	Number of schools by management and school category
+UDISE	UDISE+ (Unified District Information System for Education)	20	Number of schools with having AWC or Pre-Primary Sections
+UDISE	UDISE+ (Unified District Information System for Education)	21	Number of Teachers (All Management)
+UDISE	UDISE+ (Unified District Information System for Education)	22	Number of teachers by management
+UDISE	UDISE+ (Unified District Information System for Education)	23	Pupil Teacher Ratio by level of education
+UDISE	UDISE+ (Unified District Information System for Education)	24	Number of teachers by management, gender and classes taught
+UDISE	UDISE+ (Unified District Information System for Education)	25	Percentage of Trained Teachers (All Management)
+UDISE	UDISE+ (Unified District Information System for Education)	26	Percentage of Professionally Qualified Teachers (All Management)
+UDISE	UDISE+ (Unified District Information System for Education)	28	Enrolment of Students
+UDISE	UDISE+ (Unified District Information System for Education)	29	Children With Special Needs (CWSN) enrolment
+UDISE	UDISE+ (Unified District Information System for Education)	30	New admission of students in class 1 who have pre-school experience
+UDISE	UDISE+ (Unified District Information System for Education)	31	Gross Enrolment Ratio (GER)
+UDISE	UDISE+ (Unified District Information System for Education)	32	Net Enrolment Rate (NER)
+UDISE	UDISE+ (Unified District Information System for Education)	33	Adjusted Net Enrolment Rate (ANER)
+UDISE	UDISE+ (Unified District Information System for Education)	34	Age-Specific Enrolment Rate (ASER)
+UDISE	UDISE+ (Unified District Information System for Education)	35	Gender Parity Index (GPI) of GER
+UDISE	UDISE+ (Unified District Information System for Education)	36	Percentage of OBC enrolment to total enrolment
+UDISE	UDISE+ (Unified District Information System for Education)	37	Percentage of Muslim minority enrolment to total enrolment
+UDISE	UDISE+ (Unified District Information System for Education)	38	Percentage of all minority groups’ enrolment to total enrolment
+UDISE	UDISE+ (Unified District Information System for Education)	39	Promotion Rate
+UDISE	UDISE+ (Unified District Information System for Education)	40	Repetition Rate
+UDISE	UDISE+ (Unified District Information System for Education)	41	Dropout Rate
+UDISE	UDISE+ (Unified District Information System for Education)	42	Transition Rate
+UDISE	UDISE+ (Unified District Information System for Education)	43	Retention Rate
+UDISE	UDISE+ (Unified District Information System for Education)	45	Number of schools having drinking water facility within school premises – all types of management
+UDISE	UDISE+ (Unified District Information System for Education)	46	Number of Books available in Library/Book Bank/Reading Corner per School
+UDISE	UDISE+ (Unified District Information System for Education)	47	Details on Educational Parameters by Management
+UDISE	UDISE+ (Unified District Information System for Education)	48	Details on Computers & Digital Initiatives
+UDISE	UDISE+ (Unified District Information System for Education)	49	School having ICT Labs
+MNRE	Renewable Energy (Ministry of New and Renewable Energy)	1	Solar Power
+MNRE	Renewable Energy (Ministry of New and Renewable Energy)	2	Wind Power
+MNRE	Renewable Energy (Ministry of New and Renewable Energy)	3	Hydro Power
+MNRE	Renewable Energy (Ministry of New and Renewable Energy)	4	Bio Power
+MNRE	Renewable Energy (Ministry of New and Renewable Energy)	5	Total Power
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	43	Literacy rate (in per cent) among persons of age 7 years and above for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	44	Percentage distribution of persons of age 15 years and above by highest level of education successfully completed for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	45	Average number of years completed in formal education among persons of age 15 years and above for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	46	Average number of years completed in formal education among persons of age 25 years and above for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	47	Percentage distribution of students (persons of age 3 to 35 years currently attending education) by level of current attendance for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	48	Gross Attendance Ratio (GAR) at different levels of education for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	49	Net Attendance Ratio (NAR) at different levels of education for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	50	Percentage distribution of students by type of course pursuing (general course and technical/ professional course) for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	51	Average expenditure (Rs.) per student in basic course in the current academic year by type of course pursuing (general course and technical/ professional course) for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	52	Average expenditure (Rs.) on basic course per student during current academic year pursuing general course by items of expenditure for different States.
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	53	Average expenditure (Rs.) on basic course per student during current academic year pursuing technical/professional course by items of expenditure for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	54	Average expenditure (Rs.) on basic course per student during current academic year any course by items of expenditure for different States
+NSS75E	NSS75E (75th Round - Education / Social Consumption on Education)	55	Percentage of households with computer and internet facility for different States
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	3	Literacy rate (in per cent) of persons of age 7 years and above with disability
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	11	Percentage distribution of persons with disability by arrangement of regular care giver
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	13	Percentage distribution of persons with disability by receipt of aid/help
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	4	Percentage of persons of age 15 years and above with disability having highest level of completed education secondary and above
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	2	Percentage of persons with broad type of disability
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	1	Percentage of persons with disability
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	7	Percentage of persons with disability by status of treatment taken for different broad type of disability
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	6	Percentage of persons with disability having disability not since birth
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	5	Percentage of persons with disability having disability since birth
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	12	Percentage of persons with disability who used/ accessed public transport during last 365 days, accessed public building during last 365 days and problems faced in accessing/using publictransport/public building
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	10	Percentage of persons with hearing disability who were advised aid/appliances and acquired aid/appliances
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	8	Percentage of persons with locomotor disability who were advised aid/appliances and acquired aid/appliances
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	9	Percentage of persons with visual disability who were advised aid/appliances and acquired aid/appliances
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	23	Average floor area (0.00 sq. mtr.) of the dwelling unit for households living in houses
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	24	Average number of living rooms of the households living in houses
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	22	Average plinth level of the house (0.00 mtr.) for households living in houses
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	19	Percentage distribution of households by method of treatment of drinking water for different principal sources of drinking water 
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	15	Percentage distribution of households by supplementary sources of drinking water for different principal sources of drinking water 
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	26	Percentage distribution of households living in a house with direct opening to approach road / lane /constructed path
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	14	Percentage distribution of households not getting sufficient drinking water from the principal source by number of calendar months not getting sufficient drinking water, separately for households with different principal
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	21	Percentage of households having bathroom and latrine within the household premises
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	16	Percentage of households having improved source of drinking water
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	25	Percentage of households (living in a house) having separate kitchen with tap
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	18	Percentage of households which covered the main container used for storing drinking water
+NSS76	NSS76 (76th Round - Disability + Housing & Drinking Water)	20	Percentage of persons regularly used improved latrine
+NSS73	NSS73 (73rd Round - Unincorporated Non-Agricultural Enterprises in India)	1	Number of Enterprises
+NSS73	NSS73 (73rd Round - Unincorporated Non-Agricultural Enterprises in India)	2	Type of Ownership
+NSS73	NSS73 (73rd Round - Unincorporated Non-Agricultural Enterprises in India)	3	Workers
+NSS73	NSS73 (73rd Round - Unincorporated Non-Agricultural Enterprises in India)	4	 Emolument (in Rs.) per hired worker
+NSS73	NSS73 (73rd Round - Unincorporated Non-Agricultural Enterprises in India)	5	 Gross Value Added (in Rs.) per Worker
+NSS73	NSS73 (73rd Round - Unincorporated Non-Agricultural Enterprises in India)	6	 Gross Value Added (in Rs.) per Enterprise
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	5	Distribution (per 1000) of enterprises by number of months operated
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	15	Distribution (per 1000) of enterprises by number of workers at the all-India level
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	7	Distribution (per 1000) of enterprises by type of production carried out
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	6	Distribution (per 1000) of enterprises for each Board Acitivity Code (BAC) by number of establishments
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	2	Number of enterprises by status of registration
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	1	Number of enterprises by status of registration for each Broad Activity Code(BAC) at All-India level
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	3	Number of establishments for each Broad Activity Code (BAC)
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	8	Proportion (per 1000) of enterprises by use of ICT
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	22	Proportion (per 1000) of enterprises that can supply data online and data separately for each of the establishments 
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	4	Proportion (per 1000) of enterprises with mixed activity for each Board Acitivity Code (BAC)
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	17	Structural ratio and technical ratio at all-India level for establishments engaged in market production for each class of number of workers
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	18	Structural ratio and technical ratio for each range of GVA for establishments engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	16	Structural ratio and technical ratio of establishments engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	21	Structural ratios and technical ratios of enterprises engaged in non-market activity for each NIC-2008 sections
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	13	Total workers (hired workers and unpaid family members/proprietors) per establishments of the establishments for each Board Activity Code (BAC) of the enterprise engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	14	Total workers (hired workers and unpaid family members/proprietors) per establishments of the establishments for each Compilation Category of the enterprises
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	10	Value (in Rs.'000) per establishment of selected characteristics of establishments at 2-digit of NIC of the enterprises engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	9	Value (in Rs.'000) per establishment of selected characteristics of establishments for each Broad Activity Code (BAC) of the enterprise engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	11	Value (in Rs.'000) per establishment of selected characteristics of establishments for each Compilation Category (CC) of the enterprises engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	12	Value (in Rs.'000) per establishment of selected characteristics of establishments relating to employment and labour cost for each Broad Activity Code(BAC) of the enterprises engaged in market production
+NSS74	NSS74 (74th Round - Services Sector Enterprises in India)	19	Value (in Rs.'000) per establishment of selected characteristics of the enterprises engaged in non-market activity for each NIC 2008 section
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	12	Average expenditure (Rs.) per student during current academic session pursuing any course by items of expenditure
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	10	Average expenditure (Rs.) per student during current academic session pursuing general course by items of expenditure
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	8	Average expenditure (Rs.) per student during current academic session pursuing general course by level of attendance
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	11	Average expenditure (Rs.) per student during current academic session pursuing technical/professional course by items of expenditure
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	9	Average expenditure (Rs.) per student during current academic session pursuing technical/professional course by level of attendance
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	5	Gross Attendance Ratio (GAR) at different levels of education
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	1	Literacy rate (in percent) among persons of age 7 years and above 
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	6	Net Attendance Ratio (NAR) at different levels of education
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	2	Per 1000 distribution of persons by completed level of education for each age-group
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	4	Per 1000 distribution of persons of age 5-29 years by current attendance and current enrolment status
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	7	Per 1000 distribution of students by general, technical/ professional (except vocational) and vocational education
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	3	Proportion (per 1000) of persons (age 5-29 years) dropping out / discontinuance and never-enrolled
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	15	Age-group wise cases of hospitalisation (EC) reported per 1000 persons during the last 365 days
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	45	Average medical and non-medical expenditure (Rs.) per hospitalised childbirth during last 365 days – and break-up of medical expenditure – separately for public and private hospitals and for each quintile class of MPCE
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	46	Average medical and non-medical expenditure (Rs.) per hospitalised childbirth during last 365 days – and break- up of medical expenditure – separately for public hospitals
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	29	Average medical expenditure (Rs.) per hospitalisation case (EC) during last 365 days and its break-up for public hospital
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	34	Average total medical expenditure for (non-hospitalised) treatment per person with only one ailment during last 15 days by level of care, quintile class of MPCE and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	35	Average total medical expenditure for (non-hospitalised) treatments per person with only one ailment during last 15 days by level of care, State/ UT and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	36	Average total medical expenditure for (non-hospitalised) treatments per person with only one ailment during last 15 days quintile class of UMPCE by and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	27	Average total medical expenditure for treatment per hospitalisation case (EC) during stay at hospital (as inpatient) over last 365 days by quintile class of MPCE and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	28	Average total medical expenditure per hospitalisation case (EC) for treatment during stay at hospital (as inpatient) in last 365 days by level of care and gender for each State/UT and sector
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	33	Average total medical expenditure (Rs.) for treatment per ailing person during a period of 15 days by State/UT and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	37	Break-up of average medical expenditure (Rs.) for non-hospitalised treatment per ailing person treated, for each State/UT and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	18	Cases of hospitalisation (EC) on account of ailments of different broad ailment categories reported per 100,000 persons during the last 365 days by gender and age-group
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	19	Cases of hospitalisation(EC) on account of ailments of each broad ailment category reported per 100,000 persons during the last 365 days by gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	13	Hospitalisation cases (EC) per 100,000 persons during the last 365 days by age-group
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	17	Hospitalisation cases (EC) per 100,000 persons of different religion during the last 365 days
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	14	Hospitalisation cases (EC) per 100,000 persons of different social groups during the last 365 days
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	32	Number of persons per 1,00,000 reporting onset of ailments during last 15 days and average duration of ailment by gender and age-group
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	39	Per thousand distribution of aged persons of each age-group and gender by state of physical mobility: all-India
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	38	Per thousand distribution of aged persons of each gender and State/UT by state of economic independence
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	40	Per thousand distribution of cases of hospitalisation for childbirth by age of the mother
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	42	Per thousand distribution of cases of hospitalisation for childbirth by level of care for each social group
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	41	Per thousand distribution of cases of hospitalisation for childbirth by nature of treatment
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	43	Per thousand distribution of cases of hospitalisation for childbirth by type of ward, separately for each type of hospital (public/private) and each quintile class of MPCE
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	44	Per thousand distribution of cases of hospitalisation for childbirth by type of ward, separately for each type of hospital (public/private) and each State/UT
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	26	Per thousand distribution of hospitalisation cases (EC) by nature of treatment received during hospitalisation, separately
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	25	Per thousand distribution of hospitalisation cases (EC) by nature of treatment received during hospitalisation, separately for each quintile class of MPCE and gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	24	Per thousand distribution of hospitalisation cases(EC) during the last 365 days by type of hospital and type of ward, separately
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	22	Per thousand distribution of hospitalisation cases (EC) during the last 365 days by type of hospital and type of ward, separately for each gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	23	Per thousand distribution of hospitalisation cases (EC) during the last 365 days by type of hospital and type of ward, separately for each quintile class of UMPCE
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	16	Per thousand distribution of hospitalised cases (EC) over broad age groups in selected States for each gender
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	21	Per thousand distribution of hospitalised cases (EC) over broad ailment categories for different age groups
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	20	Per thousand distribution of hospitalised cases (EC) over detailed ailment types, separately for each gender and sector
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	30	Per thousand distribution of spells of ailment over broad ailment categories for different age groups
+NSS71	NSS71 (71st Round - Social Consumption: Education and Health in India)	31	Per thousand distribution of spells of ailment treated on medical advice over levels of care in State/UT
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	9	Average MPCE (in ₹) and budget-share(in %) on different broad groups of durable goods in last 365 days having NAE
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	11	Average MPCE (in ₹) on different durable goods
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	6	Budget-share (in %) of MPCE (in ₹) of different consumer services among total expenditure
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	10	Expenditure (%) on broad durable goods acquired in last 365 days among the households having NAE
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	8	Households (in %) acquiring major durable goods and their percentage distribution in the households having NAE and not having NAE
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	7	Households (in %) having NAE and acquiring major durable goods in the households having NAE and not having NAE
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	1	Households (in %) reporting expenditure, share of budget (in %) to total expenditure on transport and MPCE (in ₹) for different modes of transport
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	3	MPCE (in ₹), budget share (in %) and households (in %) reporting particular miscellaneous consumer services
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	2	MPCE (in ₹) on different modes of transport in different quintile UMPCE classes
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	4	MPCE (in ₹) on miscellaneous consumer services in last 30 days for each quintile class of UMPCE
+NSS72	NSS72 (72nd Round - Household Expenditure on Services and Durable Goods)	5	MPCE (in ₹) on services for each quintile class of UMPCE
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	31	Average expenditure (in ₹) per overnight trip by categories of expenditure 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	33	Average expenditure (in ₹) per overnight trip by quintile class of UMPCE during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	32	Average expenditure (in ₹) per overnight trip by quintile class of UMPCE during last 365 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	34	Average expenditure (in ₹) per same-day trip during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	35	Average expenditure (in ₹) per same-day trip for each quintile class of UMPCE during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	37	Estimated number of overnight trips by leading purpose completed during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	36	Estimated number of overnight trips by leading purpose completed during last 365 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	30	No. of same-day trips by leading purpose completed during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	3	Per 1000 distribution of households reporting overnight trips during last 365 days by household type 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	1	Per 1000 distribution of households reporting overnight trips during last 365 days by religion 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	2	Per 1000 distribution of households reporting overnight trips during last 365 days by social group
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	9	Per 1000 distribution of overnight trips by number of members in the trip and percentage of female member trip in a single member trip completed during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	8	Per 1000 distribution of overnight trips by number of members in the trip and percentage of female member trip in a single member trip completed during last 365 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	7	Per 1000 distribution of overnight trips by quintile classes of UMPCE during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	6	Per 1000 distribution of overnight trips by quintile classes of UMPCE during last 365 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	11	Per 1000 distribution of overnight trips by starting month during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	10	Per 1000 distribution of overnight trips by starting month during last 365 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	21	Per 1000 distribution of overnight visitor-trips by average number of nights spent in the trip (including journey) completed during last 30 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	23	Per 1000 distribution of overnight visitor-trips by major mode of travel for each visitor’s purpose completed during last 30 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	22	Per 1000 distribution of overnight visitor-trips by major mode of travel for each visitor’s purpose completed during last 365 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	25	Per 1000 distribution of overnight visitor-trips by major type of stay for each visitor’s purpose completed during last 30 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	24	Per 1000 distribution of overnight visitor-trips by major type of stay for each visitor’s purpose completed during last 365 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	27	Per 1000 distribution of overnight visitor-trips by type of during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	26	Per 1000 distribution of overnight visitor-trips by type of trip during last 365 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	29	Per 1000 distribution of overnight visitor-trips completed during last 30 days by main destination of origin with leading purposes business, social, religious & pilgrimage, education & training and others
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	19	Per 1000 distribution of overnight visitor-trips completed during last 30 days by purpose of the trip for different activity statuses 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	16	Per 1000 distribution of overnight visitor-trips completed during last 30 days by purpose of trip 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	17	Per 1000 distribution of overnight visitor-trips completed during last 30 days by purpose of trip for different age-group 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	18	Per 1000 distribution of overnight visitor-trips completed during last 30 days by purpose of trip for different educational levels 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	15	Per 1000 distribution of overnight visitor-trips completed during last 365 days by purpose of the trip for different activity statuses 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	13	Per 1000 distribution of overnight visitor-trips completed during last 365 days by purpose of trip for different age-group 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	14	Per 1000 distribution of overnight visitor-trips completed during last 365 days by purpose of trip for different educational levels 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	12	Per 1000 distribution of overnight visitor trips during last 365 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	20	Per 1000 distribution overnight visitor-trips by average number of nights spent in the trip (including journey) completed during last 365 days 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	28	Per 1000 distribution overnight visitor-trips completed during last 365 days by main destination of origin 
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	5	Sample number of overnight trips by leading purpose completed during last 30 days
+NSS72T	NSS72T (72nd Round - Domestic Tourism Expenditure in India)	4	Sample number of overnight trips by leading purpose completed during last 365 days

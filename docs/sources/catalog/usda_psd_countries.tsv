@@ -1,0 +1,215 @@
+country_code	country	rows
+AF	Afghanistan	7171
+AL	Albania	8739
+AG	Algeria	15430
+AO	Angola	10232
+AC	Antigua and Barbuda	8
+AR	Argentina	33327
+AM	Armenia	4113
+AS	Australia	34058
+AU	Austria	8896
+AJ	Azerbaijan	7262
+BF	Bahamas, The	1249
+BA	Bahrain	2242
+BG	Bangladesh	15124
+BB	Barbados	3009
+BO	Belarus	13266
+S8	Belgium (without Luxembourg)	207
+BE	Belgium-Luxembourg	11096
+BH	Belize	1261
+DM	Benin	15125
+BD	Bermuda	1046
+BT	Bhutan	2055
+BL	Bolivia	11757
+BK	Bosnia and Herzegovina	8206
+BC	Botswana	3264
+BR	Brazil	33844
+BX	Brunei	1885
+BU	Bulgaria	9938
+UV	Burkina Faso	11137
+BM	Burma	14963
+BY	Burundi	5152
+CV	Cabo Verde	1794
+CB	Cambodia	4007
+CM	Cameroon	14744
+CA	Canada	31749
+CT	Central African Republic	6290
+CD	Chad	9926
+CI	Chile	22646
+CH	China	32782
+CO	Colombia	20636
+CN	Comoros	1572
+CF	Congo (Brazzaville)	4603
+CG	Congo (Kinshasa)	13148
+CS	Costa Rica	13726
+IV	Cote d'Ivoire	17613
+HR	Croatia	3412
+CU	Cuba	12114
+CY	Cyprus	5430
+EZ	Czech Republic	2292
+DA	Denmark	10748
+DJ	Djibouti	1742
+DR	Dominican Republic	13886
+E2	EU-15	8860
+E3	EU-25	32
+EC	Ecuador	17502
+EG	Egypt	20420
+ES	El Salvador	11625
+EK	Equatorial Guinea	1273
+ER	Eritrea	2550
+EN	Estonia	2545
+WZ	Eswatini	3607
+ET	Ethiopia	13190
+E4	European Union	18746
+FO	Faroe Islands	868
+FJ	Fiji	3132
+FI	Finland	7403
+CZ	Former Czechoslovakia	10880
+YO	Former Yugoslavia	10208
+FT	Fr.Ter.Africa-Issas	16
+FR	France	12699
+FP	French Polynesia	144
+Y2	French West Indies	848
+GB	Gabon	4078
+GA	Gambia, The	6009
+GZ	Gaza Strip	518
+GG	Georgia	5742
+GC	German Democratic Republic	7996
+GM	Germany	1943
+GE	Germany, Federal Republic of	11370
+GH	Ghana	15560
+GI	Gibraltar	512
+GN	Gilbert and Ellice Islands	240
+GR	Greece	11836
+GL	Greenland	144
+GJ	Grenada	768
+GP	Guadeloupe	224
+GT	Guatemala	15844
+GU	Guinea	11139
+PU	Guinea-Bissau	5115
+GY	Guyana	6116
+HA	Haiti	9321
+HO	Honduras	12749
+HK	Hong Kong	12077
+HU	Hungary	12369
+IC	Iceland	1762
+IN	India	31905
+ID	Indonesia	20785
+IR	Iran	19612
+IZ	Iraq	13404
+EI	Ireland	9114
+IS	Israel	18384
+IT	Italy	16239
+JM	Jamaica	8250
+JA	Japan	35847
+JO	Jordan	10726
+KZ	Kazakhstan	15115
+KE	Kenya	10459
+KN	Korea, North	8615
+KS	Korea, South	27615
+KV	Kosovo	418
+KU	Kuwait	6268
+KG	Kyrgyzstan	7169
+LA	Laos	3201
+LG	Latvia	2393
+LE	Lebanon	10285
+LT	Lesotho	3315
+LI	Liberia	6638
+LY	Libya	6922
+LH	Lithuania	2873
+LU	Luxembourg	81
+MC	Macau	1452
+MA	Madagascar	9255
+MI	Malawi	6471
+MY	Malaysia	18984
+MV	Maldives	864
+ML	Mali	9892
+MT	Malta	2881
+MB	Martinique	208
+MR	Mauritania	5676
+MP	Mauritius	4295
+MX	Mexico	35513
+MD	Moldova	7544
+MG	Mongolia	1870
+MJ	Montenegro	598
+MO	Morocco	20437
+MZ	Mozambique	14601
+WA	Namibia	795
+NP	Nepal	6439
+NL	Netherlands	12269
+NA	Netherlands Antilles	1100
+NC	New Caledonia	2323
+NZ	New Zealand	16971
+NU	Nicaragua	12240
+NG	Niger	7228
+NI	Nigeria	20779
+MK	North Macedonia	7294
+NO	Norway	22628
+MU	Oman	4443
+ZZ	Other	377
+PK	Pakistan	19435
+PN	Panama	10086
+PP	Papua New Guinea	8940
+PA	Paraguay	15036
+PE	Peru	17923
+RP	Philippines	21837
+PL	Poland	14709
+PO	Portugal	9676
+RQ	Puerto Rico	560
+QA	Qatar	2756
+RE	Reunion	977
+RO	Romania	13302
+RS	Russia	20387
+RW	Rwanda	6257
+WS	Samoa	2621
+TP	Sao Tome and Principe	1464
+SA	Saudi Arabia	16437
+SG	Senegal	11528
+RB	Serbia	5951
+SR	Serbia and Montenegro	2528
+SE	Seychelles	768
+SL	Sierra Leone	9515
+SN	Singapore	14442
+LO	Slovakia	2160
+SI	Slovenia	1790
+BP	Solomon Islands	1296
+SO	Somalia	6818
+SF	South Africa	29892
+OD	South Sudan	720
+SP	Spain	14242
+CE	Sri Lanka	10486
+SC	St. Kitts and Nevis	1056
+ST	St. Lucia	160
+SU	Sudan	10852
+NS	Suriname	2133
+SW	Sweden	11309
+SZ	Switzerland	28823
+SY	Syria	13372
+TW	Taiwan	22675
+TI	Tajikistan	5742
+TZ	Tanzania	15463
+TH	Thailand	20968
+TO	Togo	13452
+TN	Tonga	752
+TD	Trinidad and Tobago	7574
+TS	Tunisia	8409
+TU	Turkey	31183
+TX	Turkmenistan	6171
+UG	Uganda	11477
+UP	Ukraine	17335
+UR	Union of Soviet Socialist Repu	11974
+TC	United Arab Emirates	8842
+UK	United Kingdom	19082
+US	United States	37940
+UY	Uruguay	16140
+UZ	Uzbekistan	9731
+NH	Vanuatu/New Hebrides	1556
+VE	Venezuela	17092
+VM	Vietnam	17890
+VO	Virgin Islands of the U.S.	80
+YM	Yemen	6173
+YS	Yemen (Aden)	3135
+YE	Yemen (Sanaa)	4212
+YU	Yugoslavia (>05/92)	342
+ZA	Zambia	12068
+RH	Zimbabwe	14675

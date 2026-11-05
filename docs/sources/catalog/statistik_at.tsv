@@ -1,0 +1,544 @@
+dataset	title	updated
+OGDEXT_HVD_FBNR_OENACE_1	Firmenbuchnummer ÖNACE Zuordnung	05.11.2026
+OGD_touextsai_Tour_HKL_1	Nächtigungsstatistik ab November 1973 - Nächtigungen nach Herkunftsländern und Bundesländern	05.11.2026
+OGD_touextsai_Tour_UA_1	Nächtigungsstatistik ab November 1973 - Nächtigungen nach Unterkunftsarten und Bundesländern	05.11.2026
+OGD_watlas23_WATLAS_23	Wirtschaftsatlas: Verkehr (ÖNACE 2008 H) ab 2021	04.11.2026
+OGD_watlas22_WATLAS_22	Wirtschaftsatlas: Tourismus (ÖNACE 2008 I) ab 2021	04.11.2026
+OGD_watlas21_WATLAS_21	Wirtschaftsatlas: Handel (ÖNACE 2008 G) ab 2021	04.11.2026
+OGD_watlas20_WATLAS_20	Wirtschaftsatlas: Bauwesen (ÖNACE 2008 F) ab 2021	04.11.2026
+OGD_watlas19_WATLAS_19	Wirtschaftsatlas: Industrie (ÖNACE 2008 B-E) ab 2021	04.11.2026
+OGD_watlas15_WATLAS_15	Wirtschaftsatlas: Branchendaten nach Wirtschaftszweigen (ÖNACE 2008 B-S) ab 2021	04.11.2026
+OGD_konjunkturmonitor_KonMon_1	Konjunkturmonitor	03.11.2026
+OGD_vgr111_VGR_Flashes_Erwerb_1	Hauptaggregate der VGR;Flashes Erwerbstätigkeit (t+30 Tage) nach ESVG 2010	30.10.2026
+OGD_epi2021nac08_EPI_2021_OENACE_1	Erzeugerpreisindex (2021 = 100) ÖNACE 2008	30.10.2026
+OGD_epi2021cpa15_EPI_2021_OECPA_1	Erzeugerpreisindex (2021 = 100) ÖCPA 2015	30.10.2026
+OGD_zlf_komm_ZLF_KOM_2	Kommerzielle Zivilluftfahrt	30.10.2026
+OGD_konjidxdl21_KJIX_DL_21_1	Konjunkturindizes Dienstleistungen Basis 2021	30.10.2026
+OGD_konjidxhan21_KJIX_H_21_1	Konjunkturindizes Handel Basis 2021	30.10.2026
+OGD_prodcom102_PRODCOM25_MO_1	Güterproduktion nach ÖCPA und ÖPRODCOM ab 2025, monatliche Betriebsdaten (Primärerhebung)	29.10.2026
+OGD_kjeunt25mmde_KJE25_MDE_U_M_2	Konjunkturstatistik im Produzierenden Bereich ab 2025, monatliche Unternehmensdaten (Grundgesamtheit) nach ÖNACE 2-Steller	29.10.2026
+OGD_kjeunt25mmde_KJE25_MDE_U_M_1	Konjunkturstatistik im Produzierenden Bereich ab 2025, monatliche Unternehmensdaten (Grundgesamtheit)	29.10.2026
+OGD_kjebet25mmde_KJE25_MDE_B_M_1	Konjunkturstatistik im Produzierenden Bereich ab 2025, monatliche Betriebsdaten (Grundgesamtheit)	29.10.2026
+OGD_kjeunt25m_KJE25_U_M_1	Konjunkturstatistik im Produzierenden Bereich ab 2025, monatliche Unternehmensdaten (Primärerhebung)	29.10.2026
+OGD_kjebet25m_KJE25_B_M_1	Konjunkturstatistik im Produzierenden Bereich ab 2025, monatliche Betriebsdaten (Primärerhebung)	29.10.2026
+OGD_rate_kalwobez_GEST_KALWOCHE_STR_BZ_100	Altersstandardisierte Sterberate in Österreich (ohne Auslandssterbefälle) ab 2020 nach Kalenderwoche, Bundesland und Bezirken	29.10.2026
+OGD_rate_kalwo_GEST_KALWOCHE_STR_100	Altersstandardisierte Sterberate in Österreich (ohne Auslandssterbefälle) ab 2000 nach Kalenderwoche	29.10.2026
+OGD_gest_kalwo_alter_GEST_KALWOCHE_5J_100	Gestorbene in Österreich (ohne Auslandssterbefälle) ab 2000 nach Kalenderwoche und 5-Jahresgruppen	29.10.2026
+OGD_gest_kalwo_GEST_KALWOCHE_100	Gestorbene in Österreich (ohne Auslandssterbefälle) ab 2000 nach Kalenderwoche	29.10.2026
+OGD_krankenbewegungen_ex_LEISTUNGEN_20211	Medizinische Leistungen während stationärer Aufenthalte	22.10.2026
+OGD_krankenbewegungen_ex_LEISTUNGEN_20212	Medizinische Leistungen während stationärer Aufenthalte	22.10.2026
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_PERSMERK_2021	Spitalsentlassungen nach Personenmerkmalen	22.10.2026
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_VSEKT_20211	Spitalsentlassungen nach Versorgungssektoren	22.10.2026
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_VSEKT_20212	Spitalsentlassungen nach Versorgungssektoren	22.10.2026
+OGD_itgs_hvd_ogdonly_HVD_ITGSEUKON_2022	ITGS (International Trade in Goods Statistics), Außenhandel, nach EU-Konzept 2022	19.10.2026
+OGD_itgs_hvd_ogdonly_HVD_ITGSEUKON_2023	ITGS (International Trade in Goods Statistics), Außenhandel, nach EU-Konzept 2023	19.10.2026
+OGD_itgs_hvd_ogdonly_HVD_ITGSEUKON_2024	ITGS (International Trade in Goods Statistics), Außenhandel, nach EU-Konzept 2024	19.10.2026
+OGD_itgs_hvd_ogdonly_HVD_ITGSEUKON_2025	ITGS (International Trade in Goods Statistics), Außenhandel, nach EU-Konzept 2025	19.10.2026
+OGD_tli16nace20_TLI_110	Tariflohnindex 2016 nach ÖNACE 2008 und sozialer Stellung	19.10.2026
+OGD_tli16kvg_TLI_109	Tariflohnindex 2006 ausgewählte Kollektivvertragsgruppen und öffentlicher Dienst	19.10.2026
+OGD_tli16kv_TLI_108	Tariflohnindex 2016 ausgewählte Kollektivverträge	19.10.2026
+OGD_tli16wk15_TLI_107	Tariflohnindex 2016 nach Wirtschaftskammersystematik 2015 und sozialer Stellung	19.10.2026
+OGD_persph_LEHR_1	Lehrpersonen an Pädagogischen Hochschulen	16.10.2026
+OGD_aea001_HVD_AEA_1	Luftemissionsrechnung ab 2008	16.10.2026
+OGD_aea003_HVD_AEA_GAS_1	Luftemissionsrechnung ab 2008 F-Gase	16.10.2026
+OGD_vpilhki45_VPI_LHKI45_1	Lebenskostenindexindex Basis 1945	16.10.2026
+OGD_vpilhki38_VPI_LHKI38_1	Lebenshaltungskostenindex Basis 1938	16.10.2026
+OGD_vpikhpi_VPI_KHPI_1	Kleinhandelspreisindex	16.10.2026
+OGD_vpi58ii_VPI_1958_ii_1	Verbraucherpreisindex II Basis 1958	16.10.2026
+OGD_vpi58_VPI_1958_i_1	Verbraucherpreisindex I Basis 1958	16.10.2026
+OGD_vpi66_VPI_1966_1	Verbraucherpreisindex Basis 1966	16.10.2026
+OGD_vpi76_VPI_1976_1	Verbraucherpreisindex Basis 1976	16.10.2026
+OGD_vpi86_VPI_1986_1	Verbraucherpreisindex Basis 1986	16.10.2026
+OGD_vpi96_VPI_1996_1	Verbraucherpreisindex Basis 1996	16.10.2026
+OGD_vpi00_VPI_2000_1	Verbraucherpreisindex Basis 2000	16.10.2026
+OGD_vpi05c18_VPI_2005COICOP18_1	Verbraucherpreisindex Basis 2005	16.10.2026
+OGD_vpi10c18_VPI_2010COICOP18_1	Verbraucherpreisindex Basis 2010	16.10.2026
+OGD_vpi15c18_VPI_2015COICOP18_1	Verbraucherpreisindex Basis 2015	16.10.2026
+OGD_vpi20c18_VPI_2020COICOP18_1	Verbraucherpreisindex Basis 2020	16.10.2026
+OGD_hvpi25_HVD_HVPI_2025_1	Harmonisierter Verbraucherpreisindex, HVPI, Basis 2025	16.10.2026
+OGD_vpi25c18_VPI_2025COICOP18_1	Verbraucherpreisindex Basis 2025	16.10.2026
+OGD_ahlgrhs_Aussenhandel_3	Außenhandelsdaten nach Ländergruppen ab 1995	15.10.2026
+OGD_ahlgrhs_Aussenhandel_2	Außenhandelsdaten nach SITC ab 1995	15.10.2026
+OGD_1531kn2_Aussenhandel_4	Außenhandelsdaten nach Partnerländern ab 2007	15.10.2026
+OGD_bkiwasserbau2025_BKI_W25_1	BKI: Baukostenindex für den Siedlungswasserbau (2025=100)	15.10.2026
+OGD_bkibrueckenbau2025_BKI_B25_1	BKI: Baukostenindex für den Brückenbau (2025=100)	15.10.2026
+OGD_bkistrassebitumen2025_BKI_SB25_1	BKI: Baukostenindex für den Straßenbau, Bitumen (2025=100)	15.10.2026
+OGD_bkistrassenbau2025_BKI_S25_1	BKI: Baukostenindex für den Straßenbau (2025=100)	15.10.2026
+OGD_bkiwhsiedlg2025_BKI_WS25_1	Baukostenindex für den Wohnungs- und Siedlungsbau (2025=100)	15.10.2026
+OGD_f0760ext_OD_PkwGZL_1	Pkw-Gebrauchtzulassungen nach Marken ab Jänner 2000	14.10.2026
+OGD_indquot001_HVD_INDQUOTE_2	Ausgewählte demographische Indikatoren für Österreich und alle NUTS-Regionen ab 2002, Altenabhängigenquotient	13.10.2026
+OGD_indquot001_HVD_INDQUOTE_6	Ausgewählte demographische Indikatoren für Österreich und alle NUTS-Regionen ab 2002, Gesamtfertilitätsrate	13.10.2026
+OGD_indquot001_HVD_INDQUOTE_1	Ausgewählte demographische Indikatoren für Österreich und alle NUTS-Regionen ab 2002, Medianalter	13.10.2026
+OGD_indquot001_HVD_INDQUOTE_3	Ausgewählte demographische Indikatoren für Österreich und alle NUTS-Regionen ab 2002, Rohe Geburtenrate	13.10.2026
+OGD_indquot001_HVD_INDQUOTE_4	Ausgewählte demographische Indikatoren für Österreich und alle NUTS-Regionen ab 2002, Rohe Sterberate	13.10.2026
+OGD_indquot001_HVD_INDQUOTE_5	Ausgewählte demographische Indikatoren für Österreich und alle NUTS-Regionen ab 2002, Säuglingssterberate	13.10.2026
+OGD_hpivr_HPI_VR_1	Häuserpreisindex Prozentveränderung zum Vorjahr	12.10.2026
+OGD_hpi2025_HPI_25_1	Häuserpreisindex 2025	12.10.2026
+OGD_hpi2015_HPI_15_1	Häuserpreisindex 2015	12.10.2026
+OGD_hpi2010_HPI_10_1	Häuserpreisindex 2010	12.10.2026
+OGD_bewwohn303_BB303_1	Baubewilligungen, Wohnungen ab 2010  (ohne An-, Auf-, Umbautätigkeit in Wien)	09.10.2026
+OGD_bauvh302_BB302_1	Baubewilligungen, Neuerrichtung ganzer Gebäude ab 2010	09.10.2026
+OGD_fkfzul0759_OD_PkwNZL_1	Pkw-Neuzulassungen nach Marken ab Jänner 2000	09.10.2026
+OGD_prodvindexusb2021_KJID2021_PVISTD_1	Produktionsindex je unselbstständig Beschäftigten (Basis 2021)	09.10.2026
+OGD_prodindexstd2021_KJID2021_PVISTD_1	Produktionsindex je geleisteter Arbeitsstunde (Basis 2021)	09.10.2026
+OGD_kjiprodindex2021_KJID2021_PI_1	Produktionsindex Nace Rev.2 (Basis 2021)	09.10.2026
+OGD_kjiumsatzindex2021_KJID2021_UI_1	Umsatzindex Nace Rev.2 (Basis 2021), EU-harmonisierte Bereinigung	09.10.2026
+OGD_bruttoverdiensteindex2021a_KJID2021_BVIa_1	Bruttoverdiensteindex (Basis 2021), EU-harmonisierte Bereinigung	09.10.2026
+OGD_beschaeftigtenindex2021_KJID2021_BI_1	Index der Beschäftigten insgesamt ÖNACE 2008 (Basis 2021)	09.10.2026
+OGD_kjiarbeitsvolindex2021_KJID2021_AST_1	Arbeitsvolumensindex (Basis 2021), EU-harmonisierte Bereinigung	09.10.2026
+OGD_kjiauftragseingangsindex2021_KJID2021_AEGI_1	Auftragseingangsindex Nace Rev.2 (Basis 2021)	09.10.2026
+OGD_skesvg2010_NFSK_ESVG10_1	Nicht-finanzielle Sektorkonten nach ESVG 2010	06.10.2026
+OGD_pregps004_GHPI_25S_1	GHPI 2025; Sondergliederungen	06.10.2026
+OGD_pregpi004_GHPI_25_1	Grosshandelspreisindex 2025	06.10.2026
+OGD_skesvg2010indikat_HVD_NFSK_INDIKAT_1	Nicht-finanzielle Sektorkonten nach ESVG 2010, ausgewählte Ergebnisse und Indikatoren	05.10.2026
+OGD_oeff_fin_Oeff_Fin_1	Öffentliche Finanzen ab 1995, ESVG 2010	30.09.2026
+OGD_kons_brv_q_HVD_KONS_BRV_Q_1	Konsolidierte Bruttoverschuldung des Staates, vierteljährlich ab 2001	30.09.2026
+OGD_kons_brv_HVD_KONS_BRV_1	Konsolidierte Bruttoverschuldung des Staates, jährlich ab 1995	30.09.2026
+OGD_vgr108_VGR_HA_vj_1	Hauptaggregate der VGR; vierteljährlich; ESVG 2010	30.09.2026
+OGD_vgr109_VGR_Erwerb_1	Hauptaggregate der VGR; Erwerbstätigkeit; vierteljährlich und jährlich; ESVG 2010	30.09.2026
+OGD_vgr107_VGR_HA_BAI_2	Hauptaggregate der VGR; Bruttoanlageinvestitionen nach ÖNACE-Abteilungen; jährlich	30.09.2026
+OGD_vgr105_VGR_HA_Bws_2	Hauptaggregate der VGR; Bruttowertschöpfung nach ÖNACE-Abteilungen; jährlich	30.09.2026
+OGD_vgr101_VGRJahresR_3	VGR-Jahresrechnungen, Hauptaggregate; jählich; ESVG 2010	30.09.2026
+OGD_ind003_HVD_IND_1	Fernere Lebenserwartung nach Alter für Österreich und die NUTS-Regionen	16.09.2026
+OGD_ind002fertilrat_HVD_FERTILRATE_1	Altersspezifische Fertilitätsrate in Österreich	16.09.2026
+OGD_ake101_hvd_ogdonly_HVD_ETQUOTE_1	Erwerbstätigenquote in Österreich, jährlich und nach Quartalen	03.09.2026
+OGD_ake100_hvd_ogdonly_HVD_ALQUO_1	Arbeitslosenquote in Österreich, jährlich und nach Quartalen	03.09.2026
+OGD_armsilc01_hvd_ogdonly_HVD_ARM_1	Armutsquoten in Österreich	12.05.2026
+OGD_unglsilc02_HVD_UNG_1	Ungleichheitsquote in Österreich	12.05.2026
+OGD_prodcom001_HVD_PRODCOM_J_1	Güterproduktion nach ÖCPA und ÖPRODCOM 2008-2024, PRODCOM 8-Steller, jährliche Betriebsdaten (Primärerhebung)	08.05.2026
+OGD_prodcom101_HVD_PRODCOM25_J_1	Güterproduktion nach ÖCPA und ÖPRODCOM ab 2025, PRODCOM 8-Steller, jährliche Betriebsdaten (Primärerhebung)	08.05.2026
+OGD_ake102_hvd_ogdonly_HVD_POTAKQUOTE_1	Potenzielle Arbeitskräfte in Österreich, jährlich	31.03.2026
+OGD_vgrrgr104_RGR104_1	Bruttoregionalprodukt nach ESVG 2010, NUTS2+NUTS3	09.03.2026
+OGD_vgrrgr103_RGR103_1	Regionale Hauptaggregate nach ESVG 2010, NUTS2+NUTS3	09.03.2026
+OGD_gesausgaben03_HVD_HPHF_1	Laufende Gesundheitsausgaben (HP x HF)	29.01.2026
+OGD_gesausgaben02_HVD_HCHP_1	Laufende Gesundheitsausgaben (HC x HP)	29.01.2026
+OGD_gesausgaben01_HVD_HCHF_1	Laufende Gesundheitsausgaben (HC x HF)	29.01.2026
+OGDEXT_AEST_GEMTAB_1	Gemeindeergebnisse der Abgestimmten Erwerbsstatistik und Arbeitsstättenzählung ab 2011 (Gebietsstand jeweils zum Stichtag 31.10.)	09.06.2026
+OGDEXT_KLASSDB_OEISCO08_1	Ö-ISCO 08	18.02.2026
+OGDEXT_KLASSDB_OENACE2008_1	ÖNACE 2008	18.02.2026
+OGDEXT_KLASSDB_OENACE2025_1	ÖNACE 2025	18.02.2026
+OGDEXT_KLASSDB_NACERev21_1	NACE Rev. 2.1	18.02.2026
+OGDEXT_KLASSDB_NACERev2_1	NACE Rev. 2	18.02.2026
+OGD_aeapp_biber_abschl_ext_BIBER_ABSCHL_1	BibEr Monitoring 2025 - Bildungsabschlüsse nach Jahr, abgeschlossener Bildung, Geschlecht und Arbeitsmarktstatus 18 Monate nach dem Abschluss	22.12.2025
+OGD_aest_erv_statw_haupt_ERV_STATWECHSEL_1	Registerbasierte Erwerbsverläufe – Statuswechsel 2010 bis 2024 nach Arbeitsmarkstatus vor und nach dem Statuswechsel	13.11.2025
+OGD_veste405_Veste405_1	Verdienststrukturerhebung 2022 Bruttostundenverdienste in Euro nach Staatsangehörigkeit, Bundesland und Beschäftigungsverhältnis	19.11.2024
+OGD_veste404_Veste404_1	Verdienststrukturerhebung 2022 Bruttostundenverdienste in Euro nach sozialer Stellung und ÖNACE	19.11.2024
+OGD_veste403_Veste403_1	Verdienststrukturerhebung 2022 Bruttostundenverdienste in Euro nach Beschäftigtenmerkmalen	19.11.2024
+OGD_veste401_Veste401_1	Verdienststrukturerhebung 2022 nach ÖNACE	19.11.2024
+OGD_veste402_Veste402_1	Verdienststrukturerhebung 2022 Bruttostundenverdienste in Euro nach Unternehmensmerkmalen	19.11.2024
+OGD_veste309_Veste309_1	Verdienststrukturerhebung 2018 Bruttostundenverdienste in EUR nach Staatsangehörigkeit, Bundesland und Beschäftigungsverhältnis	24.03.2022
+OGD_veste307_Veste307_1	Verdienststrukturerhebung 2018 Bruttostundenverdienste in EUR nach sozialer Stellung und ÖNACE	24.03.2022
+OGD_veste305_Veste305_1	Verdienststrukturerhebung 2018 Bruttostundenverdienste in EUR nach Beschäftigtenmerkmalen	24.03.2022
+OGD_veste303_Veste203_1	Verdienststrukturerhebung 2018 Bruttostundenverdienste in EUR nach Unternehmensmerkmalen	24.03.2022
+OGD_veste301_Veste301_1	Verdienststrukturerhebung 2018 nach ÖNACE	24.03.2022
+OGDEXT_KLASSDB_ISCO08_1	ISCO 08	19.10.2017
+OGD_f1787_MZ_HWZ_Q_1	Mikrozensus; Hauptwohnsitzwohnungen (HWS) ab 2004, Quartale	08.09.2026
+OGD_ake002q_AKEQ_1	Mikrozensus-Arbeitskräfteerhebung Quartalsdaten	03.09.2026
+OGD_einbuergerungen_quart_EINB_1	Vorläufige Einbürgerungen quartalsweise	12.08.2026
+OGD_gestorbene_ext_GES_1	Gestorbene	15.07.2026
+OGD_gestorbenesaeuglinge_ext_GESS_1	Gestorbene Säuglinge	15.07.2026
+OGDEXT_VORNAMEN_1	Vornamen	09.07.2026
+OGDEXT_BINNENWAND_1	Wanderungen innerhalb Österreichs ab 2002 (einheitlicher Gebietsstand 2025)	29.06.2026
+OGD_bevstandjbab2002_BevStand_2002	Bevölkerungsstand zu Jahresbeginn 2002	29.06.2026
+OGD_bevstandjbab2002_BevStand_2003	Bevölkerungsstand zu Jahresbeginn 2003	29.06.2026
+OGD_bevstandjbab2002_BevStand_2004	Bevölkerungsstand zu Jahresbeginn 2004	29.06.2026
+OGD_bevstandjbab2002_BevStand_2005	Bevölkerungsstand zu Jahresbeginn 2005	29.06.2026
+OGD_bevstandjbab2002_BevStand_2006	Bevölkerungsstand zu Jahresbeginn 2006	29.06.2026
+OGD_bevstandjbab2002_BevStand_2007	Bevölkerungsstand zu Jahresbeginn 2007	29.06.2026
+OGD_bevstandjbab2002_BevStand_2008	Bevölkerungsstand zu Jahresbeginn 2008	29.06.2026
+OGD_bevstandjbab2002_BevStand_2009	Bevölkerungsstand zu Jahresbeginn 2009	29.06.2026
+OGD_bevstandjbab2002_BevStand_2010	Bevölkerungsstand zu Jahresbeginn 2010	29.06.2026
+OGD_bevstandjbab2002_BevStand_2011	Bevölkerungsstand zu Jahresbeginn 2011	29.06.2026
+OGD_bevstandjbab2002_BevStand_2012	Bevölkerungsstand zu Jahresbeginn 2012	29.06.2026
+OGD_bevstandjbab2002_BevStand_2013	Bevölkerungsstand zu Jahresbeginn 2013	29.06.2026
+OGD_bevstandjbab2002_BevStand_2014	Bevölkerungsstand zu Jahresbeginn 2014	29.06.2026
+OGD_bevstandjbab2002_BevStand_2015	Bevölkerungsstand zu Jahresbeginn 2015	29.06.2026
+OGD_bevstandjbab2002_BevStand_2016	Bevölkerungsstand zu Jahresbeginn 2016	29.06.2026
+OGD_bevstandjbab2002_BevStand_2017	Bevölkerungsstand zu Jahresbeginn 2017	29.06.2026
+OGD_bevstandjbab2002_BevStand_2018	Bevölkerungsstand zu Jahresbeginn 2018	29.06.2026
+OGD_bevstandjbab2002_BevStand_2019	Bevölkerungsstand zu Jahresbeginn 2019	29.06.2026
+OGD_bevstandjbab2002_BevStand_2020	Bevölkerungsstand zu Jahresbeginn 2020	29.06.2026
+OGD_bevstandjbab2002_BevStand_2021	Bevölkerungsstand zu Jahresbeginn 2021	29.06.2026
+OGD_bevstandjbab2002_BevStand_2022	Bevölkerungsstand zu Jahresbeginn 2022	29.06.2026
+OGD_bevstandjbab2002_BevStand_2023	Bevölkerungsstand zu Jahresbeginn 2023	29.06.2026
+OGD_bevstandjbab2002_BevStand_2024	Bevölkerungsstand zu Jahresbeginn 2024	29.06.2026
+OGD_bevstandjbab2002_BevStand_2025	Bevölkerungsstand zu Jahresbeginn 2025	29.06.2026
+OGD_bevstandjbab2002_BevStand_2026	Bevölkerungsstand zu Jahresbeginn 2026	29.06.2026
+OGD_bevwan020_AUSSENWAND_100	Wanderungen mit dem Ausland ab 2002 nach Alter, Geschlecht und Staatsangehörigkeit	29.06.2026
+OGD_bevwan020_AUSSENWAND_201	Wanderungen mit dem Ausland ab 2002 nach Altersgruppen, Gemeinde und Staatsangehörigkeit	29.06.2026
+OGD_bevwan020_AUSSENWAND_300	Wanderungen mit dem Ausland ab 2002 nach Altersgruppen, Herkunfts/Zielland und Staatsangehörigkeit	29.06.2026
+OGD_bevwan020_AUSSENWAND_202	Wanderungen mit dem Ausland ab 2015 nach Altersgruppen, Gemeinde und Staatsangehörigkeit	29.06.2026
+OGD_geborene_ext_GEB_1	Geborene	19.06.2026
+OGD_rzgwz_gwz_zr_whg_GWZ_WHG_1	Gebäude- und Wohnungszählung – Wohnungen – Zeitreihe ab 2011	09.06.2026
+OGD_rzgwz_gwz_zr_geb_GWZ_GEB_1	Gebäude- und Wohnungszählung – Gebäude – Zeitreihe ab 2011	09.06.2026
+OGD_schapaext_SCH_APA_2	Aufgelöste Partnerschaften	22.05.2026
+OGD_schapaext_SCH_APA_1	Scheidungen	22.05.2026
+OGD_eheepext_EHE_EPA_1	Eheschließungen und eingetragene Partnerschaften nach  Geschlecht	22.05.2026
+OGD_geborene_ext_ohmed_GEB_1	Geborene	22.05.2026
+OGD_gestorbene_ext_ohmed_GES_1	Gestorbene	22.05.2026
+OGD_f1826_AKE1826K_1	Kinder (Mikrozensus-Arbeitskräfteerhebung)	16.03.2026
+OGD_f1825_AKE1825FAM_1	Familien (Mikrozensus-Arbeitskräfteerhebung)	16.03.2026
+OGD_f1824_AKE1824HH_1	Privathaushalte (Mikrozensus-Arbeitskräfteerhebung)	16.03.2026
+OGD_f1788_MZ_HWZ_J_1	Mikrozensus; Hauptwohnsitzwohnungen (HWS) ab 2004	13.03.2026
+OGD_ake003j_AKEZR_1	Mikrozensus-Zeitreihe ab 1974	12.03.2026
+OGD_ake001j_AKEJ_1	Mikrozensus-Arbeitskräfteerhebung Jahresdaten	12.03.2026
+OGD_einbuergerungen_EINBJ_1	Einbürgerungen	18.02.2026
+OGD_f1741_HH_Proj_202301	Haushaltsprojektion	12.12.2025
+OGD_f1741_HH_Proj_202302	Haushaltsprojektion	12.12.2025
+OGD_bevstprogjdgebland_PR_BEVJDGB_10	Bevölkerung im Jahresdurchschnitt nach Geburtsland 2024 bis 2080	12.11.2025
+OGD_bevstprogjdgebland_PR_BEVJDGB_8	Bevölkerung im Jahresdurchschnitt nach Geburtsland 2024 bis 2080	12.11.2025
+OGD_bevstprogjdgebland_PR_BEVJDGB_9	Bevölkerung im Jahresdurchschnitt nach Geburtsland 2024 bis 2080	12.11.2025
+OGD_bevstprog_PR_BEVJD_10	Bevölkerung im Jahresdurchschnitt 1952 bis 2080	12.11.2025
+OGD_bevstprog_PR_BEVJD_11	Bevölkerung im Jahresdurchschnitt 1952 bis 2080	12.11.2025
+OGD_bevstprog_PR_BEVJD_9	Bevölkerung im Jahresdurchschnitt 1952 bis 2080	12.11.2025
+OGD_bevjahresanfgebland_PR_BEVJAGB_10	Bevölkerung zum Jahresanfang nach dem Geburtsland 2024 bis 2080	12.11.2025
+OGD_bevjahresanfgebland_PR_BEVJAGB_8	Bevölkerung zum Jahresanfang nach dem Geburtsland 2024 bis 2080	12.11.2025
+OGD_bevjahresanfgebland_PR_BEVJAGB_9	Bevölkerung zum Jahresanfang nach dem Geburtsland 2024 bis 2080	12.11.2025
+OGD_bevjahresanf_PR_BEVJA_10	Bevölkerung zum Jahresanfang 1952 bis 2080	12.11.2025
+OGD_bevjahresanf_PR_BEVJA_11	Bevölkerung zum Jahresanfang 1952 bis 2080	12.11.2025
+OGD_bevjahresanf_PR_BEVJA_9	Bevölkerung zum Jahresanfang 1952 bis 2080	12.11.2025
+OGD_bevbewegung_BEV_BEW_3	Bevölkerungsbewegung 1961 bis 2080	12.11.2025
+OGD_demoind_DEM_IND_3	Demographische Indikatoren 1961 bis 2080	12.11.2025
+OGD_demoind_DEM_IND_2	Demographische Indikatoren 1961 bis 2100	21.11.2024
+OGD_bevbewegung_BEV_BEW_2	Bevölkerungsbewegung 1961 bis 2101	18.11.2024
+OGD_bevstprog_PR_BEVJD_4	Bevölkerung zum Jahresanfang 1952 bis 2101	18.11.2024
+OGD_bevstprog_PR_BEVJD_7	Bevölkerung zum Jahresanfang 1952 bis 2101	18.11.2024
+OGD_bevstprog_PR_BEVJD_8	Bevölkerung zum Jahresanfang 1952 bis 2101	18.11.2024
+OGD_bevstprogjdgebland_PR_BEVJDGB_4	Bevölkerung zum Jahresanfang nach dem Geburtsland 2020 bis 2101	18.11.2024
+OGD_bevstprogjdgebland_PR_BEVJDGB_5	Bevölkerung zum Jahresanfang nach dem Geburtsland 2022 bis 2101	18.11.2024
+OGD_bevstprogjdgebland_PR_BEVJDGB_7	Bevölkerung zum Jahresanfang nach dem Geburtsland 2022 bis 2101	18.11.2024
+OGD_bevjahresanfgebland_PR_BEVJAGB_4	Bevölkerung zum Jahresanfang nach dem Geburtsland 2023 bis 2101	18.11.2024
+OGD_bevjahresanfgebland_PR_BEVJAGB_5	Bevölkerung zum Jahresanfang nach dem Geburtsland 2023 bis 2101	18.11.2024
+OGD_bevjahresanfgebland_PR_BEVJAGB_7	Bevölkerung zum Jahresanfang nach dem Geburtsland 2023 bis 2101	18.11.2024
+OGD_bevjahresanf_PR_BEVJA_4	Bevölkerung zum Jahresanfang 1952 bis 2101	18.11.2024
+OGD_bevjahresanf_PR_BEVJA_7	Bevölkerung zum Jahresanfang 1952 bis 2101	18.11.2024
+OGD_bevjahresanf_PR_BEVJA_8	Bevölkerung zum Jahresanfang 1952 bis 2101	18.11.2024
+OGD_f1199_STTAF_1	Funktionen der Sterbetafeln 1868/71 bis 2010/12: Lebenserwartung; Sterbewahrscheinlichkeit; Absterbeordnung; Tafelsterbefälle; stationäre Bevölkerung	15.11.2023
+OGD_regz_rz_vz_aest_dem_RZ_VZ_AEST_DEMO_1	Zensus, Abgestimmte Erwerbsstatistik Zeitreihe – Demographie	28.06.2023
+OGD_covidggstatus2_GGSTATUS_2	COVID-19-Geimpft/Genesen-Status nach Bezirk, Geschlecht und Geburtsland	21.06.2023
+OGD_covidggstatus_GGSTATUS_1	COVID-19-Geimpft/Genesen-Status nach Bundesland und Bildung	21.06.2023
+OGD_f0743_VZ_HIS_GEM_3	Bevölkerung seit 1869 für Gemeinden	05.06.2020
+OGD_f0743_VZ_HIS_GEM_4	Bevölkerung seit 1869 für Politische Bezirke und Bundesland	05.06.2020
+OGD_epa_ext_EPA_1	Begründungen eingetragener Partnerschaften	31.07.2019
+OGD_apa_ext_APA_1	Auflösungen eingetragener Partnerschaften	31.07.2019
+OGD_scheidung_ext_SCH_1	Ehescheidungen	31.07.2019
+OGD_eheschliessungen_ext_EHE_1	Eheschließungen	23.05.2018
+OGD_f0743_VZ_HIS_GEM_1	Bevölkerung seit 1869 für Gemeinden	12.02.2018
+OGD_f0743_VZ_HIS_GEM_2	Bevölkerung seit 1869 für Politische Bezirke und Bundesland	12.02.2018
+OGD_unistud5_ext_UNI_STUD5_1	Studierende in Österreich	24.09.2026
+OGD_ordstud_ext_ORD_STUDIEN_1	Belegte ordentliche Studien an Österreichischen Hochschulen	19.08.2026
+OGD_ordabs_ext_ORD_ABSCHLUESSE_1	Ordentliche Studienabschlüsse an Österreichischen Hochschulen	19.08.2026
+OGDEXT_SCHULSRV_1	Schulen in Österreich	12.08.2026
+OGD_phsabs_ext_PHS_A_1	Studienabschlüsse an Pädagogischen Hochschulen	27.07.2026
+OGD_phsstud_ext_PHS_S_1	Studien an Pädagogischen Hochschulen	27.07.2026
+OGD_innov015_CIS_015_Unt_Innovation_1	Unternehmen nach Art der Innovationstätigkeiten und Innovationsausgaben	08.07.2026
+OGD_innov014_CIS_014_Unt_Innovation_1	Umsätze mit Produktinnovationen	08.07.2026
+OGD_innov013_CIS_013_Unt_Innovation_2	Innovatoren nach detaillierten Innovationstypen	08.07.2026
+OGD_innov012_CIS_012_Unt_Innovation_1	Unternehmen mit Innovationskooperationen nach Kooperationspartnern	08.07.2026
+OGD_innov011_CIS_011_Unt_Innovation_1	Unternehmen nach Innovationsarten	08.07.2026
+OGD_fhsstud_ext_FHS_S_2	Studien an Fachhochschulen nach Studienort	23.06.2026
+OGD_fhsabs_ext_FHS_A_2	Studienabschlüsse an Fachhochschulen nach Studienort	23.06.2026
+OGD_uniabs_ext_UNI_OEFF_ABS_1	Studienabschlüsse an öffentlichen Universitäten	12.06.2026
+OGD_unistud1_ext_UNI_STUD1_1	Studien an öffentlichen Universitäten	12.06.2026
+OGD_unistud3_ext_UNI_STUD3_1	Studierende an öffentlichen Universitäten nach Uni	12.06.2026
+OGD_unistud2_ext_UNI_STUD2_1	Studierende an öffentlichen Universitäten -insgesamt	12.06.2026
+OGD_unistud4_ext_UNI_STUD4_2	Studierende an öffentlichen Universitäten - UStat1 - Neuzugelassene Studierende	12.06.2026
+OGD_uptstud_ext_UPT_S_1	Studierende an Privathochschulen	04.05.2026
+OGD_uptabs_ext_UPT_A_1	Studienabschlüsse an Privathochschulen	04.05.2026
+OGD_f1902fuequote_FUEQUOTE_1	Forschungsquote - Globalschätzung	29.04.2026
+OGD_f1901_F1901_1	Ausgaben und Finanzierung der Ausgaben für F&E nach Wissenschaftszweigen	24.03.2026
+OGD_f1900_F1900_1	Ausgaben und Finanzierung der Ausgaben für F&E	24.03.2026
+OGD_bildausgtransfers_BILDAUS_TR_1	Bildungsausgaben - Transfers insgesamt	06.03.2026
+OGD_bildungsausgaben_BILDAUS_2	Bildungsausgaben	06.03.2026
+OGDEXT_KLASSDB_OEFOS2012_1	ÖFOS 2012	18.02.2026
+OGD_lehrer_LEHR_1	Lehrpersonen	18.12.2025
+OGD_schuel_SCHUELER_1	Schulstatistik; Schüler ab 2006 nach Schulstufen	12.12.2025
+OGD_klassen_KLASSEN_1	Schulstatistik; Klassen ab 2006	12.12.2025
+OGD_f1899_F1899_1	Beschäftigte in F&E nach Wissenschaftszweigen	05.11.2025
+OGD_f1898_F1898_3	Beschäftigte in F&E	05.11.2025
+OGD_f1906fue_FUE_B1906FUE_1	FuE-Beschäftigte und FuE-Ausgaben im Unternehmenssektor nach Größenklassen ab 2019	15.07.2025
+OGD_1905fue_FUE_B1905FUE_1	FuE- Beschäftigte und FuE-Ausgaben im Unternehmenssektor 2019 nach Bundesländern	15.07.2025
+OGD_f1904fue_FUE_B1904FUE_1	Ausgaben für F&E im Unternehmenssektor 2019 nach Wirtschaftszweigen	15.07.2025
+OGD_f1903fue_FUE_B1903FUE_1	Beschäftigte in FuE im Unternehmenssektor nach Önace 2008 ab 2019	15.07.2025
+OGD_fhsabs_ext_FHS_A_1	Studienabschlüsse an Fachhochschulen	16.05.2025
+OGD_fhsstud_ext_FHS_S_1	Studien an Fachhochschulen	16.05.2025
+OGD_desi_hh_DESI_HH_1	Indikatoren des Index für digitale Wirtschaft und Gesellschaft (DESI), insgesamt und nach Bundesland (Haushaltserhebung)	29.07.2024
+OGD_innov013_CIS_013_Unt_Innovation_1	Innovatoren nach detaillierten Innovationstypen	17.07.2024
+OGD_betrbil_BETBILDG_1	Betriebliche Bildung	17.05.2023
+OGD_bildungsausgaben_BILDAUS_1	Bildungsausgaben	30.04.2021
+OGD_f1830f2009_FUE_AF1828_2009_1	Ausgaben und Finanzierung in FuE im Unternehmenssektor nach ÖNACE 2008	10.03.2020
+OGD_unistud4_ext_UNI_STUD4_1	Studierende an öffentlichen Universitäten - UStat1	03.02.2020
+OGD_f1828f2009_FUE_B1828_2009_1	Beschäftigte in FuE im Unternehmenssektor nach Önace 2008	17.12.2019
+OGD_innov005_CIS_005_Unt_Innovation_1	Unternehmen nach Art der Innovationstätigkeiten und Innovationsausgaben	17.12.2019
+OGD_innov004_CIS_004_Unt_Innovation_1	Umsätze mit Produktinnovationen	17.12.2019
+OGD_innov003_CIS_003_Unt_Innovation_1	Innovatoren nach detaillierten Innovationstypen	17.12.2019
+OGD_innov002_CIS_002_Unt_Innovation_1	Unternehmen mit Innovationskooperationen nach Kooperationspartnern	17.12.2019
+OGD_innov001_CIS_001_Unt_Innovation_1	Unternehmen nach Innovationsarten	17.12.2019
+OGD_f1898_F1898_1	Beschäftigte in F&E	13.12.2017
+OGD_oeff_fin_q_Oeff_Fin_2	Öffentliche Finanzen ab 2001 quartalsweise, ESVG 2010	30.09.2026
+OGD_finkonseks2_FKSS_Jahr_2	Finanzielle Konten Sektor Staat Jahr	30.09.2026
+OGD_finkonseks1_FKSS_Quartal_1	Finanzielle Konten Sektor Staat Quartal	30.09.2026
+OGD__steuer_lue_ab_2022_3_LUE22_3_1	Integrierte Lohn- und Einkommensteuerdaten ab 2022 nach Bundesländern, schwerpunktmäßige Einkünften, Alter und Geschlecht	21.09.2026
+OGD__steuer_lue_ab_2022_1_LUE22_1_1	Integrierte Lohn- und Einkommensteuerdaten ab 2022 nach Bundesländern, schwerpunktmäßigen Einkünften, Stufen des Gesamteinkommens und Geschlecht	21.09.2026
+OGD__steuer_est_ab_2023_blgesch_EST_3_4	Einkommensteuerstatistik ab 2023 nach Bundesländern, Stufen des zu versteuernden Einkommens und Geschlecht	05.05.2026
+OGD__steuer_est_ab_2023_altgesch_EST_2_4	Einkommensteuerstatistik ab 2023 nach Stufen des zu versteuernden Einkommens, Alter und Geschlecht	05.05.2026
+OGD__steuer_est_ab_2023_bl_eink_EST_1_4	Einkommensteuerstatistik ab 2023 nach Bundesländern, Stufen des zu versteuernden Einkommens und schwerpunktmäßigen Einkünften	05.05.2026
+OGD__steuer_est_ab_2008_blgesch_EST_3_3	Einkommensteuerstatistik 2008-2022 nach Bundesländern, Stufen des zu versteuernden Einkommens und Geschlecht	30.04.2026
+OGD__steuer_est_ab_2008_bl_eink_EST_1_3	Einkommensteuerstatistik 2008-2022 nach Bundesländern, Stufen des zu versteuernden Einkommens und schwerpunktmäßigen Einkünften	30.04.2026
+OGD__steuer_est_ab_2008_altgesch_EST_2_3	Einkommensteuerstatistik 2008-2022 nach Stufen des zu versteuernden Einkommens, Alter und Geschlecht	30.04.2026
+OGDEXT_EHL_1	Einheiten des Öffentlichen Sektors gemäß ESVG	02.04.2026
+OGD__steuer_ust_UST_2	Umsatzsteuerstatistik ab 2008 nach Bundesländern, Rechtsform und Stufen des zu versteuernden Umsatzes	17.03.2026
+OGD__steuer_ust_UST_1	Umsatzsteuerstatistik ab 2008 nach Bundesländern, Rechtsform und Wirtschaftsabschnitten	17.03.2026
+OGDEXT_KLASSDB_PRODCOM2017_1	PRODCOM 2017	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2018_1	PRODCOM 2018	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2019_1	PRODCOM 2019	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2020_1	PRODCOM 2020	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2021_1	PRODCOM 2021	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2022_1	PRODCOM 2022	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2023_1	PRODCOM 2023	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2024_1	PRODCOM 2024	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2025_1	PRODCOM 2025	02.03.2026
+OGDEXT_KLASSDB_PRODCOM2026_1	PRODCOM 2026	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2017_1	ÖPRODCOM 2017	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2018_1	ÖPRODCOM 2018	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2019_1	ÖPRODCOM 2019	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2020_1	ÖPRODCOM 2020	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2021_1	ÖPRODCOM 2021	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2022_1	ÖPRODCOM 2022	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2023_1	ÖPRODCOM 2023	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2024_1	ÖPRODCOM 2024	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2025_1	ÖPRODCOM 2025	02.03.2026
+OGDEXT_KLASSDB_OEPRODCOM2026_1	ÖPRODCOM 2026	02.03.2026
+OGDEXT_KLASSDB_OECPA2015_1	ÖCPA 2015	18.02.2026
+OGDEXT_KLASSDB_KN2017_1	KN 2017	18.02.2026
+OGDEXT_KLASSDB_KN2018_1	KN 2018	18.02.2026
+OGDEXT_KLASSDB_KN2019_1	KN 2019	18.02.2026
+OGDEXT_KLASSDB_KN2020_1	KN 2020	18.02.2026
+OGDEXT_KLASSDB_KN2021_1	KN 2021	18.02.2026
+OGDEXT_KLASSDB_KN2022_1	KN 2022	18.02.2026
+OGDEXT_KLASSDB_KN2023_1	KN 2023	18.02.2026
+OGDEXT_KLASSDB_KN2024_1	KN 2024	18.02.2026
+OGDEXT_KLASSDB_KN2025_1	KN 2025	18.02.2026
+OGDEXT_KLASSDB_KN2026_1	KN 2026	18.02.2026
+OGD__steuer_lst_ab_2021_4_LST_4_2	Lohnsteuerstatistik ab 2021 nach Geschlecht, Sozialer Stellung, Bezugsdauer und Bruttobezugsstufen	16.12.2025
+OGD__steuer_lst_ab_2021_2_LST_2_2	Lohnsteuerstatistik ab 2021: Arbeitnehmer und -innen nach Bezugsdauer, Geschlecht und Wirtschaftsabschnitten	16.12.2025
+OGD__steuer_kst_KST_1	Körperschaftsteuerstatistik ab 2008 nach Bundesländern, Fallart und Stufen des zu versteuernden Einkommens	28.11.2025
+OGD__steuer_kst_KST_2	Körperschaftsteuerstatistik ab 2008 nach Bundesländern, Fallart und Wirtschaftsabschnitten	28.11.2025
+OGD__steuer_lue_ab_2008_1_LUE_2	Integrierte Lohn- und Einkommensteuerdaten 2008-2021 nach Bundesländern, schwerpunktmäßigen Einkünften, Stufen des Gesamteinkommens und Geschlecht	26.08.2025
+OGD__steuer_lue_ab_2008_3_LUE_4	Integrierte Lohn- und Einkommensteuerdaten 2008-2021 nach Bundesländern, schwerpunktmäßige Einkünften, Alter und Geschlecht	26.08.2025
+OGDEXT_KLASSDB_CPA21_1	CPA 2.1	19.02.2025
+OGDEXT_KLASSDB_CPA22_1	CPA 2.2	19.02.2025
+OGD__steuer_lst_ab_2008_4_LST_4_1	Lohnsteuerstatistik 2008-2022 nach Geschlecht, Sozialer Stellung, Bezugsdauer und Bruttobezugsstufen	25.11.2024
+OGD__steuer_lst_ab_2008_2_LST_2	Lohnsteuerstatistik 2008-2022: Arbeitnehmer und -innen nach Bezugsdauer, Geschlecht und Wirtschaftsabschnitten	25.11.2024
+OGD_gem_unterabschn_GHD_UA_6	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2010	16.07.2024
+OGD_gem_unterabschn_GHD_UA_5	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2011	16.07.2024
+OGD_gem_unterabschn_GHD_UA_4	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2012	16.07.2024
+OGD_gem_unterabschn_GHD_UA_3	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2013	16.07.2024
+OGD_gem_unterabschn_GHD_UA_2	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2014	16.07.2024
+OGD_gem_unterabschn_GHD_UA_1	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2015	16.07.2024
+OGD_gem_unterabschn_GHD_UA_7	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2016	16.07.2024
+OGD_gem_unterabschn_GHD_UA_8	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2017	16.07.2024
+OGD_gem_unterabschn_GHD_UA_9	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2018	16.07.2024
+OGD_gem_unterabschn_GHD_UA_10	Gemeinden: Ausgaben und Einnahmen nach VA-Unterabschnitten, 2019	16.07.2024
+OGD_gem_basis_quer1_GemHH_BQ_1	Gemeinden: Ausgewählte Haushaltsdaten	16.07.2024
+OGD__steuer_lue_ab_2008_1_LUE_1	Integrierte Lohn- und Einkommensteuerdaten 2008-2020 nach Bundesländern, schwerpunktmäßigen Einkünften, Stufen des Gesamteinkommens und Geschlecht	05.06.2024
+OGD__steuer_lue_ab_2008_3_LUE_3	Integrierte Lohn- und Einkommensteuerdaten 2008-2020 nach Bundesländern, schwerpunktmäßige Einkünften, Alter und Geschlecht	05.06.2024
+OGD__steuer_est_ab_2008_blgesch_EST_3_2	Einkommensteuerstatistik ab 2008 nach Bundesländern, Stufen des zu versteuernden Einkommens und Geschlecht	28.03.2024
+OGD__steuer_est_ab_2008_altgesch_EST_2_2	Einkommensteuerstatistik ab 2008 nach Stufen des zu versteuernden Einkommens, Alter und Geschlecht	28.03.2024
+OGD__steuer_est_ab_2008_bl_eink_EST_1_2	Einkommensteuerstatistik ab 2008 nach Bundesländern, Stufen des zu versteuernden Einkommens und schwerpunktmäßigen Einkünften	28.03.2024
+OGD__steuer_lst_ab_2008_4_LST_4	Lohnsteuerstatistik ab 2008 nach Geschlecht, Sozialer Stellung, Bezugsdauer und Bruttobezugsstufen	04.12.2023
+OGD__steuer_est_ab_2008_blgesch_EST_3	Einkommensteuerstatistik ab 2008 nach Bundesländern, Stufen des zu versteuernden Einkommens und Geschlecht	08.07.2022
+OGD__steuer_est_ab_2008_altgesch_EST_2	Einkommensteuerstatistik ab 2008 nach Stufen des zu versteuernden Einkommens, Alter und Geschlecht	08.07.2022
+OGD__steuer_est_ab_2008_bl_eink_EST_1	Einkommensteuerstatistik ab 2008 nach Bundesländern, Stufen des zu versteuernden Einkommens und schwerpunktmäßigen Einkünften	08.07.2022
+OGDEXT_KLASSDB_ECOICOP_1	ECOICOP	19.10.2017
+OGDEXT_KLASSDB_NST2007_1	NST 2007	19.10.2017
+OGDEXT_KLASSDB_MIGs_1	MIGs	19.10.2017
+OGDEXT_KLASSDB_CC_1	CC	19.10.2017
+OGDEXT_DSR_1	Dauersiedlungsraum	09.03.2026
+OGDEXT_GEM_MP_1	Gemeinden - Schwerpunkte	09.03.2026
+OGDEXT_AMB_1	Gliederung Österreichs in Arbeitsmarktbezirke	09.03.2026
+OGDEXT_FA_1	Gliederung Österreichs in Finanzamtsbereiche	09.03.2026
+OGDEXT_GEM_1	Gliederung Österreichs in Gemeinden	09.03.2026
+OGDEXT_GBEZ_1	Gliederung Österreichs in Gerichtsbezirke	09.03.2026
+OGDEXT_LWPG_1	Gliederung Österreichs in Landwirtschaftliche Produktionsgebiete	09.03.2026
+OGDEXT_NUTS_1	Gliederung Österreichs in NUTS-Einheiten	09.03.2026
+OGDEXT_POLBEZ_1	Gliederung Österreichs in Politische Bezirke	09.03.2026
+OGDEXT_RWK_1	Gliederung Österreichs in Regionalwahlkreise	09.03.2026
+OGDEXT_ZSP_1	Gliederung Österreichs in Statistische Zählsprengel	09.03.2026
+OGDEXT_ORT_1	Ortschaften - Schwerpunkte	09.03.2026
+OGDEXT_REG_SRV_1	Regionale Gliederungen WMS/WFS	09.03.2026
+OGDEXT_RASTER_1	Regionalstatistische Rastereinheiten	09.03.2026
+OGDEXT_SIEDLUNG_1	Siedlungseinheiten	09.03.2026
+OGDEXT_UNFALLSRV_1	Straßenverkehrsunfälle mit Personenschaden ab 2013	23.06.2023
+OGD_krimi003_KRIMI_VSP_1	Verurteilte Personen seit 2012	02.06.2026
+OGD_krimi002_KRIMI_WVS_1	Wiederverurteilungsstatistik ab 2012	02.06.2026
+OGD_krimi001_KRIMI_1	Verurteilungsstatistik seit 2012: sämtliche Delikte	02.06.2026
+OGD_desi_hh_mz_DESI_HH_MZ_1	Indikatoren für das regionale Digitalisierungsmonitoring – Haushalte mit Internetzugang und IKT-Fachkräfte	29.04.2026
+OGD_desi_hh_sex_DESI_HH_SEX_1	Indikatoren für das regionale Digitalisierungsmonitoring nach Geschlecht – Haushalte	25.11.2025
+OGD_desi_hh_age_DESI_HH_AGE_1	Indikatoren für das regionale Digitalisierungsmonitoring nach Alter – Haushalte	25.11.2025
+OGD__steuer_lue_2015_1a_LuE_ab_2015	Integrierte Lohn- und Einkommensteuerdaten 2015-2016	16.05.2019
+OGD_tli06kvg_TLI_106	Tariflohnindex 2006 ausgewählte Kollektivvertragsgruppen und öffentlicher Dienst	15.04.2019
+OGD_tli06kv_TLI_105	Tariflohnindex 2006 ausgewählte Kollektivverträge	15.04.2019
+OGD_tli06nace11_TLI_101	Tariflohnindex 2006 nach ÖNACE 2003 und sozialer Stellung	15.04.2019
+OGD_tli06wk99_TLI_103	Tariflohnindex 2006 nach Wirtschaftskammersystematik 2000 und sozialer Stellung	15.04.2019
+OGD_tli06nace20_TLI_102	Tariflohnindex 2006 nach ÖNACE 2008 und sozialer Stellung	15.04.2019
+OGD_tli06wk10_TLI_104	Tariflohnindex 2006 nach Wirtschaftskammersystematik 2010 und sozialer Stellung	15.04.2019
+OGD__steuer_lst_ab_2017_6_LSt_2017_Auswahl_6	Lohnsteuerdaten 2017, Auswahl 6	10.12.2018
+OGD__steuer_lst_ab_2017_3_LSt_2017_Auswahl_3	Lohnsteuerdaten 2017, Auswahl 3	10.12.2018
+OGD__steuer_lst_ab_2015_6_LSt_2015_Auswahl_6	Lohnsteuerdaten 2015-2016, Auswahl 6	20.12.2017
+OGD__steuer_lst_ab_2015_3_LSt_2015_Auswahl_3	Lohnsteuerdaten 2015-2016, Auswahl 3	20.12.2017
+OGD_krebs_ext_KREBS_1	Krebsstatistik	29.01.2026
+OGD_krankenbewegungen_ex_LEISTUNGEN_1	Medizinische Leistungen während stationärer Aufenthalte	08.09.2022
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_AKUTKA_3	Spitalsentlassungen aus Akutkrankenanstalten	08.09.2022
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_KA_2	Spitalsentlassungen aus Krankenanstalten	08.09.2022
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_AKUTKA_2	Spitalsentlassungen aus Akutkrankenanstalten	28.07.2021
+OGD_krankenbewegungen_ex_ENTLASSUNGEN_KA_1	Spitalsentlassungen aus Krankenanstalten	28.07.2021
+OGD_umwoekosteu_Oekosteuern_1	Öko-Steuern ab 1995	20.06.2022
+OGDEXT_KLASSDB_CEPA2000_1	CEPA 2000	14.03.2018
+OGDEXT_KLASSDB_CReMA2008_1	CReMA 2008	14.03.2018
+OGD_gvd_schleusungen_GVD_SCHLEUS_1	Schleusungen, monatlich nach Schleuse, Fahrtrichtung, Ladezustand und Schiffsgattung	05.10.2026
+OGD_gvd_waren_GVD_W_3	Transportaufkommen und Transportleistung in der Binnenschifffahrt nach Häfen	05.10.2026
+OGD_gvd_waren_GVD_W_4	Transportaufkommen und Transportleistung in der Binnenschifffahrt nach Regionen	05.10.2026
+OGD_gvd_fahrten_GVD_F_3	Beförderungen / Beladene Fahrten in der Binnenschifffahrt nach Häfen	05.10.2026
+OGD_gvd_fahrten_GVD_F_4	Beförderungen / Beladene Fahrten in der Binnenschifffahrt nach Regionen	05.10.2026
+OGD_sgv_daten_international_SGV_INT_1	Schienengüterverkehr in Österreich ab 2017	29.09.2026
+OGD_gvk_ware_2010_GVK_W10_1	Transportaufkommen und Transportleistung des Straßengüterverkehrs ab 2006	28.08.2026
+OGD_gvk_fahrt_2010_GVK_F10_1	Fahrten im Straßengüterverkehr ab 2006	28.08.2026
+OGD_zlf_komm_ZLF_KOM_1	Kommerzielle Zivilluftfahrt (veraltet)	12.05.2026
+OGD_gvk_ware_GVK_WARE_1	Transportaufkommen und Transportleistung des Straßengüterverkehrs 1995 - 2013	07.04.2025
+OGDEXT_KLASSDB_NHM2017_1	NHM 2017	24.02.2021
+OGDEXT_KLASSDB_NHM2019_1	NHM 2019	24.02.2021
+OGDEXT_KLASSDB_NHM2020_1	NHM 2020	24.02.2021
+OGD_gvd_waren_GVD_W_1	Transportaufkommen und Transportleistung in der Binnenschifffahrt nach Häfen	28.03.2019
+OGD_gvd_waren_GVD_W_2	Transportaufkommen und Transportleistung in der Binnenschifffahrt nach Regionen	28.03.2019
+OGD_gvd_fahrten_GVD_F_1	Beladene Fahrten in der Binnenschifffahrt nach Häfen	28.03.2019
+OGD_gvd_fahrten_GVD_F_2	Beladene Fahrten in der Binnenschifffahrt nach Regionen	28.03.2019
+OGD_vgr110_VGR_Personen_1	Hauptaggregate der VGR; Personen (Inlandskonzpet); jährlich; ESVG 2010	30.09.2026
+OGD_vgr106_VGR_HA_Prod_2	Hauptaggregate der VGR; Produktion nach ÖNACE-Abteilungen; jährlich	30.09.2026
+OGD_vgr104_VGR_Konsum_2	Hauptaggregate der VGR; Konsumausgaben der privaten Haushalte; jährlich	30.09.2026
+OGD_epidl25_EPIDL25_1	Erzeugerpreisindex Dienstleistungen (2025 = 100)	28.09.2026
+OGD_epidl21_EPIDL21_1	Erzeugerpreisindex Dienstleistungen (2021 = 100)	28.09.2026
+OGD_oohvr_OOH_VR_1	Preisindex für selbst genutztes Wohneigentum Prozentveränderung zum Vorjahr	23.09.2026
+OGD_ooh2015_OOH_15_1	Preisindex für selbst genutztes Wohneigentum 2015	23.09.2026
+OGD_ooh2025_OOH_25_1	Preisindex für selbst genutztes Wohneigentum 2025	23.09.2026
+OGD_ooh2010_OOH_10_1	Preisindex für selbst genutztes Wohneigentum 2010	23.09.2026
+OGD_reg_agdemo_ab2015_GUD_OGD_1	Arbeitgeberunternehmensdemografie	28.08.2026
+OGD_invpi25masch_Invpi25masch_1	Maschinenpreisindex (2025=100)	21.08.2026
+OGD_invpi25_Invpi25_1	Preisindex für Ausrüstungsinvestitionen (2025=100)	21.08.2026
+OGD_invpi20masch_Invpi20masch_1	Maschinenpreisindex (2020=100)	21.08.2026
+OGD_invpi20_Invpi20_1	Preisindex für Ausrüstungsinvestitionen (2020=100)	21.08.2026
+OGD_invpi15masch_Invpi15masch_1	Maschinenpreisindex (2015=100)	21.08.2026
+OGD_invpi15_Invpi15_1	Preisindex für Ausrüstungsinvestitionen (2015=100)	21.08.2026
+OGD_invpi10masch_Invpi10masch_1	Maschinenpreisindex (2010=100)	21.08.2026
+OGD_invpi10_Invpi10_1	Preisindex für Ausrüstungsinvestitionen (2010=100)	21.08.2026
+OGD_invpi05masch_Invpi05masch_1	Maschinenpreisindex (2005=100)	21.08.2026
+OGD_invpi05_Invpi05_1	Preisindex für Ausrüstungsinvestitionen (2005=100)	21.08.2026
+OGD_vpi05_VPI_2005_1	Verbraucherpreisindex Basis 2005, ECOICOP	20.08.2026
+OGD_vpi10_VPI_2010_1	Verbraucherpreisindex Basis 2010, ECOICOP	20.08.2026
+OGD_vpi15_VPI_2015_1	Verbraucherpreisindex Basis 2015, ECOICOP	20.08.2026
+OGD_vpi20_VPI_2020_1	Verbraucherpreisindex Basis 2020, ECOICOP	20.08.2026
+OGD_impi21_Impi21_1	Importpreisindex (2021 = 100)	14.08.2026
+OGD_bpitblg2025_BPI_T2025_1	Baupreisindex für den Tiefbau (2025=100) Leistungsgruppen	10.08.2026
+OGD_bpihut2025_BPI_HT2025_1	Baupreisindex Hoch- und Tiefbau (2025=100) Übersicht	10.08.2026
+OGD_bpihbaugg2025_BPI_H2025_1	Baupreisindex für den Hochbau (2025=100) Leistungsgruppen und Regionen	10.08.2026
+OGD_watlas18_WATLAS_18	Wirtschaftsatlas: Branchendaten nach Bundesländern (ÖNACE 2008 B-S) ab 2021	31.07.2026
+OGD_watlas16_WATLAS_16	Wirtschaftsatlas: Branchendaten nach Beschäftigtengrößenklassen (ÖNACE 2008 B-S) ab 2021	31.07.2026
+OGD_watlas14_WATLAS_14	Wirtschaftsatlas: Eckdaten Bundesländer ab 2021	31.07.2026
+OGD_reg_udemo_neu_UD_OGD_2	Unternehmensdemografie aktuell	30.06.2026
+OGD_reg_hg_ab2008_HGUD_OGD_2	Schnellwachsende Unternehmen	30.06.2026
+OGD_watlas17_WATLAS_17	Wirtschaftsatlas: Branchendaten im EU-Vergleich (ÖNACE 2003 C - K; ÖNACE 2008 B - N, 95) ab 2021	17.06.2026
+OGD_watlas13_WATLAS_13	Wirtschaftsatlas: Land- und Forstwirtschaft ab 1995	03.06.2026
+OGD_watlas1_WATLAS_1	Wirtschaftsatlas: Eckdaten Österreich und EU-Länder ab 1995	03.06.2026
+OGD_watlas12_WATLAS_12	Wirtschaftsatlas: Außenhandel ab 1995	28.05.2026
+OGD_prodcom001_PRODCOM_J_1	Güterproduktion nach ÖCPA und ÖPRODCOM 2008-2024, jährliche Betriebsdaten (Primärerhebung)	08.05.2026
+OGD_prodcom101_PRODCOM25_J_1	Güterproduktion nach ÖCPA und ÖPRODCOM ab 2025, jährliche Betriebsdaten (Primärerhebung)	08.05.2026
+OGD_bkiwhsiedlg2020_BKI_WS20_1	Baukostenindex für den Wohnungs- und Siedlungsbau (2020=100)	23.03.2026
+OGD_bkiwasserbau2020_BKI_W20_1	BKI: Baukostenindex für den Siedlungswasserbau (2020=100)	13.03.2026
+OGD_bkibrueckenbau2020_BKI_B20_1	BKI: Baukostenindex für den Brückenbau (2020=100)	13.03.2026
+OGD_bkistrassebitumen2020_BKI_SB20_1	BKI: Baukostenindex für den Straßenbau, Bitumen (2020=100)	13.03.2026
+OGD_bkistrassenbau2020_BKI_S20_1	BKI: Baukostenindex für den Straßenbau (2020=100)	13.03.2026
+OGD_pregpi002_GHPI_15_1	Grosshandelspreisindex 2015	13.02.2026
+OGD_pregps002_GHPI_15S_1	GHPI 2015 Sondergliederungen	13.02.2026
+OGD_bpitblg2020_BPI_T2020_1	Baupreisindex für den Tiefbau (2020=100) Leistungsgruppen	10.02.2026
+OGD_bpihut2020_BPI_HT2020_1	Baupreisindex Hoch- und Tiefbau (2020=100) Übersicht	10.02.2026
+OGD_bpihbaugg2020_BPI_H2020_1	Baupreisindex für den Hochbau (2020=100) Leistungsgruppen und Regionen	10.02.2026
+OGD_pregps003_GHPI_20S_1	GHPI 2020; Sondergliederungen	06.02.2026
+OGD_pregpi003_GHPI_20_1	Grosshandelspreisindex 2020	06.02.2026
+OGD_natec11_Natec11_1	Außenhandel nach Beschäftigtengrößenklassen und Partnerländern	30.01.2026
+OGD_natec10_Natec10_2	Außenhandel nach Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec09_Natec09_1	Außenhandel nach Exportintensität und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec08_Natec08_1	Außenhandel nach Eigentumsverhältnissen und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec06_Natec06_1	Außenhandel nach Gütern (CPA) und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec05_Natec05_1	Außenhandel nach Anzahl der Partnerländer und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec04_Natec04_1	Außenhandel nach Partnerländern und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec03_Natec03_1	Außenhandelskonzentration und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec02_Natec02_1	Außenhandel nach Beschäftigtengrößenklassen und Wirtschaftszweig (NACE)	30.01.2026
+OGD_natec01_Natec01_1	Außenhandel nach Art des Händlers und Wirtschaftszweig (NACE)	30.01.2026
+OGD_kjebet08mmde_KJE08_MDE_B_M_1	Konjunkturstatistik im Produzierenden Bereich 2008-2024, monatliche Betriebsdaten (Grundgesamtheit)	23.12.2025
+OGD_kjeunt08mmde_KJE08_MDE_U_M_2	Konjunkturstatistik im Produzierenden Bereich 2008-2024, monatliche Unternehmensdaten (Grundgesamtheit) nach ÖNACE 2-Steller	23.12.2025
+OGD_kjeunt08mmde_KJE08_MDE_U_M_1	Konjunkturstatistik im Produzierenden Bereich 2008-2024, monatliche Unternehmensdaten (Grundgesamtheit)	23.12.2025
+OGD_prodcom002_PRODCOM_MO_1	Güterproduktion nach ÖCPA und ÖPRODCOM 2008-2024, monatliche Betriebsdaten (Primärerhebung)	15.12.2025
+OGD_kjeunt08m_KJE08_U_M_1	Konjunkturstatistik im Produzierenden Bereich 2008-2024, monatliche Unternehmensdaten (Primärerhebung)	15.12.2025
+OGD_kjebet08m_KJE08_B_M_1	Konjunkturstatistik im Produzierenden Bereich 2008-2024, monatliche Betriebsdaten (Primärerhebung)	15.12.2025
+OGD_vgrrgr202_RGR202_1	Primäres u. sekundäres Einkommensverteilungskonto der privaten Haushalte nach ESVG 2010	09.12.2025
+OGD_desi_unt_ws_DESI_UNT_WS_2	Indikatoren für das regionale Digitalisierungsmonitoring nach Wirtschaftssektor – Unternehmen	25.11.2025
+OGD_desi_unt_bkl_DESI_UNT_BKL_2	Indikatoren für das regionale Digitalisierungsmonitoring nach Beschäftigtengrößenklasse – Unternehmen	25.11.2025
+OGD_desi_unt_ws_DESI_UNT_WS_1	Indikatoren für das regionale Digitalisierungsmonitoring nach Wirtschaftssektor – Unternehmen	24.11.2025
+OGD_desi_unt_bkl_DESI_UNT_BKL_1	Indikatoren für das regionale Digitalisierungsmonitoring nach Beschäftigtengrößenklasse – Unternehmen	24.11.2025
+OGD_watlas2_WATLAS_2	Wirtschaftsatlas: Eckdaten Bundesländer 1995-2020	14.11.2025
+OGD_reg_hg_ab2008_HGUD_OGD_1	Schnellwachsende Unternehmen	27.06.2025
+OGD_watlas11_WATLAS_11	Wirtschaftsatlas: Verkehr (ÖNACE 2003 I; ÖNACE 2008 H) 1995-2020	21.11.2024
+OGD_watlas10_WATLAS_10	Wirtschaftsatlas: Tourismus - Beherbergungs- und Gaststättenwesen (ÖNACE 2003 H; ÖNACE 2008 I) 1995-2020	20.11.2024
+OGD_watlas9_WATLAS_9	Wirtschaftsatlas: Handel (ÖNACE 2003 G; ÖNACE 2008 G) 1995-2020	20.11.2024
+OGD_watlas8_WATLAS_8	Wirtschaftsatlas: Bauwesen (ÖNACE 2003 F; ÖNACE 2008 F) 1995-2020	20.11.2024
+OGD_watlas7_WATLAS_7	Wirtschaftsatlas:  Industrie (ÖNACE 2003 C - E; ÖNACE 2008 B - E) 1995-2020	20.11.2024
+OGD_watlas6_WATLAS_6	Wirtschaftsatlas: Branchendaten nach Bundesländern (ÖNACE 2003 C - K; ÖNACE 2008 B - N, 95) 1995-2020	20.11.2024
+OGD_watlas5_WATLAS_5	Wirtschaftsatlas: Branchendaten im EU-Vergleich (ÖNACE 2003 C - K; ÖNACE 2008 B - N, 95) 1995-2020	20.11.2024
+OGD_watlas4_WATLAS_4	Wirtschaftsatlas: Branchendaten nach Beschäftigtengrößenklassen (ÖNACE 2003 C - K; ÖNACE 2008 B - N, 95) 1995-2020	20.11.2024
+OGD_watlas3_WATLAS_3	Wirtschaftsatlas: Branchendaten nach Wirtschaftszweigen (ÖNACE 2003 C - K; ÖNACE 2008 B - N, 95) 1995-2020	20.11.2024
+OGD_vgr107_VGR_HA_BAI_1	Hauptaggregate der VGR; Bruttoanlageinvestitionen nach ÖNACE-Abteilungen; jährlich 1995-2022	30.09.2024
+OGD_vgr106_VGR_HA_Prod_1	Hauptaggregate der VGR; Produktion nach ÖNACE-Abteilungen; jährlich 1995-2022	30.09.2024
+OGD_vgr105_VGR_HA_Bws_1	Hauptaggregate der VGR; Bruttowertschöpfung nach ÖNACE-Abteilungen; jährlich	30.09.2024
+OGD_vgr104_VGR_Konsum_1	Hauptaggregate der VGR; Konsumausgaben der privaten Haushalte; jährlich 1995-2022	30.09.2024
+OGD_vgr101_VGRJahresR_2	VGR-Jahresrechnungen, Hauptaggregate; jählich; ESVG 2010	30.09.2024
+OGD_desi_unt_DESI_UNT_1	Indikatoren für das regionale Digitalisierungsmonitoring – Unternehmen	29.07.2024
+OGD_prodvindexusb2015_KJID2015_PVISTD_1	Produktivitätsindex je unselbstständig Beschäftigten (Basis 2015)	17.04.2024
+OGD_prodindexstd2015_KJID2015_PVISTD_1	Produktivitätsindex je geleisteter Arbeitsstunde (Basis 2015)	17.04.2024
+OGD_kjiprodindex2015_KJID2015_PI_1	Produktionsindex Nace Rev.2 (Basis 2015)	17.04.2024
+OGD_kjiumsatzindex2015_KJID2015_UI_1	Umsatzindex Nace Rev.2 (Basis 2015), EU-harmonisierte Bereinigung	17.04.2024
+OGD_bruttoverdiensteindex2015a_KJID2015_BVIa_1	Bruttoverdiensteindex (Basis 2015), EU-harmonisierte Bereinigung	17.04.2024
+OGD_beschaeftigtenindex2015_KJID2015_BI_1	Index der Beschäftigten insgesamt ÖNACE 2008 (Basis 2015)	17.04.2024
+OGD_kjiarbeitsvolindex2015_KJID2015_AST_1	Arbeitsvolumensindex (Basis 2015), EU-harmonisierte Bereinigung	17.04.2024
+OGD_kjiauftragseingangsindex2015_KJID2015_AEGI_1	Auftragseingangsindex Nace Rev.2 (Basis 2015)	17.04.2024
+OGD_konjidxdl15_KJIX_DL_15_1	Konjunkturindizes Dienstleistungen Basis 2015	03.04.2024
+OGD_konjidxhan15_KJIX_H_15_1	Konjunkturindizes Handel Basis 2015	29.03.2024
+OGD_vgrrgr105_RGR105_1	Bruttowertschöpfung, real zu Herstellungspreisen nach ESVG 2010, NUTS 2	13.12.2022
+OGD_vgrrgr102_RGR102_1	Primäres u. sekundäres Einkommensverteilungskonto der privaten Haushalte nach ESVG 2010	01.12.2022
+OGD_vgr103_VGR_HA_vj_1	Hauptaggregate der VGR; vierteljährlich; ESVG 2010	08.09.2022
+OGD_vgr102_VGR_Besch_vj_1	Hauptaggregate der VGR; Beschäftigung; vierteljährlich; ESVG 2010	08.09.2022
+OGD_vgr001_VGRJahresR_1	VGR-Jahresrechnung ESVG 95 abgeschlossene Zeitreihe	08.09.2022
+OGD_bkibrueckenbau2015_BKI_B15_1	BKI: Baukostenindex für den Brückenbau (2015=100)	01.07.2022
+OGD_bkiwasserbau2015_BKI_W15_1	BKI: Baukostenindex für den Siedlungswasserbau (2015=100)	01.07.2022
+OGD_bkistrassenbau2015_BKI_S15_1	BKI: Baukostenindex für den Straßenbau (2015=100)	01.07.2022
+OGD_bkistrassebitumen2015_BKI_SB15_1	BKI: Baukostenindex für den Straßenbau, Bitumen (2015=100)	01.07.2022
+OGD_bkiwhsiedlg2015_BKI_WS15_1	BKI: Baukostenindex für den Wohnhaus- und Siedlungsbau (2015=100)	01.07.2022
+OGD_bpihut2015_BPI_HT2015_1	Baupreisindex Hoch- und Tiefbau (2015=100) Übersicht	01.07.2022
+OGD_bpihbaugg2015_BPI_H2015_1	Baupreisindex für den Hochbau (2015=100) Leistungsgruppen und Regionen	01.07.2022
+OGD_bpitblg2015_BPI_T2015_1	Baupreisindex für den Tiefbau (2015=100) Leistungsgruppen	01.07.2022
+OGD_epidl15_EPIDL15_1	Erzeugerpreisindex für unternehmensnahe Dienstleistungen (2015 = 100)	29.06.2022
+OGD_impi15_Impi15_1	Importpreisindex (2015 = 100)	13.05.2022
+OGD_epi2015cpa15_EPI_2015_OECPA_1	Erzeugerpreisindex (2015 = 100) ÖCPA 2015	28.02.2022
+OGD_epi2015nac08_EPI_2015_OENACE_1	Erzeugerpreisindex (2015 = 100) ÖNACE 2008	28.02.2022
+OGD_natec10_Natec10_1	Außenhandel nach Wirtschaftszweig (NACE)	30.11.2021
+OGD_bruttoverdiensteindex2015_KJID2015_BVI_1	Bruttoverdiensteindex (Basis 2015)	25.02.2021
+OGD_kjiumsatzindex2010_KOIND15_UI_1	Umsatzindex Nace Rev.2 (Basis 2010)	23.04.2018
+OGD_bruttoverdiensteindex2010_KOIND15_BVI_1	Bruttoverdiensteindex (Basis 2010)	23.04.2018
+OGD_beschaeftigtenindex2010_KOIND15_SB_1	Index der Beschäftigten insgesamt ÖNACE 2008 (Basis 2010)	23.04.2018
+OGD_kjiarbeitsvolindex2010_KOIND15_AST_1	Arbeitsvolumensindex (Basis 2010)	23.04.2018
+OGD_kjiauftragseingangsindex2010_KOIND15_AEGI_1	Auftragseingangsindex Nace Rev.2 (Basis 2010)	23.04.2018
+OGD_konjidxhan10_Konjunktur_Handel_1	Konjunkturindizes Handel Basis 2010	03.04.2018
+OGD_prodvindexusb2010_KOIND15_PVISTD_1	Produktivitätsindex je unselbstständig Beschäftigten (Basis 2010)	23.03.2018
+OGD_prodindexstd2010_KOIND15_PVISTD_1	Produktivitätsindex je geleisteter Arbeitsstunde (Basis 2010)	23.03.2018
+OGD_kjiprodindex2010_KOIND15_PI_1	Produktionsindex Nace Rev.2 (Basis 2010)	23.03.2018
+OGD_reg_udemo_neu_UD_OGD_1	Unternehmensdemografie	06.09.2017
+OGD_reg_agdemo_ab2015_AGUD_OGD_1	Arbeitgeberunternehmensdemografie	06.09.2017

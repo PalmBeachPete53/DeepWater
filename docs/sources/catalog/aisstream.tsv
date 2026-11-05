@@ -1,0 +1,294 @@
+model	category	field	type	required	protocol_field	description
+AisStreamMessage	Envelope	MetaData	object	true	false	Normalized context added by AIS Stream.
+AisStreamMessage	Envelope	MessageType	AisMessageTypes	true	false	Name of the serialized stream message.
+AisStreamMessage	Envelope	Message	object	true	false	Typed stream message payload.
+SubscriptionMessage	Envelope	APIKey	string	true	false	API key used to authenticate the subscription.
+SubscriptionMessage	Envelope	BoundingBoxes	number<double>[][][]	true	false	Pairs of latitude/longitude corners.
+SubscriptionMessage	Envelope	FiltersShipMMSI	string[]	false	false	Optional list of nine-character MMSIs.
+SubscriptionMessage	Envelope	FilterMessageTypes	AisMessageTypes[]	false	false	Optional list of AIS message type names.
+SubscriptionConfirmation	Envelope	CompressionEnabled	boolean	true	false	Whether permessage-deflate was negotiated for the WebSocket connection.
+SubscriptionConfirmationMessage	Envelope	MessageType	SubscriptionConfirmation	true	false	Name of the serialized stream message.
+SubscriptionConfirmationMessage	Envelope	Message	SubscriptionConfirmation	true	false	Typed stream message payload.
+PositionReport	Position	MessageID	integer	true	false	Numeric AIS message identifier.
+PositionReport	Position	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+PositionReport	Position	UserID	integer	true	false	Vessel or station MMSI.
+PositionReport	Position	Valid	boolean	true	false	Whether the decoded value passed validation.
+PositionReport	Position	NavigationalStatus	integer	true	false	Reported navigation status code.
+PositionReport	Position	RateOfTurn	integer	true	false	Reported rate-of-turn value.
+PositionReport	Position	Sog	number<double>	true	false	Speed over ground in knots.
+PositionReport	Position	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+PositionReport	Position	Longitude	number<double>	true	false	Longitude in decimal degrees.
+PositionReport	Position	Latitude	number<double>	true	false	Latitude in decimal degrees.
+PositionReport	Position	Cog	number<double>	true	false	Course over ground in degrees.
+PositionReport	Position	TrueHeading	integer	true	false	True heading in degrees.
+PositionReport	Position	Timestamp	integer	true	false	AIS UTC-second timestamp.
+PositionReport	Position	SpecialManoeuvreIndicator	integer	true	false	AIS SpecialManoeuvreIndicator field.
+PositionReport	Position	Spare	integer	true	true	Reserved protocol bits.
+PositionReport	Position	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+PositionReport	Position	CommunicationState	integer	true	true	Raw AIS radio communication state.
+BaseStationReport	Position	MessageID	integer	true	false	Numeric AIS message identifier.
+BaseStationReport	Position	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+BaseStationReport	Position	UserID	integer	true	false	Vessel or station MMSI.
+BaseStationReport	Position	Valid	boolean	true	false	Whether the decoded value passed validation.
+BaseStationReport	Position	UtcYear	integer	true	false	AIS UtcYear field.
+BaseStationReport	Position	UtcMonth	integer	true	false	AIS UtcMonth field.
+BaseStationReport	Position	UtcDay	integer	true	false	AIS UtcDay field.
+BaseStationReport	Position	UtcHour	integer	true	false	AIS UtcHour field.
+BaseStationReport	Position	UtcMinute	integer	true	false	AIS UtcMinute field.
+BaseStationReport	Position	UtcSecond	integer	true	false	AIS UtcSecond field.
+BaseStationReport	Position	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+BaseStationReport	Position	Longitude	number<double>	true	false	Longitude in decimal degrees.
+BaseStationReport	Position	Latitude	number<double>	true	false	Latitude in decimal degrees.
+BaseStationReport	Position	FixType	integer	true	false	AIS FixType field.
+BaseStationReport	Position	LongRangeEnable	boolean	true	false	AIS LongRangeEnable field.
+BaseStationReport	Position	Spare	integer	true	true	Reserved protocol bits.
+BaseStationReport	Position	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+BaseStationReport	Position	CommunicationState	integer	true	true	Raw AIS radio communication state.
+ShipStaticData	Static and voyage	MessageID	integer	true	false	Numeric AIS message identifier.
+ShipStaticData	Static and voyage	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+ShipStaticData	Static and voyage	UserID	integer	true	false	Vessel or station MMSI.
+ShipStaticData	Static and voyage	Valid	boolean	true	false	Whether the decoded value passed validation.
+ShipStaticData	Static and voyage	AisVersion	integer	true	false	AIS AisVersion field.
+ShipStaticData	Static and voyage	ImoNumber	integer	true	false	AIS ImoNumber field.
+ShipStaticData	Static and voyage	CallSign	string	true	false	AIS CallSign field.
+ShipStaticData	Static and voyage	Name	string	true	false	AIS Name field.
+ShipStaticData	Static and voyage	Type	integer	true	false	AIS Type field.
+ShipStaticData	Static and voyage	Dimension	object	true	false	AIS Dimension field.
+ShipStaticData	Static and voyage	FixType	integer	true	false	AIS FixType field.
+ShipStaticData	Static and voyage	Eta	object	true	false	AIS Eta field.
+ShipStaticData	Static and voyage	MaximumStaticDraught	number<double>	true	false	AIS MaximumStaticDraught field.
+ShipStaticData	Static and voyage	Destination	string	true	false	AIS Destination field.
+ShipStaticData	Static and voyage	Dte	boolean	true	false	AIS Dte field.
+ShipStaticData	Static and voyage	Spare	boolean	true	true	Reserved protocol bits.
+AddressedBinaryMessage	Binary data	MessageID	integer	true	false	Numeric AIS message identifier.
+AddressedBinaryMessage	Binary data	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+AddressedBinaryMessage	Binary data	UserID	integer	true	false	Vessel or station MMSI.
+AddressedBinaryMessage	Binary data	Valid	boolean	true	false	Whether the decoded value passed validation.
+AddressedBinaryMessage	Binary data	Sequenceinteger	integer	true	false	AIS Sequenceinteger field.
+AddressedBinaryMessage	Binary data	DestinationID	integer	true	false	AIS DestinationID field.
+AddressedBinaryMessage	Binary data	Retransmission	boolean	true	false	AIS Retransmission field.
+AddressedBinaryMessage	Binary data	Spare	boolean	true	true	Reserved protocol bits.
+AddressedBinaryMessage	Binary data	ApplicationID	object	true	false	AIS ApplicationID field.
+AddressedBinaryMessage	Binary data	BinaryData	string	true	false	AIS BinaryData field.
+BinaryBroadcastMessage	Binary data	MessageID	integer	true	false	Numeric AIS message identifier.
+BinaryBroadcastMessage	Binary data	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+BinaryBroadcastMessage	Binary data	UserID	integer	true	false	Vessel or station MMSI.
+BinaryBroadcastMessage	Binary data	Valid	boolean	true	false	Whether the decoded value passed validation.
+BinaryBroadcastMessage	Binary data	Spare	integer	true	true	Reserved protocol bits.
+BinaryBroadcastMessage	Binary data	ApplicationID	object	true	false	AIS ApplicationID field.
+BinaryBroadcastMessage	Binary data	BinaryData	string	true	false	AIS BinaryData field.
+StandardSearchAndRescueAircraftReport	Position	MessageID	integer	true	false	Numeric AIS message identifier.
+StandardSearchAndRescueAircraftReport	Position	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+StandardSearchAndRescueAircraftReport	Position	UserID	integer	true	false	Vessel or station MMSI.
+StandardSearchAndRescueAircraftReport	Position	Valid	boolean	true	false	Whether the decoded value passed validation.
+StandardSearchAndRescueAircraftReport	Position	Altitude	integer	true	false	AIS Altitude field.
+StandardSearchAndRescueAircraftReport	Position	Sog	number<double>	true	false	Speed over ground in knots.
+StandardSearchAndRescueAircraftReport	Position	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+StandardSearchAndRescueAircraftReport	Position	Longitude	number<double>	true	false	Longitude in decimal degrees.
+StandardSearchAndRescueAircraftReport	Position	Latitude	number<double>	true	false	Latitude in decimal degrees.
+StandardSearchAndRescueAircraftReport	Position	Cog	number<double>	true	false	Course over ground in degrees.
+StandardSearchAndRescueAircraftReport	Position	Timestamp	integer	true	false	AIS UTC-second timestamp.
+StandardSearchAndRescueAircraftReport	Position	AltFromBaro	boolean	true	false	AIS AltFromBaro field.
+StandardSearchAndRescueAircraftReport	Position	Spare1	integer	true	true	AIS Spare1 field.
+StandardSearchAndRescueAircraftReport	Position	Dte	boolean	true	false	AIS Dte field.
+StandardSearchAndRescueAircraftReport	Position	Spare2	integer	true	true	AIS Spare2 field.
+StandardSearchAndRescueAircraftReport	Position	AssignedMode	boolean	true	false	AIS AssignedMode field.
+StandardSearchAndRescueAircraftReport	Position	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+StandardSearchAndRescueAircraftReport	Position	CommunicationStateIsItdma	boolean	true	true	AIS CommunicationStateIsItdma field.
+StandardSearchAndRescueAircraftReport	Position	CommunicationState	integer	true	true	Raw AIS radio communication state.
+CoordinatedUTCInquiry	Network and control	MessageID	integer	true	false	Numeric AIS message identifier.
+CoordinatedUTCInquiry	Network and control	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+CoordinatedUTCInquiry	Network and control	UserID	integer	true	false	Vessel or station MMSI.
+CoordinatedUTCInquiry	Network and control	Valid	boolean	true	false	Whether the decoded value passed validation.
+CoordinatedUTCInquiry	Network and control	Spare1	integer	true	true	AIS Spare1 field.
+CoordinatedUTCInquiry	Network and control	DestinationID	integer	true	false	AIS DestinationID field.
+CoordinatedUTCInquiry	Network and control	Spare2	integer	true	true	AIS Spare2 field.
+AddressedSafetyMessage	Safety	MessageID	integer	true	false	Numeric AIS message identifier.
+AddressedSafetyMessage	Safety	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+AddressedSafetyMessage	Safety	UserID	integer	true	false	Vessel or station MMSI.
+AddressedSafetyMessage	Safety	Valid	boolean	true	false	Whether the decoded value passed validation.
+AddressedSafetyMessage	Safety	Sequenceinteger	integer	true	false	AIS Sequenceinteger field.
+AddressedSafetyMessage	Safety	DestinationID	integer	true	false	AIS DestinationID field.
+AddressedSafetyMessage	Safety	Retransmission	boolean	true	false	AIS Retransmission field.
+AddressedSafetyMessage	Safety	Spare	boolean	true	true	Reserved protocol bits.
+AddressedSafetyMessage	Safety	Text	string	true	false	AIS Text field.
+SafetyBroadcastMessage	Safety	MessageID	integer	true	false	Numeric AIS message identifier.
+SafetyBroadcastMessage	Safety	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+SafetyBroadcastMessage	Safety	UserID	integer	true	false	Vessel or station MMSI.
+SafetyBroadcastMessage	Safety	Valid	boolean	true	false	Whether the decoded value passed validation.
+SafetyBroadcastMessage	Safety	Spare	integer	true	true	Reserved protocol bits.
+SafetyBroadcastMessage	Safety	Text	string	true	false	AIS Text field.
+GnssBroadcastBinaryMessage	Binary data	MessageID	integer	true	false	Numeric AIS message identifier.
+GnssBroadcastBinaryMessage	Binary data	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+GnssBroadcastBinaryMessage	Binary data	UserID	integer	true	false	Vessel or station MMSI.
+GnssBroadcastBinaryMessage	Binary data	Valid	boolean	true	false	Whether the decoded value passed validation.
+GnssBroadcastBinaryMessage	Binary data	Spare1	integer	true	true	AIS Spare1 field.
+GnssBroadcastBinaryMessage	Binary data	Longitude	number<double>	true	false	Longitude in decimal degrees.
+GnssBroadcastBinaryMessage	Binary data	Latitude	number<double>	true	false	Latitude in decimal degrees.
+GnssBroadcastBinaryMessage	Binary data	Spare2	integer	true	true	AIS Spare2 field.
+GnssBroadcastBinaryMessage	Binary data	Data	string	true	false	AIS Data field.
+StandardClassBPositionReport	Position	MessageID	integer	true	false	Numeric AIS message identifier.
+StandardClassBPositionReport	Position	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+StandardClassBPositionReport	Position	UserID	integer	true	false	Vessel or station MMSI.
+StandardClassBPositionReport	Position	Valid	boolean	true	false	Whether the decoded value passed validation.
+StandardClassBPositionReport	Position	Spare1	integer	true	true	AIS Spare1 field.
+StandardClassBPositionReport	Position	Sog	number<double>	true	false	Speed over ground in knots.
+StandardClassBPositionReport	Position	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+StandardClassBPositionReport	Position	Longitude	number<double>	true	false	Longitude in decimal degrees.
+StandardClassBPositionReport	Position	Latitude	number<double>	true	false	Latitude in decimal degrees.
+StandardClassBPositionReport	Position	Cog	number<double>	true	false	Course over ground in degrees.
+StandardClassBPositionReport	Position	TrueHeading	integer	true	false	True heading in degrees.
+StandardClassBPositionReport	Position	Timestamp	integer	true	false	AIS UTC-second timestamp.
+StandardClassBPositionReport	Position	Spare2	integer	true	true	AIS Spare2 field.
+StandardClassBPositionReport	Position	ClassBUnit	boolean	true	false	AIS ClassBUnit field.
+StandardClassBPositionReport	Position	ClassBDisplay	boolean	true	false	AIS ClassBDisplay field.
+StandardClassBPositionReport	Position	ClassBDsc	boolean	true	false	AIS ClassBDsc field.
+StandardClassBPositionReport	Position	ClassBBand	boolean	true	false	AIS ClassBBand field.
+StandardClassBPositionReport	Position	ClassBMsg22	boolean	true	false	AIS ClassBMsg22 field.
+StandardClassBPositionReport	Position	AssignedMode	boolean	true	false	AIS AssignedMode field.
+StandardClassBPositionReport	Position	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+StandardClassBPositionReport	Position	CommunicationStateIsItdma	boolean	true	true	AIS CommunicationStateIsItdma field.
+StandardClassBPositionReport	Position	CommunicationState	integer	true	true	Raw AIS radio communication state.
+ExtendedClassBPositionReport	Position	MessageID	integer	true	false	Numeric AIS message identifier.
+ExtendedClassBPositionReport	Position	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+ExtendedClassBPositionReport	Position	UserID	integer	true	false	Vessel or station MMSI.
+ExtendedClassBPositionReport	Position	Valid	boolean	true	false	Whether the decoded value passed validation.
+ExtendedClassBPositionReport	Position	Spare1	integer	true	true	AIS Spare1 field.
+ExtendedClassBPositionReport	Position	Sog	number<double>	true	false	Speed over ground in knots.
+ExtendedClassBPositionReport	Position	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+ExtendedClassBPositionReport	Position	Longitude	number<double>	true	false	Longitude in decimal degrees.
+ExtendedClassBPositionReport	Position	Latitude	number<double>	true	false	Latitude in decimal degrees.
+ExtendedClassBPositionReport	Position	Cog	number<double>	true	false	Course over ground in degrees.
+ExtendedClassBPositionReport	Position	TrueHeading	integer	true	false	True heading in degrees.
+ExtendedClassBPositionReport	Position	Timestamp	integer	true	false	AIS UTC-second timestamp.
+ExtendedClassBPositionReport	Position	Spare2	integer	true	true	AIS Spare2 field.
+ExtendedClassBPositionReport	Position	Name	string	true	false	AIS Name field.
+ExtendedClassBPositionReport	Position	Type	integer	true	false	AIS Type field.
+ExtendedClassBPositionReport	Position	Dimension	object	true	false	AIS Dimension field.
+ExtendedClassBPositionReport	Position	FixType	integer	true	false	AIS FixType field.
+ExtendedClassBPositionReport	Position	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+ExtendedClassBPositionReport	Position	Dte	boolean	true	false	AIS Dte field.
+ExtendedClassBPositionReport	Position	AssignedMode	boolean	true	false	AIS AssignedMode field.
+ExtendedClassBPositionReport	Position	Spare3	integer	true	true	AIS Spare3 field.
+AidsToNavigationReport	Safety	MessageID	integer	true	false	Numeric AIS message identifier.
+AidsToNavigationReport	Safety	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+AidsToNavigationReport	Safety	UserID	integer	true	false	Vessel or station MMSI.
+AidsToNavigationReport	Safety	Valid	boolean	true	false	Whether the decoded value passed validation.
+AidsToNavigationReport	Safety	Type	integer	true	false	AIS Type field.
+AidsToNavigationReport	Safety	Name	string	true	false	AIS Name field.
+AidsToNavigationReport	Safety	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+AidsToNavigationReport	Safety	Longitude	number<double>	true	false	Longitude in decimal degrees.
+AidsToNavigationReport	Safety	Latitude	number<double>	true	false	Latitude in decimal degrees.
+AidsToNavigationReport	Safety	Dimension	object	true	false	AIS Dimension field.
+AidsToNavigationReport	Safety	Fixtype	integer	true	false	AIS Fixtype field.
+AidsToNavigationReport	Safety	Timestamp	integer	true	false	AIS UTC-second timestamp.
+AidsToNavigationReport	Safety	OffPosition	boolean	true	false	AIS OffPosition field.
+AidsToNavigationReport	Safety	AtoN	integer	true	false	AIS AtoN field.
+AidsToNavigationReport	Safety	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+AidsToNavigationReport	Safety	VirtualAtoN	boolean	true	false	AIS VirtualAtoN field.
+AidsToNavigationReport	Safety	AssignedMode	boolean	true	false	AIS AssignedMode field.
+AidsToNavigationReport	Safety	Spare	boolean	true	true	Reserved protocol bits.
+AidsToNavigationReport	Safety	NameExtension	string	true	false	AIS NameExtension field.
+GroupAssignmentCommand	Network and control	MessageID	integer	true	false	Numeric AIS message identifier.
+GroupAssignmentCommand	Network and control	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+GroupAssignmentCommand	Network and control	UserID	integer	true	false	Vessel or station MMSI.
+GroupAssignmentCommand	Network and control	Valid	boolean	true	false	Whether the decoded value passed validation.
+GroupAssignmentCommand	Network and control	Spare1	integer	true	true	AIS Spare1 field.
+GroupAssignmentCommand	Network and control	Longitude1	number<double>	true	false	AIS Longitude1 field.
+GroupAssignmentCommand	Network and control	Latitude1	number<double>	true	false	AIS Latitude1 field.
+GroupAssignmentCommand	Network and control	Longitude2	number<double>	true	false	AIS Longitude2 field.
+GroupAssignmentCommand	Network and control	Latitude2	number<double>	true	false	AIS Latitude2 field.
+GroupAssignmentCommand	Network and control	StationType	integer	true	false	AIS StationType field.
+GroupAssignmentCommand	Network and control	ShipType	integer	true	false	AIS ShipType field.
+GroupAssignmentCommand	Network and control	Spare2	integer	true	true	AIS Spare2 field.
+GroupAssignmentCommand	Network and control	TxRxMode	integer	true	false	AIS TxRxMode field.
+GroupAssignmentCommand	Network and control	ReportingInterval	integer	true	false	AIS ReportingInterval field.
+GroupAssignmentCommand	Network and control	QuietTime	integer	true	false	AIS QuietTime field.
+GroupAssignmentCommand	Network and control	Spare3	integer	true	true	AIS Spare3 field.
+StaticDataReport	Static and voyage	MessageID	integer	true	false	Numeric AIS message identifier.
+StaticDataReport	Static and voyage	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+StaticDataReport	Static and voyage	UserID	integer	true	false	Vessel or station MMSI.
+StaticDataReport	Static and voyage	Valid	boolean	true	false	Whether the decoded value passed validation.
+StaticDataReport	Static and voyage	Reserved	integer	true	true	AIS Reserved field.
+StaticDataReport	Static and voyage	PartNumber	boolean	true	false	AIS PartNumber field.
+StaticDataReport	Static and voyage	ReportA	object	true	false	AIS ReportA field.
+StaticDataReport	Static and voyage	ReportB	object	true	false	AIS ReportB field.
+LongRangeAisBroadcastMessage	Position	MessageID	integer	true	false	Numeric AIS message identifier.
+LongRangeAisBroadcastMessage	Position	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+LongRangeAisBroadcastMessage	Position	UserID	integer	true	false	Vessel or station MMSI.
+LongRangeAisBroadcastMessage	Position	Valid	boolean	true	false	Whether the decoded value passed validation.
+LongRangeAisBroadcastMessage	Position	PositionAccuracy	boolean	true	false	Reported position-accuracy flag.
+LongRangeAisBroadcastMessage	Position	Raim	boolean	true	false	Receiver autonomous integrity monitoring flag.
+LongRangeAisBroadcastMessage	Position	NavigationalStatus	integer	true	false	Reported navigation status code.
+LongRangeAisBroadcastMessage	Position	Longitude	number<double>	true	false	Longitude in decimal degrees.
+LongRangeAisBroadcastMessage	Position	Latitude	number<double>	true	false	Latitude in decimal degrees.
+LongRangeAisBroadcastMessage	Position	Sog	number<double>	true	false	Speed over ground in knots.
+LongRangeAisBroadcastMessage	Position	Cog	number<double>	true	false	Course over ground in degrees.
+LongRangeAisBroadcastMessage	Position	PositionLatency	boolean	true	false	AIS PositionLatency field.
+LongRangeAisBroadcastMessage	Position	Spare	boolean	true	true	Reserved protocol bits.
+BinaryAcknowledge	Binary data	MessageID	integer	true	false	Numeric AIS message identifier.
+BinaryAcknowledge	Binary data	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+BinaryAcknowledge	Binary data	UserID	integer	true	false	Vessel or station MMSI.
+BinaryAcknowledge	Binary data	Valid	boolean	true	false	Whether the decoded value passed validation.
+BinaryAcknowledge	Binary data	Spare	integer	true	true	Reserved protocol bits.
+BinaryAcknowledge	Binary data	Destinations	object	true	false	AIS Destinations field.
+Interrogation	Network and control	MessageID	integer	true	false	Numeric AIS message identifier.
+Interrogation	Network and control	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+Interrogation	Network and control	UserID	integer	true	false	Vessel or station MMSI.
+Interrogation	Network and control	Valid	boolean	true	false	Whether the decoded value passed validation.
+Interrogation	Network and control	Spare	integer	true	true	Reserved protocol bits.
+Interrogation	Network and control	Station1Msg1	object	true	false	AIS Station1Msg1 field.
+Interrogation	Network and control	Station1Msg2	object	true	false	AIS Station1Msg2 field.
+Interrogation	Network and control	Station2	object	true	false	AIS Station2 field.
+AssignedModeCommand	Network and control	MessageID	integer	true	false	Numeric AIS message identifier.
+AssignedModeCommand	Network and control	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+AssignedModeCommand	Network and control	UserID	integer	true	false	Vessel or station MMSI.
+AssignedModeCommand	Network and control	Valid	boolean	true	false	Whether the decoded value passed validation.
+AssignedModeCommand	Network and control	Spare	integer	true	true	Reserved protocol bits.
+AssignedModeCommand	Network and control	Commands	object	true	false	AIS Commands field.
+DataLinkManagementMessage	Network and control	MessageID	integer	true	false	Numeric AIS message identifier.
+DataLinkManagementMessage	Network and control	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+DataLinkManagementMessage	Network and control	UserID	integer	true	false	Vessel or station MMSI.
+DataLinkManagementMessage	Network and control	Valid	boolean	true	false	Whether the decoded value passed validation.
+DataLinkManagementMessage	Network and control	Spare	integer	true	true	Reserved protocol bits.
+DataLinkManagementMessage	Network and control	Data	object	true	false	AIS Data field.
+ChannelManagement	Network and control	MessageID	integer	true	false	Numeric AIS message identifier.
+ChannelManagement	Network and control	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+ChannelManagement	Network and control	UserID	integer	true	false	Vessel or station MMSI.
+ChannelManagement	Network and control	Valid	boolean	true	false	Whether the decoded value passed validation.
+ChannelManagement	Network and control	Spare1	integer	true	true	AIS Spare1 field.
+ChannelManagement	Network and control	ChannelA	integer	true	false	AIS ChannelA field.
+ChannelManagement	Network and control	ChannelB	integer	true	false	AIS ChannelB field.
+ChannelManagement	Network and control	TxRxMode	integer	true	false	AIS TxRxMode field.
+ChannelManagement	Network and control	LowPower	boolean	true	false	AIS LowPower field.
+ChannelManagement	Network and control	Area	object	true	false	AIS Area field.
+ChannelManagement	Network and control	Unicast	object	true	false	AIS Unicast field.
+ChannelManagement	Network and control	IsAddressed	boolean	true	false	AIS IsAddressed field.
+ChannelManagement	Network and control	BwA	boolean	true	false	AIS BwA field.
+ChannelManagement	Network and control	BwB	boolean	true	false	AIS BwB field.
+ChannelManagement	Network and control	TransitionalZoneSize	integer	true	false	AIS TransitionalZoneSize field.
+ChannelManagement	Network and control	Spare4	integer	true	true	AIS Spare4 field.
+SingleSlotBinaryMessage	Binary data	MessageID	integer	true	false	Numeric AIS message identifier.
+SingleSlotBinaryMessage	Binary data	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+SingleSlotBinaryMessage	Binary data	UserID	integer	true	false	Vessel or station MMSI.
+SingleSlotBinaryMessage	Binary data	Valid	boolean	true	false	Whether the decoded value passed validation.
+SingleSlotBinaryMessage	Binary data	DestinationIDValid	boolean	true	false	AIS DestinationIDValid field.
+SingleSlotBinaryMessage	Binary data	ApplicationIDValid	boolean	true	false	AIS ApplicationIDValid field.
+SingleSlotBinaryMessage	Binary data	DestinationID	integer	true	false	AIS DestinationID field.
+SingleSlotBinaryMessage	Binary data	Spare	integer	true	true	Reserved protocol bits.
+SingleSlotBinaryMessage	Binary data	ApplicationID	object	true	false	AIS ApplicationID field.
+SingleSlotBinaryMessage	Binary data	Payload	string	true	false	AIS Payload field.
+MultiSlotBinaryMessage	Binary data	MessageID	integer	true	false	Numeric AIS message identifier.
+MultiSlotBinaryMessage	Binary data	RepeatIndicator	integer	true	false	Number of times the AIS message was repeated.
+MultiSlotBinaryMessage	Binary data	UserID	integer	true	false	Vessel or station MMSI.
+MultiSlotBinaryMessage	Binary data	Valid	boolean	true	false	Whether the decoded value passed validation.
+MultiSlotBinaryMessage	Binary data	DestinationIDValid	boolean	true	false	AIS DestinationIDValid field.
+MultiSlotBinaryMessage	Binary data	ApplicationIDValid	boolean	true	false	AIS ApplicationIDValid field.
+MultiSlotBinaryMessage	Binary data	DestinationID	integer	true	false	AIS DestinationID field.
+MultiSlotBinaryMessage	Binary data	Spare1	integer	true	true	AIS Spare1 field.
+MultiSlotBinaryMessage	Binary data	ApplicationID	object	true	false	AIS ApplicationID field.
+MultiSlotBinaryMessage	Binary data	Payload	string	true	false	AIS Payload field.
+MultiSlotBinaryMessage	Binary data	Spare2	integer	true	true	AIS Spare2 field.
+MultiSlotBinaryMessage	Binary data	CommunicationStateIsItdma	boolean	true	true	AIS CommunicationStateIsItdma field.
+MultiSlotBinaryMessage	Binary data	CommunicationState	integer	true	true	Raw AIS radio communication state.
+UnknownMessage	Network and control	Error	string	false	false	AIS Error field.

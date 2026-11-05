@@ -7,3 +7,6 @@ tests/quant/fixtures/
 tests/quant/*/reference/
 resources/*.json
 *.png
+
+# The inventory of the sources: a reference to grep, 130 cards and long lists, not about our code.
+docs/sources/

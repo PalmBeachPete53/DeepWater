@@ -1,0 +1,152 @@
+name	url	pages	countries	access	api	probe_state	probe_final_url
+AKAMAI		388	194	headline	web	no link	
+S&P Global	https://www.pmi.spglobal.com/public	86	47	paid	press releases (headline figures free, series paid)	http 403	
+European Automobile Manufacturers’ Association (ACEA)	https://www.acea.auto/	40	31	headline	web	ok	https://www.acea.auto/
+Baker Hughes Company	https://www.bakerhughes.com/	16	15	headline	web	ok	https://www.bakerhughes.com/
+Institute for Supply Management	https://www.ismworld.org	15	1	headline	web	ok	https://ecommerce.ismworld.org/SSO/Login.aspx?DPLF=Y&vi=10&vt=4b82a1a08c590d5125787e8d4659563aa91418923d0ada13501434d54c130e321cecfc4d7643c43cd03831494932a56a
+Europe's Energy Portal	https://www.energy.eu	13	13	headline	web	ok	https://energy.eu/
+American Petroleum Institute (API)	http://www.api.org	8	1	headline	web	ok	https://www.api.org/
+MNI Deutsche Börse Group		8	5	headline	web	no link	
+ACEA - European Automobile Manufacturers' Association	https://www.acea.auto/	7	7	headline	web	ok	https://www.acea.auto/
+Automatic Data Processing, Inc	https://adpemploymentreport.com/	6	2	headline	web	ok	https://adpemploymentreport.com/
+Centre for European Economic Research (ZEW)	http://www.zew.de	6	5	headline	web	ok	https://www.zew.de/
+European Automobile Manufacturers Association	https://www.acea.auto/	6	6	headline	web	ok	https://www.acea.auto/
+Mortgage Bankers Association of America	http://www.mortgagebankers.org/	6	1	paid	web	http 403	
+National Association of Realtors	https://www.nar.realtor	6	1	headline	web	ok	https://www.nar.realtor
+Nielsen	https://www.nielsen.com	6	6	headline	web	ok	https://www.nielsen.com
+Australian Industry Group	https://www.aigroup.com.au	5	1	headline	web	ok	https://www.australianindustrygroup.com.au/
+Logistics Managers' Index	http://www.the-lmi.com/	5	1	headline	web	ok	https://www.the-lmi.com/
+The Society of Motor Manufacturers and Traders Limited (SMMT)	https://www.smmt.co.uk	5	1	headline	web	ok	https://www.smmt.co.uk
+University of Michigan	http://www.sca.isr.umich.edu/	5	1	headline	web	ok	https://www.sca.isr.umich.edu/
+Bureau for Economic Research (BER)	https://www.ber.ac.za	4	1	headline	web	ok	https://www.ber.ac.za
+Confederation of British Industry	https://www.cbi.org.uk	4	1	headline	web	ok	https://www.cbi.org.uk
+Eiendom Norge/Real Estate Norway	https://eiendomnorge.no	4	1	headline	web	ok	https://eiendomnorge.no
+Halifax and Bank of Scotland	https://www.halifax.co.uk/media-centre/house-price-index.html	4	1	paid	web	ok	https://www.halifax.co.uk/media-centre/house-price-index.html
+Petrol	http://www.petrol.eu/	4	4	headline	web	ok	https://www.petrol.eu/
+Quotable Value	https://www.qv.co.nz/	4	1	headline	web	ok	https://www.qv.co.nz/
+Standard & Poor's	https://us.spindices.com	4	1	paid	web	gaierror	
+The Federation of Thai Industries	https://fti.or.th/	4	1	headline	web	ok	https://fti.or.th/
+Business New Zealand	https://www.businessnz.org.nz	3	1	headline	web	http 403	
+Chilean Chamber of Construction	https://www.cchc.cl/	3	1	headline	web	ok	https://cchc.cl/
+China Association of Automobile Manufacturers	http://www.caam.org.cn	3	1	headline	web	ok	http://www.caam.org.cn
+Confederacao Nacional da Industria (CNI)	http://www.portaldaindustria.com.br	3	1	headline	web	TimeoutError	
+FGV - Fundacao Getulio Vargas	https://portal.fgv.br/	3	1	headline	web	tls error	
+FUNCEX, Brazil	https://www.funcex.org.br	3	1	headline	web	ok	https://www.funcex.org.br
+Federal Chamber of Automotive Industries (FCAI)	https://www.fcai.com.au/	3	1	headline	web	ok	https://www.fcai.com.au/
+Ifo Institute	https://www.ifo.de	3	1	headline	web	ok	https://www.ifo.de/ifo-startseite
+Ipsos	https://www.ipsos.com	3	3	headline	web	ok	https://www.ipsos.com/en
+Melbourne Institute	http://melbourneinstitute.unimelb.edu.au	3	1	headline	web	http 403	
+National Australia Bank	https://business.nab.com.au	3	1	headline	web	ok	https://business.nab.com.au
+Nationwide Building Society, United Kingdom	https://www.nationwide.co.uk/	3	1	headline	web	ok	https://www.nationwide.co.uk/
+SIAM - Society of Indian Automobile Manufacturers	https://www.siam.in/	3	1	headline	web	ok	https://www.siam.in/
+ANFAC - Asociacion Espanola de Fabricantes de Automoviles y Camiones	https://anfac.com/	2	1	headline	web	ok	https://anfac.com/
+ANFAVEA, Brazil	http://www.anfavea.com.br	2	1	headline	web	ok	http://www.anfavea.com.br
+ANFIA - Italian Association of the Automotive Industry	https://www.anfia.it/	2	1	headline	web	ok	https://www.anfia.it/it/
+Association of European Businesses	https://aebrus.ru	2	1	headline	web	ok	https://aebrus.ru
+Australia and New Zealand Banking Group	https://www.anz.com.au/personal/	2	1	headline	web	ok	https://www.anz.com.au/personal/
+BRC - British Retail Consortium	https://www.brc.org.uk/	2	1	headline	web	ok	https://brc.org.uk/
+CCFA - Comite des Constructeurs Francais d'Automobiles	https://ccfa.fr/	2	1	headline	web	ok	https://ccfa.fr/
+Challenger, Gray and Christmas, Inc	https://www.challengergray.com	2	1	headline	web	ok	https://www.challengergray.com
+Daily NK		2	1	headline	web	no link	
+Europace AG, Germany	https://neu.europace.de	2	1	headline	web	ok	https://europace.de/
+European Banking Federation	https://www.suomenpankki.fi/	2	2	headline	web	ok	https://www.suomenpankki.fi/
+Fedesarrollo	https://www.fedesarrollo.org.co/	2	1	headline	web	ok	https://www.fedesarrollo.org.co/
+Freddie Mac	https://www.freddiemac.com/	2	1	headline	FRED API, free key	ok	https://www.freddiemac.com/
+GKI Economic Research Co		2	1	headline	web	no link	
+GfK Group	https://www.gfk.com/de/	2	2	headline	web	http 404	
+ISSH, Albania	http://www.issh.gov.al	2	1	headline	web	ok	https://www.issh.gov.al/
+Korea Automobile Manufacturers Association (KAMA)	https://www.kama.or.kr/MainController	2	1	headline	web	ok	https://www.kama.or.kr/MainController
+Korea Productivity Center	https://www.kpc.or.kr	2	1	headline	web	ok	https://www.kpc.or.kr
+Malaysian Automotive Association	https://www.maa.org.my/index.html	2	1	headline	web	ok	https://www.maa.org.my/index.html
+Manheim Consulting Inc	https://site.manheim.com/en/services/consulting/used-vehicle-value-index.html	2	1	paid	web	ok	https://site.manheim.com/en/services/consulting/used-vehicle-value-index.html
+NAAMSA, South Africa	https://www.naamsa.co.za	2	1	headline	web	ok	https://naamsa.net/
+OICA - International Organization of Motor Vehicle Manufacturers	http://www.oica.net/	2	2	headline	web	ok	https://oica.net/
+Swedbank	https://www.swedbank.com/	2	1	headline	web	ok	https://www.swedbank.com/
+The Conference Board	https://www.conference-board.org/us/	2	2	headline	web	ok	https://www.conference-board.org/north-america/
+The ISET Policy Institute	http://iset-pi.ge	2	1	headline	web	ok	https://iset-pi.ge/en
+Truckstop	https://truckstop.com/	2	1	headline	web	ok	https://truckstop.com/
+Turkish Automotive Manufacturers Association (OSD)	http://www.osd.org.tr	2	1	headline	web	ok	https://www.osd.org.tr/
+Universidad Torcuato di Tella	https://www.utdt.edu	2	1	headline	web	ok	https://www.utdt.edu
+VDA - German Association of the Automotive Industry	https://www.vda.de	2	1	headline	web	ok	https://www.vda.de/de
+Westpac Banking Corporation, Melbourne Institute	http://www.westpac.com.au	2	1	headline	web	ok	https://www.westpac.com.au/
+ACAP	https://www.acap.pt	1	1	headline	web	ok	https://www.acap.pt/pt/home
+ADEFA - The Association of Automotive Makers, Argentina	http://www.adefa.org.ar	1	1	headline	web	ok	https://www.adefa.org.ar/es/index.php
+ANZ - Indeed Australian Job Ads	https://media.anz.com/	1	1	headline	web	ok	https://www.anz.com.au/newsroom/
+Adimark GfK	https://www.gfk.com	1	1	headline	web	ok	https://nielseniq.com/global/en/
+Asociacion Nacional de Empresarios de Colombia (ANDI)	http://www.andi.com.co	1	1	headline	web	ok	https://www.andi.com.co/
+Asociación de Fábricas de Automotores (ADEFA)	http://www.adefa.org.ar	1	1	headline	web	ok	https://www.adefa.org.ar/es/index.php
+Association of Job Information of Japan		1	1	headline	web	no link	
+Banks Association of Turkey		1	1	headline	web	no link	
+CFIB - Canadian Federation of Independent Business	https://www.cfib-fcei.ca/en	1	1	headline	web	ok	https://www.cfib-fcei.ca/en/
+CKGSB Knowledge	https://english.ckgsb.edu.cn/knowledge/	1	1	headline	web	ok	https://english.ckgsb.edu.cn/knowledge/
+Ceylon Tourist Board	https://www.sltda.gov.lk/en	1	1	headline	web	ok	https://www.sltda.gov.lk/en
+Chamber of Automotive Manufacturers of the Philippines (CAMPI)	https://www.campiauto.org	1	1	headline	web	http 403	
+Chilean Benchmark Facility	https://cbf.cl/about-cbf/	1	1	headline	web	ok	https://cbf.cl/about-cbf/
+Circle K, Lithuania	https://www.circlek.lt	1	1	headline	web	ok	https://www.circlek.lt
+Comisión Nacional de Energía, Chile	https://www.cne.cl/	1	1	headline	web	ok	https://www.cne.cl/
+Confederation of Finnish Industries (EK)	https://ek.fi/	1	1	headline	web	ok	https://ek.fi/
+Cotality, Australia	https://www.corelogic.com.au/	1	1	paid	web	ok	https://www.cotality.com/
+Czech Financial Benchmark Facility	https://cfbf.cz/	1	1	headline	web	ok	https://cfbf.cz/
+DILF - Danish Purchasing and Logistics Forum	https://www.dilf.dk	1	1	headline	web	ok	https://restaurant.dk/
+Danish Financial Benchmark Facility	https://dfbf.dk/	1	1	headline	web	ok	https://dfbf.dk/
+Departamento de Asuntos del Consumidor (DACO)	https://www.daco.pr.gov	1	1	headline	web	ok	https://www.daco.pr.gov
+Dun & Bradstreet		1	1	headline	web	no link	
+Electricite du Liban	http://www.bdl.gov.lb	1	1	headline	web	http 403	
+Enemed, Malta	http://www.enemed.com.mt	1	1	headline	web	ok	https://enemed.com.mt/
+European Commssion	https://ec.europa.eu	1	1	headline	web	ok	https://commission.europa.eu/select-language?destination=/node/1
+FEBIAC	https://www.febiac.be/fr	1	1	headline	web	ok	https://www.febiac.be/fr
+FENALCO, Federación Nacional de Comerciantes Empresarios	https://www.fenalco.com.co/	1	1	headline	web	ok	https://www.fenalco.com.co/
+FRED	https://fred.stlouisfed.org/	1	1	headline	FRED API, free key	TimeoutError	
+Federal Chamber of Automotive Industries		1	1	headline	web	no link	
+Finans Norge & Verian	https://www.finansnorge.no	1	1	headline	web	ok	https://www.finansnorge.no
+FipeZAP	http://fipezap.zapimoveis.com.br/	1	1	headline	web	ok	https://imoveis.grupoolx.com.br/datazap
+Fit Small Business		1	1	headline	web	no link	
+Fitch Auto ABS Indices	https://www.fitchratings.com/structured-finance/abs/auto-indices	1	1	paid	web	ok	https://www.fitchratings.com/structured-finance/abs/auto-indices
+GFK	https://www.gfk.com	1	1	headline	web	ok	https://nielseniq.com/global/en/
+Gallup/Capacent	http://www.gallup.is	1	1	headline	web	ok	https://www.gallup.is:443/
+Getulio Vargas Foundation	https://portalibre.fgv.br/	1	1	headline	web	tls error	
+HALPIM	http://logisztika.hu	1	1	headline	web	ok	https://logisztika.hu/
+Hong Kong Association of Banks	http://www.hkab.org.hk/	1	1	headline	web	ok	https://www.hkab.org.hk/en/home
+INS, Ivory Coast	http://www.ins.ci/n/	1	1	headline	web	http 404	
+Iceland Automobile Association	http://www.fib.is	1	1	headline	web	ok	https://www.fib.is/
+Info Sapiens	https://www.sapiens.com.ua/ua/index	1	1	headline	web	ok	https://www.sapiens.com.ua/ua/index
+Iran Vehicle Manufacturers Association	http://ivma.ir	1	1	headline	web	ok	https://ivma.ir/
+Irish League of Credit Unions	https://www.creditunion.ie/	1	1	headline	web	ok	https://www.creditunion.ie/
+Japan Automobile Dealers Association	http://www.jada.or.jp/	1	1	headline	web	ok	https://www.jada.or.jp/
+Japan Automobile Manufacturers Association (JAMA)	http://www.jama-english.jp/	1	1	headline	web	ok	https://www.jama.or.jp/english/
+Japan Cement Association (JCA)	http://jcassoc.or.jp	1	1	headline	web	ok	https://www.jcassoc.or.jp/
+Japan Machine Tool Builders' Association (JMTBA)	https://www.jmtba.or.jp	1	1	headline	web	ok	https://www.jmtba.or.jp
+Japanese Bankers Association	https://www.jbatibor.or.jp/	1	1	headline	web	ok	https://www.jbatibor.or.jp/
+Korea Electric Power Corporation (KEPCO)	http://home.kepco.co.kr	1	1	headline	web	robots.txt forbids	
+Maybank Group	https://www.maybank.com	1	1	headline	web	TimeoutError	
+NIMA/DNB Markets	https://www.nima.no	1	1	headline	web	ok	https://www.nima.no
+Nationwide Building Society, UK	https://www.nationwide.co.uk/	1	1	headline	web	ok	https://www.nationwide.co.uk/
+Oficina del Comisionado de Instituciones Financieras	http://www.ocif.pr.gov	1	1	headline	web	ok	https://www.ocif.pr.gov/
+Olerex AS	http://olerex.ee	1	1	headline	web	ok	https://olerex.ee/
+Petrojam Limited	http://www.petrojam.com	1	1	headline	web	http 403	
+Petropar	http://www.petropar.gov.py/	1	1	headline	web	ok	https://www.petropar.gov.py/
+Redbook Research Inc	http://www.redbookresearch.com/	1	1	paid	web	ok	https://www.redbookresearch.com/
+Retailers Association of India (RAI)	https://rai.net.in/index.php	1	1	headline	web	ok	https://rai.net.in/index.php
+Royal Institution of Chartered Surveyors (RICS)	https://www.rics.org/uk/	1	1	headline	web	ok	https://www.rics.org/
+Secretaría de Energía de Panamá	http://www.energia.gob.pa	1	1	headline	web	ok	http://www.energia.gob.pa
+Secretaría de Energía, Honduras	https://sen.hn/	1	1	headline	web	ok	https://sen.hn/
+Secretaría de Energía, República Argentina	https://argentina.gob.ar	1	1	headline	web	ok	https://www.argentina.gob.ar/
+Securities Consultants Ltd., Bangladesh		1	1	headline	web	no link	
+Shell Luxembourg	https://www.shell.lu	1	1	headline	web	ok	https://www.shell.lu
+Shell Suisse	https://www.shell.ch	1	1	headline	web	ok	https://www.shell.ch
+Shell i Danmark	https://www.shell.dk	1	1	headline	web	ok	https://www.shell.dk
+Sinyi Realty Inc		1	1	headline	web	no link	
+Swedish Financial Benchmark Facility	https://swfbf.se/	1	1	headline	web	http 429	
+TOBB - Union of Chambers and Commodity Exchanges of Turkey		1	1	headline	web	no link	
+Tankan Sponsored by Thomson Reuters		1	1	paid	web	no link	
+Technometrica Market Intelligence/RealClearMarkets		1	1	headline	web	no link	
+Terna - Rete Elettrica Nazionale, Italy	https://www.terna.it/it	1	1	headline	web	ok	https://www.terna.it/it
+The China Passenger Car Association (CPCA)	https://www.cpcaauto.com/	1	1	headline	web	http 403	
+The Transparency Board	http://www.mylpg.eu	1	1	headline	web	ok	https://www.mylpg.eu/
+Türkiye Petrolleri	https://www.tppd.com.tr/	1	1	headline	web	ok	https://www.tppd.com.tr/
+Vietnam Automobile Manufacturers Association	http://vama.org.vn	1	1	headline	web	robots.txt forbids	
+Wards Intelligence	https://wardsintelligence.informa.com/	1	1	headline	web	http 403	
+Westpac Banking Corporation, McDermott Miller	https://www.westpac.co.nz	1	1	headline	web	TimeoutError	
+YouGov/Citigroup		1	1	headline	web	no link	
+procure.ch & Credit Suisse	https://www.procure.ch	1	1	headline	web	ok	https://www.procure.ch
+procure.ch & UBS	https://www.procure.ch	1	1	headline	web	ok	https://www.procure.ch

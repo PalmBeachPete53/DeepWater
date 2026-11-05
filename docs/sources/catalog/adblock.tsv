@@ -1,0 +1,29 @@
+list	url	host	status	bytes	lines	comment_lines	network_rules	exception_rules	cosmetic_rules	scriptlet_rules	header_title	header_expires	last_modified
+uBlock Origin filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt	raw.githubusercontent.com	200	470920	10824	2734	1012	761	1859	2440	uBlock filters	5 days	
+uBlock Origin 2020 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2020.txt	raw.githubusercontent.com	200	133351	3229	839	266	139	586	706	uBlock filters (2020)		
+uBlock Origin 2021 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt	raw.githubusercontent.com	200	166690	4001	974	420	147	929	757	uBlock filters (2021)		
+uBlock Origin 2022 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2022.txt	raw.githubusercontent.com	200	157310	3774	1067	377	157	620	787	uBlock filters (2022)		
+uBlock Origin 2023 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2023.txt	raw.githubusercontent.com	200	214006	4614	1293	438	188	807	981	uBlock filters (2023)		
+uBlock Origin 2024 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2024.txt	raw.githubusercontent.com	200	231328	4228	1257	460	173	661	886	uBlock filters (2024)		
+uBlock Origin 2025 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2025.txt	raw.githubusercontent.com	200	169628	3638	1033	401	100	565	843	uBlock filters (2025)		
+uBlock Origin 2026 filters	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2026.txt	raw.githubusercontent.com	200	103926	2284	582	276	52	398	522	uBlock filters (2026)		
+uBlock Origin filters – General	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-general.txt	raw.githubusercontent.com	200	708528	4430	1212	903	59	914	975			
+uBlock Origin filters – Badware risks	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt	raw.githubusercontent.com	200	272711	7028	1614	4727	2	120	24	uBlock₀ filters – Badware risks	5 days	
+uBlock Origin filters – Resource abuse	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt	raw.githubusercontent.com	200	9223	226	83	37	0	2	39	uBlock filters – Resource abuse	7 days	
+uBlock Origin filters – Unbreak	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt	raw.githubusercontent.com	200	282032	6102	1936	663	1284	309	316	uBlock filters – Unbreak	5 days	
+uBlock Origin filters – Quick fixes	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt	raw.githubusercontent.com	200	85734	661	167	125	44	108	169	uBlock₀ filters – Quick fixes	8 hours	
+uBlock Origin filters – Link shorteners	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/ubo-link-shorteners.txt	raw.githubusercontent.com	200	122959	1928	374	237	76	380	657	uBlock filters – Link shorteners	5 days	
+EasyList	https://easylist.to/easylist/easylist.txt	easylist.to	200	2062667	78090	277	52312	750	24751	0	EasyList	4 days (update frequency)	Thu, 05 Nov 2026 13:27:06 GMT
+URLhaus malicious URL blocklist	https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh-online.txt	malware-filter.gitlab.io	200	35764	1843	6	1837	0	0	0	Online Malicious URL Blocklist (AdGuard Home)	12 hours (update frequency)	Thu, 05 Nov 2026 12:31:57 GMT
+Brave Unbreak	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-unbreak.txt	raw.githubusercontent.com	200	24	1	1	0	0	0	0			
+Brave Specific	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-specific.txt	raw.githubusercontent.com	200	10831	175	63	31	33	1	16	Brave Specific	2 days	
+Brave Social	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt	raw.githubusercontent.com	200	1272	17	8	8	0	0	0	Brave Social	2 days	
+SugarCoat rules	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-sugarcoat.txt	raw.githubusercontent.com	200	385	7	4	2	0	0	0	Brave SugarCoat Rules	7 days	
+EasyPrivacy	https://easylist.to/easylist/easyprivacy.txt	easylist.to	200	1513227	57261	774	55596	854	7	30	EasyPrivacy	4 days (update frequency)	Thu, 05 Nov 2026 13:27:06 GMT
+uBlock Origin filters – Privacy	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt	raw.githubusercontent.com	200	184832	3404	1118	1451	10	32	293	uBlock filters – Privacy	7 days	
+Brave First-Party	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty.txt	raw.githubusercontent.com	200	220800	5045	790	549	29	3652	25	Brave Firstparty specific filters		
+Brave First-Party Regional	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-firstparty-regional.txt	raw.githubusercontent.com	200	51376	1441	36	8	1	1392	3			
+EasyList Cookie	https://secure.fanboy.co.nz/fanboy-cookiemonster_ubo.txt	secure.fanboy.co.nz	200	1218062	29273	1089	1684	429	23603	2468	Easylist Cookie List	9 days (update frequency)	Thu, 05 Nov 2026 09:25:08 GMT
+uBlock Origin filters – Cookie notices	https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances-cookies.txt	raw.githubusercontent.com	200	378382	5807	1930	26	37	183	2165	uBlock filters – Cookie Notices	7 days	
+Brave cookie additions	https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-cookie-specific.txt	raw.githubusercontent.com	200	24641	195	31	0	5	12	125	Brave Cookie-snippet list	2 days	
+Fanboy mobile notifications	https://secure.fanboy.co.nz/fanboy-mobile-notifications.txt	secure.fanboy.co.nz	200	50798	1021	148	16	6	787	64	Fanboy's Mobile Notifications List	9 days (update frequency)	Sat, 31 Oct 2026 09:25:09 GMT

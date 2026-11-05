@@ -1,0 +1,243 @@
+path	table	title	variables	countries	first	last
+Country Profiles > UNECE member countries in figures	ZZZ_en_CoSummary_r.px	Country Overview by Country and Time	Indicator(79) Country(56) Year(37)	56	1990	2026
+Economy > External economic relations	30_en_MECCExchPPPsNEWY_r.px	Exchange Rates and PPPs by Country, Indicator and Year	Indicator(4) Country(56) Year(36)	56	1990	2025
+Economy > External economic relations	31_en_MECCExchNEWQ_r.px	Exchange Rate (XR) by Country, Indicator and Quarter	Indicator(3) Country(56) Quarter(145)	56	1990Q1	2026Q1
+Economy > External economic relations	32_en_MECCExchNEWAM_r.px	Exchange Rate (XR) by Country, Indicator and Month	Indicator(3) Country(56) Month(435)	56	1990M01	2026M03
+Economy > Globalization indicators	ZZZ_en_MENCGlobalY_r.px	Globalization indicators by Country, Indicator and Year	Indicator(13) Country(56) Year(36)	56	1990	2025
+Economy > Industrial production	0_en_MECCIndProdY_r.px	Industrial Production by Country and Year	Indicator(2) Country(56) Year(26)	56	2000	2025
+Economy > Industrial production	3_en_MECCIndProdM_r.px	Industrial Production, Original and Seasonally Adjusted by Country and Month	Indicator(4) Country(56) Month(434)	56	1990M01	2026M02
+Economy > Labour force & wages	10_en_MELFOverviewY_r.px	Population and employment by Country, Variable and Year	Variable(2) Measurement(2) Country(64) Year(36)	64	1990	2025
+Economy > Labour force & wages	20_en_MEEmpNaceA6Y_r.px	Employment by Country, Activity and Year (ISIC Rev. 3.1)	Activity(9) Measurement(3) Country(64) Year(36)	64	1990	2025
+Economy > Labour force & wages	25_en_MEEmpNace2A10Y_r.px	Employment by Country, Activity and Year (ISIC Rev. 4)	Activity(14) Measurement(3) Country(64) Year(36)	64	1990	2025
+Economy > Labour force & wages	30_en_MEEmpTotQ_r.px	Employment by Country and Quarter	Measurement(6) Country(64) Quarter(104)	64	2000Q1	2025Q4
+Economy > Labour force & wages	40_en_MEUnRateY_r.px	Unemployment Rate by Country and Year	Country(56) Year(36)	56	1990	2025
+Economy > Labour force & wages	55_en_MEUnRateM_r.px	Unemployment Rate by Country and Month	Measurement(2) Country(56) Month(434)	56	1990M01	2026M02
+Economy > Labour force & wages	60_en_MECCWagesY_r.px	Gross Average Monthly Wages by Country and Year	Indicator(2) Country(56) Year(35)	56	1990	2024
+Economy > National accounts	01_en_MECCGDPExpPerCapY_r.px	GDP per Capita, in International Comparable Prices by Country/Region, Expenditure and Year	Expenditure(12) Measurement(4) Country/Region(64) Year(36)	64	1990	2025
+Economy > National accounts	02_en_MENCGDPExpPerCapY_r.px	GDP per Capita, in National Currency, by Country, Expenditure and Year	Expenditure(12) Measurement(4) Country(56) Year(36)	56	1990	2025
+Economy > National accounts	10_en_MECCGDPExpY_r.px	GDP: Expenditure Approach, in International Comparable Prices, by Expenditure, Country/Region and Year	Expenditure(22) Measurement(6) Country(64) Year(36)	64	1990	2025
+Economy > National accounts	11_en_MENCGDPExpY_r.px	GDP: Expenditure Approach, in National Currency, by Country, Expenditure and Year	Expenditure(22) Measurement(6) Country(56) Year(36)	56	1990	2025
+Economy > National accounts	15_en_MENCGDPExpQ_r.px	GDP: Expenditure Approach, in National Currency , by Country, Expenditure and Quarter	Expenditure(16) Measurement(12) Country(56) Quarter(104)	56	2000Q1	2025Q4
+Economy > National accounts	20_en_MECCGDPOutY_r.px	GDP: Output Approach, in Internationally Comparable Prices, by Activity, Country/Region and Year	Activity(14) Measurement(5) Country(64) Year(36)	64	1990	2025
+Economy > National accounts	21_en_MENCGDPOutY_r.px	GDP: Output Approach, in National Currency, by Country, Activity and Year (ISIC Rev. 3.1)	Activity(14) Measurement(5) Country(56) Year(36)	56	1990	2025
+Economy > National accounts	26_en_MEISIC4Y_r.px	GDP: Output Approach, in National Currency, by Country, Activity and Year (ISIC Rev. 4)	Activity(18) Measurement(5) Country(56) Year(36)	56	1990	2025
+Economy > National accounts	29_en_MENCGDPOutpQ_r.px	GDP: Output Approach, in National Currency, by Country, Activity and Quarter (ISIC Rev. 3.1)	Activity(14) Measurement(10) Country(56) Quarter(104)	56	2000Q1	2025Q4
+Economy > National accounts	30_en_MEISIC4Q_r.px	GDP: Output Approach, in National Currency, by Country, Activity and Quarter (ISIC Rev. 4)	Activity(18) Measurement(5) Country(56) Year(104)	56	2000Q1	2025Q4
+Economy > National accounts	31_en_MENCGDPDefY_r.px	Implicit Price Deflator, by Country, Expenditure and Year	Expenditure(9) Measurement(2) Country(56) Year(36)	56	1990	2025
+Economy > Overview tables	01_en_MECCOverviewY_r.px	Macroeconomic Overview, in Internationally Comparable Prices, by Country/Region and Year	Indicator(12) Country(64) Year(36)	64	1990	2025
+Economy > Overview tables	02_en_MENCOverviewY_r.px	Macroeconomic Overview, in National Currency, by Country and Year	Indicator(18) Country(56) Year(36)	56	1990	2025
+Economy > Price indices	0_en_MECCPriceInterestY_r.px	Price Indices by Country and Year	Indicator(4) Country(56) Year(36)	56	1990	2025
+Economy > Price indices	1_en_MECCPriceInterestQ_r.px	Price Indices by Country and Quarter	Indicator(4) Country(56) Quarter(145)	56	1990Q1	2026Q1
+Economy > Price indices	2_en_MECCPriceInterestM_r.px	Price Indices by Country and Month	Indicator(4) Country(56) Month(435)	56	1990M01	2026M03
+Forestry > Consumption	010_en_TM21_12_r.px	Roundwood consumption	Indicator(2) Country(57) Year(56)	57	1964	2019
+Forestry > Consumption	020_en_TM21_13_r.px	Sawnwood consumption	Indicator(2) Country(57) Year(56)	57	1964	2019
+Forestry > Consumption	030_en_TM21_14_r.px	Wood energy	Indicator(1) Country(57) Year(7)	57	2005	2017
+Forestry > Forest area	010_en_TM21_01_r.px	Forest area	Indicator(3) Country(57) Year(5)	57	1990	2020
+Forestry > Forest area	020_en_TM21_02_r.px	Forest area change	Indicator(2) Country(57) Year(4)	57	2000	2020
+Forestry > Forest ownership	010_en_FO17_1a_r.px	Area of forest and forest available for wood supply by ownership class, 1000 ha (Table 1a)	Ownership Category(14) Forest Category(2) Country(32) Year(3)	32	1990	2015
+Forestry > Forest ownership	020_en_FO17_1b_r.px	Area of forest by management status by ownership class, 1000 ha (Table 1b)	Ownership Category(14) Management Status(3) Country(32) Year(3)	32	1990	2015
+Forestry > Forest ownership	030_en_FO17_2_r.px	Area and number of forest properties by size and ownership class (Table 2)	Size(5) Ownership Category(5) Area/Number(2) Country(32) Year(3)	32	1990	2015
+Forestry > Forest ownership	040_en_FO17_3_r.px	Growing stock, growth and drain by ownership class (Table 3)	Ownership Category(5) Growth and Drain(3) Country(32) Year(3)	32	1990	2015
+Forestry > Forest ownership	050_en_FO17_4a_r.px	Wood removals and certified area by ownership class (Table 4a)	Ownership Category(5) Removals and Area(3) Country(32) Year(3)	32	1990	2015
+Forestry > Forest ownership	060_en_FO17_6_r.px	State forests management organisations (Table 6)	Main Management Level(3) Type of Organisation(4) Turnover/Area(2) Country(32) Year(1)	32	2015	2015
+Forestry > Forest ownership	070_en_FO17_7_r.px	Area and number of forest holdings by size (Table 7)	Area/Number(2) Ownership Category(5) Size(6) Country(32) Year(1)	32	2015	2015
+Forestry > Forest ownership	080_en_FO17_8_r.px	Workforce in public forests, persons (Table 8)	Ownership Category(3) Staff Category(4) Country(32) Year(1)	32	2015	2015
+Forestry > Forest ownership	090_en_FO17_9_r.px	Removals from private forest properties by size, 1000 m3 (Table 9)	Size(5) Country(32) Year(1)	32	2010	2010
+Forestry > Forest ownership	100_en_FO17_10_r.px	Individual forest owners by age and gender (Table 10)	Age class (years)(4) Number/Share(2) Country(32) Year(3)	32	1990	2015
+Forestry > Forest ownership	110_en_FO17_11a_r.px	Occupation of individual forest owners, % (Table 11a)	Field/Status of Occupation(5) Share(2) Country(32) Year(1)	32	2015	2015
+Forestry > Forest ownership	120_en_FO17_11b_r.px	Place of usual residence of individual forest owners, % (Table 11b)	Share(2) Location of Residence(4) Country(32) Year(1)	32	2015	2015
+Forestry > Forest ownership	130_en_FO17_11c_r.px	Objectives of ownership of individual forest owners, % (Table 11c)	Share(2) Objective(7) Country(32) Year(1)	32	2015	2015
+Forestry > Health and protection	010_en_TM21_06_r.px	Fires	Indicator(2) Country(57) Year(18)	57	2000	2017
+Forestry > Health and protection	020_en_TM21_07_r.px	Protection	Indicator(2) Country(57) Year(5)	57	1990	2020
+Forestry > Health and protection	030_en_TM21_08_r.px	Forest origin	Indicator(3) Country(57) Year(5)	57	1990	2020
+Forestry > Management	010_en_TM21_09_r.px	Ownership	Indicator(3) Country(57) Year(4)	57	1990	2015
+Forestry > Management	020_en_TM21_10_r.px	Management planning	Indicator(1) Country(57) Year(5)	57	1990	2020
+Forestry > Management	030_en_TM21_11_r.px	Certification	Indicator(1) Country(57) Year(8)	57	2000	2019
+Forestry > Trade	010_en_TM21_15_r.px	Imports	Indicator(1) Country(57) Year(56)	57	1964	2019
+Forestry > Trade	020_en_TM21_16_r.px	Exports	Indicator(1) Country(57) Year(56)	57	1964	2019
+Forestry > Trade	030_en_TM21_17_r.px	Export prices	Indicator(1) Country(57) Year(30)	57	1990	2019
+Forestry > Wood/carbon	010_en_TM21_03_r.px	Wood removals	Indicator(3) Country(57) Year(56)	57	1964	2019
+Forestry > Wood/carbon	020_en_TM21_04_r.px	Growing stock	Indicator(3) Country(57) Year(5)	57	1990	2020
+Forestry > Wood/carbon	030_en_TM21_05_r.px	Biomass	Indicator(1) Country(57) Year(5)	57	1990	2020
+Millennium Development Goals > Child Mortality and Immunization (MDG 4)	006_en_MDG_G4T4A_r.px	Child Health (Target 4A): under-five mortality, infant mortality and immunization against measles	Reporting level(2) <B>Indicator</B>(5) Country(35) Year(26)	35	1980	2012
+Millennium Development Goals > Education Enrolment, Completion & Literacy (MDG 2)	004_en_MDG_G2T2A_r.px	Education (Target 2A): net enrolment in education, pupils starting grade 1 who reach the last grade, primary completion rates, literacy rates 15-24 years old	Reporting level(2) Indicator(18) Country(35) Year(26)	35	1978	2013
+Millennium Development Goals > Environment, Water & Sanitation (MDG 7)	012_en_MDG_G7T7A_r.px	Environmental Resources (Target 7A): land area covered by forest, CO2 emission, consumption ozone depleting substances, proportion of water resources used.	Reporting level(2) Indicator(9) Country(35) Year(23)	35	1990	2012
+Millennium Development Goals > Environment, Water & Sanitation (MDG 7)	013_en_MDG_G7T7B_r.px	Biodiversity (Target 7B): terrestrial and marine areas protected to total surface area	Reporting level(2) Indicator(3) Country(35) Year(27)	35	1960	2012
+Millennium Development Goals > Environment, Water & Sanitation (MDG 7)	014_en_MDG_G7T7C_r.px	Drinking Water and Sanitation (Target 7C): population using improved drinking water sources, population using improved sanitation facilities	Reporting level(2) Indicator(6) Country(35) Year(23)	35	1990	2012
+Millennium Development Goals > Environment, Water & Sanitation (MDG 7)	015_en_MDG_G7T7D_r.px	Slum Dwellers (Target 7D): Slum population as percentage of urban population	Reporting level(2) Country(35) Year(7)	35	1990	2009
+Millennium Development Goals > Gender in Education, Employment & Politics (MDG 3)	005_en_MDG_G3T3A_r.px	Gender (Target 3A): gender parity index in education, share women wage employment in non-agricultural sector, seats held by women in national parliament	Reporting level(2) Indicator(5) Country(35) Year(25)	35	1990	2014
+Millennium Development Goals > HIV/AIDS, Malaria and Tuberculosis (MDG 6)	009_en_MDG_G6T6A_r.px	HIV/AIDS (Target 6A): HIV prevalence and incidence, AIDS deaths, Condom use, knowledge of HIV/AIDS	Reporting level(2) Indicator(11) Country(35) Year(23)	35	1990	2012
+Millennium Development Goals > HIV/AIDS, Malaria and Tuberculosis (MDG 6)	010_en_MDG_G6T6B_r.px	HIV/AIDS Treatment (Target6B): universal access to treatment for HIV/AIDS	Reporting level(2) Country(35) Year(13)	35	2000	2012
+Millennium Development Goals > HIV/AIDS, Malaria and Tuberculosis (MDG 6)	011_en_MDG_G6T6C_r.px	Malaria and Tuberculosis (Target 6C): malaria incidence and death rates, Tuberculosis incidence, prevalence and death rates, Tuberculosis treatment and detection (DOTS)	Reporting level(2) Indicator(7) Country(35) Year(24)	35	1980	2012
+Millennium Development Goals > Maternal and Reproductive Health (MDG 5)	007_en_MDG_G5T5A_r.px	Maternal Health (Target 5A): maternal mortality, births attended by skilled health personnel	Reporting level(2) Indicator(2) Country(35) Year(24)	35	1990	2013
+Millennium Development Goals > Maternal and Reproductive Health (MDG 5)	008_en_MDG_G5T5B_r.px	Reproductive Health (Target 5B): contraceptive use, antenatal care coverage, unmet need for family planning	Reporting level(2) Indicator(11) Country(35) Year(24)	35	1988	2012
+Millennium Development Goals > Official Development Aid & Technologies (MDG 8)	016_en_MDG_G8T8ABCD1_r.px	Provided Official Development Aid (ODA) (Target 8ABCD): net ODA, ODA to basic social services, ODA that is untied	Reporting level(2) Indicator(9) Country(28) Year(24)	28	1990	2013
+Millennium Development Goals > Official Development Aid & Technologies (MDG 8)	017_en_MDG_G8T8ABCD2_r.px	Received Official Development Aid (ODA) (Target 8ABCD): ODA received, debt servicing as % of exports	Reporting level(2) Indicator(3) Country(35) Year(23)	35	1990	2012
+Millennium Development Goals > Official Development Aid & Technologies (MDG 8)	021_en_MDG_G8T8F_r.px	New Technologies (Target 8F): telephone and mobile lines, internet users and personal computers	Reporting level(2) Indicator(4) Country(35) Year(24)	35	1990	2013
+Millennium Development Goals > Poverty, Employment and Hunger (MDG 1)	0011_en_MDG_G1T1A1_r.px	Poverty and Inequality (Target 1A): population living below $1.25, income poorest to richest quintile, poverty gap ratio	Reporting level(2) Indicator(6) Country(35) Year(35)	35	1963	2012
+Millennium Development Goals > Poverty, Employment and Hunger (MDG 1)	0012_en_MDG_G1T1A2_r.px	Population Living Below National Poverty Lines (Target 1A): population below $2.50, $4.30, relative, food basket and basic needs based poverty lines	Indicator(12) Country(35) Year(23)	35	1988	2013
+Millennium Development Goals > Poverty, Employment and Hunger (MDG 1)	002_en_MDG_G1T1B_r.px	Employment (Target 1B): employment to population ratio, own account and contributing family workers, growth rate of GDP per employed, youth unemployment	Reporting level(2) Indicator(24) Country(35) Year(24)	35	1990	2013
+Millennium Development Goals > Poverty, Employment and Hunger (MDG 1)	003_en_MDG_G1T1C_r.px	Hunger and undernourishment (Target 1C): children moderately and severely underweight, population undernourished	Reporting level(2) Indicator(3) Country(35) Year(23)	35	1990	2012
+Population and Gender > Crime and violence	001_en_GECVVictims_r.px	Victims of crime by type of crime and sex	Sex(3) Type of Crime(4) Measurement(2) Country(51) Year(25)	51	1980	2021
+Population and Gender > Crime and violence	ZZZ_en_GECr_ConvictedPerson_r.px	Convictions by age category and sex of offender	Age Category(3) Sex(3) Measurement(3) Country(52) Year(25)	52	1980	2021
+Population and Gender > Crime and violence	ZZZ_en_GECr_Convictions_r.px	Convictions by type of offence and sex of offender	Type of Conviction (9) Sex(3) Measurement(3) Country(52) Year(25)	52	1980	2021
+Population and Gender > Crime and violence	ZZZ_en_GECr_VictimHomicide_r.px	Victims of homicide by relationship of perpetrator to victim and sex	Relationship of perpetrator to victim(9) Sex(3) Measurement(3) Country(47) Year(25)	47	1980	2021
+Population and Gender > Crime and violence	ZZZ_en_GECV_PrisCitizenship_r.px	Prisoners by citizenship and sex	Citizenship(3) Sex(3) Measurement(3) Country(49) Year(26)	49	1980	2022
+Population and Gender > Education	001_en_GEECUppSecPupils_r.px	Upper and post secondary students by sex	Sex(3) Measurement(2) Country(56) Year(26)	56	1980-1981	2022-2023
+Population and Gender > Education	002_en_GEECNetEnrolRatio_r.px	Enrolment ratio at secondary level by sex	Sex(3) Measurement(2) Country(56) Year(24)	56	1980-1981	2020-2021
+Population and Gender > Education	003_en_GEECEduAttainmSPN_r.px	Educational attainment by level of education, age and sex	Level of Education(6) Age(3) Sex(3) Measurement(3) Country(56) Year(26)	56	1980	2022
+Population and Gender > Education	005_en_GEECGraduates_r.px	Graduates by type of programme and sex	Type of Programme(5) Sex(3) Measurement(3) Country(56) Year(26)	56	1980	2022
+Population and Gender > Education	006_en_GEECTertStud_r.px	Tertiary students by field of study (ISCED 1997), type of programme and sex	Field of Study(10) Type of Programme(6) Sex(3) Measurement(4) Country(56) Year(26)	56	1980-1981	2022-2023
+Population and Gender > Education	007_en_GEECTertStudISCEDF_r.px	Tertiary students by field of study (ISCED-F 2013) and sex	Field of Study(12) Sex(3) Measurement(3) Country(56) Year(12)	56	2012-2013	2023-2024
+Population and Gender > Education	008_en_GEECTeachers_r.px	Teachers by teaching level of education and sex	Level of Education(5) Sex(3) Measurement(3) Country(56) Year(26)	56	1980-1981	2021-2022
+Population and Gender > Education	ZZZ_en_GEED_LifeLongLearnin_r.px	Percentage of population in life-long learning by sex	Sex(3) Country(47) Year(25)	47	1995	2023
+Population and Gender > Fertility, families and households	01_en_GEFHTotLiveBirths_r.px	Total live births by sex	Sex(3) Measurement(2) Country(56) Year(28)	56	1980	2024
+Population and Gender > Fertility, families and households	02_en_GEFHAdoFertility_r.px	Adolescent fertility	Measurement(2) Country(56) Year(28)	56	1980	2024
+Population and Gender > Fertility, families and households	02_en_GEFHFertilityRate_r.px	Total fertility rate	Country(56) Year(28)	56	1980	2024
+Population and Gender > Fertility, families and households	04_en_GEFHAge1stChild_r.px	Mean age of women at birth of first child	Country(56) Year(28)	56	1980	2024
+Population and Gender > Fertility, families and households	051_en_GEFH_FirstMariages_r.px	First marriages by age and sex	Age(11) Sex(2) Measurement(2) Country(55) Year(26)	55	1980	2022
+Population and Gender > Fertility, families and households	052_en_GEFHAge1stMarige_r.px	Mean age at first marriage by sex	Sex(2) Country(56) Year(25)	56	1980	2021
+Population and Gender > Fertility, families and households	06_en_GEFHAbortions_r.px	Legal abortions	Measurement(2) Country(56) Year(27)	56	1980	2023
+Population and Gender > Fertility, families and households	07_en_GEFHOneParFam_r.px	One parent families and children by sex of parent	Sex of Parent(3) Measurement(5) Country(53) Year(26)	53	1980	2022
+Population and Gender > Fertility, families and households	08_en_GEFHPrivHouse_r.px	Private households by household type	Household Type(15) Measurement(2) Country(53) Year(26)	53	1980	2022
+Population and Gender > Fertility, families and households	09_en_GEFHOnePerHous_r.px	One person household by age and sex	Age(5) Sex(3) Measurement(3) Country(54) Year(26)	54	1980	2022
+Population and Gender > Health and mortality	001_en_GEHELifeExpect_r.px	Life expectancy at birth and at age 65 by sex	Age(2) Sex(3) Country(56) Year(28)	56	1980	2024
+Population and Gender > Health and mortality	003_en_GEHEInfantDeath_r.px	Infant mortality rate by sex	Sex(3) Country(56) Year(26)	56	1980	2022
+Population and Gender > Health and mortality	005_en_GEHESmokers_r.px	Smokers as a percentage of population by age and sex	Age(2) Sex(3) Country(56) Year(26)	56	1980	2022
+Population and Gender > Health and mortality	006_en_GEHEWeight_r.px	Population by level of Body Mass Index, ages and sex	Age(5) Sex(3) Weight(3) Country(56) Year(26)	56	1980	2022
+Population and Gender > Health and mortality	007_en_GEHECOD_r.px	Death rate by causes of death and sex	Causes of Death(17) Sex(3) Country(56) Year(24)	56	1980	2020
+Population and Gender > Migration (Clearing House)	011_en_MCH_Population_r.px	Table 1.1: Population by place of birth	Country(11) Age(18) Place of birth(4) Sex(3) Year(13)	11	2000	2018
+Population and Gender > Migration (Clearing House)	012_en_MCH_T1_2_PopCoB_r.px	Table 1.2: Foreign-born population by country of birth	Country(9) Age(18) Country of birth(243) Sex(3) Year(12)	9	2001	2018
+Population and Gender > Migration (Clearing House)	021_en_MCH_PopCitizenship_r.px	Table 2.1: Population by citizenship status	Country(10) Age(18) Citizenship(5) Sex(3) Year(13)	10	2000	2018
+Population and Gender > Migration (Clearing House)	022_en_MCH_T2_2_PopCoC_r.px	Table 2.2: Foreigners by country of citizenship	Country(9) Age(18) Country of citizenship(243) Sex(3) Year(13)	9	2000	2018
+Population and Gender > Migration (Clearing House)	032_en_MCH_T3_2_LTImm_r.px	Table 3: Long-term immigration by country of previous residence (flows)	Country(10) Age(18) Previous country of residence(253) Sex(3) Year(11)	10	2001	2018
+Population and Gender > Migration (Clearing House)	042_en_MCH_T4_2_LTEmig_r.px	Table 4: Long-term emigration by country of next residence (flows)	Country(11) Age(18) Country of next residence(253) Sex(3) Year(10)	11	2009	2018
+Population and Gender > Migration (Clearing House)	051_en_MCH_LT_Imm2_r.px	Table 5.1: Long-term immigration by citizenship status (flows)	Country(9) Citizenship(5) Sex(3) Year(11)	9	2001	2018
+Population and Gender > Migration (Clearing House)	052_en_MCH_T5_2_LTImm_r.px	Table 5.2: Long-term immigration of non-citizens by country of citizenship (flows)	Country(8) Country of citizenship(253) Sex(3) Year(11)	8	2001	2018
+Population and Gender > Migration (Clearing House)	061_en_MCH_LT_Emig2_r.px	Table 6.1: Long-term emigration by citizenship status (flows)	Country(10) Citizenship(5) Sex(3) Year(10)	10	2009	2018
+Population and Gender > Migration (Clearing House)	062_en_MCH_T6_2_LTEmiCoC_r.px	Table 6.2: Long-term emigration of non-citizens by country of citizenship (flows)	Country(9) Country of citizenship(253) Sex(3) Year(10)	9	2009	2018
+Population and Gender > Migration (Clearing House)	071_en_MCH_CitzenshipAcq_r.px	Table 7.1: Citizenship acquisition by status of recipient	Country(8) Status of receiver(4) Sex(3) Year(10)	8	2009	2018
+Population and Gender > Migration (Clearing House)	072_en_MCH_T_7_OrigCitAcq_r.px	Table 7.2: Citizenship acquisition by country of previous citizenship	Country(8) Country of previous citizenship(253) Sex(3) Year(10)	8	2009	2018
+Population and Gender > Migration (Clearing House)	081_en_MCH_ST_Imm_8_r.px	Table 8.1: Short-term immigration by citizenship status and purpose of moving to current country (flows)	Country(4) Citizenship(5) Purpose of moving(8) Sex(3) Year(10)	4	2009	2018
+Population and Gender > Migration (Clearing House)	082_en_MCH_T8_2_STImm_r.px	Table 8.2: Short-term immigration by country of citizenship and purpose of moving to current country (flows)	Country(4) Country of citizenship(243) Purpose of moving(8) Sex(3) Year(10)	4	2009	2018
+Population and Gender > Overview tables	001_en_GEOVFirst_r.px	Gender and demographic overview	Sex(3) Indicator(18) Country(56) Year(30)	56	1980	2026
+Population and Gender > Population	001_en_GEPOAGESEX_REG_r.px	Population, 5-year age groups, by sex	Age(29) Sex(3) Country(64) Year(28)	64	1980	2024
+Population and Gender > Population	004_en_GEPOPop80S_r.px	Sex ratio for population aged 80 and over	Country(56) Year(28)	56	1980	2024
+Population and Gender > Population	005_en_GEPOPop5YearMaSta_r.px	Population, 5-year age groups, by marital status and sex	Marital Status(8) Age(24) Sex(3) Country(56) Year(27)	56	1980	2023
+Population and Gender > Public life and decision making	001_en_GEPDNatParliament_r.px	Members of national parliament by sex	Sex(3) Measurement(2) Country(56) Year(30)	56	1980	2026
+Population and Gender > Public life and decision making	002_en_GEPDGovMin_r.px	Government ministers by sex	Sex(3) Measurement(2) Country(56) Year(27)	56	1980	2023
+Population and Gender > Public life and decision making	0021_en_GEDPL_CoreMinistries_r.px	Core ministers by sex	Sex(3) Measurement(2) Country(51) Year(27)	51	1980	2023
+Population and Gender > Public life and decision making	003_en_GEPDSeniorServ_r.px	Senior level civil servants by sex	Sex(3) Measurement(2) Country(35) Year(26)	35	1980	2022
+Population and Gender > Public life and decision making	0035_en_SDLocalGov_r.px	Seats held in local government	Sex(3) Measurement(2) Country(56) Year(27)	56	1980	2023
+Population and Gender > Public life and decision making	004_en_GEPDMuniCoun_r.px	Members of municipal councils or other local area governing bodies by sex	Sex(3) Measurement(2) Country(37) Year(19)	37	1980	2015
+Population and Gender > Public life and decision making	005_en_GEPDJudges_r.px	Judges by sex	Sex(3) Measurement(2) Country(51) Year(26)	51	1980	2022
+Population and Gender > Public life and decision making	006_en_GEPDBankBoard_r.px	Central bank board members by sex	Sex(3) Measurement(2) Country(49) Year(26)	49	1980	2022
+Population and Gender > Public life and decision making	008_en_GEPDJournalists_r.px	Journalists by sex	Sex(3) Measurement(2) Country(32) Year(27)	32	1980	2023
+Population and Gender > Public life and decision making	909_en_GEPDHeadsUni_r.px	Heads of universities by sex	Sex(3) Measurement(2) Country(41) Year(27)	41	1980	2023
+Population and Gender > Public life and decision making	z_en_GEPD_ConstitCourtMem_r.px	Constitutional court members by sex	Sex(3) Members of Constitutional Court(2) Country(41) Year(26)	41	1980	2022
+Population and Gender > Public life and decision making	ZZZ_en_GEPDAmbassadors_r.px	Ambassadors by sex	Sex(3) Measurement(2) Country(43) Year(27)	43	1980	2023
+Population and Gender > Public life and decision making	ZZZ_en_GEPL_PoliceStaff_r.px	Police staff by sex	Sex(3) Measurement(2) Country(44) Year(26)	44	1980	2022
+Population and Gender > Science and ICT	01_en_GEICT_ComputerUse_r.px	Computer use by age and sex	Age(4) Sex(3) Country(49) Year(25)	49	1990	2022
+Population and Gender > Science and ICT	02_en_GEICT_InternetUse_r.px	Internet use by age and sex	Age(4) Sex(3) Variable(2) Country(49) Year(28)	49	1990	2025
+Population and Gender > Science and ICT	03_en_GEICT_Researchers_r.px	Researchers by sector of research and sex	Sector of research(5) Sex(3) Measurement(3) Country(50) Year(28)	50	1980	2024
+Population and Gender > Work and economy	001_en_GEWELabourActivity_r.px	Labour force by age and sex	Age(14) Sex(3) Measurement(3) Country(56) Year(29)	56	1980	2025
+Population and Gender > Work and economy	002_en_GEWEEmploySPN_r.px	Employment by sector of activity and sex	Sector of Activity(5) Sex(3) Measurement(3) Country(56) Year(28)	56	1980	2024
+Population and Gender > Work and economy	003_en_GEWEEmplSectSPN_r.px	Employment by public and private sector, sex	Public and Private Sector(4) Sex(3) Measurement(3) Country(56) Year(27)	56	1980	2023
+Population and Gender > Work and economy	004_en_GEWEEmpISCO88SPN_r.px	Employment by occupation and sex	Occupation(12) Sex(3) Measurement(3) Country(56) Year(29)	56	1980	2025
+Population and Gender > Work and economy	006_en_GEWE_ISCED_ISCO_r.px	Employment by level of education, occupation and sex	Level of Education(5) Occupation(12) Sex(3) Measurement(3) Country(50) Year(27)	50	1990	2024
+Population and Gender > Work and economy	007_en_GEWEEmployStatus_r.px	Employment by status in employment and sex	Status in Employment(7) Sex(3) Measurement(3) Country(56) Year(28)	56	1980	2024
+Population and Gender > Work and economy	008_en_GEWE_FPTEmployment_r.px	Employment by full-time and part-time status, sex	Full-Time and Part-Time Status(3) Sex(3) Measurement(3) Country(52) Year(29)	52	1980	2025
+Population and Gender > Work and economy	009_en_GEWE_EmpRatAYC_r.px	Employment rate of persons aged 25-49 by age of youngest child and sex	Age of Youngest Child(6) Sex(3) Country(39) Year(26)	39	1980	2022
+Population and Gender > Work and economy	010_en_GEWE_EmpRatByNumChil_r.px	Employment rate of persons aged 25-49 by sex and number of children under 17	Number of Children Aged Under 17(5) Sex(3) Country(42) Year(26)	42	1980	2022
+Population and Gender > Work and economy	011_en_GEWE_EmpRateMarStat_r.px	Employment rate by marital status and sex	Age(6) Marital Status(5) Sex(3) Country(51) Year(26)	51	1980	2022
+Population and Gender > Work and economy	012_en_GEWEUnEmploy_r.px	Unemployment by age and sex	Age(9) Sex(3) Measurement(2) Country(56) Year(29)	56	1980	2025
+Population and Gender > Work and economy	013_en_GEWEUnEmpYouth_r.px	Youth unemployment by sex	Sex(3) Measurement(2) Country(56) Year(29)	56	1980	2025
+Population and Gender > Work and economy	014_en_GEWEUnEmployLong_r.px	Long term unemployment by sex	Sex(3) Measurement(2) Country(56) Year(28)	56	1980	2024
+Population and Gender > Work and economy	015_en_GEWE_Inactivity_r.px	Economically Inactive population by reason for inactivity, age and sex	Age(6) Reason for Inactivity(5) Sex(3) Measurement(3) Country(53) Year(26)	53	1980	2022
+Population and Gender > Work and economy	017_en_GE_GPG2_r.px	Gender pay gap	Reference Period(2) Country(51) Year(28)	51	1980	2024
+Population and Gender > Work and economy	018_en_GE_GPG_Edu_r.px	Gender pay gap by level of education	Reference Period(2) Level of Education(3) Country(37) Year(23)	37	2000	2022
+Population and Gender > Work-life balance	00104_en_GELB_Working_Couples_r.px	Couples with both partners aged 25-49 by working pattern and age of youngest child	Working Pattern(10) Age of Youngest Child(4) Couples(2) Country(27) Year(26)	27	1980	2022
+Population and Gender > Work-life balance	0101_en_GEWE_EmpRatAYC_r.px	Employment rate of persons aged 25-49 by age of youngest child and sex	Age of Youngest Child(6) Sex(3) Country(39) Year(26)	39	1980	2022
+Population and Gender > Work-life balance	0102_en_GEWE_EmpRatByNumChil_r.px	Employment rate of persons aged 25-49 by sex and number of children under 17	Number of Children Aged Under 17(5) Sex(3) Country(42) Year(26)	42	1980	2022
+Population and Gender > Work-life balance	0103_en_GEWE_EmpRateMarStat_r.px	Employment rate by marital status and sex	Age(6) Marital Status(5) Sex(3) Country(51) Year(26)	51	1980	2022
+Population and Gender > Work-life balance	0104_en_GELB_Child_CARE_r.px	Child care enrolment and availability rates	Indicator(2) Country(48) Year(26)	48	1980-1981	2022-2023
+Population and Gender > Work-life balance	0105_en_GELB_TimeUseStructur_r.px	Time use by activity and sex	Activity(10) Sex(3) Country(36) Year(24)	36	1980	2021
+Population and Gender > Work-life balance	0106_en_GELB_TUStruct_Empl_r.px	Time use of employed persons by activity and sex	Activity(10) Sex(3) Country(35) Year(24)	35	1980	2021
+Population and Gender > Work-life balance	0107_en_GELB_DomActiv_r.px	Time spent on domestic activities by sex	Activity(9) Sex(3) Country(35) Year(24)	35	1980	2021
+Population and Gender > Work-life balance	0108_en_GELB_FREETIMEUSE_r.px	Time spent on free time activities by sex	Activity(8) Sex(3) Country(35) Year(24)	35	1980	2021
+Sustainable Development Goals > Global Indicators	001_en_sdGoal1_r.px	Goal 1: No poverty	Indicator(23) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	002_en_sdGoal2_r.px	Goal 2: Zero hunger	Indicator(9) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	003_en_sdGoal3_r.px	Goal 3: Good health and well-being	Indicator(38) Country(56) Year(32)	56	1993	2024
+Sustainable Development Goals > Global Indicators	004_en_sdGoal4_r.px	Goal 4: Quality education	Indicator(34) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	005_en_sdGoal5_r.px	Goal 5: Gender equality	Indicator(5) Country(56) Year(30)	56	1980	2026
+Sustainable Development Goals > Global Indicators	006_en_sdGoal6_r.px	Goal 6: Clean water and sanitation	Indicator(20) Country(56) Year(25)	56	2000	2024
+Sustainable Development Goals > Global Indicators	007_en_sdGoal7_r.px	Goal 7: Affordable and clean energy	Indicator(5) Country(56) Year(35)	56	1990	2024
+Sustainable Development Goals > Global Indicators	008_en_sdGoal8_r.px	Goal 8: Decent work and economic growth	Indicator(25) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	009_en_sdGoal9_r.px	Goal 9: Industry, innovation and infrastructure	Indicator(20) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	010_en_sdGoal10_r.px	Goal 10: Reduced inequalities	Indicator(12) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	011_en_sdGoal11_r.px	Goal 11: Sustainable cities and communities	Indicator(7) Country(56) Year(24)	56	2000	2025
+Sustainable Development Goals > Global Indicators	012_en_sdGoal12_r.px	Goal 12: Responsible consumption and production	Indicator(10) Country(56) Year(27)	56	2000	2026
+Sustainable Development Goals > Global Indicators	013_en_sdGoal13_r.px	Goal 13: Climate action	Indicator(5) Country(56) Year(21)	56	2005	2025
+Sustainable Development Goals > Global Indicators	014_en_sdGoal14_r.px	Goal 14: Life below water	Indicator(3) Country(56) Year(27)	56	2000	2026
+Sustainable Development Goals > Global Indicators	015_en_sdGoal15_r.px	Goal 15: Life on land	Indicator(13) Country(56) Year(46)	56	1980	2025
+Sustainable Development Goals > Global Indicators	016_en_sdGoal16_r.px	Goal 16: Peace and justice	Indicator(17) Country(56) Year(26)	56	2000	2025
+Sustainable Development Goals > Global Indicators	017_en_sdGoal17_r.px	Goal 17: Partnerships for the goals	Indicator(13) Country(56) Year(26)	56	2000	2025
+Thematic Overviews > Overview tables	01_en_GEOVFirst_r.px	Gender and demographic overview	Sex(3) Indicator(18) Country(56) Year(30)	56	1980	2026
+Thematic Overviews > Overview tables	02_en_MECCOverviewY_r.px	Macroeconomic Overview, in Internationally Comparable Prices, by Country/Region and Year	Indicator(12) Country(64) Year(36)	64	1990	2025
+Thematic Overviews > Overview tables	04_en_TRAccTotal_r.px	Road traffic fatalities and injuries, rate per million inhabitants and rate per 100 000 passenger cars	Topic(2) Measurements(3) Country(56) Year(32)	56	1993	2024
+Transport > Inland waterway traffic	01_en_TRInlWaterTonKm_r.px	Carriage of goods by inland waterways by type of transport or type of propulsion	Type of transport(7) Topic(2) Country(33) Year(45)	33	1980	2024
+Transport > Inland waterway vessels	01_en_TRInlFleetSPAge_r.px	Number, carrying capacity (tonnes), and power (kW) of self-propelled vessels in service at 31 December by year of construction	Age of Vessel(4) Topic(3) Country(33) Year(35)	33	1990	2024
+Transport > Inland waterway vessels	02_en_TRInlFleetSP_r.px	Number, carrying capacity (tonnes), and power (kW) of self propelled vessels in service at 31 December by carrying capacity	Topic(3) Carrying Capacity(4) Country(33) Year(35)	33	1990	2024
+Transport > Inland waterway vessels	04_en_TRInlFleetDumb_r.px	Number and carrying capacity (tonnes) of dumb and pushed vessels in service at 31 December by carrying capacity	Topic(2) Carrying Capacity(4) Country(33) Year(35)	33	1990	2024
+Transport > Inland waterway vessels	04_en_TRInlFleetTugAge_REV_r.px	Number and power (kW) of tugs and pushers in service at 31 December by year of construction	Age of Vessel(4) Topic(2) Country(33) Year(32)	33	1993	2024
+Transport > Inland waterway vessels	10_en_TRInlFleetConsYNb_r.px	Number, carrying capacity (tonnes), and power (kW) of self-propelled vessels in service at 31 December by year of construction (up to 2012 - discontinued)	Topic(3) Age of Vessel(6) Country(33) Year(20)	33	1993	2012
+Transport > Inland waterway vessels	11_en_TRInlFleetDumbAge_r.px	Number and carrying capacity (tonnes) of dumb and pushed vessels in service at 31 December by year of construction (up to 2012 - discontinued)	Age of Vessel(6) Topic(2) Country(33) Year(20)	33	1993	2012
+Transport > Inland waterway vessels	12_en_TRInlFleetTugAge_r.px	Number and power (kW) of tugs and pushers in service at 31 December by year of construction (up to 2012 - discontinued)	Age of Vessel(6) Topic(2) Country(33) Year(20)	33	1993	2012
+Transport > Oil pipeline transport	ZZZ_en_TRPipelineGoods_r.px	Carriage of oil through pipelines (tonnes and tonne-kms)	Topic(2) Type of Pipeline(2) Transport type(5) Country(53) Year(41)	53	1984	2024
+Transport > Railway employment (discontinued)	ZZZ_en_TREmployrail_r.px	Employment in Principal Railway Entreprise(s) by gender or type of employment	Gender or Type of Employment(6) Country(53) Year(25)	53	1991	2015
+Transport > Railway safety (discontinued)	01_en_TRRAILACC2_r.px	Rail fatalities and injuries, by victim type and nature of accident (discontinued)	Nature of Accident(7) Variable(3) Victims(4) Country(56) Year(13)	56	2006	2018
+Transport > Railway safety (discontinued)	ZZZ_en_TRRailLCacc_r.px	Accidents at level crossings by type of level crossing (discontinued)	Type(7) Accident type(3) Country(56) Year(13)	56	2006	2018
+Transport > Railway safety (discontinued)	ZZZ_en_TRRailLCvic_r.px	Level crossing fatalities and serious injuries, by victim type (discontinued)	Victims(7) Topic(2) Country(56) Year(13)	56	2006	2018
+Transport > Railway traffic	01_en_TRrailpassengers_r.px	Passenger rail transport by type of transport	Passengers(3) Topic(2) Country(53) Year(47)	53	1970	2024
+Transport > Railway traffic	02_en_TRrailtonneskm_r.px	Carriage of goods by rail by type of transport	Type of transport(5) Topic(2) Country(53) Year(47)	53	1970	2024
+Transport > Railway traffic	03_en_TRRailMvmt_r.px	Train movements (1000 train km) by type of equipment	Type of rail equipment(6) Train type(4) Country(53) Year(39)	53	1970	2024
+Transport > Railway vehicles	01_en_TRRailLocomotivNb_r.px	Number and power (1000 kW) of locomotives at 31 December by locomotive type	Type of Locomotives (4) Topic(2) Country(53) Year(48)	53	1970	2024
+Transport > Railway vehicles	02_en_TRRailRailcar_r.px	Number and power (1000 kW) of railcars at 31 December by railcar type	Topic(2) Type of railcar(3) Country(53) Year(48)	53	1970	2024
+Transport > Railway vehicles	03_en_TRRailPassenger_r.px	Number of passenger carriages and seats and berths at 31 December by type of carriage	Topic(2) Type of vehicle(3) Country(53) Year(47)	53	1970	2024
+Transport > Railway vehicles	04_en_TRRailWagon_r.px	Number and capacity of wagons at 31 December by type of wagon	Topic(2) Type of wagon(6) Country(53) Year(48)	53	1970	2024
+Transport > Railway vehicles	05_en_TRRailVan_r.px	Number of vans at 31 December	Type of rail equipment(1) Country(53) Year(46)	53	1979	2024
+Transport > Road safety	01_en_TRAccTotal_r.px	Road traffic fatalities and injuries, rate per million inhabitants and rate per 100 000 passenger cars	Topic(2) Measurements(3) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	02_en_TRAcclocation_r.px	Road traffic fatalities, injuries and accidents involving injury by location	Variable(3) Location(4) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	03_en_TRAccmonth_r.px	Road traffic fatalities, injuries and accidents involving injury by month	Variable(3) Month(13) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	04_en_TRAccbyday_r.px	Road traffic fatalities, injuries and accidents involving injury by day of week	Variable(3) Day of Week(5) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	04_en_TRAcclight_r.px	Road traffic fatalities, injuries and accidents involving injury by light condition	Variable(3) Light Condition(4) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	06_en_TRAccbyroadconditi_r.px	Road traffic fatalities, injuries and accidents involving injury by road condition	Variable(3) Road Condition(3) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	07_en_TRAccNature_r.px	Road traffic fatalities, injuries and accidents involving injury by nature of accident	Variable(3) Nature of Accident(8) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	08_en_TRAccNatureBuil_r.px	Road traffic fatalities, injuries and accidents involving injury in built-up areas by nature of accident	Variable(3) Nature of Accident(8) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	09_en_TRAccKTGory_r.px	Fatalities and injuries in road traffic accidents by category of user and age group	Category of User(17) Age Group(10) Variable(2) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	10_en_TRAccGen_r.px	Fatalities and injuries in road traffic accidents by gender, category of user and age group	Age Group(10) Variable(2) Sex(3) Victims(2) Country(56) Year(32)	56	1993	2024
+Transport > Road safety	11_en_TRAccalcoholnb_r.px	Road traffic fatalities, injuries and accidents involving injury where one or more person was under the influence of alcohol	Accidents(3) Country(56) Year(17)	56	1993	2009
+Transport > Road safety	12_en_TRAccAlcPedDr_r.px	Pedestrians and drivers, under the influence of alcohol, involved in accidents by category of user	Pedestrians or Category of Drivers(8) Country(56) Year(17)	56	1993	2009
+Transport > Road safety	13_en_TRAccSever_r.px	Severity of road traffic accidents involving injury (fatalities per 1000 accidents)	Country(56) Year(32)	56	1993	2024
+Transport > Road traffic	01_en_TRRoadVehKm_r.px	Motor vehicle movements on national territory by road (vehicle-kms)	Type of Vehicle(5) Topic(2) Country(56) Year(32)	56	1993	2024
+Transport > Road traffic	03_en_TRRoadGoodsTkm_r.px	Goods transport on national territory by road by type of goods transport	Type of goods transport(8) Topic(2) Country(56) Year(45)	56	1980	2024
+Transport > Road traffic	04_en_TRRoadPassgKm_r.px	Passenger transport on national territory by road by vehicles registered in the reporting country (passenger-kms)	Passenger-kilometres (millions)(4) Country(56) Year(32)	56	1993	2024
+Transport > Road traffic	05_en_TRBUSCOACH_r.px	Bus and coach statistics	Topic(5) Type of activity(11) Country(56) Year(16)	56	2009	2024
+Transport > Road vehicle fleet	01_en_TRRoadTypVehR_r.px	Passenger road vehicle fleet and rate per thousand inhabitants at 31 December by vehicle category	Measurement(2) Vehicle category(6) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	02_en_TRRoadtypVeh_r.px	Road vehicle fleet at 31 December by vehicle category and age group	Age Group(6) Type of Vehicle(5) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	03_en_TRRoadFuelFlt_r.px	Road vehicle fleet at 31 December by vehicle category and fuel type	Fuel Type(18) Type of Vehicle(5) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	04_en_TRRoadGoodsVehF_r.px	Goods road vehicle fleet at 31 December by vehicle category and permissible maximum gross weight group	Vehicle Category(16) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	07_en_TRRoadNewVeh_r.px	New road vehicle registrations by vehicle category	Type of Vehicle(10) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	08_en_TRRoadNewVehF_r.px	New road vehicle registrations by vehicle category and fuel type	Fuel Type(18) Type of Vehicle(5) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	09_en_TRRoadNewPasVh_r.px	New passenger car registrations by fuel type (detailed)	Fuel Type(14) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	10_en_TRRoadNewGoodsVhF_r.px	New road goods vehicles registered by vehicle category and permissible maximum gross weight group	Vehicle Category(16) Country(56) Year(32)	56	1993	2024
+Transport > Road vehicle fleet	15_en_TRRoadGoodsVeh_r.px	Goods road vehicle fleet and load capacity at 31 December by vehicle category and load capacity group (up to 2012 - discontinued)	Vehicle Category(20) Topic(2) Country(56) Year(20)	56	1993	2012
+Transport > Road vehicle fleet	16_en_TRRoadNewGoodsVh_r.px	New goods road vehicle registrations and load capacities by vehicle category and load capacity group (up to 2012 - discontinued)	Vehicle Category(20) Topic(2) Country(56) Year(20)	56	1993	2012
+Transport > Transport infrastructure	ZZZ_en_TRInfraPipe_r.px	Pipelines operated by length and carrying capacity	Topic(2) Country(56) Year(32)	56	1993	2024
+Transport > Transport infrastructure	ZZZ_en_TRInfraRoad_r.px	Total length of roads at 31 December by type of road	Type of Road(6) Country(56) Year(32)	56	1993	2024
+Transport > Transport infrastructure	ZZZ_en_TRInfrIWW_r.px	Total length of inland waterways operated at 31 December	Type of inland waterway(3) Country(33) Year(45)	33	1980	2024
+Transport > Transport infrastructure	ZZZ_en_TRRailIfra2_r.px	Total length of railway lines operated at 31 December by track gauge	Track Gauge(4) Country(53) Year(32)	53	1993	2024
+Transport > Transport infrastructure	ZZZ_en_TRRailInfra1_r.px	Total length of railway lines operated at 31 December by type of track	Type of Track(3) Country(53) Year(32)	53	1993	2024
+Transport > Transport infrastructure	ZZZ_en_TRRailInfraIII_r.px	Total length of railway lines operated at 31 December by nature of traffic	Nature of Traffic(4) Country(53) Year(32)	53	1993	2024
+Transport > Transport infrastructure	ZZZ_en_TRRailLC_r.px	Number of level crossings by type of level crossing (discontinued)	Type(7) Country(56) Year(15)	56	2006	2020
+Transport > Transport infrastructure	ZZZ_en_TRRWDensity_r.px	Railway density, total length of lines operated (km) per 1000 km2	Country(53) Year(26)	53	1995	2024

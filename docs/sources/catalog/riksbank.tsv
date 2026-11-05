@@ -1,0 +1,118 @@
+series	group	name	first	last
+SECBREPOEFF	Riksbank key interest rates	Policy rate	1994-06-01	2026-11-05
+SECBDEPOEFF	Riksbank key interest rates	Deposit rate	1994-06-01	2026-11-05
+SECBLENDEFF	Riksbank key interest rates	Lending rate	1994-06-01	2026-11-05
+SECBLIKVEFF	Riksbank key interest rates	Liquidity facility rate	2022-06-08	2026-11-05
+SECBMARGEFF	Riksbank key interest rates	Marginal rate	1987-01-30	1994-05-31
+SECBREFEFF	Other Riksbank interest rates	Reference rate	2002-07-01	2026-11-05
+SECBDISCEFF	Other Riksbank interest rates	Discount rate	1907-11-11	2002-06-28
+SEDPT_NSTIBORDELAYC	STIBOR (Stockholm interbank offered rate)	STIBOR T/N (Tomorrow/Next). As of May 2020, the calculation and publishing of STIBOR is conducted by Swedish Financial Benchmark Facility (SFBF). STIBOR rates and more information are available on SFBF’s homepage.	1998-06-30	2020-07-03
+SEDP1WSTIBORDELAYC	STIBOR (Stockholm interbank offered rate)	STIBOR maturity 1 week. As of May 2020, the calculation and publishing of STIBOR is conducted by Swedish Financial Benchmark Facility (SFBF). STIBOR rates and more information are available on SFBF’s homepage.	1987-09-28	2020-07-03
+SEDP1MSTIBORDELAYC	STIBOR (Stockholm interbank offered rate)	STIBOR maturity 1 month. As of May 2020, the calculation and publishing of STIBOR is conducted by Swedish Financial Benchmark Facility (SFBF). STIBOR rates and more information are available on SFBF’s homepage.	1987-01-02	2020-07-03
+SEDP2MSTIBORDELAYC	STIBOR (Stockholm interbank offered rate)	STIBOR maturity 2 month. As of May 2020, the calculation and publishing of STIBOR is conducted by Swedish Financial Benchmark Facility (SFBF). STIBOR rates and more information are available on SFBF’s homepage.	1994-09-06	2020-07-03
+SEDP3MSTIBORDELAYC	STIBOR (Stockholm interbank offered rate)	STIBOR  maturity 3 months. As of May 2020, the calculation and publishing of STIBOR is conducted by Swedish Financial Benchmark Facility (SFBF). STIBOR rates and more information are available on SFBF’s homepage.	1987-01-02	2020-07-03
+SEDP6MSTIBORDELAYC	STIBOR (Stockholm interbank offered rate)	STIBOR  maturity 6  months. As of May 2020, the calculation and publishing of STIBOR is conducted by Swedish Financial Benchmark Facility (SFBF). STIBOR rates and more information are available on SFBF’s homepage.	1987-01-02	2020-07-03
+SEDP9MSTIBOR	STIBOR (Stockholm interbank offered rate)	STIBOR maturity 9  months	1994-09-06	2013-03-01
+SEDP12MSTIBOR	STIBOR (Stockholm interbank offered rate)	STIBOR maturity 12  months	1994-09-06	2013-03-01
+SETB1MBENCHC	Swedish Treasury Bills (SE TB)	Swedish Treasury Bill maturity 1 month	1983-01-03	2026-11-04
+SETB3MBENCH	Swedish Treasury Bills (SE TB)	Swedish Treasury Bill maturity 3 months	1983-01-03	2026-11-04
+SETB6MBENCH	Swedish Treasury Bills (SE TB)	Swedish Treasury Bill maturity 6  months	1984-01-02	2026-11-04
+SETB12MBENCH	Swedish Treasury Bills (SE TB)	Swedish Treasury Bill maturity 12  months	1984-01-02	2010-10-06
+SEGVB2YC	Swedish Government Bonds (SE GVB)	Swedish Government Bond, maturity 2 years	1987-01-07	2026-11-04
+SEGVB5YC	Swedish Government Bonds (SE GVB)	Swedish Government Bond, maturity 5 years	1985-01-02	2026-11-04
+SEGVB7YC	Swedish Government Bonds (SE GVB)	Swedish Government Bond, maturity 7 years	1987-01-02	2026-11-04
+SEGVB10YC	Swedish Government Bonds (SE GVB)	Swedish Government Bond, maturity 10 years	1987-01-02	2026-11-04
+SETB3MSTFIX	Swedish Fixing Rates (SE STFIX)	Swedish Fixing rate maturity 3 months	1991-08-13	2019-12-30
+SETB6MSTFIX	Swedish Fixing Rates (SE STFIX)	Swedish Fixing rate maturity 6 months	1990-07-02	2019-12-30
+SEGVB5YSTFIXC	Swedish Fixing Rates (SE STFIX)	Swedish Fixing rate maturity 5 years	1990-07-02	2019-12-30
+SEMB2YCACOMB	Swedish Mortgage Bonds (SE MB)	Swedish Mortgage Bond, maturity 2 years	1994-01-03	2026-11-04
+SEMB5YCACOMB	Swedish Mortgage Bonds (SE MB)	Swedish Mortgage Bond, maturity 5 years	1986-06-16	2026-11-04
+SECP3MK1FIX	Swedish Commercial Paper (SE CP)	Swedish Corporate certificate (CP) maturity 3 months	1989-06-01	2005-10-06
+SECP6MK1FIX	Swedish Commercial Paper (SE CP)	Swedish Corporate certificate (CP) maturity 6 months	1991-03-14	2005-10-03
+SEKTCW92	Swedish TCW index	Swedish TCW-index	1981-09-21	2021-06-30
+EUDP3MUSD	Euro Market Rates, maturity 3 Months 	Euro market rate USA maturity, 3 months	1979-11-28	2026-11-04
+EUDP3MJPY	Euro Market Rates, maturity 3 Months 	Euro market rate Japan, maturity 3 months	1979-11-29	2026-11-04
+EUDP3MGBP	Euro Market Rates, maturity 3 Months 	Euro market rate United Kingdom, maturity 3 months	1979-12-19	2026-11-04
+EUDP3MEUR	Euro Market Rates, maturity 3 Months 	Euro market rate EUR, maturity 3 months	1999-01-04	2026-11-04
+EUDP3MNOK	Euro Market Rates, maturity 3 Months 	Euro market rate Norway, maturity 3 months	1981-11-12	2026-11-04
+EUDP3MDKK	Euro Market Rates, maturity 3 Months 	Euro market rate Denmark, maturity 3 months	1981-11-12	2026-11-04
+EUDP6MUSD	Euro Market Rates, maturity 6 Months	Euro market rate USA, maturity 6 months	1979-11-28	2026-11-04
+EUDP6MJPY	Euro Market Rates, maturity 6 Months	Euro market rate Japan, maturity 6 months	1979-11-29	2026-11-04
+EUDP6MGBP	Euro Market Rates, maturity 6 Months	Euro market rate United Kingdom, maturity 6 months	1979-11-28	2026-11-04
+EUDP6MEUR	Euro Market Rates, maturity 6 Months	Euro market rate EUR, maturity 6 months	1999-01-04	2026-11-04
+EUDP6MNOK	Euro Market Rates, maturity 6 Months	Euro market rate Norway, maturity 6 months	1981-11-12	2026-11-04
+EUDP6MDKK	Euro Market Rates, maturity 6 Months	Euro market rate Denmark, maturity 6 months	1981-11-12	2026-11-04
+USGVB5Y	International Government Bonds, maturity 5 years	Government Bond USA, maturity 5 years	1987-02-02	2026-11-04
+JPGVB5Y	International Government Bonds, maturity 5 years	Government Bond Japan, maturity 5 years	1987-03-23	2026-11-04
+DEGVB5Y	International Government Bonds, maturity 5 years	Government Bond Germany, maturity 5 years	1987-02-09	2026-11-04
+NLGVB5Y	International Government Bonds, maturity 5 years	Government Bond Dutchland, maturity 5 years	1987-02-09	2026-11-04
+FRGVB5Y	International Government Bonds, maturity 5 years	Government Bond France, maturity 5 years	1988-02-08	2026-11-04
+GBGVB5Y	International Government Bonds, maturity 5 years	Government Bond United Kingdom, maturity 5 years	1987-01-02	2026-11-04
+EMGVB5Y	International Government Bonds, maturity 5 years	Government Bond EUR, maturity 5 years	1999-01-04	2026-11-04
+USGVB10Y	International Government Bonds, maturity 10 years	Government Bond USA, maturity 10 years	1991-01-02	2026-11-04
+JPGVB10Y	International Government Bonds, maturity 10 years	Government Bond Japan, maturity 10 years	1987-01-05	2026-11-04
+DEGVB10Y	International Government Bonds, maturity 10 years	Government Bond Germany, maturity 10 years	1987-02-09	2026-11-04
+NLGVB10Y	International Government Bonds, maturity 10 years	Government Bond Dutchland, maturity 10 years	1987-02-09	2026-11-04
+FRGVB10Y	International Government Bonds, maturity 10 years	Government Bond France, maturity 10 years	1988-02-08	2026-11-04
+GBGVB10Y	International Government Bonds, maturity 10 years	Government Bond United Kingdom, maturity 10 years	1987-01-02	2026-11-04
+EMGVB10Y	International Government Bonds, maturity 10 years	Government Bond EUR, maturity 10 years	1999-01-04	2026-11-04
+NOGVB10Y	International Government Bonds, maturity 10 years	Government Bond Norway, maturity 10 years	1990-05-31	2026-11-04
+DKGVB10Y	International Government Bonds, maturity 10 years	Government Bond Denmark, maturity 10 years	1982-01-04	2026-11-04
+FIGVB10Y	International Government Bonds, maturity 10 years	Government Bond Finland, maturity 10 years	1990-04-02	2026-11-04
+SEKETT	Currencies against Swedish kronor	SEK Sweden, kronor	1900-01-02	2026-11-05
+SEKATSPMI	Currencies against Swedish kronor	ATS Austria, shilling	1993-01-04	2002-02-28
+SEKAUDPMI	Currencies against Swedish kronor	AUD Australia, dollar	1993-01-04	2026-11-04
+SEKBEFPMI	Currencies against Swedish kronor	BEF Belgium, franc	1993-01-04	2002-02-28
+SEKBGNPMI	Currencies against Swedish kronor	BGN, Bulgarian lev	2023-11-20	2025-12-30
+SEKBRLPMI	Currencies against Swedish kronor	BRL Brazil, real	2005-09-06	2026-11-04
+SEKCADPMI	Currencies against Swedish kronor	CAD Canada, dollar	1993-01-04	2026-11-04
+SEKCHFPMI	Currencies against Swedish kronor	CHF Switzerland, francs	1993-01-04	2026-11-04
+SEKCNYPMI	Currencies against Swedish kronor	CNY China, yuan renminbi	1994-03-01	2026-11-04
+SEKCYPPMI	Currencies against Swedish kronor	CYP Cyprus, pound	1998-01-02	2007-12-28
+SEKCZKPMI	Currencies against Swedish kronor	CZK Czech Republic, koruna	1998-01-02	2026-11-04
+SEKDEMPMI	Currencies against Swedish kronor	DEM Germany, mark	1993-01-04	2002-02-28
+SEKDKKPMI	Currencies against Swedish kronor	DKK Denmark, krone	1993-01-04	2026-11-04
+SEKEEKPMI	Currencies against Swedish kronor	EEK Estonia, kroon	1998-01-02	2010-12-30
+SEKESPPMI	Currencies against Swedish kronor	ESP Spain, pesetas	1993-01-04	2002-02-28
+SEKEURPMI	Currencies against Swedish kronor	EUR Euroland, euro	1993-01-04	2026-11-04
+SEKFIMPMI	Currencies against Swedish kronor	FIM Finland, marka	1993-01-04	2002-02-28
+SEKFRFPMI	Currencies against Swedish kronor	FRF France, franc	1993-01-04	2002-02-28
+SEKGBPPMI	Currencies against Swedish kronor	GBP Great Britain, pound	1993-01-04	2026-11-04
+SEKGRDPMI	Currencies against Swedish kronor	GRD Greece, drachmer	1993-01-04	2002-02-28
+SEKHKDPMI	Currencies against Swedish kronor	HKD Hong Kong, dollar	1994-03-01	2026-11-04
+SEKHUFPMI	Currencies against Swedish kronor	HUF Hungary, forint	1998-01-02	2026-11-04
+SEKIDRPMI	Currencies against Swedish kronor	IDR Indonesia, rupiah	1998-01-02	2026-11-04
+SEKIEPPMI	Currencies against Swedish kronor	IEP Ireland, pund	1993-01-04	2002-02-28
+SEKILSPMI	Currencies against Swedish kronor	ILS, Israeli shekel	2023-11-20	2026-11-04
+SEKINRPMI	Currencies against Swedish kronor	INR India, rupee	1994-03-01	2026-11-04
+SEKISKPMI	Currencies against Swedish kronor	ISK Iceland, kronor	1993-01-04	2026-11-04
+SEKITLPMI	Currencies against Swedish kronor	ITL Italy, lire	1993-01-04	2002-02-28
+SEKJPYPMI	Currencies against Swedish kronor	JPY Japan, yen	1993-01-04	2026-11-04
+SEKKRWPMI	Currencies against Swedish kronor	KRW South Korea, won	2005-09-09	2026-11-04
+SEKKWDPMI	Currencies against Swedish kronor	KWD Kuwait, dinar	1994-03-01	2005-02-28
+SEKLTLPMI	Currencies against Swedish kronor	LTL Lithuania,  litas	1998-01-02	2014-12-30
+SEKLVLPMI	Currencies against Swedish kronor	LVL Latvia, lat	1998-01-02	2013-12-30
+SEKMADPMI	Currencies against Swedish kronor	MAD Marocco, dirham	1998-01-02	2023-11-24
+SEKMXNPMI	Currencies against Swedish kronor	MXN Mexico, nuevo peso	1998-01-02	2026-11-04
+SEKMYRPMI	Currencies against Swedish kronor	MYR Malaysia, ringgit	1994-03-01	2026-11-04
+SEKRONPMI	Currencies against Swedish kronor	RON, Romanien leu	2023-11-20	2026-11-04
+SEKNLGPMI	Currencies against Swedish kronor	NLG Netherlands, guilder	1993-01-04	2002-02-28
+SEKNOKPMI	Currencies against Swedish kronor	NOK Norway, krone	1993-01-04	2026-11-04
+SEKNZDPMI	Currencies against Swedish kronor	NZD New Zealand, dollar	1994-03-01	2026-11-04
+SEKPHPPMI	Currencies against Swedish kronor	PHP, Philippine peso	2023-11-20	2026-11-04
+SEKPLNPMI	Currencies against Swedish kronor	PLN Poland, zloty	1998-01-02	2026-11-04
+SEKPTEPMI	Currencies against Swedish kronor	PTE Portugal, escudo	1993-01-04	2002-02-28
+SEKRUBPMI	Currencies against Swedish kronor	RUB Russia, rouble	1993-01-04	2022-03-25
+SEKSARPMI	Currencies against Swedish kronor	SAR Saudi Arabia, riyal	1994-03-01	2023-11-24
+SEKSGDPMI	Currencies against Swedish kronor	SGD Singapore, dollar	1994-03-01	2026-11-04
+SEKSITPMI	Currencies against Swedish kronor	SIT Slovenia, tolar	1998-01-02	2006-12-29
+SEKSKKPMI	Currencies against Swedish kronor	SKK Slovakia, koruna	2005-04-29	2008-12-30
+SEKTHBPMI	Currencies against Swedish kronor	THB Thailand, baht	1998-01-02	2026-11-04
+SEKTRLPMI	Currencies against Swedish kronor	TRL Turkey, lira	1998-01-02	2004-12-30
+SEKTRYPMI	Currencies against Swedish kronor	TRY Turkey, new lira	2005-01-03	2026-11-04
+SEKUSDPMI	Currencies against Swedish kronor	USD US, dollar	1993-01-04	2026-11-04
+SEKZARPMI	Currencies against Swedish kronor	ZAR South Africa, rand	1994-03-01	2026-11-04
+SEKSDR	Special Drawing Rights (SDR)	SDR Special Drawing Rights (SEK/SDR)	2011-06-27	2026-11-04
+SEKKIX92	Swedish KIX index	Svenskt KIX-index	1992-11-18	2026-11-04
+SEKUSDFO3MFIX	Forward Premiums	SEK/USD Forward Premium Maturity 3-Months	1980-01-02	2026-11-04
+SEKUSDFO6MFIX	Forward Premiums	SEK/USD Forward Premium Maturity 6-Months	1980-01-02	2026-11-04

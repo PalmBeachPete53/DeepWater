@@ -1,0 +1,1553 @@
+agency	id	version	name
+ESTAT	SEEA_AEA_A	1.4	Air Emissions Accounts
+IAEG-SDGs	DF_SDG_GLC	1.20	SDG Country Global Dataflow
+IAEG-SDGs	DF_SDG_GLH	1.20	SDG Harmonized Global Dataflow
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_CLIM_PROJ	1.6	Climate projections by scenario, 2030–2060 – Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_COASTAL_FLOOD	1.6	Coastal flooding - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_DROUGHT	1.6	Drought - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_FIRES	1.6	Wildfires - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_HEAT_STRESS	1.6	Heat stress - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_LAND_TEMP	1.6	Land surface temperature -  Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_PRECIP	1.6	Precipitation - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_RIVER_FLOOD	1.6	River flooding - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_TEMPERATURES	1.6	Air temperature, hot days, tropical nights and icing days - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_CLIM@DF_WIND	1.6	Wind threats - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_DEMO@DF_AGE_SEX	1.3	Population by age and sex - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_DEMO@DF_CITIZENSHIP	1.3	Population by citizenship - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_DEMO@DF_DEPEND	1.3	Dependency ratio - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_DEMO@DF_ORIGIN	1.3	Foreign-born population - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_DIGI@DF_INTERNET_SPEED	1.2	Internet speed - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ECO@DF_ECONOMY	1.1	Economy - FUAs
+OECD.CFE.EDS	DSD_FUA_ENER@DF_CDD_HDD	1.3	Cooling and heating degree days - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_GHG	1.5	Greenhouse gas emissions - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_GREEN_AREA	1.2	Green areas - FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_LAND_COVER	1.4	Land cover - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_POLLUTION	1.5	Air pollution - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_PROT_AREAS	1.5	Protected areas - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_TREE_COVER_LOSS	1.4	Tree cover loss - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_ENV@DF_UHI	1.2	Urban heat island - FUAs
+OECD.CFE.EDS	DSD_FUA_INNOV@DF_PATENTS	1.0	Total and environment-related patents - FUAs
+OECD.CFE.EDS	DSD_FUA_LAB@DF_LABOUR	1.1	Labour market - FUAs
+OECD.CFE.EDS	DSD_FUA_SOC@DF_VEH	1.0	Private road vehicles - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_TERR@DF_DENSITY	1.1	Population and built-up density - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_TERR@DF_LAU	1.1	Local administrative units - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_TRAN@DF_PT_ACCESS	1.1	Access to public transport - FUAs
+OECD.CFE.EDS	DSD_FUA_TRAN@DF_SERVICE_ACCESS	1.1	Access to services - FUAs
+OECD.CFE.EDS	DSD_FUA_TRAN@DF_TRAN_COMMUT	1.2	Main mode of transport to work - Cities and FUAs
+OECD.CFE.EDS	DSD_FUA_TRAN@DF_TRAN_PERF	1.1	Transport performance - FUAs
+OECD.CFE.EDS	DSD_LA_AIR_POLLUTION_DDOWN@DF_AIR_POLLUTION_DDOWN	1.0	Exposure to air pollution - Local areas
+OECD.CFE.EDS	DSD_LA_AIR_TEMP_DDOWN@DF_AIR_TEMP_DDOWN	1.0	Air temperature trends - Local areas
+OECD.CFE.EDS	DSD_LA_COASTAL_FLOOD_DDOWN@DF_COASTAL_FLOOD_DDOWN	1.0	Coastal flooding - Local areas
+OECD.CFE.EDS	DSD_LA_DEGREE_DAYS_DDOWN@DF_DEGREE_DAYS_DDOWN	1.0	Cooling and heating degree days - Local areas
+OECD.CFE.EDS	DSD_LA_DEGURBA_DDOWN@DF_DEGURBA_DDOWN	1.0	Degree of urbanisation - Local areas
+OECD.CFE.EDS	DSD_LA_DEMO_DDOWN@DF_POP_DENSITY_DDOWN	1.0	Population density - Local areas
+OECD.CFE.EDS	DSD_LA_DEMO_POP_AGE_DDOWN@DF_POP_AGE_DDOWN	1.1	Population by age and sex - Local areas
+OECD.CFE.EDS	DSD_LA_ENV_GREEN_AREA_DDOWN@DF_GREEN_AREA_DDOWN	1.0	Green areas - Local areas
+OECD.CFE.EDS	DSD_LA_ENV_LAND_COVER_DDOWN@DF_LAND_COVER_DDOWN	1.0	Land Cover - Local areas
+OECD.CFE.EDS	DSD_LA_EXTREME_TEMP_DDOWN@DF_EXTREME_TEMP_DDOWN	1.0	Extreme temperatures - Local areas
+OECD.CFE.EDS	DSD_LA_FIRE_DDOWN@DF_FIRE_DDOWN	1.0	Share of burned areas - Local areas
+OECD.CFE.EDS	DSD_LA_GHSL_BUILT_DDOWN@DF_BUILT_DDOWN	1.0	Land cover built up area - Local areas
+OECD.CFE.EDS	DSD_LA_HOUSING_DDOWN@DF_HEATING_FUEL_DDOWN	1.0	Energy used for heating in dwellings - Local areas
+OECD.CFE.EDS	DSD_LA_LABOUR_DDOWN@DF_EMPLOYMENT_DDOWN	1.0	Employment by age group and sex - Local Areas
+OECD.CFE.EDS	DSD_LA_PRECIPITATION_DDOWN@DF_PRECIPITATION_DDOWN	1.0	Precipitation - Local areas
+OECD.CFE.EDS	DSD_LA_PROT_AREAS_DDOWN@DF_PROT_AREAS_DDOWN	1.0	Protected areas - Local areas
+OECD.CFE.EDS	DSD_LA_RIVER_FLOOD_DDOWN@DF_RIVER_FLOOD_DDOWN	1.0	River flooding - Local areas
+OECD.CFE.EDS	DSD_LA_SOIL_MOISTURE_DDOWN@DF_SOIL_MOISTURE_DDOWN	1.0	Soil moisture - Local areas
+OECD.CFE.EDS	DSD_LA_TRANSPORT_DDOWN@DF_COMMUTING_MODE_DDOWN	1.0	Main mode of transport to work - Local Areas
+OECD.CFE.EDS	DSD_REG_CLIM@DF_AIR_TEMP	2.5	Air temperature, hot days, tropical nights and icing days - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_CLIM	2.5	Climate hazard statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_CLIM@DF_CLIM_PROJ	2.5	Climate projections by scenario, 2030–2060 - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_DEGREE_DAYS	2.4	Cooling and heating degree days - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_DROUGHT	2.5	Drought - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_FIRES	2.5	Wildfires - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_FLOOD	2.5	River and coastal flooding - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_GHG	2.4	Greenhouse gas emissions - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_HEAT_STRESS	2.5	Heat stress - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_LAND_TEMP	2.5	Land surface temperature - Regions
+OECD.CFE.EDS	DSD_REG_CLIM@DF_PRECIPITATION	2.4	Precipitation - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_DEATH_5Y	2.4	Deaths by 5-year age groups - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_DEMO	2.4	Demography statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_DEMO@DF_DENSITY	2.4	Population density - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_DEPEND	2.4	Dependency rates - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_FERTILITY	2.4	Fertility - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_LIFE_EXP	2.4	Life expectancy - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_MIGR_FLOW	2.4	International migration flows - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_MOBILITY	2.4	Population mobility within the country - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_POP_5Y	2.4	Population by 5-year age groups - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_POP_BROAD	2.4	Population by broad age groups - Regions
+OECD.CFE.EDS	DSD_REG_DEMO@DF_REGION_TYPE	2.4	Demographic indicators by territorial typology
+OECD.CFE.EDS	DSD_REG_DEMO@DF_REGION_TYPE_METRO	2.4	Demographic indicators by access to city typology
+OECD.CFE.EDS	DSD_REG_DEMO@DF_REGION_TYPE_RURB	2.4	Demographic indicators by urban-rural typology
+OECD.CFE.EDS	DSD_REG_ECO@DF_ECO	2.4	Economic statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_ECO@DF_EMP	2.4	Employment by main economic activity - Regions
+OECD.CFE.EDS	DSD_REG_ECO@DF_GDP	2.4	Gross domestic product - Regions
+OECD.CFE.EDS	DSD_REG_ECO@DF_GVA	2.4	Gross value added by main economic activity - Regions
+OECD.CFE.EDS	DSD_REG_ECO@DF_INC	2.4	Income - Regions
+OECD.CFE.EDS	DSD_REG_ECO@DF_LPR	2.4	Labour productivity by main economic activity - Regions
+OECD.CFE.EDS	DSD_REG_ECO@DF_TRAD	2.4	International trade - Regions
+OECD.CFE.EDS	DSD_REG_ECO@DF_TYPE_METRO	2.4	Economic indicators by access to city typology
+OECD.CFE.EDS	DSD_REG_ECO@DF_TYPE_RURB	2.4	Economic indicators by urban-rural territorial typology
+OECD.CFE.EDS	DSD_REG_ECO_ROPI@DF_ECO_ROPI	2.0	Economic statistics ROPI-adjusted for inflation - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_ECO_ROPI@DF_GDP_ROPI	2.0	Real gross domestic product (ROPI-adjusted for inflation) - Regions
+OECD.CFE.EDS	DSD_REG_ECO_ROPI@DF_GVA_ROPI	2.0	Real gross value added by main economic activity (ROPI-adjusted for inflation) - Regions
+OECD.CFE.EDS	DSD_REG_ECO_ROPI@DF_LPR_ROPI	2.0	Real labour productivity by main economic activity (ROPI-adjusted for inflation) - Regions
+OECD.CFE.EDS	DSD_REG_EDU@DF_ATTAIN	2.5	Educational attainment - Regions
+OECD.CFE.EDS	DSD_REG_EDU@DF_EDU	2.5	Education statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_EDU@DF_EMP	2.5	Employment by level of education - Regions
+OECD.CFE.EDS	DSD_REG_EDU@DF_ENROL	2.5	Students enrolment - Regions
+OECD.CFE.EDS	DSD_REG_EDU@DF_EXCLU	2.5	Youth exclusion from education - Regions
+OECD.CFE.EDS	DSD_REG_EDU@DF_TRAINING	2.5	Adult training - Regions
+OECD.CFE.EDS	DSD_REG_ENE@DF_ENE	2.5	Energy statistics - Regions  (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_ENE@DF_ENE_CONSUMPTION	2.5	Final energy consumption - Regions
+OECD.CFE.EDS	DSD_REG_ENE@DF_PROD_ELEC	2.5	Electricity generation - Regions
+OECD.CFE.EDS	DSD_REG_ENV@DF_AIR_POLLUT	3.0	Exposure to air pollution - Regions
+OECD.CFE.EDS	DSD_REG_ENV@DF_ENV	3.0	Environment statistics - Regions
+OECD.CFE.EDS	DSD_REG_ENV@DF_WASTE	3.0	Waste treatment - Regions
+OECD.CFE.EDS	DSD_REG_HEALTH@DF_CARE	2.5	Health care - Regions
+OECD.CFE.EDS	DSD_REG_HEALTH@DF_CARE_AGEING	2.5	Ageing healthcare workforce - Regions
+OECD.CFE.EDS	DSD_REG_HEALTH@DF_HEALTH	2.5	Health statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_HEALTH@DF_RISK	2.5	Health risks - Regions
+OECD.CFE.EDS	DSD_REG_HEALTH@DF_STATUS	2.5	Health status - Regions
+OECD.CFE.EDS	DSD_REG_INNOV@DF_INNOV	2.6	Innovation statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_INNOV@DF_PAT	2.6	Patent applications - Regions
+OECD.CFE.EDS	DSD_REG_INNOV@DF_RD_GERD	2.6	R&D expenditure by sector of performance - Regions
+OECD.CFE.EDS	DSD_REG_INNOV@DF_RD_PERS	2.6	R&D personnel by sector of performance - Regions
+OECD.CFE.EDS	DSD_REG_LAB@DF_LEVELS	2.4	Labour indicators levels - Regions
+OECD.CFE.EDS	DSD_REG_LAB@DF_PART_TIME	2.4	Part-time employment - Regions
+OECD.CFE.EDS	DSD_REG_LAB@DF_RATES	2.4	Labour indicators rates - Regions
+OECD.CFE.EDS	DSD_REG_LAB@DF_TEMPORARY	2.4	Temporary employees - Regions
+OECD.CFE.EDS	DSD_REG_LAB@DF_TYPE_METRO	2.4	Labour indicators by access to city typology
+OECD.CFE.EDS	DSD_REG_LAB@DF_TYPE_RURB	2.4	Labour indicators by urban-rural territorial typology
+OECD.CFE.EDS	DSD_REG_LABOUR@DF_LAB	2.4	Labour statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_MIGRANT@DF_MIGR_STOCK	1.0	Foreign-born population - Regions
+OECD.CFE.EDS	DSD_REG_MW@DF_WASTE	2.4	Waste treatment - Regions
+OECD.CFE.EDS	DSD_REG_SOC@DF_BROADBAND	2.4	Internet broadband access - Regions
+OECD.CFE.EDS	DSD_REG_SOC@DF_HOUSING	2.4	Housing - Regions
+OECD.CFE.EDS	DSD_REG_SOC@DF_INCOME_INEQ	2.4	Income inequality - Regions
+OECD.CFE.EDS	DSD_REG_SOC@DF_SAFETY	2.4	Safety - Regions
+OECD.CFE.EDS	DSD_REG_SOC@DF_SOC	2.4	Society statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_SOC@DF_VEH	2.4	Private road vehicles - Regions
+OECD.CFE.EDS	DSD_REG_SOC@DF_VOTER	2.4	Civic engagement - Regions
+OECD.CFE.EDS	DSD_REG_TOUR@DF_TOUR	1.1	Tourism statistics - Regions (for 'Developer API')
+OECD.CFE.EDS	DSD_REG_TOUR@DF_TOUR_CAP	1.1	Tourism accommodation capacity - Regions
+OECD.CFE.EDS	DSD_REG_TOUR@DF_TOUR_NIGHT	1.1	Tourist overnight stays - Regions
+OECD.CFE.RDG	DSD_DASHBOARD@COFOG	1.1	Subnational government expenditure by functional classification (COFOG)
+OECD.CFE.RDG	DSD_DASHBOARD@COFOG_INV	1.0	Subnational government investment by functional classification (COFOG)
+OECD.CFE.RDG	DSD_DASHBOARD@DEBT	1.0	Subnational government budget balance and debt
+OECD.CFE.RDG	DSD_DASHBOARD@DEMO	1.0	Subnational government structure and finance: socio-economic indicators
+OECD.CFE.RDG	DSD_DASHBOARD@EXPEND	1.0	Subnational government expenditure
+OECD.CFE.RDG	DSD_DASHBOARD@EXPEND_ECON	1.0	Subnational government expenditure by economic classification
+OECD.CFE.RDG	DSD_DASHBOARD@INV	1.0	Subnational government investment
+OECD.CFE.RDG	DSD_DASHBOARD@MUNI_CHANGE	1.0	Municipal level government by population size - change
+OECD.CFE.RDG	DSD_DASHBOARD@PROP_TAX_REV	1.1	Subnational government recurrent property tax revenue
+OECD.CFE.RDG	DSD_DASHBOARD@REV	1.0	Subnational government revenue
+OECD.CFE.RDG	DSD_DASHBOARD@REVENUE_CAT	1.0	Subnational government revenue by category
+OECD.CFE.RDG	DSD_DASHBOARD@SNG_NBR	1.0	Number of subnational governments
+OECD.CFE.RDG	DSD_DASHBOARD@SNG_STRUCT	1.0	Municipal level government by population size
+OECD.CFE.RDG	DSD_DASHBOARD@TAX_REV	1.0	Subnational government tax revenue
+OECD.CFE.RDG	DSD_MUNIFI_DDOWN@DF_MUNIFI	1.0	Municipal government finance (MUNIFI)
+OECD.CFE.RDG	DSD_REGOFI@DF_REGOFI	1.0	Regional government finance (REGOFI)
+OECD.CFE.RDG	DSD_SNGF_AGG@DF_MUNIFI	1.0	Aggregated and disaggregated municipal government finance
+OECD.CFE.RDG	DSD_SNGF_AGG@DF_REGOFI	1.0	Aggregated regional government finance
+OECD.CFE.RDG	DSD_SNGF_CSF@DF_SGCF	1.0	Subnational government climate finance
+OECD.CFE.RDG	DSD_SNGF_DISAGG@DF_REGOFI	1.0	Disaggregated regional government finance
+OECD.CFE.RDG	DSD_SNG_WOFI@DF_COFOG	1.0	SNG-WOFI: Subnational government functional expenditure (COFOG)
+OECD.CFE.RDG	DSD_SNG_WOFI@DF_FINANCE	1.0	SNG-WOFI: Subnational government expenditure, investment, revenue and debt
+OECD.CFE.RDG	DSD_SNG_WOFI@DF_SNG_STRUCT	1.0	SNG-WOFI: Number of subnational governments and municipality size
+OECD.CFE.RDG	DSD_SNG_WOFI@DF_SOCIO	1.0	SNG-WOFI: Basic socio-economic indicators
+OECD.CFE.RDG	DSD_SUBEMP@DF_SUBEMP	1.0	Aggregated and disaggregated subnational public employment
+OECD.CFE.SMEE	DSD_SMEE_FINANCING@DF_SMEE_SCOREBOARD	1.1	Financing SMEs and Entrepreneurs: An OECD Scoreboard
+OECD.CFE.TOU	DSD_TOURISM_DOM@DF_DOMESTIC	1.3	Domestic tourism
+OECD.CFE.TOU	DSD_TOURISM_ENT_EMP@DF_ENT_EMP	1.1	Enterprises and employment in tourism
+OECD.CFE.TOU	DSD_TOURISM_EXP@DF_EXPENDITURE	1.0	Internal tourism consumption
+OECD.CFE.TOU	DSD_TOURISM_INTER@DF_INBOUND	1.1	Inbound tourism
+OECD.CFE.TOU	DSD_TOURISM_INTER@DF_OUTBOUND	1.1	Outbound tourism
+OECD.CFE.TOU	DSD_TOURISM_KEY@DF_KEY_IND_PC	1.0	Key tourism economic indicators
+OECD.CFE.TOU	DSD_TOURISM_RECEIPTS@DF_RECEIPTS	1.0	Receipts and expenditure
+OECD.CTP.TAV	DSD_QDD_ITTI@DF_QDD_ITTI	1.0	Inventory of Tax Technology Initiatives
+OECD.CTP.TPS	DSD_CBCR@DF_CBCRI	1.1	Country-by-country reporting (CbCR) - Aggregate totals by jurisdiction - Corporate tax statistics
+OECD.CTP.TPS	DSD_CBCR@DF_CBCRII	1.1	Country-by-country reporting (CbCR) - Interquartile mean values by jurisdiction - Corporate tax statistics
+OECD.CTP.TPS	DSD_CBCR@DF_CBCRIII	1.1	Country-by-country reporting (CbCR) - Aggregate totals by the effective tax rate of the MNE group and by tax jurisdiction  - Corporate tax statistics
+OECD.CTP.TPS	DSD_CBCR@DF_CBCRIV	1.1	Country-by-country reporting (CbCR) - Aggregate totals by the effective tax rate of the MNE sub-group and by tax jurisdiction - Corporate tax statistics
+OECD.CTP.TPS	DSD_CBCR@DF_CBCRV	1.1	Country-by-country reporting (CbCR) - Distribution points of MNE group size - Corporate tax statistics
+OECD.CTP.TPS	DSD_CBCR@DF_CBCRVI	1.1	Country-by-country reporting (CbCR) - Aggregate totals by the size of the MNE group and by tax jurisdictions - Corporate tax statistics
+OECD.CTP.TPS	DSD_ECR@DF_CPS	1.0	Carbon pricing score
+OECD.CTP.TPS	DSD_ECR@DF_SEP	1.0	Shares of CO2 emissions from energy priced
+OECD.CTP.TPS	DSD_ETR@DF_ETR_BASELINE	2.1	Effective tax rates - Corporate tax statistics
+OECD.CTP.TPS	DSD_ETR@DF_ETR_IBRD	2.1	Effective tax rates for income based tax incentives - Corporate tax statistics
+OECD.CTP.TPS	DSD_ETR@DF_ETR_XBRD	2.1	Effective tax rates for expenditure based tax incentives - Corporate tax statistics
+OECD.CTP.TPS	DSD_ITID@DF_ITID_DES	1.0	ITID - Design features
+OECD.CTP.TPS	DSD_ITID@DF_ITID_ELIG	1.0	ITID - Eligibility conditions
+OECD.CTP.TPS	DSD_ITID@DF_ITID_LEG	1.0	ITID - Legal basis
+OECD.CTP.TPS	DSD_ITID@DF_ITID_SEC	1.0	ITID - Sector targeting
+OECD.CTP.TPS	DSD_ITID@DF_ITID_SUS	1.0	ITID - Sustainable development area
+OECD.CTP.TPS	DSD_NECR@DF_NECRS	1.1	Net effective carbon rates
+OECD.CTP.TPS	DSD_NECR@DF_NECRSHARES	1.1	Shares of emissions priced
+OECD.CTP.TPS	DSD_NECR@DF_NECRSREVFOR	1.1	Revenue forgone and net effective carbon rates
+OECD.CTP.TPS	DSD_NEER@DF_NEERS	1.1	Net effective energy rates
+OECD.CTP.TPS	DSD_NEER@DF_REVPOT	1.1	Net energy tax revenues and reform potential
+OECD.CTP.TPS	DSD_QDD_ACT12@DF_QDD_ACT12	1.0	Mandatory disclosure rules - Corporate tax statistics
+OECD.CTP.TPS	DSD_QDD_ACT2@DF_QDD_ACT2	1.0	Hybrid mismatch arrangements - Corporate tax statistics
+OECD.CTP.TPS	DSD_QDD_CBCREQ@DF_QDD_CBCREQ	1.0	Country-by-country reporting (CbCR) requirements - Corporate tax statistics
+OECD.CTP.TPS	DSD_QDD_CFC@DF_QDD_CFC	2.0	Controlled foreign company rules - Corporate tax statistics
+OECD.CTP.TPS	DSD_QDD_ILR@DF_QDD_ILR	2.0	Interest limitation rules - Corporate tax statistics
+OECD.CTP.TPS	DSD_QDD_IPR@DF_QDD_IPR	2.1	Intellectual properties regimes - Corporate tax statistics
+OECD.CTP.TPS	DSD_REF_AFRICA@DF_REFSERIES_AFRICA	2.0	Revenue Statistics in Africa - Reference series
+OECD.CTP.TPS	DSD_REF_ASAP@DF_REFSERIES_ASAP	1.0	Revenue Statistics in Asia and the Pacific - Reference series
+OECD.CTP.TPS	DSD_REF_GLOBAL@DF_REFSERIES_GLOBAL	2.0	Global Revenue Statistics - Reference series
+OECD.CTP.TPS	DSD_REF_LAC@DF_REFSERIES_LAC	2.0	Revenue Statistics in Latin America and the Caribbean - Reference series
+OECD.CTP.TPS	DSD_REF_OECD@DF_REFSERIES_OECD	2.0	Revenue Statistics in OECD member countries - Reference series
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVBFA	2.0	Burkina Faso - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVBWA	2.0	Botswana - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVCIV	2.0	Côte d'Ivoire - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVCMR	2.0	Cameroon - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVCOD	2.0	Democratic Republic of the Congo - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVCOG	2.0	Republic of the Congo - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVCPV	2.0	Cabo Verde - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVEGY	2.0	Egypt - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVGAB	2.0	Gabon - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVGHA	2.0	Ghana - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVGIN	2.0	Guinea - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVGMB	1.0	Gambia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVGNQ	2.1	Equatorial Guinea - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVKEN	2.0	Kenya - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVLBR	1.1	Liberia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVLSO	2.0	Lesotho - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMAR	2.0	Morocco - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMDG	2.0	Madagascar - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMLI	2.0	Mali - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMOZ	2.0	Mozambique - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMRT	2.0	Mauritania - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMUS	2.0	Mauritius - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVMWI	2.0	Malawi - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVNAM	2.0	Namibia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVNER	2.0	Niger - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVNGA	2.0	Nigeria - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVRWA	2.0	Rwanda - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVSEN	2.0	Senegal - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVSLE	2.0	Sierra Leone - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVSOM	2.0	Somalia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVSWZ	2.0	Eswatini - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVSYC	2.0	Seychelles - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVTCD	2.0	Chad - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVTGO	2.1	Togo - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVTUN	2.0	Tunisia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVUGA	2.0	Uganda - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVZAF	2.0	South Africa - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REVZMB	2.0	Zambia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_AFRICA@DF_REV_ALL	2.0	Tax evenues, all AFRICA countries
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVARM	2.1	Armenia - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVAUS	2.1	Australia - tax revenues in Revenue Statistics in Asia and the Pacific
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVAZE	2.1	Azerbaijan - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVBGD	2.1	Bangladesh - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVBTN	2.1	Bhutan - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVCHN	2.1	China - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVCOK	2.1	Cook Islands - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVFJI	2.1	Fiji - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVGEO	2.1	Georgia - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVHKG	2.1	Hong Kong, China - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVIDN	2.1	Indonesia - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVJPN	2.1	Japan - tax revenues in Revenue Statistics in Asia and the Pacific
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVKAZ	2.1	Kazakhstan - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVKGZ	2.1	Kyrgyzstan - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVKHM	2.1	Cambodia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVKIR	2.1	Kiribati - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVKOR	2.1	Korea - tax revenues in Revenue Statistics in Asia and the Pacific
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVLAO	2.1	Lao PDR - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVLKA	2.1	Sri Lanka - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVMDV	2.1	Maldives - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVMHL	2.1	Marshall Islands - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVMNG	2.1	Mongolia - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVMYS	2.1	Malaysia - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVNIU	2.1	Niue - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVNRU	2.1	Naoero - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVNZL	2.1	New Zealand - tax revenues in Revenue Statistics in Asia and the Pacific
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVPAK	2.1	Pakistan - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVPHL	2.1	Philippines - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVPNG	2.1	Papua New Guinea - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVSGP	2.1	Singapore - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVSLB	2.1	Solomon Islands - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVTHA	2.1	Thailand - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVTKL	2.1	Tokelau - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVTLS	2.1	Timor-Leste - tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVTON	2.1	Tonga - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVVNM	2.1	Viet Nam - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVVUT	2.1	Vanuatu - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REVWSM	2.1	Samoa - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_ASAP@DF_REV_ALL	2.1	Tax revenues, all ASAP countries
+OECD.CTP.TPS	DSD_REV_COMP_AFRICA@DF_RSAFRICA	2.0	Revenue Statistics in Africa - Comparative tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_COMP_ASAP@DF_RSASAP	2.1	Revenue Statistics in Asia and the Pacific - Comparative  tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_COMP_GLOBAL@DF_RSGLOBAL	2.1	Global Revenue Statistics - Comparative tax revenues
+OECD.CTP.TPS	DSD_REV_COMP_LAC@DF_RSLAC	2.0	Revenue Statistics in Latin America and the Caribbean - Comparative tax revenues
+OECD.CTP.TPS	DSD_REV_COMP_OECD@DF_FSSBOECD	2.0	Financing of social security benefits in OECD member countries
+OECD.CTP.TPS	DSD_REV_COMP_OECD@DF_RSOECD	2.0	Revenue Statistics in OECD member countries - Comparative tax revenues
+OECD.CTP.TPS	DSD_REV_COMP_OECD@DF_SSCPTOECD	2.0	Social security contributions and payroll taxes paid by government in OECD member countries
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVBGR	2.0	Bulgaria - tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVHRV	2.0	Croatia - tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVLIE	2.0	Liechtenstein - tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVMDA	2.1	Moldova - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVMLT	2.0	Malta - tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVROU	2.1	Romania - tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REVUKR	2.1	Ukraine - tax and non-tax revenues
+OECD.CTP.TPS	DSD_REV_GLOBAL@DF_REV_ALL	2.2	Tax revenues, all GLOBAL countries
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVARG	2.1	Argentina - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVATG	2.1	Antigua and Barbuda - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVBHS	2.1	Bahamas - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVBLZ	2.1	Belize - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVBOL	2.1	Bolivia - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVBRA	2.1	Brazil - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVBRB	2.1	Barbados - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVCHL	2.1	Chile - tax revenues in Revenue Statistics in Latin America and the Caribbean
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVCOL	2.1	Colombia - tax revenues in Revenue Statistics in Latin America and the Caribbean
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVCRI	2.1	Costa Rica - tax revenues in Revenue Statistics in Latin America and the Caribbean
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVCUB	2.1	Cuba - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVDOM	2.1	Dominican Republic - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVECU	2.1	Ecuador - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVGRD	2.1	Grenada - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVGTM	2.1	Guatemala - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVGUY	2.1	Guyana - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVHND	2.1	Honduras - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVJAM	2.1	Jamaica - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVLCA	2.1	Saint Lucia - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVMEX	2.1	Mexico - tax revenues in Revenue Statistics in Latin America and the Caribbean
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVNIC	2.1	Nicaragua - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVPAN	2.1	Panama - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVPER	2.1	Peru - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVPRY	2.1	Paraguay - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVSLV	2.1	El Salvador - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVSUR	2.1	Suriname - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVTTO	2.1	Trinidad and Tobago - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVURY	2.1	Uruguay - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REVVEN	2.1	Venezuela - tax revenues
+OECD.CTP.TPS	DSD_REV_LAC@DF_REV_ALL	2.1	Tax revenues, all LAC countries
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVAUS	2.0	Australia - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVAUT	2.0	Austria - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVBEL	2.0	Belgium - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVCAN	2.0	Canada - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVCHE	2.0	Switzerland - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVCHL	2.0	Chile - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVCOL	2.0	Colombia - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVCRI	2.0	Costa Rica - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVCZE	2.0	Czechia - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVDEU	2.0	Germany - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVDNK	2.0	Denmark - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVESP	2.0	Spain - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVEST	2.0	Estonia - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVFIN	2.0	Finland - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVFRA	2.0	France - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVGBR	2.0	United Kingdom - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVGRC	2.0	Greece - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVHUN	2.0	Hungary - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVIRL	2.0	Ireland - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVISL	2.0	Iceland - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVISR	2.0	Israel - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVITA	2.1	Italy - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVJPN	2.0	Japan - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVKOR	2.0	Korea - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVLTU	2.0	Lithuania - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVLUX	2.0	Luxembourg - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVLVA	2.0	Latvia - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVMEX	2.0	Mexico - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVNLD	2.0	Netherlands - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVNOR	2.0	Norway - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVNZL	2.0	New Zealand - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVPOL	2.0	Poland - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVPRT	2.0	Portugal - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVSVK	2.0	Slovak Republic - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVSVN	2.0	Slovenia - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVSWE	2.0	Sweden - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVTUR	2.0	Türkiye - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REVUSA	2.0	United States - tax revenues
+OECD.CTP.TPS	DSD_REV_OECD@DF_REV_ALL	2.0	Tax revenues, all OECD countries
+OECD.CTP.TPS	DSD_TAX_CIT@DF_CIT	2.0	Corporate income tax (CIT) - statutory and targeted small business rates
+OECD.CTP.TPS	DSD_TAX_CIT@DF_CIT_DIVD_INCOME	2.1	Combined (corporate and shareholder) statutory tax rates on dividend income
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_AV	1.0	Personal income tax (PIT) and social security contributions (SSC) - average rates on gross wage earnings
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_AVMR	1.0	Personal income tax (PIT) and social security contributions (SSC) - average and marginal rates on gross wage and earnings
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_AV_COMB	1.0	Personal income tax (PIT) and social security contributions (SSC) - average combined rates
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_CENT	1.0	Personal income tax (PIT) - central government rates and thresholds
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_MR	1.0	Personal income tax (PIT) and social security contributions (SSC) - marginal rates on gross wage earnings
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_SUB_NON_PROG	1.0	Personal income tax (PIT) - sub-central rates for a non-progressive system
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_SUB_PROG	1.0	Personal income tax (PIT) - sub-central rates and thresholds for a progressive system
+OECD.CTP.TPS	DSD_TAX_PIT@DF_PIT_TOP_EARN_THRESH	1.0	Personal income tax (PIT) - top statutory and marginal tax rate
+OECD.CTP.TPS	DSD_TAX_SSC@DF_SSC_EMPLOYEE	1.0	Social security contributions (SSC) - employee rates
+OECD.CTP.TPS	DSD_TAX_SSC@DF_SSC_EMPLOYER	1.0	Social security contributions (SSC) - employer rates
+OECD.CTP.TPS	DSD_TAX_SSC@DF_SSC_SELF	1.0	Social security contributions (SSC) - self-employed rates
+OECD.CTP.TPS	DSD_TAX_WAGES_COMP@DF_TW_COMP	2.1	Labour taxation – OECD comparative country indicators
+OECD.CTP.TPS	DSD_TAX_WAGES_COU@DF_TW_COU	2.1	Labour taxation – OECD member country tables
+OECD.CTP.TPS	DSD_TAX_WAGES_DECOMP@DF_TW_DECOMP	2.1	Labour taxation – tax wedge decompositions
+OECD.CTP.TPS	DSD_WHT@DF_WHT_STANDARD	1.0	Standard withholding tax rates - Corporate tax statistics
+OECD.CTP.TPS	DSD_WHT@DF_WHT_TREATY	1.0	Treaty based withholding tax rates - Corporate tax statistics
+OECD.DAF	DSD_DEBT_TRANS_COLL@DF_MICRO	1.0	Debt Transparency Individual Transactions
+OECD.DAF	DSD_DEBT_TRANS_DDOWN@DF_DDOWN	1.0	Debt Transparency Aggregates
+OECD.DAF.CM	DSD_FP@DF_BC	1.0	Benefit payments and contributions to asset-backed pensions
+OECD.DAF.CM	DSD_FP@DF_FPS	1.0	Asset-backed pensions - main database
+OECD.DAF.CM	DSD_FP@DF_MB	1.0	Pension plan membership
+OECD.DAF.CM	DSD_FP@DF_OC	1.0	Operating costs of asset-backed pensions
+OECD.DAF.CM	DSD_FP@DF_PA	1.0	Assets earmarked for retirement
+OECD.DAF.CM	DSD_FP@DF_SPS	1.0	Structure of asset-backed pensions
+OECD.DAF.CM	DSD_FP@DF_WI	1.0	Asset allocation of pension funds and other pension providers
+OECD.DAF.CM	DSD_INS@DF_ASSET_ALLOC	1.0	Asset allocation of insurance companies
+OECD.DAF.CM	DSD_INS@DF_BSI	1.0	Balance sheet and income statement of insurance companies
+OECD.DAF.CM	DSD_INS@DF_BUSINESS_ABROAD	1.0	Insurance business written abroad
+OECD.DAF.CM	DSD_INS@DF_CLASSES	1.0	Insurance business written by class of insurance
+OECD.DAF.CM	DSD_INS@DF_IND	1.0	Insurance indicators
+OECD.DAF.CM	DSD_INS@DF_NB_COMP	1.0	Insurance companies and employees
+OECD.DAF.CM	DSD_INS@DF_UNDERWRITING	1.0	Premiums, claims and expenses of insurance companies
+OECD.DAF.COMP	DSD_CARTEL_QDD@DF_QDD_CARTEL	1.0	The OECD International Cartels Database (microdata)
+OECD.DAF.COMP	DSD_CEC_QDD@DF_QDD_CEC	1.0	The Competition Enforcement Co-operation Database
+OECD.DAF.INV	DSD_FDI@DF_FDI_AGGR_SUMM	1.0	FDI main aggregates, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_CTRY_IND_HIST	1.0	FDI by counterpart area and by economic activity, BMD4 and historical BMD3
+OECD.DAF.INV	DSD_FDI@DF_FDI_CTRY_IND_SUMM	1.0	FDI by counterpart area and by economic activity, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_FLOW_AGGR	1.0	FDI flows main aggregates, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_FLOW_CTRY	1.0	FDI flows by counterpart area, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_FLOW_IND	1.0	FDI flows by economic activity, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_INC_AGGR	1.0	FDI income main aggregates, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_INC_CTRY	1.0	FDI income by counterpart area, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_INC_IND	1.0	FDI income by economic activity, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_POS_AGGR	1.0	FDI positions main aggregates, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_POS_CTRY	1.0	FDI positions by counterpart area, BMD4
+OECD.DAF.INV	DSD_FDI@DF_FDI_POS_IND	1.0	FDI positions by economic activity, BMD4
+OECD.DAF.INV	DSD_FDIRRI_REG_DATABASE@DF_FDIRRI_REG_DATABASE	2.0	OECD FDI Regulatory Restrictiveness Index - Regulatory Database
+OECD.DAF.INV	DSD_FDIRRI_SCORES@DF_FDIRRI_SCORES	2.0	OECD FDI Regulatory Restrictiveness Index - Scores
+OECD.DAF.INV	DSD_ITID_DASH@DF_SECTOR_PREV	1.0	ITID Dashboard Visualisation (Comparator tab - Figure 4)
+OECD.DAF.INV	DSD_QDD_FDI@DF_FDI_BMD4	1.0	FDI statistics metadata, BMD4
+OECD.DCD.FSD	DSD_CPA@DF_CRS_CPA	1.5	Country Programmable Aid (CPA)
+OECD.DCD.FSD	DSD_CRS@DF_CRS	1.7	CRS: Creditor Reporting System (flows)
+OECD.DCD.FSD	DSD_DAC1@DF_DAC1	1.8	DAC1: Flows by provider (ODA+OOF+Private)
+OECD.DCD.FSD	DSD_DAC1@DF_DAC5	1.7	DAC5: Aid (ODA) by sector and provider
+OECD.DCD.FSD	DSD_DAC1@DF_DAC7B	1.1	DAC7B: Aid (ODA) tying status
+OECD.DCD.FSD	DSD_DAC2@DF_CPA	1.1	Country programmable aid (CPA)
+OECD.DCD.FSD	DSD_DAC2@DF_DAC2A	1.7	DAC2A: Aid (ODA) disbursements to countries and regions
+OECD.DCD.FSD	DSD_DAC2@DF_DAC2B	1.8	DAC2B: Other official flows (OOF) and export credits
+OECD.DCD.FSD	DSD_DAC2@DF_DAC3A	1.7	DAC3A: Aid (ODA) commitments to countries and regions
+OECD.DCD.FSD	DSD_DAC2@DF_DAC4	1.7	DAC4: Private direct investment and other private capital
+OECD.DCD.FSD	DSD_DAC2@DF_GDFF2	1.0	Geographical distribution of financial flows to developing countries
+OECD.DCD.FSD	DSD_DAC2@DF_ODF	1.7	Official development financing (ODF) by country and region
+OECD.DCD.FSD	DSD_DAC2@DF_OFFICIAL	1.7	Official flows by country and region
+OECD.DCD.FSD	DSD_DAC2@DF_RECPTS	1.7	Receipts by country and region
+OECD.DCD.FSD	DSD_GDFF@DF_DEFL	1.0	ODA deflators by DAC member
+OECD.DCD.FSD	DSD_GDFF@DF_IND	1.0	GNI and population indicators by ODA recipient country
+OECD.DCD.FSD	DSD_GNDR@DF_GENDER	1.7	Gender Equality: Aid (ODA) activities in support of gender equality and women's empowerment
+OECD.DCD.FSD	DSD_GREQ@DF_CRS_GREQ	1.7	CRS: Creditor Reporting System grant equivalent
+OECD.DCD.FSD	DSD_MOB@DF_MOBILISATION	1.1	CRS – Private: Mobilised private finance for development
+OECD.DCD.FSD	DSD_MULTI@DF_MULTI	1.7	Providers' total use of the multilateral system
+OECD.DCD.FSD	DSD_OTHMRKR@DF_OTHERMARKERS	1.7	OtherMarkers: Aid (ODA) activities targeting other policy objectives
+OECD.DCD.FSD	DSD_PPFD@DF_PPFD	1.7	Private Philanthropy for Development
+OECD.DCD.FSD	DSD_PSI@DF_PSI	1.1	Private sector instruments (PSI)
+OECD.DCD.FSD	DSD_QDD_DCD_IDRC@DF_QDD_DCD_IDRC	1.1	DAC members’ methodologies for reporting in-donor refugee costs in ODA
+OECD.DCD.FSD	DSD_RIOMRKR@DF_RIOMARKERS	1.7	RioMarkers: Aid (ODA) activities targeting global environmental objectives
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_HISTORIC	1.0	Africa's Development Dynamics (AfDD) - full historic data
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB02	1.0	Africa's Development Dynamics (AfDD) Table 02 - Annual real GDP growth rate
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB03	1.0	Africa's Development Dynamics (AfDD) Table 03 - Annual population growth rate
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB04	1.0	Africa's Development Dynamics (AfDD) Table 04 - Annual real GDP growth per capita
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB05	1.0	Africa's Development Dynamics (AfDD) Table 05 - Demographic estimates
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB08	1.0	Africa's Development Dynamics (AfDD) Table 08 - Sectoral breakdown of the economy
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB13	1.0	Africa's Development Dynamics (AfDD) Table 13 - Basic health indicators
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB15	1.0	Africa's Development Dynamics (AfDD) Table 15 - Growth decomposition by expenditure
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB16	1.0	Africa's Development Dynamics (AfDD) Table 16 - Public finances
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB17	1.0	Africa's Development Dynamics (AfDD) Table 17 - Trade by manufacturing intensity
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB18	1.0	Africa's Development Dynamics (AfDD) Table 18 - Export diversification
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB19	1.0	Africa's Development Dynamics (AfDD) Table 19 - Global and regional trade
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB20	1.0	Africa's Development Dynamics (AfDD) Table 20 - External financial inflows
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB21	1.0	Africa's Development Dynamics (AfDD) Table 21 - Investment and capital stock
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB22	1.0	Africa's Development Dynamics (AfDD) Table 22 - Returns on direct investments
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB23	1.0	Africa's Development Dynamics (AfDD) Table 23 - Ecological sustainability
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB25	1.0	Africa's Development Dynamics (AfDD) Table 25 - GHG Emissions by sector
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB26	1.0	Africa's Development Dynamics (AfDD) Table 26 - Electricity production and sustainable energy
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB27	1.0	Africa's Development Dynamics (AfDD) Table 27 - Origin and destination of added value
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB28	1.0	Africa's Development Dynamics (AfDD) Table 28 - International trade costs
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB29	1.0	Africa's Development Dynamics (AfDD) Table 29 - National wealth
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB30	1.0	Africa's Development Dynamics (AfDD) Table 30 - Environmental causes of premature deaths
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB32	1.0	Africa's Development Dynamics (AfDD) Table 32 - Employment by occupation
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB37	1.0	Africa's Development Dynamics (AfDD) Table 37 - Migration by education level
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB38	1.0	Africa's Development Dynamics (AfDD) Table 38 - Projected education profiles
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX@DF_TAB39	1.0	Africa's Development Dynamics (AfDD) Table 39 - Projected youth education profiles
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB01	1.0	Africa's Development Dynamics (AfDD) Table 01 - Indicators of growth, employment and inequality
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB06	1.0	Africa's Development Dynamics (AfDD) Table 06 - Basic education indicators
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB07	1.0	Africa's Development Dynamics (AfDD) Table 07 - Labour force characteristics
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB09	1.0	Africa's Development Dynamics (AfDD) Table 09 - Indicators of inequality and poverty
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB10	1.0	Africa's Development Dynamics (AfDD) Table 10 - Gender indicators
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB11	1.0	Africa's Development Dynamics (AfDD) Table 11 - Communications infrastructure
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB12	1.0	Africa's Development Dynamics (AfDD) Table 12 - Digitalisation
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB14	1.0	Africa's Development Dynamics (AfDD) Table 14 - Subjective well-being
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB24	1.0	Africa's Development Dynamics (AfDD) Table 24 - Sustainable public investments and adjusted net savings
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB31	1.0	Africa's Development Dynamics (AfDD) Table 31 - Informal economies and informal employment
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB33	1.0	Africa's Development Dynamics (AfDD) Table 33 - Education mismatch
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB34	1.0	Africa's Development Dynamics (AfDD) Table 34 - Mean years of education
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB35	1.0	Africa's Development Dynamics (AfDD) Table 35 - Employment by occupation
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TAB36	1.0	Africa's Development Dynamics (AfDD) Table 36 - Employment by business activity and skill level
+OECD.DEV.EMEA	DSD_AFDD_STAT_ANNEX_RECENT@DF_TABALL	1.0	Africa's Development Dynamics (AfDD) - all tables, all indicators
+OECD.DEV.INDP	DSD_MASCUL@DF_MASCUL	1.0	OECD Masculinities Index database
+OECD.DEV.INDP	DSD_TPFD@DF_TPFD	1.0	Total Private Philanthropy for Development
+OECD.DEV.LAC	DSD_KIIBIH@DF_B10	1.0	Households with workers living with less than international poverty line by household formality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B11	1.0	Workers living with less than the national poverty line by worker formality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B12	1.0	Workers living with less than the international poverty line by worker formality, gender and status in employment
+OECD.DEV.LAC	DSD_KIIBIH@DF_B13	1.0	Workers covered by health insurance by worker formality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B14	1.0	Households with at least one member benefiting from a pension by household informality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B17	1.0	Health expenditure as share of household expenditure by household informality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B18	1.0	Hourly earnings ratio of formal to informal employees
+OECD.DEV.LAC	DSD_KIIBIH@DF_B19	1.0	Dependents by household informality and age group
+OECD.DEV.LAC	DSD_KIIBIH@DF_B20	1.0	Workers by formality status gender and hours worked
+OECD.DEV.LAC	DSD_KIIBIH@DF_B21	1.0	Informal workers by gender and age group
+OECD.DEV.LAC	DSD_KIIBIH@DF_B22	1.0	Informal workers by gender and level of education
+OECD.DEV.LAC	DSD_KIIBIH@DF_B23	1.0	Informal workers by gender and location
+OECD.DEV.LAC	DSD_KIIBIH@DF_B24	1.0	Informal workers by gender and status in employment
+OECD.DEV.LAC	DSD_KIIBIH@DF_B26	1.0	Workers contributing to pension by worker formality and gender
+OECD.DEV.LAC	DSD_KIIBIH@DF_B28	1.0	Population living with less than the international poverty line by household formality and gender
+OECD.DEV.LAC	DSD_KIIBIH@DF_B5	1.0	Informal workers by gender and household informality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B6	1.0	Population by urbanisation level and household informality
+OECD.DEV.LAC	DSD_KIIBIH@DF_B7	1.0	Population by households informality and welfare quintile
+OECD.DEV.LAC	DSD_KIIBIH@DF_B8	1.0	Workers by firm size and formality status
+OECD.DEV.LAC	DSD_KIIBIH_EMP@DF_EMP	1.1	Informal economy
+OECD.DEV.LAC	DSD_KIIBIH_HLD@DF_HLD	1.1	Household informality
+OECD.DEV.LAC	DSD_KIIBIH_LAB@DF_LAB	1.1	Workers' profiles
+OECD.DEV.LAC	DSD_KIIBIH_POV@DF_POV	1.1	Household and working poverty
+OECD.DEV.LAC	DSD_KIIBIH_SPI@DF_SPI	1.1	Access to social protection
+OECD.DEV.NPG	DF_T2SEV4EYSJTJMT3HVC8I	1.0	T2SEV4EYSJTJMT3HVC8I
+OECD.DEV.NPG	DF_TIG8YUX3T8CSYX7HSAMZ	1.0	TIG8YUX3T8CSYX7HSAMZ
+OECD.DEV.NPG	DSD_GID@DF_GID_2023	1.0	Gender, Institutions and Development Database (GID-DB) 2023
+OECD.DEV.NPG	DSD_SIGI@DF_SIGI_2023	1.0	Social Institutions and Gender Index (SIGI) 2023
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_ALB	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans - Albania
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_BIH	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans - Bosnia and Herzegovina
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_MKD	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans - North Macedonia
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_MNE	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans - Montenegro
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_SRB	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans - Serbia
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_WBC	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans
+OECD.DEV.RSDS	DSD_FFS@DF_FFS_XKV	1.0	Inventory of Energy Subsidies and Support Measures in the Western Balkans - Kosovo
+OECD.ECO.GCRD	DSD_PMR@DF_PMR	1.4	Product market regulation
+OECD.ECO.GCRD	DSD_PMR@DF_PMR_WBG	1.4	Product market regulation OECD-WBG (World Bank Group)
+OECD.ECO.MAD	DSD_CPU@DF_CPU	1.0	Climate Policy Uncertainty
+OECD.ECO.MAD	DSD_EO@DF_EO	1.5	Economic Outlook 119
+OECD.ECO.MAD	DSD_EO_114@DF_EO_114	1.0	Economic Outlook No 114
+OECD.ECO.MAD	DSD_EO_115@DF_EO_115	1.0	Economic Outlook No 115
+OECD.ECO.MAD	DSD_EO_116@DF_EO_116	1.0	Economic Outlook No 116
+OECD.ECO.MAD	DSD_EO_117@DF_EO_117	1.0	Economic Outlook No 117
+OECD.ECO.MAD	DSD_EO_118@DF_EO_118	1.0	Economic Outlook No 118
+OECD.ECO.MAD	DSD_EO_LTB@DF_EO_LTB	1.0	OECD Economic Outlook 117 long-term scenarios
+OECD.ECO.MAD	DSD_EPS@DF_EPS	1.0	OECD Environmental Policy Stringency Index
+OECD.ECO.MPD	DSD_AN_HOUSE_PRICES@DF_HOUSE_PRICES	1.0	Analytical house prices indicators
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS	1.0	Teaching and Learning International Survey
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS_AGE	1.0	Teaching and Learning International Survey by age
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS_INSTITUTION_TYPE	1.0	Teaching and Learning International Survey by institution type
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS_SEX	1.0	Teaching and Learning International Survey by sex
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS_STUDENTS_CHARACTERISTICS	1.0	Teaching and Learning International Survey by students characteristics
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS_TEACHER_PROFILE	1.0	Teaching and Learning International Survey by teachers profile
+OECD.EDU.ECS	DSD_TALIS@DF_TALIS_URBANISATION	1.0	Teaching and Learning International Survey by urbanisation
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ	1.0	Teaching and Learning International Survey on principals
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ_AGE	1.0	Teaching and Learning International Survey on principals by age
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ_INSTITUTION_TYPE	1.0	Teaching and Learning International Survey on principals by institution type
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ_SEX	1.0	Teaching and Learning International Survey on principals by sex
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ_STUDENTS_CHARACTERISTICS	1.0	Teaching and Learning International Survey on principals by students characteristics
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ_TEACHER_PROFILE	1.0	Teaching and Learning International Survey on principals by teachers profile
+OECD.EDU.ECS	DSD_TALIS_PQ@DF_TALIS_PQ_URBANISATION	1.0	Teaching and Learning International Survey on principals by urbanisation
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_AGE	1.1	Instruction time in compulsory general education by age
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_ALL	1.1	Student instruction time - full dataset
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_ISCED	1.1	Instruction time in compulsory general education
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_ISCED_REG	1.1	Instruction time in compulsory general education - Subnational entities
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_ORG	1.1	Organisation of compulsory general education
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_ORG_REG	1.1	Organisation of compulsory general education - Subnational entities
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_SUBJ_AGE	1.1	Instruction time per subject by age
+OECD.EDU.IMEP	DSD_EAG_IT@DF_EAG_IT_SUBJ_ISCED	1.1	Instruction time per subject by level of education
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_ALL	1.0	Education and earnings (EARNINGS) (full dataset)
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_DISTR_MEDIAN	1.0	Earners distribution based on their level of earnings relative to the overall median, by age group, gender and educational attainment level
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_FIELD	1.0	Earnings differences by field of study among tertiary-educated workers, by age group, gender and level of tertiary educational attainment
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_REL_BEL	1.0	Earnings of workers relative to the earnings of workers with below upper secondary educational attainment, by age group, gender and educational attainment level
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_REL_MALE	1.0	Earnings differences by gender, by age group and educational attainment level
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_REL_NATIVE	1.0	Earnings differences by country of birth and age at migration, by age group, gender and educational attainment level
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_REL_UPPER	1.0	Earnings of workers relative to the earnings of workers with upper secondary educational attainment, by age group, gender and educational attainment level
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_EARN_REL_YAD	1.0	Earnings of workers relative to the earnings of 25-34 year-olds, by age group, gender and educational attainment level
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_ALL	1.0	National Educational Attainment Classification (NEAC) and labour market status (full dataset)
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_DURUNEMP	1.0	Duration of unemployment distribution among unemployed adults, by educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_EA	1.0	Adults' educational attainment distribution, by age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_EA_FIELD	1.0	Field of study distribution of tertiary-educated adults, by level of tertiary educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_EA_MIGR	1.0	Adults' educational attainment distribution, by country of birth, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_GENDER	1.0	Adults' gender distribution, by educational attainment level and age group
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_DISTR_MIGR	1.0	Adults' migration status distribution, by educational attainment level, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_EMP	1.0	Employment rates of adults, by educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_EMP_FIELD	1.0	Employment rates of tertiary-educated adults, by field of study, tertiary educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_EMP_MIGR	1.0	Employment rates of adults, by educational attainment, age group, gender, country of birth and age at migration
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_INAC	1.0	Inactivity rates of adults, by educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_INAC_FIELD	1.0	Inactivity rates of tertiary-educated adults, by field of study, tertiary educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_INAC_MIGR	1.0	Inactivity rates of adults, by educational attainment, age group, gender, country of birth and age at migration
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_LF	1.0	Labour force participation rates of adults, by educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_UNEMP	1.0	Unemployment rates of adults, by educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_UNEMPLOYED	1.0	Share of unemployed adults among all adults, by educational attainment level, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_UNEMP_FIELD	1.0	Unemployment rates of tertiary-educated adults, by field of study, tertiary educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_NEAC_UNEMP_MIGR	1.0	Unemployment rates of adults, by educational attainment, age group, gender, country of birth and age at migration
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_TRANS	1.0	Distribution of young adults' education and work status, for a given level of educational attainment, age group and gender
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_TRANS_ALL	1.0	Youth's transition from education to work (TRANS) (full dataset)
+OECD.EDU.IMEP	DSD_EAG_LSO_EA@DF_LSO_TRANS_MIGR	1.0	Share of young adults who are not employment nor in formal education or training (NEET), by country of birth and age at migration
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_ALL	2.1	Actual salaries of teachers and school heads - full dataset
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_ALL	1.1	Actual salary of teachers and school heads - full dataset
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_SCH	1.1	School heads' actual salary
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_SCH_REG	1.1	School heads' actual salary (subnational data)
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_SCH_REL	1.1	School heads' actual salary relative to earnings of tertiary-educated workers
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_TCH	1.1	Teachers' actual salary
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_TCH_REG	1.1	Teachers' actual salary (subnational data)
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_EAG_SAL_ACT_TCH_REL	1.1	Teachers' actual salary relative to earnings of tertiary-educated workers
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_SCH	2.1	School heads' actual salaries
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_SCH_REG	2.1	School heads' actual salaries - Subnational entities
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_SCH_REL	2.1	School heads' actual salaries relative to workers' earnings
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_TCH	2.1	Teachers' actual salaries
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_TCH_REG	2.1	Teachers' actual salaries - Subnational entities
+OECD.EDU.IMEP	DSD_EAG_SAL_ACT@DF_TCH_REL	2.1	Teachers' actual salaries relative to workers' earnings
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_ALL	2.1	Statutory salaries of teachers and school heads - full dataset
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_ALL	1.1	Statutory salary of teachers and school heads - full dataset
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_SCH	1.1	School heads' statutory salary
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_SCH_REL	1.1	School heads' statutory salary relative to earnings of tertiary-educated workers
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_TCH	1.1	Teachers' statutory salary
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_TCH_COM	1.1	Comparison of teachers' statutory salary
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_TCH_REG	1.1	Teachers' statutory salary (subnational data)
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_EAG_SAL_STA_TCH_REL	1.1	Teachers' statutory salary relative to earnings of tertiary-educated workers
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_SCH	2.1	School heads' statutory salaries
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_SCH_REL	2.1	School heads' statutory salaries relative to workers' earnings
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_TCH	2.1	Teachers' statutory salaries
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_TCH_CHG	2.1	Change in teachers' statutory salaries over the career
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_TCH_REG	2.1	Teachers' statutory salaries - Subnational entities
+OECD.EDU.IMEP	DSD_EAG_SAL_STA@DF_TCH_REL	2.1	Teachers' statutory salaries relative to workers' earnings
+OECD.EDU.IMEP	DSD_EAG_SAL_TREND@DF_ALL	2.1	Trends in teachers' salaries - full dataset
+OECD.EDU.IMEP	DSD_EAG_SAL_TREND@DF_EAG_SAL_TREND_ACT	1.1	Trends in teachers’ actual salary since 2000
+OECD.EDU.IMEP	DSD_EAG_SAL_TREND@DF_EAG_SAL_TREND_ALL	1.1	Trends in teachers' salary - full dataset
+OECD.EDU.IMEP	DSD_EAG_SAL_TREND@DF_EAG_SAL_TREND_STA	1.1	Trends in teachers’ statutory salary since 2000
+OECD.EDU.IMEP	DSD_EAG_SAL_TREND@DF_TCH_ACT	2.1	Trends in teachers’ actual salaries since 2000
+OECD.EDU.IMEP	DSD_EAG_SAL_TREND@DF_TCH_STA	2.1	Trends in teachers’ statutory salaries since 2000
+OECD.EDU.IMEP	DSD_EAG_SUBNAT_UOE_FIN@DF_SUBNAT_UOE_FIN	1.0	Subnational total expenditure on educational institutions per full-time equivalent student
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_INDIC_SHARE_EDU_GOV	3.2	Share of total government expenditure on education
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_INDIC_SOURCE_NATURE	3.2	Full dataset - Indicators, source, destination and nature of expenditure on education
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_NATURE	1.0	Allocation of expenditure (from all sources) - full dataset
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_NATURE_CUR_CAP	3.2	Capital and total current expenditure on education (from all sources)
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_NATURE_STAFF	3.2	Expenditure on staff compensation in educational institutions (from all sources)
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_SOURCE	1.0	Source and destination of expenditure - full dataset
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_FIN_SOURCE_GV_PR_NDOM	3.2	Distribution of government, private and non-domestic expenditure on educational institutions
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_INDIC_FIN_GDP	1.0	Expenditure on educational institutions as a percentage of GDP
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN@DF_UOE_INDIC_FIN_PERSTUD	3.2	Expenditure on educational institutions per full-time equivalent student
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN_ANNEX@DF_UOE_FIN_ANNEX	3.2	Reference statistics for education finance indicators
+OECD.EDU.IMEP	DSD_EAG_UOE_FIN_ENR@DF_UOE_FIN_ENR	3.2	Enrolment data adjusted to the financial year
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_AGE	1.1	Share of teachers by age range
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_CLS	1.1	Average class size
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_RAW_AGE	1.1	Number of classroom teachers and academic staff by age
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_RAW_INST	1.1	Number of classroom teachers and academic staffs by type of institution
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_RAW_INST2	1.1	Number of teacher aides
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_SEX	1.1	Share of teachers by gender and age range
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_STR	1.1	Ratio of students to teaching staff by type of institution
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_PERS_STU	1.1	Number of students adjusted to classroom teachers and academic staffs by type of institution
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_PERS@DF_UOE_NF_TEACH_DB	1.1	Teachers (full database)
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_DIST_FIELD	1.1	Distribution of enrolled students, new entrants and graduates by field of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_DIST_RPTR	1.1	Repetition rate by level of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_DIST_VET	1.1	Distribution of students in vocational education and training programmes by level of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_ENRL_RATE	1.1	Enrolment rate by age
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_MEAN_AGE	1.1	Mean age of enrolled students, new entrants and graduates
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_NAT_MOB	1.1	Share of national tertiary students enrolled abroad
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_NR_NAT_ABROAD	1.1	Number of national tertiary students enrolled abroad
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_RAW_ADULT	1.1	Number of enrolled adults by age and level of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_RAW_AGE	1.1	Number of enrolled students, new entrants and graduates by age
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_RAW_FIELD	1.1	Number of enrolled students, graduates and new entrants by field of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_RAW_INST	1.1	Number of enrolled students and graduates by type of institution
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_RAW_MOB	1.1	Number of mobile students enrolled and graduated by country of origin
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_RAW_RPTR	1.1	Number of students and repeaters by grade and level of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_FIELD	1.1	Share of new entrants and graduates in each field of education by gender
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_FIRST	1.1	Share of new entrants to and first-time graduates at tertiary education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_GENDER	1.1	Share of enrolled students, new entrants and graduates by gender
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_INST	1.1	Distribution of enrolled students and graduates by type of institution
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_MOB	1.1	Share of mobile enrolments, new entrants and graduates
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_MOB_DEST	1.1	Share of mobile students enrolled at tertiary level by country of destination
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_MOB_ORG	1.1	Share of mobile students enrolled at tertiary level by country of origin
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_PT_FT	1.1	Share of enrolled part-time and full-time students
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_RPTR	1.1	Share of repeaters by gender and level of education
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_SHARE_VET	1.1	Share of students enrolled in school and work-based programmes
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_STUD_DB	1.1	Student (full database)
+OECD.EDU.IMEP	DSD_EAG_UOE_NON_FIN_STUD@DF_UOE_NF_STUD_TOTALS	1.1	Total number of enrolled students, new entrants and graduates
+OECD.EDU.IMEP	DSD_EAG_WT@DF_ACT_TCH	2.0	Teachers' actual teaching time
+OECD.EDU.IMEP	DSD_EAG_WT@DF_ALL	2.0	Teaching and working time of teachers - full dataset
+OECD.EDU.IMEP	DSD_EAG_WT@DF_EAG_WT_ACT_TCH	1.1	Teachers' actual annual teaching time
+OECD.EDU.IMEP	DSD_EAG_WT@DF_EAG_WT_ALL	1.1	Teaching and working time of teachers and school heads - full dataset
+OECD.EDU.IMEP	DSD_EAG_WT@DF_EAG_WT_STA_SCH	1.1	School heads' working time
+OECD.EDU.IMEP	DSD_EAG_WT@DF_EAG_WT_STA_TCH	1.1	Teachers' statutory teaching and working time
+OECD.EDU.IMEP	DSD_EAG_WT@DF_EAG_WT_STA_TCH_REG	1.1	Teachers' statutory teaching and working time (subnational data)
+OECD.EDU.IMEP	DSD_EAG_WT@DF_STA_TCH	2.0	Teachers' statutory teaching and working time
+OECD.EDU.IMEP	DSD_EAG_WT@DF_STA_TCH_REG	2.0	Teachers' statutory teaching and working time - Subnational entities
+OECD.EDU.IMEP	DSD_EAG_WT_TREND@DF_ALL	2.0	Trends in teachers' statutory teaching time since 2000
+OECD.ELS.HD	DSD_GHGHC@DF_GHGHC	1.0	Greenhouse gas emissions in the healthcare sector
+OECD.ELS.HD	DSD_HCQO@DF_AC	2.1	Acute care
+OECD.ELS.HD	DSD_HCQO@DF_CC	2.1	Cancer care
+OECD.ELS.HD	DSD_HCQO@DF_EOLC	2.1	End-of-life care
+OECD.ELS.HD	DSD_HCQO@DF_HCQO	2.1	Healthcare quality and outcomes
+OECD.ELS.HD	DSD_HCQO@DF_HKP	1.1	Hip and Knee Patient-Reported Outcome Measures
+OECD.ELS.HD	DSD_HCQO@DF_IC	2.1	Integrated care
+OECD.ELS.HD	DSD_HCQO@DF_MH	2.1	Mental healthcare
+OECD.ELS.HD	DSD_HCQO@DF_MHPREM	2.1	Mental health - patient reported experience measures
+OECD.ELS.HD	DSD_HCQO@DF_PC	2.1	Primary care
+OECD.ELS.HD	DSD_HCQO@DF_PE	2.1	Patient experiences
+OECD.ELS.HD	DSD_HCQO@DF_PIPC	2.1	Prescribing in primary care
+OECD.ELS.HD	DSD_HCQO@DF_PS	2.1	Patient safety
+OECD.ELS.HD	DSD_HCQO@DF_PSC	1.1	Patient Safety Culture
+OECD.ELS.HD	DSD_HEALTH_EMP_REAC@DF_PHYS	1.1	Physicians
+OECD.ELS.HD	DSD_HEALTH_EMP_REAC@DF_PHYS_AGE_SEX	1.1	Physicians by age and sex
+OECD.ELS.HD	DSD_HEALTH_EMP_REAC@DF_PHYS_CAT	1.1	Physicians by categories
+OECD.ELS.HD	DSD_HEALTH_EMP_REAC@DF_REAC	1.1	Healthcare human resources
+OECD.ELS.HD	DSD_HEALTH_EMP_REAC@DF_SOC_EMPLOY	1.1	Health and social employment
+OECD.ELS.HD	DSD_HEALTH_LTCR@DF_HEALTH_LTCR	1.0	Long-term care resources and utilisation
+OECD.ELS.HD	DSD_HEALTH_LTCR@DF_HEALTH_LTCR_BED	1.0	Long-term care resources and utilisation - beds
+OECD.ELS.HD	DSD_HEALTH_LTCR@DF_HEALTH_LTCR_RECIPIENT	1.0	Long-term care resources and utilisation - recipients
+OECD.ELS.HD	DSD_HEALTH_LTCR@DF_HEALTH_LTCR_WORKER	1.0	Long-term care resources and utilisation - workers
+OECD.ELS.HD	DSD_HEALTH_LTCR_FAC_OWNER@DF_HEALTH_LTCR_FAC_OWNER	1.0	Long-term care resources and recipients by facility ownership
+OECD.ELS.HD	DSD_HEALTH_LVNG@DF_HEALTH_LVNG	1.0	Risk factors for health
+OECD.ELS.HD	DSD_HEALTH_LVNG@DF_HEALTH_LVNG_AC	1.0	Alcohol consumption
+OECD.ELS.HD	DSD_HEALTH_LVNG@DF_HEALTH_LVNG_BW	1.0	Body weight
+OECD.ELS.HD	DSD_HEALTH_LVNG@DF_HEALTH_LVNG_FSC	1.0	Food supply and consumption
+OECD.ELS.HD	DSD_HEALTH_LVNG@DF_HEALTH_LVNG_TC	1.0	Tobacco consumption
+OECD.ELS.HD	DSD_HEALTH_LVNG@DF_HEALTH_LVNG_VP	1.0	Use of vaping products
+OECD.ELS.HD	DSD_HEALTH_MORTALITY@DF_MORTALITY	1.0	Mortality by week
+OECD.ELS.HD	DSD_HEALTH_MORTALITY@DF_MORTALITY_COVID	1.0	COVID-19 mortality by week
+OECD.ELS.HD	DSD_HEALTH_MORTALITY@DF_MORTALITY_EXCESS	1.0	Excess mortality by week
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_AGGR	1.2	Hospital aggregates
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_CONSULT	1.2	Consultations
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_DIAG_EXAM	1.2	Diagnostic exams
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_HOSP_AV_LENGTH	1.2	Hospital average length of stay by diagnostic categories
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_HOSP_DISCHARGE	1.2	Hospital discharges by diagnostic categories
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_IMMUN	1.2	Immunisations
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_KEY_INDIC	1.2	Healthcare utilisation
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_SCREEN	1.2	Screening
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_SURG_PROC	1.2	Surgical procedures
+OECD.ELS.HD	DSD_HEALTH_PROC@DF_WAITING	1.2	Waiting times
+OECD.ELS.HD	DSD_HEALTH_PROT@DF_HEALTH_PROT	1.1	Healthcare coverage
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_CARE	1.1	Caring personnel (personal care workers)
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_DNST	1.1	Dentists
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_GRAD	1.1	Graduates
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_HOSP_EMP	1.1	Hospital employment
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_MIDWIFE	1.1	Midwives
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_NURSE	1.1	Nurses
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_NURS_AGE_SEX	1.1	Nurses by age and sex
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_PHST	1.1	Pharmacists
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_PSIO	1.1	Physiotherapists
+OECD.ELS.HD	DSD_HEALTH_REAC_EMP@DF_REMUN	1.1	Remuneration of health professionals
+OECD.ELS.HD	DSD_HEALTH_REAC_HOSP@DF_BEDS_FUNC	1.1	Hospital beds by function of healthcare
+OECD.ELS.HD	DSD_HEALTH_REAC_HOSP@DF_BEDS_ICU	1.1	Intensive care unit (ICU) beds and use
+OECD.ELS.HD	DSD_HEALTH_REAC_HOSP@DF_BEDS_SECT	1.1	Hospital beds by sector
+OECD.ELS.HD	DSD_HEALTH_REAC_HOSP@DF_HOSP	1.1	Hospitals
+OECD.ELS.HD	DSD_HEALTH_REAC_HOSP@DF_HOSP_REAC	1.1	Healthcare provider resources
+OECD.ELS.HD	DSD_HEALTH_REAC_HOSP@DF_MED_TECH	1.1	Medical technology availability
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_AM	1.1	Avoidable mortality
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_AWDI	1.1	Sick leave from work
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_C	1.1	Cancer
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_CD	1.1	Communicable diseases
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_COM	1.1	Causes of mortality
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_HEALTH_STATUS	1.1	Health status
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_I	1.1	Injuries
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_IH_LB	1.1	Infant health: low birthweight
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_LE	1.1	Life expectancy
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_MIM	1.1	Maternal and infant mortality
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_PHS	1.1	Perceived health status
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_PHS_SES	1.1	Perceived health status by socio-economic status
+OECD.ELS.HD	DSD_HEALTH_STAT@DF_PYLL	1.1	Potential years of life lost
+OECD.ELS.HD	DSD_HEALTH_WFMI@DF_HEALTH_WFMI	1.0	Health workforce migration
+OECD.ELS.HD	DSD_HSCS2023@DF_HSCS2023	1.0	Health System Characteristics Survey - 2023 Round
+OECD.ELS.HD	DSD_HSCS@DF_HSCS	1.0	Health System Characteristics Survey 2012, 2016 and 2018(LAC) Rounds
+OECD.ELS.HD	DSD_PARIS@DF_PARIS	1.0	Patient-Reported Indicator Surveys (PaRIS)
+OECD.ELS.HD	DSD_SHA@DF_SHA	1.1	Health expenditure and financing
+OECD.ELS.HD	DSD_SHA@DF_SHA_COV	1.0	COVID-19 expenditure
+OECD.ELS.HD	DSD_SHA@DF_SHA_FP	1.1	Input costs for healthcare providers
+OECD.ELS.HD	DSD_SHA@DF_SHA_FS	1.1	Revenues of healthcare financing schemes
+OECD.ELS.HD	DSD_SHA@DF_SHA_HK	1.1	Gross fixed capital formation in the healthcare system
+OECD.ELS.HD	HEALTH_PHMC@DF_GEN_MRKT	1.1	Generic market
+OECD.ELS.HD	HEALTH_PHMC@DF_KEY_INDIC	1.1	Pharmaceutical market
+OECD.ELS.HD	HEALTH_PHMC@DF_PHMC_CONSUM	1.1	Pharmaceutical consumption
+OECD.ELS.HD	HEALTH_PHMC@DF_PHMC_SALES	1.1	Pharmaceutical sales
+OECD.ELS.IMD	DSD_MIG@DF_MIG	1.0	International migration database
+OECD.ELS.IMD	DSD_MIG@DF_MIG_EMP_EDU	1.0	Labour market outcomes of immigrants - Employment rates by educational attainment
+OECD.ELS.IMD	DSD_MIG@DF_MIG_NUP_SEX	1.0	Labour market outcomes of immigrants - Employment, unemployment, and participation rates by sex
+OECD.ELS.IMD	DSD_MIG_F@DF_MIG_POPF	1.0	International migration database - stocks of foreign-born population
+OECD.ELS.IMD	DSD_MIG_INT@DF_MIG_INT	1.0	Harmonised flows - internal database
+OECD.ELS.IMD	DSD_MIG_INT@DF_MIG_INT_PER	1.0	Standardised inflows of permanent-type migrants
+OECD.ELS.IMD	DSD_MIG_INT@DF_MIG_INT_TEMP	1.0	Standardised inflows of temporary migrants
+OECD.ELS.JAI	DSD_EPL@DF_EPL	1.0	Strictness of employment protection
+OECD.ELS.JAI	DSD_LMP@DF_LMP	1.0	Labour Market Programmes
+OECD.ELS.JAI	DSD_TAXBEN_HGRR@DF_HGRR	1.0	Historical gross replacement rates of unemployment benefits
+OECD.ELS.JAI	DSD_TAXBEN_HOURSPOV@DF_HOURSPOV	1.0	Hours of work needed to escape poverty
+OECD.ELS.JAI	DSD_TAXBEN_IA@DF_IA	1.0	Adequacy of minimum income benefits
+OECD.ELS.JAI	DSD_TAXBEN_IMW@DF_IMW	1.0	Annual net and gross earnings of minimum wage earners
+OECD.ELS.JAI	DSD_TAXBEN_METR@DF_METR	1.0	Effective tax rates on additional working hours
+OECD.ELS.JAI	DSD_TAXBEN_NCC@DF_NCC	1.1	Net childcare cost for parents using childcare facilities
+OECD.ELS.JAI	DSD_TAXBEN_NRR@DF_NRR	1.0	Net replacement rates in unemployment
+OECD.ELS.JAI	DSD_TAXBEN_PTR@DF_PTRCCSA	1.0	Effective tax rates on taking up work when claiming minimum income and using childcare services
+OECD.ELS.JAI	DSD_TAXBEN_PTR@DF_PTRCCUB	1.0	Effective tax rates on taking up work when claiming unemployment benefits and using childcare services
+OECD.ELS.JAI	DSD_TAXBEN_PTR@DF_PTRSA	1.0	Effective tax rates on taking up work when claiming minimum income benefits
+OECD.ELS.JAI	DSD_TAXBEN_PTR@DF_PTRUB	1.0	Effective tax rate on taking up work when claiming unemployment benefits
+OECD.ELS.JAI	DSD_TAXBEN_SBE@DF_SBE	1.0	Strictness of activation requirements for benefit recipients
+OECD.ELS.SAE	DSD_DUR@DF_AVD_DUR	1.0	Average duration of unemployment
+OECD.ELS.SAE	DSD_DUR@DF_DUR_D	1.0	Unemployment by duration
+OECD.ELS.SAE	DSD_DUR@DF_DUR_I	1.0	Incidence of unemployment by duration
+OECD.ELS.SAE	DSD_EARNINGS@AGE_WAGE_GAP	1.0	Wage gap by age
+OECD.ELS.SAE	DSD_EARNINGS@AV_AN_WAGE	1.0	Average annual wages
+OECD.ELS.SAE	DSD_EARNINGS@DATASET	1.0	Full earnings dataset
+OECD.ELS.SAE	DSD_EARNINGS@DEC_I	1.0	Decile ratios of gross earnings
+OECD.ELS.SAE	DSD_EARNINGS@GENDER_WAGE_GAP	1.1	Gender wage gap
+OECD.ELS.SAE	DSD_EARNINGS@MIN2AVE	1.0	Minimum relative to average wages of full-time workers
+OECD.ELS.SAE	DSD_EARNINGS@MW_CURP	1.0	Minimum wages at current prices in national currency units (NCU)
+OECD.ELS.SAE	DSD_EARNINGS@PAY_INCIDENCE	1.0	Incidence of low and high pay
+OECD.ELS.SAE	DSD_EARNINGS@RMW	1.0	Real minimum wages at constant prices
+OECD.ELS.SAE	DSD_FTPT@DF_FTPT	1.0	Full-time and part-time employment
+OECD.ELS.SAE	DSD_FTPT@DF_FTPT_COMMON	1.0	Full-time and part-time employment based on OECD-harmonized definition
+OECD.ELS.SAE	DSD_FTPT@DF_FTPT_COMMON_INC	1.0	Incidence of full-time and part-time employment based on OECD-harmonized definition
+OECD.ELS.SAE	DSD_FTPT@DF_FTPT_INC_GEN	1.0	Gender share of part-time employment
+OECD.ELS.SAE	DSD_FTPT@DF_FTPT_NATIONAL	1.0	Full-time and part-time employment based on national definition
+OECD.ELS.SAE	DSD_FTPT@DF_FTPT_NATIONAL_INC	1.0	Incidence of full-time and part-time employment based on national definitions
+OECD.ELS.SAE	DSD_HW@DF_AVG_ANN_HRS_WKD	1.0	Average annual hours actually worked per worker
+OECD.ELS.SAE	DSD_HW@DF_AVG_USL_WK_WKD	1.0	Average usual weekly hours worked on the main job
+OECD.ELS.SAE	DSD_HW@DF_EMP_LNG_USL_WK_HRS	1.0	Incidence of employment by long usual weekly hours worked
+OECD.ELS.SAE	DSD_HW@DF_EMP_USL_WK_HRS	1.0	Incidence of employment by usual weekly hours worked
+OECD.ELS.SAE	DSD_HW@DF_LNG_WK_HRS	1.0	Long usual weekly working hours
+OECD.ELS.SAE	DSD_HW@DF_USL_WK_HRS	1.0	Usual hours worked by weekly hour bands
+OECD.ELS.SAE	DSD_INVPT_EMP@DF_INVPT_D	1.1	Involuntary part time employment
+OECD.ELS.SAE	DSD_INVPT_EMP@DF_INVPT_I	1.1	Incidence of involuntary part time employment
+OECD.ELS.SAE	DSD_LFS@DF_LFS	1.1	Employment and unemployment by five-year age group and sex - levels
+OECD.ELS.SAE	DSD_LFS@DF_LFS_COMP	1.1	Employment and unemployment by five-year age group and sex - composition
+OECD.ELS.SAE	DSD_LFS@DF_LFS_INDIC	1.1	Employment and unemployment by five-year age group and sex - indicators
+OECD.ELS.SAE	DSD_POPULATION@DF_POP_ALL	1.0	Population data
+OECD.ELS.SAE	DSD_POPULATION@DF_POP_HIST	1.0	Historical population data
+OECD.ELS.SAE	DSD_POPULATION@DF_POP_PROJ	1.0	Population projections
+OECD.ELS.SAE	DSD_TEMP@DF_TEMP_D	1.0	Employment by permanency of the job
+OECD.ELS.SAE	DSD_TEMP@DF_TEMP_I	1.0	Employment by permanency of the job - Incidence
+OECD.ELS.SAE	DSD_TEMP@DF_TEMP_I_GEN	1.0	Share of women in temporary employment by permanency of the job
+OECD.ELS.SAE	DSD_TENURE@DF_TENURE_AVE	1.0	Employment by job tenure intervals - average job tenure
+OECD.ELS.SAE	DSD_TENURE@DF_TENURE_DIS	1.0	Employment by job tenure intervals - persons
+OECD.ELS.SAE	DSD_TENURE@DF_TENURE_FREQ	1.0	Employment by job tenure intervals - frequency
+OECD.ELS.SAE	DSD_TUD_CBC@DF_CBC	1.0	Collective bargaining coverage
+OECD.ELS.SAE	DSD_TUD_CBC@DF_TUD	1.0	Trade union density
+OECD.ELS.SPD	DSD_PAG@DF_DEC	1.0	Demographic and economic context
+OECD.ELS.SPD	DSD_PAG@DF_DPS	1.0	Design of pension systems
+OECD.ELS.SPD	DSD_PAG@DF_IPOP	1.0	Income and poverty of older people
+OECD.ELS.SPD	DSD_PAG@DF_PAG	1.0	Pensions at a glance
+OECD.ELS.SPD	DSD_PAG@DF_PRR	1.0	Pension replacement rates
+OECD.ELS.SPD	DSD_PAG@DF_PW	1.0	Pension wealth
+OECD.ELS.SPD	DSD_SOCX_AGG@DF_NET_GDP	1.0	Net total social expenditure in % GDP
+OECD.ELS.SPD	DSD_SOCX_AGG@DF_PUB_DIS_SIC	1.0	Public expenditure on disability and sickness cash benefits in % GDP
+OECD.ELS.SPD	DSD_SOCX_AGG@DF_PUB_FAM	1.0	Public expenditure on family by type of expenditure (cash and in kind) in % GDP
+OECD.ELS.SPD	DSD_SOCX_AGG@DF_PUB_OLD	1.0	Public expenditure on old-age and survivors cash benefits in % GDP
+OECD.ELS.SPD	DSD_SOCX_AGG@DF_PUB_PRV	1.0	Public and private social expenditure
+OECD.ELS.SPD	DSD_SOCX_AGG@DF_SOCX_AGG	1.0	Social expenditure aggregates
+OECD.ENV.EEI	DSD_GHG_PLC@DF_GHG_PLC	1.0	Greenhouse gas emissions from Plastic Lifecycle from 2015 to 2019
+OECD.ENV.EEI	DSD_GHG_PLC_P@DF_GHG_PLC_P	1.0	Projections of Greenhouse Gas Emissions from Plastic Lifecycle
+OECD.ENV.EEI	DSD_PL@DF_PL	1.0	Plastic Leakage - Estimations from 1990 to 2019
+OECD.ENV.EEI	DSD_PL_2019@DF_PL_2019	1.0	Plastic Leakage in 2019
+OECD.ENV.EEI	DSD_PL_P@DF_PL_P	1.0	Projections of Plastic Leakage
+OECD.ENV.EEI	DSD_PU@DF_PU	1.0	Plastics Use  - Estimations from 1990 to 2019
+OECD.ENV.EEI	DSD_PU_2019@DF_PU_2019	1.0	Plastics Use in 2019
+OECD.ENV.EEI	DSD_PU_P@DF_PU_P	1.0	Projections of Plastics Use
+OECD.ENV.EEI	DSD_PW@DF_PW	1.0	Plastic Waste  - Estimations from 1990 to 2019
+OECD.ENV.EEI	DSD_PW_2019@DF_PW_2019	1.0	Plastic Waste in 2019
+OECD.ENV.EEI	DSD_PW_P@DF_PW_P	1.0	Projections of Plastic Waste
+OECD.ENV.EEI	DSD_SWACHE@DF_SWACHE_PRIMARY	1.0	Surveys on Willingness-to-Pay to Avoid Negative Chemicals-Related Health Effects (SWACHE) values, primary estimates
+OECD.ENV.EEI	DSD_SWACHE@DF_SWACHE_TRANSFERRED	1.0	Surveys on Willingness-to-Pay to Avoid Negative Chemicals-Related Health Effects (SWACHE) values, transferred estimates
+OECD.ENV.EEI	DSD_VSL@DF_VSL_ALTERNATIVE	1.0	Value of Statistical Life (VSL), alternative estimates (for sensitivity analysis)
+OECD.ENV.EEI	DSD_VSL@DF_VSL_RECOMMENDED	1.0	Value of Statistical Life (VSL), recommended estimates
+OECD.ENV.EPI	DSD_AIR_EMISSIONS@DF_AIR_EMISSIONS	1.0	Air emissions - Air pollutants Inventories
+OECD.ENV.EPI	DSD_AIR_GHG@DF_AIR_GHG	1.0	Air emissions - Greenhouse gas emissions Inventories
+OECD.ENV.EPI	DSD_AIR_POL@DF_AIR_POLL	1.0	Exposure to air pollution
+OECD.ENV.EPI	DSD_CAPMF@DF_CAPMF	1.0	Climate actions and policies measurement framework
+OECD.ENV.EPI	DSD_CAPMF_NEW@DF_CAPMF_NEW	1.0	Climate actions and policies measurement framework
+OECD.ENV.EPI	DSD_EAMFP@DF_EAMFP	1.0	Environmentally adjusted multifactor productivity
+OECD.ENV.EPI	DSD_ECH@COAS_FLOOD	2.0	Coastal flooding exposure
+OECD.ENV.EPI	DSD_ECH@EXT_DROUGHT	1.1	Exposure to drought
+OECD.ENV.EPI	DSD_ECH@EXT_DROUGHT_H	2.0	Historical exposure to drought
+OECD.ENV.EPI	DSD_ECH@EXT_DROUGHT_P	2.0	Projected exposure to drought
+OECD.ENV.EPI	DSD_ECH@EXT_PREC	1.1	Exposure to extreme precipitation
+OECD.ENV.EPI	DSD_ECH@EXT_PREC_H	2.0	Historical exposure to extreme precipitation
+OECD.ENV.EPI	DSD_ECH@EXT_PREC_P	2.0	Projected exposure to extreme precipitation
+OECD.ENV.EPI	DSD_ECH@EXT_TEMP	1.1	Exposure to extreme temperature
+OECD.ENV.EPI	DSD_ECH@EXT_TEMP_H	2.0	Historical exposure to extreme temperature
+OECD.ENV.EPI	DSD_ECH@EXT_TEMP_P	2.1	Projected exposure to extreme temperature
+OECD.ENV.EPI	DSD_ECH@FIRE_THREAT	2.0	Wildfire exposure
+OECD.ENV.EPI	DSD_ECH@RIV_FLOOD	2.0	River flooding exposure
+OECD.ENV.EPI	DSD_ECH@WIND_THREAT	2.0	Wind threat exposure
+OECD.ENV.EPI	DSD_EPEA@DF_EPEA	2.0	Environmental Protection Expenditure Accounts
+OECD.ENV.EPI	DSD_ERTR@DF_ERTR	1.0	Environmentally related tax revenue
+OECD.ENV.EPI	DSD_ERTR@DF_ERTR_ACC	1.0	Environmentally related tax revenue accounts
+OECD.ENV.EPI	DSD_EWASTE@DF_EWASTE	1.0	Waste - Electrical and electronic equipment (e-waste or WEEE)
+OECD.ENV.EPI	DSD_EXP_MORSC@DF_EXP_MORSC	1.0	Mortality, morbidity and welfare cost from exposure to environment-related risks
+OECD.ENV.EPI	DSD_FOREST@DF_FOREST	1.0	Intensity of use of forest resources
+OECD.ENV.EPI	DSD_GG@DF_GREEN_GROWTH	1.2	Green Transition
+OECD.ENV.EPI	DSD_GREEN_TRANSITION@DF_GREEN_TRANSITION	1.0	Green transition hidden
+OECD.ENV.EPI	DSD_HAZW@DF_HAZW	1.0	Waste - Hazardous waste: generation and movements
+OECD.ENV.EPI	DSD_IPAC@DF_IPAC	1.2	IPAC Dashboard indicators
+OECD.ENV.EPI	DSD_LAND@DF_LAND_COVER	1.0	Land cover and land cover change
+OECD.ENV.EPI	DSD_LAND_USE@DF_LAND_USE	1.0	Land use
+OECD.ENV.EPI	DSD_LAND_USE_HID@DF_LAND_USE_HID	1.0	Land use hidden
+OECD.ENV.EPI	DSD_MATERIAL_RESOURCES@DF_MATERIAL_RESOURCES	1.0	Material flow accounts
+OECD.ENV.EPI	DSD_MUNW@DF_MUNW	1.0	Waste - Municipal waste: generation and treatment
+OECD.ENV.EPI	DSD_PA@DF_PROT_AREA	1.0	Protected areas
+OECD.ENV.EPI	DSD_PAT_COL@DF_PAT_COL	1.0	Patents - international bilateral collaboration in technology development
+OECD.ENV.EPI	DSD_PAT_COL_RATES@DF_PAT_COL_RATES	1.0	Patents - international collaboration in technology development
+OECD.ENV.EPI	DSD_PAT_DEV@DF_PAT_DEV	1.0	Patents - technology development
+OECD.ENV.EPI	DSD_PAT_DIFF@DF_PAT_DIFF	1.0	Patents - technology diffusion
+OECD.ENV.EPI	DSD_PAT_IND@DF_PAT_IND	1.0	Patents - indicators
+OECD.ENV.EPI	DSD_SOE@DF_SOE	1.0	Sustainable Ocean Economy
+OECD.ENV.EPI	DSD_SOE@DF_SOE_COU	1.0	Sustainable Ocean Economy - All countries by indicator
+OECD.ENV.EPI	DSD_WATER_ABSTRACT@DF_WATER_ABSTRACT	1.0	Freshwater - abstractions
+OECD.ENV.EPI	DSD_WATER_ASSET_ACCOUNTS@DF_WATER_ASSET_ACCOUNTS	1.0	Water accounts - assets
+OECD.ENV.EPI	DSD_WATER_DISCHARGE@DF_WATER_DISCHARGE	1.0	Wastewater - generation and discharge
+OECD.ENV.EPI	DSD_WATER_PSUT@DF_WATER_PSUT	1.0	Water accounts - supply and use
+OECD.ENV.EPI	DSD_WATER_RESOURCES@DF_WATER_RESOURCES	1.0	Freshwater - resources
+OECD.ENV.EPI	DSD_WATER_TREAT@DF_WATER_TREAT	1.0	Wastewater - connection rates to treatment
+OECD.ENV.EPI	DSD_WATER_USE@DF_WATER_USE	1.0	Freshwater - use
+OECD.ENV.EPI	DSD_WILD_LIFE@DF_WILD_LIFE	1.0	Threatened species
+OECD.ENV.EPI	DSD_WSECTOR@DF_WSECTOR	1.0	Waste - Waste by sector: generation, recovery and recycling
+OECD.ENV.EPI	DSD_WSTREAMS@DF_WSTREAMS	1.0	Waste - Selected waste streams: generation, recovery and recycling
+OECD.FATF	DSD_KFRA@DF_RC_IO	1.0	Effectiveness text - 4th round (2013 Methodology)
+OECD.FATF	DSD_KFRA_5@DF_RC_IO	1.0	Effectiveness text - 5th round (2022 Methodology)
+OECD.FATF	DSD_RAT@DF_EFF	3.2	Effectiveness Ratings - 4th round (2013 Methodology)
+OECD.FATF	DSD_RAT_5@DF_EFF_5	1.1	Effectiveness Ratings - 5th round (2022 Methodology)
+OECD.FATF	DSD_RAT_5_PUBLIC@DF_TC_DD_5_PUBLIC	1.0	Technical Compliance Ratings - 5th round (2022 Methodology) - Public version
+OECD.FATF	DSD_RAT_PUBLIC@DF_TC_DD_PUBLIC	1.0	Technical Compliance Ratings - 4th round (2013 Methodology) - Public version
+OECD.FATF	DSD_TCOMP_5_PUBLIC@DF_TECH_COMP_5_PUBLIC	1.0	Technical Compliance Annex - 5th round (2022 Methodology) - Public version
+OECD.FATF	DSD_TCOMP_PUBLIC@DF_TECH_COMP_PUBLIC	1.0	Technical Compliance Annex - 4th round (2013 Methodology) - Public version
+OECD.GOV.GIP	DSD_GOV@DF_GOV_2023	1.0	Main indicators, Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_2025	1.0	Main indicators, government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_BP_2023	1.0	Green and Gender budgeting indexes - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_DGOGD_2025	1.0	Digital government and open government data indexes - Government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_EMPPS_REP_2023	1.0	Public employment and representation - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_EMPPS_REP_2025	1.0	Public employment and representation - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_EMPPS_REP_YU	1.0	Public employment and representation - government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_GOV@DF_GOV_HRM_2025	1.0	Human resource management indexes - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_INFPD_2023	1.0	Infrastructure planning and delivery indexes - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_INFPD_2025	1.0	Infrastructure planning and delivery indexes - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_PF_2023	1.0	Public finance main indicators - Government at a glance, 2023 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_PF_2025	1.0	Public finance main indicators - government at a glance, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_PF_YU	1.0	Public finance main indicators - government at a glance, yearly updates
+OECD.GOV.GIP	DSD_GOV@DF_GOV_PPROC_2023	1.0	Size of public procurement - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_PPROC_2025	1.0	Size of public procurement - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV@DF_GOV_PPROC_YU	1.0	Size of public procurement - government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_GOV@DF_GOV_YU	1.0	Main indicators, government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_GOV_COFOG@DF_GOV_COFOG_2023	1.0	Public finance and procurement by function - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_COFOG@DF_GOV_COFOG_2025	1.0	Public finance and procurement by function - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_COFOG@DF_GOV_COFOG_YU	1.0	Public finance by function - government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_GOV_COMPEMP@DF_GOV_COMPEMP_2025	1.0	Central administration employment by age, gender, education and position - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_FIN_INSTR@DF_GOV_FIN_INSTR_2023	1.0	Government debt by financial instrument - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_FIN_INSTR@DF_GOV_FIN_INSTR_2025	1.0	Government debt by financial instrument - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_FIN_INSTR@DF_GOV_FIN_INSTR_YU	1.0	Government debt by financial instrument - government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_GOV_INT@DF_GOV_INT_2025	1.0	Perception of public sector integrity - Government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_INT@DF_GOV_SPS_2025	1.1	Satisfaction with public services - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_INT@DF_GOV_TDG_2025	1.1	Trust, security and dignity - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_LEVEL@DF_GOV_LEVEL_2023	1.0	Public finance and procurement by level of government - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_LEVEL@DF_GOV_LEVEL_2025	1.0	Public finance and procurement by level of government - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_LEVEL@DF_GOV_LEVEL_YU	1.0	Public finance and procurement by level of government - government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_GOV_REG@DF_GOV_REG_2023	1.0	Stakeholder engagement, RIA, and Ex post evaluation indexes - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_REG@DF_GOV_REG_2025	1.0	Stakeholder engagement, RIA, and ex post evaluation indexes - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_TDG_SPS_GPC@DF_GOV_GPC_2023	1.0	Governance of the policy cycle - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_TDG_SPS_GPC@DF_GOV_SPS_2023	1.0	Satisfaction with public services - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_TDG_SPS_GPC@DF_GOV_TDG_2023	1.0	Trust and democratic governance - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_TDG_SPS_GPC@DF_GOV_TDG_SPS_GPC_2023	1.0	Trust, Satisfaction with public services and governance of the policy cycle, 2023 edition
+OECD.GOV.GIP	DSD_GOV_TRANSACTION@DF_GOV_TRANSACTION_2023	1.0	Public finance by economic transaction - Government at a glance indicators, 2023 edition
+OECD.GOV.GIP	DSD_GOV_TRANSACTION@DF_GOV_TRANSACTION_2025	1.0	Public finance by economic transaction - government at a glance indicators, 2025 edition
+OECD.GOV.GIP	DSD_GOV_TRANSACTION@DF_GOV_TRANSACTION_YU	1.0	Public finance by economic transaction - government at a glance indicators, yearly updates
+OECD.GOV.GIP	DSD_QDD_GOV_ARFND@DF_GOV_ARFND	1.0	Accounting and Reporting for the Fiscal Costs of Natural Disasters - 2025
+OECD.GOV.GIP	DSD_QDD_GOV_DGI_2025@DF_GOV_DGI_2025	1.0	Digital government - 2025
+OECD.GOV.GIP	DSD_QDD_GOV_FMR@DF_GOV_FMR	1.0	Financial Management and Reporting - 2022
+OECD.GOV.GIP	DSD_QDD_GOV_GENBUD@DF_GOV_GENBUD	1.0	Gender Budgeting - 2022
+OECD.GOV.GIP	DSD_QDD_GOV_GREENBUD@DF_GOV_GREENBUD	1.0	Green Budgeting - 2022
+OECD.GOV.GIP	DSD_QDD_GOV_GRPUBPRO@DF_GOV_GRPUBPRO	1.0	Green public procurement - 2022
+OECD.GOV.GIP	DSD_QDD_GOV_INFRA_2023@DF_GOV_INFRA_2023	1.0	Governance of infrastructure - 2023
+OECD.GOV.GIP	DSD_QDD_GOV_INFRA_PH_2@DF_GOV_INFRA_PH_2	1.0	Governance of infrastructure - 2022
+OECD.GOV.GIP	DSD_QDD_GOV_OGD_2025@DF_GOV_OGD_2025	1.0	Open government data - 2025
+OECD.GOV.GIP	DSD_QDD_GOV_PCSD_2023@DF_GOV_PCSD_2023	1.0	Policy coherence for sustainable development - 2023
+OECD.GOV.GIP	DSD_QDD_GOV_PE@DF_GOV_PE	1.0	Public policy evaluation - 2023
+OECD.GOV.GIP	DSD_QDD_GOV_PERBUD@DF_GOV_PERBUD	1.0	Performance budgeting - 2023
+OECD.GOV.GIP	DSD_QDD_GOV_PSLC_2022@DF_GOV_PSLC_2022	1.0	Public service leadership and capability - 2022
+OECD.GOV.GIP	DSD_QDD_GOV_PSLC_2024@DF_GOV_PSLC_2024	1.0	Public service leadership and capability - 2024
+OECD.GOV.GIP	DSD_QDD_GOV_PUBPRO_2024@DF_GOV_PUBPRO_2024	1.0	Public procurement - 2024
+OECD.GOV.GIP	DSD_QDD_GOV_REG@DF_GOV_REG	1.0	Regulatory governance
+OECD.GOV.GIP	DSD_QDD_GOV_REG_DD@DF_GOV_REG_DD	1.0	Regulatory governance (with microdata)
+OECD.GOV.GIP	DSD_QDD_GOV_SP_REV@DF_GOV_SP_REV	1.0	Spending review - 2023
+OECD.GOV.PSI	DSD_PII@DF_PUBLIC_INTEGRITY	1.5	Public Integrity Indicators
+OECD.ITF	DSD_INDICATORS@DF_ECONOMIC	1.0	Transport economic and social indicators
+OECD.ITF	DSD_INDICATORS@DF_ENVIRONMENT	1.0	Transport energy and environment indicators
+OECD.ITF	DSD_INDICATORS@DF_EQUIPMENT	1.0	Transport equipment indicators
+OECD.ITF	DSD_INDICATORS@DF_INFRASTRUCTURE	1.0	Transport infrastructure indicators
+OECD.ITF	DSD_INDICATORS@DF_MEASUREMENT	1.0	Transport activity indicators
+OECD.ITF	DSD_INDICATORS@DF_SAFETY	1.0	Transport safety indicators
+OECD.ITF	DSD_INDICATORS@DF_TRAFFIC	1.0	Transport traffic indicators
+OECD.ITF	DSD_INDICATORS@DF_TRANSPORTINDICATORS	1.0	Transport performance indicators
+OECD.ITF	DSD_INFRINV@DF_INFRINV	1.0	Transport infrastructure investment and maintenance spending
+OECD.ITF	DSD_ST@DF_STFAT	1.0	Fatalities
+OECD.ITF	DSD_ST@DF_STFREIGHT	1.0	Freight transport
+OECD.ITF	DSD_ST@DF_STFUEL	1.0	Motor fuel deliveries
+OECD.ITF	DSD_ST@DF_STINDICATORS	1.0	Short term transport indicators
+OECD.ITF	DSD_ST@DF_STPASS	1.0	Passenger transport
+OECD.ITF	DSD_ST@DF_STREG	1.0	First registrations of brand new vehicles
+OECD.ITF	DSD_ST@DF_STTRAFFIC	1.0	Road motor vehicle traffic
+OECD.ITF	DSD_TRENDS@DF_TRENDS	1.0	Annual transport trends
+OECD.ITF	DSD_TRENDS@DF_TRENDSCONT	1.0	Annual container transport
+OECD.ITF	DSD_TRENDS@DF_TRENDSFREIGHT	1.0	Annual freight transport
+OECD.ITF	DSD_TRENDS@DF_TRENDSINFR	1.0	Annual length of inland transport infrastructure
+OECD.ITF	DSD_TRENDS@DF_TRENDSPASS	1.0	Annual passenger transport
+OECD.ITF	DSD_TRENDS@DF_TRENDSSAFETY	1.0	Annual road fatalities, injured, injury crashes
+OECD.SDD.NAD	DSD_EGDNA_CONS_HHT@DF_CONS_HHT	1.0	Household consumption in the National Accounts: distributions by household type
+OECD.SDD.NAD	DSD_EGDNA_CONS_INC@DF_CONS_INC	1.0	Household consumption in the National Accounts: distributions by income quintile
+OECD.SDD.NAD	DSD_EGDNA_CONS_MSI@DF_CONS_MSI	1.0	Household consumption in the National Accounts: distributions by main source of income
+OECD.SDD.NAD	DSD_EGDNA_INC_HHT@DF_INC_HHT	1.0	Household income and saving in the National Accounts: distributions by household type
+OECD.SDD.NAD	DSD_EGDNA_INC_INC@DF_INC_INC	1.0	Household income and saving in the National Accounts: distributions by income quintile
+OECD.SDD.NAD	DSD_EGDNA_INC_MSI@DF_INC_MSI	1.0	Household income and saving in the National Accounts: distributions by main source of income
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC	1.0	Annual Distributional National Accounts: Socio-demographic characteristics
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_AGE	1.0	Population in the National Accounts: distribution of people in income quintiles by age
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_EDUCATION	1.0	Population in the National Accounts: distribution of people in income quintiles by educational attainment level
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_GENDER	1.0	Population in the National Accounts: distribution of people in income quintiles by sex
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_HHGROUP	1.0	Population in the National Accounts: distributions by household type
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_HHOWN	1.0	Population in the National Accounts: distribution of households in income quintiles by home ownership status
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_HHTYPE	1.0	Population in the National Accounts: distribution of households in income quintiles by household type
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_LABOUR	1.0	Population in the National Accounts: distribution of people in income quintiles by labour market status
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_MAININC	1.0	Population in the National Accounts: distributions by main source of income
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_MSI	1.0	Annual Distributional National Accounts: Socio-demographic characteristics: Disposable income group by main source of income
+OECD.SDD.NAD	DSD_EGDNA_SOCDEM@DF_SOCIODEMOGRAPHIC_QUINTILES	1.0	Population in the National Accounts: distributions of income quintiles by socio-demographic groups
+OECD.SDD.NAD	DSD_FIN_DASH@DF_7II_INDIC	1.0	Institutional Investors' Indicators
+OECD.SDD.NAD	DSD_FIN_DASH@DF_FIN_DASH	1.0	Financial Dashboard
+OECD.SDD.NAD	DSD_FIN_DASH@DF_FIN_DASH_S1	1.0	Financial indicators dashboard: Total economy
+OECD.SDD.NAD	DSD_FIN_DASH@DF_FIN_DASH_S11	1.0	Financial indicators dashboard: Non-financial corporations
+OECD.SDD.NAD	DSD_FIN_DASH@DF_FIN_DASH_S12	1.0	Financial indicators dashboard: Financial corporations
+OECD.SDD.NAD	DSD_FIN_DASH@DF_FIN_DASH_S13	1.0	Financial indicators dashboard: Government
+OECD.SDD.NAD	DSD_FIN_DASH@DF_FIN_DASH_S1M	1.0	Financial indicators dashboard: Households and NPISH
+OECD.SDD.NAD	DSD_HHDASH@DF_HHDASH_CTRY	1.1	Household indicators dashboard – country view
+OECD.SDD.NAD	DSD_HHDASH@DF_HHDASH_INDIC	1.1	Household indicators dashboard – indicator view
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG	1.0	NAAG
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_I	1.0	NAAG Chapter 1: GDP
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_II	1.0	NAAG Chapter 2: Income
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_III	1.0	NAAG Chapter 3: Expenditure
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_III_CG	1.0	NAAG Chapter 3A: Components of aggregate demand
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_III_GFCF	1.0	NAAG Chapter 3B: Gross fixed capital formation by asset type
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_IX	1.0	NAAG Chapter 9: Reference Series
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_V	1.0	NAAG Chapter 5: Households
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_VII	1.0	NAAG Chapter 7: Corporations
+OECD.SDD.NAD	DSD_NAAG@DF_NAAG_VIII	1.0	NAAG Chapter 8: Capital
+OECD.SDD.NAD	DSD_NAAG_IV@DF_NAAG_IV	1.0	NAAG Chapter 4: Production
+OECD.SDD.NAD	DSD_NAAG_VI@DF_NAAG_EXP	1.0	NAAG Chapter 6: Government
+OECD.SDD.NAD	DSD_NAAG_VI@DF_NAAG_OTEF	1.0	NAAG Chapter 6A: Government expenditure by function
+OECD.SDD.NAD	DSD_NAAG_VI@DF_NAAG_VI	1.0	NAAG Chapter 6: General Government
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1	2.0	Annual GDP and components following the three approaches (for 'Developer API')
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE	2.0	Annual GDP and components - expenditure approach
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_CPC	2.0	Annual GDP and components - expenditure approach, US $, current prices, current PPPs, millions
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_GFCF_ASSET	2.0	Annual GFCF by asset
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_GROWTH	2.0	Annual GDP and components - expenditure approach, growth rates
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_HCPC	2.0	Annual GDP and consumption per capita, US $, current prices, current PPPs
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_HVPVOB	2.0	Annual GDP and consumption per capita, US $, volume, constant PPPs, reference year 2020
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_EXPENDITURE_VPVOB	2.0	Annual GDP and components - expenditure approach, US $, volume, constant PPPs, reference year 2020, millions
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_INCOME	2.0	Annual GDP and components - income approach
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_MULT_INDICES	2.0	Annual GDP and consumption per capita  - multilateral indices
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE1_OUTPUT	2.0	Annual GDP and components - output approach
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE2	2.0	Annual national disposable income, saving and net lending/net borrowing
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE2_B5N_HCPC	2.0	Annual net national income per capita, US $, current prices, current PPPs
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE2_B5N_HVPVOB	2.0	Annual net national income per capita, US $, volume, constant PPPs, reference year 2020
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE2_B6_VPVOP	2.0	Annual national disposable income, US $, volume, constant PPPs
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE2_B9_CPC	2.0	Annual national net lending/net borrowing, US $, current prices, current PPPs
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE3	2.0	Annual employment and population (for 'Developer API')
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE3_EMPDC	2.0	Annual employment by economic activity, domestic concept
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE3_EMP_SECTOR	2.0	Annual employment by institutional sector, domestic concept
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE3_POP_EMPNC	2.0	Annual population and employment, national concept
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE4	2.0	Annual Purchasing Power Parities and exchange rates
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE4_PPP_P31S14	1.0	Annual Purchasing Power Parities for households final consumption expenditure
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE4_PPP_P41	1.0	Annual Purchasing Power Parities for actual individual consumption
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5	1.0	Annual households final consumption expenditure (for 'Developer API')
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5A_T117	2.0	Annual household final consumption expenditure of durable goods and other goods and services (COICOP 2018)
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5A_T500	2.0	Annual household final consumption expenditure by purpose (COICOP 2018) (for 'Developer API')
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5A_T501	2.0	Annual household final consumption expenditure by purpose (COICOP 2018)
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5A_T502	2.0	Annual household final consumption expenditure on the territory and abroad (COICOP 2018)
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5_T117	1.0	Annual household final consumption expenditure of durable goods and other goods and services
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5_T501	1.0	Annual household final consumption expenditure by purpose (COICOP)
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE5_T502	1.0	Annual household final consumption expenditure on the territory and abroad
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE6	2.0	Annual value added and its components by economic activity
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE7	2.0	Annual employment by detailed economic activity, domestic concept
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE8	2.0	Annual capital formation by economic activity
+OECD.SDD.NAD	DSD_NAMAIN10@DF_TABLE9A	2.0	Annual fixed assets by economic activity and by asset
+OECD.SDD.NAD	DSD_NAMAIN10_IDC@DF_TABLE5A_IDC	1.0	Annual final consumption expenditure of households International Transfer (COICOP 2018)
+OECD.SDD.NAD	DSD_NAMAIN10_IDC@DF_TABLE5_IDC	1.0	Annual final consumption expenditure of households International Transfer
+OECD.SDD.NAD	DSD_NAMAIN10_IDC@DF_TABLE6A_IDC	1.0	Annual value added and its components by activity International Transfer
+OECD.SDD.NAD	DSD_NAMAIN10_IDC@DF_TABLE7A_IDC	1.0	Annual labour input by activity International Transfer
+OECD.SDD.NAD	DSD_NAMAIN10_IDC@DF_TABLE8A_IDC	1.0	Annual capital formation by activity International Transfer
+OECD.SDD.NAD	DSD_NAMAIN10_IDC@DF_TABLE9A_IDC	1.0	Annual fixed assets by activity and by asset International Transfer
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA	1.1	Quarterly National Accounts (for 'Developer API')
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_BY_ACTIVITY_COE	1.1	Quarterly compensation of employees by economic activity
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_BY_ACTIVITY_EMPDC	1.1	Quarterly employment by economic activity, domestic concept
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_BY_ACTIVITY_OUTPUT	1.1	Quarterly GDP and components - output approach
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_CAPITA	1.1	Quarterly GDP per capita
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_CONTRIB	1.1	Quarterly GDP and components  - expenditure approach, real growth rates and contributions to real growth
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_DURABILITY	1.1	Quarterly household final consumption expenditure of durable goods and other goods and services
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_GFCF_ASSET	1.1	Quarterly GFCF by asset
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_GFCF_SECTOR	1.1	Quarterly GFCF by institutional sector
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_GROWTH_G20	1.1	Quarterly real GDP growth - G20 countries
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_GROWTH_OECD	1.1	Quarterly real GDP growth - OECD countries
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_INDICES	1.1	Quarterly GDP and components - expenditure approach -  volume and price indices
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_NATIO_CURR	1.1	Quarterly GDP and components - expenditure approach, national currency
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_EXPENDITURE_USD	1.1	Quarterly GDP and components - expenditure approach, US Dollars
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_INCOME	1.1	Quarterly GDP and components - income approach
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_INC_SAV	1.1	Quarterly disposable income, saving and net lending/net borrowing
+OECD.SDD.NAD	DSD_NAMAIN1@DF_QNA_POP_EMPNC	1.1	Quarterly population and employment, national concept
+OECD.SDD.NAD	DSD_NAPENS@DF_TABLE29	1.0	Social insurance pensions
+OECD.SDD.NAD	DSD_NAPENS_IDC@DF_TABLE29_IDC	1.0	Social insurance pensions International Transfer
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE10	1.1	Annual government taxes and social contributions receipts
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE11	1.1	Annual government expenditure by function (COFOG)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE12	1.1	Annual government non-financial accounts and key indicators (for 'Developer API')
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE12_BAL	1.1	Annual government non-financial accounts and key indicators (Balancing items)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE12_EMPDC	1.1	Annual employment by subsector of general government, domestic concept
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE12_EXP	1.1	Annual government non-financial accounts and key indicators (Expenditure)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE12_REV	1.1	Annual government non-financial accounts and key indicators (Revenue)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE13	1.1	Annual simplified non-financial accounts by institutional sector (for 'Developer API')
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE13_BAL	1.1	Annual simplified non-financial accounts by institutional sector (Balancing items)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE13_EXP	1.1	Annual simplified non-financial accounts by institutional sector (Expenditure)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE13_REV	1.1	Annual simplified non-financial accounts by institutional sector (Revenue)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE14	1.1	Annual non-financial accounts by institutional sector (for 'Developer API')
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE14_EXP	1.1	Annual non-financial accounts by institutional sector (Expenditure)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE14_GFCF	1.1	Annual investment by asset and institutional sector
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE14_REV	1.1	Annual non-financial accounts by institutional sector (Revenue)
+OECD.SDD.NAD	DSD_NASEC10@DF_TABLE9B	1.1	Annual balance sheets for non-financial assets
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_PSD_IDC	1.0	Quarterly Public Sector Debt, consolidated, nominal value IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE10_IDC	1.0	Annual taxes and social contributions receipts IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE11_IDC	1.0	Annual government expenditure by function (COFOG) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE12_IDC	1.0	Annual government deficit/surplus, revenue, expenditure and main aggregates IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE14_IDC	1.0	Annual non-financial accounts by institutional sectors IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE610A_IDC	1.0	Annual Financial Accounts (flows), consolidated (Table T0610) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE610Q_IDC	1.0	Quarterly Financial Accounts (flows), consolidated (Table T0610) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE620A_IDC	1.0	Annual Financial Accounts (flows), non-consolidated (Table T0620) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE620Q_IDC	1.0	Quarterly Financial Accounts (flows), non-consolidated (Table T0620) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE710A_IDC	1.0	Annual Financial Balance Sheets (stocks), consolidated (Table T0710) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE710Q_IDC	1.0	Quarterly Financial Balance Sheets (stocks), consolidated (Table T0710) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE720A_IDC	1.0	Annual Financial Balance Sheets (stocks), non-consolidated (Table T0720) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE720Q_IDC	1.0	Quarterly Financial Balance Sheets (stocks), non-consolidated (Table T0720) IDC
+OECD.SDD.NAD	DSD_NASEC10_IDC@DF_TABLE9B_IDC	1.0	Annual balance sheets for non-financial assets IDC
+OECD.SDD.NAD	DSD_NASEC1@DF_QSA	1.1	Quarterly Sector Accounts (for 'Developer API')
+OECD.SDD.NAD	DSD_NASEC1@DF_QSA_EMPLOYMENT	1.1	Quarterly employment by institutional sector, domestic concept
+OECD.SDD.NAD	DSD_NASEC1@DF_QSA_TRANSACTIONS_C	1.1	Quarterly non-financial accounts by institutional sector (Revenue)
+OECD.SDD.NAD	DSD_NASEC1@DF_QSA_TRANSACTIONS_D	1.1	Quarterly non-financial accounts by institutional sector (Expenditure)
+OECD.SDD.NAD	DSD_NASEC1_IDC@DF_TABLE801_IDC	1.0	Quarterly non-financial accounts by institutional sectors IDC
+OECD.SDD.NAD	DSD_NASEC20@DF_T610GOV_A	1.1	Government Annual Financial Accounts (flows), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T610GOV_Q	1.1	Government Quarterly Financial Accounts (flows), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T610R_A	1.1	Annual Financial Accounts (flows), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T610R_Q	1.1	Quarterly Financial Accounts (flows), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T620GOV_A	1.1	Government Annual Financial Accounts (flows), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T620GOV_Q	1.1	Government Quarterly Financial Accounts (flows), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T620R_A	1.1	Annual Financial Accounts (flows), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T620R_Q	1.1	Quarterly Financial Accounts (flows), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T625R_A	1.1	Annual Financial Accounts (flows) - counterpart information
+OECD.SDD.NAD	DSD_NASEC20@DF_T625R_Q	1.1	Quarterly Financial Accounts (flows) - counterpart information
+OECD.SDD.NAD	DSD_NASEC20@DF_T710GOV_A	1.1	Government Annual Financial Balance Sheets (stocks), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T710GOV_Q	1.1	Government Quarterly Financial Balance Sheets (stocks), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T710R_A	1.1	Annual Financial Balance Sheets (stocks), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T710R_Q	1.1	Quarterly Financial Balance Sheets (stocks), consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T720GOV_A	1.1	Government Annual Financial Balance Sheets (stocks), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T720GOV_Q	1.1	Government Quarterly Financial Balance Sheets (stocks), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T720R_A	1.1	Annual Financial Balance Sheets (stocks), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T720R_Q	1.1	Quarterly Financial Balance Sheets (stocks), non-consolidated
+OECD.SDD.NAD	DSD_NASEC20@DF_T725R_A	1.1	Annual Financial Balance Sheets (stocks) - counterpart information
+OECD.SDD.NAD	DSD_NASEC20@DF_T725R_Q	1.1	Quarterly Financial Balance Sheets (stocks) - counterpart information
+OECD.SDD.NAD	DSD_NASEC20@DF_T7HH_Q	1.1	Households' Financial Assets and Liabilities
+OECD.SDD.NAD	DSD_NASEC20@DF_T7II_Q	1.1	Institutional Investors’ Assets and Liabilities
+OECD.SDD.NAD	DSD_NASEC20@DF_T7PSD_Q	1.1	Quarterly Public Sector Debt, consolidated
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR	2.0	SUT Indicators (for 'Developer API')
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_D21X31_P3S14	2.0	SUT Taxes less subsidies on products as a share of final consumption expenditure by households
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_OTTM_P3S14	2.0	SUT Trade and transport margins as a share of final consumption expenditure by households
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_OTTM_TS_O	2.0	SUT Trade and transport margins as a share of total supply at purchasers' prices
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_P2_PRODUCT_SHARE_B	2.0	SUT Intermediate consumption - share of products used by activity at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_P7_P2_B	2.0	SUT Share of imported products in intermediate consumption at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_P7_P3S14_B	2.0	SUT Share of imported products in final consumption of households at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_P7_P51G_B	2.0	SUT Share of imported products in GFCF at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_P7_P6_B	2.0	SUT Share of imported products in exports at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_INDICATOR_P7_TS_O	2.0	SUT Imports as a share of total supply at purchasers' prices
+OECD.SDD.NAD	DSD_NASU@DF_SUPPLYP1_T1500	2.0	SUT Supply by type of production
+OECD.SDD.NAD	DSD_NASU@DF_SUPPLY_T1500	2.0	SUT Supply
+OECD.SDD.NAD	DSD_NASU@DF_USEBP	2.0	SUT Use at basic prices (for 'Developer API')
+OECD.SDD.NAD	DSD_NASU@DF_USEBP_T1610	2.0	SUT Use at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_USEBP_T1611	2.0	SUT Domestic Use at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_USEBP_T1612	2.0	SUT Import Use at basic prices
+OECD.SDD.NAD	DSD_NASU@DF_USEPP	2.0	SUT Use at purchasers' prices (for 'Developer API')
+OECD.SDD.NAD	DSD_NASU@DF_USEPP_T1600	2.0	SUT Use at purchasers' prices
+OECD.SDD.NAD	DSD_NASU@DF_USEPP_T1601	2.0	SUT Domestic Use at purchasers' prices
+OECD.SDD.NAD	DSD_NASU@DF_USEPP_T1602	2.0	SUT Import Use at purchasers' prices
+OECD.SDD.NAD	DSD_NASU@DF_USEVA_T1600	2.0	SUT Use, Value added and its components by activity
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION	2.0	SUT Valuation (for 'Developer API')
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION_T1620	2.0	SUT Trade and transport margins
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION_T1630	2.0	SUT Taxes less subsidies on products
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION_T1631	2.0	SUT Taxes less subsidies on products excluding VAT
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION_T1632	2.0	SUT VAT
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION_T1633	2.0	SUT Taxes on products
+OECD.SDD.NAD	DSD_NASU@DF_VALUATION_T1634	2.0	SUT Subsidies on products
+OECD.SDD.NAD	DSD_PSD_D1D4@DF_PSD_D1D4	1.0	Government debt by instrument coverage
+OECD.SDD.NAD.SEEA	DSD_AEA@DF_AEA	1.2	Air Emissions Accounts
+OECD.SDD.NAD.SEEA	DSD_AIR_TRANSPORT@DF_AIR_TRANSPORT	1.1	Air transport emissions (experimental)
+OECD.SDD.NAD.SEEA	DSD_ATR_EUSE@DF_ATR_EUSE	1.0	Air transport energy use (experimental)
+OECD.SDD.NAD.SEEA	DSD_MARITIME_TRANSPORT@DF_MARITIME_TRANSPORT	2.0	Maritime transport CO2 emissions (experimental)
+OECD.SDD.NAD.SEEA	DSD_NAT_RES@DF_NAT_RES	1.1	Mineral and Energy Resources
+OECD.SDD.NAD.SEEA	DSD_PEFA@DF_PEFAERUSE	1.1	Physical Energy Flow Accounts: emissions-relevant use
+OECD.SDD.NAD.SEEA	DSD_PEFA@DF_PEFASUP	1.1	Physical Energy Flow Accounts: supply by activity
+OECD.SDD.NAD.SEEA	DSD_PEFA@DF_PEFAUSE	1.1	Physical Energy Flow Accounts: use by activity
+OECD.SDD.NAD.SEEA	DSD_PEFA_BR@DF_PEFABR	1.2	Physical Energy Flow Accounts: bridging to energy balances
+OECD.SDD.NAD.SEEA	DSD_PEFA_IND@DF_PEFAIND	1.3	Physical Energy Flow Accounts: key indicators
+OECD.SDD.SDPS	DF_TEST_MEI	1.0	TEST - Main Economic Indicators Publication
+OECD.SDD.SDPS	DSD_DD_HCL@DF_DD_HCL_TEST	1.0	DD HCL order hierarcy test
+OECD.SDD.STES	DSD_KEI@DF_KEI	4.0	Key short-term economic indicators
+OECD.SDD.STES	DSD_STES@DF_BTS	4.0	Business tendency surveys
+OECD.SDD.STES	DSD_STES@DF_CLI	4.1	Composite leading indicators
+OECD.SDD.STES	DSD_STES@DF_CS	4.0	Consumer opinion surveys
+OECD.SDD.STES	DSD_STES@DF_CSBAR	4.0	Consumer barometer
+OECD.SDD.STES	DSD_STES@DF_FINMARK	4.0	Financial market
+OECD.SDD.STES	DSD_STES@DF_INDSERV	4.3	Production, sales, work started and orders
+OECD.SDD.STES	DSD_STES@DF_MONAGG	4.0	Monetary aggregates
+OECD.SDD.STES	DSD_STES@DF_SAHM	1.0	Sahm rule recession indicator
+OECD.SDD.STES	DSD_STES_REVISIONS@DF_STES_REVISIONS	4.0	Short-term economic statistics revisions
+OECD.SDD.TPS	DSD_ALFS@DF_ALFS_EMP	1.1	Employment by activites and status (ALFS)
+OECD.SDD.TPS	DSD_ALFS@DF_ALFS_EMP_EES	1.1	Number of employees by activities (ISIC Rev. 4)
+OECD.SDD.TPS	DSD_ALFS@DF_ALFS_EMP_ICSE93	1.1	Employment by professional status (ICSE-93)
+OECD.SDD.TPS	DSD_ALFS@DF_ALFS_EMP_ISIC	1.1	Employment by activities (ISIC Rev. 4)
+OECD.SDD.TPS	DSD_ALFS@DF_SUMTAB	1.0	Annual labour force survey, summary tables
+OECD.SDD.TPS	DSD_BATIS@DF_BATIS	1.0	Balanced trade in services (BaTIS)
+OECD.SDD.TPS	DSD_BIMTS@DF_BIMTS_CPA_2_1	1.1	Balanced international merchandise trade statistics (BIMTS) - CPA 2.1
+OECD.SDD.TPS	DSD_BIMTS@DF_BIMTS_HS2017_2D	1.1	Balanced international merchandise trade statistics (BIMTS) - HS2017-2D
+OECD.SDD.TPS	DSD_BIMTS@DF_BIMTS_HS2017_4D	1.0	Balanced international merchandise trade statistics (BIMTS) - HS2017-4D
+OECD.SDD.TPS	DSD_BIMTS_6D@DF_BIMTS_HS2017_6D	1.0	Balanced international merchandise trade statistics (BIMTS) - HS2017-6D
+OECD.SDD.TPS	DSD_BOP@DF_BOP	1.0	Balance of payments
+OECD.SDD.TPS	DSD_BOP@DF_IIP	1.0	International investment position
+OECD.SDD.TPS	DSD_BOP@DF_TIS	1.0	International trade in services
+OECD.SDD.TPS	DSD_CPI_COU_WEIGHTS@DF_CPI_CTRY_WEIGHTS	1.0	CPI country weights - OECD composition
+OECD.SDD.TPS	DSD_EAR@DF_HOU_EAR	1.0	Hourly earnings
+OECD.SDD.TPS	DSD_G20_PRICES@DF_G20_PRICES	1.0	G20 - Consumer price indices, all items
+OECD.SDD.TPS	DSD_IMTS@DF_IMTS	1.0	International merchandise trade statistics
+OECD.SDD.TPS	DSD_ITIC@DF_ITIC	1.1	International transport and insurance costs of merchandise trade (ITIC)
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_EMP_ISIC4_Q	1.0	Employed population by economic activity
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_EMP_Q	1.0	Employed population by age groups
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_EMP_WAP_Q	1.0	Employment rate
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_INDIC	1.0	Infra-annual labour statistics
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_LF_Q	1.0	Labour force population
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_LF_WAP_Q	1.0	Labour force participation rate
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_OLF_WAP_Q	1.0	Population outside the labour force
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_UNE_LF_M	1.0	Monthly unemployment levels
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_UNE_M	1.0	Monthly unemployment rates
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_UNE_Q	1.0	Unemployed population
+OECD.SDD.TPS	DSD_LFS@DF_IALFS_WAP_Q	1.0	Working-age population
+OECD.SDD.TPS	DSD_OLAB@DF_OIALAB_INDIC	1.1	Infra-annual registered unemployment and job vacancies
+OECD.SDD.TPS	DSD_PDB@DF_PDB	2.0	Productivity database
+OECD.SDD.TPS	DSD_PDB@DF_PDB_GR	1.0	Productivity growth rates
+OECD.SDD.TPS	DSD_PDB@DF_PDB_ISIC4_I4	1.0	Productivity by industry
+OECD.SDD.TPS	DSD_PDB@DF_PDB_LV	1.0	Productivity levels
+OECD.SDD.TPS	DSD_PDB@DF_PDB_ULC_Q	1.0	Productivity and unit labour costs
+OECD.SDD.TPS	DSD_PPP@DF_PPP	1.1	PPP detailed results, 2022 onwards
+OECD.SDD.TPS	DSD_PPP@DF_PPP_CPL	1.1	PPP detailed results, 2022 onwards: Price level indices
+OECD.SDD.TPS	DSD_PPP@DF_PPP_NE	1.1	PPP detailed results, 2022 onwards: Nominal expenditure
+OECD.SDD.TPS	DSD_PPP@DF_PPP_NEGDP	1.1	PPP detailed results, 2022 onwards: Nominal expenditure as a percentage of GDP
+OECD.SDD.TPS	DSD_PPP@DF_PPP_NEPC	1.1	PPP detailed results, 2022 onwards: Nominal expenditure per capita
+OECD.SDD.TPS	DSD_PPP@DF_PPP_PPP	1.1	PPP detailed results, 2022 onwards: Purchasing power parities
+OECD.SDD.TPS	DSD_PPP@DF_PPP_RE	1.1	PPP detailed results, 2022 onwards: Real expenditure in PPPs
+OECD.SDD.TPS	DSD_PPP@DF_PPP_REPC	1.1	PPP detailed results, 2022 onwards: Real expenditure per capita in PPPs
+OECD.SDD.TPS	DSD_PPP@DF_PPP_VI	1.1	PPP detailed results, 2022 onwards: Volume indices of real expenditure per capita
+OECD.SDD.TPS	DSD_PPP_M@DF_PP_CPL_M	1.0	Monthly comparative price levels
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_ALL	1.0	Consumer price indices (CPIs, HICPs), COICOP 1999
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_CONTRIB	1.0	Contribution to year-on-year inflation by COICOP 1999 by country
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_HICP	1.0	Eurostat harmonised index of consumer prices (HICP)
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_HICP_IT_W	1.0	Eurostat harmonised index of consumer prices (HICP), Item weights, All countries, All items
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_N_CP01	1.0	National CPI, Growth rate over one year, All countries, Food and non-alcoholic beverages, COICOP 1999
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_N_CP045_0722	1.0	National CPI, Growth rate over one year, All countries, Energy, COICOP 1999
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_N_IT_W	1.0	National CPI, Item weights, COICOP 1999, All countries, All items
+OECD.SDD.TPS	DSD_PRICES@DF_PRICES_N_TXCP01_NRG	1.0	National CPI, Growth rate over one year, All countries, All items less food and energy, COICOP 1999
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_ALL	1.0	Consumer price indices (CPIs,HICPs), COICOP 2018
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_CONTRIB	1.0	Contribution to year-on-year inflation by COICOP 2018 by country
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_HICP_IT_W	1.0	Eurostat harmonised index of consumer prices (HICP), Item weights, All countries, All items, COICOP 2018
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_N_CP01	1.0	National CPI, Growth rate over one year, All countries, Food and non-alcoholic beverages, COICOP 2018
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_N_CP045_0722	1.0	National CPI, Growth rate over one year, All countries, Energy, COICOP 2018
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_N_IT_W	1.0	National CPI, Item weights, COICOP 2018, All countries, All items
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_C2018_N_TXCP01_NRG	1.0	National CPI, Growth rate over one year, All countries, All items less food and energy, COICOP 2018
+OECD.SDD.TPS	DSD_PRICES_COICOP2018@DF_PRICES_HICP_C2018	1.0	Eurostat harmonised index of consumer prices (HICP), COICOP 2018
+OECD.SDD.TPS	DSD_PRICES_EXC@DF_PRICES_EXCHANGE	1.0	Consumer price indices (CPIs), exchange, API only,COICOP 1999
+OECD.SDD.TPS	DSD_PRICES_EXC_C18@DF_PRICES_EXCHANGE_COICOP18	1.0	Consumer price indices (CPIs), exchange, API only,COICOP 2018
+OECD.SDD.TPS	DSD_RHPI@DF_RHPI_ALL	1.1	National and regional house price indices
+OECD.SDD.TPS	DSD_RHPI@DF_RHPI_TRANSACTIONS	1.1	National and regional housing transactions
+OECD.SDD.TPS	DSD_RHPI_TARGET@DF_RHPI_TARGET	1.1	National and regional house price indices, headline indicators
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD	1.0	Business demography by size class and economic activity, all enterprises (ISIC rev.4)
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_API	1.0	SDBS Business demography statistics by size class and economic activity - ISIC rev.4 (for API users)
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_B_D	1.0	Business demography: enterprise birth and death
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_EMP	1.0	Employer business demography by size class and economic activity (ISIC rev.4)
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_EMP_B_D	1.0	Employer business demography: enterprise birth and death
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_EMP_HG	1.0	Employer business demography: high-growth enterprises
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_EMP_S	1.0	Employer business demography: enterprise survival
+OECD.SDD.TPS	DSD_SDBSBD_ISIC4@DF_BD_S	1.0	Business demography: enterprise survival
+OECD.SDD.TPS	DSD_SDBSBSC_ISIC4@DF_SDBS_ISIC4	1.0	Structural business statistics by size class and economic activity (ISIC Rev. 4)
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC	1.1	Trade in goods by enterprise characteristics (for API users)
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC01	1.1	Trade in goods by enterprise characteristics by economic activity and size class
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC02	1.1	Trade in goods by enterprise characteristics by economic activity and concentration of trade (top enterprises)
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC03	1.1	Trade in goods by enterprise characteristics by partner zones and countries
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC04	1.1	Trade in goods by enterprise characteristics by number of partner countries and activity
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC05	1.1	Trade in goods by enterprise characteristics by commodity groups (CPC)
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC06	1.1	Trade in goods by enterprise characteristics by type of trader
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC07	1.1	Trade in goods by enterprise characteristics by ownership (domestic or foreign)
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC08	1.1	Trade in goods by enterprise characteristics by exports intensity
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC09	1.1	Trade in goods by enterprise characteristics by activity sectors
+OECD.SDD.TPS	DSD_TEC_ISIC4@DF_TEC10	1.1	Trade in goods by enterprise characteristics by partner countries and size-class
+OECD.SDD.TPS	DSD_TIE@DF_TIE	1.1	Timely indicators of entrepreneurship by enterprise characteristics
+OECD.SDD.TPS	DSD_TIE@DF_TIE_AUS	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Australia
+OECD.SDD.TPS	DSD_TIE@DF_TIE_AUT	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Austria
+OECD.SDD.TPS	DSD_TIE@DF_TIE_BEL	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Belgium
+OECD.SDD.TPS	DSD_TIE@DF_TIE_BGR	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Bulgaria
+OECD.SDD.TPS	DSD_TIE@DF_TIE_CAN	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Canada
+OECD.SDD.TPS	DSD_TIE@DF_TIE_CZE	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Czechia
+OECD.SDD.TPS	DSD_TIE@DF_TIE_DEU	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Germany
+OECD.SDD.TPS	DSD_TIE@DF_TIE_DNK	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Denmark
+OECD.SDD.TPS	DSD_TIE@DF_TIE_ESP	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Spain
+OECD.SDD.TPS	DSD_TIE@DF_TIE_EST	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Estonia
+OECD.SDD.TPS	DSD_TIE@DF_TIE_FIN	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Finland
+OECD.SDD.TPS	DSD_TIE@DF_TIE_FRA	1.1	Timely indicators of entrepreneurship by enterprise characteristics, France
+OECD.SDD.TPS	DSD_TIE@DF_TIE_GBR	1.1	Timely indicators of entrepreneurship by enterprise characteristics, United Kingdom
+OECD.SDD.TPS	DSD_TIE@DF_TIE_GRC	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Greece
+OECD.SDD.TPS	DSD_TIE@DF_TIE_HRV	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Croatia
+OECD.SDD.TPS	DSD_TIE@DF_TIE_HUN	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Hungary
+OECD.SDD.TPS	DSD_TIE@DF_TIE_ISL	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Iceland
+OECD.SDD.TPS	DSD_TIE@DF_TIE_ITA	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Italy
+OECD.SDD.TPS	DSD_TIE@DF_TIE_LTU	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Lithuania
+OECD.SDD.TPS	DSD_TIE@DF_TIE_NLD	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Netherlands
+OECD.SDD.TPS	DSD_TIE@DF_TIE_NOR	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Norway
+OECD.SDD.TPS	DSD_TIE@DF_TIE_NZL	1.1	Timely indicators of entrepreneurship by enterprise characteristics, New Zealand
+OECD.SDD.TPS	DSD_TIE@DF_TIE_POL	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Poland
+OECD.SDD.TPS	DSD_TIE@DF_TIE_PRT	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Portugal
+OECD.SDD.TPS	DSD_TIE@DF_TIE_SGP	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Singapore
+OECD.SDD.TPS	DSD_TIE@DF_TIE_SVN	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Slovenia
+OECD.SDD.TPS	DSD_TIE@DF_TIE_SWE	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Sweden
+OECD.SDD.TPS	DSD_TIE@DF_TIE_TUR	1.1	Timely indicators of entrepreneurship by enterprise characteristics, Türkiye
+OECD.SDD.TPS	DSD_TIE@DF_TIE_USA	1.1	Timely indicators of entrepreneurship by enterprise characteristics, United States
+OECD.SDD.TPS	DSD_VC@DF_VC_INV	1.0	Venture capital investments (market statistics)
+OECD.STI.DEP	DSD_BB_DATABASE@DF_BB_TEL_DATABASE	2.0	Broadband and telecom databases
+OECD.STI.DEP	DSD_DEO_1@DF_DEO_1	1.0	DEO part 1
+OECD.STI.DEP	DSD_DEO_2@DF_DEO_2	1.0	DEO part 2
+OECD.STI.DEP	DSD_DEO_3@DF_DEO_3	1.0	DEO part 3
+OECD.STI.DEP	DSD_DIGITAL_TRADE@DF_DIGITAL_TRADE	1.0	Digital Trade - Experimental estimates
+OECD.STI.DEP	DSD_ICT_B@DF_BUSINESSES	1.1	ICT Access and Usage by Businesses
+OECD.STI.DEP	DSD_ICT_HH_IND@DF_HH	1.2	ICT Access and Usage by Households
+OECD.STI.DEP	DSD_ICT_HH_IND@DF_IND	1.2	ICT Access and Usage by Individuals
+OECD.STI.DEP	DSD_NOWCAST@DF_NOWCAST	1.0	Nowcast - Experimental estimates
+OECD.STI.DEP	DSD_TOOLKIT@DF_GD_DISTANCES	1.0	Going Digital Toolkit - Data for the hero visualisation and country pages
+OECD.STI.DEP	DSD_TOOLKIT_10@DF_GD_BREAKDOWNS_10	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 10
+OECD.STI.DEP	DSD_TOOLKIT_11@DF_GD_BREAKDOWNS_11	1.1	Going Digital Toolkit - Data for the breakdown visualisations - part 11
+OECD.STI.DEP	DSD_TOOLKIT_12@DF_GD_BREAKDOWNS_12	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 12
+OECD.STI.DEP	DSD_TOOLKIT_13@DF_GD_BREAKDOWNS_13	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 13
+OECD.STI.DEP	DSD_TOOLKIT_14@DF_GD_BREAKDOWNS_14	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 14
+OECD.STI.DEP	DSD_TOOLKIT_1@DF_GD_BREAKDOWNS_1	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 1
+OECD.STI.DEP	DSD_TOOLKIT_2@DF_GD_BREAKDOWNS_2	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 2
+OECD.STI.DEP	DSD_TOOLKIT_3@DF_GD_BREAKDOWNS_3	1.1	Going Digital Toolkit - Data for the breakdown visualisations - part 3
+OECD.STI.DEP	DSD_TOOLKIT_4@DF_GD_BREAKDOWNS_4	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 4
+OECD.STI.DEP	DSD_TOOLKIT_5@DF_GD_BREAKDOWNS_5	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 5
+OECD.STI.DEP	DSD_TOOLKIT_6@DF_GD_BREAKDOWNS_6	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 6
+OECD.STI.DEP	DSD_TOOLKIT_7@DF_GD_BREAKDOWNS_7	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 7
+OECD.STI.DEP	DSD_TOOLKIT_8@DF_GD_BREAKDOWNS_8	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 8
+OECD.STI.DEP	DSD_TOOLKIT_9@DF_GD_BREAKDOWNS_9	1.0	Going Digital Toolkit - Data for the breakdown visualisations - part 9
+OECD.STI.DEP	DSD_TOOLKIT_DK@DF_NDSC	1.0	Going Digital Toolkit Data Kitchen - Data for the National Digital Strategy Comprehensiveness
+OECD.STI.DEP	DSD_TQ_SURVEY@DF_TRUTH_QUEST	1.0	Truth Quest - Survey data
+OECD.STI.PIE	DSD_BTIGE@DF_BTIGE	1.0	Bilateral Trade in goods by end-use
+OECD.STI.PIE	DSD_ICIO_GHG_EXPD@DF_ICIO_GHG_EXPD_2023	1.0	Greenhouse Gas Footprints (GHGFP): Emissions embodied in final demand by expenditure category
+OECD.STI.PIE	DSD_ICIO_GHG_EXPD_2025@DF_ICIO_GHG_EXPD_2025	1.0	Greenhouse Gas Footprints (GHGFP) 2025 edition: Emissions embodied in final demand by expenditure category
+OECD.STI.PIE	DSD_ICIO_GHG_MAIN@DF_ICIO_GHG_MAIN_2023	1.0	Greenhouse Gas Footprints (GHGFP): Principal indicators
+OECD.STI.PIE	DSD_ICIO_GHG_MAIN_2025@DF_ICIO_GHG_MAIN_2025	1.0	Greenhouse Gas Footprints (GHGFP) 2025 edition: Principal indicators
+OECD.STI.PIE	DSD_ICIO_GHG_ORGN@DF_ICIO_GHG_ORGN_2023	1.0	Greenhouse Gas Footprints (GHGFP): Origin of emissions embodied in final demand
+OECD.STI.PIE	DSD_ICIO_GHG_ORGN_2025@DF_ICIO_GHG_ORGN_2025	1.0	Greenhouse Gas Footprints (GHGFP) 2025 edition: Origin of emissions embodied in final demand
+OECD.STI.PIE	DSD_ICIO_GHG_SCOPE@DF_ICIO_GHG_SCOPE_2023	1.0	Greenhouse Gas Footprints (GHGFP): Emissions embodied in production by scope
+OECD.STI.PIE	DSD_ICIO_GHG_SCOPE_2025@DF_ICIO_GHG_SCOPE_2025	1.0	Greenhouse Gas Footprints (GHGFP) 2025 edition: Emissions embodied in production by scope
+OECD.STI.PIE	DSD_ICIO_GHG_TRADE@DF_ICIO_GHG_TRADE_2023	1.0	Greenhouse Gas Footprints (GHGFP): Emissions embodied in bilateral trade
+OECD.STI.PIE	DSD_ICIO_GHG_TRADE_2025@DF_ICIO_GHG_TRADE_2025	1.0	Greenhouse Gas Footprints (GHGFP) 2025 edition: Emissions embodied in bilateral trade
+OECD.STI.PIE	DSD_INDUSTRIAL_POLICY@DF_FIN	1.5	QuIS Industrial policy financial instruments
+OECD.STI.PIE	DSD_INDUSTRIAL_POLICY@DF_GRANTAX	1.5	QuIS Industrial policy grants and tax expenditures
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS	1.0	Patents by technology
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_COINVENTOR	1.0	Patents with foreign co-inventors
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_DOMESTIC	1.0	Domestic ownership of inventions made abroad
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_ENVIROMENT	1.0	Environment-related technologies patents
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_FOREIGN	1.0	Foreign ownership of domestic inventions
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_INDICATORS	1.0	Indicators of international co-operation
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_OECDSPECIFIC	1.0	Patents in OECD selected technologies
+OECD.STI.PIE	DSD_PATENTS@DF_PATENTS_WIPO	1.0	Patents by WIPO technology domains
+OECD.STI.PIE	DSD_STAN@DF_STAN	1.0	STAN Database for Structural Analysis, 2020 edition
+OECD.STI.PIE	DSD_STAN@DF_STAN_2025	1.0	STAN Database for Structural Analysis, 2025 edition
+OECD.STI.PIE	DSD_TIMBC_2023@DF_TIMBC_2023	1.0	Trade in employment by workforce characteristics (TiMBC) 2023 edition
+OECD.STI.PIE	DSD_TIMBC_2025@DF_TIMBC_2025	1.0	Trade in employment by workforce characteristics (TiMBC) 2025 edition
+OECD.STI.PIE	DSD_TIM_2021@DF_TIM_2021	1.0	Trade in employment (TiM) 2021 edition
+OECD.STI.PIE	DSD_TIM_2023@DF_TIM_2023	1.0	Trade in employment (TiM) 2023 edition
+OECD.STI.PIE	DSD_TIM_2025@DF_TIM_2025	1.0	Trade in employment (TiM) 2025 edition
+OECD.STI.PIE	DSD_TIVA_EXGRVA@DF_EXGRVA	1.1	Trade in Value Added (TiVA) 2025 edition: Origin of value added in gross exports
+OECD.STI.PIE	DSD_TIVA_FDVA@DF_FDVA	1.1	Trade in Value Added (TiVA) 2025 edition: Origin of value added in final demand
+OECD.STI.PIE	DSD_TIVA_IMGRVA@DF_IMGRVA	1.1	Trade in Value Added (TiVA) 2025 edition: Origin of value added in gross imports
+OECD.STI.PIE	DSD_TIVA_MAINLV@DF_MAINLV	1.1	Trade in Value Added (TiVA) 2025 edition: Principal Indicators, levels
+OECD.STI.PIE	DSD_TIVA_MAINSH@DF_MAINSH	1.1	Trade in Value Added (TiVA) 2025 edition: Principal Indicators, shares
+OECD.STI.SIP	DSD_STEEL_CAPACITY@DF_CRUDE_STEEL	1.0	Crude steelmaking capacity
+OECD.STI.STP	DSD_ANBERD@DF_ANBERDi4	1.0	Analytical Business Enterprise R&D by ISIC Rev.4 industry (ANBERD database)
+OECD.STI.STP	DSD_BIBLIO@DF_BIBLIO	1.1	Bibliometric indicators, by field
+OECD.STI.STP	DSD_BIBLIO@DF_BIBLIO_COLLAB	1.1	Bibliometric indicators of international collaboration
+OECD.STI.STP	DSD_BIBLIO_F@DF_BIBLIO_F	1.0	Bibliometric indicators of implied bilateral mobility flows
+OECD.STI.STP	DSD_BIBLIO_SDG@DF_BIBLIO_SDG	1.0	Bibliometric indicators, by Sustainable Development Goals (SDGs)
+OECD.STI.STP	DSD_COMPASS@DF_COMPASS_REITER	1.0	REITER.Stat
+OECD.STI.STP	DSD_COMPASS_KEY@DF_COMPASS_KEY	1.0	COMPASS Key Indicators
+OECD.STI.STP	DSD_INNOSTAT@DF_ALL	1.0	OECD Business Innovation Indicators Database (Innostat Database)
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOCOOP	1.0	Cooperation in innovative-active enterprises on innovation activities
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOEMP	1.0	Employment in innovative and innovation-active enterprises
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOEMPUD	1.0	Innovation-active enterprises by share of employees with tertiary education
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOENT	1.0	Innovative and innovation-active enterprises
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOENV	1.0	Innovations in enterprises with environmental benefits
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOEXP	1.0	Expenditures on R&D in innovation-active enterprises
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOIP	1.0	Methods used to protect intellectual property
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOMKT	1.0	Innovative and innovation-active enterprises operating in foreign and national markets
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOSUPP	1.0	Enterprises receiving public financial support for innovation
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOTUR	1.0	Turnover in innovation-active enterprises and from product innovation
+OECD.STI.STP	DSD_INNOSTAT@DF_INNOTYPE	1.0	Type of innovation in innovative enterprises
+OECD.STI.STP	DSD_MSTI@DF_MSTI	1.3	Main Science and Technology Indicators (MSTI database)
+OECD.STI.STP	DSD_RDS_BERD@DF_BERD_INDU	1.0	Business enterprise R&D expenditure by industry
+OECD.STI.STP	DSD_RDS_BERD@DF_BERD_MA_SOF	1.0	Business enterprise R&D expenditure by main activity (focussed) and source of funds
+OECD.STI.STP	DSD_RDS_BERD@DF_BERD_MA_TOE	1.0	Business enterprise R&D expenditure by main activity (focussed) and type of expenditure
+OECD.STI.STP	DSD_RDS_BERD@DF_BERD_SOF_SIZE	1.0	Business enterprise R&D expenditure by size class and by source of funds
+OECD.STI.STP	DSD_RDS_GERD@DF_GERD_FORD	1.0	Gross domestic expenditure on R&D by sector of performance and field of R&D
+OECD.STI.STP	DSD_RDS_GERD@DF_GERD_REG	1.0	Gross domestic expenditure on R&D by sector of performance and region
+OECD.STI.STP	DSD_RDS_GERD@DF_GERD_SEO	1.0	Gross domestic expenditure on R&D by sector of performance and socio-economic objectives
+OECD.STI.STP	DSD_RDS_GERD@DF_GERD_SOF	1.0	Gross domestic expenditure on R&D by sector of performance and source of funds
+OECD.STI.STP	DSD_RDS_GERD@DF_GERD_TOE	1.0	Gross domestic expenditure on R&D by sector of performance and type of expenditure
+OECD.STI.STP	DSD_RDS_GERD@DF_GERD_TORD	1.0	Gross domestic expenditure on R&D by sector of performance and type of R&D
+OECD.STI.STP	DSD_RDS_GOV@DF_GBARD_NABS07	1.0	Government budget allocations for R&D
+OECD.STI.STP	DSD_RDS_PERS@DF_PERS_FORD	1.1	R&D personnel by sector of performance and major field of R&D
+OECD.STI.STP	DSD_RDS_PERS@DF_PERS_FUNC	1.1	R&D personnel by sector of performance and function
+OECD.STI.STP	DSD_RDS_PERS@DF_PERS_INDU	1.1	R&D personnel in the business enterprise sector by main activity
+OECD.STI.STP	DSD_RDS_PERS@DF_PERS_QUAL	1.1	R&D personnel by sector of performance and formal qualification
+OECD.STI.STP	DSD_RDS_PERS@DF_PERS_REG	1.0	R&D personnel by sector of performance and region
+OECD.STI.STP	DSD_RDTAX@DF_IPTAX	1.0	Income-based tax support for R&D and Innovation
+OECD.STI.STP	DSD_RDTAX@DF_RDSUB	1.0	Implied tax subsidy rates on R&D expenditures
+OECD.STI.STP	DSD_RDTAX@DF_RDTAX	1.0	R&D tax expenditure and direct government funding of BERD
+OECD.STI.STP	DSD_REICO_CB@DF_CB	1.0	ReICO database for ChartBuilder
+OECD.STI.STP	DSD_REICO_FULL@DF_ALL	1.0	ReICO database - full dataset
+OECD.STI.STP	DSD_REICO_FULL@DF_RDC	2.1	ReICO database - R&I talent circulation
+OECD.STI.STP	DSD_REICO_FULL@DF_RDL	2.1	ReICO database - R&I labour market
+OECD.STI.STP	DSD_REICO_FULL@DF_RDT	2.1	ReICO database - R&I talent development
+OECD.STI.STP	DSD_REICO_KEY@DF_ALL	2.1	ReICO database on key indicators
+OECD.STI.STP	DSD_REICO_REFPUB@DF_ALL	2.0	ReICO national publications and references
+OECD.STI.STP	DSD_REICO_REFPUB@DF_EMBED	1.0	National studies, publications and initiatives by country
+OECD.STI.STP	DSD_REICO_REFPUB_EMBED@DF_ALL	2.0	National publications and references
+OECD.STI.STP	DSD_REICO_VIZ@DF_SP	1.0	ReICO database for StatPlanet dashboard
+OECD.STI.STP	DSD_SBRD@DF_SBRD	1.4	R&D indicators sub-platform
+OECD.SWAC	DSD_SWAC_PV@DF_PV_ARMED	1.0	Trends of political violence in West Africa: Analysis by armed group
+OECD.SWAC	DSD_SWAC_PV@DF_PV_NATIONAL	1.0	Trends of political violence in West Africa: Analysis at national level
+OECD.SWAC	DSD_SWAC_PV@DF_PV_REGION	1.0	Trends of political violence in West Africa: Analysis at region level
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ARG	3.0	Fossil Fuel Support - Argentina
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ARM	3.0	Fossil Fuel Support - Armenia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_AUS	3.0	Fossil Fuel Support - Australia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_AUT	3.0	Fossil Fuel Support - Austria
+OECD.TAD.ADM	DSD_FFS@DF_FFS_AZE	3.0	Fossil Fuel Support - Azerbaijan
+OECD.TAD.ADM	DSD_FFS@DF_FFS_BEL	3.0	Fossil Fuel Support - Belgium
+OECD.TAD.ADM	DSD_FFS@DF_FFS_BLR	3.0	Fossil Fuel Support - Belarus
+OECD.TAD.ADM	DSD_FFS@DF_FFS_BRA	3.0	Fossil Fuel Support - Brazil
+OECD.TAD.ADM	DSD_FFS@DF_FFS_CAN	3.0	Fossil Fuel Support - Canada
+OECD.TAD.ADM	DSD_FFS@DF_FFS_CHE	3.0	Fossil Fuel Support - Switzerland
+OECD.TAD.ADM	DSD_FFS@DF_FFS_CHL	3.0	Fossil Fuel Support - Chili
+OECD.TAD.ADM	DSD_FFS@DF_FFS_CHN	3.0	Fossil Fuel Support - China
+OECD.TAD.ADM	DSD_FFS@DF_FFS_COL	3.0	Fossil Fuel Support - Colombia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_CRI	3.0	Fossil Fuel Support - Costa Rica
+OECD.TAD.ADM	DSD_FFS@DF_FFS_CZE	3.0	Fossil Fuel Support - Czechia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_DEU	3.0	Fossil Fuel Support - Germany
+OECD.TAD.ADM	DSD_FFS@DF_FFS_DNK	3.0	Fossil Fuel Support - Danemark
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ESP	3.0	Fossil Fuel Support - Spain
+OECD.TAD.ADM	DSD_FFS@DF_FFS_EST	3.0	Fossil Fuel Support - Estonia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_FIN	3.0	Fossil Fuel Support - Finland
+OECD.TAD.ADM	DSD_FFS@DF_FFS_FRA	3.0	Fossil Fuel Support - France
+OECD.TAD.ADM	DSD_FFS@DF_FFS_GBR	3.0	Fossil Fuel Support - United Kingdom
+OECD.TAD.ADM	DSD_FFS@DF_FFS_GEO	3.0	Fossil Fuel Support - Georgia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_GRC	3.0	Fossil Fuel Support - Greece
+OECD.TAD.ADM	DSD_FFS@DF_FFS_HRV	3.0	Fossil Fuel Support - Croatia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_HUN	3.0	Fossil Fuel Support - Hungary
+OECD.TAD.ADM	DSD_FFS@DF_FFS_IDN	3.0	Fossil Fuel Support - Indonesia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_IND	3.0	Fossil Fuel Support - India
+OECD.TAD.ADM	DSD_FFS@DF_FFS_IND_DETAIL	3.0	Fossil Fuel Support - Detailed Indicators
+OECD.TAD.ADM	DSD_FFS@DF_FFS_IRL	3.0	Fossil Fuel Support - Ireland
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ISL	3.0	Fossil Fuel Support - Island
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ISR	3.0	Fossil Fuel Support - Israel
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ITA	3.0	Fossil Fuel Support - Italy
+OECD.TAD.ADM	DSD_FFS@DF_FFS_JPN	3.0	Fossil Fuel Support - Japan
+OECD.TAD.ADM	DSD_FFS@DF_FFS_KOR	3.0	Fossil Fuel Support - Korea
+OECD.TAD.ADM	DSD_FFS@DF_FFS_LTU	3.0	Fossil Fuel Support - Lithuania
+OECD.TAD.ADM	DSD_FFS@DF_FFS_LUX	3.0	Fossil Fuel Support - Luxembourg
+OECD.TAD.ADM	DSD_FFS@DF_FFS_LVA	3.0	Fossil Fuel Support - Latvia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_MDA	3.0	Fossil Fuel Support - Moldova
+OECD.TAD.ADM	DSD_FFS@DF_FFS_MEX	3.0	Fossil Fuel Support - Mexico
+OECD.TAD.ADM	DSD_FFS@DF_FFS_NLD	3.0	Fossil Fuel Support - Netherlands
+OECD.TAD.ADM	DSD_FFS@DF_FFS_NOR	3.0	Fossil Fuel Support - Norway
+OECD.TAD.ADM	DSD_FFS@DF_FFS_NZL	3.0	Fossil Fuel Support - New Zealand
+OECD.TAD.ADM	DSD_FFS@DF_FFS_POL	3.0	Fossil Fuel Support - Poland
+OECD.TAD.ADM	DSD_FFS@DF_FFS_PRT	3.0	Fossil Fuel Support - Portugal
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ROU	3.0	Fossil Fuel Support - Romania
+OECD.TAD.ADM	DSD_FFS@DF_FFS_RUS	3.0	Fossil Fuel Support - Russian Federation
+OECD.TAD.ADM	DSD_FFS@DF_FFS_SVK	3.0	Fossil Fuel Support - Slovakia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_SVN	3.0	Fossil Fuel Support - Slovenia
+OECD.TAD.ADM	DSD_FFS@DF_FFS_SWE	3.0	Fossil Fuel Support - Sweden
+OECD.TAD.ADM	DSD_FFS@DF_FFS_TUR	3.0	Fossil Fuel Support - Türkiye
+OECD.TAD.ADM	DSD_FFS@DF_FFS_UKR	3.0	Fossil Fuel Support - Ukraine
+OECD.TAD.ADM	DSD_FFS@DF_FFS_ZAF	3.0	Fossil Fuel Support - South Africa
+OECD.TAD.ADM	DSD_QDD_TAD_EXP_RESTRIC@DF_QDD_TAD_EXP_RESTRIC	3.0	Export restrictions on critical raw materials
+OECD.TAD.ARP	DF_AEI2023_DASHBOARD	1.0	Agri-Environmental indicators: 2023 Dashboard Archived
+OECD.TAD.ARP	DF_AEI2024_DASHBOARD	1.0	Agri-Environmental indicators: 2024 Dashboard
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AEI	1.2	Agri-environmental indicators: all data
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGAMMO	1.2	Ammonia emissions
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGBIO	1.2	Biodiversity
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGGHGSEM	1.2	Agricultural greenhouse gases emissions
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGLAND	1.2	Agricultural land area
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGNRJ	1.2	Energy use
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGPEST	1.2	Pesticide sales
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGSE	1.2	Soil erosion
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGWATER	1.2	Water use
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_AGWQ	1.2	Water quality
+OECD.TAD.ARP	DSD_AGRI_ENV@DF_NB	1.2	Nutrients balances
+OECD.TAD.ARP	DSD_AGR_POLIND@BP_CGE	1.3	Contribution of Budgetary Payments to change in Producer Support Estimate by country, 2024 to 2025
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_BOR_PRI	1.3	Contribution to change in Border Price by country, 2024 to 2025
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_COMGSSE	1.3	Composition of General Services Support Estimate
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_COMM	1.3	Single commodity indicators
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_COMPSE	1.3	Composition of Producer Support Estimate
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_CSE	1.3	Consumer Support Estimate (CSE)
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_GSSE	1.3	General Services Support Estimate (GSSE)
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_MONEVA	1.3	Agricultural Policy Monitoring and Evaluation: all data
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_MONREF	1.3	Estimates of Support to Agriculture
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_POL	1.3	Characteristics of producer policy support
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_PSE	1.3	Producer Support Estimate (PSE)
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_PSE_CGE	1.3	Contribution to change in Producer Support Estimate by country, 2024 to 2025
+OECD.TAD.ARP	DSD_AGR_POLIND@DF_TSE	1.3	Total Support Estimate (TSE)
+OECD.TAD.ARP	DSD_FISH_EMP@DF_FISH_EMPL	1.0	Employment in fisheries, aquaculture and processing
+OECD.TAD.ARP	DSD_FISH_FLEET@DF_FISH_FLEET	1.0	Fishing fleet
+OECD.TAD.ARP	DSD_FISH_FSE@DF_FSE	1.0	Fisheries support estimate
+OECD.TAD.ARP	DSD_FISH_PROD@DF_FISH_AQUA	1.0	Aquaculture production
+OECD.TAD.ARP	DSD_FISH_PROD@DF_FISH_INLAND	1.0	Inland fisheries
+OECD.TAD.ARP	DSD_FISH_PROD@DF_FISH_LAND	1.0	Marine landings
+OECD.TAD.ARP	DSD_FISH_TRADE@DF_FISH_TRADE	1.0	International trade of fisheries commodities
+OECD.TAD.ATM	DSD_AGR@DF_OUTLOOK_2021_2030	1.0	OECD-FAO Agricultural Outlook 2021-2030
+OECD.TAD.ATM	DSD_AGR@DF_OUTLOOK_2022_2031	1.0	OECD-FAO Agricultural Outlook 2022-2031
+OECD.TAD.ATM	DSD_AGR@DF_OUTLOOK_2023_2032	1.0	OECD-FAO Agricultural Outlook 2023-2032
+OECD.TAD.ATM	DSD_AGR@DF_OUTLOOK_2024_2033	1.1	OECD-FAO Agricultural Outlook 2024-2033
+OECD.TAD.ATM	DSD_AGR@DF_OUTLOOK_2025_2034	1.1	OECD-FAO Agricultural Outlook 2025-2034
+OECD.TAD.ATM	DSD_AGR@DF_OUTLOOK_2026_2035	1.1	OECD-FAO Agricultural Outlook 2026-2035
+OECD.TAD.TPD	DSD_INDIGO@DF_INDIGO	1.0	Index of digital trade integration and openness (INDIGO)
+OECD.TAD.TPD	DSD_STRI@DF_STRI_DIGITAL	1.0	Digital Services Trade Restrictiveness Index
+OECD.TAD.TPD	DSD_STRI@DF_STRI_DIGITAL_HETERO	1.0	Digital STRI Heterogeneity Indices
+OECD.TAD.TPD	DSD_STRI@DF_STRI_HETERO	1.0	STRI Heterogeneity Indices
+OECD.TAD.TPD	DSD_STRI@DF_STRI_INTRAEEA	1.0	Intra-EEA Services Trade Restrictiveness Index
+OECD.TAD.TPD	DSD_STRI@DF_STRI_INTRAEEA_HETERO	1.0	Intra-EEA STRI Heterogeneity Indices
+OECD.TAD.TPD	DSD_STRI@DF_STRI_MAIN	1.0	Services Trade Restrictiveness Index by services sector
+OECD.TAD.TPD	DSD_STRI_POLICY@DF_STRI_POLICY_DIGITAL	1.1	Digital Services Trade Restrictiveness Index Regulatory Database
+OECD.TAD.TPD	DSD_STRI_POLICY@DF_STRI_POLICY_INTRAEEA	1.0	Intra-EEA Services Trade Restrictiveness Index Regulatory Database
+OECD.TAD.TPD	DSD_STRI_POLICY@DF_STRI_POLICY_MAIN	1.0	Services Trade Restrictiveness Index Regulatory Database
+OECD.WISE.CWB	DSD_CWB@DF_CWB	1.0	Child well-being
+OECD.WISE.INE	DSD_TIME_USE@DF_TIME_USE	1.0	Time use
+OECD.WISE.INE	DSD_WEALTH@DF_WEALTH	1.0	Wealth distribution database
+OECD.WISE.INE	DSD_WISE_IDD@DF_IDD	1.0	Income distribution database
+OECD.WISE.RSB	DSD_SDG@DF_SDG	2.0	Sustainable Development Goals
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_1	2.0	Sustainable Development Goal 01 - No poverty
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_10	2.0	Sustainable Development Goal 10 - Reduced inequality
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_11	2.0	Sustainable Development Goal 11 - Sustainable cities and communities
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_12	2.0	Sustainable Development Goal 12 - Responsible consumption and production
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_13	2.0	Sustainable Development Goal 13 - Climate action
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_14	2.0	Sustainable Development Goal 14 - Life below water
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_15	2.0	Sustainable Development Goal 15 - Life on land
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_16	2.0	Sustainable Development Goal 16 - Peace, justice, and strong institutions
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_17	2.0	Sustainable Development Goal 17 - Partnerships for the goals
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_2	2.0	Sustainable Development Goal 02 - Zero hunger
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_3	2.0	Sustainable Development Goal 03 - Good health and well-being
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_4	2.0	Sustainable Development Goal 04 - Quality education
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_5	2.0	Sustainable Development Goal 05 - Gender equality
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_6	2.0	Sustainable Development Goal 06 - Clean water and sanitation
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_7	2.0	Sustainable Development Goal 07 - Affordable and clean energy
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_8	2.0	Sustainable Development Goal 08 - Decent work and economic growth
+OECD.WISE.RSB	DSD_SDG@DF_SDG_G_9	2.0	Sustainable Development Goal 09 - Industry, innovation, and infrastructure
+OECD.WISE.WDP	DSD_HSL@DF_HSL_CWB	1.1	Current well-being
+OECD.WISE.WDP	DSD_HSL@DF_HSL_CWB_AGE	1.1	Current well-being by age
+OECD.WISE.WDP	DSD_HSL@DF_HSL_CWB_EDU	1.1	Current well-being by education level
+OECD.WISE.WDP	DSD_HSL@DF_HSL_CWB_INEQ	1.1	Current well-being vertical inequality
+OECD.WISE.WDP	DSD_HSL@DF_HSL_CWB_SEX	1.1	Current well-being by sex
+OECD.WISE.WDP	DSD_HSL@DF_HSL_FWB	1.1	Future well-being

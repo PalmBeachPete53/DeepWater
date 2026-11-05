@@ -1,0 +1,4376 @@
+category_id	parent_id	depth	name	series_rounded	expanded
+0		0	Categories		yes
+32991	0	1	Money, Banking, & Finance	20,000+	yes
+22	0	1	Interest Rates	970+	yes
+15	0	1	Exchange Rates	100+	yes
+24	0	1	Monetary Data	990+	yes
+46	0	1	Financial Indicators	11,000+	yes
+23	0	1	Banking	4,100+	yes
+32360	0	1	Business Lending	1,900+	yes
+32145	0	1	Foreign Exchange Intervention	9+	yes
+10	0	1	Population, Employment, & Labor Markets	49,000+	yes
+12	0	1	Current Population Survey (Household Survey)	6,900+	yes
+11	0	1	Current Employment Statistics (Establishment Survey)	480+	yes
+32250	0	1	ADP Employment	10+	yes
+33500	0	1	Education	4,600+	yes
+33001	0	1	Income Distribution	290+	yes
+32241	0	1	Job Openings and Labor Turnover (JOLTS)	320+	yes
+33509	0	1	Labor Market Conditions	390+	yes
+104	0	1	Population	11,000+	yes
+2	0	1	Productivity & Costs	20,000+	yes
+33831	0	1	Minimum Wage	9+	yes
+32240	0	1	Weekly Initial Claims	6+	yes
+33731	0	1	Tax Data	1,400+	yes
+32992	0	1	National Accounts	61,000+	yes
+18	0	1	National Income & Product Accounts	13,000+	yes
+32251	0	1	Flow of Funds	43,000+	yes
+13	0	1	U.S. Trade & International Transactions	4,600+	yes
+1	0	1	Production & Business Activity	87,000+	yes
+32262	0	1	Business Cycle Expansions & Contractions	240+	yes
+33936	0	1	Business Surveys	250+	yes
+32436	0	1	Construction	70+	yes
+33940	0	1	Emissions	60+	yes
+33955	0	1	Expenditures	15,000+	yes
+33490	0	1	Finance Companies	80+	yes
+97	0	1	Housing	47,000+	yes
+3	0	1	Industrial Production & Capacity Utilization	2,100+	yes
+32429	0	1	Manufacturing	4,500+	yes
+33959	0	1	Patents	3,500+	yes
+6	0	1	Retail Trade	170+	yes
+33441	0	1	Services	6,500+	yes
+33492	0	1	Technology	9+	yes
+33203	0	1	Wholesale Trade	330+	yes
+32455	0	1	Prices	15,000+	yes
+32217	0	1	Commodities	1,200+	yes
+9	0	1	Consumer Price Indexes (CPI and PCE)	330+	yes
+4	0	1	Employment Cost Index	280+	yes
+33717	0	1	Health Care Indexes	3+	yes
+32261	0	1	House Price Indexes	410+	yes
+31	0	1	Producer Price Indexes (PPI)	10,000+	yes
+32220	0	1	Trade Indexes	940+	yes
+32263	0	1	International Data	140,000+	yes
+32264	0	1	Countries	120,000+	yes
+32955	0	1	Geography	430+	yes
+32265	0	1	Indicators	84,000+	yes
+32956	0	1	Institutions	7,900+	yes
+3008	0	1	U.S. Regional Data	460,000+	yes
+27281	0	1	States	450,000+	yes
+32043	0	1	Census Regions	1,900+	yes
+32061	0	1	BEA Regions	2,600+	yes
+32849	0	1	BLS Regions	1,500+	yes
+32071	0	1	Federal Reserve Districts	1,200+	yes
+32233	0	1	Freddie Mac Regions	9+	yes
+33060	0	1	Academic Data	13,000+	yes
+33833	0	1	Banking and Monetary Statistics, 1914-1941	1,100+	yes
+33825	0	1	Data on the nominal term structure model from Kim and Wright	3+	yes
+33201	0	1	Economic Policy Uncertainty	280+	yes
+33891	0	1	Historical Federal Reserve Data	80+	yes
+33839	0	1	A Millennium of Macroeconomic Data for the UK	10+	yes
+33061	0	1	NBER Macrohistory Database	2,200+	yes
+33934	0	1	New England Textile Industry, 1815-1860	3+	yes
+33100	0	1	Penn World Table 7.1	4,600+	yes
+33402	0	1	Penn World Table 11.0	3,300+	yes
+8	0	1	Real-Time Population Survey	100+	yes
+33442	0	1	Sticky Wages and Comovement	6+	yes
+34009	22	2	AMERIBOR Benchmark Rates	11	yes
+33058	22	2	Automobile Loan Rates	6	yes
+51	22	2	Bankers Acceptance Rate	12	yes
+121	22	2	Certificates of Deposit	48	yes
+120	22	2	Commercial Paper	84	yes
+32348	22	2	Corporate Bonds	362	yes
+33059	22	2	Credit Card Loan Rates	3	yes
+34005	22	2	EONIA Rates	1	yes
+34007	22	2	Euro Short-Term Rate	7	yes
+32298	22	2	Eurodollar Deposits	12	yes
+118	22	2	FRB Rates - discount, fed funds, primary credit	80	yes
+33056	22	2	Interest Checking Accounts	3	yes
+33446	22	2	Interest Rate Spreads	36	yes
+94	15	2	Daily Rates	35	yes
+95	15	2	Monthly Rates	39	yes
+32219	15	2	Annual Rates	26	yes
+105	15	2	Trade-Weighted Indexes	79	yes
+158	15	2	By Country	81	yes
+124	24	2	Monetary Base	27	yes
+123	24	2	Reserves	61	yes
+25	24	2	M1 and Components	72	yes
+29	24	2	M2 and Components	50	yes
+96	24	2	M2 Minus Small Time Deposits	7	yes
+28	24	2	M3 and Components	60	yes
+30	24	2	MZM	10	yes
+26	24	2	Memorandum Items	23	yes
+32242	24	2	Money Velocity	3	yes
+122	24	2	Borrowings	18	yes
+32215	24	2	Factors Affecting Reserve Balances	655	yes
+32218	24	2	Securities, Loans, & Other Assets & Liabilities Held by Fed	203	yes
+32414	46	2	Bond Market Indexes	48	yes
+33119	46	2	Consumer Financial Conditions	282	yes
+32457	46	2	Financial Activity Measures	2,644	yes
+34078	23	2	Banking Indexes	8	yes
+100	23	2	Commercial Banking	2,047	yes
+83	23	2	Condition of Banks	420	yes
+101	23	2	Consumer Credit	155	yes
+32440	23	2	Delinquencies and Delinquency Rates	99	yes
+33121	23	2	Failures and Assistance Transactions	22	yes
+32996	32360	2	Commercial Paper	178	yes
+32406	32360	2	Commercial and Industrial Loans by Time that Pricing Terms Were Set and by Commitment	290	yes
+33439	32360	2	Commercial and Industrial Loans Backed by Small Business Association	262	yes
+32361	32360	2	Commercial and Industrial Loans Made by All Commercial Banks	324	yes
+32370	32360	2	Commercial and Industrial Loans Made by Domestic Banks	324	yes
+32379	32360	2	Commercial and Industrial Loans Made by Large Domestic Banks	324	yes
+32388	32360	2	Commercial and Industrial Loans Made by Small Domestic Banks	324	yes
+32397	32360	2	Commercial and Industrial Loans Made by U.S. Branches and Agencies of Foreign Banks	324	yes
+33440	32360	2	Commercial and Industrial Loans Made Under Participation or Syndication	263	yes
+32442	12	2	Civilian Labor Force	683	yes
+32443	12	2	Civilian Labor Force Participation Rate	62	yes
+32444	12	2	Employment	2,337	yes
+32445	12	2	Employment Population Ratio	75	yes
+32446	12	2	Unemployment Level	748	yes
+32447	12	2	Unemployment Rate	820	yes
+32448	12	2	Not in Labor Force	59	yes
+32305	11	2	Total Nonfarm	13	yes
+32306	11	2	Total Private	27	yes
+32307	11	2	Goods-Producing	27	yes
+32326	11	2	Service-Providing	1	yes
+32308	11	2	Private Service-Providing	27	yes
+32309	11	2	Mining and Logging	39	yes
+32310	11	2	Construction	41	yes
+32311	11	2	Manufacturing	31	yes
+32312	11	2	Durable Goods	63	yes
+32313	11	2	Nondurable Goods	55	yes
+32314	11	2	Trade, Transportation, and Utilities	27	yes
+32315	11	2	Wholesale Trade	33	yes
+32316	11	2	Retail Trade	55	yes
+32317	11	2	Transportation and Warehousing	47	yes
+32318	11	2	Utilities	27	yes
+32319	11	2	Information	39	yes
+32320	11	2	Financial Activities	51	yes
+32321	11	2	Professional and Business Services	55	yes
+32322	11	2	Education and Health Services	51	yes
+32323	11	2	Leisure and Hospitality	41	yes
+32324	11	2	Other Services	33	yes
+32325	11	2	Government	23	yes
+32243	32241	2	Job Openings (Levels and Rates)	84	yes
+32245	32241	2	Hires (Levels and Rates)	84	yes
+32246	32241	2	Total Separations (Levels and Rates)	84	yes
+33735	104	2	Poverty Measures	9,932	yes
+33961	2	2	Agriculture, Forestry, Fishing and Hunting	252	yes
+33963	2	2	Mining	322	yes
+33965	2	2	Utilities	161	yes
+33967	2	2	Construction	120	yes
+32349	2	2	Manufacturing	10,743	yes
+33969	2	2	Wholesale Trade	575	yes
+33972	2	2	Retail Trade	2,841	yes
+33974	2	2	Transportation and Warehousing	1,021	yes
+33976	2	2	Information	596	yes
+33978	2	2	Finance and Insurance	166	yes
+33980	2	2	Real Estate and Rental and Leasing	194	yes
+33982	2	2	Professional, Scientific, and Technical Services	388	yes
+33984	2	2	Management of Companies and Enterprises	24	yes
+33986	2	2	Administrative and Support and Waste Management and Remediation Services	246	yes
+33988	2	2	Educational Services	108	yes
+33990	2	2	Health Care and Social Assistance	361	yes
+33992	2	2	Arts, Entertainment, and Recreation	320	yes
+33994	2	2	Accommodation and Food Services	352	yes
+33996	2	2	Other Services (except Public Administration)	478	yes
+33998	2	2	Government	6	yes
+32350	2	2	Business	92	yes
+32351	2	2	Nonfarm Business	1,760	yes
+32354	2	2	Nonfinancial Corporations	57	yes
+5	32992	2	Federal Government Debt	9+	yes
+112	18	2	Domestic Capital Account (Saving & Investment)	1,746	yes
+108	18	2	Foreign Transactions	754	yes
+33697	18	2	Fixed Assets	322	yes
+33122	18	2	Gross Domestic Income	43	yes
+106	18	2	GDP/GNP	452	yes
+107	18	2	Gov't Receipts, Expenditures & Investment	2,546	yes
+33719	18	2	Health Care Spending	165	yes
+33054	18	2	Imputations	104	yes
+33045	18	2	Industry	2,517	yes
+110	18	2	Personal Income & Outlays	2,165	yes
+21	18	2	Price Indexes & Deflators	1,372	yes
+109	18	2	Private Enterprise Income	1,347	yes
+33021	18	2	Quantity Indexes	1,103	yes
+33401	18	2	Effect of ARRA on Selected NIPA Estimates	33	yes
+32258	32251	2	B.101 Balance Sheet of Households and Nonprofit Organizations	61	yes
+32259	32251	2	B.103 Balance Sheet of Nonfinancial Corporate Business	55	yes
+32260	32251	2	B.104 Balance Sheet of Nonfinancial Noncorporate Business	48	yes
+32256	32251	2	D.3 Credit Market Debt Outstanding by Sector	14	yes
+32257	32251	2	L.1 Credit Market Debt Outstanding	53	yes
+33722	32251	2	L.203 Net Interbank Transactions	39	yes
+33726	32251	2	L.208 Debt Securities	52	yes
+33729	32251	2	L.214 Loans	52	yes
+33204	32251	2	S.1 Total Economy - Current Account	73	yes
+16	13	2	Exports	215	yes
+17	13	2	Imports	165	yes
+3000	13	2	Income Payments & Receipts	72	yes
+33705	13	2	International Investment Position	32	yes
+125	13	2	Trade Balance	47	yes
+7	13	2	Treasury International Capital (TIC)	4,260	yes
+127	13	2	U.S. International Finance	211	yes
+32216	1	2	Health Insurance	3+	yes
+33957	33955	2	Consumer Expenditures	18,514	yes
+32300	97	2	Housing Units Authorized by Building Permits	8	yes
+32301	97	2	Housing Units Authorized, But Not Yet Started	8	yes
+32302	97	2	Housing Starts	26	yes
+32303	97	2	Housing Units Under Construction	8	yes
+32432	32429	2	Inventories	386	yes
+32431	32429	2	New Orders	170	yes
+32433	32429	2	Inventory to Shipments	48	yes
+33913	32455	2	Cryptocurrencies	5	yes
+32415	9	2	Food and Beverages	74	yes
+32416	9	2	Housing	51	yes
+32417	9	2	Apparel	25	yes
+32418	9	2	Transportation	45	yes
+32419	9	2	Medical Care	25	yes
+33583	31	2	Commodity Based	6,184	yes
+32221	32220	2	Import Price Indexes	648	yes
+32224	32220	2	Export Price Indexes	502	yes
+32231	32220	2	Services Price Indexes	28	yes
+32641	32264	2	Afghanistan	110+	yes
+32643	32264	2	Albania	110+	yes
+32644	32264	2	Algeria	130+	yes
+32645	32264	2	American Samoa	3+	yes
+32646	32264	2	Andorra	70+	yes
+32647	32264	2	Angola	140+	yes
+32648	32264	2	Anguilla	70+	yes
+32650	32264	2	Antigua and Barbuda	70+	yes
+32651	32264	2	Argentina	220+	yes
+32652	32264	2	Armenia	120+	yes
+32653	32264	2	Aruba	10+	yes
+32269	32264	2	Australia	2,000+	yes
+32282	32264	2	Austria	2,000+	yes
+32654	32264	2	Azerbaijan	100+	yes
+32655	32264	2	Bahamas	190+	yes
+32656	32264	2	Bahrain	100+	yes
+32657	32264	2	Bangladesh	260+	yes
+32658	32264	2	Barbados	160+	yes
+32659	32264	2	Belarus	160+	yes
+32270	32264	2	Belgium	1,800+	yes
+32660	32264	2	Belize	120+	yes
+32661	32264	2	Benin	120+	yes
+32662	32264	2	Bermuda	80+	yes
+32663	32264	2	Bhutan	80+	yes
+32664	32264	2	Bolivia, Plurinational State of	70+	yes
+32665	32264	2	Caribbean Netherlands	80+	yes
+32666	32264	2	Bosnia and Herzegovina	140+	yes
+32667	32264	2	Botswana	160+	yes
+32327	32264	2	Brazil	880+	yes
+32669	32264	2	British Indian Ocean Territory	10+	yes
+32670	32264	2	Brunei Darussalam	80+	yes
+32671	32264	2	Bulgaria	250+	yes
+32672	32264	2	Burkina Faso	90+	yes
+32673	32264	2	Burundi	70+	yes
+32674	32264	2	Cambodia	90+	yes
+32675	32264	2	Cameroon	130+	yes
+32268	32264	2	Canada	1,800+	yes
+32676	32264	2	Cape Verde	80+	yes
+32677	32264	2	Cayman Islands	130+	yes
+32678	32264	2	Central African Republic	100+	yes
+32679	32264	2	Chad	90+	yes
+32328	32264	2	Chile	1,900+	yes
+32329	32264	2	China	480+	yes
+32680	32264	2	Christmas Island	9+	yes
+32682	32264	2	Colombia	890+	yes
+32683	32264	2	Comoros	90+	yes
+32684	32264	2	Congo, Republic of the	60+	yes
+32685	32264	2	Congo, Democratic Republic of the	90+	yes
+32686	32264	2	Cook Islands	6+	yes
+32687	32264	2	Costa Rica	200+	yes
+32688	32264	2	Côte d’Ivoire	140+	yes
+32689	32264	2	Croatia	170+	yes
+32690	32264	2	Cuba	70+	yes
+32691	32264	2	Curaçao	120+	yes
+32692	32264	2	Cyprus	300+	yes
+32288	32264	2	Czech Republic	2,200+	yes
+32271	32264	2	Denmark	1,800+	yes
+32693	32264	2	Djibouti	9+	yes
+32694	32264	2	Dominica	60+	yes
+32695	32264	2	Dominican Republic	160+	yes
+32696	32264	2	Ecuador	160+	yes
+32697	32264	2	Egypt	210+	yes
+32698	32264	2	El Salvador	150+	yes
+32699	32264	2	Equatorial Guinea	80+	yes
+32700	32264	2	Eritrea	70+	yes
+32701	32264	2	Estonia	2,100+	yes
+32702	32264	2	Ethiopia	100+	yes
+32704	32264	2	Faroe Islands	9+	yes
+32705	32264	2	Fiji	100+	yes
+32289	32264	2	Finland	1,900+	yes
+32272	32264	2	France	2,000+	yes
+32706	32264	2	French Guiana	10+	yes
+32707	32264	2	French Polynesia	100+	yes
+32708	32264	2	French Southern Territories	6+	yes
+32709	32264	2	Gabon	80+	yes
+32710	32264	2	Republic of the Gambia	80+	yes
+32711	32264	2	Georgia	240+	yes
+32273	32264	2	Germany	2,200+	yes
+32712	32264	2	Ghana	170+	yes
+32713	32264	2	Gibraltar	80+	yes
+32293	32264	2	Great Britain	3+	yes
+32330	32264	2	Greece	1,700+	yes
+32714	32264	2	Greenland	9+	yes
+32715	32264	2	Grenada	100+	yes
+32716	32264	2	Guadeloupe	70+	yes
+32717	32264	2	Guam	6+	yes
+32718	32264	2	Guatemala	60+	yes
+32719	32264	2	Guernsey	10+	yes
+32720	32264	2	Guinea	190+	yes
+32721	32264	2	Guinea-Bissau	100+	yes
+32722	32264	2	Guyana	110+	yes
+32723	32264	2	Haiti	150+	yes
+32724	32264	2	Heard Island and McDonald Islands	6+	yes
+32725	32264	2	Holy See (Vatican City State)	10+	yes
+32726	32264	2	Honduras	190+	yes
+32727	32264	2	Hong Kong	240+	yes
+32331	32264	2	Hungary	1,900+	yes
+32334	32264	2	Iceland	1,500+	yes
+32333	32264	2	India	440+	yes
+32332	32264	2	Indonesia	400+	yes
+32728	32264	2	Iran, Islamic Republic of	130+	yes
+32729	32264	2	Iraq	120+	yes
+32290	32264	2	Ireland	2,100+	yes
+32730	32264	2	Isle of Man	6+	yes
+32335	32264	2	Israel	1,600+	yes
+32274	32264	2	Italy	2,100+	yes
+32731	32264	2	Jamaica	190+	yes
+32281	32264	2	Japan	2,200+	yes
+32732	32264	2	Jersey	3+	yes
+32733	32264	2	Jordan	200+	yes
+32734	32264	2	Kazakhstan	160+	yes
+32735	32264	2	Kenya	190+	yes
+32736	32264	2	Kiribati	10+	yes
+32737	32264	2	Korea, Democratic People's Republic of (North Korea)	3+	yes
+32286	32264	2	Korea, Republic of (South Korea)	1,800+	yes
+32738	32264	2	Kuwait	110+	yes
+32739	32264	2	Kyrgyz Republic	130+	yes
+32740	32264	2	Lao People's Democratic Republic	120+	yes
+32741	32264	2	Latvia	1,400+	yes
+32742	32264	2	Lebanon	140+	yes
+32743	32264	2	Lesotho	100+	yes
+32744	32264	2	Liberia	110+	yes
+32745	32264	2	Libyan Arab Jamahiriya	90+	yes
+32746	32264	2	Liechtenstein	10+	yes
+32747	32264	2	Lithuania	1,000+	yes
+32336	32264	2	Luxembourg	1,800+	yes
+32748	32264	2	Macao	100+	yes
+32749	32264	2	Macedonia, Former Yugoslav Republic of	170+	yes
+32750	32264	2	Madagascar	130+	yes
+32751	32264	2	Malawi	150+	yes
+32752	32264	2	Malaysia	220+	yes
+32753	32264	2	Maldives	60+	yes
+32754	32264	2	Mali	120+	yes
+32755	32264	2	Malta	260+	yes
+32756	32264	2	Marshall Islands	60+	yes
+32757	32264	2	Martinique	10+	yes
+32758	32264	2	Mauritania	130+	yes
+32759	32264	2	Mauritius	200+	yes
+32760	32264	2	Mayotte	9+	yes
+32337	32264	2	Mexico	1,500+	yes
+32761	32264	2	Micronesia, Federated States of	10+	yes
+32762	32264	2	Moldova, Republic of	90+	yes
+32763	32264	2	Monaco	9+	yes
+32764	32264	2	Mongolia	90+	yes
+32765	32264	2	Montenegro	90+	yes
+32766	32264	2	Montserrat	60+	yes
+32767	32264	2	Morocco	140+	yes
+32768	32264	2	Mozambique	180+	yes
+32769	32264	2	Myanmar	160+	yes
+32770	32264	2	Namibia	150+	yes
+32771	32264	2	Nauru	10+	yes
+32772	32264	2	Nepal	90+	yes
+32275	32264	2	Netherlands	2,000+	yes
+32773	32264	2	New Caledonia	70+	yes
+32338	32264	2	New Zealand	1,500+	yes
+32774	32264	2	Nicaragua	80+	yes
+32775	32264	2	Niger	120+	yes
+32776	32264	2	Nigeria	150+	yes
+32777	32264	2	Niue	3+	yes
+32778	32264	2	Norfolk Island	3+	yes
+32276	32264	2	Norway	2,000+	yes
+32780	32264	2	Oman	110+	yes
+32781	32264	2	Pakistan	140+	yes
+32782	32264	2	Palau	10+	yes
+32783	32264	2	Palestinian Territories	120+	yes
+32784	32264	2	Panama	120+	yes
+32785	32264	2	Papua New Guinea	100+	yes
+32786	32264	2	Paraguay	140+	yes
+32787	32264	2	Peru	200+	yes
+32788	32264	2	Philippines	250+	yes
+32339	32264	2	Poland	2,100+	yes
+32340	32264	2	Portugal	1,800+	yes
+32790	32264	2	Puerto Rico	230+	yes
+32791	32264	2	Qatar	130+	yes
+32792	32264	2	Reunion	9+	yes
+32793	32264	2	Romania	300+	yes
+32341	32264	2	Russian Federation	1,200+	yes
+32794	32264	2	Rwanda	160+	yes
+32796	32264	2	Saint Helena, Ascension and Tristan da Cunha	9+	yes
+32797	32264	2	Saint Kitts and Nevis	140+	yes
+32798	32264	2	Saint Lucia	70+	yes
+32801	32264	2	Saint Vincent and the Grenadines	10+	yes
+32802	32264	2	Samoa	140+	yes
+32803	32264	2	San Marino	90+	yes
+32804	32264	2	Sao Tome and Principe	70+	yes
+32805	32264	2	Saudi Arabia	190+	yes
+32806	32264	2	Senegal	120+	yes
+32807	32264	2	Serbia	180+	yes
+32808	32264	2	Seychelles	90+	yes
+32809	32264	2	Sierra Leone	100+	yes
+32287	32264	2	Singapore	90+	yes
+32810	32264	2	Sint Maarten (Dutch part)	140+	yes
+32342	32264	2	Slovak Republic	2,100+	yes
+32343	32264	2	Slovenia	1,900+	yes
+32811	32264	2	Solomon Islands	10+	yes
+32812	32264	2	Somalia	10+	yes
+32345	32264	2	South Africa	1,600+	yes
+32814	32264	2	South Sudan	60+	yes
+32277	32264	2	Spain	1,900+	yes
+32815	32264	2	Sri Lanka	150+	yes
+32816	32264	2	Sudan	60+	yes
+32817	32264	2	Suriname	100+	yes
+32818	32264	2	Svalbard and Jan Mayen	6+	yes
+32819	32264	2	Swaziland	80+	yes
+32278	32264	2	Sweden	2,000+	yes
+32279	32264	2	Switzerland	1,900+	yes
+32820	32264	2	Syrian Arab Republic	110+	yes
+32438	32264	2	Taiwan	110+	yes
+32821	32264	2	Tajikistan	60+	yes
+32822	32264	2	Tanzania, United Republic of	70+	yes
+32823	32264	2	Thailand	260+	yes
+32824	32264	2	Timor-Leste	10+	yes
+32825	32264	2	Togo	140+	yes
+32826	32264	2	Tokelau	10+	yes
+32827	32264	2	Tonga	10+	yes
+32828	32264	2	Trinidad and Tobago	140+	yes
+32829	32264	2	Tunisia	130+	yes
+32344	32264	2	Turkey	2,000+	yes
+32830	32264	2	Turkmenistan	70+	yes
+32831	32264	2	Turks and Caicos Islands	60+	yes
+32832	32264	2	Tuvalu	3+	yes
+32833	32264	2	Uganda	210+	yes
+32834	32264	2	Ukraine	240+	yes
+32835	32264	2	United Arab Emirates	130+	yes
+32280	32264	2	United Kingdom	2,300+	yes
+32267	32264	2	United States	2,000+	yes
+32837	32264	2	Uruguay	110+	yes
+32838	32264	2	Uzbekistan	100+	yes
+32839	32264	2	Vanuatu	60+	yes
+32840	32264	2	Venezuela, Bolivarian Republic of	160+	yes
+32841	32264	2	Viet Nam	100+	yes
+32842	32264	2	Virgin Islands, British	10+	yes
+32843	32264	2	Virgin Islands, U.S.	110+	yes
+32844	32264	2	Wallis and Futuna	6+	yes
+32845	32264	2	Western Sahara	6+	yes
+32846	32264	2	Yemen, Republic of	120+	yes
+32946	32264	2	Kosovo	10+	yes
+32847	32264	2	Zambia	140+	yes
+32848	32264	2	Zimbabwe	120+	yes
+32963	32955	2	Africa	62	yes
+32964	32955	2	Americas	248	yes
+32965	32955	2	Asia	60	yes
+33000	32265	2	Money, Banking, & Finance	15,000+	yes
+32997	32265	2	National Accounts	10,000+	yes
+32999	32265	2	Population, Employment, & Labor Markets	42,000+	yes
+32294	32265	2	Production & Business Activity	4,500+	yes
+32998	32265	2	Prices	10,000+	yes
+33261	32265	2	Consumer opinion surveys	10+	yes
+33274	32265	2	Business tendency surveys (construction)	10+	yes
+33288	32265	2	Business tendency surveys (manufacturing)	100+	yes
+33903	32956	2	Advanced Economies	4	yes
+33127	32956	2	Association of Southeast Asian Nations (ASEAN)	8	yes
+33126	32956	2	Bureau of Labor Statistics Asian Newly Industrialized Countries	8	yes
+33124	32956	2	Bureau of Labor Statistics Industrialized Countries	41	yes
+33128	32956	2	Bureau of Labor Statistics Latin America	15	yes
+33125	32956	2	Bureau of Labor Statistics Pacific Rim	42	yes
+33901	32956	2	Emerging Markets	4	yes
+32947	32956	2	Euro Area	3,137	yes
+33002	32956	2	European Economic Area	167	yes
+32948	32956	2	European Union	2,306	yes
+32958	32956	2	Four Big European Countries	15	yes
+32959	32956	2	Group of Seven (G7)	1,251	yes
+33083	32956	2	Group of Twenty Finance Ministers and Central Bank Governors (G20)	67	yes
+33239	32956	2	International Monetary Fund	6	yes
+33711	32956	2	International Organizations	41	yes
+32957	32956	2	Major 5 Asia	17	yes
+32960	32956	2	NAFTA	19	yes
+33086	32956	2	Non-OECD	10	yes
+32962	32956	2	OECD Total	1,546	yes
+32961	32956	2	OECD + Non-member Economies	17	yes
+33087	32956	2	OECD - Europe	303	yes
+33713	32956	2	Unidentified Countries	19	yes
+33909	32956	2	Advance Technology Products	2	yes
+33911	32956	2	NICS	2	yes
+33953	32956	2	USMCA	4	yes
+27282	27281	2	Alabama	10,000+	yes
+27283	27281	2	Alaska	3,700+	yes
+27284	27281	2	Arizona	4,400+	yes
+149	27281	2	Arkansas	9,200+	yes
+27286	27281	2	California	16,000+	yes
+27287	27281	2	Colorado	7,700+	yes
+27288	27281	2	Connecticut	3,500+	yes
+27289	27281	2	Delaware	2,400+	yes
+27290	27281	2	District of Columbia	1,500+	yes
+27291	27281	2	Florida	12,000+	yes
+27292	27281	2	Georgia	19,000+	yes
+27293	27281	2	Hawaii	2,100+	yes
+27294	27281	2	Idaho	5,200+	yes
+150	27281	2	Illinois	14,000+	yes
+151	27281	2	Indiana	13,000+	yes
+27297	27281	2	Iowa	11,000+	yes
+27298	27281	2	Kansas	11,000+	yes
+152	27281	2	Kentucky	13,000+	yes
+27300	27281	2	Louisiana	9,600+	yes
+27301	27281	2	Maine	3,400+	yes
+27302	27281	2	Maryland	5,900+	yes
+27303	27281	2	Massachusetts	5,300+	yes
+27304	27281	2	Michigan	13,000+	yes
+27305	27281	2	Minnesota	10,000+	yes
+153	27281	2	Mississippi	9,000+	yes
+154	27281	2	Missouri	13,000+	yes
+27308	27281	2	Montana	6,000+	yes
+27309	27281	2	Nebraska	10,000+	yes
+27310	27281	2	Nevada	3,000+	yes
+27311	27281	2	New Hampshire	3,400+	yes
+27312	27281	2	New Jersey	5,700+	yes
+27313	27281	2	New Mexico	4,300+	yes
+27314	27281	2	New York	11,000+	yes
+27315	27281	2	North Carolina	15,000+	yes
+27316	27281	2	North Dakota	5,500+	yes
+27317	27281	2	Ohio	13,000+	yes
+27318	27281	2	Oklahoma	7,900+	yes
+27319	27281	2	Oregon	6,000+	yes
+27320	27281	2	Pennsylvania	12,000+	yes
+33504	27281	2	Puerto Rico	1,000+	yes
+27322	27281	2	Rhode Island	2,000+	yes
+27323	27281	2	South Carolina	7,600+	yes
+27324	27281	2	South Dakota	6,000+	yes
+193	27281	2	Tennessee	12,000+	yes
+27326	27281	2	Texas	31,000+	yes
+27328	27281	2	Utah	4,500+	yes
+27329	27281	2	Vermont	2,700+	yes
+33605	27281	2	Virgin Islands	80+	yes
+27330	27281	2	Virginia	15,000+	yes
+27332	27281	2	West Virginia	7,100+	yes
+27331	27281	2	Washington	7,100+	yes
+27333	27281	2	Wisconsin	12,000+	yes
+27334	27281	2	Wyoming	3,000+	yes
+32044	32043	2	Midwest	539	yes
+32045	32043	2	Northeast	539	yes
+32046	32043	2	South	597	yes
+32047	32043	2	West	539	yes
+32062	32061	2	Far West	405	yes
+32063	32061	2	Great Lakes	405	yes
+32064	32061	2	Mideast	405	yes
+32065	32061	2	New England	405	yes
+32066	32061	2	Plains	405	yes
+32067	32061	2	Rocky Mountain	405	yes
+32068	32061	2	Southeast	405	yes
+32069	32061	2	Southwest	405	yes
+32851	32849	2	Midwest Urban	438	yes
+32850	32849	2	Northeast Urban	338	yes
+32852	32849	2	South Urban	438	yes
+32853	32849	2	West Urban	338	yes
+32860	32849	2	Population Size Class A (over 1,500,000)	138	yes
+32861	32849	2	Population Size Class B/C (between 50,000 and 1,500,000)	138	yes
+32862	32849	2	Population Size Class D (under 50,000)	138	yes
+32146	32071	2	Atlanta	107	yes
+32147	32071	2	Boston	106	yes
+32148	32071	2	Chicago	119	yes
+32149	32071	2	Cleveland	107	yes
+32150	32071	2	Dallas	107	yes
+32151	32071	2	Kansas City	107	yes
+32152	32071	2	Minneapolis	107	yes
+32153	32071	2	New York	130	yes
+32154	32071	2	Philadelphia	171	yes
+32155	32071	2	Richmond	107	yes
+32156	32071	2	San Francisco	107	yes
+133	32071	2	St. Louis	247	yes
+32236	32233	2	North Central	10	yes
+32234	32233	2	Northeast	10	yes
+32235	32233	2	Southeast	10	yes
+32237	32233	2	Southwest	10	yes
+32238	32233	2	West	10	yes
+33951	33060	2	Daily Federal Funds Rate, 1928-54	4	yes
+33835	33833	2	Section 1. General Statistics of All Banks in the United States	1,499	yes
+33837	33833	2	Section 2. Assets and Liabilities of All Member Banks	495	yes
+33845	33839	2	National Accounts	26	yes
+33843	33839	2	Labour, Capital and Productivity	13	yes
+33847	33839	2	Wages and Prices	16	yes
+33849	33839	2	Financial Markets	38	yes
+33851	33839	2	Money and Credit	21	yes
+33853	33839	2	Fiscal	8	yes
+33855	33839	2	Trade	6	yes
+33062	33061	2	Production of Commodities	454	yes
+33063	33061	2	Construction	385	yes
+33064	33061	2	Transportation and Public Utilities	172	yes
+33065	33061	2	Prices	335	yes
+33066	33061	2	Stocks of Commodities	192	yes
+33067	33061	2	Distribution of Commodities	164	yes
+33068	33061	2	Foreign Trade	77	yes
+33069	33061	2	Income and Employment	488	yes
+33070	33061	2	Financial Status of Business	142	yes
+33071	33061	2	Savings and Investment	165	yes
+33072	33061	2	Security Markets	31	yes
+33073	33061	2	Volume of Transactions	59	yes
+33074	33061	2	Interest Rates	74	yes
+33075	33061	2	Money and Banking	180	yes
+33076	33061	2	Government and Finance	56	yes
+33077	33061	2	Leading Indicators	62	yes
+33107	33100	2	Component Shares of GDP per Capita (Constant Prices)	570	yes
+33106	33100	2	Component Shares of GDP per Capita (Current Prices)	570	yes
+33102	33100	2	Exchange Rates	190	yes
+33110	33100	2	GDP per Capita (Current Prices)	570	yes
+33112	33100	2	Gross Domestic Income, Adjustments for Changes in Terms of Trade	190	yes
+33105	33100	2	Openness	380	yes
+33101	33100	2	Population	190	yes
+33104	33100	2	Price Levels of GDP, Consumption, Government, and Investment	950	yes
+33103	33100	2	Purchasing Power Parity	190	yes
+33118	33100	2	Purchasing Power Parity Converted GDP	190	yes
+33108	33100	2	Ratio of GNP to GDP	190	yes
+33111	33100	2	Real GDP per Capita (Constant Prices)	570	yes
+33109	33100	2	Real GDP per Capita Relative to U.S.	380	yes
+33113	33100	2	Real GDP per Equivalent Adult	190	yes
+33117	33100	2	Real GDP per Hour Worked by Employees	52	yes
+33115	33100	2	Real GDP per Person Engaged	29	yes
+33116	33100	2	Real GDP per Person Counted in Total Employment	121	yes
+33114	33100	2	Real GDP per Worker	368	yes
+33403	33402	2	Real GDP, Employment and Population Levels	874	yes
+33404	33402	2	Current Price GDP, Capital and Total Factor Productivity	616	yes
+33405	33402	2	National Accounts-Based Variables	579	yes
+33406	33402	2	Exchange Rates and GDP Price Levels	501	yes
+33407	33402	2	Shares in Output-side Real GDP at Current Purchasing Power Parities	1,002	yes
+33408	33402	2	Price Levels, Expenditure Categories and Capital	1,002	yes
+287	158	3	Australia	3	yes
+286	158	3	Austria	1	yes
+285	158	3	Belgium	1	yes
+284	158	3	Brazil	3	yes
+283	158	3	Canada	3	yes
+282	158	3	China	3	yes
+281	158	3	Denmark	3	yes
+280	158	3	Euro	4	yes
+279	158	3	Finland	1	yes
+278	158	3	France	1	yes
+277	158	3	Germany	1	yes
+274	158	3	Greece	1	yes
+273	158	3	Hong Kong	3	yes
+272	158	3	India	3	yes
+271	158	3	Ireland	1	yes
+276	158	3	Italy	1	yes
+275	158	3	Japan	3	yes
+270	158	3	Malaysia	3	yes
+269	158	3	Mexico	3	yes
+268	158	3	Netherlands	1	yes
+266	158	3	New Zealand	3	yes
+265	158	3	Norway	3	yes
+264	158	3	Portugal	1	yes
+263	158	3	Singapore	3	yes
+262	158	3	South Africa	3	yes
+261	158	3	South Korea	3	yes
+260	158	3	Spain	1	yes
+259	158	3	Sri Lanka	3	yes
+258	158	3	Sweden	3	yes
+257	158	3	Switzerland	3	yes
+267	158	3	Taiwan	3	yes
+254	158	3	Thailand	3	yes
+191	158	3	United Kingdom	3	yes
+192	158	3	Venezuela	3	yes
+32413	32414	3	BofA Merrill Lynch Total Bond Return Index Values	48	yes
+33078	100	3	All Commercial Banks	361	yes
+33079	100	3	Domestically Chartered Commercial Banks	389	yes
+33080	100	3	Foreign-Related Institutions	379	yes
+93	83	3	United States	258	yes
+84	83	3	New England Census Division	18	yes
+85	83	3	Middle Atlantic Census Division	18	yes
+86	83	3	East North Central Census Division	18	yes
+87	83	3	West North Central Census Division	18	yes
+88	83	3	South Atlantic Census Division	18	yes
+89	83	3	East South Central Census Division	18	yes
+90	83	3	West South Central Census Division	18	yes
+91	83	3	Mountain Census Division	18	yes
+92	83	3	Pacific Census Division	18	yes
+32407	32406	3	All Commercial Banks	56	yes
+32408	32406	3	Domestic Banks	56	yes
+32409	32406	3	Foreign Banks	56	yes
+32410	32406	3	Large Domestic Banks	56	yes
+32411	32406	3	Small Domestic Banks	56	yes
+32412	32406	3	Summary Statistics	10	yes
+32362	32361	3	All Commercial and Industrial Loans	45	yes
+32369	32361	3	Base Rate of Loans	18	yes
+32364	32361	3	Daily Repricing/Maturity Interval	45	yes
+32367	32361	3	More Than 365 Days Repricing/Maturity Interval	45	yes
+32368	32361	3	Size of Loans	36	yes
+32366	32361	3	31 to 365 Days Repricing/Maturity Interval	45	yes
+32365	32361	3	2 to 30 Days Repricing/Maturity Interval	45	yes
+32363	32361	3	Zero Repricing/Maturity Interval	45	yes
+32371	32370	3	All Commercial and Industrial Loans	45	yes
+32375	32370	3	Base Rate of Loans	18	yes
+32372	32370	3	Daily Repricing/Maturity Interval	45	yes
+32373	32370	3	More Than 365 Days Repricing/Maturity Interval	45	yes
+32380	32379	3	All Commercial and Industrial Loans	45	yes
+32381	32379	3	Base Rate of Loans	18	yes
+32382	32379	3	Daily Repricing/Maturity Interval	45	yes
+32383	32379	3	More Than 365 Days Repricing/Maturity Interval	45	yes
+32384	32379	3	Size of Loans	36	yes
+32385	32379	3	31 to 365 Days Repricing/Maturity Interval	45	yes
+32386	32379	3	2 to 30 Days Repricing/Maturity Interval	45	yes
+32387	32379	3	Zero Repricing/Maturity Interval	45	yes
+32389	32388	3	All Commercial and Industrial Loans	45	yes
+32390	32388	3	Base Rate of Loans	18	yes
+32391	32388	3	Daily Repricing/Maturity Interval	45	yes
+32392	32388	3	More Than 365 Days Repricing/Maturity Interval	40	yes
+32398	32397	3	All Commercial and Industrial Loans	45	yes
+32399	32397	3	Base Rate of Loans	18	yes
+32400	32397	3	Daily Repricing/Maturity Interval	45	yes
+32401	32397	3	More Than 365 Days Repricing/Maturity Interval	45	yes
+32402	32397	3	Size of Loans	36	yes
+32403	32397	3	31 to 365 Days Repricing/Maturity Interval	45	yes
+32404	32397	3	2 to 30 Days Repricing/Maturity Interval	45	yes
+32405	32397	3	Zero Repricing/Maturity Interval	45	yes
+32352	32349	3	Durable Goods	606	yes
+33042	112	3	Capital Transfers Paid	60	yes
+33043	112	3	Capital Transfers Received	45	yes
+33040	112	3	Consumptions of Fixed Capital	98	yes
+33041	112	3	Corporate Capital Consumption	156	yes
+33018	108	3	Exports	327	yes
+33699	33697	3	Net Stocks	22	yes
+33701	33697	3	Depreciation	22	yes
+33703	33697	3	Fixed Investment	278	yes
+33020	106	3	Shares of GDP	75	yes
+33022	107	3	Gov't Consumption Expenditures	584	yes
+33024	107	3	Gov't Current Expenditures	284	yes
+33025	107	3	Gov't Current Transfer Receipts	43	yes
+33883	33045	3	Administrative and Waste Management Services	21	yes
+33859	33045	3	Agriculture, Forestry, Fishing, and Hunting	21	yes
+33887	33045	3	Arts, Entertainment, Recreation, Accommodation, and Food Services	48	yes
+33046	33045	3	Auto Output	96	yes
+33865	33045	3	Construction	9	yes
+33885	33045	3	Educational Services, Health Care, and Social Assistance	42	yes
+33047	33045	3	Farm Output	55	yes
+33877	33045	3	Finance, Insurance, Real Estate, Rental, and Leasing	60	yes
+33050	33045	3	Full-time Equivalent Employees	274	yes
+33049	33045	3	Full-time & Part-time Employees	323	yes
+33889	33045	3	Government	27	yes
+33048	33045	3	Households	83	yes
+33029	110	3	Compensation of Employees	306	yes
+33031	110	3	Employer Contributions	270	yes
+33028	110	3	Personal Consumption Expenditures	808	yes
+33035	109	3	Corporate Dividends	174	yes
+33033	109	3	Corporate Profits	728	yes
+33564	33583	3	Accommodation Services	11	yes
+33548	33583	3	Advertising Space and Time Sales	47	yes
+33533	33583	3	Chemicals and Allied Products	305	yes
+33560	33583	3	Cleaning and Building Maintenance Services	5	yes
+33573	33583	3	Construction	20	yes
+33572	33583	3	Contract Work on Textile Products, Apparel, and Leather	25	yes
+33551	33583	3	Credit Intermediation Services	30	yes
+33550	33583	3	Data Processing and Related Services	9	yes
+33574	33583	3	Durability of Product	11	yes
+33563	33583	3	Educational Services	5	yes
+33557	33583	3	Employment Services	19	yes
+33567	33583	3	Entertainment Services	29	yes
+33528	33583	3	Farm Products	255	yes
+33575	33583	3	Final Demand	220	yes
+33565	33583	3	Food and Beverage for Immediate Consumption Services	11	yes
+33532	33583	3	Fuels and Related Products and Power	207	yes
+33539	33583	3	Furniture and Household Durables	202	yes
+33561	33583	3	Health Care Services	91	yes
+33531	33583	3	Hides, Skins, Leather, and Related Products	50	yes
+33582	33583	3	Inputs to Industries	225	yes
+33553	33583	3	Insurance and Annuities	36	yes
+33577	33583	3	Intermediate Demand By Commodity Type	114	yes
+33576	33583	3	Intermediate Demand By Production Flow	306	yes
+33552	33583	3	Investment Services	15	yes
+33535	33583	3	Lumber and Wood Products	139	yes
+33538	33583	3	Machinery and Equipment	768	yes
+33570	33583	3	Metal Treatment Services	10	yes
+33537	33583	3	Metals and Metal Products	516	yes
+33571	33583	3	Mining Services	23	yes
+33542	33583	3	Miscellaneous Products	228	yes
+33547	33583	3	Network Compensation from Broadcast and Cable Television and Radio	12	yes
+33540	33583	3	Nonmetallic Mineral Products	224	yes
+33529	33583	3	Processed Foods and Feeds	484	yes
+33556	33583	3	Professional Services	58	yes
+33545	33583	3	Publishing Sales, Excluding Software	52	yes
+33536	33583	3	Pulp, Paper, and Allied Products	241	yes
+33554	33583	3	Real Estate Services	37	yes
+33555	33583	3	Rental and Leasing of Goods	29	yes
+33566	33583	3	Repair and Maintenance Services	29	yes
+33569	33583	3	Retail Trade Services	112	yes
+33534	33583	3	Rubber and Plastic Products	123	yes
+33559	33583	3	Selected Security Services	5	yes
+33546	33583	3	Software Publishing	14	yes
+33580	33583	3	Special Indexes	35	yes
+33581	33583	3	Stage of Processing	106	yes
+33549	33583	3	Telecommunication, Cable, and Internet User Services	55	yes
+33530	33583	3	Textile Products and Apparel	252	yes
+33541	33583	3	Transportation Equipment	194	yes
+33543	33583	3	Transportation Services	102	yes
+33558	33583	3	Travel Arrangement Services	26	yes
+33544	33583	3	Warehousing, Storage, and Related Services	5	yes
+33562	33583	3	Waste Collection and Remediation Services	8	yes
+33568	33583	3	Wholesale Trade Services	51	yes
+32223	32221	3	End Use Classification System	156	yes
+32229	32221	3	By Harmonized System	169	yes
+32226	32221	3	By NAICS	161	yes
+32230	32221	3	By Locality of Origin	32	yes
+33907	32221	3	Standard International Trade Classification	130	yes
+32225	32224	3	End Use Classification System	135	yes
+32227	32224	3	By NAICS	127	yes
+32228	32224	3	By Harmonized System	128	yes
+33905	32224	3	Standard International Trade Classification	112	yes
+32973	32964	3	Latin America and the Caribbean	246	yes
+32974	32964	3	Northern America	2	yes
+33185	33000	3	Banking	5,230	yes
+33195	33000	3	Business Lending	1,313	yes
+33099	33000	3	Financial Indicators	7,454	yes
+33191	33000	3	Financial Institutions	352	yes
+32954	33000	3	Financial Stress Indicators	24	yes
+32951	32997	3	Balance of Payments	130	yes
+32291	32997	3	GDP	3,724	yes
+33196	32997	3	GNP	480	yes
+33097	32997	3	International Trade and Transactions	361	yes
+33526	32999	3	Education	300+	yes
+32283	32999	3	Employment	5,900+	yes
+33218	32999	3	Employment Population Ratio	3,600+	yes
+33525	32999	3	Income Distribution	110+	yes
+33215	32999	3	Job Openings and Labor Turnover	60+	yes
+32285	32999	3	Labor Force	7,400+	yes
+33217	32999	3	Labor Force Participation Rate	5,100+	yes
+33213	32999	3	Labor Compensation	260+	yes
+32292	32999	3	Population	2,500+	yes
+33212	32999	3	Productivity & Costs	2,800+	yes
+32284	32999	3	Unemployment	180+	yes
+33214	32999	3	Unemployment Level	4,100+	yes
+33219	32999	3	Unemployment Rate	3,600+	yes
+33527	32294	3	Cell Phone Usage	240	yes
+33092	32294	3	Construction	298	yes
+33090	32294	3	Industrial Production & Capacity Utilization	1,206	yes
+33192	32294	3	Insurance	472	yes
+33499	32294	3	Internet Users	481	yes
+32437	32294	3	Manufacturing	415	yes
+32266	32998	3	Consumer Price Indexes	9,312	yes
+32427	32998	3	Producer Price Indexes	1,781	yes
+33129	32998	3	Trade Indexes	248	yes
+33226	32998	3	Wholesale	18	yes
+33503	32998	3	House Prices	224	yes
+33262	33261	3	Economic Situation	28	yes
+33268	33261	3	Consumer prices (inflation)	29	yes
+33275	33274	3	Confidence indicators	27	yes
+33295	33274	3	Order books	25	yes
+33313	33274	3	Employment	30	yes
+33319	33274	3	Selling prices	26	yes
+33325	33274	3	Business situation - Activity	28	yes
+33289	33288	3	Confidence indicators	39	yes
+33301	33288	3	Finished goods stocks	36	yes
+33307	33288	3	Order books	35	yes
+33331	33288	3	Business situation	10	yes
+27335	27282	3	Counties	7,388	yes
+27403	27283	3	Census Areas and Boroughs	2,741	yes
+32907	27283	3	CPI for MSAs and Consolidated MSAs	50	yes
+27429	27284	3	Counties	1,888	yes
+30545	27284	3	MSAs	1,334	yes
+27445	149	3	Counties	7,390	yes
+27521	27286	3	Counties	7,481	yes
+30560	27286	3	MSAs	6,649	yes
+27580	27287	3	Counties	6,416	yes
+30587	27287	3	MSAs	1,446	yes
+27644	27288	3	Counties	1,152	yes
+32872	27288	3	CPI for MSAs and Consolidated MSAs	102	yes
+30595	27288	3	MSAs	552	yes
+27653	27289	3	Counties	433	yes
+30600	27289	3	MSAs	547	yes
+33507	27290	3	District of Columbia, DC	151	yes
+30603	27290	3	MSAs	212	yes
+27659	27291	3	Counties	8,232	yes
+30605	27291	3	MSAs	3,926	yes
+27727	27292	3	Counties	16,252	yes
+34275	27292	3	Metropolitan Divisions	123	yes
+27887	27293	3	Counties	622	yes
+30641	27293	3	MSAs	676	yes
+27893	27294	3	Counties	4,189	yes
+27938	150	3	Counties	10,743	yes
+30650	150	3	MSAs	2,204	yes
+28041	151	3	Counties	9,764	yes
+30662	151	3	MSAs	2,920	yes
+28134	27297	3	Counties	9,421	yes
+28234	27298	3	Counties	9,697	yes
+30689	27298	3	MSAs	940	yes
+28340	152	3	Counties	11,643	yes
+30695	152	3	MSAs	1,670	yes
+28461	27300	3	Parishes	6,900	yes
+28526	27301	3	Counties	1,693	yes
+32084	27301	3	New England City and Town Areas	459	yes
+28543	27302	3	Counties	3,229	yes
+33452	27302	3	Metropolitan Areas	112	yes
+33130	27302	3	Metropolitan Divisions	708	yes
+28568	27303	3	Counties	1,902	yes
+32085	27303	3	New England City and Town Areas	2,044	yes
+30725	27303	3	MSAs	820	yes
+28583	27304	3	Counties	9,221	yes
+30732	27304	3	MSAs	2,799	yes
+28667	27305	3	Counties	8,753	yes
+30748	27305	3	MSAs	1,538	yes
+28755	153	3	Counties	8,076	yes
+28838	154	3	Counties	11,234	yes
+30762	154	3	MSAs	1,422	yes
+28954	27308	3	Counties	5,177	yes
+29012	27309	3	Counties	8,302	yes
+29106	27310	3	Counties	1,813	yes
+29124	27311	3	Counties	1,271	yes
+30783	27311	3	MSAs	254	yes
+32086	27311	3	New England City and Town Areas	835	yes
+29135	27312	3	Counties	3,007	yes
+30786	27312	3	MSAs	1,304	yes
+32870	27312	3	CPI for MSAs and Consolidated MSAs	100	yes
+29157	27313	3	Counties	3,553	yes
+29191	27314	3	Counties	8,159	yes
+30799	27314	3	MSAs	2,317	yes
+32868	27314	3	CPI for MSAs and Consolidated MSAs	100	yes
+29254	27315	3	Counties	11,779	yes
+29355	27316	3	Counties	4,808	yes
+29409	27317	3	Counties	10,502	yes
+30832	27317	3	MSAs	2,971	yes
+29498	27318	3	Counties	7,733	yes
+29576	27319	3	Counties	4,178	yes
+30854	27319	3	MSAs	1,658	yes
+29613	27320	3	Counties	8,322	yes
+30861	27320	3	MSAs	3,385	yes
+32874	27320	3	CPI for MSAs and Consolidated MSAs	200	yes
+33505	33504	3	Counties	80	yes
+29682	27322	3	Counties	717	yes
+30879	27322	3	MSAs	153	yes
+29688	27323	3	Counties	5,375	yes
+29735	27324	3	Counties	5,879	yes
+29802	193	3	Counties	10,074	yes
+29898	27326	3	Counties	22,000+	yes
+30907	27326	3	MSAs	4,200+	yes
+30154	27328	3	Counties	2,931	yes
+30184	27329	3	Counties	1,512	yes
+32088	27329	3	New England City and Town Areas	114	yes
+30199	27330	3	Counties	13,501	yes
+30942	27330	3	MSAs	1,779	yes
+32923	27330	3	CPI for MSAs and Consolidated MSAs	53	yes
+30376	27332	3	Counties	5,466	yes
+30968	27332	3	MSAs	1,469	yes
+30336	27331	3	Counties	4,671	yes
+30955	27331	3	MSAs	2,167	yes
+30432	27333	3	Counties	7,960	yes
+30979	27333	3	MSAs	2,749	yes
+30505	27334	3	Counties	2,129	yes
+32048	32044	3	Census Divisions	126	yes
+32051	32045	3	Census Divisions	126	yes
+32054	32046	3	Census Divisions	189	yes
+32058	32047	3	Census Divisions	126	yes
+32854	32851	3	Population Size Class A (over 1,500,000)	100	yes
+32855	32851	3	Population Size Class B/C (between 50,000 and 1,500,000)	100	yes
+32857	32850	3	Population Size Class A (over 1,500,000)	100	yes
+32863	32852	3	Population Size Class A (over 1,500,000)	100	yes
+32865	32852	3	Population Size Class B/C (between 50,000 and 1,500,000)	100	yes
+32864	32853	3	Population Size Class A (over 1,500,000)	100	yes
+32988	32973	4	Caribbean	136	yes
+32989	32973	4	Central America	2	yes
+33186	33185	4	Condition of Banks	5,230	yes
+33187	33099	4	Bond Market Data	1,713	yes
+33211	33099	4	Financial Activity Measures	83	yes
+33497	33099	4	Money Market Instruments	824	yes
+33493	33099	4	Securities	3,770	yes
+33194	33099	4	Stock Market Data	1,123	yes
+33739	32292	4	Birth Rate	243	yes
+33512	32292	4	Fertility Rate	466	yes
+33510	32292	4	Infant Mortality	224	yes
+33228	32437	4	Inventories	36	yes
+33006	32266	4	Alcoholic Beverages and Tobacco	247	yes
+33004	32266	4	All Items	873	yes
+33007	32266	4	Clothing and Footwear	287	yes
+33012	32266	4	Communications	164	yes
+33014	32266	4	Education	42	yes
+33005	32266	4	Food and Non-Alcoholic Beverages	832	yes
+33010	32266	4	Health	327	yes
+33269	33268	4	Future tendency	29	yes
+33296	33295	4	Level	25	yes
+33314	33313	4	Future tendency	30	yes
+33320	33319	4	Future tendency	26	yes
+33290	33289	4	Composite indicators	39	yes
+33302	33301	4	Level	36	yes
+33308	33307	4	Level	35	yes
+33332	33331	4	Current	10	yes
+27336	27335	4	Autauga County, AL	143	yes
+27337	27335	4	Baldwin County, AL	145	yes
+27338	27335	4	Barbour County, AL	87	yes
+27339	27335	4	Bibb County, AL	88	yes
+27340	27335	4	Blount County, AL	144	yes
+27341	27335	4	Bullock County, AL	87	no
+27342	27335	4	Butler County, AL	87	no
+27343	27335	4	Calhoun County, AL	145	no
+27344	27335	4	Chambers County, AL	88	no
+27345	27335	4	Cherokee County, AL	88	no
+27346	27335	4	Chilton County, AL	88	no
+27347	27335	4	Choctaw County, AL	86	no
+27348	27335	4	Clarke County, AL	87	no
+27349	27335	4	Clay County, AL	86	no
+27350	27335	4	Cleburne County, AL	87	no
+27351	27335	4	Coffee County, AL	144	no
+27352	27335	4	Colbert County, AL	144	no
+27353	27335	4	Conecuh County, AL	86	no
+27354	27335	4	Coosa County, AL	87	no
+27355	27335	4	Covington County, AL	87	no
+27356	27335	4	Crenshaw County, AL	88	no
+27357	27335	4	Cullman County, AL	145	no
+27358	27335	4	Dale County, AL	144	no
+27359	27335	4	Dallas County, AL	87	no
+27360	27335	4	De Kalb County, AL	89	no
+27361	27335	4	Elmore County, AL	145	no
+27362	27335	4	Escambia County, AL	87	no
+27363	27335	4	Etowah County, AL	145	no
+27364	27335	4	Fayette County, AL	88	no
+27365	27335	4	Franklin County, AL	88	no
+27366	27335	4	Geneva County, AL	88	no
+27367	27335	4	Greene County, AL	87	no
+27368	27335	4	Hale County, AL	88	no
+27369	27335	4	Henry County, AL	88	no
+27370	27335	4	Houston County, AL	145	no
+27371	27335	4	Jackson County, AL	141	no
+27372	27335	4	Jefferson County, AL	144	no
+27373	27335	4	Lamar County, AL	87	no
+27374	27335	4	Lauderdale County, AL	144	no
+27375	27335	4	Lawrence County, AL	87	no
+27376	27335	4	Lee County, AL	145	no
+27377	27335	4	Limestone County, AL	145	no
+27378	27335	4	Lowndes County, AL	86	no
+27379	27335	4	Macon County, AL	88	no
+27380	27335	4	Madison County, AL	145	no
+27381	27335	4	Marengo County, AL	88	no
+27382	27335	4	Marion County, AL	87	no
+27383	27335	4	Marshall County, AL	145	no
+27384	27335	4	Mobile County, AL	145	no
+27385	27335	4	Monroe County, AL	87	no
+27386	27335	4	Montgomery County, AL	145	no
+27387	27335	4	Morgan County, AL	144	no
+27388	27335	4	Perry County, AL	87	no
+27389	27335	4	Pickens County, AL	87	no
+27390	27335	4	Pike County, AL	88	no
+27391	27335	4	Randolph County, AL	88	no
+27392	27335	4	Russell County, AL	143	no
+27393	27335	4	Shelby County, AL	145	no
+27394	27335	4	St. Clair County, AL	145	no
+27395	27335	4	Sumter County, AL	86	no
+27396	27335	4	Talladega County, AL	144	no
+27397	27335	4	Tallapoosa County, AL	88	no
+27398	27335	4	Tuscaloosa County, AL	145	no
+27399	27335	4	Walker County, AL	144	no
+27400	27335	4	Washington County, AL	85	no
+27401	27335	4	Wilcox County, AL	86	no
+27402	27335	4	Winston County, AL	88	no
+27404	27403	4	Aleutians East Borough, AK	84	no
+33743	27403	4	Aleutian Islands Census Area	2	no
+27405	27403	4	Aleutians West Census Area, AK	84	no
+27406	27403	4	Anchorage Borough/municipality, AK	139	no
+27407	27403	4	Bethel Census Area, AK	86	no
+27408	27403	4	Bristol Bay Borough, AK	83	no
+40	27403	4	Chugach Census Area, AK	1	no
+41	27403	4	Copper River Census Area, AK	1	no
+32079	27403	4	Denali Borough, AK	81	no
+27409	27403	4	Dillingham Census Area, AK	85	no
+27410	27403	4	Fairbanks North Star Borough, AK	144	no
+27411	27403	4	Haines Borough, AK	85	no
+33517	27403	4	Hoonah-Angoon Census Area, AK	84	no
+27412	27403	4	Juneau Borough/city, AK	86	no
+27413	27403	4	Kenai Peninsula Borough, AK	86	no
+27414	27403	4	Ketchikan Gateway Borough, AK	86	no
+27415	27403	4	Kodiak Island Borough, AK	86	no
+33897	27403	4	Kusilvak Census Area, AK	94	no
+32908	32907	4	Anchorage, AK (MSA)	50	no
+27430	27429	4	Apache County, AZ	89	no
+27431	27429	4	Cochise County, AZ	145	no
+27432	27429	4	Coconino County, AZ	145	no
+27433	27429	4	Gila County, AZ	144	no
+27434	27429	4	Graham County, AZ	88	no
+27435	27429	4	Greenlee County, AZ	87	no
+27436	27429	4	La Paz County, AZ	87	no
+27437	27429	4	Maricopa County, AZ	145	no
+27438	27429	4	Mohave County, AZ	145	no
+27439	27429	4	Navajo County, AZ	145	no
+27440	27429	4	Pima County, AZ	145	no
+27441	27429	4	Pinal County, AZ	145	no
+27442	27429	4	Santa Cruz County, AZ	88	no
+27443	27429	4	Yavapai County, AZ	145	no
+27444	27429	4	Yuma County, AZ	145	no
+30546	30545	4	Flagstaff, AZ	128	no
+32144	30545	4	Lake Havasu City-Kingman, AZ	146	no
+30547	30545	4	Phoenix-Mesa-Chandler, AZ	354	no
+30548	30545	4	Prescott Valley-Prescott, AZ	149	no
+798	27445	4	Arkansas County, AR	88	no
+796	27445	4	Ashley County, AR	88	no
+794	27445	4	Baxter County, AR	142	no
+792	27445	4	Benton County, AR	145	no
+790	27445	4	Boone County, AR	88	no
+787	27445	4	Bradley County, AR	86	no
+786	27445	4	Calhoun County, AR	87	no
+784	27445	4	Carroll County, AR	88	no
+782	27445	4	Chicot County, AR	88	no
+780	27445	4	Clark County, AR	88	no
+778	27445	4	Clay County, AR	86	no
+776	27445	4	Cleburne County, AR	88	no
+774	27445	4	Cleveland County, AR	85	no
+772	27445	4	Columbia County, AR	88	no
+770	27445	4	Conway County, AR	88	no
+768	27445	4	Craighead County, AR	145	no
+766	27445	4	Crawford County, AR	144	no
+764	27445	4	Crittenden County, AR	144	no
+762	27445	4	Cross County, AR	88	no
+760	27445	4	Dallas County, AR	87	no
+758	27445	4	Desha County, AR	86	no
+756	27445	4	Drew County, AR	88	no
+754	27445	4	Faulkner County, AR	145	no
+752	27445	4	Franklin County, AR	88	no
+750	27445	4	Fulton County, AR	87	no
+748	27445	4	Garland County, AR	145	no
+746	27445	4	Grant County, AR	88	no
+744	27445	4	Greene County, AR	88	no
+742	27445	4	Hempstead County, AR	87	no
+740	27445	4	Hot Spring County, AR	88	no
+738	27445	4	Howard County, AR	87	no
+736	27445	4	Independence County, AR	88	no
+734	27445	4	Izard County, AR	87	no
+732	27445	4	Jackson County, AR	88	no
+730	27445	4	Jefferson County, AR	145	no
+728	27445	4	Johnson County, AR	87	no
+726	27445	4	Lafayette County, AR	86	no
+724	27445	4	Lawrence County, AR	87	no
+722	27445	4	Lee County, AR	86	no
+720	27445	4	Lincoln County, AR	85	no
+718	27445	4	Little River County, AR	86	no
+716	27445	4	Logan County, AR	87	no
+714	27445	4	Lonoke County, AR	145	no
+712	27445	4	Madison County, AR	87	no
+710	27445	4	Marion County, AR	87	no
+708	27445	4	Miller County, AR	87	no
+706	27445	4	Mississippi County, AR	87	no
+704	27445	4	Monroe County, AR	85	no
+702	27445	4	Montgomery County, AR	85	no
+700	27445	4	Nevada County, AR	87	no
+698	27445	4	Newton County, AR	87	no
+696	27445	4	Ouachita County, AR	88	no
+693	27445	4	Perry County, AR	87	no
+691	27445	4	Phillips County, AR	86	no
+689	27445	4	Pike County, AR	85	no
+687	27445	4	Poinsett County, AR	87	no
+685	27445	4	Polk County, AR	88	no
+683	27445	4	Pope County, AR	144	no
+799	27445	4	Prairie County, AR	87	no
+680	27445	4	Pulaski County, AR	145	no
+678	27445	4	Randolph County, AR	88	no
+676	27445	4	Saline County, AR	145	no
+674	27445	4	Scott County, AR	87	no
+672	27445	4	Searcy County, AR	86	no
+670	27445	4	Sebastian County, AR	145	no
+668	27445	4	Sevier County, AR	86	no
+666	27445	4	Sharp County, AR	88	no
+664	27445	4	St. Francis County, AR	87	no
+662	27445	4	Stone County, AR	87	no
+660	27445	4	Union County, AR	88	no
+658	27445	4	Van Buren County, AR	87	no
+656	27445	4	Washington County, AR	145	no
+654	27445	4	White County, AR	145	no
+652	27445	4	Woodruff County, AR	86	no
+650	27445	4	Yell County, AR	86	no
+27522	27521	4	Alameda County, CA	145	no
+27523	27521	4	Alpine County, CA	84	no
+27524	27521	4	Amador County, CA	88	no
+27525	27521	4	Butte County, CA	145	no
+27526	27521	4	Calaveras County, CA	88	no
+27527	27521	4	Colusa County, CA	88	no
+27528	27521	4	Contra Costa County, CA	145	no
+27529	27521	4	Del Norte County, CA	88	no
+27530	27521	4	El Dorado County, CA	145	no
+27531	27521	4	Fresno County, CA	145	no
+27532	27521	4	Glenn County, CA	88	no
+27533	27521	4	Humboldt County, CA	145	no
+27534	27521	4	Imperial County, CA	145	no
+27535	27521	4	Inyo County, CA	88	no
+27536	27521	4	Kern County, CA	145	no
+27537	27521	4	Kings County, CA	145	no
+27538	27521	4	Lake County, CA	145	no
+27539	27521	4	Lassen County, CA	88	no
+27540	27521	4	Los Angeles County, CA	145	no
+27541	27521	4	Madera County, CA	145	no
+27542	27521	4	Marin County, CA	145	no
+27543	27521	4	Mariposa County, CA	88	no
+27544	27521	4	Mendocino County, CA	145	no
+27545	27521	4	Merced County, CA	145	no
+27546	27521	4	Modoc County, CA	88	no
+27547	27521	4	Mono County, CA	88	no
+27548	27521	4	Monterey County, CA	145	no
+27549	27521	4	Napa County, CA	145	no
+27550	27521	4	Nevada County, CA	145	no
+27551	27521	4	Orange County, CA	145	no
+27552	27521	4	Placer County, CA	145	no
+27553	27521	4	Plumas County, CA	87	no
+27554	27521	4	Riverside County, CA	145	no
+27555	27521	4	Sacramento County, CA	145	no
+27556	27521	4	San Benito County, CA	88	no
+27557	27521	4	San Bernardino County, CA	144	no
+27558	27521	4	San Diego County, CA	144	no
+27559	27521	4	San Francisco County/city, CA	142	no
+27560	27521	4	San Joaquin County, CA	144	no
+27561	27521	4	San Luis Obispo County, CA	144	no
+27562	27521	4	San Mateo County, CA	145	no
+27563	27521	4	Santa Barbara County, CA	145	no
+27564	27521	4	Santa Clara County, CA	145	no
+27565	27521	4	Santa Cruz County, CA	145	no
+27566	27521	4	Shasta County, CA	145	no
+27567	27521	4	Sierra County, CA	87	no
+27568	27521	4	Siskiyou County, CA	88	no
+27569	27521	4	Solano County, CA	145	no
+27570	27521	4	Sonoma County, CA	145	no
+27571	27521	4	Stanislaus County, CA	145	no
+27572	27521	4	Sutter County, CA	145	no
+27573	27521	4	Tehama County, CA	144	no
+27574	27521	4	Trinity County, CA	87	no
+27575	27521	4	Tulare County, CA	145	no
+27576	27521	4	Tuolumne County, CA	144	no
+27577	27521	4	Ventura County, CA	145	no
+27578	27521	4	Yolo County, CA	144	no
+27579	27521	4	Yuba County, CA	145	no
+30561	30560	4	Bakersfield-Delano, CA	261	no
+30562	30560	4	Chico, CA	175	no
+30563	30560	4	El Centro, CA	152	no
+30564	30560	4	Fresno, CA	261	no
+30565	30560	4	Hanford-Corcoran, CA	146	no
+30566	30560	4	Los Angeles-Long Beach-Anaheim, CA	685	no
+30567	30560	4	Madera, CA	152	no
+30568	30560	4	Merced, CA	175	no
+30569	30560	4	Modesto, CA	205	no
+30570	30560	4	Napa, CA	167	no
+30571	30560	4	Oxnard-Thousand Oaks-Ventura, CA	256	no
+30572	30560	4	Redding, CA	169	no
+30573	30560	4	Riverside-San Bernardino-Ontario, CA	387	no
+27581	27580	4	Adams County, CO	145	no
+27582	27580	4	Alamosa County, CO	88	no
+27583	27580	4	Arapahoe County, CO	145	no
+27584	27580	4	Archuleta County, CO	87	no
+27585	27580	4	Baca County, CO	87	no
+27586	27580	4	Bent County, CO	87	no
+27587	27580	4	Boulder County, CO	145	no
+32077	27580	4	Broomfield County/city, CO	135	no
+27588	27580	4	Chaffee County, CO	87	no
+27589	27580	4	Cheyenne County, CO	87	no
+27590	27580	4	Clear Creek County, CO	88	no
+27591	27580	4	Conejos County, CO	86	no
+27592	27580	4	Costilla County, CO	86	no
+27593	27580	4	Crowley County, CO	86	no
+27594	27580	4	Custer County, CO	88	no
+27595	27580	4	Delta County, CO	88	no
+27596	27580	4	Denver County, CO	144	no
+27597	27580	4	Dolores County, CO	85	no
+27598	27580	4	Douglas County, CO	145	no
+27599	27580	4	Eagle County, CO	144	no
+27600	27580	4	Elbert County, CO	88	no
+27601	27580	4	El Paso County, CO	145	no
+27602	27580	4	Fremont County, CO	88	no
+27603	27580	4	Garfield County, CO	144	no
+27604	27580	4	Gilpin County, CO	87	no
+27605	27580	4	Grand County, CO	88	no
+27606	27580	4	Gunnison County, CO	88	no
+27607	27580	4	Hinsdale County, CO	83	no
+27608	27580	4	Huerfano County, CO	88	no
+27609	27580	4	Jackson County, CO	84	no
+27610	27580	4	Jefferson County, CO	145	no
+27611	27580	4	Kiowa County, CO	86	no
+27612	27580	4	Kit Carson County, CO	87	no
+27613	27580	4	Lake County, CO	88	no
+27614	27580	4	La Plata County, CO	144	no
+27615	27580	4	Larimer County, CO	145	no
+27616	27580	4	Las Animas County, CO	87	no
+27617	27580	4	Lincoln County, CO	85	no
+27618	27580	4	Logan County, CO	87	no
+27619	27580	4	Mesa County, CO	144	no
+27620	27580	4	Mineral County, CO	84	no
+27621	27580	4	Moffat County, CO	87	no
+27622	27580	4	Montezuma County, CO	88	no
+27623	27580	4	Montrose County, CO	88	no
+27624	27580	4	Morgan County, CO	87	no
+27625	27580	4	Otero County, CO	88	no
+27626	27580	4	Ouray County, CO	88	no
+27627	27580	4	Park County, CO	88	no
+27628	27580	4	Phillips County, CO	87	no
+27629	27580	4	Pitkin County, CO	88	no
+27630	27580	4	Prowers County, CO	87	no
+27631	27580	4	Pueblo County, CO	145	no
+27632	27580	4	Rio Blanco County, CO	87	no
+27633	27580	4	Rio Grande County, CO	87	no
+27634	27580	4	Routt County, CO	88	no
+27635	27580	4	Saguache County, CO	85	no
+27636	27580	4	San Juan County, CO	84	no
+27637	27580	4	San Miguel County, CO	86	no
+27638	27580	4	Sedgwick County, CO	86	no
+27639	27580	4	Summit County, CO	88	no
+27640	27580	4	Teller County, CO	88	no
+27641	27580	4	Washington County, CO	86	no
+27642	27580	4	Weld County, CO	145	no
+27643	27580	4	Yuma County, CO	87	no
+30588	30587	4	Boulder, CO	179	no
+33944	30587	4	Canon, CO	30	no
+30589	30587	4	Colorado Springs, CO	214	no
+30590	30587	4	Denver-Aurora-Centennial, CO	329	no
+27645	27644	4	Fairfield County, CT	144	no
+27646	27644	4	Hartford County, CT	144	no
+27647	27644	4	Litchfield County, CT	144	no
+27648	27644	4	Middlesex County, CT	144	no
+27649	27644	4	New Haven County, CT	144	no
+27650	27644	4	New London County, CT	144	no
+27651	27644	4	Tolland County, CT	144	no
+27652	27644	4	Windham County, CT	144	no
+32917	32872	4	Boston-Brockton-Nashua, MA-NH-ME-CT (CMSA)	52	no
+32873	32872	4	New York-Northern New Jersey-Long Island, NY-NJ-CT-PA (CMSA)	50	no
+30596	30595	4	Bridgeport-Stamford-Danbury, CT	87	no
+30597	30595	4	Hartford-East Hartford-Middletown, CT	138	no
+30598	30595	4	New Haven, CT	87	no
+27654	27653	4	Kent County, DE	144	no
+27655	27653	4	New Castle County, DE	145	no
+27656	27653	4	Sussex County, DE	144	no
+30601	30600	4	Dover, DE	167	no
+30602	30600	4	Philadelphia-Camden-Wilmington, PA-NJ-DE-MD	205	no
+33685	30600	4	Salisbury, MD	175	no
+33508	33507	4	District of Columbia, DC	151	no
+30604	30603	4	Washington-Arlington-Alexandria, DC-VA-MD-WV	212	no
+27660	27659	4	Alachua County, FL	145	no
+27661	27659	4	Baker County, FL	88	no
+27662	27659	4	Bay County, FL	145	no
+27663	27659	4	Bradford County, FL	88	no
+27664	27659	4	Brevard County, FL	145	no
+27665	27659	4	Broward County, FL	145	no
+27666	27659	4	Calhoun County, FL	87	no
+27667	27659	4	Charlotte County, FL	145	no
+27668	27659	4	Citrus County, FL	145	no
+27669	27659	4	Clay County, FL	145	no
+27670	27659	4	Collier County, FL	145	no
+27671	27659	4	Columbia County, FL	144	no
+27673	27659	4	DeSoto County, FL	88	no
+27674	27659	4	Dixie County, FL	87	no
+27675	27659	4	Duval County, FL	144	no
+27676	27659	4	Escambia County, FL	145	no
+27677	27659	4	Flagler County, FL	145	no
+27678	27659	4	Franklin County, FL	88	no
+27679	27659	4	Gadsden County, FL	88	no
+27680	27659	4	Gilchrist County, FL	88	no
+27681	27659	4	Glades County, FL	87	no
+27682	27659	4	Gulf County, FL	88	no
+27683	27659	4	Hamilton County, FL	87	no
+27684	27659	4	Hardee County, FL	88	no
+27685	27659	4	Hendry County, FL	88	no
+27686	27659	4	Hernando County, FL	145	no
+27687	27659	4	Highlands County, FL	145	no
+27688	27659	4	Hillsborough County, FL	145	no
+27689	27659	4	Holmes County, FL	86	no
+27690	27659	4	Indian River County, FL	145	no
+27691	27659	4	Jackson County, FL	88	no
+27692	27659	4	Jefferson County, FL	87	no
+27693	27659	4	Lafayette County, FL	86	no
+27694	27659	4	Lake County, FL	145	no
+27695	27659	4	Lee County, FL	144	no
+27696	27659	4	Leon County, FL	144	no
+27697	27659	4	Levy County, FL	87	no
+27698	27659	4	Liberty County, FL	86	no
+27699	27659	4	Madison County, FL	86	no
+27700	27659	4	Manatee County, FL	145	no
+27701	27659	4	Marion County, FL	145	no
+27702	27659	4	Martin County, FL	145	no
+32078	27659	4	Miami-Dade County, FL	167	no
+27703	27659	4	Monroe County, FL	145	no
+27704	27659	4	Nassau County, FL	145	no
+27705	27659	4	Okaloosa County, FL	145	no
+27706	27659	4	Okeechobee County, FL	87	no
+27707	27659	4	Orange County, FL	145	no
+27708	27659	4	Osceola County, FL	145	no
+27709	27659	4	Palm Beach County, FL	145	no
+27710	27659	4	Pasco County, FL	145	no
+27711	27659	4	Pinellas County, FL	145	no
+27712	27659	4	Polk County, FL	145	no
+27713	27659	4	Putnam County, FL	145	no
+27714	27659	4	Santa Rosa County, FL	145	no
+27715	27659	4	Sarasota County, FL	145	no
+27716	27659	4	Seminole County, FL	145	no
+27717	27659	4	St. Johns County, FL	145	no
+27718	27659	4	St. Lucie County, FL	145	no
+27719	27659	4	Sumter County, FL	145	no
+27720	27659	4	Suwannee County, FL	88	no
+27721	27659	4	Taylor County, FL	87	no
+27722	27659	4	Union County, FL	86	no
+27723	27659	4	Volusia County, FL	145	no
+27724	27659	4	Wakulla County, FL	87	no
+27725	27659	4	Walton County, FL	145	no
+27726	27659	4	Washington County, FL	88	no
+30606	30605	4	Cape Coral-Fort Myers, FL	172	no
+30607	30605	4	Deltona-Daytona Beach-Ormond Beach, FL	176	no
+30608	30605	4	Crestview-Fort Walton Beach-Destin, FL	164	no
+30609	30605	4	Gainesville, FL	171	no
+33427	30605	4	Homosassa Springs, FL	113	no
+30610	30605	4	Jacksonville, FL	228	no
+30611	30605	4	Lakeland-Winter Haven, FL	178	no
+30612	30605	4	Miami-Fort Lauderdale-Pompano Beach, FL	213	no
+30613	30605	4	Naples-Marco Island, FL	164	no
+30621	30605	4	North Port-Bradenton-Sarasota, FL	193	no
+30614	30605	4	Ocala, FL	164	no
+30615	30605	4	Orlando-Kissimmee, FL	262	no
+27728	27727	4	Appling County, GA	88	no
+27729	27727	4	Atkinson County, GA	86	no
+27730	27727	4	Bacon County, GA	86	no
+27731	27727	4	Baker County, GA	85	no
+27732	27727	4	Baldwin County, GA	88	no
+27733	27727	4	Banks County, GA	88	no
+27734	27727	4	Barrow County, GA	145	no
+27735	27727	4	Bartow County, GA	145	no
+27736	27727	4	Ben Hill County, GA	88	no
+27737	27727	4	Berrien County, GA	87	no
+27738	27727	4	Bibb County, GA	145	no
+27739	27727	4	Bleckley County, GA	87	no
+27740	27727	4	Brantley County, GA	86	no
+27741	27727	4	Brooks County, GA	87	no
+27742	27727	4	Bryan County, GA	88	no
+27743	27727	4	Bulloch County, GA	145	no
+27744	27727	4	Burke County, GA	88	no
+27745	27727	4	Butts County, GA	88	no
+27746	27727	4	Calhoun County, GA	86	no
+27747	27727	4	Camden County, GA	144	no
+27748	27727	4	Candler County, GA	87	no
+27749	27727	4	Carroll County, GA	145	no
+27750	27727	4	Catoosa County, GA	144	no
+27751	27727	4	Charlton County, GA	85	no
+27752	27727	4	Chatham County, GA	145	no
+27753	27727	4	Chattahoochee County, GA	86	no
+27754	27727	4	Chattooga County, GA	88	no
+27755	27727	4	Cherokee County, GA	145	no
+27756	27727	4	Clarke County, GA	145	no
+27757	27727	4	Clay County, GA	85	no
+27758	27727	4	Clayton County, GA	145	no
+27759	27727	4	Clinch County, GA	85	no
+27760	27727	4	Cobb County, GA	145	no
+27761	27727	4	Coffee County, GA	87	no
+27762	27727	4	Colquitt County, GA	87	no
+27763	27727	4	Columbia County, GA	144	no
+27764	27727	4	Cook County, GA	87	no
+27765	27727	4	Coweta County, GA	144	no
+27766	27727	4	Crawford County, GA	87	no
+27767	27727	4	Crisp County, GA	88	no
+27768	27727	4	Dade County, GA	88	no
+27769	27727	4	Dawson County, GA	88	no
+27770	27727	4	Decatur County, GA	87	no
+27771	27727	4	DeKalb County, GA	145	no
+27772	27727	4	Dodge County, GA	88	no
+27773	27727	4	Dooly County, GA	87	no
+27774	27727	4	Dougherty County, GA	145	no
+27775	27727	4	Douglas County, GA	145	no
+27776	27727	4	Early County, GA	86	no
+27777	27727	4	Echols County, GA	86	no
+27778	27727	4	Effingham County, GA	143	no
+27779	27727	4	Elbert County, GA	87	no
+27780	27727	4	Emanuel County, GA	86	no
+27781	27727	4	Evans County, GA	85	no
+27782	27727	4	Fannin County, GA	88	no
+27783	27727	4	Fayette County, GA	145	no
+27784	27727	4	Floyd County, GA	145	no
+27785	27727	4	Forsyth County, GA	145	no
+27786	27727	4	Franklin County, GA	88	no
+27787	27727	4	Fulton County, GA	145	no
+27788	27727	4	Gilmer County, GA	88	no
+27789	27727	4	Glascock County, GA	85	no
+27790	27727	4	Glynn County, GA	145	no
+27791	27727	4	Gordon County, GA	144	no
+27792	27727	4	Grady County, GA	88	no
+27793	27727	4	Greene County, GA	88	no
+27794	27727	4	Gwinnett County, GA	145	no
+27795	27727	4	Habersham County, GA	88	no
+27796	27727	4	Hall County, GA	145	no
+27797	27727	4	Hancock County, GA	86	no
+27798	27727	4	Haralson County, GA	88	no
+27799	27727	4	Harris County, GA	88	no
+27800	27727	4	Hart County, GA	87	no
+27801	27727	4	Heard County, GA	88	no
+27802	27727	4	Henry County, GA	145	no
+27803	27727	4	Houston County, GA	145	no
+27804	27727	4	Irwin County, GA	88	no
+27805	27727	4	Jackson County, GA	144	no
+27806	27727	4	Jasper County, GA	88	no
+27807	27727	4	Jeff Davis County, GA	88	no
+27808	27727	4	Jefferson County, GA	87	no
+27809	27727	4	Jenkins County, GA	85	no
+27810	27727	4	Johnson County, GA	86	no
+27811	27727	4	Jones County, GA	88	no
+27812	27727	4	Lamar County, GA	87	no
+27813	27727	4	Lanier County, GA	86	no
+27814	27727	4	Laurens County, GA	144	no
+27815	27727	4	Lee County, GA	88	no
+27816	27727	4	Liberty County, GA	144	no
+27817	27727	4	Lincoln County, GA	87	no
+27818	27727	4	Long County, GA	86	no
+27819	27727	4	Lowndes County, GA	145	no
+27820	27727	4	Lumpkin County, GA	88	no
+27821	27727	4	Macon County, GA	87	no
+27822	27727	4	Madison County, GA	88	no
+27823	27727	4	Marion County, GA	86	no
+27824	27727	4	McDuffie County, GA	88	no
+27825	27727	4	McIntosh County, GA	87	no
+27826	27727	4	Meriwether County, GA	88	no
+27827	27727	4	Miller County, GA	85	no
+27828	27727	4	Mitchell County, GA	88	no
+27829	27727	4	Monroe County, GA	88	no
+27830	27727	4	Montgomery County, GA	85	no
+27831	27727	4	Morgan County, GA	87	no
+27832	27727	4	Murray County, GA	88	no
+27833	27727	4	Muscogee County, GA	145	no
+27834	27727	4	Newton County, GA	145	no
+27835	27727	4	Oconee County, GA	88	no
+27836	27727	4	Oglethorpe County, GA	88	no
+27837	27727	4	Paulding County, GA	145	no
+27838	27727	4	Peach County, GA	88	no
+27839	27727	4	Pickens County, GA	88	no
+27840	27727	4	Pierce County, GA	87	no
+27841	27727	4	Pike County, GA	87	no
+27842	27727	4	Polk County, GA	88	no
+27843	27727	4	Pulaski County, GA	87	no
+27844	27727	4	Putnam County, GA	88	no
+27845	27727	4	Quitman County, GA	85	no
+27846	27727	4	Rabun County, GA	88	no
+27847	27727	4	Randolph County, GA	86	no
+27848	27727	4	Richmond County, GA	144	no
+27849	27727	4	Rockdale County, GA	145	no
+27850	27727	4	Schley County, GA	86	no
+27851	27727	4	Screven County, GA	87	no
+27852	27727	4	Seminole County, GA	86	no
+27853	27727	4	Spalding County, GA	144	no
+27854	27727	4	Stephens County, GA	88	no
+27855	27727	4	Stewart County, GA	85	no
+27856	27727	4	Sumter County, GA	87	no
+27857	27727	4	Talbot County, GA	86	no
+27858	27727	4	Taliaferro County, GA	85	no
+27859	27727	4	Tattnall County, GA	87	no
+27860	27727	4	Taylor County, GA	86	no
+27861	27727	4	Telfair County, GA	86	no
+27862	27727	4	Terrell County, GA	86	no
+27863	27727	4	Thomas County, GA	88	no
+27864	27727	4	Tift County, GA	88	no
+27865	27727	4	Toombs County, GA	87	no
+27866	27727	4	Towns County, GA	87	no
+27867	27727	4	Treutlen County, GA	86	no
+27868	27727	4	Troup County, GA	145	no
+27869	27727	4	Turner County, GA	88	no
+27870	27727	4	Twiggs County, GA	86	no
+27871	27727	4	Union County, GA	88	no
+27872	27727	4	Upson County, GA	88	no
+27873	27727	4	Walker County, GA	144	no
+27874	27727	4	Walton County, GA	145	no
+27875	27727	4	Ware County, GA	87	no
+27876	27727	4	Warren County, GA	86	no
+27877	27727	4	Washington County, GA	87	no
+27878	27727	4	Wayne County, GA	87	no
+27879	27727	4	Webster County, GA	86	no
+27880	27727	4	Wheeler County, GA	85	no
+27881	27727	4	White County, GA	88	no
+27882	27727	4	Whitfield County, GA	145	no
+27883	27727	4	Wilcox County, GA	85	no
+27884	27727	4	Wilkes County, GA	87	no
+27885	27727	4	Wilkinson County, GA	87	no
+27886	27727	4	Worth County, GA	88	no
+27888	27887	4	Hawaii County, HI	145	no
+27889	27887	4	Honolulu County, HI	143	no
+27890	27887	4	Kalawao County, HI	44	no
+27891	27887	4	Kauai County, HI	145	no
+27892	27887	4	Maui County, HI	135	no
+33804	27887	4	Maui + Kalawao Counties, HI	10	no
+33430	30641	4	Kahului-Wailuku, HI	212	no
+27894	27893	4	Ada County, ID	145	no
+27895	27893	4	Adams County, ID	88	no
+27896	27893	4	Bannock County, ID	145	no
+27897	27893	4	Bear Lake County, ID	87	no
+27898	27893	4	Benewah County, ID	88	no
+27899	27893	4	Bingham County, ID	88	no
+27900	27893	4	Blaine County, ID	88	no
+27901	27893	4	Boise County, ID	88	no
+27902	27893	4	Bonner County, ID	88	no
+27903	27893	4	Bonneville County, ID	145	no
+27904	27893	4	Boundary County, ID	87	no
+27905	27893	4	Butte County, ID	86	no
+27906	27893	4	Camas County, ID	83	no
+27907	27893	4	Canyon County, ID	145	no
+27908	27893	4	Caribou County, ID	87	no
+27909	27893	4	Cassia County, ID	88	no
+27910	27893	4	Clark County, ID	84	no
+27911	27893	4	Clearwater County, ID	88	no
+27912	27893	4	Custer County, ID	87	no
+27913	27893	4	Elmore County, ID	88	no
+27914	27893	4	Franklin County, ID	88	no
+27915	27893	4	Fremont County, ID	88	no
+27916	27893	4	Gem County, ID	88	no
+27917	27893	4	Gooding County, ID	88	no
+27918	27893	4	Idaho County, ID	88	no
+27919	27893	4	Jefferson County, ID	88	no
+27920	27893	4	Jerome County, ID	88	no
+27921	27893	4	Kootenai County, ID	145	no
+27922	27893	4	Latah County, ID	88	no
+27923	27893	4	Lemhi County, ID	87	no
+27924	27893	4	Lewis County, ID	87	no
+27925	27893	4	Lincoln County, ID	87	no
+27926	27893	4	Madison County, ID	88	no
+27927	27893	4	Minidoka County, ID	88	no
+27928	27893	4	Nez Perce County, ID	88	no
+27929	27893	4	Oneida County, ID	87	no
+27930	27893	4	Owyhee County, ID	86	no
+27931	27893	4	Payette County, ID	87	no
+27932	27893	4	Power County, ID	87	no
+27933	27893	4	Shoshone County, ID	87	no
+27934	27893	4	Teton County, ID	87	no
+27935	27893	4	Twin Falls County, ID	145	no
+27936	27893	4	Valley County, ID	88	no
+27937	27893	4	Washington County, ID	88	no
+478	27938	4	Adams County, IL	145	no
+477	27938	4	Alexander County, IL	86	no
+482	27938	4	Bond County, IL	88	no
+27942	27938	4	Boone County, IL	88	no
+473	27938	4	Brown County, IL	86	no
+27944	27938	4	Bureau County, IL	88	no
+471	27938	4	Calhoun County, IL	86	no
+27946	27938	4	Carroll County, IL	88	no
+27947	27938	4	Cass County, IL	88	no
+27948	27938	4	Champaign County, IL	145	no
+27949	27938	4	Christian County, IL	88	no
+27950	27938	4	Clark County, IL	88	no
+469	27938	4	Clay County, IL	86	no
+467	27938	4	Clinton County, IL	88	no
+27953	27938	4	Coles County, IL	142	no
+27954	27938	4	Cook County, IL	145	no
+465	27938	4	Crawford County, IL	87	no
+27956	27938	4	Cumberland County, IL	88	no
+27957	27938	4	DeKalb County, IL	145	no
+27958	27938	4	De Witt County, IL	88	no
+27959	27938	4	Douglas County, IL	88	no
+27960	27938	4	DuPage County, IL	145	no
+27961	27938	4	Edgar County, IL	88	no
+463	27938	4	Edwards County, IL	86	no
+461	27938	4	Effingham County, IL	88	no
+459	27938	4	Fayette County, IL	88	no
+27965	27938	4	Ford County, IL	88	no
+457	27938	4	Franklin County, IL	88	no
+27967	27938	4	Fulton County, IL	88	no
+454	27938	4	Gallatin County, IL	85	no
+452	27938	4	Greene County, IL	88	no
+27970	27938	4	Grundy County, IL	144	no
+450	27938	4	Hamilton County, IL	85	no
+27972	27938	4	Hancock County, IL	88	no
+448	27938	4	Hardin County, IL	87	no
+27974	27938	4	Henderson County, IL	86	no
+27975	27938	4	Henry County, IL	141	no
+27976	27938	4	Iroquois County, IL	87	no
+447	27938	4	Jackson County, IL	143	no
+445	27938	4	Jasper County, IL	86	no
+443	27938	4	Jefferson County, IL	88	no
+441	27938	4	Jersey County, IL	88	no
+27981	27938	4	Jo Daviess County, IL	88	no
+439	27938	4	Johnson County, IL	87	no
+27983	27938	4	Kane County, IL	145	no
+27984	27938	4	Kankakee County, IL	145	no
+27985	27938	4	Kendall County, IL	145	no
+27986	27938	4	Knox County, IL	144	no
+27987	27938	4	Lake County, IL	145	no
+27988	27938	4	LaSalle County, IL	145	no
+437	27938	4	Lawrence County, IL	87	no
+27990	27938	4	Lee County, IL	88	no
+27991	27938	4	Livingston County, IL	88	no
+27992	27938	4	Logan County, IL	88	no
+27993	27938	4	Macon County, IL	145	no
+433	27938	4	Macoupin County, IL	142	no
+431	27938	4	Madison County, IL	145	no
+429	27938	4	Marion County, IL	88	no
+27997	27938	4	Marshall County, IL	88	no
+27998	27938	4	Mason County, IL	88	no
+427	27938	4	Massac County, IL	87	no
+28000	27938	4	McDonough County, IL	88	no
+28001	27938	4	McHenry County, IL	145	no
+28002	27938	4	McLean County, IL	145	no
+28003	27938	4	Menard County, IL	87	no
+28004	27938	4	Mercer County, IL	88	no
+425	27938	4	Monroe County, IL	87	no
+423	27938	4	Montgomery County, IL	88	no
+421	27938	4	Morgan County, IL	88	no
+28008	27938	4	Moultrie County, IL	88	no
+28009	27938	4	Ogle County, IL	144	no
+28010	27938	4	Peoria County, IL	145	no
+419	27938	4	Perry County, IL	88	no
+28012	27938	4	Piatt County, IL	88	no
+417	27938	4	Pike County, IL	87	no
+415	27938	4	Pope County, IL	86	no
+413	27938	4	Pulaski County, IL	86	no
+28016	27938	4	Putnam County, IL	87	no
+411	27938	4	Randolph County, IL	88	no
+409	27938	4	Richland County, IL	87	no
+28019	27938	4	Rock Island County, IL	145	no
+407	27938	4	Saline County, IL	88	no
+28021	27938	4	Sangamon County, IL	145	no
+28022	27938	4	Schuyler County, IL	88	no
+405	27938	4	Scott County, IL	87	no
+28024	27938	4	Shelby County, IL	88	no
+28025	27938	4	Stark County, IL	88	no
+403	27938	4	St. Clair County, IL	145	no
+28027	27938	4	Stephenson County, IL	144	no
+28028	27938	4	Tazewell County, IL	145	no
+401	27938	4	Union County, IL	87	no
+28030	27938	4	Vermilion County, IL	145	no
+399	27938	4	Wabash County, IL	87	no
+28032	27938	4	Warren County, IL	88	no
+397	27938	4	Washington County, IL	87	no
+395	27938	4	Wayne County, IL	87	no
+480	27938	4	White County, IL	88	no
+28036	27938	4	Whiteside County, IL	144	no
+28037	27938	4	Will County, IL	145	no
+392	27938	4	Williamson County, IL	145	no
+28039	27938	4	Winnebago County, IL	145	no
+28040	27938	4	Woodford County, IL	88	no
+30651	30650	4	Bloomington, IL	245	no
+33198	30650	4	Cape Girardeau, MO-IL	91	no
+33415	30650	4	Carbondale-Marion, IL	57	no
+30652	30650	4	Champaign-Urbana, IL	165	no
+30653	30650	4	Chicago-Naperville-Elgin, IL-IN	194	no
+30654	30650	4	Danville, IL	138	no
+30655	30650	4	Davenport-Moline-Rock Island, IA-IL	205	no
+28042	28041	4	Adams County, IN	87	no
+28043	28041	4	Allen County, IN	145	no
+28044	28041	4	Bartholomew County, IN	145	no
+28045	28041	4	Benton County, IN	87	no
+28046	28041	4	Blackford County, IN	87	no
+28047	28041	4	Boone County, IN	144	no
+28048	28041	4	Brown County, IN	88	no
+28049	28041	4	Carroll County, IN	88	no
+28050	28041	4	Cass County, IN	88	no
+536	28041	4	Clark County, IN	145	no
+28052	28041	4	Clay County, IN	87	no
+28053	28041	4	Clinton County, IN	88	no
+534	28041	4	Crawford County, IN	86	no
+532	28041	4	Daviess County, IN	88	no
+28056	28041	4	Dearborn County, IN	142	no
+28057	28041	4	Decatur County, IN	87	no
+28058	28041	4	DeKalb County, IN	88	no
+28059	28041	4	Delaware County, IN	145	no
+530	28041	4	Dubois County, IN	87	no
+28061	28041	4	Elkhart County, IN	145	no
+28062	28041	4	Fayette County, IN	88	no
+528	28041	4	Floyd County, IN	145	no
+28064	28041	4	Fountain County, IN	87	no
+28065	28041	4	Franklin County, IN	88	no
+28066	28041	4	Fulton County, IN	88	no
+526	28041	4	Gibson County, IN	88	no
+28068	28041	4	Grant County, IN	142	no
+523	28041	4	Greene County, IN	87	no
+28070	28041	4	Hamilton County, IN	144	no
+28071	28041	4	Hancock County, IN	145	no
+522	28041	4	Harrison County, IN	88	no
+28073	28041	4	Hendricks County, IN	145	no
+28074	28041	4	Henry County, IN	143	no
+28075	28041	4	Howard County, IN	145	no
+28076	28041	4	Huntington County, IN	88	no
+520	28041	4	Jackson County, IN	87	no
+28078	28041	4	Jasper County, IN	86	no
+28079	28041	4	Jay County, IN	87	no
+516	28041	4	Jefferson County, IN	86	no
+28081	28041	4	Jennings County, IN	87	no
+28082	28041	4	Johnson County, IN	145	no
+514	28041	4	Knox County, IN	88	no
+28084	28041	4	Kosciusko County, IN	145	no
+28085	28041	4	LaGrange County, IN	88	no
+28086	28041	4	Lake County, IN	145	no
+28087	28041	4	LaPorte County, IN	145	no
+512	28041	4	Lawrence County, IN	144	no
+28089	28041	4	Madison County, IN	145	no
+28090	28041	4	Marion County, IN	144	no
+28091	28041	4	Marshall County, IN	88	no
+510	28041	4	Martin County, IN	88	no
+28093	28041	4	Miami County, IN	88	no
+28094	28041	4	Monroe County, IN	145	no
+28095	28041	4	Montgomery County, IN	88	no
+28096	28041	4	Morgan County, IN	144	no
+28097	28041	4	Newton County, IN	88	no
+28098	28041	4	Noble County, IN	88	no
+28099	28041	4	Ohio County, IN	87	no
+508	28041	4	Orange County, IN	87	no
+28101	28041	4	Owen County, IN	88	no
+28102	28041	4	Parke County, IN	87	no
+506	28041	4	Perry County, IN	88	no
+504	28041	4	Pike County, IN	87	no
+28105	28041	4	Porter County, IN	145	no
+502	28041	4	Posey County, IN	88	no
+28107	28041	4	Pulaski County, IN	88	no
+28108	28041	4	Putnam County, IN	88	no
+28109	28041	4	Randolph County, IN	88	no
+28110	28041	4	Ripley County, IN	88	no
+28111	28041	4	Rush County, IN	88	no
+500	28041	4	Scott County, IN	88	no
+28113	28041	4	Shelby County, IN	88	no
+498	28041	4	Spencer County, IN	87	no
+28115	28041	4	Starke County, IN	87	no
+28116	28041	4	Steuben County, IN	87	no
+28117	28041	4	St. Joseph County, IN	145	no
+496	28041	4	Sullivan County, IN	88	no
+494	28041	4	Switzerland County, IN	87	no
+28120	28041	4	Tippecanoe County, IN	145	no
+28121	28041	4	Tipton County, IN	88	no
+28122	28041	4	Union County, IN	87	no
+492	28041	4	Vanderburgh County, IN	145	no
+28124	28041	4	Vermillion County, IN	88	no
+28125	28041	4	Vigo County, IN	145	no
+28126	28041	4	Wabash County, IN	88	no
+28127	28041	4	Warren County, IN	87	no
+489	28041	4	Warrick County, IN	144	no
+486	28041	4	Washington County, IN	87	no
+28130	28041	4	Wayne County, IN	145	no
+28131	28041	4	Wells County, IN	88	no
+28132	28041	4	White County, IN	88	no
+28133	28041	4	Whitley County, IN	88	no
+30663	30662	4	Anderson, IN	88	no
+30664	30662	4	Bloomington, IN	174	no
+30665	30662	4	Chicago-Naperville-Elgin, IL-IN	184	no
+30666	30662	4	Cincinnati, OH-KY-IN	265	no
+30667	30662	4	Columbus, IN	139	no
+30668	30662	4	Elkhart-Goshen, IN	174	no
+339	30662	4	Evansville, IN	178	no
+30670	30662	4	Fort Wayne, IN	176	no
+28135	28134	4	Adair County, IA	88	no
+28136	28134	4	Adams County, IA	87	no
+28137	28134	4	Allamakee County, IA	88	no
+28138	28134	4	Appanoose County, IA	86	no
+28139	28134	4	Audubon County, IA	88	no
+28140	28134	4	Benton County, IA	88	no
+28141	28134	4	Black Hawk County, IA	145	no
+28142	28134	4	Boone County, IA	88	no
+28143	28134	4	Bremer County, IA	88	no
+28144	28134	4	Buchanan County, IA	88	no
+28145	28134	4	Buena Vista County, IA	88	no
+28146	28134	4	Butler County, IA	88	no
+28147	28134	4	Calhoun County, IA	88	no
+28148	28134	4	Carroll County, IA	88	no
+28149	28134	4	Cass County, IA	88	no
+28150	28134	4	Cedar County, IA	88	no
+28151	28134	4	Cerro Gordo County, IA	143	no
+28152	28134	4	Cherokee County, IA	88	no
+28153	28134	4	Chickasaw County, IA	88	no
+28154	28134	4	Clarke County, IA	88	no
+28155	28134	4	Clay County, IA	88	no
+28156	28134	4	Clayton County, IA	88	no
+28157	28134	4	Clinton County, IA	144	no
+28158	28134	4	Crawford County, IA	88	no
+28159	28134	4	Dallas County, IA	144	no
+28160	28134	4	Davis County, IA	87	no
+28161	28134	4	Decatur County, IA	86	no
+28162	28134	4	Delaware County, IA	88	no
+28163	28134	4	Des Moines County, IA	88	no
+28164	28134	4	Dickinson County, IA	88	no
+28165	28134	4	Dubuque County, IA	145	no
+28166	28134	4	Emmet County, IA	88	no
+28167	28134	4	Fayette County, IA	88	no
+28168	28134	4	Floyd County, IA	88	no
+28169	28134	4	Franklin County, IA	88	no
+28170	28134	4	Fremont County, IA	87	no
+28171	28134	4	Greene County, IA	87	no
+28172	28134	4	Grundy County, IA	87	no
+28173	28134	4	Guthrie County, IA	87	no
+28174	28134	4	Hamilton County, IA	87	no
+28175	28134	4	Hancock County, IA	88	no
+28176	28134	4	Hardin County, IA	88	no
+28177	28134	4	Harrison County, IA	88	no
+28178	28134	4	Henry County, IA	87	no
+28179	28134	4	Howard County, IA	88	no
+28180	28134	4	Humboldt County, IA	88	no
+28181	28134	4	Ida County, IA	87	no
+28182	28134	4	Iowa County, IA	88	no
+28183	28134	4	Jackson County, IA	87	no
+28184	28134	4	Jasper County, IA	88	no
+28185	28134	4	Jefferson County, IA	88	no
+28186	28134	4	Johnson County, IA	145	no
+28187	28134	4	Jones County, IA	88	no
+28188	28134	4	Keokuk County, IA	87	no
+28189	28134	4	Kossuth County, IA	88	no
+28190	28134	4	Lee County, IA	88	no
+28191	28134	4	Linn County, IA	145	no
+28192	28134	4	Louisa County, IA	88	no
+28193	28134	4	Lucas County, IA	87	no
+28194	28134	4	Lyon County, IA	88	no
+28195	28134	4	Madison County, IA	88	no
+28196	28134	4	Mahaska County, IA	88	no
+28197	28134	4	Marion County, IA	88	no
+28198	28134	4	Marshall County, IA	88	no
+28199	28134	4	Mills County, IA	88	no
+28200	28134	4	Mitchell County, IA	88	no
+28201	28134	4	Monona County, IA	88	no
+28202	28134	4	Monroe County, IA	86	no
+28203	28134	4	Montgomery County, IA	87	no
+28204	28134	4	Muscatine County, IA	88	no
+28205	28134	4	O'Brien County, IA	88	no
+28206	28134	4	Osceola County, IA	88	no
+28207	28134	4	Page County, IA	88	no
+28208	28134	4	Palo Alto County, IA	88	no
+28209	28134	4	Plymouth County, IA	88	no
+28210	28134	4	Pocahontas County, IA	87	no
+28211	28134	4	Polk County, IA	145	no
+28212	28134	4	Pottawattamie County, IA	145	no
+28213	28134	4	Poweshiek County, IA	88	no
+28214	28134	4	Ringgold County, IA	86	no
+28215	28134	4	Sac County, IA	88	no
+28216	28134	4	Scott County, IA	145	no
+28217	28134	4	Shelby County, IA	88	no
+28218	28134	4	Sioux County, IA	88	no
+28219	28134	4	Story County, IA	145	no
+28220	28134	4	Tama County, IA	88	no
+28221	28134	4	Taylor County, IA	87	no
+28222	28134	4	Union County, IA	88	no
+28223	28134	4	Van Buren County, IA	87	no
+28224	28134	4	Wapello County, IA	88	no
+28225	28134	4	Warren County, IA	144	no
+28226	28134	4	Washington County, IA	87	no
+28227	28134	4	Wayne County, IA	87	no
+28228	28134	4	Webster County, IA	88	no
+28229	28134	4	Winnebago County, IA	88	no
+28230	28134	4	Winneshiek County, IA	88	no
+28231	28134	4	Woodbury County, IA	145	no
+28232	28134	4	Worth County, IA	87	no
+28233	28134	4	Wright County, IA	88	no
+28235	28234	4	Allen County, KS	88	no
+28236	28234	4	Anderson County, KS	88	no
+28237	28234	4	Atchison County, KS	88	no
+28238	28234	4	Barber County, KS	87	no
+28239	28234	4	Barton County, KS	88	no
+28240	28234	4	Bourbon County, KS	88	no
+28241	28234	4	Brown County, KS	88	no
+28242	28234	4	Butler County, KS	144	no
+28243	28234	4	Chase County, KS	87	no
+28244	28234	4	Chautauqua County, KS	87	no
+28245	28234	4	Cherokee County, KS	88	no
+28246	28234	4	Cheyenne County, KS	86	no
+28247	28234	4	Clark County, KS	86	no
+28248	28234	4	Clay County, KS	88	no
+28249	28234	4	Cloud County, KS	87	no
+28250	28234	4	Coffey County, KS	88	no
+28251	28234	4	Comanche County, KS	85	no
+28252	28234	4	Cowley County, KS	88	no
+28253	28234	4	Crawford County, KS	88	no
+28254	28234	4	Decatur County, KS	84	no
+28255	28234	4	Dickinson County, KS	88	no
+28256	28234	4	Doniphan County, KS	88	no
+28257	28234	4	Douglas County, KS	145	no
+28258	28234	4	Edwards County, KS	87	no
+28259	28234	4	Elk County, KS	85	no
+28260	28234	4	Ellis County, KS	88	no
+28261	28234	4	Ellsworth County, KS	87	no
+28262	28234	4	Finney County, KS	88	no
+28263	28234	4	Ford County, KS	88	no
+28264	28234	4	Franklin County, KS	88	no
+28265	28234	4	Geary County, KS	88	no
+28266	28234	4	Gove County, KS	86	no
+28267	28234	4	Graham County, KS	86	no
+28268	28234	4	Grant County, KS	87	no
+28269	28234	4	Gray County, KS	87	no
+28270	28234	4	Greeley County, KS	85	no
+28271	28234	4	Greenwood County, KS	86	no
+28272	28234	4	Hamilton County, KS	85	no
+28273	28234	4	Harper County, KS	86	no
+28274	28234	4	Harvey County, KS	87	no
+28275	28234	4	Haskell County, KS	85	no
+28276	28234	4	Hodgeman County, KS	87	no
+28277	28234	4	Jackson County, KS	88	no
+28278	28234	4	Jefferson County, KS	88	no
+28279	28234	4	Jewell County, KS	85	no
+28280	28234	4	Johnson County, KS	145	no
+28281	28234	4	Kearny County, KS	87	no
+28282	28234	4	Kingman County, KS	87	no
+28283	28234	4	Kiowa County, KS	87	no
+28284	28234	4	Labette County, KS	88	no
+28285	28234	4	Lane County, KS	87	no
+28286	28234	4	Leavenworth County, KS	145	no
+28287	28234	4	Lincoln County, KS	86	no
+28288	28234	4	Linn County, KS	86	no
+28289	28234	4	Logan County, KS	87	no
+28290	28234	4	Lyon County, KS	88	no
+28291	28234	4	Marion County, KS	88	no
+28292	28234	4	Marshall County, KS	87	no
+28293	28234	4	McPherson County, KS	88	no
+28294	28234	4	Meade County, KS	86	no
+28295	28234	4	Miami County, KS	88	no
+28296	28234	4	Mitchell County, KS	86	no
+28297	28234	4	Montgomery County, KS	88	no
+28298	28234	4	Morris County, KS	86	no
+28299	28234	4	Morton County, KS	86	no
+28300	28234	4	Nemaha County, KS	88	no
+28301	28234	4	Neosho County, KS	88	no
+28302	28234	4	Ness County, KS	86	no
+28303	28234	4	Norton County, KS	85	no
+28304	28234	4	Osage County, KS	88	no
+28305	28234	4	Osborne County, KS	86	no
+28306	28234	4	Ottawa County, KS	88	no
+28307	28234	4	Pawnee County, KS	87	no
+28308	28234	4	Phillips County, KS	86	no
+28309	28234	4	Pottawatomie County, KS	88	no
+28310	28234	4	Pratt County, KS	88	no
+28311	28234	4	Rawlins County, KS	87	no
+28312	28234	4	Reno County, KS	144	no
+28313	28234	4	Republic County, KS	87	no
+28314	28234	4	Rice County, KS	87	no
+28315	28234	4	Riley County, KS	145	no
+28316	28234	4	Rooks County, KS	86	no
+28317	28234	4	Rush County, KS	86	no
+28318	28234	4	Russell County, KS	86	no
+28319	28234	4	Saline County, KS	144	no
+28320	28234	4	Scott County, KS	86	no
+28321	28234	4	Sedgwick County, KS	145	no
+28322	28234	4	Seward County, KS	87	no
+28323	28234	4	Shawnee County, KS	145	no
+28324	28234	4	Sheridan County, KS	84	no
+28325	28234	4	Sherman County, KS	87	no
+28326	28234	4	Smith County, KS	86	no
+28327	28234	4	Stafford County, KS	87	no
+28328	28234	4	Stanton County, KS	86	no
+28329	28234	4	Stevens County, KS	87	no
+28330	28234	4	Sumner County, KS	88	no
+28331	28234	4	Thomas County, KS	88	no
+28332	28234	4	Trego County, KS	86	no
+28333	28234	4	Wabaunsee County, KS	87	no
+28334	28234	4	Wallace County, KS	82	no
+28335	28234	4	Washington County, KS	87	no
+28336	28234	4	Wichita County, KS	86	no
+28337	28234	4	Wilson County, KS	87	no
+28338	28234	4	Woodson County, KS	86	no
+28339	28234	4	Wyandotte County, KS	145	no
+30690	30689	4	Kansas City, MO-KS	232	no
+30691	30689	4	Lawrence, KS	106	no
+33199	30689	4	Manhattan, KS	105	no
+927	28340	4	Adair County, KY	87	no
+925	28340	4	Allen County, KY	87	no
+923	28340	4	Anderson County, KY	88	no
+921	28340	4	Ballard County, KY	86	no
+919	28340	4	Barren County, KY	87	no
+28346	28340	4	Bath County, KY	88	no
+28347	28340	4	Bell County, KY	87	no
+28348	28340	4	Boone County, KY	143	no
+28349	28340	4	Bourbon County, KY	88	no
+28350	28340	4	Boyd County, KY	144	no
+917	28340	4	Boyle County, KY	88	no
+28352	28340	4	Bracken County, KY	85	no
+28353	28340	4	Breathitt County, KY	87	no
+915	28340	4	Breckinridge County, KY	87	no
+913	28340	4	Bullitt County, KY	145	no
+911	28340	4	Butler County, KY	88	no
+909	28340	4	Caldwell County, KY	88	no
+907	28340	4	Calloway County, KY	88	no
+28359	28340	4	Campbell County, KY	143	no
+905	28340	4	Carlisle County, KY	85	no
+902	28340	4	Carroll County, KY	88	no
+28362	28340	4	Carter County, KY	88	no
+901	28340	4	Casey County, KY	88	no
+899	28340	4	Christian County, KY	145	no
+28365	28340	4	Clark County, KY	88	no
+28366	28340	4	Clay County, KY	86	no
+897	28340	4	Clinton County, KY	86	no
+895	28340	4	Crittenden County, KY	87	no
+893	28340	4	Cumberland County, KY	86	no
+891	28340	4	Daviess County, KY	145	no
+889	28340	4	Edmonson County, KY	86	no
+28372	28340	4	Elliott County, KY	86	no
+28373	28340	4	Estill County, KY	87	no
+28374	28340	4	Fayette County, KY	144	no
+28375	28340	4	Fleming County, KY	86	no
+28376	28340	4	Floyd County, KY	87	no
+887	28340	4	Franklin County, KY	143	no
+885	28340	4	Fulton County, KY	86	no
+883	28340	4	Gallatin County, KY	85	no
+28380	28340	4	Garrard County, KY	87	no
+28381	28340	4	Grant County, KY	88	no
+881	28340	4	Graves County, KY	88	no
+879	28340	4	Grayson County, KY	87	no
+877	28340	4	Green County, KY	88	no
+28385	28340	4	Greenup County, KY	88	no
+875	28340	4	Hancock County, KY	89	no
+873	28340	4	Hardin County, KY	145	no
+28388	28340	4	Harlan County, KY	87	no
+28389	28340	4	Harrison County, KY	88	no
+871	28340	4	Hart County, KY	87	no
+869	28340	4	Henderson County, KY	142	no
+867	28340	4	Henry County, KY	88	no
+865	28340	4	Hickman County, KY	85	no
+863	28340	4	Hopkins County, KY	143	no
+28395	28340	4	Jackson County, KY	87	no
+861	28340	4	Jefferson County, KY	145	no
+28397	28340	4	Jessamine County, KY	144	no
+28398	28340	4	Johnson County, KY	87	no
+28399	28340	4	Kenton County, KY	143	no
+28400	28340	4	Knott County, KY	85	no
+28401	28340	4	Knox County, KY	87	no
+859	28340	4	Larue County, KY	87	no
+28403	28340	4	Laurel County, KY	144	no
+28404	28340	4	Lawrence County, KY	86	no
+28405	28340	4	Lee County, KY	86	no
+28406	28340	4	Leslie County, KY	86	no
+28407	28340	4	Letcher County, KY	86	no
+28408	28340	4	Lewis County, KY	87	no
+28409	28340	4	Lincoln County, KY	88	no
+858	28340	4	Livingston County, KY	86	no
+856	28340	4	Logan County, KY	88	no
+854	28340	4	Lyon County, KY	88	no
+28413	28340	4	Madison County, KY	145	no
+28414	28340	4	Magoffin County, KY	85	no
+852	28340	4	Marion County, KY	88	no
+850	28340	4	Marshall County, KY	88	no
+28417	28340	4	Martin County, KY	86	no
+28418	28340	4	Mason County, KY	88	no
+846	28340	4	McCracken County, KY	145	no
+28420	28340	4	McCreary County, KY	87	no
+847	28340	4	McLean County, KY	88	no
+843	28340	4	Meade County, KY	87	no
+28423	28340	4	Menifee County, KY	84	no
+841	28340	4	Mercer County, KY	87	no
+839	28340	4	Metcalfe County, KY	86	no
+837	28340	4	Monroe County, KY	86	no
+28427	28340	4	Montgomery County, KY	88	no
+28428	28340	4	Morgan County, KY	86	no
+835	28340	4	Muhlenberg County, KY	88	no
+833	28340	4	Nelson County, KY	88	no
+28431	28340	4	Nicholas County, KY	87	no
+831	28340	4	Ohio County, KY	88	no
+829	28340	4	Oldham County, KY	145	no
+827	28340	4	Owen County, KY	88	no
+28435	28340	4	Owsley County, KY	84	no
+28436	28340	4	Pendleton County, KY	88	no
+28437	28340	4	Perry County, KY	87	no
+28438	28340	4	Pike County, KY	89	no
+28439	28340	4	Powell County, KY	88	no
+28440	28340	4	Pulaski County, KY	144	no
+28441	28340	4	Robertson County, KY	83	no
+28442	28340	4	Rockcastle County, KY	86	no
+28443	28340	4	Rowan County, KY	88	no
+824	28340	4	Russell County, KY	88	no
+28445	28340	4	Scott County, KY	144	no
+823	28340	4	Shelby County, KY	88	no
+821	28340	4	Simpson County, KY	88	no
+819	28340	4	Spencer County, KY	88	no
+817	28340	4	Taylor County, KY	88	no
+815	28340	4	Todd County, KY	87	no
+813	28340	4	Trigg County, KY	88	no
+811	28340	4	Trimble County, KY	86	no
+809	28340	4	Union County, KY	87	no
+806	28340	4	Warren County, KY	145	no
+805	28340	4	Washington County, KY	88	no
+803	28340	4	Wayne County, KY	88	no
+801	28340	4	Webster County, KY	88	no
+28458	28340	4	Whitley County, KY	88	no
+28459	28340	4	Wolfe County, KY	85	no
+28460	28340	4	Woodford County, KY	88	no
+3004	30695	4	Bowling Green, KY	146	no
+30697	30695	4	Cincinnati, OH-KY-IN	265	no
+30698	30695	4	Clarksville, TN-KY	158	no
+3005	30695	4	Elizabethtown, KY	146	no
+30700	30695	4	Evansville, IN	178	no
+28462	28461	4	Acadia Parish, LA	144	no
+28463	28461	4	Allen Parish, LA	88	no
+28464	28461	4	Ascension Parish, LA	145	no
+28465	28461	4	Assumption Parish, LA	88	no
+28466	28461	4	Avoyelles Parish, LA	88	no
+28467	28461	4	Beauregard Parish, LA	87	no
+28468	28461	4	Bienville Parish, LA	86	no
+28469	28461	4	Bossier Parish, LA	145	no
+28470	28461	4	Caddo Parish, LA	145	no
+28471	28461	4	Calcasieu Parish, LA	145	no
+28472	28461	4	Caldwell Parish, LA	86	no
+28473	28461	4	Cameron Parish, LA	87	no
+28474	28461	4	Catahoula Parish, LA	87	no
+28475	28461	4	Claiborne Parish, LA	88	no
+28476	28461	4	Concordia Parish, LA	88	no
+28477	28461	4	De Soto Parish, LA	88	no
+28478	28461	4	East Baton Rouge Parish, LA	146	no
+28479	28461	4	East Carroll Parish, LA	86	no
+28480	28461	4	East Feliciana Parish, LA	88	no
+28481	28461	4	Evangeline Parish, LA	88	no
+28482	28461	4	Franklin Parish, LA	87	no
+28483	28461	4	Grant Parish, LA	88	no
+28484	28461	4	Iberia Parish, LA	145	no
+28485	28461	4	Iberville Parish, LA	87	no
+28486	28461	4	Jackson Parish, LA	88	no
+28487	28461	4	Jefferson Parish, LA	145	no
+28488	28461	4	Jefferson Davis Parish, LA	88	no
+28489	28461	4	Lafayette Parish, LA	145	no
+28490	28461	4	Lafourche Parish, LA	145	no
+28491	28461	4	LaSalle Parish, LA	87	no
+28492	28461	4	Lincoln Parish, LA	88	no
+28493	28461	4	Livingston Parish, LA	145	no
+28494	28461	4	Madison Parish, LA	86	no
+28495	28461	4	Morehouse Parish, LA	87	no
+28496	28461	4	Natchitoches Parish, LA	87	no
+28497	28461	4	Orleans Parish, LA	143	no
+28498	28461	4	Ouachita Parish, LA	144	no
+28499	28461	4	Plaquemines Parish, LA	87	no
+28500	28461	4	Pointe Coupee Parish, LA	87	no
+28501	28461	4	Rapides Parish, LA	144	no
+28502	28461	4	Red River Parish, LA	87	no
+28503	28461	4	Richland Parish, LA	87	no
+28504	28461	4	Sabine Parish, LA	88	no
+28505	28461	4	St. Bernard Parish, LA	88	no
+28506	28461	4	St. Charles Parish, LA	143	no
+28507	28461	4	St. Helena Parish, LA	86	no
+28508	28461	4	St. James Parish, LA	88	no
+28509	28461	4	St. John the Baptist Parish, LA	88	no
+28510	28461	4	St. Landry Parish, LA	144	no
+28511	28461	4	St. Martin Parish, LA	144	no
+28512	28461	4	St. Mary Parish, LA	142	no
+28513	28461	4	St. Tammany Parish, LA	145	no
+28514	28461	4	Tangipahoa Parish, LA	145	no
+28515	28461	4	Tensas Parish, LA	86	no
+28516	28461	4	Terrebonne Parish, LA	145	no
+28517	28461	4	Union Parish, LA	88	no
+28518	28461	4	Vermilion Parish, LA	144	no
+28519	28461	4	Vernon Parish, LA	143	no
+28520	28461	4	Washington Parish, LA	88	no
+28521	28461	4	Webster Parish, LA	88	no
+28522	28461	4	West Baton Rouge Parish, LA	87	no
+28523	28461	4	West Carroll Parish, LA	86	no
+28524	28461	4	West Feliciana Parish, LA	87	no
+28525	28461	4	Winn Parish, LA	87	no
+28527	28526	4	Androscoggin County, ME	145	no
+28528	28526	4	Aroostook County, ME	89	no
+28529	28526	4	Cumberland County, ME	145	no
+28530	28526	4	Franklin County, ME	88	no
+28531	28526	4	Hancock County, ME	88	no
+28532	28526	4	Kennebec County, ME	145	no
+28533	28526	4	Knox County, ME	88	no
+28534	28526	4	Lincoln County, ME	88	no
+28535	28526	4	Oxford County, ME	88	no
+28536	28526	4	Penobscot County, ME	145	no
+28537	28526	4	Piscataquis County, ME	87	no
+28538	28526	4	Sagadahoc County, ME	88	no
+28539	28526	4	Somerset County, ME	88	no
+28540	28526	4	Waldo County, ME	88	no
+28541	28526	4	Washington County, ME	88	no
+28542	28526	4	York County, ME	145	no
+32101	32084	4	Bangor, ME	90	no
+32103	32084	4	Lewiston-Auburn, ME	84	no
+32104	32084	4	Portland-South Portland-Biddeford, ME	102	no
+32105	32084	4	Portsmouth, NH-ME	93	no
+32106	32084	4	Rochester-Dover, NH-ME	90	no
+28544	28543	4	Allegany County, MD	145	no
+28545	28543	4	Anne Arundel County, MD	145	no
+28546	28543	4	Baltimore County, MD	146	no
+28547	28543	4	Baltimore City, MD	237	no
+28548	28543	4	Calvert County, MD	145	no
+28549	28543	4	Caroline County, MD	88	no
+28550	28543	4	Carroll County, MD	145	no
+28551	28543	4	Cecil County, MD	145	no
+28552	28543	4	Charles County, MD	145	no
+28553	28543	4	Dorchester County, MD	88	no
+28554	28543	4	Frederick County, MD	145	no
+28555	28543	4	Garrett County, MD	88	no
+28556	28543	4	Harford County, MD	145	no
+28557	28543	4	Howard County, MD	145	no
+28558	28543	4	Kent County, MD	88	no
+28559	28543	4	Montgomery County, MD	145	no
+28560	28543	4	Prince George's County, MD	145	no
+28561	28543	4	Queen Anne's County, MD	144	no
+28562	28543	4	Somerset County, MD	88	no
+28563	28543	4	St. Mary's County, MD	145	no
+28564	28543	4	Talbot County, MD	88	no
+28565	28543	4	Washington County, MD	145	no
+28566	28543	4	Wicomico County, MD	145	no
+28567	28543	4	Worcester County, MD	144	no
+33451	33452	4	Calvert-Charles-Prince George's, MD	106	no
+33131	33130	4	Bethesda-Rockville-Frederick, MD	128	no
+33436	33130	4	Silver Spring-Frederick-Rockville, MD	138	no
+28569	28568	4	Barnstable County, MA	144	no
+28570	28568	4	Berkshire County, MA	144	no
+28571	28568	4	Bristol County, MA	144	no
+28572	28568	4	Dukes County, MA	87	no
+28573	28568	4	Essex County, MA	144	no
+28574	28568	4	Franklin County, MA	144	no
+28575	28568	4	Hampden County, MA	144	no
+28576	28568	4	Hampshire County, MA	144	no
+28577	28568	4	Middlesex County, MA	144	no
+28578	28568	4	Nantucket County, MA	87	no
+28579	28568	4	Norfolk County, MA	144	no
+28580	28568	4	Plymouth County, MA	144	no
+28581	28568	4	Suffolk County, MA	144	no
+28582	28568	4	Worcester County, MA	144	no
+32112	32085	4	Barnstable Town, MA	87	no
+32113	32085	4	Boston-Cambridge-Quincy, MA-NH	824	no
+33453	32085	4	Brockton-Bridgewater-Easton, MA	71	no
+33454	32085	4	Framingham, MA	91	no
+33456	32085	4	Haverhill-North Andover-Amesbury, MA-NH	62	no
+32115	32085	4	Leominster-Fitchburg-Gardner, MA	77	no
+33457	32085	4	Lowell-Billerica-Chelmsford, MA-NH	74	no
+33458	32085	4	Nashua, NH-MA	100	no
+32116	32085	4	New Bedford, MA	84	no
+33455	32085	4	Peabody, MA	65	no
+32118	32085	4	Pittsfield, MA	75	no
+32119	32085	4	Providence-Fall River-Warwick, RI-MA	191	no
+32120	32085	4	Springfield, MA-CT	125	no
+32121	32085	4	Worcester, MA-CT	118	no
+14	30725	4	Amherst Town-Northampton, MA	1	no
+30726	30725	4	Barnstable Town, MA	109	no
+30727	30725	4	Boston-Cambridge-Newton, MA-NH	145	no
+30728	30725	4	Pittsfield, MA	108	no
+28584	28583	4	Alcona County, MI	88	no
+28585	28583	4	Alger County, MI	87	no
+28586	28583	4	Allegan County, MI	145	no
+28587	28583	4	Alpena County, MI	88	no
+28588	28583	4	Antrim County, MI	88	no
+28589	28583	4	Arenac County, MI	88	no
+28590	28583	4	Baraga County, MI	86	no
+28591	28583	4	Barry County, MI	144	no
+28592	28583	4	Bay County, MI	145	no
+28593	28583	4	Benzie County, MI	88	no
+28594	28583	4	Berrien County, MI	145	no
+28595	28583	4	Branch County, MI	88	no
+28596	28583	4	Calhoun County, MI	145	no
+28597	28583	4	Cass County, MI	144	no
+28598	28583	4	Charlevoix County, MI	88	no
+28599	28583	4	Cheboygan County, MI	88	no
+28600	28583	4	Chippewa County, MI	88	no
+28601	28583	4	Clare County, MI	88	no
+28602	28583	4	Clinton County, MI	145	no
+28603	28583	4	Crawford County, MI	88	no
+28604	28583	4	Delta County, MI	88	no
+28605	28583	4	Dickinson County, MI	88	no
+28606	28583	4	Eaton County, MI	145	no
+28607	28583	4	Emmet County, MI	88	no
+28608	28583	4	Genesee County, MI	145	no
+28609	28583	4	Gladwin County, MI	88	no
+28610	28583	4	Gogebic County, MI	87	no
+28611	28583	4	Grand Traverse County, MI	145	no
+28612	28583	4	Gratiot County, MI	88	no
+28613	28583	4	Hillsdale County, MI	88	no
+28614	28583	4	Houghton County, MI	88	no
+28615	28583	4	Huron County, MI	88	no
+28616	28583	4	Ingham County, MI	145	no
+28617	28583	4	Ionia County, MI	144	no
+28618	28583	4	Iosco County, MI	87	no
+28619	28583	4	Iron County, MI	87	no
+28620	28583	4	Isabella County, MI	144	no
+28621	28583	4	Jackson County, MI	144	no
+28622	28583	4	Kalamazoo County, MI	144	no
+28623	28583	4	Kalkaska County, MI	87	no
+28624	28583	4	Kent County, MI	145	no
+28625	28583	4	Keweenaw County, MI	87	no
+28626	28583	4	Lake County, MI	88	no
+28627	28583	4	Lapeer County, MI	145	no
+28628	28583	4	Leelanau County, MI	88	no
+28629	28583	4	Lenawee County, MI	145	no
+28630	28583	4	Livingston County, MI	145	no
+28631	28583	4	Luce County, MI	88	no
+28632	28583	4	Mackinac County, MI	87	no
+28633	28583	4	Macomb County, MI	145	no
+28634	28583	4	Manistee County, MI	87	no
+28635	28583	4	Marquette County, MI	145	no
+28636	28583	4	Mason County, MI	88	no
+28637	28583	4	Mecosta County, MI	88	no
+28638	28583	4	Menominee County, MI	88	no
+28639	28583	4	Midland County, MI	145	no
+28640	28583	4	Missaukee County, MI	88	no
+28641	28583	4	Monroe County, MI	145	no
+28642	28583	4	Montcalm County, MI	144	no
+28643	28583	4	Montmorency County, MI	87	no
+28644	28583	4	Muskegon County, MI	145	no
+28645	28583	4	Newaygo County, MI	88	no
+28646	28583	4	Oakland County, MI	145	no
+28647	28583	4	Oceana County, MI	88	no
+28648	28583	4	Ogemaw County, MI	88	no
+28649	28583	4	Ontonagon County, MI	87	no
+28650	28583	4	Osceola County, MI	88	no
+28651	28583	4	Oscoda County, MI	88	no
+28652	28583	4	Otsego County, MI	87	no
+28653	28583	4	Ottawa County, MI	145	no
+28654	28583	4	Presque Isle County, MI	88	no
+28655	28583	4	Roscommon County, MI	88	no
+28656	28583	4	Saginaw County, MI	145	no
+28657	28583	4	Sanilac County, MI	88	no
+28658	28583	4	Schoolcraft County, MI	88	no
+28659	28583	4	Shiawassee County, MI	145	no
+28660	28583	4	St. Clair County, MI	145	no
+28661	28583	4	St. Joseph County, MI	144	no
+28662	28583	4	Tuscola County, MI	88	no
+28663	28583	4	Van Buren County, MI	145	no
+28664	28583	4	Washtenaw County, MI	145	no
+28665	28583	4	Wayne County, MI	145	no
+28666	28583	4	Wexford County, MI	88	no
+30733	30732	4	Ann Arbor, MI	182	no
+30734	30732	4	Battle Creek, MI	151	no
+30735	30732	4	Bay City, MI	125	no
+30736	30732	4	Detroit-Warren-Dearborn, MI	349	no
+30737	30732	4	Flint, MI	179	no
+30738	30732	4	Grand Rapids-Wyoming-Kentwood, MI	248	no
+30739	30732	4	Holland-Grand Haven, MI	83	no
+30740	30732	4	Jackson, MI	160	no
+30741	30732	4	Kalamazoo-Portage, MI	175	no
+28668	28667	4	Aitkin County, MN	88	no
+28669	28667	4	Anoka County, MN	145	no
+28670	28667	4	Becker County, MN	87	no
+28671	28667	4	Beltrami County, MN	88	no
+28672	28667	4	Benton County, MN	88	no
+28673	28667	4	Big Stone County, MN	86	no
+28674	28667	4	Blue Earth County, MN	144	no
+28675	28667	4	Brown County, MN	88	no
+28676	28667	4	Carlton County, MN	88	no
+28677	28667	4	Carver County, MN	145	no
+28678	28667	4	Cass County, MN	88	no
+28679	28667	4	Chippewa County, MN	88	no
+28680	28667	4	Chisago County, MN	144	no
+28681	28667	4	Clay County, MN	144	no
+28682	28667	4	Clearwater County, MN	87	no
+28683	28667	4	Cook County, MN	88	no
+28684	28667	4	Cottonwood County, MN	87	no
+28685	28667	4	Crow Wing County, MN	144	no
+28686	28667	4	Dakota County, MN	145	no
+28687	28667	4	Dodge County, MN	88	no
+28688	28667	4	Douglas County, MN	88	no
+28689	28667	4	Faribault County, MN	88	no
+28690	28667	4	Fillmore County, MN	88	no
+28691	28667	4	Freeborn County, MN	88	no
+28692	28667	4	Goodhue County, MN	144	no
+28693	28667	4	Grant County, MN	87	no
+28694	28667	4	Hennepin County, MN	145	no
+28695	28667	4	Houston County, MN	88	no
+28696	28667	4	Hubbard County, MN	88	no
+28697	28667	4	Isanti County, MN	88	no
+28698	28667	4	Itasca County, MN	88	no
+28699	28667	4	Jackson County, MN	87	no
+28700	28667	4	Kanabec County, MN	87	no
+28701	28667	4	Kandiyohi County, MN	88	no
+28702	28667	4	Kittson County, MN	86	no
+28703	28667	4	Koochiching County, MN	87	no
+28704	28667	4	Lac qui Parle County, MN	86	no
+28705	28667	4	Lake County, MN	87	no
+28706	28667	4	Lake of the Woods County, MN	86	no
+28707	28667	4	Le Sueur County, MN	87	no
+28708	28667	4	Lincoln County, MN	88	no
+28709	28667	4	Lyon County, MN	88	no
+28710	28667	4	Mahnomen County, MN	86	no
+28711	28667	4	Marshall County, MN	87	no
+28712	28667	4	Martin County, MN	88	no
+28713	28667	4	McLeod County, MN	88	no
+28714	28667	4	Meeker County, MN	88	no
+28715	28667	4	Mille Lacs County, MN	87	no
+28716	28667	4	Morrison County, MN	88	no
+28717	28667	4	Mower County, MN	88	no
+28718	28667	4	Murray County, MN	87	no
+28719	28667	4	Nicollet County, MN	88	no
+28720	28667	4	Nobles County, MN	87	no
+28721	28667	4	Norman County, MN	86	no
+28722	28667	4	Olmsted County, MN	145	no
+28723	28667	4	Otter Tail County, MN	144	no
+28724	28667	4	Pennington County, MN	88	no
+28725	28667	4	Pine County, MN	88	no
+28726	28667	4	Pipestone County, MN	88	no
+28727	28667	4	Polk County, MN	87	no
+28728	28667	4	Pope County, MN	88	no
+28729	28667	4	Ramsey County, MN	145	no
+28730	28667	4	Red Lake County, MN	86	no
+28731	28667	4	Redwood County, MN	88	no
+28732	28667	4	Renville County, MN	88	no
+28733	28667	4	Rice County, MN	145	no
+28734	28667	4	Rock County, MN	88	no
+28735	28667	4	Roseau County, MN	88	no
+28736	28667	4	Scott County, MN	145	no
+28737	28667	4	Sherburne County, MN	145	no
+28738	28667	4	Sibley County, MN	88	no
+28739	28667	4	Stearns County, MN	145	no
+28740	28667	4	Steele County, MN	88	no
+28741	28667	4	Stevens County, MN	87	no
+28742	28667	4	St. Louis County, MN	145	no
+28743	28667	4	Swift County, MN	88	no
+28744	28667	4	Todd County, MN	87	no
+28745	28667	4	Traverse County, MN	86	no
+28746	28667	4	Wabasha County, MN	88	no
+28747	28667	4	Wadena County, MN	87	no
+28748	28667	4	Waseca County, MN	88	no
+28749	28667	4	Washington County, MN	145	no
+28750	28667	4	Watonwan County, MN	87	no
+28751	28667	4	Wilkin County, MN	87	no
+28752	28667	4	Winona County, MN	144	no
+28753	28667	4	Wright County, MN	145	no
+28754	28667	4	Yellow Medicine County, MN	87	no
+30749	30748	4	Duluth, MN-WI	164	no
+30750	30748	4	Fargo, ND-MN	178	no
+30751	30748	4	Grand Forks, ND-MN	149	no
+30752	30748	4	La Crosse-Onalaska, WI-MN	163	no
+33200	30748	4	Mankato, MN	92	no
+30753	30748	4	Minneapolis-St. Paul-Bloomington, MN-WI	463	no
+30754	30748	4	Rochester, MN	169	no
+30755	30748	4	St. Cloud, MN	160	no
+28756	28755	4	Adams County, MS	87	no
+616	28755	4	Alcorn County, MS	87	no
+28758	28755	4	Amite County, MS	86	no
+614	28755	4	Attala County, MS	86	no
+611	28755	4	Benton County, MS	86	no
+612	28755	4	Bolivar County, MS	88	no
+608	28755	4	Calhoun County, MS	87	no
+606	28755	4	Carroll County, MS	86	no
+604	28755	4	Chickasaw County, MS	88	no
+602	28755	4	Choctaw County, MS	86	no
+28766	28755	4	Claiborne County, MS	85	no
+28767	28755	4	Clarke County, MS	87	no
+600	28755	4	Clay County, MS	87	no
+597	28755	4	Coahoma County, MS	88	no
+28770	28755	4	Copiah County, MS	87	no
+28771	28755	4	Covington County, MS	87	no
+596	28755	4	DeSoto County, MS	145	no
+28773	28755	4	Forrest County, MS	145	no
+28774	28755	4	Franklin County, MS	86	no
+28775	28755	4	George County, MS	87	no
+28776	28755	4	Greene County, MS	86	no
+594	28755	4	Grenada County, MS	88	no
+28778	28755	4	Hancock County, MS	144	no
+28779	28755	4	Harrison County, MS	145	no
+28780	28755	4	Hinds County, MS	145	no
+592	28755	4	Holmes County, MS	85	no
+590	28755	4	Humphreys County, MS	84	no
+28783	28755	4	Issaquena County, MS	86	no
+588	28755	4	Itawamba County, MS	88	no
+28785	28755	4	Jackson County, MS	145	no
+28786	28755	4	Jasper County, MS	85	no
+28787	28755	4	Jefferson County, MS	85	no
+28788	28755	4	Jefferson Davis County, MS	85	no
+28789	28755	4	Jones County, MS	144	no
+28790	28755	4	Kemper County, MS	85	no
+586	28755	4	Lafayette County, MS	142	no
+28792	28755	4	Lamar County, MS	143	no
+28793	28755	4	Lauderdale County, MS	143	no
+28794	28755	4	Lawrence County, MS	85	no
+28795	28755	4	Leake County, MS	87	no
+584	28755	4	Lee County, MS	145	no
+582	28755	4	Leflore County, MS	88	no
+28798	28755	4	Lincoln County, MS	88	no
+580	28755	4	Lowndes County, MS	144	no
+28800	28755	4	Madison County, MS	145	no
+28801	28755	4	Marion County, MS	87	no
+578	28755	4	Marshall County, MS	88	no
+576	28755	4	Monroe County, MS	87	no
+573	28755	4	Montgomery County, MS	85	no
+28805	28755	4	Neshoba County, MS	87	no
+28806	28755	4	Newton County, MS	85	no
+572	28755	4	Noxubee County, MS	85	no
+570	28755	4	Oktibbeha County, MS	144	no
+568	28755	4	Panola County, MS	88	no
+28810	28755	4	Pearl River County, MS	144	no
+28811	28755	4	Perry County, MS	87	no
+28812	28755	4	Pike County, MS	87	no
+28813	28755	4	Pontotoc County, MS	88	no
+564	28755	4	Prentiss County, MS	86	no
+562	28755	4	Quitman County, MS	85	no
+28816	28755	4	Rankin County, MS	145	no
+28817	28755	4	Scott County, MS	86	no
+28818	28755	4	Sharkey County, MS	86	no
+28819	28755	4	Simpson County, MS	88	no
+28820	28755	4	Smith County, MS	86	no
+28821	28755	4	Stone County, MS	88	no
+560	28755	4	Sunflower County, MS	87	no
+558	28755	4	Tallahatchie County, MS	85	no
+556	28755	4	Tate County, MS	87	no
+554	28755	4	Tippah County, MS	88	no
+552	28755	4	Tishomingo County, MS	88	no
+550	28755	4	Tunica County, MS	86	no
+548	28755	4	Union County, MS	87	no
+28829	28755	4	Walthall County, MS	87	no
+28830	28755	4	Warren County, MS	144	no
+546	28755	4	Washington County, MS	88	no
+28832	28755	4	Wayne County, MS	86	no
+544	28755	4	Webster County, MS	85	no
+28834	28755	4	Wilkinson County, MS	86	no
+542	28755	4	Winston County, MS	88	no
+540	28755	4	Yalobusha County, MS	85	no
+28837	28755	4	Yazoo County, MS	86	no
+1080	28838	4	Adair County, MO	87	no
+28840	28838	4	Andrew County, MO	88	no
+28841	28838	4	Atchison County, MO	86	no
+1078	28838	4	Audrain County, MO	88	no
+1076	28838	4	Barry County, MO	88	no
+28844	28838	4	Barton County, MO	88	no
+28845	28838	4	Bates County, MO	87	no
+28846	28838	4	Benton County, MO	86	no
+1074	28838	4	Bollinger County, MO	87	no
+1072	28838	4	Boone County, MO	145	no
+28849	28838	4	Buchanan County, MO	145	no
+1069	28838	4	Butler County, MO	87	no
+28851	28838	4	Caldwell County, MO	87	no
+1067	28838	4	Callaway County, MO	88	no
+1065	28838	4	Camden County, MO	88	no
+1063	28838	4	Cape Girardeau County, MO	145	no
+28855	28838	4	Carroll County, MO	86	no
+1061	28838	4	Carter County, MO	86	no
+28857	28838	4	Cass County, MO	145	no
+28858	28838	4	Cedar County, MO	86	no
+28859	28838	4	Chariton County, MO	86	no
+1059	28838	4	Christian County, MO	145	no
+1057	28838	4	Clark County, MO	87	no
+28862	28838	4	Clay County, MO	145	no
+28863	28838	4	Clinton County, MO	88	no
+1055	28838	4	Cole County, MO	144	no
+28865	28838	4	Cooper County, MO	87	no
+1053	28838	4	Crawford County, MO	88	no
+1051	28838	4	Dade County, MO	87	no
+1049	28838	4	Dallas County, MO	88	no
+28869	28838	4	Daviess County, MO	87	no
+28870	28838	4	DeKalb County, MO	88	no
+1047	28838	4	Dent County, MO	87	no
+1045	28838	4	Douglas County, MO	87	no
+1044	28838	4	Dunklin County, MO	87	no
+1041	28838	4	Franklin County, MO	144	no
+1039	28838	4	Gasconade County, MO	87	no
+28876	28838	4	Gentry County, MO	86	no
+1037	28838	4	Greene County, MO	144	no
+28878	28838	4	Grundy County, MO	87	no
+28879	28838	4	Harrison County, MO	86	no
+28880	28838	4	Henry County, MO	87	no
+28881	28838	4	Hickory County, MO	86	no
+28882	28838	4	Holt County, MO	86	no
+28883	28838	4	Howard County, MO	88	no
+1035	28838	4	Howell County, MO	88	no
+1033	28838	4	Iron County, MO	86	no
+28886	28838	4	Jackson County, MO	145	no
+28887	28838	4	Jasper County, MO	145	no
+1031	28838	4	Jefferson County, MO	145	no
+28889	28838	4	Johnson County, MO	143	no
+1029	28838	4	Knox County, MO	86	no
+1027	28838	4	Laclede County, MO	88	no
+28892	28838	4	Lafayette County, MO	88	no
+1025	28838	4	Lawrence County, MO	88	no
+1023	28838	4	Lewis County, MO	87	no
+1020	28838	4	Lincoln County, MO	144	no
+28896	28838	4	Linn County, MO	88	no
+28897	28838	4	Livingston County, MO	88	no
+1018	28838	4	Macon County, MO	88	no
+1016	28838	4	Madison County, MO	86	no
+1014	28838	4	Maries County, MO	88	no
+1012	28838	4	Marion County, MO	87	no
+28902	28838	4	McDonald County, MO	87	no
+28903	28838	4	Mercer County, MO	85	no
+1009	28838	4	Miller County, MO	88	no
+1008	28838	4	Mississippi County, MO	88	no
+1006	28838	4	Moniteau County, MO	88	no
+1004	28838	4	Monroe County, MO	88	no
+1002	28838	4	Montgomery County, MO	87	no
+28909	28838	4	Morgan County, MO	88	no
+1000	28838	4	New Madrid County, MO	88	no
+28911	28838	4	Newton County, MO	143	no
+28912	28838	4	Nodaway County, MO	87	no
+998	28838	4	Oregon County, MO	87	no
+996	28838	4	Osage County, MO	88	no
+994	28838	4	Ozark County, MO	87	no
+992	28838	4	Pemiscot County, MO	87	no
+990	28838	4	Perry County, MO	88	no
+28918	28838	4	Pettis County, MO	88	no
+988	28838	4	Phelps County, MO	88	no
+986	28838	4	Pike County, MO	88	no
+28921	28838	4	Platte County, MO	145	no
+984	28838	4	Polk County, MO	88	no
+982	28838	4	Pulaski County, MO	88	no
+28924	28838	4	Putnam County, MO	86	no
+980	28838	4	Ralls County, MO	87	no
+977	28838	4	Randolph County, MO	88	no
+28927	28838	4	Ray County, MO	88	no
+976	28838	4	Reynolds County, MO	86	no
+974	28838	4	Ripley County, MO	88	no
+28930	28838	4	Saline County, MO	88	no
+972	28838	4	Schuyler County, MO	86	no
+970	28838	4	Scotland County, MO	86	no
+968	28838	4	Scott County, MO	88	no
+966	28838	4	Shannon County, MO	87	no
+964	28838	4	Shelby County, MO	87	no
+962	28838	4	St. Charles County, MO	145	no
+28937	28838	4	St. Clair County, MO	87	no
+958	28838	4	Ste. Genevieve County, MO	87	no
+960	28838	4	St. Francois County, MO	144	no
+954	28838	4	St. Louis County, MO	145	no
+28941	28838	4	St. Louis City, MO	144	no
+952	28838	4	Stoddard County, MO	88	no
+950	28838	4	Stone County, MO	88	no
+28944	28838	4	Sullivan County, MO	87	no
+947	28838	4	Taney County, MO	144	no
+946	28838	4	Texas County, MO	87	no
+28947	28838	4	Vernon County, MO	88	no
+943	28838	4	Warren County, MO	88	no
+942	28838	4	Washington County, MO	87	no
+940	28838	4	Wayne County, MO	86	no
+938	28838	4	Webster County, MO	88	no
+28952	28838	4	Worth County, MO	87	no
+936	28838	4	Wright County, MO	87	no
+33197	30762	4	Cape Girardeau, MO-IL	91	no
+340	30762	4	Columbia, MO	147	no
+3006	30762	4	Jefferson City, MO	128	no
+30766	30762	4	Joplin, MO-KS	148	no
+28955	28954	4	Beaverhead County, MT	87	no
+28956	28954	4	Big Horn County, MT	86	no
+28957	28954	4	Blaine County, MT	86	no
+28958	28954	4	Broadwater County, MT	87	no
+28959	28954	4	Carbon County, MT	88	no
+28960	28954	4	Carter County, MT	84	no
+28961	28954	4	Cascade County, MT	145	no
+28962	28954	4	Chouteau County, MT	87	no
+28963	28954	4	Custer County, MT	88	no
+28964	28954	4	Daniels County, MT	86	no
+28965	28954	4	Dawson County, MT	87	no
+28966	28954	4	Deer Lodge County, MT	87	no
+28967	28954	4	Fallon County, MT	86	no
+28968	28954	4	Fergus County, MT	87	no
+28969	28954	4	Flathead County, MT	145	no
+28970	28954	4	Gallatin County, MT	145	no
+28971	28954	4	Garfield County, MT	82	no
+28972	28954	4	Glacier County, MT	88	no
+28973	28954	4	Golden Valley County, MT	85	no
+28974	28954	4	Granite County, MT	86	no
+28975	28954	4	Hill County, MT	87	no
+28976	28954	4	Jefferson County, MT	88	no
+28977	28954	4	Judith Basin County, MT	84	no
+28978	28954	4	Lake County, MT	88	no
+28979	28954	4	Lewis and Clark County, MT	145	no
+28980	28954	4	Liberty County, MT	83	no
+28981	28954	4	Lincoln County, MT	88	no
+28982	28954	4	Madison County, MT	88	no
+28983	28954	4	McCone County, MT	84	no
+28984	28954	4	Meagher County, MT	85	no
+28985	28954	4	Mineral County, MT	87	no
+28986	28954	4	Missoula County, MT	145	no
+28987	28954	4	Musselshell County, MT	87	no
+28988	28954	4	Park County, MT	88	no
+28989	28954	4	Petroleum County, MT	80	no
+28990	28954	4	Phillips County, MT	86	no
+28991	28954	4	Pondera County, MT	87	no
+28992	28954	4	Powder River County, MT	84	no
+28993	28954	4	Powell County, MT	86	no
+28994	28954	4	Prairie County, MT	82	no
+28995	28954	4	Ravalli County, MT	88	no
+28996	28954	4	Richland County, MT	87	no
+28997	28954	4	Roosevelt County, MT	86	no
+28998	28954	4	Rosebud County, MT	86	no
+28999	28954	4	Sanders County, MT	88	no
+29000	28954	4	Sheridan County, MT	86	no
+29001	28954	4	Silver Bow County, MT	88	no
+29002	28954	4	Stillwater County, MT	88	no
+29003	28954	4	Sweet Grass County, MT	88	no
+29004	28954	4	Teton County, MT	87	no
+29005	28954	4	Toole County, MT	88	no
+29006	28954	4	Treasure County, MT	83	no
+29007	28954	4	Valley County, MT	87	no
+29008	28954	4	Wheatland County, MT	85	no
+29009	28954	4	Wibaux County, MT	83	no
+29010	28954	4	Yellowstone County, MT	145	no
+29013	29012	4	Adams County, NE	87	no
+29014	29012	4	Antelope County, NE	88	no
+29015	29012	4	Arthur County, NE	80	no
+29016	29012	4	Banner County, NE	80	no
+29017	29012	4	Blaine County, NE	80	no
+29018	29012	4	Boone County, NE	85	no
+29019	29012	4	Box Butte County, NE	87	no
+29020	29012	4	Boyd County, NE	87	no
+29021	29012	4	Brown County, NE	86	no
+29022	29012	4	Buffalo County, NE	144	no
+29023	29012	4	Burt County, NE	88	no
+29024	29012	4	Butler County, NE	88	no
+29025	29012	4	Cass County, NE	88	no
+29026	29012	4	Cedar County, NE	88	no
+29027	29012	4	Chase County, NE	86	no
+29028	29012	4	Cherry County, NE	86	no
+29029	29012	4	Cheyenne County, NE	87	no
+29030	29012	4	Clay County, NE	86	no
+29031	29012	4	Colfax County, NE	88	no
+29032	29012	4	Cuming County, NE	88	no
+29033	29012	4	Custer County, NE	88	no
+29034	29012	4	Dakota County, NE	88	no
+29035	29012	4	Dawes County, NE	86	no
+29036	29012	4	Dawson County, NE	88	no
+29037	29012	4	Deuel County, NE	86	no
+29038	29012	4	Dixon County, NE	85	no
+29039	29012	4	Dodge County, NE	88	no
+29040	29012	4	Douglas County, NE	145	no
+29041	29012	4	Dundy County, NE	87	no
+29042	29012	4	Fillmore County, NE	88	no
+29043	29012	4	Franklin County, NE	85	no
+29044	29012	4	Frontier County, NE	87	no
+29045	29012	4	Furnas County, NE	86	no
+29046	29012	4	Gage County, NE	88	no
+29047	29012	4	Garden County, NE	86	no
+29048	29012	4	Garfield County, NE	85	no
+29049	29012	4	Gosper County, NE	85	no
+29050	29012	4	Grant County, NE	82	no
+29051	29012	4	Greeley County, NE	84	no
+29052	29012	4	Hall County, NE	143	no
+29053	29012	4	Hamilton County, NE	87	no
+29054	29012	4	Harlan County, NE	87	no
+29055	29012	4	Hayes County, NE	84	no
+29056	29012	4	Hitchcock County, NE	86	no
+29057	29012	4	Holt County, NE	88	no
+29058	29012	4	Hooker County, NE	82	no
+29059	29012	4	Howard County, NE	88	no
+29060	29012	4	Jefferson County, NE	87	no
+29061	29012	4	Johnson County, NE	86	no
+29062	29012	4	Kearney County, NE	88	no
+29063	29012	4	Keith County, NE	87	no
+29064	29012	4	Keya Paha County, NE	83	no
+29065	29012	4	Kimball County, NE	87	no
+29066	29012	4	Knox County, NE	87	no
+29067	29012	4	Lancaster County, NE	145	no
+29068	29012	4	Lincoln County, NE	88	no
+29069	29012	4	Logan County, NE	84	no
+29070	29012	4	Loup County, NE	81	no
+29071	29012	4	Madison County, NE	87	no
+29072	29012	4	McPherson County, NE	81	no
+29073	29012	4	Merrick County, NE	88	no
+29074	29012	4	Morrill County, NE	86	no
+29075	29012	4	Nance County, NE	86	no
+29076	29012	4	Nemaha County, NE	87	no
+29077	29012	4	Nuckolls County, NE	85	no
+29078	29012	4	Otoe County, NE	88	no
+29079	29012	4	Pawnee County, NE	85	no
+29080	29012	4	Perkins County, NE	86	no
+29081	29012	4	Phelps County, NE	88	no
+29082	29012	4	Pierce County, NE	88	no
+29083	29012	4	Platte County, NE	88	no
+29084	29012	4	Polk County, NE	88	no
+29085	29012	4	Red Willow County, NE	88	no
+29086	29012	4	Richardson County, NE	86	no
+29087	29012	4	Rock County, NE	85	no
+29088	29012	4	Saline County, NE	87	no
+29089	29012	4	Sarpy County, NE	145	no
+29090	29012	4	Saunders County, NE	88	no
+29091	29012	4	Scotts Bluff County, NE	88	no
+29092	29012	4	Seward County, NE	88	no
+29093	29012	4	Sheridan County, NE	85	no
+29094	29012	4	Sherman County, NE	86	no
+29095	29012	4	Sioux County, NE	84	no
+29096	29012	4	Stanton County, NE	86	no
+29097	29012	4	Thayer County, NE	86	no
+29098	29012	4	Thomas County, NE	83	no
+29099	29012	4	Thurston County, NE	87	no
+29100	29012	4	Valley County, NE	86	no
+29101	29012	4	Washington County, NE	88	no
+29102	29012	4	Wayne County, NE	88	no
+29103	29012	4	Webster County, NE	85	no
+29104	29012	4	Wheeler County, NE	82	no
+29105	29012	4	York County, NE	88	no
+29107	29106	4	Carson City, NV	144	no
+29108	29106	4	Churchill County, NV	88	no
+29109	29106	4	Clark County, NV	144	no
+29110	29106	4	Douglas County, NV	144	no
+29111	29106	4	Elko County, NV	143	no
+29112	29106	4	Esmeralda County, NV	83	no
+29113	29106	4	Eureka County, NV	83	no
+29114	29106	4	Humboldt County, NV	88	no
+29115	29106	4	Lander County, NV	87	no
+29116	29106	4	Lincoln County, NV	86	no
+29117	29106	4	Lyon County, NV	144	no
+29118	29106	4	Mineral County, NV	86	no
+29119	29106	4	Nye County, NV	87	no
+29120	29106	4	Pershing County, NV	87	no
+29121	29106	4	Storey County, NV	87	no
+29122	29106	4	Washoe County, NV	145	no
+29123	29106	4	White Pine County, NV	87	no
+29125	29124	4	Belknap County, NH	143	no
+29126	29124	4	Carroll County, NH	88	no
+29127	29124	4	Cheshire County, NH	145	no
+29128	29124	4	Coos County, NH	86	no
+29129	29124	4	Grafton County, NH	144	no
+29130	29124	4	Hillsborough County, NH	144	no
+29131	29124	4	Merrimack County, NH	145	no
+29132	29124	4	Rockingham County, NH	145	no
+29133	29124	4	Strafford County, NH	144	no
+29134	29124	4	Sullivan County, NH	87	no
+30784	30783	4	Boston-Cambridge-Newton, MA-NH	136	no
+30785	30783	4	Manchester-Nashua, NH	118	no
+32123	32086	4	Boston-Cambridge-Quincy, MA-NH	264	no
+33689	32086	4	Dover-Durham, NH-ME	80	no
+33459	32086	4	Haverhill-North Andover-Amesbury, MA-NH	61	no
+33460	32086	4	Lowell-Billerica-Chelmsford, MA-NH	73	no
+32130	32086	4	Manchester, NH	93	no
+33461	32086	4	Nashua, NH-MA	100	no
+32131	32086	4	Portsmouth, NH-ME	87	no
+32132	32086	4	Rochester-Dover, NH-ME	77	no
+29136	29135	4	Atlantic County, NJ	145	no
+29137	29135	4	Bergen County, NJ	141	no
+29138	29135	4	Burlington County, NJ	145	no
+29139	29135	4	Camden County, NJ	145	no
+29140	29135	4	Cape May County, NJ	145	no
+29141	29135	4	Cumberland County, NJ	145	no
+29142	29135	4	Essex County, NJ	141	no
+29143	29135	4	Gloucester County, NJ	145	no
+29144	29135	4	Hudson County, NJ	145	no
+29145	29135	4	Hunterdon County, NJ	143	no
+29146	29135	4	Mercer County, NJ	145	no
+29147	29135	4	Middlesex County, NJ	141	no
+29148	29135	4	Monmouth County, NJ	145	no
+29149	29135	4	Morris County, NJ	141	no
+29150	29135	4	Ocean County, NJ	145	no
+29151	29135	4	Passaic County, NJ	141	no
+29152	29135	4	Salem County, NJ	145	no
+29153	29135	4	Somerset County, NJ	141	no
+29154	29135	4	Sussex County, NJ	141	no
+29155	29135	4	Union County, NJ	141	no
+29156	29135	4	Warren County, NJ	141	no
+30787	30786	4	Allentown-Bethlehem-Easton, PA-NJ	234	no
+30788	30786	4	Atlantic City-Hammonton, NJ	180	no
+30789	30786	4	New York-Newark-Jersey City, NY-NJ	221	no
+30790	30786	4	Ocean City, NJ	123	no
+32878	32870	4	Philadelphia-Wilmington-Atlantic City, PA-NJ-DE-MD (CMSA)	50	no
+32871	32870	4	New York-Northern New Jersey-Long Island, NY-NJ-CT-PA (CMSA)	50	no
+29158	29157	4	Bernalillo County, NM	145	no
+29159	29157	4	Catron County, NM	85	no
+29160	29157	4	Chaves County, NM	145	no
+29161	29157	4	Cibola County, NM	87	no
+29162	29157	4	Colfax County, NM	88	no
+29163	29157	4	Curry County, NM	144	no
+29164	29157	4	De Baca County, NM	86	no
+29165	29157	4	Doña Ana County, NM	144	no
+29166	29157	4	Eddy County, NM	144	no
+29167	29157	4	Grant County, NM	88	no
+29168	29157	4	Guadalupe County, NM	85	no
+29169	29157	4	Harding County, NM	82	no
+29170	29157	4	Hidalgo County, NM	85	no
+29171	29157	4	Lea County, NM	145	no
+29172	29157	4	Lincoln County, NM	88	no
+29173	29157	4	Los Alamos County, NM	88	no
+29174	29157	4	Luna County, NM	88	no
+29175	29157	4	McKinley County, NM	143	no
+29176	29157	4	Mora County, NM	85	no
+29177	29157	4	Otero County, NM	145	no
+29178	29157	4	Quay County, NM	85	no
+29179	29157	4	Rio Arriba County, NM	88	no
+29180	29157	4	Roosevelt County, NM	87	no
+29181	29157	4	Sandoval County, NM	145	no
+29182	29157	4	San Juan County, NM	145	no
+29183	29157	4	San Miguel County, NM	87	no
+29184	29157	4	Santa Fe County, NM	145	no
+29185	29157	4	Sierra County, NM	88	no
+29186	29157	4	Socorro County, NM	88	no
+29187	29157	4	Taos County, NM	88	no
+29188	29157	4	Torrance County, NM	87	no
+29189	29157	4	Union County, NM	85	no
+29190	29157	4	Valencia County, NM	145	no
+29192	29191	4	Albany County, NY	145	no
+29193	29191	4	Allegany County, NY	88	no
+29194	29191	4	Bronx County, NY	144	no
+29195	29191	4	Broome County, NY	145	no
+29196	29191	4	Cattaraugus County, NY	145	no
+29197	29191	4	Cayuga County, NY	144	no
+29198	29191	4	Chautauqua County, NY	145	no
+29199	29191	4	Chemung County, NY	145	no
+29200	29191	4	Chenango County, NY	88	no
+29201	29191	4	Clinton County, NY	145	no
+29202	29191	4	Columbia County, NY	144	no
+29203	29191	4	Cortland County, NY	144	no
+29204	29191	4	Delaware County, NY	88	no
+29205	29191	4	Dutchess County, NY	145	no
+29206	29191	4	Erie County, NY	145	no
+29207	29191	4	Essex County, NY	88	no
+29208	29191	4	Franklin County, NY	144	no
+29209	29191	4	Fulton County, NY	144	no
+29210	29191	4	Genesee County, NY	144	no
+29211	29191	4	Greene County, NY	88	no
+29212	29191	4	Hamilton County, NY	87	no
+29213	29191	4	Herkimer County, NY	144	no
+29214	29191	4	Jefferson County, NY	145	no
+29215	29191	4	Kings County, NY	144	no
+29216	29191	4	Lewis County, NY	87	no
+29217	29191	4	Livingston County, NY	144	no
+29218	29191	4	Madison County, NY	145	no
+29219	29191	4	Monroe County, NY	145	no
+29220	29191	4	Montgomery County, NY	144	no
+29221	29191	4	Nassau County, NY	141	no
+29222	29191	4	New York County, NY	144	no
+29223	29191	4	Niagara County, NY	145	no
+29224	29191	4	Oneida County, NY	145	no
+29225	29191	4	Onondaga County, NY	145	no
+29226	29191	4	Ontario County, NY	145	no
+29227	29191	4	Orange County, NY	144	no
+29228	29191	4	Orleans County, NY	87	no
+29229	29191	4	Oswego County, NY	144	no
+29230	29191	4	Otsego County, NY	143	no
+29231	29191	4	Putnam County, NY	144	no
+29232	29191	4	Queens County, NY	140	no
+29233	29191	4	Rensselaer County, NY	145	no
+29234	29191	4	Richmond County, NY	144	no
+29235	29191	4	Rockland County, NY	145	no
+29236	29191	4	Saratoga County, NY	145	no
+29237	29191	4	Schenectady County, NY	145	no
+29238	29191	4	Schoharie County, NY	87	no
+29239	29191	4	Schuyler County, NY	88	no
+29240	29191	4	Seneca County, NY	88	no
+29241	29191	4	Steuben County, NY	145	no
+29242	29191	4	St. Lawrence County, NY	145	no
+29243	29191	4	Suffolk County, NY	145	no
+29244	29191	4	Sullivan County, NY	89	no
+29245	29191	4	Tioga County, NY	144	no
+29246	29191	4	Tompkins County, NY	144	no
+29247	29191	4	Ulster County, NY	145	no
+29248	29191	4	Warren County, NY	145	no
+29249	29191	4	Washington County, NY	144	no
+29250	29191	4	Wayne County, NY	145	no
+29251	29191	4	Westchester County, NY	145	no
+29252	29191	4	Wyoming County, NY	88	no
+29253	29191	4	Yates County, NY	88	no
+30800	30799	4	Albany-Schenectady-Troy, NY	220	no
+30801	30799	4	Binghamton, NY	172	no
+30802	30799	4	Buffalo-Cheektowaga, NY	210	no
+30803	30799	4	Elmira, NY	148	no
+30804	30799	4	Glens Falls, NY	140	no
+30805	30799	4	Ithaca, NY	142	no
+30806	30799	4	Kingston, NY	163	no
+32869	32868	4	New York-Northern New Jersey-Long Island, NY-NJ-CT-PA (CMSA)	100	no
+29255	29254	4	Alamance County, NC	145	no
+29256	29254	4	Alexander County, NC	88	no
+29257	29254	4	Alleghany County, NC	87	no
+29258	29254	4	Anson County, NC	86	no
+29259	29254	4	Ashe County, NC	87	no
+29260	29254	4	Avery County, NC	88	no
+29261	29254	4	Beaufort County, NC	144	no
+29262	29254	4	Bertie County, NC	87	no
+29263	29254	4	Bladen County, NC	88	no
+29264	29254	4	Brunswick County, NC	145	no
+29265	29254	4	Buncombe County, NC	145	no
+29266	29254	4	Burke County, NC	145	no
+29267	29254	4	Cabarrus County, NC	145	no
+29268	29254	4	Caldwell County, NC	145	no
+29269	29254	4	Camden County, NC	87	no
+29270	29254	4	Carteret County, NC	145	no
+29271	29254	4	Caswell County, NC	88	no
+29272	29254	4	Catawba County, NC	145	no
+29273	29254	4	Chatham County, NC	144	no
+29274	29254	4	Cherokee County, NC	87	no
+29275	29254	4	Chowan County, NC	88	no
+29276	29254	4	Clay County, NC	88	no
+29277	29254	4	Cleveland County, NC	145	no
+29278	29254	4	Columbus County, NC	88	no
+29279	29254	4	Craven County, NC	145	no
+29280	29254	4	Cumberland County, NC	145	no
+29281	29254	4	Currituck County, NC	87	no
+29282	29254	4	Dare County, NC	87	no
+29283	29254	4	Davidson County, NC	145	no
+29284	29254	4	Davie County, NC	88	no
+29285	29254	4	Duplin County, NC	88	no
+29286	29254	4	Durham County, NC	145	no
+29287	29254	4	Edgecombe County, NC	144	no
+29288	29254	4	Forsyth County, NC	145	no
+29289	29254	4	Franklin County, NC	144	no
+29290	29254	4	Gaston County, NC	144	no
+29291	29254	4	Gates County, NC	87	no
+29292	29254	4	Graham County, NC	86	no
+29293	29254	4	Granville County, NC	143	no
+29294	29254	4	Greene County, NC	87	no
+29295	29254	4	Guilford County, NC	145	no
+29296	29254	4	Halifax County, NC	144	no
+29297	29254	4	Harnett County, NC	145	no
+29298	29254	4	Haywood County, NC	144	no
+29299	29254	4	Henderson County, NC	145	no
+29300	29254	4	Hertford County, NC	87	no
+29301	29254	4	Hoke County, NC	144	no
+29302	29254	4	Hyde County, NC	85	no
+29303	29254	4	Iredell County, NC	145	no
+29304	29254	4	Jackson County, NC	88	no
+29305	29254	4	Johnston County, NC	145	no
+29306	29254	4	Jones County, NC	88	no
+29307	29254	4	Lee County, NC	144	no
+29308	29254	4	Lenoir County, NC	144	no
+29309	29254	4	Lincoln County, NC	145	no
+29310	29254	4	Macon County, NC	88	no
+29311	29254	4	Madison County, NC	88	no
+29312	29254	4	Martin County, NC	88	no
+29313	29254	4	McDowell County, NC	88	no
+29314	29254	4	Mecklenburg County, NC	144	no
+29315	29254	4	Mitchell County, NC	87	no
+29316	29254	4	Montgomery County, NC	88	no
+29317	29254	4	Moore County, NC	145	no
+29318	29254	4	Nash County, NC	145	no
+29319	29254	4	New Hanover County, NC	145	no
+29320	29254	4	Northampton County, NC	88	no
+29321	29254	4	Onslow County, NC	145	no
+29322	29254	4	Orange County, NC	145	no
+29323	29254	4	Pamlico County, NC	88	no
+29324	29254	4	Pasquotank County, NC	87	no
+29325	29254	4	Pender County, NC	144	no
+29326	29254	4	Perquimans County, NC	88	no
+29327	29254	4	Person County, NC	88	no
+29328	29254	4	Pitt County, NC	145	no
+29329	29254	4	Polk County, NC	88	no
+29330	29254	4	Randolph County, NC	145	no
+29331	29254	4	Richmond County, NC	88	no
+29332	29254	4	Robeson County, NC	145	no
+29333	29254	4	Rockingham County, NC	145	no
+29334	29254	4	Rowan County, NC	145	no
+29335	29254	4	Rutherford County, NC	145	no
+29336	29254	4	Sampson County, NC	88	no
+29337	29254	4	Scotland County, NC	88	no
+29338	29254	4	Stanly County, NC	144	no
+29339	29254	4	Stokes County, NC	143	no
+29340	29254	4	Surry County, NC	145	no
+29341	29254	4	Swain County, NC	86	no
+29342	29254	4	Transylvania County, NC	88	no
+29343	29254	4	Tyrrell County, NC	86	no
+29344	29254	4	Union County, NC	145	no
+29345	29254	4	Vance County, NC	88	no
+29346	29254	4	Wake County, NC	145	no
+29347	29254	4	Warren County, NC	88	no
+29348	29254	4	Washington County, NC	88	no
+29349	29254	4	Watauga County, NC	144	no
+29350	29254	4	Wayne County, NC	145	no
+29351	29254	4	Wilkes County, NC	145	no
+29352	29254	4	Wilson County, NC	145	no
+29353	29254	4	Yadkin County, NC	87	no
+29354	29254	4	Yancey County, NC	88	no
+29356	29355	4	Adams County, ND	86	no
+29357	29355	4	Barnes County, ND	88	no
+29358	29355	4	Benson County, ND	86	no
+29359	29355	4	Billings County, ND	84	no
+29360	29355	4	Bottineau County, ND	86	no
+29361	29355	4	Bowman County, ND	87	no
+29362	29355	4	Burke County, ND	85	no
+29363	29355	4	Burleigh County, ND	145	no
+29364	29355	4	Cass County, ND	145	no
+29365	29355	4	Cavalier County, ND	87	no
+29366	29355	4	Dickey County, ND	87	no
+29367	29355	4	Divide County, ND	86	no
+29368	29355	4	Dunn County, ND	86	no
+29369	29355	4	Eddy County, ND	86	no
+29370	29355	4	Emmons County, ND	86	no
+29371	29355	4	Foster County, ND	86	no
+29372	29355	4	Golden Valley County, ND	86	no
+29373	29355	4	Grand Forks County, ND	145	no
+29374	29355	4	Grant County, ND	86	no
+29375	29355	4	Griggs County, ND	86	no
+29376	29355	4	Hettinger County, ND	86	no
+29377	29355	4	Kidder County, ND	87	no
+29378	29355	4	LaMoure County, ND	86	no
+29379	29355	4	Logan County, ND	87	no
+29380	29355	4	McHenry County, ND	87	no
+29381	29355	4	McIntosh County, ND	87	no
+29382	29355	4	McKenzie County, ND	87	no
+29383	29355	4	McLean County, ND	87	no
+29384	29355	4	Mercer County, ND	87	no
+29385	29355	4	Morton County, ND	87	no
+29386	29355	4	Mountrail County, ND	86	no
+29387	29355	4	Nelson County, ND	85	no
+29388	29355	4	Oliver County, ND	84	no
+29389	29355	4	Pembina County, ND	87	no
+29390	29355	4	Pierce County, ND	86	no
+29391	29355	4	Ramsey County, ND	87	no
+29392	29355	4	Ransom County, ND	87	no
+29393	29355	4	Renville County, ND	86	no
+29394	29355	4	Richland County, ND	87	no
+29395	29355	4	Rolette County, ND	86	no
+29396	29355	4	Sargent County, ND	87	no
+29397	29355	4	Sheridan County, ND	84	no
+29398	29355	4	Sioux County, ND	85	no
+29399	29355	4	Slope County, ND	84	no
+29400	29355	4	Stark County, ND	87	no
+29401	29355	4	Steele County, ND	86	no
+29402	29355	4	Stutsman County, ND	88	no
+29403	29355	4	Towner County, ND	86	no
+29404	29355	4	Traill County, ND	87	no
+29405	29355	4	Walsh County, ND	87	no
+29406	29355	4	Ward County, ND	145	no
+29407	29355	4	Wells County, ND	86	no
+29408	29355	4	Williams County, ND	88	no
+29410	29409	4	Adams County, OH	88	no
+29411	29409	4	Allen County, OH	145	no
+29412	29409	4	Ashland County, OH	142	no
+29413	29409	4	Ashtabula County, OH	145	no
+29414	29409	4	Athens County, OH	143	no
+29415	29409	4	Auglaize County, OH	88	no
+29416	29409	4	Belmont County, OH	143	no
+29417	29409	4	Brown County, OH	88	no
+29418	29409	4	Butler County, OH	145	no
+29419	29409	4	Carroll County, OH	88	no
+29420	29409	4	Champaign County, OH	88	no
+29421	29409	4	Clark County, OH	145	no
+29422	29409	4	Clermont County, OH	145	no
+29423	29409	4	Clinton County, OH	88	no
+29424	29409	4	Columbiana County, OH	145	no
+29425	29409	4	Coshocton County, OH	88	no
+29426	29409	4	Crawford County, OH	88	no
+29427	29409	4	Cuyahoga County, OH	144	no
+29428	29409	4	Darke County, OH	144	no
+29429	29409	4	Defiance County, OH	88	no
+29430	29409	4	Delaware County, OH	145	no
+29431	29409	4	Erie County, OH	145	no
+29432	29409	4	Fairfield County, OH	145	no
+29433	29409	4	Fayette County, OH	88	no
+29434	29409	4	Franklin County, OH	145	no
+29435	29409	4	Fulton County, OH	88	no
+29436	29409	4	Gallia County, OH	87	no
+29437	29409	4	Geauga County, OH	145	no
+29438	29409	4	Greene County, OH	145	no
+29439	29409	4	Guernsey County, OH	87	no
+29440	29409	4	Hamilton County, OH	145	no
+29441	29409	4	Hancock County, OH	145	no
+29442	29409	4	Hardin County, OH	88	no
+29443	29409	4	Harrison County, OH	88	no
+29444	29409	4	Henry County, OH	88	no
+29445	29409	4	Highland County, OH	87	no
+29446	29409	4	Hocking County, OH	87	no
+29447	29409	4	Holmes County, OH	87	no
+29448	29409	4	Huron County, OH	143	no
+29449	29409	4	Jackson County, OH	87	no
+29450	29409	4	Jefferson County, OH	145	no
+29451	29409	4	Knox County, OH	144	no
+29452	29409	4	Lake County, OH	145	no
+29453	29409	4	Lawrence County, OH	144	no
+29454	29409	4	Licking County, OH	145	no
+29455	29409	4	Logan County, OH	88	no
+29456	29409	4	Lorain County, OH	145	no
+29457	29409	4	Lucas County, OH	145	no
+29458	29409	4	Madison County, OH	88	no
+29459	29409	4	Mahoning County, OH	145	no
+29460	29409	4	Marion County, OH	145	no
+29461	29409	4	Medina County, OH	145	no
+29462	29409	4	Meigs County, OH	88	no
+29463	29409	4	Mercer County, OH	88	no
+29464	29409	4	Miami County, OH	145	no
+29465	29409	4	Monroe County, OH	86	no
+29466	29409	4	Montgomery County, OH	145	no
+29467	29409	4	Morgan County, OH	87	no
+29468	29409	4	Morrow County, OH	88	no
+29469	29409	4	Muskingum County, OH	145	no
+29470	29409	4	Noble County, OH	88	no
+29471	29409	4	Ottawa County, OH	88	no
+29472	29409	4	Paulding County, OH	88	no
+29473	29409	4	Perry County, OH	88	no
+29474	29409	4	Pickaway County, OH	143	no
+29475	29409	4	Pike County, OH	88	no
+29476	29409	4	Portage County, OH	145	no
+29477	29409	4	Preble County, OH	88	no
+29478	29409	4	Putnam County, OH	88	no
+29479	29409	4	Richland County, OH	145	no
+29480	29409	4	Ross County, OH	145	no
+29481	29409	4	Sandusky County, OH	143	no
+29482	29409	4	Scioto County, OH	145	no
+29483	29409	4	Seneca County, OH	142	no
+29484	29409	4	Shelby County, OH	88	no
+29485	29409	4	Stark County, OH	145	no
+29486	29409	4	Summit County, OH	145	no
+29487	29409	4	Trumbull County, OH	145	no
+29488	29409	4	Tuscarawas County, OH	143	no
+29489	29409	4	Union County, OH	144	no
+29490	29409	4	Van Wert County, OH	87	no
+29491	29409	4	Vinton County, OH	88	no
+29492	29409	4	Warren County, OH	145	no
+29493	29409	4	Washington County, OH	144	no
+29494	29409	4	Wayne County, OH	145	no
+29495	29409	4	Williams County, OH	88	no
+29496	29409	4	Wood County, OH	145	no
+29497	29409	4	Wyandot County, OH	87	no
+30833	30832	4	Akron, OH	203	no
+30834	30832	4	Canton-Massillon, OH	179	no
+30835	30832	4	Cincinnati, OH-KY-IN	292	no
+30836	30832	4	Cleveland, OH	298	no
+30837	30832	4	Columbus, OH	266	no
+30838	30832	4	Dayton-Kettering-Beavercreek, OH	205	no
+30839	30832	4	Huntington-Ashland, WV-KY-OH	165	no
+30840	30832	4	Lima, OH	133	no
+29499	29498	4	Adair County, OK	87	no
+29500	29498	4	Alfalfa County, OK	87	no
+29501	29498	4	Atoka County, OK	86	no
+29502	29498	4	Beaver County, OK	86	no
+29503	29498	4	Beckham County, OK	87	no
+29504	29498	4	Blaine County, OK	87	no
+29505	29498	4	Bryan County, OK	88	no
+29506	29498	4	Caddo County, OK	87	no
+29507	29498	4	Canadian County, OK	145	no
+29508	29498	4	Carter County, OK	144	no
+29509	29498	4	Cherokee County, OK	144	no
+29510	29498	4	Choctaw County, OK	86	no
+29511	29498	4	Cimarron County, OK	87	no
+29512	29498	4	Cleveland County, OK	145	no
+29513	29498	4	Coal County, OK	86	no
+29514	29498	4	Comanche County, OK	145	no
+29515	29498	4	Cotton County, OK	86	no
+29516	29498	4	Craig County, OK	88	no
+29517	29498	4	Creek County, OK	145	no
+29518	29498	4	Custer County, OK	88	no
+29519	29498	4	Delaware County, OK	88	no
+29520	29498	4	Dewey County, OK	85	no
+29521	29498	4	Ellis County, OK	86	no
+29522	29498	4	Garfield County, OK	142	no
+29523	29498	4	Garvin County, OK	87	no
+29524	29498	4	Grady County, OK	144	no
+29525	29498	4	Grant County, OK	85	no
+29526	29498	4	Greer County, OK	86	no
+29527	29498	4	Harmon County, OK	85	no
+29528	29498	4	Harper County, OK	85	no
+29529	29498	4	Haskell County, OK	86	no
+29530	29498	4	Hughes County, OK	86	no
+29531	29498	4	Jackson County, OK	88	no
+29532	29498	4	Jefferson County, OK	85	no
+29533	29498	4	Johnston County, OK	87	no
+29534	29498	4	Kay County, OK	87	no
+29535	29498	4	Kingfisher County, OK	87	no
+29536	29498	4	Kiowa County, OK	86	no
+29537	29498	4	Latimer County, OK	86	no
+29538	29498	4	Le Flore County, OK	143	no
+29539	29498	4	Lincoln County, OK	88	no
+29540	29498	4	Logan County, OK	88	no
+29541	29498	4	Love County, OK	87	no
+29542	29498	4	Major County, OK	86	no
+29543	29498	4	Marshall County, OK	88	no
+29544	29498	4	Mayes County, OK	88	no
+29545	29498	4	McClain County, OK	88	no
+29546	29498	4	McCurtain County, OK	87	no
+29547	29498	4	McIntosh County, OK	88	no
+29548	29498	4	Murray County, OK	88	no
+29549	29498	4	Muskogee County, OK	145	no
+29550	29498	4	Noble County, OK	88	no
+29551	29498	4	Nowata County, OK	88	no
+29552	29498	4	Okfuskee County, OK	87	no
+29553	29498	4	Oklahoma County, OK	145	no
+29554	29498	4	Okmulgee County, OK	88	no
+29555	29498	4	Osage County, OK	143	no
+29556	29498	4	Ottawa County, OK	88	no
+29557	29498	4	Pawnee County, OK	88	no
+29558	29498	4	Payne County, OK	145	no
+29559	29498	4	Pittsburg County, OK	88	no
+29560	29498	4	Pontotoc County, OK	88	no
+29561	29498	4	Pottawatomie County, OK	145	no
+29562	29498	4	Pushmataha County, OK	87	no
+29563	29498	4	Roger Mills County, OK	86	no
+29564	29498	4	Rogers County, OK	145	no
+29565	29498	4	Seminole County, OK	88	no
+29566	29498	4	Sequoyah County, OK	88	no
+29567	29498	4	Stephens County, OK	88	no
+29568	29498	4	Texas County, OK	88	no
+29569	29498	4	Tillman County, OK	86	no
+29570	29498	4	Tulsa County, OK	145	no
+29571	29498	4	Wagoner County, OK	145	no
+29572	29498	4	Washington County, OK	144	no
+29573	29498	4	Washita County, OK	87	no
+29574	29498	4	Woods County, OK	88	no
+29575	29498	4	Woodward County, OK	88	no
+29577	29576	4	Baker County, OR	88	no
+29578	29576	4	Benton County, OR	145	no
+29579	29576	4	Clackamas County, OR	145	no
+29580	29576	4	Clatsop County, OR	88	no
+29581	29576	4	Columbia County, OR	144	no
+29582	29576	4	Coos County, OR	144	no
+29583	29576	4	Crook County, OR	88	no
+29584	29576	4	Curry County, OR	88	no
+29585	29576	4	Deschutes County, OR	145	no
+29586	29576	4	Douglas County, OR	145	no
+29587	29576	4	Gilliam County, OR	86	no
+29588	29576	4	Grant County, OR	86	no
+29589	29576	4	Harney County, OR	88	no
+29590	29576	4	Hood River County, OR	88	no
+29591	29576	4	Jackson County, OR	145	no
+29592	29576	4	Jefferson County, OR	88	no
+29593	29576	4	Josephine County, OR	145	no
+29594	29576	4	Klamath County, OR	145	no
+29595	29576	4	Lake County, OR	87	no
+29596	29576	4	Lane County, OR	145	no
+29597	29576	4	Lincoln County, OR	144	no
+29598	29576	4	Linn County, OR	145	no
+29599	29576	4	Malheur County, OR	88	no
+29600	29576	4	Marion County, OR	145	no
+29601	29576	4	Morrow County, OR	88	no
+29602	29576	4	Multnomah County, OR	145	no
+29603	29576	4	Polk County, OR	145	no
+29604	29576	4	Sherman County, OR	85	no
+29605	29576	4	Tillamook County, OR	88	no
+29606	29576	4	Umatilla County, OR	145	no
+29607	29576	4	Union County, OR	88	no
+29608	29576	4	Wallowa County, OR	88	no
+29609	29576	4	Wasco County, OR	87	no
+29610	29576	4	Washington County, OR	145	no
+29611	29576	4	Wheeler County, OR	85	no
+29612	29576	4	Yamhill County, OR	144	no
+33410	30854	4	Albany-Lebanon, OR	165	no
+30855	30854	4	Bend, OR	176	no
+30856	30854	4	Corvallis, OR	146	no
+30857	30854	4	Eugene-Springfield, OR	212	no
+29614	29613	4	Adams County, PA	145	no
+29615	29613	4	Allegheny County, PA	143	no
+29616	29613	4	Armstrong County, PA	142	no
+29617	29613	4	Beaver County, PA	143	no
+29618	29613	4	Bedford County, PA	88	no
+29619	29613	4	Berks County, PA	145	no
+29620	29613	4	Blair County, PA	145	no
+29621	29613	4	Bradford County, PA	142	no
+29622	29613	4	Bucks County, PA	145	no
+29623	29613	4	Butler County, PA	141	no
+29624	29613	4	Cambria County, PA	144	no
+29625	29613	4	Cameron County, PA	85	no
+29626	29613	4	Carbon County, PA	144	no
+29627	29613	4	Centre County, PA	145	no
+29628	29613	4	Chester County, PA	144	no
+29629	29613	4	Clarion County, PA	88	no
+29630	29613	4	Clearfield County, PA	144	no
+29631	29613	4	Clinton County, PA	87	no
+29632	29613	4	Columbia County, PA	144	no
+29633	29613	4	Crawford County, PA	144	no
+29634	29613	4	Cumberland County, PA	145	no
+29635	29613	4	Dauphin County, PA	144	no
+29636	29613	4	Delaware County, PA	144	no
+29637	29613	4	Elk County, PA	88	no
+29638	29613	4	Erie County, PA	145	no
+29639	29613	4	Fayette County, PA	142	no
+29640	29613	4	Forest County, PA	86	no
+29641	29613	4	Franklin County, PA	145	no
+29642	29613	4	Fulton County, PA	86	no
+29643	29613	4	Greene County, PA	87	no
+29644	29613	4	Huntingdon County, PA	87	no
+29645	29613	4	Indiana County, PA	142	no
+29646	29613	4	Jefferson County, PA	88	no
+29647	29613	4	Juniata County, PA	86	no
+29648	29613	4	Lackawanna County, PA	144	no
+29649	29613	4	Lancaster County, PA	144	no
+29650	29613	4	Lawrence County, PA	142	no
+29651	29613	4	Lebanon County, PA	143	no
+29652	29613	4	Lehigh County, PA	143	no
+29653	29613	4	Luzerne County, PA	144	no
+29654	29613	4	Lycoming County, PA	145	no
+29655	29613	4	McKean County, PA	85	no
+29656	29613	4	Mercer County, PA	141	no
+29657	29613	4	Mifflin County, PA	141	no
+29658	29613	4	Monroe County, PA	145	no
+29659	29613	4	Montgomery County, PA	145	no
+29660	29613	4	Montour County, PA	87	no
+29661	29613	4	Northampton County, PA	145	no
+29662	29613	4	Northumberland County, PA	144	no
+29663	29613	4	Perry County, PA	87	no
+29664	29613	4	Philadelphia County, PA	143	no
+29665	29613	4	Pike County, PA	144	no
+29666	29613	4	Potter County, PA	87	no
+29667	29613	4	Schuylkill County, PA	145	no
+29668	29613	4	Snyder County, PA	88	no
+29669	29613	4	Somerset County, PA	142	no
+29670	29613	4	Sullivan County, PA	86	no
+29671	29613	4	Susquehanna County, PA	87	no
+29672	29613	4	Tioga County, PA	88	no
+29673	29613	4	Union County, PA	88	no
+29674	29613	4	Venango County, PA	143	no
+29675	29613	4	Warren County, PA	88	no
+29676	29613	4	Washington County, PA	143	no
+29677	29613	4	Wayne County, PA	88	no
+29678	29613	4	Westmoreland County, PA	141	no
+29679	29613	4	Wyoming County, PA	88	no
+29680	29613	4	York County, PA	145	no
+30862	30861	4	Allentown-Bethlehem-Easton, PA-NJ	234	no
+30863	30861	4	Altoona, PA	137	no
+33413	30861	4	Bloomsburg-Berwick, PA	82	no
+33416	30861	4	Chambersburg, PA	146	no
+33419	30861	4	East Stroudsburg, PA	91	no
+30864	30861	4	Erie, PA	169	no
+33420	30861	4	Gettysburg, PA	111	no
+30865	30861	4	Harrisburg-Carlisle, PA	216	no
+30866	30861	4	Johnstown, PA	154	no
+30867	30861	4	Lancaster, PA	186	no
+32877	32874	4	Philadelphia-Wilmington-Atlantic City, PA-NJ-DE-MD (CMSA)	100	no
+29683	29682	4	Bristol County, RI	141	no
+29684	29682	4	Kent County, RI	144	no
+29685	29682	4	Newport County, RI	144	no
+29686	29682	4	Providence County, RI	144	no
+29687	29682	4	Washington County, RI	144	no
+30880	30879	4	Providence-Warwick, RI-MA	153	no
+29689	29688	4	Abbeville County, SC	88	no
+29690	29688	4	Aiken County, SC	145	no
+29691	29688	4	Allendale County, SC	87	no
+29692	29688	4	Anderson County, SC	141	no
+29693	29688	4	Bamberg County, SC	87	no
+29694	29688	4	Barnwell County, SC	88	no
+29695	29688	4	Beaufort County, SC	145	no
+29696	29688	4	Berkeley County, SC	145	no
+29697	29688	4	Calhoun County, SC	87	no
+29698	29688	4	Charleston County, SC	145	no
+29699	29688	4	Cherokee County, SC	143	no
+29700	29688	4	Chester County, SC	88	no
+29701	29688	4	Chesterfield County, SC	88	no
+29702	29688	4	Clarendon County, SC	88	no
+29703	29688	4	Colleton County, SC	88	no
+29704	29688	4	Darlington County, SC	143	no
+29705	29688	4	Dillon County, SC	87	no
+29706	29688	4	Dorchester County, SC	145	no
+29707	29688	4	Edgefield County, SC	88	no
+29708	29688	4	Fairfield County, SC	88	no
+29709	29688	4	Florence County, SC	145	no
+29710	29688	4	Georgetown County, SC	144	no
+29711	29688	4	Greenville County, SC	141	no
+29712	29688	4	Greenwood County, SC	141	no
+29713	29688	4	Hampton County, SC	88	no
+29714	29688	4	Horry County, SC	145	no
+29715	29688	4	Jasper County, SC	87	no
+29716	29688	4	Kershaw County, SC	144	no
+29717	29688	4	Lancaster County, SC	145	no
+29718	29688	4	Laurens County, SC	141	no
+29719	29688	4	Lee County, SC	88	no
+29720	29688	4	Lexington County, SC	145	no
+29721	29688	4	Marion County, SC	87	no
+29722	29688	4	Marlboro County, SC	88	no
+29723	29688	4	McCormick County, SC	88	no
+29724	29688	4	Newberry County, SC	87	no
+29725	29688	4	Oconee County, SC	144	no
+29726	29688	4	Orangeburg County, SC	144	no
+29727	29688	4	Pickens County, SC	140	no
+29728	29688	4	Richland County, SC	144	no
+29729	29688	4	Saluda County, SC	86	no
+29730	29688	4	Spartanburg County, SC	145	no
+29731	29688	4	Sumter County, SC	145	no
+29732	29688	4	Union County, SC	87	no
+29733	29688	4	Williamsburg County, SC	87	no
+29734	29688	4	York County, SC	145	no
+29736	29735	4	Aurora County, SD	86	no
+29737	29735	4	Beadle County, SD	87	no
+29738	29735	4	Bennett County, SD	85	no
+29739	29735	4	Bon Homme County, SD	87	no
+29740	29735	4	Brookings County, SD	88	no
+29741	29735	4	Brown County, SD	88	no
+29742	29735	4	Brule County, SD	87	no
+29743	29735	4	Buffalo County, SD	83	no
+29744	29735	4	Butte County, SD	88	no
+29745	29735	4	Campbell County, SD	86	no
+29746	29735	4	Charles Mix County, SD	87	no
+29747	29735	4	Clark County, SD	86	no
+29748	29735	4	Clay County, SD	88	no
+29749	29735	4	Codington County, SD	88	no
+29750	29735	4	Corson County, SD	85	no
+29751	29735	4	Custer County, SD	87	no
+29752	29735	4	Davison County, SD	88	no
+29753	29735	4	Day County, SD	86	no
+29754	29735	4	Deuel County, SD	86	no
+29755	29735	4	Dewey County, SD	87	no
+29756	29735	4	Douglas County, SD	86	no
+29757	29735	4	Edmunds County, SD	86	no
+29758	29735	4	Fall River County, SD	86	no
+29759	29735	4	Faulk County, SD	86	no
+29760	29735	4	Grant County, SD	86	no
+29761	29735	4	Gregory County, SD	85	no
+29762	29735	4	Haakon County, SD	84	no
+29763	29735	4	Hamlin County, SD	87	no
+29764	29735	4	Hand County, SD	86	no
+29765	29735	4	Hanson County, SD	86	no
+29766	29735	4	Harding County, SD	85	no
+29767	29735	4	Hughes County, SD	88	no
+29768	29735	4	Hutchinson County, SD	87	no
+29769	29735	4	Hyde County, SD	84	no
+29770	29735	4	Jackson County, SD	84	no
+29771	29735	4	Jerauld County, SD	86	no
+29772	29735	4	Jones County, SD	81	no
+29773	29735	4	Kingsbury County, SD	86	no
+29774	29735	4	Lake County, SD	86	no
+29775	29735	4	Lawrence County, SD	88	no
+29776	29735	4	Lincoln County, SD	143	no
+29777	29735	4	Lyman County, SD	86	no
+29778	29735	4	Marshall County, SD	87	no
+29779	29735	4	McCook County, SD	87	no
+29780	29735	4	McPherson County, SD	86	no
+29781	29735	4	Meade County, SD	88	no
+29782	29735	4	Mellette County, SD	86	no
+29783	29735	4	Miner County, SD	86	no
+29784	29735	4	Minnehaha County, SD	145	no
+29785	29735	4	Moody County, SD	87	no
+33805	29735	4	Oglala Lakota County, SD	90	no
+29786	29735	4	Pennington County, SD	145	no
+29787	29735	4	Perkins County, SD	87	no
+29788	29735	4	Potter County, SD	85	no
+29789	29735	4	Roberts County, SD	87	no
+29790	29735	4	Sanborn County, SD	86	no
+29791	29735	4	Shannon County, SD	64	no
+29792	29735	4	Spink County, SD	87	no
+29793	29735	4	Stanley County, SD	87	no
+29794	29735	4	Sully County, SD	83	no
+29795	29735	4	Todd County, SD	86	no
+29796	29735	4	Tripp County, SD	86	no
+29797	29735	4	Turner County, SD	87	no
+29798	29735	4	Union County, SD	88	no
+29799	29735	4	Walworth County, SD	87	no
+29800	29735	4	Yankton County, SD	88	no
+29801	29735	4	Ziebach County, SD	85	no
+29803	29802	4	Anderson County, TN	145	no
+29804	29802	4	Bedford County, TN	88	no
+204	29802	4	Benton County, TN	88	no
+29806	29802	4	Bledsoe County, TN	86	no
+29807	29802	4	Blount County, TN	145	no
+29808	29802	4	Bradley County, TN	145	no
+29809	29802	4	Campbell County, TN	88	no
+29810	29802	4	Cannon County, TN	88	no
+205	29802	4	Carroll County, TN	88	no
+29812	29802	4	Carter County, TN	144	no
+29813	29802	4	Cheatham County, TN	88	no
+206	29802	4	Chester County, TN	88	no
+29815	29802	4	Claiborne County, TN	87	no
+29816	29802	4	Clay County, TN	85	no
+29817	29802	4	Cocke County, TN	88	no
+29818	29802	4	Coffee County, TN	144	no
+207	29802	4	Crockett County, TN	88	no
+29820	29802	4	Cumberland County, TN	144	no
+29821	29802	4	Davidson County, TN	144	no
+208	29802	4	Decatur County, TN	87	no
+29823	29802	4	DeKalb County, TN	88	no
+29824	29802	4	Dickson County, TN	144	no
+209	29802	4	Dyer County, TN	88	no
+210	29802	4	Fayette County, TN	88	no
+29827	29802	4	Fentress County, TN	87	no
+29828	29802	4	Franklin County, TN	88	no
+211	29802	4	Gibson County, TN	88	no
+29830	29802	4	Giles County, TN	88	no
+29831	29802	4	Grainger County, TN	86	no
+29832	29802	4	Greene County, TN	145	no
+29833	29802	4	Grundy County, TN	87	no
+29834	29802	4	Hamblen County, TN	144	no
+29835	29802	4	Hamilton County, TN	145	no
+29836	29802	4	Hancock County, TN	85	no
+213	29802	4	Hardeman County, TN	87	no
+212	29802	4	Hardin County, TN	87	no
+29839	29802	4	Hawkins County, TN	143	no
+214	29802	4	Haywood County, TN	87	no
+215	29802	4	Henderson County, TN	87	no
+216	29802	4	Henry County, TN	87	no
+29843	29802	4	Hickman County, TN	88	no
+29844	29802	4	Houston County, TN	87	no
+29845	29802	4	Humphreys County, TN	88	no
+29846	29802	4	Jackson County, TN	88	no
+29847	29802	4	Jefferson County, TN	144	no
+29848	29802	4	Johnson County, TN	86	no
+29849	29802	4	Knox County, TN	145	no
+217	29802	4	Lake County, TN	85	no
+218	29802	4	Lauderdale County, TN	88	no
+29852	29802	4	Lawrence County, TN	87	no
+29853	29802	4	Lewis County, TN	87	no
+29854	29802	4	Lincoln County, TN	88	no
+29855	29802	4	Loudon County, TN	144	no
+29856	29802	4	Macon County, TN	87	no
+219	29802	4	Madison County, TN	145	no
+29858	29802	4	Marion County, TN	88	no
+29859	29802	4	Marshall County, TN	88	no
+29860	29802	4	Maury County, TN	145	no
+29861	29802	4	McMinn County, TN	144	no
+220	29802	4	McNairy County, TN	88	no
+29863	29802	4	Meigs County, TN	87	no
+29864	29802	4	Monroe County, TN	88	no
+29865	29802	4	Montgomery County, TN	145	no
+29866	29802	4	Moore County, TN	86	no
+29867	29802	4	Morgan County, TN	87	no
+221	29802	4	Obion County, TN	88	no
+29869	29802	4	Overton County, TN	88	no
+29870	29802	4	Perry County, TN	86	no
+29871	29802	4	Pickett County, TN	86	no
+29872	29802	4	Polk County, TN	87	no
+29873	29802	4	Putnam County, TN	145	no
+29874	29802	4	Rhea County, TN	88	no
+29875	29802	4	Roane County, TN	144	no
+29876	29802	4	Robertson County, TN	145	no
+29877	29802	4	Rutherford County, TN	145	no
+29878	29802	4	Scott County, TN	87	no
+29879	29802	4	Sequatchie County, TN	88	no
+29880	29802	4	Sevier County, TN	145	no
+222	29802	4	Shelby County, TN	145	no
+29882	29802	4	Smith County, TN	88	no
+29883	29802	4	Stewart County, TN	88	no
+29884	29802	4	Sullivan County, TN	145	no
+29885	29802	4	Sumner County, TN	145	no
+223	29802	4	Tipton County, TN	144	no
+29887	29802	4	Trousdale County, TN	88	no
+29888	29802	4	Unicoi County, TN	88	no
+29889	29802	4	Union County, TN	88	no
+29890	29802	4	Van Buren County, TN	87	no
+29891	29802	4	Warren County, TN	88	no
+29892	29802	4	Washington County, TN	145	no
+29893	29802	4	Wayne County, TN	87	no
+224	29802	4	Weakley County, TN	88	no
+29895	29802	4	White County, TN	88	no
+29896	29802	4	Williamson County, TN	145	no
+29897	29802	4	Wilson County, TN	145	no
+29899	29898	4	Anderson County, TX	9+	no
+29900	29898	4	Andrews County, TX	10+	no
+29901	29898	4	Angelina County, TX	90+	no
+29902	29898	4	Aransas County, TX	60+	no
+29903	29898	4	Archer County, TX	6+	no
+29904	29898	4	Armstrong County, TX	10+	no
+29905	29898	4	Atascosa County, TX	60+	no
+29906	29898	4	Austin County, TX	9+	no
+29907	29898	4	Bailey County, TX	10+	no
+29908	29898	4	Bandera County, TX	60+	no
+29909	29898	4	Bastrop County, TX	80+	no
+29910	29898	4	Baylor County, TX	9+	no
+29911	29898	4	Bee County, TX	10+	no
+29912	29898	4	Bell County, TX	120+	no
+29913	29898	4	Bexar County, TX	80+	no
+29914	29898	4	Blanco County, TX	70+	no
+29915	29898	4	Borden County, TX	10+	no
+29916	29898	4	Bosque County, TX	10+	no
+29917	29898	4	Bowie County, TX	60+	no
+29918	29898	4	Brazoria County, TX	90+	no
+29919	29898	4	Brazos County, TX	100+	no
+29920	29898	4	Brewster County, TX	10+	no
+29921	29898	4	Briscoe County, TX	6+	no
+29922	29898	4	Brooks County, TX	9+	no
+29923	29898	4	Brown County, TX	10+	no
+29924	29898	4	Burleson County, TX	10+	no
+29925	29898	4	Burnet County, TX	10+	no
+29926	29898	4	Caldwell County, TX	10+	no
+29927	29898	4	Calhoun County, TX	9+	no
+29928	29898	4	Callahan County, TX	10+	no
+29929	29898	4	Cameron County, TX	60+	no
+29930	29898	4	Camp County, TX	6+	no
+29931	29898	4	Carson County, TX	70+	no
+29932	29898	4	Cass County, TX	60+	no
+29933	29898	4	Castro County, TX	10+	no
+29935	29898	4	Cherokee County, TX	90+	no
+29936	29898	4	Childress County, TX	10+	no
+29937	29898	4	Clay County, TX	10+	no
+29938	29898	4	Cochran County, TX	10+	no
+29939	29898	4	Coke County, TX	60+	no
+29940	29898	4	Coleman County, TX	9+	no
+29941	29898	4	Collin County, TX	120+	no
+29942	29898	4	Collingsworth County, TX	10+	no
+29943	29898	4	Colorado County, TX	10+	no
+29944	29898	4	Comal County, TX	90+	no
+29945	29898	4	Comanche County, TX	80+	no
+29946	29898	4	Concho County, TX	10+	no
+29947	29898	4	Cooke County, TX	9+	no
+29948	29898	4	Coryell County, TX	70+	no
+29949	29898	4	Cottle County, TX	90+	no
+29950	29898	4	Crane County, TX	10+	no
+29951	29898	4	Crockett County, TX	3+	no
+29952	29898	4	Crosby County, TX	60+	no
+29953	29898	4	Culberson County, TX	10+	no
+29954	29898	4	Dallam County, TX	10+	no
+29955	29898	4	Dallas County, TX	70+	no
+29957	29898	4	Deaf Smith County, TX	9+	no
+29958	29898	4	Delta County, TX	6+	no
+29959	29898	4	Denton County, TX	10+	no
+29960	29898	4	DeWitt County, TX	9+	no
+29961	29898	4	Dickens County, TX	70+	no
+29962	29898	4	Dimmit County, TX	10+	no
+29963	29898	4	Donley County, TX	10+	no
+29964	29898	4	Duval County, TX	9+	no
+29965	29898	4	Eastland County, TX	70+	no
+29966	29898	4	Ector County, TX	110+	no
+29967	29898	4	Edwards County, TX	10+	no
+29968	29898	4	Ellis County, TX	70+	no
+29969	29898	4	El Paso County, TX	90+	no
+29970	29898	4	Erath County, TX	10+	no
+29971	29898	4	Falls County, TX	6+	no
+29972	29898	4	Fannin County, TX	3+	no
+29973	29898	4	Fayette County, TX	60+	no
+29974	29898	4	Fisher County, TX	10+	no
+29975	29898	4	Floyd County, TX	100+	no
+29976	29898	4	Foard County, TX	60+	no
+29977	29898	4	Fort Bend County, TX	80+	no
+29978	29898	4	Franklin County, TX	10+	no
+29979	29898	4	Freestone County, TX	60+	no
+29980	29898	4	Frio County, TX	9+	no
+29981	29898	4	Gaines County, TX	60+	no
+29982	29898	4	Galveston County, TX	70+	no
+29983	29898	4	Garza County, TX	10+	no
+29984	29898	4	Gillespie County, TX	70+	no
+29985	29898	4	Glasscock County, TX	70+	no
+29986	29898	4	Goliad County, TX	10+	no
+29987	29898	4	Gonzales County, TX	10+	no
+29988	29898	4	Gray County, TX	10+	no
+29989	29898	4	Grayson County, TX	9+	no
+29990	29898	4	Gregg County, TX	110+	no
+29991	29898	4	Grimes County, TX	60+	no
+29992	29898	4	Guadalupe County, TX	60+	no
+29993	29898	4	Hale County, TX	10+	no
+29994	29898	4	Hall County, TX	10+	no
+29995	29898	4	Hamilton County, TX	9+	no
+29996	29898	4	Hansford County, TX	6+	no
+29997	29898	4	Hardeman County, TX	9+	no
+29998	29898	4	Hardin County, TX	80+	no
+29999	29898	4	Harris County, TX	80+	no
+30000	29898	4	Harrison County, TX	140+	no
+30001	29898	4	Hartley County, TX	10+	no
+30002	29898	4	Haskell County, TX	60+	no
+30003	29898	4	Hays County, TX	80+	no
+30004	29898	4	Hemphill County, TX	10+	no
+30005	29898	4	Henderson County, TX	10+	no
+30006	29898	4	Hidalgo County, TX	100+	no
+30007	29898	4	Hill County, TX	6+	no
+30008	29898	4	Hockley County, TX	10+	no
+30009	29898	4	Hood County, TX	10+	no
+30010	29898	4	Hopkins County, TX	60+	no
+30011	29898	4	Houston County, TX	10+	no
+30012	29898	4	Howard County, TX	10+	no
+30013	29898	4	Hudspeth County, TX	10+	no
+30014	29898	4	Hunt County, TX	90+	no
+30015	29898	4	Hutchinson County, TX	3+	no
+30016	29898	4	Irion County, TX	10+	no
+30017	29898	4	Jack County, TX	6+	no
+30018	29898	4	Jackson County, TX	10+	no
+30019	29898	4	Jasper County, TX	70+	no
+30020	29898	4	Jeff Davis County, TX	10+	no
+30021	29898	4	Jefferson County, TX	80+	no
+30022	29898	4	Jim Hogg County, TX	80+	no
+30023	29898	4	Jim Wells County, TX	6+	no
+30024	29898	4	Johnson County, TX	110+	no
+30025	29898	4	Jones County, TX	80+	no
+30026	29898	4	Karnes County, TX	9+	no
+30027	29898	4	Kaufman County, TX	90+	no
+30028	29898	4	Kendall County, TX	10+	no
+30029	29898	4	Kenedy County, TX	60+	no
+30030	29898	4	Kent County, TX	10+	no
+30031	29898	4	Kerr County, TX	70+	no
+30032	29898	4	Kimble County, TX	10+	no
+30033	29898	4	King County, TX	10+	no
+30034	29898	4	Kinney County, TX	70+	no
+30035	29898	4	Kleberg County, TX	10+	no
+30036	29898	4	Knox County, TX	6+	no
+30037	29898	4	Lamar County, TX	10+	no
+30038	29898	4	Lamb County, TX	10+	no
+30039	29898	4	Lampasas County, TX	10+	no
+30040	29898	4	La Salle County, TX	60+	no
+30041	29898	4	Lavaca County, TX	60+	no
+30042	29898	4	Lee County, TX	10+	no
+30043	29898	4	Leon County, TX	70+	no
+30044	29898	4	Liberty County, TX	110+	no
+30045	29898	4	Limestone County, TX	10+	no
+30046	29898	4	Lipscomb County, TX	10+	no
+30047	29898	4	Live Oak County, TX	3+	no
+30048	29898	4	Llano County, TX	6+	no
+30049	29898	4	Loving County, TX	9+	no
+30050	29898	4	Lubbock County, TX	120+	no
+30051	29898	4	Lynn County, TX	3+	no
+30052	29898	4	Madison County, TX	70+	no
+30053	29898	4	Marion County, TX	60+	no
+30054	29898	4	Martin County, TX	6+	no
+30055	29898	4	Mason County, TX	10+	no
+30056	29898	4	Matagorda County, TX	10+	no
+30057	29898	4	Maverick County, TX	60+	no
+30058	29898	4	McCulloch County, TX	10+	no
+30059	29898	4	McLennan County, TX	60+	no
+30060	29898	4	McMullen County, TX	9+	no
+30061	29898	4	Medina County, TX	6+	no
+30062	29898	4	Menard County, TX	9+	no
+30063	29898	4	Midland County, TX	60+	no
+30064	29898	4	Milam County, TX	9+	no
+30065	29898	4	Mills County, TX	70+	no
+30066	29898	4	Mitchell County, TX	10+	no
+30067	29898	4	Montague County, TX	70+	no
+30068	29898	4	Montgomery County, TX	10+	no
+30069	29898	4	Moore County, TX	10+	no
+30070	29898	4	Morris County, TX	9+	no
+30071	29898	4	Motley County, TX	9+	no
+30072	29898	4	Nacogdoches County, TX	100+	no
+30073	29898	4	Navarro County, TX	10+	no
+30074	29898	4	Newton County, TX	80+	no
+30075	29898	4	Nolan County, TX	10+	no
+30076	29898	4	Nueces County, TX	6+	no
+30077	29898	4	Ochiltree County, TX	3+	no
+30078	29898	4	Oldham County, TX	10+	no
+30079	29898	4	Orange County, TX	100+	no
+30080	29898	4	Palo Pinto County, TX	3+	no
+30081	29898	4	Panola County, TX	10+	no
+30082	29898	4	Parker County, TX	9+	no
+30083	29898	4	Parmer County, TX	6+	no
+30084	29898	4	Pecos County, TX	10+	no
+30085	29898	4	Polk County, TX	60+	no
+30086	29898	4	Potter County, TX	60+	no
+30087	29898	4	Presidio County, TX	9+	no
+30088	29898	4	Rains County, TX	80+	no
+30089	29898	4	Randall County, TX	70+	no
+30090	29898	4	Reagan County, TX	60+	no
+30091	29898	4	Real County, TX	10+	no
+30092	29898	4	Red River County, TX	70+	no
+30093	29898	4	Reeves County, TX	90+	no
+30094	29898	4	Refugio County, TX	9+	no
+30095	29898	4	Roberts County, TX	60+	no
+30096	29898	4	Robertson County, TX	6+	no
+30097	29898	4	Rockwall County, TX	60+	no
+30098	29898	4	Runnels County, TX	9+	no
+30099	29898	4	Rusk County, TX	90+	no
+30100	29898	4	Sabine County, TX	3+	no
+30101	29898	4	San Augustine County, TX	10+	no
+30102	29898	4	San Jacinto County, TX	80+	no
+30103	29898	4	San Patricio County, TX	80+	no
+30104	29898	4	San Saba County, TX	9+	no
+30105	29898	4	Schleicher County, TX	10+	no
+30106	29898	4	Scurry County, TX	60+	no
+30107	29898	4	Shackelford County, TX	10+	no
+30108	29898	4	Shelby County, TX	10+	no
+30109	29898	4	Sherman County, TX	6+	no
+30110	29898	4	Smith County, TX	10+	no
+30111	29898	4	Somervell County, TX	60+	no
+30112	29898	4	Starr County, TX	60+	no
+30113	29898	4	Stephens County, TX	10+	no
+30114	29898	4	Sterling County, TX	100+	no
+30115	29898	4	Stonewall County, TX	90+	no
+30116	29898	4	Sutton County, TX	9+	no
+30117	29898	4	Swisher County, TX	90+	no
+30118	29898	4	Tarrant County, TX	100+	no
+30119	29898	4	Taylor County, TX	70+	no
+30120	29898	4	Terrell County, TX	9+	no
+30121	29898	4	Terry County, TX	10+	no
+30122	29898	4	Throckmorton County, TX	6+	no
+30123	29898	4	Titus County, TX	10+	no
+30124	29898	4	Tom Green County, TX	10+	no
+30125	29898	4	Travis County, TX	3+	no
+30126	29898	4	Trinity County, TX	9+	no
+30127	29898	4	Tyler County, TX	10+	no
+30128	29898	4	Upshur County, TX	10+	no
+30129	29898	4	Upton County, TX	10+	no
+30130	29898	4	Uvalde County, TX	60+	no
+30131	29898	4	Val Verde County, TX	60+	no
+30132	29898	4	Van Zandt County, TX	60+	no
+30133	29898	4	Victoria County, TX	90+	no
+30134	29898	4	Walker County, TX	70+	no
+30135	29898	4	Waller County, TX	10+	no
+30136	29898	4	Ward County, TX	6+	no
+30138	29898	4	Webb County, TX	70+	no
+30139	29898	4	Wharton County, TX	6+	no
+30140	29898	4	Wheeler County, TX	80+	no
+30141	29898	4	Wichita County, TX	80+	no
+30142	29898	4	Wilbarger County, TX	10+	no
+30143	29898	4	Willacy County, TX	9+	no
+30144	29898	4	Williamson County, TX	70+	no
+30145	29898	4	Wilson County, TX	10+	no
+30146	29898	4	Winkler County, TX	60+	no
+30147	29898	4	Wise County, TX	10+	no
+30148	29898	4	Wood County, TX	9+	no
+30149	29898	4	Yoakum County, TX	100+	no
+30150	29898	4	Young County, TX	9+	no
+30151	29898	4	Zapata County, TX	10+	no
+30152	29898	4	Zavala County, TX	80+	no
+30908	30907	4	Abilene, TX	165	no
+30909	30907	4	Amarillo, TX	168	no
+30910	30907	4	Austin-Round Rock-San Marcos, TX	337	no
+30911	30907	4	Beaumont-Port Arthur, TX	175	no
+30912	30907	4	Brownsville-Harlingen, TX	234	no
+30913	30907	4	College Station-Bryan, TX	165	no
+30914	30907	4	Corpus Christi, TX	184	no
+30915	30907	4	Dallas-Fort Worth-Arlington, TX	262	no
+39	30907	4	Eagle Pass, TX	57	no
+30916	30907	4	El Paso, TX	250	no
+30917	30907	4	Houston-Pasadena-The Woodlands, TX	510	no
+30918	30907	4	Killeen-Temple, TX	172	no
+30919	30907	4	Laredo, TX	234	no
+30155	30154	4	Beaver County, UT	87	no
+30156	30154	4	Box Elder County, UT	88	no
+30157	30154	4	Cache County, UT	145	no
+30158	30154	4	Carbon County, UT	88	no
+30159	30154	4	Daggett County, UT	84	no
+30160	30154	4	Davis County, UT	145	no
+30161	30154	4	Duchesne County, UT	88	no
+30162	30154	4	Emery County, UT	87	no
+30163	30154	4	Garfield County, UT	85	no
+30164	30154	4	Grand County, UT	88	no
+30165	30154	4	Iron County, UT	88	no
+30166	30154	4	Juab County, UT	87	no
+30167	30154	4	Kane County, UT	87	no
+30168	30154	4	Millard County, UT	87	no
+30169	30154	4	Morgan County, UT	88	no
+30170	30154	4	Piute County, UT	86	no
+30171	30154	4	Rich County, UT	87	no
+30172	30154	4	Salt Lake County, UT	145	no
+30173	30154	4	San Juan County, UT	88	no
+30174	30154	4	Sanpete County, UT	87	no
+30175	30154	4	Sevier County, UT	87	no
+30176	30154	4	Summit County, UT	88	no
+30177	30154	4	Tooele County, UT	144	no
+30178	30154	4	Uintah County, UT	88	no
+30179	30154	4	Utah County, UT	145	no
+30180	30154	4	Wasatch County, UT	88	no
+30181	30154	4	Washington County, UT	145	no
+30182	30154	4	Wayne County, UT	86	no
+30183	30154	4	Weber County, UT	145	no
+30185	30184	4	Addison County, VT	88	no
+30186	30184	4	Bennington County, VT	88	no
+30187	30184	4	Caledonia County, VT	88	no
+30188	30184	4	Chittenden County, VT	145	no
+30189	30184	4	Essex County, VT	87	no
+30190	30184	4	Franklin County, VT	144	no
+30191	30184	4	Grand Isle County, VT	88	no
+30192	30184	4	Lamoille County, VT	88	no
+30193	30184	4	Orange County, VT	88	no
+30194	30184	4	Orleans County, VT	88	no
+30195	30184	4	Rutland County, VT	144	no
+30196	30184	4	Washington County, VT	144	no
+30197	30184	4	Windham County, VT	88	no
+30198	30184	4	Windsor County, VT	144	no
+32137	32088	4	Burlington-South Burlington, VT	114	no
+30200	30199	4	Accomack County, VA	88	no
+30201	30199	4	Albemarle County, VA	135	no
+30202	30199	4	Alexandria City, VA	144	no
+30203	30199	4	Alleghany County, VA	78	no
+30204	30199	4	Amelia County, VA	88	no
+30205	30199	4	Amherst County, VA	88	no
+30206	30199	4	Appomattox County, VA	87	no
+30207	30199	4	Arlington County, VA	145	no
+30208	30199	4	Augusta County, VA	135	no
+30209	30199	4	Bath County, VA	87	no
+30210	30199	4	Bedford County, VA	145	no
+30211	30199	4	Bedford City, VA	66	no
+30212	30199	4	Bland County, VA	87	no
+30213	30199	4	Botetourt County, VA	88	no
+30214	30199	4	Bristol City, VA	76	no
+30215	30199	4	Brunswick County, VA	88	no
+30216	30199	4	Buchanan County, VA	86	no
+30217	30199	4	Buckingham County, VA	87	no
+30218	30199	4	Buena Vista City, VA	77	no
+30219	30199	4	Campbell County, VA	134	no
+30220	30199	4	Caroline County, VA	88	no
+30221	30199	4	Carroll County, VA	78	no
+30222	30199	4	Charles City County, VA	88	no
+30223	30199	4	Charlotte County, VA	86	no
+30224	30199	4	Charlottesville City, VA	133	no
+30225	30199	4	Chesapeake City, VA	144	no
+30226	30199	4	Chesterfield County, VA	145	no
+30227	30199	4	Clarke County, VA	88	no
+30228	30199	4	Clifton Forge City, VA	1	no
+30229	30199	4	Colonial Heights City, VA	75	no
+30230	30199	4	Covington City, VA	75	no
+30231	30199	4	Craig County, VA	87	no
+30232	30199	4	Culpeper County, VA	88	no
+30233	30199	4	Cumberland County, VA	88	no
+30234	30199	4	Danville City, VA	133	no
+30235	30199	4	Dickenson County, VA	87	no
+30236	30199	4	Dinwiddie County, VA	78	no
+30237	30199	4	Emporia City, VA	75	no
+30238	30199	4	Essex County, VA	87	no
+30239	30199	4	Fairfax County, VA	135	no
+30240	30199	4	Fairfax City, VA	77	no
+30241	30199	4	Falls Church City, VA	77	no
+30242	30199	4	Fauquier County, VA	145	no
+30243	30199	4	Floyd County, VA	88	no
+30244	30199	4	Fluvanna County, VA	88	no
+30245	30199	4	Franklin County, VA	144	no
+30246	30199	4	Franklin City, VA	77	no
+30247	30199	4	Frederick County, VA	135	no
+30248	30199	4	Fredericksburg City, VA	77	no
+30249	30199	4	Galax City, VA	77	no
+30250	30199	4	Giles County, VA	87	no
+30251	30199	4	Gloucester County, VA	87	no
+30252	30199	4	Goochland County, VA	87	no
+30253	30199	4	Grayson County, VA	87	no
+30254	30199	4	Greene County, VA	87	no
+30255	30199	4	Greensville County, VA	77	no
+30256	30199	4	Halifax County, VA	87	no
+30257	30199	4	Hampton City, VA	144	no
+30258	30199	4	Hanover County, VA	145	no
+30259	30199	4	Harrisonburg City, VA	77	no
+30260	30199	4	Henrico County, VA	145	no
+30261	30199	4	Henry County, VA	134	no
+30262	30199	4	Highland County, VA	86	no
+30263	30199	4	Hopewell City, VA	77	no
+30264	30199	4	Isle of Wight County, VA	88	no
+30265	30199	4	James City County, VA	135	no
+30266	30199	4	King and Queen County, VA	87	no
+30267	30199	4	King George County, VA	88	no
+30268	30199	4	King William County, VA	87	no
+30269	30199	4	Lancaster County, VA	88	no
+30270	30199	4	Lee County, VA	87	no
+30271	30199	4	Lexington City, VA	76	no
+30272	30199	4	Loudoun County, VA	145	no
+30273	30199	4	Louisa County, VA	88	no
+30274	30199	4	Lunenburg County, VA	86	no
+30275	30199	4	Lynchburg City, VA	134	no
+30276	30199	4	Madison County, VA	88	no
+30277	30199	4	Manassas City, VA	77	no
+30278	30199	4	Manassas Park City, VA	77	no
+30279	30199	4	Martinsville City, VA	76	no
+30280	30199	4	Mathews County, VA	90	no
+30281	30199	4	Mecklenburg County, VA	88	no
+30282	30199	4	Middlesex County, VA	86	no
+30283	30199	4	Montgomery County, VA	135	no
+30284	30199	4	Nelson County, VA	88	no
+30285	30199	4	New Kent County, VA	88	no
+30286	30199	4	Newport News City, VA	144	no
+30287	30199	4	Norfolk City, VA	143	no
+30288	30199	4	Northampton County, VA	88	no
+30289	30199	4	Northumberland County, VA	88	no
+30290	30199	4	Norton City, VA	75	no
+30291	30199	4	Nottoway County, VA	88	no
+30292	30199	4	Orange County, VA	88	no
+30293	30199	4	Page County, VA	88	no
+30294	30199	4	Patrick County, VA	88	no
+30295	30199	4	Petersburg City, VA	77	no
+30296	30199	4	Pittsylvania County, VA	134	no
+30297	30199	4	Poquoson City, VA	76	no
+30298	30199	4	Portsmouth City, VA	144	no
+30299	30199	4	Powhatan County, VA	88	no
+30300	30199	4	Prince Edward County, VA	88	no
+30301	30199	4	Prince George County, VA	78	no
+30302	30199	4	Prince William County, VA	135	no
+30303	30199	4	Pulaski County, VA	88	no
+30304	30199	4	Radford City, VA	77	no
+30305	30199	4	Rappahannock County, VA	88	no
+30306	30199	4	Richmond County, VA	88	no
+30307	30199	4	Richmond City, VA	144	no
+30308	30199	4	Roanoke County, VA	135	no
+30309	30199	4	Roanoke City, VA	144	no
+30310	30199	4	Rockbridge County, VA	78	no
+30311	30199	4	Rockingham County, VA	135	no
+30312	30199	4	Russell County, VA	87	no
+30313	30199	4	Salem City, VA	77	no
+30314	30199	4	Scott County, VA	86	no
+30315	30199	4	Shenandoah County, VA	88	no
+30316	30199	4	Smyth County, VA	87	no
+32143	30199	4	South Boston City, VA	1	no
+30317	30199	4	Southampton County, VA	78	no
+30319	30199	4	Spotsylvania County, VA	135	no
+30320	30199	4	Stafford County, VA	145	no
+30321	30199	4	Staunton City, VA	77	no
+30322	30199	4	Suffolk City, VA	144	no
+30323	30199	4	Surry County, VA	88	no
+30324	30199	4	Sussex County, VA	88	no
+30325	30199	4	Tazewell County, VA	88	no
+30326	30199	4	Virginia Beach City, VA	143	no
+30327	30199	4	Warren County, VA	88	no
+30328	30199	4	Washington County, VA	134	no
+30329	30199	4	Waynesboro City, VA	77	no
+30330	30199	4	Westmoreland County, VA	88	no
+30331	30199	4	Williamsburg City, VA	77	no
+30332	30199	4	Winchester City, VA	77	no
+30333	30199	4	Wise County, VA	77	no
+30334	30199	4	Wythe County, VA	87	no
+30335	30199	4	York County, VA	135	no
+33806	30199	4	Albemarle County + Charlottesville City, VA	10	no
+33807	30199	4	Alleghany County + Covington City, VA	10	no
+33808	30199	4	Campbell County + Lynchburg City, VA	10	no
+33809	30199	4	Carroll County + Galax City, VA	10	no
+33810	30199	4	Frederick County + Winchester City, VA	10	no
+33811	30199	4	Greensville County + Emporia City, VA	10	no
+33812	30199	4	Henry County + Martinsville City, VA	10	no
+33813	30199	4	James City County + Williamsburg City, VA	10	no
+33814	30199	4	Montgomery County + Radford City, VA	10	no
+33815	30199	4	Pittsylvania County + Danville City, VA	10	no
+33816	30199	4	Prince George County + Hopewell City, VA	10	no
+33817	30199	4	Roanoke County + Salem City, VA	10	no
+33818	30199	4	Rockingham County + Harrisonburg City, VA	10	no
+33819	30199	4	Southampton County + Franklin City, VA	10	no
+33820	30199	4	Spotsylvania County + Fredericksburg City, VA	10	no
+33821	30199	4	Washington County + Bristol City, VA	10	no
+33822	30199	4	Wise County + Norton City, VA	10	no
+33823	30199	4	York County + Poquoson City, VA	10	no
+33923	30199	4	Augusta, Staunton + Waynesboro County, VA	8	no
+33925	30199	4	Dinwiddie, Colonial Heights + Petersburg County, VA	8	no
+33927	30199	4	Fairfax, Fairfax City + Falls Church County, VA	8	no
+33929	30199	4	Prince William, Manassas + Manassas Park County, VA	8	no
+33931	30199	4	Rockbridge, Buena Vista + Lexington County, VA	8	no
+30943	30942	4	Blacksburg-Christiansburg, VA	124	no
+30945	30942	4	Charlottesville, VA	160	no
+30946	30942	4	Danville, VA	83	no
+30947	30942	4	Harrisonburg, VA	111	no
+30948	30942	4	Kingsport-Bristol, TN-VA	160	no
+30949	30942	4	Lynchburg, VA	160	no
+32924	32923	4	Washington-Baltimore, DC-MD-VA-WV (CMSA)	53	no
+30377	30376	4	Barbour County, WV	87	no
+30378	30376	4	Berkeley County, WV	145	no
+30379	30376	4	Boone County, WV	87	no
+30380	30376	4	Braxton County, WV	86	no
+30381	30376	4	Brooke County, WV	88	no
+30382	30376	4	Cabell County, WV	145	no
+30383	30376	4	Calhoun County, WV	85	no
+30384	30376	4	Clay County, WV	86	no
+30385	30376	4	Doddridge County, WV	85	no
+30386	30376	4	Fayette County, WV	88	no
+30387	30376	4	Gilmer County, WV	86	no
+30388	30376	4	Grant County, WV	86	no
+30389	30376	4	Greenbrier County, WV	87	no
+30390	30376	4	Hampshire County, WV	88	no
+30391	30376	4	Hancock County, WV	88	no
+30392	30376	4	Hardy County, WV	87	no
+30393	30376	4	Harrison County, WV	145	no
+30394	30376	4	Jackson County, WV	88	no
+30395	30376	4	Jefferson County, WV	144	no
+30396	30376	4	Kanawha County, WV	145	no
+30397	30376	4	Lewis County, WV	87	no
+30398	30376	4	Lincoln County, WV	86	no
+30399	30376	4	Logan County, WV	88	no
+30400	30376	4	Marion County, WV	144	no
+30401	30376	4	Marshall County, WV	88	no
+30402	30376	4	Mason County, WV	87	no
+30403	30376	4	McDowell County, WV	87	no
+30404	30376	4	Mercer County, WV	144	no
+30405	30376	4	Mineral County, WV	87	no
+30406	30376	4	Mingo County, WV	87	no
+30407	30376	4	Monongalia County, WV	145	no
+30408	30376	4	Monroe County, WV	87	no
+30409	30376	4	Morgan County, WV	87	no
+30410	30376	4	Nicholas County, WV	88	no
+30411	30376	4	Ohio County, WV	142	no
+30412	30376	4	Pendleton County, WV	86	no
+30413	30376	4	Pleasants County, WV	86	no
+30414	30376	4	Pocahontas County, WV	85	no
+30415	30376	4	Preston County, WV	86	no
+30416	30376	4	Putnam County, WV	142	no
+30417	30376	4	Raleigh County, WV	145	no
+30418	30376	4	Randolph County, WV	88	no
+30419	30376	4	Ritchie County, WV	87	no
+30420	30376	4	Roane County, WV	87	no
+30421	30376	4	Summers County, WV	86	no
+30422	30376	4	Taylor County, WV	87	no
+30423	30376	4	Tucker County, WV	87	no
+30424	30376	4	Tyler County, WV	87	no
+30425	30376	4	Upshur County, WV	88	no
+30426	30376	4	Wayne County, WV	88	no
+30427	30376	4	Webster County, WV	85	no
+30428	30376	4	Wetzel County, WV	88	no
+30429	30376	4	Wirt County, WV	86	no
+30430	30376	4	Wood County, WV	145	no
+30431	30376	4	Wyoming County, WV	87	no
+33412	30968	4	Beckley, WV	93	no
+30969	30968	4	Charleston, WV	173	no
+30970	30968	4	Cumberland, MD-WV	95	no
+30971	30968	4	Hagerstown-Martinsburg, MD-WV	154	no
+30972	30968	4	Huntington-Ashland, WV-KY-OH	165	no
+30973	30968	4	Morgantown, WV	139	no
+30337	30336	4	Adams County, WA	88	no
+30338	30336	4	Asotin County, WA	87	no
+30339	30336	4	Benton County, WA	145	no
+30340	30336	4	Chelan County, WA	145	no
+30341	30336	4	Clallam County, WA	145	no
+30342	30336	4	Clark County, WA	145	no
+30343	30336	4	Columbia County, WA	87	no
+30344	30336	4	Cowlitz County, WA	145	no
+30345	30336	4	Douglas County, WA	88	no
+30346	30336	4	Ferry County, WA	86	no
+30347	30336	4	Franklin County, WA	145	no
+30348	30336	4	Garfield County, WA	85	no
+30349	30336	4	Grant County, WA	145	no
+30350	30336	4	Grays Harbor County, WA	145	no
+30351	30336	4	Island County, WA	145	no
+30352	30336	4	Jefferson County, WA	88	no
+30353	30336	4	King County, WA	145	no
+30354	30336	4	Kitsap County, WA	145	no
+30355	30336	4	Kittitas County, WA	88	no
+30356	30336	4	Klickitat County, WA	88	no
+30357	30336	4	Lewis County, WA	145	no
+30358	30336	4	Lincoln County, WA	88	no
+30359	30336	4	Mason County, WA	144	no
+30360	30336	4	Okanogan County, WA	88	no
+30361	30336	4	Pacific County, WA	87	no
+30362	30336	4	Pend Oreille County, WA	88	no
+30363	30336	4	Pierce County, WA	145	no
+30364	30336	4	San Juan County, WA	88	no
+30365	30336	4	Skagit County, WA	145	no
+30366	30336	4	Skamania County, WA	88	no
+30367	30336	4	Snohomish County, WA	145	no
+30368	30336	4	Spokane County, WA	145	no
+30369	30336	4	Stevens County, WA	88	no
+30370	30336	4	Thurston County, WA	145	no
+30371	30336	4	Wahkiakum County, WA	88	no
+30372	30336	4	Walla Walla County, WA	143	no
+30373	30336	4	Whatcom County, WA	144	no
+30374	30336	4	Whitman County, WA	143	no
+30375	30336	4	Yakima County, WA	144	no
+30956	30955	4	Bellingham, WA	150	no
+30957	30955	4	Bremerton-Silverdale-Port Orchard, WA	142	no
+30958	30955	4	Kennewick-Richland, WA	166	no
+30959	30955	4	Lewiston, ID-WA	146	no
+30960	30955	4	Longview-Kelso, WA	126	no
+30961	30955	4	Mount Vernon-Anacortes, WA	119	no
+30962	30955	4	Olympia-Lacey-Tumwater, WA	166	no
+30433	30432	4	Adams County, WI	88	no
+30434	30432	4	Ashland County, WI	88	no
+30435	30432	4	Barron County, WI	88	no
+30436	30432	4	Bayfield County, WI	88	no
+30437	30432	4	Brown County, WI	145	no
+30438	30432	4	Buffalo County, WI	87	no
+30439	30432	4	Burnett County, WI	88	no
+30440	30432	4	Calumet County, WI	142	no
+30441	30432	4	Chippewa County, WI	144	no
+30442	30432	4	Clark County, WI	88	no
+30443	30432	4	Columbia County, WI	144	no
+30444	30432	4	Crawford County, WI	88	no
+30445	30432	4	Dane County, WI	145	no
+30446	30432	4	Dodge County, WI	145	no
+30447	30432	4	Door County, WI	88	no
+30448	30432	4	Douglas County, WI	144	no
+30449	30432	4	Dunn County, WI	88	no
+30450	30432	4	Eau Claire County, WI	145	no
+30451	30432	4	Florence County, WI	87	no
+30452	30432	4	Fond du Lac County, WI	145	no
+30453	30432	4	Forest County, WI	88	no
+30454	30432	4	Grant County, WI	142	no
+30455	30432	4	Green County, WI	88	no
+30456	30432	4	Green Lake County, WI	88	no
+30457	30432	4	Iowa County, WI	88	no
+30458	30432	4	Iron County, WI	86	no
+30459	30432	4	Jackson County, WI	87	no
+30460	30432	4	Jefferson County, WI	145	no
+30461	30432	4	Juneau County, WI	87	no
+30462	30432	4	Kenosha County, WI	145	no
+30463	30432	4	Kewaunee County, WI	88	no
+30464	30432	4	La Crosse County, WI	145	no
+30465	30432	4	Lafayette County, WI	88	no
+30466	30432	4	Langlade County, WI	88	no
+30467	30432	4	Lincoln County, WI	88	no
+30468	30432	4	Manitowoc County, WI	143	no
+30469	30432	4	Marathon County, WI	144	no
+30470	30432	4	Marinette County, WI	87	no
+30471	30432	4	Marquette County, WI	87	no
+30472	30432	4	Menominee County, WI	85	no
+30473	30432	4	Milwaukee County, WI	144	no
+30474	30432	4	Monroe County, WI	88	no
+30475	30432	4	Oconto County, WI	88	no
+30476	30432	4	Oneida County, WI	88	no
+30477	30432	4	Outagamie County, WI	145	no
+30478	30432	4	Ozaukee County, WI	145	no
+30479	30432	4	Pepin County, WI	87	no
+30480	30432	4	Pierce County, WI	88	no
+30481	30432	4	Polk County, WI	88	no
+30482	30432	4	Portage County, WI	145	no
+30483	30432	4	Price County, WI	87	no
+30484	30432	4	Racine County, WI	145	no
+30485	30432	4	Richland County, WI	87	no
+30486	30432	4	Rock County, WI	145	no
+30487	30432	4	Rusk County, WI	88	no
+30488	30432	4	Sauk County, WI	144	no
+30489	30432	4	Sawyer County, WI	88	no
+30490	30432	4	Shawano County, WI	88	no
+33741	30432	4	Shawano County, WI (includes Menominee)	2	no
+30491	30432	4	Sheboygan County, WI	145	no
+30492	30432	4	St. Croix County, WI	145	no
+30493	30432	4	Taylor County, WI	88	no
+30494	30432	4	Trempealeau County, WI	87	no
+30495	30432	4	Vernon County, WI	87	no
+30496	30432	4	Vilas County, WI	88	no
+30497	30432	4	Walworth County, WI	145	no
+30498	30432	4	Washburn County, WI	87	no
+30499	30432	4	Washington County, WI	145	no
+30500	30432	4	Waukesha County, WI	145	no
+30501	30432	4	Waupaca County, WI	88	no
+30502	30432	4	Waushara County, WI	88	no
+30503	30432	4	Winnebago County, WI	145	no
+30504	30432	4	Wood County, WI	145	no
+30980	30979	4	Appleton, WI	173	no
+30981	30979	4	Chicago-Naperville-Elgin, IL-IN	184	no
+30982	30979	4	Duluth, MN-WI	164	no
+30983	30979	4	Eau Claire, WI	160	no
+30984	30979	4	Fond du Lac, WI	143	no
+30985	30979	4	Green Bay, WI	169	no
+30986	30979	4	Janesville-Beloit, WI	166	no
+27	30979	4	Kenosha, WI	1	no
+30506	30505	4	Albany County, WY	88	no
+30507	30505	4	Big Horn County, WY	88	no
+30508	30505	4	Campbell County, WY	88	no
+30509	30505	4	Carbon County, WY	88	no
+30510	30505	4	Converse County, WY	87	no
+30511	30505	4	Crook County, WY	88	no
+30512	30505	4	Fremont County, WY	88	no
+30513	30505	4	Goshen County, WY	88	no
+30514	30505	4	Hot Springs County, WY	87	no
+30515	30505	4	Johnson County, WY	88	no
+30516	30505	4	Laramie County, WY	145	no
+30517	30505	4	Lincoln County, WY	88	no
+30518	30505	4	Natrona County, WY	144	no
+30519	30505	4	Niobrara County, WY	86	no
+30520	30505	4	Park County, WY	88	no
+30521	30505	4	Platte County, WY	87	no
+30522	30505	4	Sheridan County, WY	88	no
+30523	30505	4	Sublette County, WY	87	no
+30524	30505	4	Sweetwater County, WY	88	no
+30525	30505	4	Teton County, WY	88	no
+30526	30505	4	Uinta County, WY	88	no
+30527	30505	4	Washakie County, WY	87	no
+30528	30505	4	Weston County, WY	87	no
+32049	32048	4	East North Central	63	no
+32050	32048	4	West North Central	63	no
+32052	32051	4	Middle Atlantic	63	no
+32053	32051	4	New England	63	no
+32055	32054	4	East South Central	63	no
+32056	32054	4	South Atlantic	63	no
+32057	32054	4	West South Central	63	no
+32059	32058	4	Mountain	63	no
+32060	32058	4	Pacific	63	no
+33494	33493	5	Financial Sector	1,256	no
+33496	33493	5	Government	833	no
+33399	33269	5	EC and National Indicators	29	no
+33384	33296	5	EC Indicator	25	no
+33383	33314	5	EC and National Indicators	30	no
+33385	33320	5	EC Indicator	26	no
+33393	33290	5	EC and National Indicators	39	no
+33394	33302	5	EC and National Indicators	36	no
+33395	33308	5	EC and National Indicators	35	no
+33392	33332	5	National Indicator	10	no

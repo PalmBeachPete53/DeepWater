@@ -1,0 +1,72 @@
+id	code	name	lastupdated	areas	series	periods	first	last	other_concepts
+1	DBS	Doing Business	2021-08-18	Country:213	194	17	YR2003	YR2019	
+2	WDI	World Development Indicators	2026-10-08	Country:266	1498	66	YR1960	YR2025	
+3	WGI	Worldwide Governance Indicators	2026-09-25	Country:216	36	27	YR1996	YR2025	
+5	SNM	Subnational Malnutrition Database	2016-03-21	Admin Region:None	5	46	YR1969	YR2014	
+6	IDS	International Debt Statistics	2025-12-03	Country:134	578	64	YR1970	YR2033	Counterpart-Area:304
+11	ADI	Africa Development Indicators	2013-02-22	Country:60	1745	53	YR1960	YR2012	
+12	EDS	Education Statistics	2024-06-25	Country:272	8450	101	YR1960	YR2100	
+13	ESY	Enterprise Surveys	2022-03-25	Country:146	115	15	YR2006	YR2020	
+14	GDS	Gender Statistics	2026-10-14	Country:264	1411	66	YR1960	YR2025	
+15	GEM	Global Economic Monitor	2026-09-08	Country:220	36	675	1987	2026Q3	
+16	HNP	Health Nutrition and Population Statistics	2026-07-01	Country:265	475	66	YR1960	YR2025	
+18	IDA	IDA Results Measurement System	2021-07-23	Country:85	29	31	YR1990	YR2020	
+19	MDG	Millennium Development Goals	2018-09-19	Country:263	132	26	YR1990	YR2015	
+20	PSD	Quarterly Public Sector Debt	2026-10-29	Country:107	564	126	YR1995Q1	YR2026Q2	
+22	QDS	Quarterly External Debt Statistics SDDS	2026-11-03	Country:130	1800	114	YR1998Q1	YR2026Q2	
+23	QDG	Quarterly External Debt Statistics GDDS	2026-11-03	Country:62	256	98	YR2002Q1	YR2026Q2	
+25	JOB	Jobs	2025-07-01	Country:242	166	27	YR1990	YR2016	
+27	GEP	Global Economic Prospects	2026-06-11	Country:163	1	6	2023	2028	
+28	FDX	Global Findex database	2025-10-06	Country:174	3313	6	YR2011	YR2024	
+29	GSP	The Atlas of Social Protection: Indicators of Resilience and Equity	2025-08-25	Country:143	3588	28	YR1998	YR2023	
+30	ED1	Exporter Dynamics Database – Indicators at Country-Year Level	2016-03-31	Country:70	98	18	YR1997	YR2014	
+31	CPI	Country Policy and Institutional Assessment	2026-08-03	Country:87	21	21	YR2005	YR2025	
+32	GFD	Global Financial Development	2022-09-23	Country:225	108	62	YR1960	YR2021	
+33	G2F	G20 Financial Inclusion Indicators	2019-02-27	Country:217	131	9	YR2011	YR2019	
+34	GPE	Global Partnership for Education	2013-04-12	Country:46	678	32	TG2009	YR2012	
+35	SE4	Sustainable Energy for All	2018-06-30	Country:259	11	27	YR1990	YR2016	
+37	LEL	LAC Equity Lab	2016-04-06	Country:22	211	15	YR2000	YR2014	
+38	SNP	Subnational Poverty	2015-04-27	Country:862	3	18	YR1996	YR2013	
+39	HNQ	Health Nutrition and Population Statistics by Wealth Quintile	2022-12-13	Country:217	420	32	YR1990	YR2021	
+40	HPP	Population estimates and projections	2026-07-01	Country:265	187	91	YR1960	YR2050	
+41	CPS	Country Partnership Strategy for India (FY2013 - 17)	2015-05-22	States:41	185	75	YR1901-1911	YR2014	
+43	WAT	Adjusted Net Savings	2023-06-08	Country:266	36	52	YR1970	YR2021	
+45	IDD	Indonesia Database for Policy and Economic Research	2022-08-11	Provinces:548	274	45	YR1976	YR2020	
+46	SDG	Sustainable Development Goals	2022-07-22	Country:261	408	31	YR1990	YR2020	
+50	SNT	Subnational Population	2017-09-21	Country:2033	2	17	YR2000	YR2016	
+54	JED	Joint External Debt Hub	2026-09-09	Country:261	28	145	YR1990Q1	YR2026Q1	
+57	WDA	WDI Database Archives	2025-10-29	Country:292	2836	67	YR1960	YR2026	Version:142
+58	UHC	Universal Health Coverage	2019-04-25	Country:245	13	36	YR1980	YR2015	
+59	WAC	Wealth Accounts	2024-10-08	Country:151	146	26	YR1995	YR2020	
+60	EFT	Economic Fitness	2018-04-19	Country:149	2	21	YR1995	YR2015	
+61	PRQ	PPPs Regulatory Quality	2019-04-25	Country:135	4	1	YR2018	YR2018	
+62	ICP	International Comparison Program (ICP) 2011	2020-08-24	Country:222	47	1	YR2011	YR2011	Classification:16
+63	HCI	Human Capital Index	2020-09-21	Country:217	27	11	YR2010	YR2020	
+64	WBI	Worldwide Bureaucracy Indicators	2025-02-24	Country:202	302	23	YR2000	YR2022	
+65	HPI	Health Equity and Financial Protection Indicators	2019-11-06	Country:197	315	37	YR1982	YR2018	
+66	LPI	Logistics Performance Index	2024-03-26	Country:170	19	7	YR2007	YR2023	
+67	PF1	PEFA 2011	2025-06-26	Country:333	114	177	YR200506	YR202503	Classification:1
+68	PF6	PEFA 2016	2026-10-10	Country:157	129	88	YR201506	YR202607	Classification:1
+69	RFA	Global Financial Inclusion and Consumer Protection Survey	2019-06-27	Country:124	347	1	YR2017	YR2017	
+70	EF2	Economic Fitness 2	2026-01-20	Country:171	2	18	YR2007	YR2024	
+71	IC5	International Comparison Program (ICP) 2005	2021-09-10	Country:195	47	1	YR2005	YR2005	Classification:16
+73	RFI	Global Financial Inclusion and Consumer Protection Survey (Internal)	2019-06-27	Country:124	19	1	YR2017	YR2017	
+75	ESG	Environment, Social and Governance (ESG) Data	2026-06-24	Country:260	80	66	YR1960	YR2025	
+76	RWS	Remittance Prices Worldwide (Sending Countries)	2020-12-07	Country:48	1	35	YR2011Q1	YR2020Q3	
+77	RWR	Remittance Prices Worldwide (Receiving Countries)	2020-12-07	Receiving Countries:None	1	35	YR2011Q1	YR2020Q3	
+78	IC7	ICP 2017	2020-10-21	Country:222	47	7	YR2011	YR2017	Classification:16
+79	GRP	PEFA_GRPFM	2026-10-06	Country:46	21	36	YR201904	YR202608	Classification:3
+80	GDL	Gender Disaggregated Labor Database (GDLD)	2020-07-25	Country:141	16	1	YR2014	YR2014	Sector:65
+81	DSI	International Debt Statistics: DSSI	2025-12-03	Country:68	578	95	YR1970	YR2028-M12	Counterpart-Area:304
+82	GPP	Global Public Procurement	2021-03-24	Country:221	111	2	YR2018	YR2019	
+83	SPI	Statistical Performance Indicators (SPI)	2024-11-11	Country:217	72	20	YR2004	YR2023	
+84	EDP	Education Policy	2026-02-19	Country:18	473	7	YR2019	YR2025	
+85	SNG	PEFA_2021_SNG	2025-12-22	Country:41	143	20	YR202006	YR202508	Classification:1
+86	JON	Global Jobs Indicators Database (JOIN)	2023-05-22	Country:168	746	52	YR1970	YR2021	
+87	CCD	Country Climate and Development Report (CCDR)	2022-10-07	Country:220	432	92	YR1960	YR2100	
+88	FPN	Food Prices for Nutrition	2026-07-21	Country:192	54	9	YR2017	YR2025	Classification:1
+89	ID4	Identification for Development (ID4D) Data	2026-07-23	Country:199	71	19	YR2006	YR2024	
+90	IC2	ICP 2021	2024-08-04	Country:207	48	7	YR2017	YR2023	Classification:17
+91	CRP	PEFA_CRPFM	2026-10-06	Country:50	43	37	YR201904	YR202608	Classification:3
+92	DDH	Disability Data Hub (DDH)	2025-03-28	Country:63	1577	13	YR2009	YR2022	
+93	FPA	FPN Datahub Archive	2026-07-21	Country:192	63	9	YR2017	YR2025	Classification:8

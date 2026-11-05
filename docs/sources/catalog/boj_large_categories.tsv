@@ -1,0 +1,324 @@
+db	category	frequency	series	start	end
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_All sectors/All currencies total	QUARTERLY	139	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_All sectors/Currency breakdown	QUARTERLY	972	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Non-bank sector/All currencies total	QUARTERLY	138	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Non-bank sector/Currency breakdown	QUARTERLY	965	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Non-bank sector - of which non-bank financial institutions/All currencies total	QUARTERLY	138	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Non-bank sector - of which non-bank financial institutions/Currency breakdown	QUARTERLY	965	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Bank sector/All currencies total	QUARTERLY	137	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Bank sector/Currency breakdown	QUARTERLY	958	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Bank sector - of which related offices/All currencies total	QUARTERLY	136	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Claims_Bank sector - of which related offices/Currency breakdown	QUARTERLY	952	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_All sectors/All currencies total	QUARTERLY	139	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_All sectors/Currency breakdown	QUARTERLY	972	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Non-bank sector/All currencies total	QUARTERLY	138	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Non-bank sector/Currency breakdown	QUARTERLY	965	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Non-bank sector - of which non-bank financial institutions/All currencies total	QUARTERLY	138	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Non-bank sector - of which non-bank financial institutions/Currency breakdown	QUARTERLY	965	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Bank sector/All currencies total	QUARTERLY	137	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Bank sector/Currency breakdown	QUARTERLY	958	199001	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Bank sector - of which related offices/All currencies total	QUARTERLY	136	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic and foreign banks/Liabilities_Bank sector - of which related offices/Currency breakdown	QUARTERLY	952	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_All sectors/All currencies total	QUARTERLY	139	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_All sectors/Currency breakdown	QUARTERLY	972	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Non-bank sector/All currencies total	QUARTERLY	138	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Non-bank sector/Currency breakdown	QUARTERLY	965	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Non-bank sector - of which non-bank financial institutions/All currencies total	QUARTERLY	138	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Non-bank sector - of which non-bank financial institutions/Currency breakdown	QUARTERLY	965	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Bank sector/All currencies total	QUARTERLY	137	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Bank sector/Currency breakdown	QUARTERLY	958	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Bank sector - of which related offices/All currencies total	QUARTERLY	1	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Claims_Bank sector - of which related offices/Currency breakdown	QUARTERLY	2	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_All sectors/All currencies total	QUARTERLY	139	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_All sectors/Currency breakdown	QUARTERLY	972	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Non-bank sector/All currencies total	QUARTERLY	138	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Non-bank sector/Currency breakdown	QUARTERLY	965	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Non-bank sector - of which non-bank financial institutions/All currencies total	QUARTERLY	138	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Non-bank sector - of which non-bank financial institutions/Currency breakdown	QUARTERLY	965	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Bank sector/All currencies total	QUARTERLY	137	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Bank sector/Currency breakdown	QUARTERLY	958	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Bank sector - of which related offices/All currencies total	QUARTERLY	1	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks/Liabilities_Bank sector - of which related offices/Currency breakdown	QUARTERLY	2	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_All sectors/All currencies total	QUARTERLY	139	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_All sectors/Currency breakdown	QUARTERLY	972	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_Non-bank sector/All currencies total	QUARTERLY	138	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_Non-bank sector/Currency breakdown	QUARTERLY	965	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_Non-bank sector - of which non-bank financial institutions/All currencies total	QUARTERLY	138	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_Non-bank sector - of which non-bank financial institutions/Currency breakdown	QUARTERLY	965	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_Bank sector/All currencies total	QUARTERLY	137	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Claims_Bank sector/Currency breakdown	QUARTERLY	958	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_All sectors/All currencies total	QUARTERLY	139	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_All sectors/Currency breakdown	QUARTERLY	972	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_Non-bank sector/All currencies total	QUARTERLY	138	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_Non-bank sector/Currency breakdown	QUARTERLY	965	200704	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_Non-bank sector - of which non-bank financial institutions/All currencies total	QUARTERLY	138	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_Non-bank sector - of which non-bank financial institutions/Currency breakdown	QUARTERLY	965	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_Bank sector/All currencies total	QUARTERLY	137	201404	202602
+BIS	BIS International Locational Banking Statistics in Japan/Domestic banks, excluding trust banks/Liabilities_Bank sector/Currency breakdown	QUARTERLY	958	201404	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks	QUARTERLY	271	199002	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks/By remaining maturity	QUARTERLY	408	199802	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks/By sector	QUARTERLY	541	199802	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks/Local positions in local currencies	QUARTERLY	270	199802	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks, excluding trust banks	QUARTERLY	136	200704	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks, excluding trust banks/By remaining maturity	QUARTERLY	408	201404	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Immediate counterparty basis/Domestic banks, excluding trust banks/By sector	QUARTERLY	541	200704	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Ultimate risk basis/Domestic banks	QUARTERLY	407	200404	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Ultimate risk basis/Domestic banks/By sector	QUARTERLY	541	200404	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Ultimate risk basis/Domestic banks/Other exposures	QUARTERLY	408	200404	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Ultimate risk basis/Domestic banks, excluding trust banks	QUARTERLY	136	200704	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Ultimate risk basis/Domestic banks, excluding trust banks/By sector	QUARTERLY	541	200704	202602
+BIS	BIS International Consolidated Banking Statistics in Japan/Ultimate risk basis/Domestic banks, excluding trust banks/Other exposures	QUARTERLY	408	200704	202602
+CO	TANKAN/Judgement Survey	QUARTERLY	10617	196202	202604
+CO	TANKAN/Judgement Survey/Number of Reporting Companies	QUARTERLY	2163	197402	202603
+CO	TANKAN/Annual Projections/Sales	ANNUAL(MAR)	3060	1974	2027
+CO	TANKAN/Annual Projections/Sales	SEMIANNUAL(SEP)	3060	197302	202701
+CO	TANKAN/Annual Projections/Sales	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Domestic Sales	ANNUAL(MAR)	3060	1974	2027
+CO	TANKAN/Annual Projections/Domestic Sales	SEMIANNUAL(SEP)	3060	197302	202701
+CO	TANKAN/Annual Projections/Domestic Sales	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Exports	ANNUAL(MAR)	2040	1974	2027
+CO	TANKAN/Annual Projections/Exports	SEMIANNUAL(SEP)	2040	197302	202701
+CO	TANKAN/Annual Projections/Exports	QUARTERLY	120	200701	202603
+CO	TANKAN/Annual Projections/Current Profits	ANNUAL(MAR)	3060	1974	2027
+CO	TANKAN/Annual Projections/Current Profits	SEMIANNUAL(SEP)	3060	197302	202701
+CO	TANKAN/Annual Projections/Current Profits	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Net Income	ANNUAL(MAR)	3060	2004	2027
+CO	TANKAN/Annual Projections/Net Income	SEMIANNUAL(SEP)	3060	200302	202701
+CO	TANKAN/Annual Projections/Net Income	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Fixed Investment (Compiled under the New Lease Accounting Standard)	ANNUAL(MAR)	3060	1974	2027
+CO	TANKAN/Annual Projections/Fixed Investment (Compiled under the New Lease Accounting Standard)	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Fixed Investment (Compiled under the New Lease Accounting Standard)	SEMIANNUAL(SEP)	3060	197302	202001
+CO	TANKAN/Annual Projections/Land Purchasing Expenses	ANNUAL(MAR)	3060	2004	2027
+CO	TANKAN/Annual Projections/Land Purchasing Expenses	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Land Purchasing Expenses	SEMIANNUAL(SEP)	3060	200302	202001
+CO	TANKAN/Annual Projections/Software Investment (Compiled under the New Lease Accounting Standard)	ANNUAL(MAR)	3060	2000	2027
+CO	TANKAN/Annual Projections/Software Investment (Compiled under the New Lease Accounting Standard)	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Software Investment (Compiled under the New Lease Accounting Standard)	SEMIANNUAL(SEP)	3060	199902	202001
+CO	TANKAN/Annual Projections/R&D Investment	ANNUAL(MAR)	2788	2017	2027
+CO	TANKAN/Annual Projections/R&D Investment	QUARTERLY	164	201701	202603
+CO	TANKAN/Annual Projections/R&D Investment	SEMIANNUAL(SEP)	2788	201602	202001
+CO	TANKAN/Annual Projections/Software & Fixed Investment (Compiled under the New Lease Accounting Standard)	ANNUAL(MAR)	3060	2004	2027
+CO	TANKAN/Annual Projections/Software & Fixed Investment (Compiled under the New Lease Accounting Standard)	QUARTERLY	180	200701	202603
+CO	TANKAN/Annual Projections/Software & Fixed Investment (Compiled under the New Lease Accounting Standard)	SEMIANNUAL(SEP)	3060	200302	202001
+CO	TANKAN/Annual Projections/Software, R&D, and Fixed Investment (Compiled under the New Lease Accounting Standard)	ANNUAL(MAR)	2788	2017	2027
+CO	TANKAN/Annual Projections/Software, R&D, and Fixed Investment (Compiled under the New Lease Accounting Standard)	QUARTERLY	164	201701	202603
+CO	TANKAN/Annual Projections/Software, R&D, and Fixed Investment (Compiled under the New Lease Accounting Standard)	SEMIANNUAL(SEP)	2788	201602	202001
+CO	TANKAN/Annual Projections	ANNUAL(MAR)	3372	2004	2027
+CO	TANKAN/Annual Projections	SEMIANNUAL(SEP)	3372	200302	202701
+CO	TANKAN/Annual Projections	QUARTERLY	562	202001	202603
+CO	TANKAN/Annual Projections/Ratio of Current Profit to Sales	ANNUAL(MAR)	1980	1974	2027
+CO	TANKAN/Annual Projections/Ratio of Current Profit to Sales	SEMIANNUAL(SEP)	1980	197302	202701
+CO	TANKAN/Annual Projections/Number of Enterprises Reporting Increase or Decrease in Profits	ANNUAL(MAR)	648	2007	2027
+CO	TANKAN/Annual Projections/Number of Enterprises Reporting Increase or Decrease in Profits	QUARTERLY	12	200701	202603
+CO	TANKAN/Annual Projections/Number of Enterprises Reporting Deficits	ANNUAL(MAR)	72	2007	2027
+CO	TANKAN/Annual Projections/Number of Enterprises Reporting Deficits	SEMIANNUAL(SEP)	72	200602	202701
+CO	TANKAN/Annual Projections/Operating Profits	ANNUAL(MAR)	3012	1997	2020
+CO	TANKAN/Annual Projections/Operating Profits	SEMIANNUAL(SEP)	3012	199602	202001
+CO	TANKAN/Annual Projections/Operating Profits	QUARTERLY	180	200701	201904
+CO	TANKAN/Annual Projections/Predicted Exchange Rates	ANNUAL(MAR)	720	1997	2020
+CO	TANKAN/Annual Projections/Predicted Exchange Rates	SEMIANNUAL(SEP)	720	199602	202001
+CO	TANKAN/Annual Projections/Predicted Exchange Rates	QUARTERLY	120	200701	201904
+CO	TANKAN/Annual Projections/Material Costs	ANNUAL(MAR)	1736	1997	2014
+CO	TANKAN/Annual Projections/Material Costs	SEMIANNUAL(SEP)	1736	199602	201401
+CO	TANKAN/Annual Projections/Material Costs	QUARTERLY	124	200701	201304
+CO	TANKAN/Annual Projections/Personnel Expenses	ANNUAL(MAR)	2520	1997	2014
+CO	TANKAN/Annual Projections/Personnel Expenses	SEMIANNUAL(SEP)	2520	199602	201401
+CO	TANKAN/Annual Projections/Personnel Expenses	QUARTERLY	180	200701	201304
+CO	TANKAN/Annual Projections/Depreciation	ANNUAL(MAR)	2520	1997	2014
+CO	TANKAN/Annual Projections/Depreciation	SEMIANNUAL(SEP)	2520	199602	201401
+CO	TANKAN/Annual Projections/Depreciation	QUARTERLY	180	200701	201304
+CO	TANKAN/Annual Projections/Financial Income	ANNUAL(MAR)	2520	1997	2014
+CO	TANKAN/Annual Projections/Financial Income	SEMIANNUAL(SEP)	2520	199602	201401
+CO	TANKAN/Annual Projections/Financial Income	QUARTERLY	180	200701	201304
+CO	TANKAN/Annual Projections/Financial Expenses	ANNUAL(MAR)	2520	1997	2014
+CO	TANKAN/Annual Projections/Financial Expenses	SEMIANNUAL(SEP)	2520	199602	201401
+CO	TANKAN/Annual Projections/Financial Expenses	QUARTERLY	180	200701	201304
+CO	TANKAN/Annual Projections/Lease Assets (in Fixed Investment)	ANNUAL(MAR)	3060	2009	2011
+CO	TANKAN/Annual Projections/Lease Assets (in Fixed Investment)	SEMIANNUAL(SEP)	3060	200802	201101
+CO	TANKAN/Annual Projections/Lease Assets (in Fixed Investment)	QUARTERLY	180	200901	201002
+CO	TANKAN/Annual Projections/Purchasing Expenses of Equipments for Lease	ANNUAL(MAR)	476	2009	2011
+CO	TANKAN/Annual Projections/Purchasing Expenses of Equipments for Lease	SEMIANNUAL(SEP)	476	200802	201101
+CO	TANKAN/Annual Projections/Purchasing Expenses of Equipments for Lease	QUARTERLY	28	200901	201002
+CO	TANKAN/Annual Projections/Lease Assets (in Software Investment)	ANNUAL(MAR)	3060	2009	2011
+CO	TANKAN/Annual Projections/Lease Assets (in Software Investment)	SEMIANNUAL(SEP)	3060	200802	201101
+CO	TANKAN/Annual Projections/Lease Assets (in Software Investment)	QUARTERLY	180	200901	201002
+CO	TANKAN/Annual Projections/Purchasing Expenses of Software for Lease	ANNUAL(MAR)	476	2009	2011
+CO	TANKAN/Annual Projections/Purchasing Expenses of Software for Lease	SEMIANNUAL(SEP)	476	200802	201101
+CO	TANKAN/Annual Projections/Purchasing Expenses of Software for Lease	QUARTERLY	28	200901	201002
+CO	TANKAN/Inflation Outlook of Enterprises/Outlook for Output Prices	QUARTERLY	5904	201401	202603
+CO	TANKAN/Inflation Outlook of Enterprises/Outlook for General Prices	QUARTERLY	7872	201401	202603
+CO	TANKAN/Number of New Graduates Hired	ANNUAL(MAR)	2520	1988	2028
+CO	TANKAN/Number of New Graduates Hired	QUARTERLY	180	200702	202602
+CO	TANKAN/Quarterly Data	QUARTERLY	6120	197401	201304
+CO	TANKAN/Quarterly Data/Forecast Judgements(D.I.)	QUARTERLY	540	199702	201401
+CO	TANKAN/Quarterly Data/Percentage Share of the Number of Respondents	QUARTERLY	1080	199702	201401
+CO	TANKAN/Quarterly Data/Forecast Judgements/Number of Reporting Companies	QUARTERLY	540	200701	201304
+CO	TANKAN/Financial institutions, Business consultants & pure holding companies	QUARTERLY	286	200304	202604
+CO	TANKAN/Financial institutions, Business consultants & pure holding companies	ANNUAL(MAR)	1880	2004	2028
+CO	TANKAN/Financial institutions, Business consultants & pure holding companies	SEMIANNUAL(SEP)	1156	200302	202001
+CO	TANKAN/Overseas Business Activities	ANNUAL(MAR)	660	2019	2027
+CO	TANKAN/Overseas Business Activities	QUARTERLY	45	202002	202603
+FF	Flow of Funds (2008 SNA)	QUARTERLY	8794	199704	202602
+FF	Flow of Funds (2008 SNA)	ANNUAL(MAR)	8779	1980	2026
+FF	Flow of Funds (2008 SNA)	SEMIANNUAL(SEP)	237	201301	202502
+FF	Flow of Funds (1993 SNA)	QUARTERLY	7036	199704	201503
+FF	Flow of Funds (1993 SNA)	ANNUAL(MAR)	7257	1980	2015
+FF	Flow of Funds (1993 SNA)	SEMIANNUAL(SEP)	237	201301	201501
+FF	Flow of Funds (1968 SNA)	QUARTERLY	1547	196401	199901
+PR01	Corporate Goods Price Index (2020 Base)/ Producer Price Index	MONTHLY	842	196001	202609
+PR01	Corporate Goods Price Index (2020 Base)/ Export Price Index (yen basis)	MONTHLY	330	196001	202609
+PR01	Corporate Goods Price Index (2020 Base)/ Export Price Index (contract currency basis)	MONTHLY	329	197501	202609
+PR01	Corporate Goods Price Index (2020 Base)/ Import Price Index (yen basis)	MONTHLY	387	196001	202609
+PR01	Corporate Goods Price Index (2020 Base)/ Import Price Index (contract currency basis)	MONTHLY	386	197501	202609
+PR01	Corporate Goods Price Index (2020 Base)/ Producer Price Index excluding Consumption Tax	MONTHLY	841	198501	202609
+PR01	Corporate Goods Price Index (2020 Base)/ Investment Goods Index	MONTHLY	1	196001	202609
+PR01	Corporate Goods Price Index (2015 Base)/ Producer Price Index	MONTHLY	1132	196001	202204
+PR01	Corporate Goods Price Index (2015 Base)/ Export Price Index (yen basis)	MONTHLY	329	196001	202204
+PR01	Corporate Goods Price Index (2015 Base)/ Export Price Index (contract currency basis)	MONTHLY	328	197501	202204
+PR01	Corporate Goods Price Index (2015 Base)/ Import Price Index (yen basis)	MONTHLY	413	196001	202204
+PR01	Corporate Goods Price Index (2015 Base)/ Import Price Index (contract currency basis)	MONTHLY	412	197501	202204
+PR01	Corporate Goods Price Index (2015 Base)/ Index by Stage of Demand and Use	MONTHLY	276	196001	202204
+PR01	Corporate Goods Price Index (2015 Base)/ Producer Price Index excluding Consumption Tax	MONTHLY	1131	198501	202204
+PR01	Corporate Goods Price Index (2010 Base)/ Producer Price Index	MONTHLY	1214	196001	201612
+PR01	Corporate Goods Price Index (2010 Base)/ Export Price Index (yen basis)	MONTHLY	329	196001	201612
+PR01	Corporate Goods Price Index (2010 Base)/ Export Price Index (contract currency basis)	MONTHLY	328	197501	201612
+PR01	Corporate Goods Price Index (2010 Base)/ Import Price Index (yen basis)	MONTHLY	402	196001	201612
+PR01	Corporate Goods Price Index (2010 Base)/ Import Price Index (contract currency basis)	MONTHLY	401	197501	201612
+PR01	Corporate Goods Price Index (2010 Base)/ Index by Stage of Demand and Use	MONTHLY	271	196001	201612
+PR01	Corporate Goods Price Index (2010 Base)/ Producer Price Index excluding Consumption Tax	MONTHLY	1213	198501	201612
+PR01	Corporate Goods Price Index (2005 Base)/ Domestic Corporate Goods Price Index	MONTHLY	1244	196001	201205
+PR01	Corporate Goods Price Index (2005 Base)/ Export Price Index (yen basis)	MONTHLY	331	196001	201205
+PR01	Corporate Goods Price Index (2005 Base)/ Export Price Index (contract currency basis)	MONTHLY	330	197501	201205
+PR01	Corporate Goods Price Index (2005 Base)/ Import Price Index (yen basis)	MONTHLY	422	196001	201205
+PR01	Corporate Goods Price Index (2005 Base)/ Import Price Index (contract currency basis)	MONTHLY	421	197501	201205
+PR01	Corporate Goods Price Index (2005 Base)/ Index by Stage of Demand and Use	MONTHLY	268	196001	201205
+PR01	Corporate Goods Price Index (2005 Base)/ Domestic Corporate Goods Price Index excluding Consumption Tax	MONTHLY	1243	198501	201205
+PR01	Corporate Goods Price Index (2000 Base)/ Domestic Corporate Goods Price Index	MONTHLY	1275	196001	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Export Price Index (yen basis)	MONTHLY	350	196001	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Export Price Index (contract currency basis)	MONTHLY	350	197501	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Import Price Index (yen basis)	MONTHLY	436	196001	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Import Price Index (contract currency basis)	MONTHLY	436	197501	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Index by Stage of Demand and Use	MONTHLY	250	196001	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Domestic Corporate Goods Price Index excluding Consumption Tax	MONTHLY	1275	198501	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Index of Domestic demand products excluding Consumption Tax	MONTHLY	242	198501	200710
+PR01	Corporate Goods Price Index (2000 Base)/ Average Index for Domestic Corporate Goods, Exports and Imports	MONTHLY	82	196001	200710
+PR01	Wholesale Price Index (1995 Base)/ Domestic Wholesale Price Index	MONTHLY	1357	196001	200211
+PR01	Wholesale Price Index (1995 Base)/ Export Price Index (yen basis)	MONTHLY	333	196001	200211
+PR01	Wholesale Price Index (1995 Base)/ Export Price Index (contract currency basis)	MONTHLY	11	197501	200211
+PR01	Wholesale Price Index (1995 Base)/ Import Price Index (yen basis)	MONTHLY	402	196001	200211
+PR01	Wholesale Price Index (1995 Base)/ Import Price Index (contract currency basis)	MONTHLY	11	197501	200211
+PR01	Wholesale Price Index (1995 Base)/ Overall Wholesale Price Index	MONTHLY	120	196001	200211
+PR01	Wholesale Price Index (1995 Base)/ Index by Stage of Demand and Use	MONTHLY	254	196001	200211
+PR01	Wholesale Price Index (1995 Base)/ Domestic Wholesale Price Index excluding consumption tax	MONTHLY	1356	199501	200211
+PR01	Wholesale Price Index (1995 Base)/ Index of Domestic Demand Products excluding consumption tax	MONTHLY	233	199501	200211
+PR01	Corporate Goods Price Index (2020 Base)/ Producer Price Index using Chain-weighted Index Formula	MONTHLY	817	199501	202609
+PR01	Corporate Goods Price Index (2015 Base)/ Producer Price Index using Chain-weighted Index Formula	MONTHLY	1107	199501	202204
+PR01	Corporate Goods Price Index (2010 Base)/ Producer Price Index using Chain-weighted Index Formula	MONTHLY	1189	199501	201612
+PR01	Corporate Goods Price Index (2005 Base)/ Domestic Corporate Goods Price Index using Chain-weighted Index Formula	MONTHLY	1211	199501	201205
+PR01	Corporate Goods Price Index (2000 Base)/ Domestic Corporate Goods Price Index using Chain-weighted Index Formula	MONTHLY	1254	199501	200710
+PR01	Wholesale Price Index (1995 Base)/ Domestic Wholesale Price Index using chain-weighted index formula	MONTHLY	1328	199501	200211
+PR01	Corporate Goods Price Index/ Prewar Base Index	MONTHLY	21	190010	202609
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Manufacturing industry sector	MONTHLY	485	197501	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Manufacturing industry sector (Domestic goods)	MONTHLY	327	197501	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Manufacturing industry sector (Imports)	MONTHLY	189	197501	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Manufacturing industry sector (Services)	MONTHLY	56	200001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Manufacturing industry sector/ (Reference) Manufacturing industry sector (Goods)	MONTHLY	2	200001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Beverages and Foods	MONTHLY	283	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Textile products	MONTHLY	234	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Pulp, paper and wooden products	MONTHLY	310	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Chemical products	MONTHLY	303	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Petroleum and coal products	MONTHLY	205	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Plastic and rubber products	MONTHLY	271	201101	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Ceramic, stone and clay products	MONTHLY	294	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Iron and steel	MONTHLY	244	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Non-ferrous metals	MONTHLY	248	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Metal products	MONTHLY	287	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ General-purpose machinery	MONTHLY	279	201101	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Production machinery	MONTHLY	301	201101	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Business oriented machinery	MONTHLY	290	201101	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Electronic components	MONTHLY	275	200001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Electrical machinery	MONTHLY	294	200001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Information and communication electronics equipment	MONTHLY	281	200001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Transportation equipment	MONTHLY	321	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Input Price Index/ Major sector/ Miscellaneous manufacturing products	MONTHLY	337	201101	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ (Reference) Major sector	MONTHLY	8	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Output Price Index/ Manufacturing industry sector	MONTHLY	427	197501	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Output Price Index/ Manufacturing industry sector (Domestic goods)	MONTHLY	352	197501	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2011 base)/ Output Price Index/ Manufacturing industry sector (Exports)	MONTHLY	186	197501	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Output Price Index/ (Reference) Major sector/Aggregated major commodity group	MONTHLY	8	198001	202204
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Manufacturing industry sector	MONTHLY	483	197501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Manufacturing industry sector (Domestic products)	MONTHLY	325	197501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Manufacturing industry sector (Imports)	MONTHLY	188	197501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Manufacturing industry sector (Services)	MONTHLY	54	200001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Manufacturing industry sector/ (Reference) Manufacturing industry sector (Products)	MONTHLY	2	200501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Beverages and Foods	MONTHLY	272	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Textile products	MONTHLY	234	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Pulp, paper and wooden products	MONTHLY	308	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Chemical products	MONTHLY	303	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Petroleum and coal products	MONTHLY	207	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Ceramic, stone and clay products	MONTHLY	292	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Iron and steel	MONTHLY	241	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Non-ferrous metals	MONTHLY	258	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Metal products	MONTHLY	281	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ General machinery	MONTHLY	316	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Electrical machinery	MONTHLY	287	200001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Information and communication electronics equipment	MONTHLY	274	200001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Electronic components	MONTHLY	262	200001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Transportation equipment	MONTHLY	314	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Precision instruments	MONTHLY	276	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ Miscellaneous manufacturing products	MONTHLY	338	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Input Price Index/ Major sector/ (Reference) Electrical machinery, Information and communication electronics equipment, and Electronic components	MONTHLY	2	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Output Price Index/ Manufacturing industry sector	MONTHLY	424	197501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Output Price Index/ Manufacturing industry sector (Domestic products)	MONTHLY	351	197501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Output Price Index/ Manufacturing industry sector (Exports)	MONTHLY	182	197501	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2005 base)/ Output Price Index/ (Reference) Electrical machinery, Information and communication electronics equipment, and Electronic components	MONTHLY	2	198001	201604
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Manufacturing industry sector	MONTHLY	871	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Manufacturing industry sector (Domestic products)	MONTHLY	630	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Manufacturing industry sector (Imports)	MONTHLY	347	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Manufacturing industry sector (Services)	MONTHLY	45	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Foods	MONTHLY	443	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Textile products	MONTHLY	356	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Pulp, paper and wooden products	MONTHLY	294	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Chemical products	MONTHLY	508	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Petroleum and coal products	MONTHLY	194	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Ceramic, stone and clay products	MONTHLY	274	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Iron and steel	MONTHLY	372	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Non-ferrous metals	MONTHLY	412	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Metal products	MONTHLY	456	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ General machinery	MONTHLY	509	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Electrical machinery	MONTHLY	286	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Transportation equipment	MONTHLY	295	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Precision instruments	MONTHLY	256	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Miscellaneous manufacturing products	MONTHLY	321	200001	200512
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Pulp, paper and woo	MONTHLY	216	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Petroleum and coal	MONTHLY	113	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Ceramic, stone and	MONTHLY	204	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Electrical machiner	MONTHLY	226	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Transportation equi	MONTHLY	237	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Precision instrumen	MONTHLY	185	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Input Price Index/ Major sector/ Miscellaneous manuf	MONTHLY	256	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Output Price Index/ Manufacturing industry Sector	MONTHLY	390	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Output Price Index/ Manufacturing industry sector (Domestic products)	MONTHLY	335	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Output Price Index/ Manufacturing industry sector (Exports)	MONTHLY	152	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (2000 base)/ Output/ Input Price Ratio Index	MONTHLY	15	199001	201007
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Manufacturing industry sector	MONTHLY	403	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Manufacturing industry sector (Domestic products)	MONTHLY	317	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Manufacturing industry sector (Imports)	MONTHLY	177	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Foods	MONTHLY	188	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Textile products	MONTHLY	142	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Pulp, paper and woo	MONTHLY	208	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Chemical products	MONTHLY	224	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Petroleum and coal	MONTHLY	102	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Ceramic, stone and	MONTHLY	198	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Iron and steel	MONTHLY	141	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Non-ferrous metals	MONTHLY	167	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Metal products	MONTHLY	182	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ General machinery	MONTHLY	211	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Electrical machiner	MONTHLY	214	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Transportation equi	MONTHLY	225	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Precision instrumen	MONTHLY	181	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Input Price Index/ Major sector/ Manufacturing produ	MONTHLY	250	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Output Price Index/ Manufacturing industry Sector	MONTHLY	374	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Output Price Index/ Manufacturing industry sector (Domestic products)	MONTHLY	325	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Output Price Index/ Manufacturing industry sector (Exports)	MONTHLY	139	199001	200506
+PR03	Input-Output Price Index of the Manufacturing Industry by Sector (1995 Base)/ Output/ Input Price Ratio Index	MONTHLY	15	199001	200506

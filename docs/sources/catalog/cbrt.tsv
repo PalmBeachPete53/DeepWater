@@ -1,0 +1,681 @@
+datagroup	title	category_id	category	frequency	source	status	start	end
+bie_dtihfb10	Foreign Trade Export Unit Value Index by Classification of BEC (2015=100)	400701	FOREIGN TRADE INDICES (TURKSAT)	AYLIK	TURKSTAT	1		
+bie_dtihmb10	Foreign Trade Export Volume Index by Classification of BEC (2015=100)	400701	FOREIGN TRADE INDICES (TURKSAT)	AYLIK	TURKSTAT	1		
+bie_dtitfb10	Foreign Trade Import Unit Value Index by Classification of BEC (2015=100)	400701	FOREIGN TRADE INDICES (TURKSAT)	AYLIK	TURKSTAT	1		
+bie_dtitmb10	Foreign Trade Import Volume Index by Classification of BEC (2015=100)	400701	FOREIGN TRADE INDICES (TURKSAT)	AYLIK	TURKSTAT	1		
+bie_ito95	Living Index (Wage Earners)	2002	COST OF LIVING INDICES (ICC)	AYLIK	Istanbul Chamber of Commerce (ICC)	1		
+bie_ito68	Living Index (Wage Earners) (1968=100)	2002	COST OF LIVING INDICES (ICC)	AYLIK	Istanbul Chamber of Commerce (ICC)	1		
+bie_itouge85	Istanbul Living Index (Wage Earners)	2002	COST OF LIVING INDICES (ICC)	AYLIK	Istanbul Chamber of Commerce (ICC)	1		
+bie_itoteuc	Istanbul Wholesale Goods Price and Wage Earners' Living Indexes (All Series)	2002	COST OF LIVING INDICES (ICC)	AYLIK	Istanbul Chamber of Commerce (ICC)	1		
+bie_itouge2023	Istanbul Consumer Price Index	2002	COST OF LIVING INDICES (ICC)	AYLIK	Istanbul Chamber of Commerce (ICC)	1		
+bie_itotefe	Wholesale Goods Price Index	2002	COST OF LIVING INDICES (ICC)	AYLIK	Istanbul Chamber of Commerce (ICC)	1		
+bie_cli	Composite Leading Indicator (Mboncu_Sue) (Archive)	9992001	COMPOSITE LEADING INDICATORS INDEX (ARCHIVE)	AYLIK	CBRT	1		
+bie_abanlbil	Central Bank Analytical Balance Sheet	3001	CENTRAL BANK ANALYTICAL BALANCE SHEET	İŞ GÜNÜ	CBRT	1		
+bie_mbrkge	Confidence Index_Real Sector (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_mbrkgey	Confidence Index_Real Sector (RSCI) Weighted_Nace Rev.1.1 (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_uriyaw	Business Tendency Survey (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyau	Business Tendency Survey (Unweighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriya	Business Tendency Survey (Private Sector) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyaintm	Business Tendency Survey_Intermediate Goods (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyacdur	Business Tendency Survey_Durable Consumer Goods (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyacndu	Business Tendency Survey_Non_Durable Consumer Goods (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyafobe	Business Tendency Survey_Food & Beverages (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyacons	Business Tendency Survey_Consumer Goods (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_uriyainve	Business Tendency Survey_Investment Goods (Weighted_Nace Rev.1.1) (Archive)	9991001	BUSINESS TENDENCY SURVEY (ARCHIVE)	AYLIK	CBRT	1		
+bie_tsenetler	Commercial Bills Received For Collection	3501	CHEQUES AND BILLS (CBRT)	AYLIK	Banks	1		
+bie_uristsayil	Distribution of Arriving Foreign Visitors by Provinces (MoCT) (Archive)	0	ARCHIVE	AYLIK	Republic of Türkiye Ministry of Culture and Tourism	1		
+bie_kvadealacakli	Creditor Composition	400401	SHORT TERM EXTERNAL DEBT STATISTICS (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_kisavadeborc	Sectoral Classification	400401	SHORT TERM EXTERNAL DEBT STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_kvadedovkomp	Currency Composition	400401	SHORT TERM EXTERNAL DEBT STATISTICS (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_kalanvade	Debt Stock on a Remaining Maturity Basis	400401	SHORT TERM EXTERNAL DEBT STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_kalvadbg	Debt Stock on a Remaining Maturity Basis By Sector	400401	SHORT TERM EXTERNAL DEBT STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_kvdbs	Short Term Debt Stock	400401	SHORT TERM EXTERNAL DEBT STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_oecdoncu	OECD Composite Leading Indicator (CLI)(Index)	5503	ORGANISATION FOR ECONOMIC CO-OPERATION AND DEVELOPMENT (OECD)	AYLIK	OECD	1		
+bie_bkea	Bank Loans Tendency Survey	1001	BANK LOANS TENDENCY SURVEY (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_sekbila1122	Balance Sheet - Total Assets	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbila1001	Balance Sheet - Current Assets	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbila1057	Balance Sheet - Fixed Assets	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbila3001	Balance Sheet - Short - Term Liabilities	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbila3086	Balance Sheet - Shareholders Equity	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbila3111	Balance Sheet - Total Liabilities	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbila3051	Balance Sheet - Long - Term Liabilities	500401	BALANCE SHEET	YILLIK	CBRT	1		
+bie_sekbil1122	Balance Sheet - Total Assets.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_sekbil1001	Balance Sheet - Current Assets.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_sekbil1057	Balance Sheet - Fixed Assets.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_sekbil3001	Balance Sheet - Short - Term Liabilities.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_sekbil3086	Balance Sheet - Shareholders Equity.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_sekbil3111	Balance Sheet - Total Liabilities.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_sekbil3051	Balance Sheet - Long - Term Liabilities.	500601	BALANCE SHEET.	YILLIK	CBRT	1		
+bie_yiydyul	Residents' Foreign Direct Investments Abroad by Countries (Flow)	400501	DIRECT INVESTMENT (FLOW)	AYLIK	CBRT	1		
+bie_yiydyse	Residents' Foreign Direct Investments Abroad by Sectors (Flow)	400501	DIRECT INVESTMENT (FLOW)	AYLIK	CBRT	1		
+bie_ydydyul	Foreign Direct Investments in Türkiye by Countries (Flow)	400501	DIRECT INVESTMENT (FLOW)	AYLIK	CBRT	1		
+bie_ydydyse	Foreign Direct Investments in Türkiye by Sectors (Flow)	400501	DIRECT INVESTMENT (FLOW)	AYLIK	CBRT	1		
+bie_fdvy	Foreign Exchange Assets and Liabilities of Non-Financial Companies	5005	FOREIGN CURRENCY ASSETS AND LIABILITIES OF COMPANIES OUTSIDE THE FINANCIAL SECTOR (CBRT)	AYLIK	Money and Banking Statistics, UYP, Private Sector Loans from Abroad	1		
+bie_pbtablo3	Investment and Development Banks Balance Sheet	450102	BALANCE SHEETS	AYLIK	BANKS	1		
+bie_pbtablo7	Participation Banks Balance Sheet	450102	BALANCE SHEETS	AYLIK	BANKS	1		
+bie_pbtablo2	Deposit Money Banks Balance Sheet	450102	BALANCE SHEETS	AYLIK	BANKS	1		
+bie_yiesgyazdeg	ESG, Issued in Domestic Market	450306	ENVIRONMENTAL, SOCIAL AND GOVERNANCE DEBT SECURITIES	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_ydesgyazdeg	ESG, Issued in International Market	450306	ENVIRONMENTAL, SOCIAL AND GOVERNANCE DEBT SECURITIES	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_finsveri1	Non-bank Financial Corporations Sectoral Balance Sheet	4504	NON-BANK FINANCIAL INSTITUTION STATISTICS (CBRT)	ÜÇ AYLIK	NONBANK FINANCIALS CORPORATIONS	1		
+bie_finsveri3	Financial Intermediaries Sectoral Balance Sheet	4504	NON-BANK FINANCIAL INSTITUTION STATISTICS (CBRT)	ÜÇ AYLIK	NONBANK FINANCIALS CORPORATIONS	1		
+bie_finsveri4	Financial Auxiliaries Sectoral Balance Sheet	4504	NON-BANK FINANCIAL INSTITUTION STATISTICS (CBRT)	ÜÇ AYLIK	NONBANK FINANCIALS CORPORATIONS	1		
+bie_finsveri2	Insurance Corporations and Pension Funds Sectoral Balance Sheet	4504	NON-BANK FINANCIAL INSTITUTION STATISTICS (CBRT)	ÜÇ AYLIK	NONBANK FINANCIALS CORPORATIONS	1		
+bie_finhestnks1	S.1 Total Economy (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks11	S.11 Non-financial Corporations (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks12	S.12 Financial Corporations (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS, CBRT, CMB, CRA, Settlement and Custody Bank, INTERMEDIARY ASSOCIATION, BRSA, BIST,  Insurance and Private Pension Regulation and Supervision Authority , Agricultural İnsurance Pool	1		
+bie_finhestnks12t	S.121 + S.122 + S.123 Monetary Financial Institutions (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS, CBRT, CRA, Settlement and Custody Bank	1		
+bie_finhestnks121	S.121 CBRT (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks122	S.122 Deposit Taking Corporations (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS	1		
+bie_finhestnks123	S.123 Money Market Funds (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks124	S.124 Non-MMF Investment Funds (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks125	S.125 Other Financial Intermediaries (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Intermediary Association, BRSA	1		
+bie_finhestnks126	S.126 Financial Auxiliaries (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	BRSA, CMB, BIST, CRA	1		
+bie_finhestnks127	S.128 + S.129 Insurance Corporations and Pension Funds (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,  Agricultural İnsurance Pool,  Settlement and Custody Bank	1		
+bie_finhestnks128	S.128 Insurance Corporations (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,   Agricultural İnsurance Pool	1		
+bie_finhestnks129	S.129 Pension Funds (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks13	S.13 General Government (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks1311	S.1311 Central Government (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks1313	S.1313 Local Governments (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks1314	S.1314 Social Security Institutions (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks14	S.14 Households (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	Counter Sector Data	1		
+bie_finhestnks15	S.15 Non-Profit Institutions Serving Households (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks2	S.2 Rest of The World (Non-Consolidated, Stock)	450701	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS, CBRT	1		
+bie_kt100h	Interest Rates on Loans (Flow Data)	450501	INTEREST AND PROFIT RATE STATISTICS (FLOW)	HAFTALIK(CUMA)	Deposit, Development and Investment Banks	1		
+bie_mt100h	Interest Rates on Deposits (Flow Data)	450501	INTEREST AND PROFIT RATE STATISTICS (FLOW)	HAFTALIK(CUMA)	Deposit Banks	1		
+bie_kt200h	Profit Rates on Loans (Flow  Data)	450501	INTEREST AND PROFIT RATE STATISTICS (FLOW)	HAFTALIK(CUMA)	Participation Banks	1		
+bie_mt200h	Profit  Rates on  Participation  Accounts (Flow Data)	450501	INTEREST AND PROFIT RATE STATISTICS (FLOW)	HAFTALIK(CUMA)	Participation Banks	1		
+bie_fadth	Weighted Average Of Maximum Interest Rates Applicable To Fx Deposits (Archive)	9998002	INTEREST RATE STATISTICS (ARCHIVE)	AYLIK	BANKS	1		
+bie_fafaiz	Weighted Average Of Maximum Interest Rates Applicable To Turkish Lira Deposits (Archive)	9998002	INTEREST RATE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_bisborcoran	Non-Financial Private Sector Debt Service Ratio	550201	CREDIT STATISTICS	ÜÇ AYLIK	Bank  for  International  Settlements  (BIS)	1		
+bie_bistopkredi	Total Credit Utilization in the Non-Financial Sector	550201	CREDIT STATISTICS	ÜÇ AYLIK	Bank  for  International  Settlements  (BIS)	1		
+bie_biskredigsyih	Total Credit Utilization of the Non-Financial Private Sector (Credit/GDP Ratio)	550201	CREDIT STATISTICS	ÜÇ AYLIK	Bank  for  International  Settlements  (BIS)	1		
+bie_gsyhhrccar	Gross Domestic Product - Expenditure Approach, Current Prices	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyhcrarnd	Gross Domestic Product - Expenditure Approach, Seasonally Adjusted, Current Prices	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyhhrczinc	Gross Domestic Product - Expenditure Approach, Chained Volume	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyhendex	Gross Domestic Product - Expenditure Approach, Chained Index (2009=100)	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyzhend	Gross Domestic Product - Expenditure Approach, Seasonally and Calendar Adjusted Chained Volume Index (2009=100)	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyhmevset	Gross Domestic Product - Expenditure Approach, Seasonally Adjusted Chained Volume Index (2009=100)	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyzhtaken	Gross Domestic Product - Expenditure Approach, Calendar Adjusted Chained Volume Index (2009=100)	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gayrfsermol	Gross Fixed Capital Formation, Current Prices	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gaysafserzinc	Gross Fixed Capital Formation (Chained Volume) (2009=100)	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_nihaitukh	Gross Domestic Product - Expenditure Approach, Household Final Consumption Expenditures, By Durability, Current Prices	150201	GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_mkbral	Istanbul Gold Exchange (Archive)	9993001	GOLD STATISTICS (ARCHIVE)	İŞ GÜNÜ	Istanbul Stock Exchange	1		
+bie_cli2	Composite Leading Indicator Index	1504	COMPOSITE LEADING INDICATORS INDEX (CBRT)	AYLIK	CBRT	1		
+bie_iskko	Capacity Utilization Rate Of Manufacturing Industry (Weighted_Nace Rev.1.1) _ Central Bank (Archive)	9999001	CAPACITY UTILIZATION RATE OF MANUFACTURING INDUSTRY (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_urimkap	Capacity Utilization Rates In The Manufacturing Industry_Weighted By Production Value Isic Rev.3 (Archive)	9999001	CAPACITY UTILIZATION RATE OF MANUFACTURING INDUSTRY (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_ururet2	Capacity Utilization Rates In The Manufacturing Industry_Weighted By Production Value Isic Rev.3 1987 _ 2004 (Archive)	9999001	CAPACITY UTILIZATION RATE OF MANUFACTURING INDUSTRY (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_altinbistbul	Gold Market (BIST)	2502	GOLD STATISTICS	İŞ GÜNÜ	Borsa İstanbul	1		
+bie_goldimprt	Gold Imports (BIST)	2502	GOLD STATISTICS	AYLIK	Borsa Istanbul	1		
+bie_uraltin	Gold Ore Production of Mining Companies (BIST)	2502	GOLD STATISTICS	AYLIK	Borsa Istanbul	1		
+bie_altinadt	Gold Coin Minting, Republic and Resad Gold, Units (MoFT Mint)	2502	GOLD STATISTICS	AYLIK	Turkish State Ministry of Treasury and Finance, Mint and Security Printing Department	1		
+bie_altingr	Gold Coin Minting, Republic and Resad Gold, Gram (MoFT Mint)	2502	GOLD STATISTICS	AYLIK	Turkish State Ministry of Treasury and Finance, Mint and Security Printing Department	1		
+bie_mkaltytl	Gold Prices (Ankara Chamber of Jewelers and Watchmakers)	2502	GOLD STATISTICS	AYLIK	Market	1		
+bie_dtihfby	Foreign Trade Export Unit Value Index By Classification Of BEC (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihfiy	Foreign Trade Export Unit Value Index By Isic Rev.3 Classification (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihrfyb	Foreign Trade Export Price Index By Classification Of BEC (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihrfiy	Foreign Trade Export Price Index By Isic Rev.3 Classification (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihrfyp	Foreign Trade Export Price Index By Classification Of Planning (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihrmkb	Foreign Trade Export Volume Index By Classification Of BEC (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihmby	Foreign Trade Export Volume Index By Classification Of BEC (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihrmik	Foreign Trade Export Volume Index By Isic Rev.3 Classification (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihmiy	Foreign Trade Export Volume Index By Isic Rev.3 Classification (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtihrmkp	Foreign Trade Export Volume Index By Classification Of Planning (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtitfby	Foreign Trade Import Unit Value Index By Classification Of BEC (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtitfiy	Foreign Trade Import Unit Value Index By Isic Rev.3 Classification (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtithfyb	Foreign Trade Import Price Index By Classification Of BEC (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtithfiy	Foreign Trade Import Price Index By Isic Rev.3 Classification (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtithfyp	Foreign Trade Import Price Index By Classification Of Planning (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtithmkb	Foreign Trade Import Volume Index By Classification Of BEC (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtitmby	Foreign Trade Import Volume Index By Classification Of BEC (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtithmik	Foreign Trade Import Volume Index By Isic Rev.3 Classification (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtitmiy	Foreign Trade Import Volume Index By Isic Rev.3 Classification (2003=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtithmkp	Foreign Trade Import Volume Index By Classification Of Planning (1994=100) (Archive)	9997001	FOREIGN TRADE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_rkgema	Real Sector Confidence Index Seasonally Adjusted	100301	REAL SECTOR CONFIDENCE INDEX (CBRT)	AYLIK	CBRT	1		
+bie_rkgey2	Real Sector Confidence Index	100301	REAL SECTOR CONFIDENCE INDEX (CBRT)	AYLIK	CBRT	1		
+bie_gsyhnihayilcr	Gross Domestic Product - Household Final Consumption, by Expenditure Category, Current Prices	150701	ANNUAL GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	YILLIK	TURKSTAT	1		
+bie_gsyhnihayil	Gross Domestic Product - Household Final Consumption, by Expenditure Category, Chained Volume Index (2009=100)	150701	ANNUAL GROSS DOMESTIC PRODUCT BY EXPENDITURE APPROACH	YILLIK	TURKSTAT	1		
+bie_abstca	CB Balance Sheet As Per The Letter Of Intent Dd 03.05.2001 (At Current Cross Rates) (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_abstsb	CB Balance Sheet As Per The Letter Of Intent Dd 03.05.2001 (At Fixed Cross Rates) (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_absts3	CB Balance Sheet As Per The Letter Of Intent Dd 05.04.2003 (At Fixed Cross Rates) (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_abstby	CB Balance Sheet As Per The Letter Of Intent Dd 09.12.1999 & 18.12.2000 (At Fixed Cross Rates) (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_absts2	CB Balance Sheet As Per The Letter Of Intent Dd 18.01.2002 (At Fixed Cross Rates) (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_absts4	CB Balance Sheet As Per The Letter Of Intent Dd 26.04.2005 (At Fixed Cross Rates) (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_pbtablo1	Central Bank Balance Sheet (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	AYLIK	CBRT	1		
+bie_abmbbil1	Central Bank Weekly Statement (Archive)	9995001	CENTRAL BANK BALANCE SHEET DATA (ARCHIVE)	HAFTALIK(CUMA)	CBRT	1		
+bie_sekbila5015	Income Statement - Gross Profit Or Loss	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5001	Income Statement - Gross Sales	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5050	Income Statement - Profit Or Loss Before Taxes	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5051	Income Statement - Provisions For Inc. Tax & Oth. Liab. To Gov.	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5016	Income Statement - Operating Expenses (-)	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5020	Income Statement - Operating Profit Or Loss	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5039	Income Statement - Financing Expenses (-)	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5009	Income Statement - Net Sales	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_sekbila5010	Income Statement - Cost of Goods Sold (-)	500402	INCOME STATEMENT	YILLIK	CBRT	1		
+bie_dibsyazdeg	GDDS, Face Value	450302	GOVERNMENT DOMESTIC DEBT SECURITIES	HAFTALIK(CUMA)	CBRT, TAKASBANK, Central Registry Agency, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions	1		
+bie_dibspiydeg	GDDS, Market Value	450302	GOVERNMENT DOMESTIC DEBT SECURITIES	HAFTALIK(CUMA)	CBRT, TAKASBANK, Central Registry Agency, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions	1		
+bie_dibsvade	GDDS, By Maturity	450302	GOVERNMENT DOMESTIC DEBT SECURITIES	HAFTALIK(CUMA)	CBRT, TAKASBANK, Central Registry Agency, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions	1		
+bie_gsyhgelrcar	Gross Domestic Product - Income Approach, Current Prices	150202	GROSS DOMESTIC PRODUCT BY INCOME APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gelirmea	Gross Domestic Product - Income Approach, Seasonally Adjusted, Current Prices	150202	GROSS DOMESTIC PRODUCT BY INCOME APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_kydvdy	Foreign Assets and Liabilities - Investment and Development Banks	450106	FOREIGN ASSETS AND LIABILITIES	AYLIK	BANKS	1		
+bie_kbdvdy	Foreign Assets and Liabilities - Participation Banks	450106	FOREIGN ASSETS AND LIABILITIES	AYLIK	BANKS	1		
+bie_mbdvdy	Foreign Assets and Liabilities - Deposit Money Banks	450106	FOREIGN ASSETS AND LIABILITIES	AYLIK	BANKS	1		
+bie_disyukvd	Equity and Maturity Breakdown For Foreign Liabilities - Banking Sector	450106	FOREIGN ASSETS AND LIABILITIES	AYLIK	BANKS	1		
+bie_finhestnks6201	S.1 Total Economy (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks62011	S.11 Non-financial Corporations (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks62012	S.12 Financial Corporations (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS, CBRT, CMB, CRA, Settlement and Custody Bank, INTERMEDIARY ASSOCIATION, BRSA, BIST,  Insurance and Private Pension Regulation and Supervision Authority , Agricultural İnsurance Pool	1		
+bie_finhestnks62012t	S.121 + S.122 + S.123 Monetary Financial Institutions (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS, CBRT, CRA, Settlement and Custody Bank	1		
+bie_finhestnks620121	S.121 CBRT (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks620122	S.122 Deposit Taking Corporations (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS	1		
+bie_finhestnks620123	S.123 Money Market Funds (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks620124	S.124 Non-MMF Investment Funds (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks620125	S.125 Other Financial Intermediaries (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Intermediary Association, BRSA	1		
+bie_finhestnks620126	S.126 Financial Auxiliaries (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	BRSA, CMB, BIST, CRA	1		
+bie_finhestnks620127	S.128 + S.129 Insurance Corporations and Pension Funds (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,  Agricultural İnsurance Pool,  Settlement and Custody Bank	1		
+bie_finhestnks620128	S.128 Insurance Corporations (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,   Agricultural İnsurance Pool	1		
+bie_finhestnks620129	S.129 Pension Funds (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks62013	S.13 General Government (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks6201311	S.1311 Central Government (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks6201313	S.1313 Local Governments (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks6201314	S.1314 Social Security Institutions (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks62014	S.14 Households (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	Counter Sector Data	1		
+bie_finhestnks62015	S.15 Non-Profit Institutions Serving Households (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks6202	S.2 Rest of The World (Non-Consolidated, Flow)	450702	FINANCIAL ASSETS AND LIABILITIES, NON-CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS, CBRT	1		
+bie_kt210a	Interest Rates on Loans (Stock Data)	450502	INTEREST AND PROFIT RATE STATISTICS (STOCK)	AYLIK	Deposit, Development and Investment Banks	1		
+bie_mt210ags	Interest Rates on Deposits (Stock Data)	450502	INTEREST AND PROFIT RATE STATISTICS (STOCK)	AYLIK	Deposit Banks	1		
+bie_kt210aks	Profit Rates on Loans (Stock Data)	450502	INTEREST AND PROFIT RATE STATISTICS (STOCK)	AYLIK	Participation Banks	1		
+bie_fs101a	Financing Companies Interest  Rates on Loans (Stock Data)	450502	INTEREST AND PROFIT RATE STATISTICS (STOCK)	AYLIK	Finance Companies	1		
+bie_bispolfaiz	Central Banks' Policy Interest Rate	550202	CENTRAL BANKS' STATISTICS	AYLIK	Bank for International Settelements (BIS)	1		
+bie_bistopvaupar	Central Banks' Total Assets (billions, Domestic Currency)	550202	CENTRAL BANKS' STATISTICS	YILLIK	Bank for International Settelements (BIS)	1		
+bie_bistopvusd	Central Banks' Total Assets (billions US dollars)	550202	CENTRAL BANKS' STATISTICS	ÜÇ AYLIK	Bank for International Settelements (BIS)	1		
+bie_bistopvgdp	Central Banks' Total Assets / GDP	550202	CENTRAL BANKS' STATISTICS	ÜÇ AYLIK	Bank for International Settelements (BIS)	1		
+bie_kkoisma	Capacity Utilization Rate of Manufacturing Industry - Seasonally Adjusted	5001	CAPACITY UTILIZATION RATE OF MANUFACTURING INDUSTRY (CBRT)	AYLIK	CBRT	1		
+bie_kko2	Capacity Utilization Rate of Manufacturing Industry	5001	CAPACITY UTILIZATION RATE OF MANUFACTURING INDUSTRY (CBRT)	AYLIK	CBRT	1		
+bie_abstc2	Central Bank Balance Sheet- Stand By (At Current Cross Rates)	3004	CENTRAL BANK WEEKLY REPORT	HAFTALIK(CUMA)	CBRT	1		
+bie_mbblnch	Central Bank Weekly Statement (New)	3004	CENTRAL BANK WEEKLY REPORT	HAFTALIK(CUMA)	CBRT	1		
+bie_sekbil5015	Income Statement - Gross Profit Or Loss.	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5001	Income Statement - Gross Sales.	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5050	Income Statement - Profit Or Loss Before Taxes.	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5051	Income Statement - Provisions For Inc. Tax & Oth. Liab. To Gov..	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5016	Income Statement - Operating Expenses (-).	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5020	Income Statement - Operating Profit Or Loss.	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5039	Income Statement - Financing Expenses (-).	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5009	Income Statement - Net Sales.	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_sekbil5010	Income Statement - Cost of Goods Sold (-).	500602	INCOME STATEMENT.	YILLIK	CBRT	1		
+bie_hufe	Service Producer Price Index	2007	SERVICE PRODUCER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_dtisic	Foreign Trade By Special Trade System Foreign Trade By Economic Activities (Isic, Rev 3) (Archive)	9997002	FOREIGN TRADE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_dtbec	Foreign Trade By Special Trade System Foreign Trade By Classification Of Broad Economic Categories (Bec) (Archive)	9997002	FOREIGN TRADE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_inypkl	Construction Statistics According To Occupancy Permits 1991 _ 2004 (Archive)	9999002	HOUSING AND CONSTRUCTION STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_inypkl1	Construction Statistics According to Occupancy Permits (Archive)	9999002	HOUSING AND CONSTRUCTION STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_inyprh	Construction Statistics According To Construction Permits (Archive)	9999002	HOUSING AND CONSTRUCTION STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_inyprh1	Construction Statistics According to Construction Permits 2002 _ 2025 (Archive)	9999002	HOUSING AND CONSTRUCTION STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_yydibsn	Government Domestic Debt Securities (TRY, Nominal Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_yyebn	Eurobond (Nominal Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, REUTERS, HMB	1		
+bie_yydibsnu	Government Domestic Debt Securities (US dollars, Nominal Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_yyebc	Eurobond (Market Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, REUTERS, HMB	1		
+bie_yydibsc	Government Domestic Debt Securities (TRY, Market Value) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_yyoibsnt	Domestic Debt Securities Issued By Private Sector. (TRY, Nominal Value (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA	1		
+bie_yydv	Government Domestic Debt Securities (TRY, Market Value, By Remaining Maturity) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_yyoibscu	Domestic Debt Securities Issued By Private Sector (US dollars, Market Value, Stock 2015 - 2021) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA	1		
+bie_yydvusd	Government Domestic Debt Securities (US dollars, Market Value, By Remaining Maturity) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_yyoibsct	Domestic Debt Securities Issued By Private Sector (TRY, Market Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA	1		
+bie_yydvy	Government Domestic Debt Securities (Market Value, By Original Maturity) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_yyoibsvu	Private Sector Domestic Debt Securities (US dollars, Market Value, By Original and Remaining Maturity 2015 - 2017) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA	1		
+bie_yyoibsvt	Private Sector Domestic Debt Securities (TRY, Market Value, By Original and Remaining Maturity) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA	1		
+bie_yydvyusd	Government Domestic Debt Securities (Market Value, By Original Maturity USD) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_pydibsarsiv	Indicative Nature Values Of Government Domestic Debt Instruments Determined By CBRT (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	GÜNLÜK	CBRT	1		
+bie_yydibscu	Government Domestic Debt Securities (US dollars, Market Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS AND INTERMEDIATES, HMB, FRED	1		
+bie_hdbsn	Corporate Bonds Issued Abroad (US dollars, Nominal Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA, BANKS, INTERMEDIATES	1		
+bie_hdbsc	Corporate Bonds Issued Abroad (US dollars, Market Value, Stock) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA, BANKS, INTERMEDIATES	1		
+bie_yymkpyuk	Securities Portfolio Of Non_Residents (US dollars, Market Value, Stock, Flow) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, Settlement and Custody Bank, BANKS, INTERMEDIATES, CRA, Istanbul Stock Exchange, FRED	1		
+bie_yymkeyuk	Treasury Bills Issued Abroad Owned By Non Residents (US dollars) (Archive)	9998003	SECURITIES STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	TURKSTAT	1		
+bie_urbeka	Survey of Market Participants Descriptive Statistics (15 Days Data from 15/8/2001 to 31/12/2012 (Archive)	9991002	SURVEY OF MARKET PARTICIPANTS (ARCHIVE)	AYDA İKİ KEZ	CBRT	1		
+bie_bekodtufe	Survey of Market Participants Probability Distributions of Consumer Inflation Expectations (Archive)	9991002	SURVEY OF MARKET PARTICIPANTS (ARCHIVE)	AYLIK	CBRT	1		
+bie_dovefdep	Foreign Exchange and Banknotes Market Fx Deposit Market Intermediated Transactions (As Of Transaction Date) (Archive)	9995002	MARKETS DATA (ARCHIVE)	İŞ GÜNÜ	CBRT	1		
+bie_onrepof	Over/Night Interbank Interest Rates (Archive)	9995002	MARKETS DATA (ARCHIVE)	İŞ GÜNÜ	Istanbul Stock Exchange	1		
+bie_imurk	Index of Production Workers Working in Manufacturing Industry (1997=100) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_urucret	Payments to Production Workers in Manufacturing Industry (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_imurs	Index of Production Hours Worked in Manufacturing Industry (1997=100) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_cgd	Working Day Variable (Mean Corrected) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_istihsk2	Employment by Branch of Activity (After Abprs) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_istihsk3	Employment by Branch of Activity (After Abprs) (Nace Rev 1.1) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_yisthsk3	Employment by Branch of Activity (Nace Rev 1.1) (By the New Population Projections) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_istihsk4	Employment by Branch of Activity (Nace Rev 2) (By The New Population Projections) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_yisthsk2	Employment by Branch of Activity (By the New Population Projections) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_rsistihs	Employment by Branch of Economic Activity (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ALTI AYLIK	TURKSTAT	1		
+bie_rsistihn	Employment by Branch of Economic Activity (New Series Nace, 1.1) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_rsistihy	Employment by Branch of Economic Activity (New Series) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_rssivil	Non_Institutional Civilian Population by Labour Force Status (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ALTI AYLIK	TURKSTAT	1		
+bie_rssivily	Non_Institutional Civilian Population by Labour Force Status (New Series) ) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_ysivils2	Labour Force Status by Non_Institutional Population (By the New Population Projections) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_sivilis2	Non_Institutional Civilian Population by Labour Force Status (After Abprs) (Turksat) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_isgucarsiv	Basic Labour Force Indicators (Ins,15+Age) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_toisso	Establishments and Labourers Covered by Collective Bargaining Strikes and Lock Outs (Ministry of Labor and Social Security) (Number) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	AYLIK	Republic of Türkiye Ministry of Labour and Social Security	1		
+bie_imursu	Index of Wages Per Production Hour Worked in Manufacturing Industry (1997=100) (Archive)	9992002	LABOR FORCE STATISTICS (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_rkbigm	Exchange Rates_ (Previous) Unit Labor Cost Based Real Effective Exchange Rate (2003=100) (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	ÜÇ AYLIK	CBRT	1		
+bie_dkdovizgn	Exchange Rates (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	GÜNLÜK	CBRT	1		
+bie_dkefektif	Exchange Rates_Banknotes (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	GÜNLÜK	CBRT	1		
+bie_refkure	Effective Exchange Rate Index (Real) (1995=100) (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	AYLIK	CBRT	1		
+bie_rkbigmy	Exchange Rates_Unit Labor Cost_Developed Countries Based Real Effective Exchange Rate (2003=100) (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	ÜÇ AYLIK	CBRT	1		
+bie_ulgrkur	Exchange Rates_ Cpi Based Real Effective Exchange Rate By Country Groups (2003=100) (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	AYLIK	CBRT	1		
+bie_dovefmud	Bank Under The Floating Exchange Rate Regime Direct Foreign Exchange Interventions Of The Central (Archive)	9993002	CENTRAL BANK EXCHANGE RATES (ARCHIVE)	İŞ GÜNÜ	CBRT	1		
+bie_yiydyulke	Residents' Foreign Direct Investments Abroad by Countries (Stock)	400502	DIRECT INVESTMENT (STOCK)	YILLIK	CBRT	1		
+bie_ydydyulkenihai	Direct Investments in Türkiye by Countries-Ultimate Investors (Stock)	400502	DIRECT INVESTMENT (STOCK)	YILLIK	CBRT	1		
+bie_yiydysektor	Residents' Foreign Direct Investments Abroad by Sectors (Stock)	400502	DIRECT INVESTMENT (STOCK)	YILLIK	CBRT	1		
+bie_ydydyulke	Direct Investments in Türkiye by Countries (Stock)	400502	DIRECT INVESTMENT (STOCK)	YILLIK	CBRT	1		
+bie_ydydysektor	Foreign Direct Investments in Türkiye by Sectors (Stock)	400502	DIRECT INVESTMENT (STOCK)	YILLIK	CBRT	1		
+bie_kartmetre	BKM - Card Payment Index (April 2015=100)	4508	DEBIT AND CREDIT CARDS STATISTICS (CBRT, ICC)	AYLIK	The Interbank Card Center	1		
+bie_kkhartut	Debit Card and Credit Card Total Expenditure Amount (Flow)	4508	DEBIT AND CREDIT CARDS STATISTICS (CBRT, ICC)	HAFTALIK(CUMA)	Banks	1		
+bie_kkislade	Weekly, Debit Card and Credit Card Number of Transactions (Flow)	4508	DEBIT AND CREDIT CARDS STATISTICS (CBRT, ICC)	HAFTALIK(CUMA)	Banks	1		
+bie_kbgen	General Budget Balance and Financing	1503	PUBLIC FINANCE STATISTICS (MoFT)	AYLIK	Republic of Türkiye Ministry of Treasury and Finance	1		
+bie_kbmgel	Central Government Budget Revenues - New Definition	1503	PUBLIC FINANCE STATISTICS (MoFT)	AYLIK	Republic of Türkiye Ministry of Treasury and Finance	1		
+bie_kbmgid	Central Government Budget Expenses - New Definition	1503	PUBLIC FINANCE STATISTICS (MoFT)	AYLIK	Republic of Türkiye Ministry of Treasury and Finance	1		
+bie_fhge	Financial Services Confidence Index	1002	FINANCIAL SERVICES SURVEY (CBRT)	AYLIK	CBRT	1		
+bie_fhany	Financial Services Statistics	1002	FINANCIAL SERVICES SURVEY (CBRT)	AYLIK	CBRT	1		
+bie_eftemkt2	Electronic Fund Transfer (EFT) System and Electronic Securities Transfer (ESTS) System Transactions	3503	PAYMENT SYSTEMS STATISTICS (CBRT)	İŞ GÜNÜ	CBRT	1		
+bie_osgmfast	Instant and Continuous Transfer of Funds (FAST) System Operations	3503	PAYMENT SYSTEMS STATISTICS (CBRT)	GÜNLÜK	CBRT	1		
+bie_osgmpos	Retail Payment System Operations	3503	PAYMENT SYSTEMS STATISTICS (CBRT)	İŞ GÜNÜ	CBRT	1		
+bie_btocek	Cheques Processed in Interbank Cheque Clearing Houses	3503	PAYMENT SYSTEMS STATISTICS (CBRT)	AYLIK	Istanbul Settlement and Custody Bank Inc.-Takasbank	1		
+bie_iyama	Business Tendency Statistics Seasonally Adjusted	100302	BUSINESS TENDENCY SURVEY (CBRT)	AYLIK	CBRT	1		
+bie_iyaw2	Business Tendency Statistics	100302	BUSINESS TENDENCY SURVEY (CBRT)	AYLIK	CBRT	1		
+bie_gumusbistbul	Silver Market (BIST)	2503	OTHER PRECIOUS METALS AND COMMODITIES MARKET	İŞ GÜNÜ	Borsa İstanbul	1		
+bie_platinbistbul	Platin Market (BIST)	2503	OTHER PRECIOUS METALS AND COMMODITIES MARKET	İŞ GÜNÜ	Borsa İstanbul	1		
+bie_paladiumbistbul	Palladium Market (BIST)	2503	OTHER PRECIOUS METALS AND COMMODITIES MARKET	İŞ GÜNÜ	Borsa İstanbul	1		
+bie_brentpetrol	European Brent Crude Oil Price	2503	OTHER PRECIOUS METALS AND COMMODITIES MARKET	İŞ GÜNÜ	U.S. Energy Information Administration (EIA)	1		
+bie_metalihr	Chapter 71 Exports	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_metalith	Chapter 71 Imports	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_ihrisicrev4	Foreign Trade by General Trade System Exports by Economic Activities (ISIC, Rev.4) (TURKSTAT)	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_ithisicrev4	Foreign Trade by General Trade System Imports by Economic Activities (ISIC, Rev.4) (TURKSTAT)	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_ihracatbec	Foreign Trade by General Trade System Exports by Classification of Broad Economic Categories (BEC) (TURKSTAT)	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_ithalatbec	Foreign Trade by General Trade System Imports by Classification of Broad Economic Categories (BEC) (TURKSTAT)	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_auihrulke	Non-Monetary Gold Export by Countries	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_auithulke	Non-Monetary Gold Import by Countries	400702	FOREIGN TRADE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_inypkl2	Construction Statistics According to Occupancy Permits	5002	HOUSE, COMMERCIAL PROPERTY SALES AND CONSTRUCTION STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_inyprh2	Construction Statistics According to Construction Permits	5002	HOUSE, COMMERCIAL PROPERTY SALES AND CONSTRUCTION STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_akonutsat1	House and Commercial Property Sales Statistics - Total sales	5002	HOUSE, COMMERCIAL PROPERTY SALES AND CONSTRUCTION STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_akonutsat2	House and Commercial Property Sales Statistics - Mortgaged sales	5002	HOUSE, COMMERCIAL PROPERTY SALES AND CONSTRUCTION STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_akonutsat3	House and Commercial Property Sales Statistics - First sales	5002	HOUSE, COMMERCIAL PROPERTY SALES AND CONSTRUCTION STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_akonutsat4	House and Commercial Property Sales Statistics - Second hand sales	5002	HOUSE, COMMERCIAL PROPERTY SALES AND CONSTRUCTION STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_undnakliyeroro	Vehicle and Trailer Tracking System - All Vehicles Land and Roro Separation	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_undnakliyetbg	Vehicle and Trailer Tracking System - Turkish Vehicles, Empty Entry	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_undnakliyetih	Vehicle and Trailer Tracking System - Turkish Vehicles, Export	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_undnakliyetit	Vehicle and Trailer Tracking System - Turkish Vehicles, Imports	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_undnakliyeybg	Vehicle and Trailer Tracking System - Foreign Vehicles, Empty Entry	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_undnakliyeyih	Vehicle and Trailer Tracking System - Foreign Vehicles, Export	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_undnakliyeyit	Vehicle and Trailer Tracking System - Foreign Vehicles, Imports	400703	FOREIGN TRADE TRANSPORTATION VEHICLES STATISTICS (IFFA)	AYLIK	International Freight Forwarders Association	1		
+bie_sekbilc02a	Turnover Ratios - Receivables Turnover.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbily01a	Turnover Ratios - Debt Turnover.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilc03a	Turnover Ratios - Net Working Capital Turnover.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilb14a	Ratios of Financial Position - Bank Loans / Total Loans.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilb15a	Ratios of Financial Position - Current Assets / Total Assets.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilb13a	Ratios of Financial Position - Short - Term Bank Loans / Short - Term Liabilities.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilb16a	Ratios of Financial Position - Tangible Fixed Assets (Net) / Total Assets.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilb02a	Ratios of Financial Position - Shareholders Equity / Total Assets.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbilb01a	Ratios of Financial Position - Total Loans / Total Assets (Leverage Ratio).	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbild02b	Profitability Ratios - Gross Profit / Net Sales.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbild02e	Profitability Ratios - Operating Expens / Net Sales.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbild02a	Profitability Ratios - Operating Profit / Net Sales.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbild02f	Profitability Ratios - Interest Expenses / Net Sales.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbild01d	Profitability Ratios - Net Profit / Total Assets.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbild02c	Profitability Ratios - Net Profit / Net Sales.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbila01a	Liquidity Ratios - Current Ratio.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbila02a	Liquidity Ratios - Quick (Acid - Test) Ratio.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_sekbila03a	Liquidity Ratios - Cash Ratio.	500603	RATIOS.	YILLIK	CBRT	1		
+bie_pfvpbi08	Loans Abroad, Banking Sector (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_kmyikrhc	Domestic Loans, Banking Sector (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pbbanal1	Banking Survey (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi07	Participations and Subsidiaries, Investment and Development Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi11	Aggregated Profit_Loss Accounts, Investment and Development Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi06	Participations and Subsidiaries, Paticipation Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi10	Aggregated Profit_Loss Accounts, Deposit Money Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi01	Foreign Assets and Foreign Liabilities, Central Bank (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	CBRT	1		
+bie_pfvpbi13	Foreign Exchange Deposits By Citizens Abroad (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	CBRT	1		
+bie_pfvpbi02	Loans, Central Bank (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	CBRT	1		
+bie_pfvpbi03	Deposits (Sectoral Breakdown), Central Bank (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	CBRT	1		
+bie_pfvpbi04	Deposits (Deposit Types), Central Bank (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	CBRT	1		
+bie_pbtablo4	Sectoral Balance Sheet, Central Bank (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi05	Participations and Subsidiaries, Deposit Money Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi12	Aggregated Profit_Loss Accounts, Participation Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_kmmbtcz	Securities (Security Types), Deposit Money Banks (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_pfvpbi09	Banking Sector and Sdif Past_Due Loans (Archive)	9998004	MONEY AND BANKING STATISTICS (MONTHLY) (ARCHIVE)	AYLIK	BANKS	1		
+bie_sekbilac02a	Turnover Ratios - Receivables Turnover	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilay01a	Turnover Ratios - Debt Turnover	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilac03a	Turnover Ratios - Current Assets Capital Turnover	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilab14a	Ratios of Financial Position - Bank Loans / Total Loans	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilab15a	Ratios of Financial Position - Current Assets / Total Assets	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilab13a	Ratios of Financial Position - Short - Term Bank Loans / Short - Term Liabilities	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilab16a	Ratios of Financial Position - Tangible Fixed Assets (Net) / Total Assets	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilab02a	Ratios of Financial Position - Shareholders Equity / Total Assets	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilab01a	Ratios of Financial Position - Total Loans / Total Assets (Leverage Ratio)	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilad02b	Profitability Ratios - Gross Profit / Net Sales	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilad02e	Profitability Ratios - Operating Expens / Net Sales	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilad02a	Profitability Ratios - Operating Profit / Net Sales	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilad02f	Profitability Ratios - Financial Expenses / Net Sales	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilad01d	Profitability Ratios - Net Profit / Total Assets	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilad02c	Profitability Ratios - Net Profit / Net Sales	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilaa01a	Liquidity Ratios - Current Ratio	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilaa02a	Liquidity Ratios - Quick (Acid - Test) Ratio	500403	RATIOS	YILLIK	CBRT	1		
+bie_sekbilaa03a	Liquidity Ratios - Cash Ratio	500403	RATIOS	YILLIK	CBRT	1		
+bie_uypucayarsiv	International Investment Position Quarterly (Archive)	9997003	DIRECT INVESTMENT (ARCHIVE)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbsdds	Gross External Debt - All Sectors - By Instrument	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbborclu	Gross External Debt - All Sectors - By Debtor	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbalacaklitp	Gross External Debt - All Sectors - By Creditor	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbalckamu	Gross External Debt - Public Sector - By Creditor	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbalctcmb	Gross External Debt - CBRT - By Creditor	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbalcozel	Gross External Debt - Private Sector - By Creditor	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdbdovkomp	Gross External Debt - Currency Composition	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_netdisborc	Net External Debt Position	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_brutdborcozel	Outstanding Loans and Debt Securities Received from Abroad by Private Sector - By borrower	400403	EXTERNAL DEBT STATISTICS of TÜRKİYE (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_rktufey	CPI Based Real Effective Exchange Rate	2504	REAL EFFECTIVE EXCHANGE RATES (CBRT)	AYLIK	CBRT	1		
+bie_rkufey	Domestic - PPI Based Real Effective Exchange Rate	2504	REAL EFFECTIVE EXCHANGE RATES (CBRT)	AYLIK	CBRT	1		
+bie_redkurigm	Unit Labor Cost Based Real Effective Exchange Rate	2504	REAL EFFECTIVE EXCHANGE RATES (CBRT)	YILLIK	CBRT	1		
+bie_imfca	IMF - Current Account Balance Net (USD)	5501	INTERNATIONAL MONETARY FUND (IMF)	ÜÇ AYLIK	IMF	1		
+bie_imfmbm	IMF - Monetary, Broad Money, (Domestic Currency)	5501	INTERNATIONAL MONETARY FUND (IMF)	AYLIK	IMF	1		
+bie_imfgdpn	IMF - GDP, Nominal (Domestic Currency)	5501	INTERNATIONAL MONETARY FUND (IMF)	ÜÇ AYLIK	IMF	1		
+bie_imfgdpr	IMF - GDP, Real (Domestic Currency)	5501	INTERNATIONAL MONETARY FUND (IMF)	ÜÇ AYLIK	IMF	1		
+bie_imfgdpusdn	IMF - GDP, Nominal (Billions of U.S. dollars)	5501	INTERNATIONAL MONETARY FUND (IMF)	YILLIK	IMF	1		
+bie_imfgdpusdpc	IMF - GDP, Nominal, Per Capita (USD)	5501	INTERNATIONAL MONETARY FUND (IMF)	YILLIK	IMF	1		
+bie_imfcpind	IMF - Consumer Price Index (2010=100)	5501	INTERNATIONAL MONETARY FUND (IMF)	AYLIK	IMF	1		
+bie_imfiip	IMF - Net International Investment Position	5501	INTERNATIONAL MONETARY FUND (IMF)	ÜÇ AYLIK	IMF	1		
+bie_tedavuladt	Banknotes in Circulation By Denomination (Number)	3502	BANKNOTES IN CIRCULATION (CBRT)	AYLIK	CBRT	1		
+bie_tedavultut	Banknotes in Circulation By Denomination (Amount TRY)	3502	BANKNOTES IN CIRCULATION (CBRT)	AYLIK	CBRT	1		
+bie_mbtkeg	Consumer Tendency Survey (Archive)	9991003	CONSUMER TENDENCY SURVEY (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_mbgven	Consumer Confidence Index and Indices of Consumer Tendency Survey Questions (Archive)	9991003	CONSUMER TENDENCY SURVEY (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_kfe	Residential Property Price Index	2003	RESIDENTIAL PROPERTY PRICE INDEX (CBRT)	AYLIK	CBRT	1		
+bie_ykfe	Residential Property Price Index for New Dwellings	2003	RESIDENTIAL PROPERTY PRICE INDEX (CBRT)	AYLIK	CBRT	1		
+bie_yokfend	Residential Property Price Index for Existing Dwellings	2003	RESIDENTIAL PROPERTY PRICE INDEX (CBRT)	AYLIK	CBRT	1		
+bie_birimfiyat	Housing Unit Prices	2003	RESIDENTIAL PROPERTY PRICE INDEX (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_ykke	New Tenant Rent Index	2003	RESIDENTIAL PROPERTY PRICE INDEX (CBRT)	AYLIK	CBRT	1		
+bie_bk	Unit Rents of Appraised Residential Properties	2003	RESIDENTIAL PROPERTY PRICE INDEX (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_kbkborc	Public Sector Borrowing Requirement (MOD) (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	YILLIK	Republic of Türkiye Ministry of Development	1		
+bie_kamuborcy	Public Sector Borrowing Requirement (SBO) (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	YILLIK	Presidency of Republic of the Türkiye, Presidency of Strategy and Budget	1		
+bie_kbkons	Consolidated Budget (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_kbgelir	Consolidated Budget Revenues (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_kbgely	Consolidated Budget Revenues_New Description (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_kbkony	Consolidated Budget Realizations_New Description (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_kbgider	Consolidated Budget Expenditures (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_kbgidy	Consolidated Budget Expenditures_New Description (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_kbgidf	Cross Classification Of Functional and Economic Classifications Of Cumulative Expenses (Archive)	9992003	PUBLIC FINANCE STATISTICS (ARCHIVE)	AYLIK	Ministry of Treasury and Finance	1		
+bie_hanebek	Household Expectations Statistics	1007	HOUSEHOLD EXPECTATIONS SURVEY (CBRT)	AYLIK	CBRT, TURKSTAT	1		
+bie_hanebekdemog	Results in Demographic Breakdown	1007	HOUSEHOLD EXPECTATIONS SURVEY (CBRT)	AYLIK	CBRT, TURKSTAT	1		
+bie_hanebekdag	Distributions of Households’ Inflation Expectations	1007	HOUSEHOLD EXPECTATIONS SURVEY (CBRT)	AYLIK	CBRT, TURKSTAT	1		
+bie_ydosbayazdeg	Eurobond Issued by Other Than General Government, Face Value	450305	DEBT SECURITIES ISSUED ABROAD BY SECTORS OTHER THAN GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_ydosbapiydeg	Eurobond Issued by Other Than General Government, Market Value	450305	DEBT SECURITIES ISSUED ABROAD BY SECTORS OTHER THAN GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_ydosbavade	Eurobond Issued by Other Than General Government, By Maturity	450305	DEBT SECURITIES ISSUED ABROAD BY SECTORS OTHER THAN GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_uretcryil	Gross Domestic Product - Production Approach, By Economic Activity (A21), Current Prices	150703	ANNUAL GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	YILLIK	TURKSTAT	1		
+bie_uretzincyil	Gross Domestic Product - Production Approach, By Economic Activity (A21), Chained Volume	150703	ANNUAL GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	YILLIK	TURKSTAT	1		
+bie_uretmkb	Gross Domestic Product per Capita, Production Method, Current Prices	150703	ANNUAL GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	YILLIK	TURKSTAT	1		
+bie_uretmeacari	Gross Domestic Product - Production Approach, Seasonally Adjusted, Current Prices	150203	GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyhuretcar	Gross Domestic Product - Production Approach, By Economic Activity (A10), Current Prices	150203	GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_uretmtazincr	Gross Domestic Product - Production Approach , Seasonally and Calendar Adjusted Chained Volume Index (2009=100)	150203	GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyhuretzinc	Gross Domestic Product - Production Approach, By Economic Activity (A10), Chained Volume	150203	GROSS DOMESTIC PRODUCT BY PRODUCTION APPROACH	ÜÇ AYLIK	TURKSTAT	1		
+bie_intm2	Intermediate Goods	100303	MAIN INDUSTRY GROUPINGS	AYLIK	CBRT	1		
+bie_cdur2	Durable Consumer Goods	100303	MAIN INDUSTRY GROUPINGS	AYLIK	CBRT	1		
+bie_cndu2	Non-Durable Consumer Goods	100303	MAIN INDUSTRY GROUPINGS	AYLIK	CBRT	1		
+bie_cons2	Consumer Goods	100303	MAIN INDUSTRY GROUPINGS	AYLIK	CBRT	1		
+bie_fobe2	Food & Beverages	100303	MAIN INDUSTRY GROUPINGS	AYLIK	CBRT	1		
+bie_inve2	Investment Goods	100303	MAIN INDUSTRY GROUPINGS	AYLIK	CBRT	1		
+bie_istirakbs	Participations and Subsidiaries - Banking Sector	450108	PARTICIPATIONS AND SUBSIDIARIES	AYLIK	BANKS	1		
+bie_mbblnca	Central Bank Balance Sheet (New)	3003	CENTRAL BANK BALANCE SHEET	AYLIK	CBRT	1		
+bie_kbicborc	Domestic Debt Stock	1505	DOMESTIC DEBT STATISTICS (MoFT)	AYLIK	Republic of Türkiye Ministry of Treasury and Finance	1		
+bie_finhestnks7101	S.1 Total Economy (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks71011	S.11 Non-financial Corporations (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks71012	S.12 Financial Corporations (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS, CBRT, CMB, CRA, Settlement and Custody Bank, INTERMEDIARY ASSOCIATION, BRSA, BIST,  Insurance and Private Pension Regulation and Supervision Authority , Agricultural İnsurance Pool	1		
+bie_finhestnks71012t	S.121 + S.122 + S.123 Monetary Financial Institutions (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS, CBRT, CRA, Settlement and Custody Bank	1		
+bie_finhestnks710121	S.121 CBRT (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks710122	S.122 Deposit Taking Corporations (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS	1		
+bie_finhestnks710123	S.123 Money Market Funds (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks710124	S.124 Non-MMF Investment Funds (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks710125	S.125 Other Financial Intermediaries (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Intermediary Association, BRSA	1		
+bie_finhestnks710126	S.126 Financial Auxiliaries (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	BRSA, CMB, BIST, CRA	1		
+bie_finhestnks710127	S.128 + S.129 Insurance Corporations and Pension Funds (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,  Agricultural İnsurance Pool,  Settlement and Custody Bank	1		
+bie_finhestnks710128	S.128 Insurance Corporations (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,   Agricultural İnsurance Pool	1		
+bie_finhestnks710129	S.129 Pension Funds (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks71013	S.13 General Government (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks7101311	S.1311 Central Government (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks7101313	S.1313 Local Governments (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks7101314	S.1314 Social Security Institutions (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks71014	S.14 Households (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	Counter Sector Data	1		
+bie_finhestnks71015	S.15 Non-Profit Institutions Serving Households (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks7102	S.2 Rest of The World (Consolidated, Stock)	450703	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, STOCK	ÜÇ AYLIK	BANKS, CBRT	1		
+bie_imdgkkr	Index Of Real Earning Per Other Worker In Manufacturing Industry (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_imurkkr	Index Of Real Earning Per Production Worker In Manufacturing Industry (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_imdgkk	Index Of Earning Per Other Worker In Manufacturing Industry (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_imurkk	Index Of Earning Per Production Worker In Manufacturing Industry (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_imurkv	Index Of Partial Productivity Per Production Worker (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_imursv	Index Of Partial Productivity Per Production Hour Worked (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_ursany	Production Amounts Of Selected Industrial Goods (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_ursan97	Production Amounts Of Selected Industrial Goods 2005 - 2008 (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_ursanayi2	Production Of Selected Industrial Goods (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_sanayrev11	Turkstat - Industrial Production Index - Seasonal and Calendar Adjusted (2015=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_ururetim4	Industrial Production Index (1992=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_urur3ay	Industrial Production Index (1997=100) 1980 - 2006 (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_tsanay	Industrial Production Index (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tsny05	Industrial Production Index (2005=100) (Nace Rev.1.1) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tsny05n2	Industrial Production Index (2005=100) (Nace Rev.2) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tsny2010	Industrial Production Index (2010=100) (Nace Rev.2) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_sanayrev4	Turkstat - Industrial Production Index (2015=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_ackap	Firms Statistics_Newly Established and Liquidated (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_imursur	Index Of Real Wages Per Production Hour Worked In Manufacturing Industry (1997=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_urkisi	Index Of Production Per Person Employed (2005=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_urkisi10	Index Of Production Per Person Employed (2010=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	Republic of Türkiye Ministry of Industry and Technology	1		
+bie_urkisi15	Index of Production Per Person Employed (2015=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	Republic of Türkiye Ministry of Industry and Technology	1		
+bie_ursaat	Index Of Production Per Hour Worked (2005=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_ursaat10	Index of Production Per Hour Worked (2010=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	Republic of Türkiye Ministry of Industry and Technology	1		
+bie_ursaat15	Index of Production Per Hour Worked (2015=100) (Archive)	9999003	OTHER PRODUCTION-RELATED DATA (ARCHIVE)	ÜÇ AYLIK	Republic of Türkiye Ministry of Industry and Technology	1		
+bie_mt210as	Effective Maximum Interest Rates on Deposits of Banks	450503	MAXIMUM INTEREST RATES PUBLISHED ON LEGAL REQUIREMENT	AYLIK	Deposit Banks	1		
+bie_mt210ak	Effective Maximum Interest Rates on Deposits of State Banks	450503	MAXIMUM INTEREST RATES PUBLISHED ON LEGAL REQUIREMENT	AYLIK	Deposit Banks	1		
+bie_kt210aisl	Banks Effective Maximum Interest Rate on Business Loans	450503	MAXIMUM INTEREST RATES PUBLISHED ON LEGAL REQUIREMENT	AYLIK	Deposit, Development and Investment Banks	1		
+bie_iyabgs2s	Firms with Less Than 250 Employees	100304	NUMBER OF EMPLOYEES	AYLIK	CBRT	1		
+bie_iyabgs3s	Firms with 250 to 499 Employees	100304	NUMBER OF EMPLOYEES	AYLIK	CBRT	1		
+bie_iyabgs4s	Firms with 500 or More Employees	100304	NUMBER OF EMPLOYEES	AYLIK	CBRT	1		
+bie_fgtopfiy4	Wholesale Prices Index (1987=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_fgtopfiy5	Wholesale Prices Index (1994=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tukfiy4	Consumer Price Index (2003=100) (Archive) (Archive) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tukfiy1	Consumer Price Index (1978_1979=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_feoktg	Indicators For The CPIs Having Specified Coverage (2003=100) (Archive) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_fgtukfiy2	Consumer Price Index (1987=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_fgtukfiy3	Consumer Price Index (1994=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tuksehir	Consumer Price Index By Region and Province (1994=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tuksehir2	Consumer Price Index and Indices By Regions (2003=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tufe1	Producer Price Index (2003=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_toktg	Price Index_Indicators For The CPI's Having Specified Coverages (2003=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tcbf	Housing Unit Prices (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_tkfe	Residential Property Price Index (RPPI) (2010=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_hkfe	Residential Property Price Index (RPPI) (2017=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_tykfe	Residential Property Price Index For New Dwellings (NRPPI) (2010=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_thedonikykfe	Residential Property Price Index For New Dwellings (NRPPI) (2017=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_yokfe	Residential Property Price Index For Existing Dwellings (ERPPI) (2010=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_thedonikyokfe	Residential Property Price Index For Existing Dwellings (ERPPI) (2017=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	CBRT	1		
+bie_tuufe	Producer Price Index Of Agriculture Products (2010=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_topfiy1	Wholesale Prices Index (1981=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_tuufey	Producer Price Index of Agriculture Products (2015=100) (Archive)	99940	PRICE INDICES (ARCHIVE)	AYLIK	TURKSTAT	1		
+bie_yohyituk	Final Consumption Expenditure Of Resident and Non_Resident Households In Current and Fixed (1998) Prices (New Series) (Archive)	99940	PRICE INDICES (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_dkdovytl	Exchange Rates	2501	CENTRAL BANK EXCHANGE RATES	GÜNLÜK	CBRT	1		
+bie_dkefkytl	Effective Exchange Rates	2501	CENTRAL BANK EXCHANGE RATES	GÜNLÜK	CBRT	1		
+bie_dkkurbil	Non-Convertible Exchange Rates	2501	CENTRAL BANK EXCHANGE RATES	GÜNLÜK	CBRT	1		
+bie_kmkhac	Banking Sector Credit Volume_Excluding Participation Banks (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_byybil	Selected Balance Sheet Sizes Related to Residents in Turkey - Banks' Foreign Branches (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_dibsh	Domestic and Foreign Non-Bank Settlements and All Foreign Settlements Owned by the State Domestic Debt Securities (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	CBRT, TAKASBANK, BANKS	1		
+bie_finkre	Finance Companies Credit Volume (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kybtkov	Investment and Development Banks Consumer Loans (By Original Maturity) (TRY+FX) (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kybtkttk	Investment and Development Banks Consumer Loans and Commercial Installment Loans (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kbsecbil	Selected Balance Sheet Items Of Participation Banks (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kbtukkre	Participation Banks' Consumer Loans (By Original Maturity) (TRY+FX) (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kredi	Loans - Banking Sector (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS, CBRT	1		
+bie_bftukkre	Loans - Banks and Finance Companies (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS, FINANCING COMPANIES	1		
+bie_menkul	Securities - Banking Sector (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_mvbdp	Currency Composition Of Foreign Exchange Deposits Of Residents With Deposit Money Banks and Participation Banks (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_vdkre	Deposit Money Banks Consumer Loans (By Originial Maturity) (TRY+Fx) (In TRY) (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kmkart	Deposit Money Banks Consumer Loans, Commercial Installment Loans and Credit Cards (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kmbmcz	Deposit Money Banks' and Investment and Development Banks' Sec. At Fair Value Thr. Profit Or Loss and Securities Available For Sale (By Type Of Securities) (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kmmenk	Deposit Money Banks' and Investment and Development Banks' Investment Securities To Be Held Till Maturity_By Type Of Securities (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_kmmbmev	Deposits With Deposit Money Banks (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_bmcuzb	Deposit Money Banks' Sec. At Fair Value Thr. Profit Or Loss and Securities Available For Sale (By Bank Groups and Type Of Securities) (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_mbbmdc	Deposit Money Banks Investment Securities To Be Held Till Maturity_By Bank Groups and Type Of Securities (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_mevduat	Deposits - Banking Sector (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_prarz	Monetary Aggregates (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS, CBRT, Settlement and Custody Bank, CRA, Ministry of Treasury and Finance	1		
+bie_bosecbil	Selected Balance Sheet Items - Banking Sector (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_tukkre	Consumer Loans (By Original Maturity) - Banking Sector (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_ypmevd	Foreign Exchange Deposits - Banking Sector (Archive)	9998006	MONEY AND BANKING STATISTICS (WEEKLY) (ARCHIVE)	HAFTALIK(CUMA)	BANKS	1		
+bie_senfbek	Sectoral Inflation Expectations (Archive)	9991004	SECTORAL INFLATION EXPECTATIONS (ARCHIVE)	AYLIK	CBRT, TURKSTAT	1		
+bie_kisavadeborcarsiv	Short_Term External Debt Stock By Borrower (Archive)	9997004	SHORT-TERM EXTERNAL DEBT (ARCHIVE)	AYLIK	CBRT	1		
+bie_kvdbsarsiv	Short_Term External Debt Stock (Archive)	9997004	SHORT-TERM EXTERNAL DEBT (ARCHIVE)	AYLIK	CBRT	1		
+bie_reesavans	Rediscount and Advance Interest Rates	450504	REDISCOUNT AND ADVANCE INTEREST RATES (CBRT)	GÜNLÜK	CBRT	1		
+bie_tarimufe	Agricultural Products Producer Price Index	2008	AGRICULTURAL PRODUCTS PRODUCER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_yisgucu2	Main Labour Force Indicators	1501	LABOR FORCE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_tisguc	Main Labour Force Indicators (Seasonally Adjusted)	1501	LABOR FORCE STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_finhestnks6101	S.1 Total Economy (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks61011	S.11 Non-financial Corporations (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks61012	S.12 Financial Corporations (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS, CBRT, CMB, CRA, Settlement and Custody Bank, INTERMEDIARY ASSOCIATION, BRSA, BIST,  Insurance and Private Pension Regulation and Supervision Authority , Agricultural İnsurance Pool	1		
+bie_finhestnks61012t	S.121 + S.122 + S.123 Monetary Financial Institutions (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS, CBRT, CRA, Settlement and Custody Bank	1		
+bie_finhestnks610121	S.121 CBRT (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	CBRT	1		
+bie_finhestnks610122	S.122 Deposit Taking Corporations (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS	1		
+bie_finhestnks610123	S.123 Money Market Funds (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks610124	S.124 Non-MMF Investment Funds (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks610125	S.125 Other Financial Intermediaries (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Intermediary Association, BRSA	1		
+bie_finhestnks610126	S.126 Financial Auxiliaries (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	BRSA, CMB, BIST, CRA	1		
+bie_finhestnks610127	S.128 + S.129 Insurance Corporations and Pension Funds (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,  Agricultural İnsurance Pool,  Settlement and Custody Bank	1		
+bie_finhestnks610128	S.128 Insurance Corporations (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Insurance and Private Pension Regulation and Supervision Authority ,   Agricultural İnsurance Pool	1		
+bie_finhestnks610129	S.129 Pension Funds (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	CRA, Settlement and Custody Bank	1		
+bie_finhestnks61013	S.13 General Government (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks6101311	S.1311 Central Government (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks6101313	S.1313 Local Governments (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks6101314	S.1314 Social Security Institutions (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_finhestnks61014	S.14 Households (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	Counter Sector Data	1		
+bie_finhestnks61015	S.15 Non-Profit Institutions Serving Households (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	TURKSTAT, Counter Sector Data	1		
+bie_finhestnks6102	S.2 Rest of The World (Consolidated, Flow)	450704	FINANCIAL ASSETS AND LIABILITIES, CONSOLIDATED, FLOW	ÜÇ AYLIK	BANKS, CBRT	1		
+bie_urgsmhc	GNP and GDP at Current Prices (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_urgsmhq	GNP and GDP at Fixed (1987) Prices (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_urhkisi	GNP and GDP Per Capita (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	YILLIK	TURKSTAT	1		
+bie_urgsyih	Gross Domestic Product by Regions and Province_In Current & 1987 Prices (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	YILLIK	TURKSTAT	1		
+bie_gsyihhy	GDP_Expenditure Based (At Current and Fixed (1998) Prices) (New Series) (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_gsyihtf	GDP_By Kind Of Economic Activity in Basic Prices (At Current and Fixed (1998) Prices) (New Series) (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	ÜÇ AYLIK	TURKSTAT	1		
+bie_urgsyih2	Gross Domestic Product by Statistical Regions (Nuts 2) (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	YILLIK	TURKSTAT	1		
+bie_urgsyih3	Gross Domestic Product by Statistical Regions (Nuts 3) (Archive)	9992004	QUATERLY GROSS DOMESTIC PRODUCT (ARCHIVE)	YILLIK	TURKSTAT	1		
+bie_pyrepo	Open Market Repo and Reverse Repo Transactions	3002	MARKETS DATA	AYLIK	CBRT	1		
+bie_rtrnr	Repo and Reverse Repo Operations	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_bisttlref	Turkish Lira Overnight Reference Rate (BIST-TLREF)	3002	MARKETS DATA	İŞ GÜNÜ	Borsa İstanbul	1		
+bie_ppibsm	Free Deposits of Banks and Total Liquidity (Beginning of The Day)	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_pyintbnk	Interbank Money Market Transactions Summary	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_tldov	Foreign Exchange Transaction Volumes of Banks in Turkish Lira Equivalents	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_mkbrgn	Borsa Istanbul Index and Daily Trading Volume	3002	MARKETS DATA	İŞ GÜNÜ	Istanbul Stock Exchange	1		
+bie_onrepofbap	Borsa Istanbul Overnight Repo Rates	3002	MARKETS DATA	İŞ GÜNÜ	Istanbul Stock Exchange	1		
+bie_pydibs	Indicative Values of Government Domestic Debt Instruments	3002	MARKETS DATA	GÜNLÜK	CBRT	1		
+bie_pydovef	Foreign and Effective Exchange Rate Market Transactions	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_apifon	CBRT Net Funding and Weighted Average Funding Cost	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_fxswap	Foreign Exchange Deposits Against Turkish Lira Deposits Auctions	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_swaptektarf	CBRT Swap Transactions	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_tluzvdov	Turkish Lira-Settled Forward Foreign Exchange Transactions	3002	MARKETS DATA	İŞ GÜNÜ	CBRT	1		
+bie_krehacbs	Loans - Banking Sector	450105	LOANS	AYLIK	Banks	1		
+bie_kmkykre	Loans - Investment and Development Banks	450105	LOANS	AYLIK	BANKS	1		
+bie_kbkmkre	Loans - Participation Banks	450105	LOANS	AYLIK	BANKS	1		
+bie_kmmbkre	Loans - Deposit Money Banks	450105	LOANS	AYLIK	BANKS	1		
+bie_odeayrsunum6	Balance of Payments Developments-Detailed Presentation	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_odana6	Balance of Payments Developments-Analytic Presentation	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_oderoll	Roll-Over Ratio	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_hariccariacik	Current Account, Non-Monetary Gold and Energy Foreign Trade	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	TURKSTAT, CBRT	1		
+bie_dbafod	Debt Service and Other Transfers	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	HAFTALIK(ÇARŞAMBA)	BANKS	1		
+bie_todeapara	Loan Repayment - Principal	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_todedfaiz	Loan Repayment - Interest	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_tevdsuv	Long Term Credit Disbursements by Borrower	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_odeydiebs	Debt Securities Issued Abroad	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	CBRT	1		
+bie_sgegi	Travel Incomes and Expenses	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	TURKSTAT	1		
+bie_odemgzs	Tourists by Nationalities	4001	BALANCE OF PAYMENTS STATISTICS (CBRT)	AYLIK	Republic of Türkiye Ministry of Culture and Tourism	1		
+bie_yiosbayazdeg	Debt Securities Issued by Other Than General Government, Face Value	450304	DOMESTIC DEBT SECURITIES ISSUED BY SECTORS OTHER THAN GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Borsa İstanbul	1		
+bie_yiosbapiydeg	Debt Securities Issued by Other Than General Government, Market Value	450304	DOMESTIC DEBT SECURITIES ISSUED BY SECTORS OTHER THAN GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Borsa İstanbul	1		
+bie_yiosbavade	Debt Securities Issued by Other Than General Government, By Maturity	450304	DOMESTIC DEBT SECURITIES ISSUED BY SECTORS OTHER THAN GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, Central Registry Agency, Borsa İstanbul	1		
+bie_sekbilypgn	Credits To The Sector - Credits in Non-Cash (Fx).	500604	SECTOR RISK.	YILLIK	CBRT	1		
+bie_sekbiltpgn	Credits To The Sector - Credits in Non-Cash (TRL).	500604	SECTOR RISK.	YILLIK	CBRT	1		
+bie_sekbiltpn	Credits To The Sector - Credits in Cash (TRL).	500604	SECTOR RISK.	YILLIK	CBRT	1		
+bie_sekbilypn	Credits To The Sector - Credits in Cash (Fx).	500604	SECTOR RISK.	YILLIK	CBRT	1		
+bie_sekbiltga	Credits To The Sector - Bad Debts.	500604	SECTOR RISK.	YILLIK	CBRT	1		
+bie_sekbilatpgn	Credits To The Sector - Credits in Non-Cash (TRL)	500404	SECTOR RISK	YILLIK	CBRT	1		
+bie_sekbilaypgn	Credits To The Sector - Credits in Non-Cash (Fx)	500404	SECTOR RISK	YILLIK	CBRT	1		
+bie_sekbilatpn	Credits To The Sector - Credits in Cash (TRL)	500404	SECTOR RISK	YILLIK	CBRT	1		
+bie_sekbilaypn	Credits To The Sector - Credits in Cash (Fx)	500404	SECTOR RISK	YILLIK	CBRT	1		
+bie_sekbilatga	Credits To The Sector - Bad Debts	500404	SECTOR RISK	YILLIK	CBRT	1		
+bie_tarimgfe	Agricultural Input Price Index	2009	AGRICULTURAL INPUT PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_kmbscz	Securities - Banking Sector	450107	SECURITIES	AYLIK	BANKS	1		
+bie_kmmbkcz	Securities (Sectoral Breakdown) - Deposit Money Banks	450107	SECURITIES	AYLIK	BANKS	1		
+bie_turizmgelgit	Tourism Revenue and Expenditure	4006	TOURISM STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_turizmyzs	Outbound Travellers	4006	TOURISM STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_turizmzyvs	Inbound Visitors	4006	TOURISM STATISTICS (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_turizmyzsy	Number of Outbound Visitors – Country Breakdown	4006	TOURISM STATISTICS (TURKSTAT)	ÜÇ AYLIK	TURKSTAT	1		
+bie_pkauo	Modified Mean	1004	SURVEY OF MARKET PARTICIPANTS (CBRT)	AYLIK	CBRT	1		
+bie_urbek	Descriptive Statistics	1004	SURVEY OF MARKET PARTICIPANTS (CBRT)	AYLIK	CBRT	1		
+bie_bekodtufeyeni	Probability Distributions of Consumer Inflation Expectations	1004	SURVEY OF MARKET PARTICIPANTS (CBRT)	AYLIK	CBRT	1		
+bie_odoz3	Balance Of Payments Analytic Presentation (Bpm5) (Archive)	9997005	BALANCE OF PAYMENTS STATISTICS (ARCHIVE)	AYLIK	CBRT	1		
+bie_odayr5	Balance Of Payments Detailed Presentation (Bpm5) (Archive)	9997005	BALANCE OF PAYMENTS STATISTICS (ARCHIVE)	AYLIK	CBRT	1		
+bie_odeayrsunumarsv	Balance Of Payments Detailed Presentation (Bpm6) (Archive)	9997005	BALANCE OF PAYMENTS STATISTICS (ARCHIVE)	AYLIK	CBRT	1		
+bie_odod3	Balance Of Payments Detailed Presentation (Archive)	9997005	BALANCE OF PAYMENTS STATISTICS (ARCHIVE)	AYLIK	CBRT	1		
+bie_yyoibsnu	Domestic Debt Securities Issued By Private Sector (Nominal Value, Stock) (Archive)	9997005	BALANCE OF PAYMENTS STATISTICS (ARCHIVE)	HAFTALIK(CUMA)	CBRT, REUTERS, CRA	1		
+bie_ebondyazdeg	Eurobond Issued by General Goverment, Face Value	450303	DEBT SECURITIES ISSUED ABROAD BY GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, TAKASBANK, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_ebondpiydeg	Eurobond Issued by General Goverment, Market Value	450303	DEBT SECURITIES ISSUED ABROAD BY GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, TAKASBANK, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_ebondvade	Eurobond Issued by General Government, Maturity and Market Value	450303	DEBT SECURITIES ISSUED ABROAD BY GENERAL GOVERNMENT	HAFTALIK(CUMA)	CBRT, TAKASBANK, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions,Commercial Data Providers’ Database	1		
+bie_pyascog	Portfolio Investment Assets in Foreign Securities-Geographical Allocation	4002	INTERNATIONAL INVESTMENT POSITION (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_pyasens	Residents' Portfolio Investment Assets in Foreign Securities - By Instrument	4002	INTERNATIONAL INVESTMENT POSITION (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_uypucay	International Investment Position	4002	INTERNATIONAL INVESTMENT POSITION (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_pyamevd	Non-Residents' Deposit Accounts in Türkiye	4002	INTERNATIONAL INVESTMENT POSITION (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_mknethar	Securities Portfolio Held By Non-Residents	450301	SECURITIES PORTFOLIO HELD BY NON-RESIDENTS	HAFTALIK(CUMA)	CBRT, TAKASBANK, Central Registry Agency, Ministry of Treasury and Finance, Domestic Banks, Intermediary Institutions, Borsa İstanbul	1		
+bie_kkm	Foreign Exchange Protected Deposit and Participation Accounts (Outstanding)	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_kmmbkmv	Deposits (Sectoral Breakdown) - Deposit Money Banks	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_kmmbtmv	Deposits (Deposit Types) - Deposit Money Banks	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_kmmbgmv	Deposits (Maturity Breakdown) - Deposit Money Banks	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_kmkbksmv	Funds Raised (Sectoral Breakdown) - Participation Banks	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_kmkbtrmv	Funds Raised (Deposit Types) - Participation Banks	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_kmkbvdmv	Funds Raised (Maturity Breakdown) - Participation Banks	450104	DEPOSITS	AYLIK	BANKS	1		
+bie_enfbek	Sectoral Inflation Expectations	1005	SECTORAL INFLATION EXPECTATIONS (CBRT)	AYLIK	CBRT, TURKSTAT	1		
+bie_tgfe	Commercial Property Price Index	2004	COMMERCIAL PROPERTY PRICE INDEX (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_dfe	Retail Property Price Index	2004	COMMERCIAL PROPERTY PRICE INDEX (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_ofe	Office Price Index	2004	COMMERCIAL PROPERTY PRICE INDEX (CBRT)	ÜÇ AYLIK	CBRT	1		
+bie_dbfy	Retail Property Unit Prices	2004	COMMERCIAL PROPERTY PRICE INDEX (CBRT)	YILLIK	CBRT	1		
+bie_obfy	Office Unit Prices	2004	COMMERCIAL PROPERTY PRICE INDEX (CBRT)	YILLIK	CBRT	1		
+bie_eftemkt	Turkish Interbank Clearing _ Rtgs & Ests Operations (Archive)	99960	PAYMENT SYSTEMS STATISTICS (ARCHIVE)	İŞ GÜNÜ	CBRT	1		
+bie_odemesis	Retail Payment System Operations (Archive)	99960	PAYMENT SYSTEMS STATISTICS (ARCHIVE)	İŞ GÜNÜ	CBRT	1		
+bie_turhar	Tourism Income & Average Expenditures By Nationalities_Ministry Of Tourism, CBRT (Archive)	9997006	TRAVEL STATISTICS (ARCHIVE)	YILLIK	TURKSTAT	1		
+bie_elektuketim	Turkey Electricity Energy (Production, Consumption, Export, Import) (TETC)	5003	OTHER  PRODUCTION-RELATED DATA	GÜNLÜK	Turkish Electricity Transmission Corporation	1		
+bie_uroto	Cars Automotive Industry Production (OSD)	5003	OTHER  PRODUCTION-RELATED DATA	AYLIK	The Automotive Manufacturers Association (OSD)	1		
+bie_tsanay2021	Industrial Production Index (TURKSTAT)	5003	OTHER  PRODUCTION-RELATED DATA	AYLIK	TURKSTAT	1		
+bie_tsanaytkvm2021	Industrial Production Index - Calendar Adjusted (TURKSTAT)	5003	OTHER  PRODUCTION-RELATED DATA	AYLIK	TURKSTAT	1		
+bie_tsanaymt2021	Industrial Production Index - Seasonal and Calendar Adjusted (TURKSTAT)	5003	OTHER  PRODUCTION-RELATED DATA	AYLIK	TURKSTAT	1		
+bie_ackap2	Statistics on Companies Established and Closed (UCCET)	5003	OTHER  PRODUCTION-RELATED DATA	AYLIK	Union of Chambers and Commodity Exchanges of Türkiye.	1		
+bie_mbgven2	Consumer Confidence Index and Consumer Tendency Indices	1006	CONSUMER TENDENCY SURVEY (TURKSTAT, CBRT)	AYLIK	TURKSTAT	1		
+bie_tukfiy2025	Consumer Price Index (2025=100)	2005	CONSUMER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_tukfiy2003	Consumer Price Index (General) (2003=100)	2005	CONSUMER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_tukfiyarnd	Consumer Price Index - Seasonal Adjusted (2025=100)	2005	CONSUMER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_tukfiyagrlk	Consumer Price Index - Weights by Main Expenditure Groups (2025=100)	2005	CONSUMER PRICE INDEX (TURKSTAT)	YILLIK	TURKSTAT	1		
+bie_oktug2025	Indicators For The CPIs Having Specified Coverage (2025=100)	2005	CONSUMER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_pbpanal2	Monetary Aggregates and Counterpart Items	450101	MONETARY AGGREGATES	AYLIK	Banks	1		
+bie_pbpanal1	Monetary Survey	450101	MONETARY AGGREGATES	AYLIK	Banks	1		
+bie_kbozgel	Privatization Revenue	1506	PRIVATIZATION REVENUES (Department of Privatization Administration)	YILLIK	Department of Privatization Administration	1		
+bie_dbdisborc	Outstanding External Debt (Ministry Of Treasury and Finance) (Archive)	9997007	GROSS EXTERNAL DEBT STOCK OF TÜRKİE (MoFT) (ARCHIVE)	ÜÇ AYLIK	Ministry of Treasury and Finance	1		
+bie_hpbitablo1	Monetary Aggregates	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks, CBRT, Settlement and Custody Bank, CRA, Ministry of Treasury and Finance	1		
+bie_kavramsal	Index of Monetary Aggregates (30.12.2005=100)	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks, CBRT, Settlement and Custody Bank, CRA, Ministry of Treasury and Finance	1		
+bie_hpbitablo2	Banking Sector Selected Balance Sheet Items (Domestic Branches)	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks, SDIF	1		
+bie_hpbitablo3	Banking Sector Turkish Lira Deposits (Domestic Branches)	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks	1		
+bie_hpbitablo4	Banking Sector Foreign Exchange Deposits (Domestic Branches)	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks	1		
+bie_hpbitablo5	Weekly Change in Foreign Exchange Deposits and Parity Effect (Domestic Branches)	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks	1		
+bie_hpbitablo6	Banking Sector Selected Loans (Domestic Branches)	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks	1		
+bie_hpbitablo7	Financing Companies' Selected Loans	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Financing Companies	1		
+bie_hpbitablo8	Selected Balance Sheet Items of Banks' Branches Abroad With Residents in Türkiye	4502	MONEY AND BANKING STATISTICS (WEEKLY) (CBRT)	HAFTALIK(CUMA)	Banks	1		
+bie_urkisi21	Production Index Per Employee	5007	PRODUCTIVITY STATISTICS (MIT)	ÜÇ AYLIK	Republic of Türkiye Ministry of Industry and Technology	1		
+bie_ursaat21	Production Index Per Hour Worked	5007	PRODUCTIVITY STATISTICS (MIT)	ÜÇ AYLIK	Republic of Türkiye Ministry of Industry and Technology	1		
+bie_abres2	Central Bank Reserves	4003	INTERNATIONAL RESERVES (CBRT)	HAFTALIK(CUMA)	CBRT	1		
+bie_rkdrk	Rediscount Credits' Contribution To FX Reserves (CBRT)	4003	INTERNATIONAL RESERVES (CBRT)	AYLIK	CBRT	1		
+bie_abreserv	Total International Reserves	4003	INTERNATIONAL RESERVES (CBRT)	AYLIK	CBRT	1		
+bie_ulusdovlkd	International Reserves and Foreign Currency Liquidity Table	4003	INTERNATIONAL RESERVES (CBRT)	AYLIK	CBRT	1		
+bie_oskvag	Short Term Loans-By Creditor (Archive)	9997008	OUTSTANDING SHORT TERM LOANS RECEIVED FROM ABROAD BY PRIVATE SECTOR (CBRT) (ARCHIVE)	AYLIK	CBRT	1		
+bie_oskvbg	Short Term Loans-By Sector (Archive)	9997008	OUTSTANDING SHORT TERM LOANS RECEIVED FROM ABROAD BY PRIVATE SECTOR (CBRT) (ARCHIVE)	AYLIK	CBRT	1		
+bie_osuvag	Long Term Loans-By Creditor (Archive)	9997008	OUTSTANDING SHORT TERM LOANS RECEIVED FROM ABROAD BY PRIVATE SECTOR (CBRT) (ARCHIVE)	AYLIK	CBRT	1		
+bie_osuvbg	Long Term Loans-By Sector (Archive)	9997008	OUTSTANDING SHORT TERM LOANS RECEIVED FROM ABROAD BY PRIVATE SECTOR (CBRT) (ARCHIVE)	AYLIK	CBRT	1		
+bie_yssk	Long Term Loans-Maturity Composition of Non-Financial Institutions (Archive)	9997008	OUTSTANDING SHORT TERM LOANS RECEIVED FROM ABROAD BY PRIVATE SECTOR (CBRT) (ARCHIVE)	AYLIK	CBRT	1		
+bie_tufe1yi	Domestic Producer Price Index	2006	DOMESTIC PRODUCER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		
+bie_zorundth	Foreign Exchange Deposits Subject To Reserve Requirements by Currency	4506	DEPOSITS AND PARTICIPATION FUNDS SUBJECT TO REQUIRED RESERVES (CBRT)	HAFTALIK(CUMA)	CBRT	1		
+bie_kybkatfon	Participation Funds Subject To Reserve Requirements	4506	DEPOSITS AND PARTICIPATION FUNDS SUBJECT TO REQUIRED RESERVES (CBRT)	HAFTALIK(CUMA)	CBRT	1		
+bie_tldthvade	Breakdown of Turkish Lira and Foreign Exchange Deposits Subject To Reserve Requirements by Maturity	4506	DEPOSITS AND PARTICIPATION FUNDS SUBJECT TO REQUIRED RESERVES (CBRT)	HAFTALIK(CUMA)	CBRT	1		
+bie_pbtop	Banking Sector Balance Sheet	450103	SECTORAL BALANCE SHEET	AYLIK	BANKS	1		
+bie_pbtablo6	Investment and Development Banks Sectoral Balance Sheet	450103	SECTORAL BALANCE SHEET	AYLIK	BANKS	1		
+bie_pbtablo8	Participation Banks Sectoral Balance Sheet	450103	SECTORAL BALANCE SHEET	AYLIK	BANKS	1		
+bie_pbtablo5	Deposit Money Banks Sectoral Balance Sheet	450103	SECTORAL BALANCE SHEET	AYLIK	BANKS	1		
+bie_ppblik	Money Market Funds Sectoral Balance Sheet	450103	SECTORAL BALANCE SHEET	AYLIK	BANKS	1		
+bie_ufeyd	Foreign Producer Price Index	2001	FOREIGN PRODUCER PRICE INDEX (TURKSTAT)	AYLIK	TURKSTAT	1		

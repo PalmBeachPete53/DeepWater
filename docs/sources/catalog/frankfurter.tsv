@@ -1,0 +1,348 @@
+kind	code	name	from	to	extra
+provider	AMCM	Autoridade Monetária de Macau	1986-01-02	2026-11-05	https://www.amcm.gov.mo/en/financial-information/interbank-midpoint
+provider	BAM	Bank Al-Maghrib	1999-01-04	2026-11-04	https://apihelpdesk.centralbankofmorocco.ma/apis
+provider	BANREP	Banco de la República	2000-01-04	2026-11-05	https://www.datos.gov.co/Econom-a-y-Finanzas/Tasa-de-Cambio-Representativa-del-Mercado-TRM/32sa-8pi3/about_data
+provider	BANXICO	Banco de México	1991-11-12	2026-11-04	https://www.banxico.org.mx/SieAPIRest/service/v1/
+provider	BBK	Deutsche Bundesbank	1948-06-21	1998-12-30	https://www.bundesbank.de/dynamic/action/en/statistics/time-series-databases/time-series-databases/745582/745582
+provider	BCB	Banco Central do Brasil	2000-01-03	2026-11-04	https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/
+provider	BCBO	Banco Central de Bolivia	2000-01-03	2026-11-05	https://www.bcb.gob.bo/?q=cotizaciones_tc
+provider	BCC	Banco Central de Cuba	2025-12-19	2026-11-05	https://api.bc.gob.cu/v1/tasas-de-cambio/activas
+provider	BCCCD	Banque Centrale du Congo	2020-10-12	2026-11-05	https://www.bcc.cd/marche-des-changes/cours-de-change
+provider	BCCH	Banco Central de Chile	1982-08-09	2026-11-04	https://si3.bcentral.cl/Siete/es/Siete/API
+provider	BCCR	Banco Central de Costa Rica	1983-01-01	2026-11-04	https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Contenedor/6
+provider	BCEAO	Banque Centrale des Etats de l'Afrique de l'Ouest	2014-01-02	2026-11-04	https://www.bceao.int/fr/cours/cours-de-reference-des-principales-devises-contre-Franc-CFA
+provider	BCP	Banco Central del Paraguay	2001-01-29	2026-11-04	https://www.bcp.gov.py/webapps/web/cotizacion/monedas
+provider	BCRA	Banco Central de la República Argentina	2000-01-03	2026-11-03	https://www.bcra.gob.ar/en/monetary-and-financial-statistics/exchange-statistics/
+provider	BCT	Banque Centrale de Tunisie	2004-12-23	2026-11-02	https://www.bct.gov.tn/bct/siteprod/cours_archive.jsp
+provider	BCU	Banco Central del Uruguay	2000-01-03	2026-11-03	https://cotizaciones.bcu.gub.uy/wscotizaciones/servlet/awsbcucotizaciones
+provider	BCV	Banco Central de Venezuela	2021-10-04	2026-11-04	https://www.bcv.org.ve/estadisticas/tipo-cambio-de-referencia-smc
+provider	BDI	Banca d'Italia	1999-01-04	2026-11-04	https://tassidicambio.bancaditalia.it/
+provider	BDL	Banque du Liban	2024-01-02	2026-11-04	https://www.bdl.gov.lb/currentrate.php
+provider	BDP	Banco de Portugal	1987-01-02	1998-12-31	https://bpstat.bportugal.pt/
+provider	BFM	Banky Foiben'i Madagasikara	2018-01-02	2026-10-26	https://www.banky-foibe.mg/admin/wp-json/bfm/cours_devises
+provider	BI	Bank Indonesia	2024-01-02	2026-11-05	https://www.bi.go.id/en/statistik/informasi-kurs/transaksi-bi/default.aspx
+provider	BIS	Bank for International Settlements	1900-01-31	2026-09-30	https://data.bis.org/topics/XRU
+provider	BM	Banco de Mocambique	2018-01-02	2026-11-04	https://www.bancomoc.mz/pt/areas-de-actuacao/mercados/mercado-cambial/
+provider	BNA	Banco Nacional de Angola	2000-01-01	2026-11-04	https://www.bna.ao/Conteudos/Mercados/listaTaxasCambioReferencia.aspx
+provider	BNM	Bank Negara Malaysia	2006-01-03	2026-11-05	https://www.bnm.gov.my/exchange-rates
+provider	BNR	Banca Națională a României	2005-01-03	2026-11-05	https://www.bnr.ro/en/561-exchange-rates
+provider	BNRRW	Banque Nationale du Rwanda	2012-01-02	2026-11-04	https://www.bnr.rw/exchangeRate
+provider	BOA	Bank of Algeria	2000-01-03	2026-10-30	https://www.bank-of-algeria.dz/donnees-historiques/
+provider	BOB	Bank of Botswana	2001-01-03	2026-11-05	https://www.bankofbotswana.bw/exchange-rates
+provider	BOC	Bank of Canada	2017-01-03	2026-11-04	https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/
+provider	BOE	Bank of England	2000-01-04	2026-11-03	https://www.bankofengland.co.uk/boeapps/database/Rates.asp?into=GBP
+provider	BOI	Bank of Israel	2000-01-03	2026-11-04	https://www.boi.org.il/en/economic-roles/statistics/foreign-exchange-market/exchange-rates/
+provider	BOJ	Bank of Japan	1998-01-05	2026-11-02	https://www.stat-search.boj.or.jp/index_en.html
+provider	BOJA	Bank of Jamaica	2006-05-01	2026-11-04	https://boj.org.jm/market/foreign-exchange/counter-rates/
+provider	BOM	Bank of Mongolia	2001-01-02	2026-11-04	https://www.mongolbank.mn/en/currency-rate-movement
+provider	BOMU	Bank of Mauritius	2001-07-03	2026-11-05	https://www.bom.mu/markets/foreign-exchange/consolidated-indicative-exchange-rates
+provider	BOT	Bank of Thailand	2002-01-02	2026-11-05	https://www.bot.or.th/en/statistics/exchange-rate.html
+provider	BOTA	Bank of Tanzania	1999-06-24	2026-11-05	https://www.bot.go.tz/exchangerate/excrates
+provider	BOZ	Bank of Zambia	2006-01-12	2026-11-04	https://www.boz.zm/average-exchange-rates
+provider	BRB	Banque de la Republique du Burundi	2024-09-02	2026-11-05	https://www.brb.bi/en/affichagetoustauxchange
+provider	BSP	Bangko Sentral ng Pilipinas	2017-11-06	2026-11-05	https://www.bsp.gov.ph/SitePages/Statistics/ExchangeRate.aspx
+provider	CBA	Central Bank of Armenia	2000-01-01	2026-11-05	https://www.cba.am/en/SitePage/ExchangeArchive.aspx
+provider	CBAR	Central Bank of the Republic of Azerbaijan	1993-11-25	2026-11-05	https://www.cbar.az/currency/rates
+provider	CBBH	Central Bank of Bosnia and Herzegovina	1998-01-06	2026-11-05	https://www.cbbh.ba/CurrencyExchange/
+provider	CBC	Central Bank of the Republic of China (Taiwan)	1993-01-05	2026-10-30	https://www.cbc.gov.tw/en/lp-4237-2.html
+provider	CBE	Central Bank of Egypt	2024-03-03	2026-11-05	https://www.cbe.org.eg/en/economic-research/statistics/cbe-exchange-rates/historical-data
+provider	CBG	Central Bank of The Gambia	2000-01-14	2026-11-05	https://www.cbg.gm/indicative-exchange-rates-latest
+provider	CBI	Central Bank of Iraq	2009-01-11	2026-11-04	https://cbi.iq/page/144
+provider	CBK	Central Bank of Kenya	2003-09-12	2026-11-05	https://www.centralbank.go.ke/forex/
+provider	CBKKW	Central Bank of Kuwait	2008-01-02	2026-11-05	https://www.cbk.gov.kw/en/monetary-policy/market-operations/exchange-rates
+provider	CBLLR	Central Bank of Liberia	2012-07-09	2026-11-04	https://www.cbl.org.lr/research/buying-selling-rates
+provider	CBM	Central Bank of Myanmar	2026-04-09	2026-11-04	https://forex.cbm.gov.mm/api/latest
+provider	CBN	Central Bank of Nigeria	2001-12-11	2026-11-04	https://www.cbn.gov.ng/rates/exchratebycurrency.asp
+provider	CBO	Central Bank of Oman	2017-10-15	2026-11-05	https://cbo.gov.om/Pages/DFESearch.aspx
+provider	CBR	Central Bank of Russia	1999-01-05	2026-11-04	https://www.cbr.ru/eng/currency_base/daily/
+provider	CBS	Central Bank of Samoa	2008-01-03	2026-11-04	https://cbs.gov.ws/daily-exchange-rates
+provider	CBSL	Central Bank of Sri Lanka	2011-01-20	2026-11-05	https://www.cbsl.gov.lk/en/rates-and-indicators/exchange-rates/daily-indicative-exchange-rates
+provider	CBSSC	Central Bank of Seychelles	2000-01-04	2026-11-05	https://www.cbs.sc/marketinfo/CAR.html
+provider	CBTT	Central Bank of Trinidad and Tobago	1991-01-31	2026-11-04	https://www.central-bank.org.tt/statistics/data-centre/
+provider	CBU	Central Bank of Uzbekistan	1994-07-01	2026-10-22	https://cbu.uz/en/arkhiv-kursov-valyut/json/
+provider	CBVS	Centrale Bank van Suriname	2009-09-01	2026-10-13	https://www.cbvs.sr/statistieken/financiele-markten-statistieken/dagelijkse-publicaties
+provider	CFETS	China Foreign Exchange Trade System	2006-01-04	2026-11-05	https://www.chinamoney.com.cn/english/bmkcpr/
+provider	CM	Coin Metrics	2010-07-18	2026-11-04	https://coinmetrics.io/community-network-data/
+provider	CNB	Czech National Bank	1991-01-01	2026-11-05	https://api.cnb.cz/cnbapi/swagger-ui.html
+provider	DAB	Da Afghanistan Bank	2019-04-08	2026-11-05	https://www.dab.gov.af/exchange-rates
+provider	DNB	Danmarks Nationalbank	1977-01-03	2026-11-03	https://www.nationalbanken.dk/en/what-we-do/stable-prices-monetary-policy-and-the-danish-economy/exchange-rates
+provider	ECB	European Central Bank	1999-01-04	2026-11-04	https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
+provider	ESTV	Swiss Federal Tax Administration	2018-01-02	2026-11-03	https://www.ictax.admin.ch/extern/en.html#/ratelist
+provider	FBIL	Financial Benchmarks India	2018-07-10	2026-10-29	https://www.fbil.org.in/#/refrates
+provider	FRED	Federal Reserve Bank of St. Louis	1971-01-04	2026-10-30	https://www.federalreserve.gov/releases/h10/
+provider	HKMA	Hong Kong Monetary Authority	1981-01-02	2026-10-31	https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/
+provider	HMRC	HM Revenue & Customs	2021-01-01	2026-11-01	https://www.trade-tariff.service.gov.uk/exchange_rates/monthly
+provider	HNB	Hrvatska Narodna Banka	2023-01-01	2026-11-05	https://api.hnb.hr/
+provider	IMF	International Monetary Fund	2003-04-01	2026-11-04	https://www.imf.org/external/np/fin/ert/GUI/Pages/CountryDataBase.aspx
+provider	INFOREURO	European Commission	1994-03-01	2026-11-01	https://commission.europa.eu/funding-and-tenders/procedures-guidelines-tenders/information-contractors-and-beneficiaries/exchange-rate-inforeuro_en
+provider	JPC	Japan Customs	2002-01-06	2026-11-08	https://www.customs.go.jp/tetsuzuki/kawase/
+provider	JVCEA	Japan Virtual and Crypto assets Exchange Association	2020-05-01	2026-11-04	https://jvcea.or.jp/statistics/refer_rate/
+provider	LB	Lietuvos Bankas	1993-06-25	2026-11-04	https://www.lb.lt/webservices/FxRates/FxRates.asmx
+provider	MAS	Monetary Authority of Singapore	1988-01-08	2026-11-05	https://eservices.mas.gov.sg/statistics/msb/ExchangeRates.aspx
+provider	MMA	Maldives Monetary Authority	2011-04-21	2026-11-05	https://www.mma.gov.mv/JSON/referencerates.json
+provider	MNB	Magyar Nemzeti Bank	1999-01-04	2026-11-05	https://www.mnb.hu/en/monetary-policy/the-mpc/exchange-rates
+provider	NB	Norges Bank	1999-01-04	2026-11-04	https://data.norges-bank.no/
+provider	NBC	National Bank of Cambodia	2008-01-14	2026-11-04	https://www.nbc.gov.kh/english/economic_research/exchange_rate.php
+provider	NBE	National Bank of Ethiopia	2024-10-01	2026-11-05	https://nbe.gov.et/exchange-rate/
+provider	NBG	National Bank of Georgia	2009-01-05	2026-11-05	https://nbg.gov.ge/en/monetary-policy/currency
+provider	NBK	National Bank of Kazakhstan	1999-11-17	2026-11-05	https://nationalbank.kz/en/exchangerates/ezhednevnye-oficialnye-rynochnye-kursy-valyut
+provider	NBKR	National Bank of the Kyrgyz Republic	1999-01-01	2026-11-05	https://www.nbkr.kg/index1.jsp?item=1562&lang=ENG
+provider	NBM	National Bank of Moldova	1999-01-04	2026-11-05	https://www.bnm.md/en/official_exchange_rates
+provider	NBP	Narodowy Bank Polski	2002-01-02	2026-11-05	https://nbp.pl/en/statistic-and-financial-reporting/rates/
+provider	NBRB	Natsyyanalny Bank Respubliki Belarus	2016-07-01	2026-11-05	https://www.nbrb.by/engl/statistics/rates/ratesdaily.asp
+provider	NBRM	Narodna Banka na Republika Severna Makedonija	1993-01-01	2026-11-05	https://www.nbrm.mk
+provider	NBS	Narodna banka Srbije	2002-05-15	2026-11-05	https://webappcenter.nbs.rs/ExchangeRateWebApp/ExchangeRate/CurrentMiddleRate
+provider	NBT	National Bank of Tajikistan	2001-01-01	2026-11-05	https://www.nbt.tj/en/kurs/
+provider	NBU	Natsionalnyi Bank Ukrainy	1999-01-04	2026-11-05	https://bank.gov.ua/en/markets/exchangerates
+provider	NRB	Nepal Rastra Bank	2010-01-01	2026-11-05	https://www.nrb.org.np/api/forex/v1/rates
+provider	NRBT	National Reserve Bank of Tonga	2017-01-03	2026-11-05	https://www.reservebank.to/index.php/financial-system/financial-markets/exchange-rates
+provider	PMA	Palestine Monetary Authority	2020-09-01	2026-11-04	https://www.pma.ps/currency-exchange-rates
+provider	RB	Sveriges Riksbank	1993-01-04	2026-11-04	https://www.riksbank.se/en-gb/statistics/
+provider	RBA	Reserve Bank of Australia	2023-01-03	2026-11-05	https://www.rba.gov.au/statistics/frequency/exchange-rates.html
+provider	RBF	Reserve Bank of Fiji	2001-01-02	2026-11-03	https://www.rbf.gov.fj/statistics/economic-and-financial-statistics/
+provider	RBM	Reserve Bank of Malawi	2011-06-20	2026-11-04	https://www.rbm.mw/Statistics/MajorRates
+provider	RBV	Reserve Bank of Vanuatu	2025-08-27	2026-11-04	https://www.rbv.gov.vu/index.php/en/exchange-rates
+provider	SARB	South African Reserve Bank	2000-01-04	2026-11-05	https://custom.resbank.co.za/SarbWebApi/WebIndicators/HistoricalExchangeRatesDaily
+provider	SBI	Seðlabanki Íslands	1981-01-01	2026-11-04	https://www.sedlabanki.is/hagtolur/opinbert-gengi/
+provider	SBP	State Bank of Pakistan	2013-07-02	2026-09-30	https://www.sbp.org.pk/assets/document/BFER_Daily.xlsx
+provider	TCMB	Türkiye Cumhuriyet Merkez Bankası	1996-04-16	2026-11-05	https://evds2.tcmb.gov.tr/
+provider	UST	U.S. Department of the Treasury	2001-03-31	2026-10-30	https://fiscaldata.treasury.gov/datasets/treasury-reporting-rates-exchange/treasury-reporting-rates-of-exchange
+currency	ADA	Cardano	2017-12-01	2026-11-04	
+currency	ADP	Andorran Peseta	1999-02-01	2002-02-28	020
+currency	AED	United Arab Emirates Dirham	1996-04-11	2026-11-05	784
+currency	AFA	Afghan Afghani (1927–2002)	1999-01-04	2002-10-04	004
+currency	AFN	Afghan Afghani	2003-01-07	2026-11-05	971
+currency	ALL	Albanian Lek	1998-07-07	2026-11-05	008
+currency	AMD	Armenian Dram	1994-03-18	2026-11-05	051
+currency	ANG	Netherlands Antillean Guilder	1971-12-18	2026-11-05	532
+currency	AOA	Angolan Kwanza	1999-01-04	2026-11-05	973
+currency	ARS	Argentine Peso	1998-07-07	2026-11-05	032
+currency	ATS	Austrian Schilling	1954-05-26	2002-02-28	040
+currency	AUD	Australian Dollar	1971-01-04	2026-11-05	036
+currency	AWG	Aruban Florin	1999-01-04	2026-11-04	533
+currency	AZM	Azerbaijani Manat (1993–2006)	1993-11-25	2006-12-29	031
+currency	AZN	Azerbaijani Manat	2006-01-02	2026-11-05	944
+currency	BAM	Bosnia and Herzegovina Convertible Mark	1998-01-06	2026-11-05	977
+currency	BBD	Barbadian Dollar	1993-04-13	2026-11-05	052
+currency	BCH	Bitcoin Cash	2017-08-01	2026-11-04	
+currency	BDT	Bangladeshi Taka	1998-07-07	2026-11-05	050
+currency	BEF	Belgian Franc	1949-12-21	2002-02-28	056
+currency	BGL	Bulgarian Hard Lev	1996-05-07	1999-07-02	100
+currency	BGN	Bulgarian Lev	1999-07-07	2025-12-31	975
+currency	BHD	Bahraini Dinar	1998-07-07	2026-11-05	048
+currency	BIF	Burundian Franc	1999-01-04	2026-11-05	108
+currency	BMD	Bermudian Dollar	1972-02-06	2026-11-05	060
+currency	BND	Brunei Dollar	1981-01-02	2026-11-05	096
+currency	BOB	Bolivian Boliviano	1998-07-07	2026-11-05	068
+currency	BRL	Brazilian Real	1994-07-01	2026-11-05	986
+currency	BRR	Brazilian Cruzeiro (1993–1994)	1994-01-03	1994-06-30	987
+currency	BSD	Bahamian Dollar	1999-01-04	2026-11-05	044
+currency	BTC	Bitcoin	2010-07-18	2026-11-04	
+currency	BTN	Bhutanese Ngultrum	1974-01-01	2026-11-05	064
+currency	BWP	Botswana Pula	1999-01-04	2026-11-05	072
+currency	BYB	Belarusian Ruble (1994–1999)	1994-08-01	1999-12-31	112
+currency	BYN	Belarusian Ruble	2016-07-01	2026-11-05	933
+currency	BYR	Belarusian Ruble (2000–2016)	1999-12-31	2016-06-30	974
+currency	BZD	Belize Dollar	1999-01-04	2026-11-05	084
+currency	CAD	Canadian Dollar	1953-05-11	2026-11-05	124
+currency	CDF	Congolese Franc	1999-04-02	2026-11-05	976
+currency	CHF	Swiss Franc	1949-12-21	2026-11-05	756
+currency	CLP	Chilean Peso	1982-08-09	2026-11-05	152
+currency	CMD	COMESA Dollar	1998-01-01	2026-11-05	
+currency	CNH	Chinese Renminbi Yuan Offshore	2011-08-19	2026-11-05	
+currency	CNY	Chinese Renminbi Yuan	1981-01-02	2026-11-05	156
+currency	COP	Colombian Peso	1998-07-07	2026-11-05	170
+currency	CRC	Costa Rican Colón	1983-01-01	2026-11-05	188
+currency	CSD	Serbian Dinar (2002–2006)	2003-09-09	2007-02-21	891
+currency	CUC	Cuban Convertible Peso	2020-01-14	2020-12-31	931
+currency	CUP	Cuban Peso	1999-01-04	2026-11-05	192
+currency	CVE	Cape Verdean Escudo	1998-07-08	2026-11-05	132
+currency	CYP	Cypriot Pound	1996-05-07	2007-12-31	196
+currency	CZK	Czech Koruna	1991-01-01	2026-11-05	203
+currency	DEM	German Mark	1948-06-21	2001-12-31	276
+currency	DJF	Djiboutian Franc	1999-01-04	2026-11-05	262
+currency	DKK	Danish Krone	1949-12-21	2026-11-05	208
+currency	DOP	Dominican Peso	1999-01-04	2026-11-05	214
+currency	DOT	Polkadot	2020-08-20	2026-11-04	
+currency	DZD	Algerian Dinar	1998-07-07	2026-11-05	012
+currency	ECS	Ecuadorian Sucre	1998-07-07	2000-09-08	218
+currency	EEK	Estonian Kroon	1993-06-25	2010-12-31	233
+currency	EGP	Egyptian Pound	1994-03-24	2026-11-05	818
+currency	ERN	Eritrean Nakfa	1999-01-04	2026-11-05	232
+currency	ESP	Spanish Peseta	1963-02-18	2002-02-28	724
+currency	ETB	Ethiopian Birr	1998-07-07	2026-11-05	230
+currency	ETC	Ethereum Classic	2016-07-25	2026-11-04	
+currency	ETH	Ethereum	2015-08-08	2026-11-04	
+currency	EUR	Euro	1999-01-01	2026-11-05	978
+currency	FIL	Filecoin	2020-10-16	2026-11-04	
+currency	FIM	Finnish Markka	1972-07-17	2002-02-28	246
+currency	FJD	Fijian Dollar	1999-01-04	2026-11-05	242
+currency	FKP	Falkland Pound	1966-02-14	2026-11-05	238
+currency	FRF	French Franc	1950-02-13	2002-02-16	250
+currency	GBP	British Pound	1949-12-21	2026-11-05	826
+currency	GEL	Georgian Lari	1995-09-29	2026-11-05	981
+currency	GGP	Guernsey Pound	1949-12-21	2026-11-05	
+currency	GHC	Ghanaian Cedi	1999-01-04	2007-12-31	288
+currency	GHS	Ghanaian Cedi	2007-07-02	2026-11-05	936
+currency	GIP	Gibraltar Pound	1999-01-04	2026-11-04	292
+currency	GMD	Gambian Dalasi	1999-01-04	2026-11-05	270
+currency	GNF	Guinean Franc	1998-07-07	2026-11-05	324
+currency	GRD	Greek Drachma	1984-09-17	2002-02-28	300
+currency	GTQ	Guatemalan Quetzal	1999-01-04	2026-11-05	320
+currency	GYD	Guyanese Dollar	1993-04-13	2026-11-05	328
+currency	HKD	Hong Kong Dollar	1981-01-02	2026-11-05	344
+currency	HNL	Honduran Lempira	1999-01-04	2026-11-05	340
+currency	HRK	Croatian Kuna	1994-06-04	2022-12-31	191
+currency	HTG	Haitian Gourde	1999-01-04	2026-11-05	332
+currency	HUF	Hungarian Forint	1993-06-25	2026-11-05	348
+currency	IDR	Indonesian Rupiah	1993-01-05	2026-11-05	360
+currency	IEP	Irish Pound	1951-12-21	2002-02-09	372
+currency	ILS	Israeli New Shekel	1996-04-11	2026-11-05	376
+currency	IMP	Isle of Man Pound	1949-12-21	2026-11-05	
+currency	INR	Indian Rupee	1973-01-02	2026-11-05	356
+currency	IQD	Iraqi Dinar	1999-01-04	2026-11-05	368
+currency	IRR	Iranian Rial	1994-08-09	2026-11-05	364
+currency	ISK	Icelandic Króna	1980-01-02	2026-11-05	352
+currency	ITL	Italian Lira	1950-10-31	2002-02-28	380
+currency	JEP	Jersey Pound	1949-12-21	2026-11-05	
+currency	JMD	Jamaican Dollar	1993-04-13	2026-11-05	388
+currency	JOD	Jordanian Dinar	1995-10-23	2026-11-05	400
+currency	JPY	Japanese Yen	1969-12-01	2026-11-05	392
+currency	KES	Kenyan Shilling	1998-07-07	2026-11-05	404
+currency	KGS	Kyrgyzstani Som	1993-11-04	2026-11-05	417
+currency	KHR	Cambodian Riel	1999-01-04	2026-11-05	116
+currency	KMF	Comorian Franc	1999-01-04	2026-11-05	174
+currency	KPW	North Korean Won	1999-01-04	2026-11-05	408
+currency	KRW	South Korean Won	1981-01-02	2026-11-05	410
+currency	KWD	Kuwaiti Dinar	1993-11-25	2026-11-05	414
+currency	KYD	Cayman Islands Dollar	1999-01-04	2026-11-04	136
+currency	KZT	Kazakhstani Tenge	1993-12-16	2026-11-05	398
+currency	LAK	Lao Kip	1999-01-04	2026-11-05	418
+currency	LBP	Lebanese Pound	1993-11-25	2026-11-05	422
+currency	LKR	Sri Lankan Rupee	1973-01-02	2026-11-05	144
+currency	LRD	Liberian Dollar	1999-01-04	2026-11-05	430
+currency	LSL	Lesotho Loti	1999-01-04	2026-11-05	426
+currency	LTC	Litecoin	2013-04-01	2026-11-04	
+currency	LTL	Lithuanian Litas	1993-06-25	2014-12-31	440
+currency	LUF	Luxembourgian Franc	1949-12-21	2002-02-28	442
+currency	LVL	Latvian Lats	1993-06-28	2014-01-11	428
+currency	LYD	Libyan Dinar	1999-01-04	2026-11-05	434
+currency	MAD	Moroccan Dirham	1998-01-02	2026-11-05	504
+currency	MDL	Moldovan Leu	1993-12-06	2026-11-05	498
+currency	MGA	Malagasy Ariary	2005-01-03	2026-11-05	969
+currency	MGF	Malagasy Franc	1998-07-07	2004-12-31	450
+currency	MKD	Macedonian Denar	1993-01-01	2026-11-05	807
+currency	MMK	Myanmar Kyat	1999-01-04	2026-11-05	104
+currency	MNT	Mongolian Tögrög	1998-07-07	2026-11-05	496
+currency	MOP	Macanese Pataca	1983-01-01	2026-11-05	446
+currency	MRO	Mauritanian Ouguiya (1973–2017)	1999-01-04	2018-07-24	478
+currency	MRU	Mauritanian Ouguiya	2018-01-02	2026-11-05	929
+currency	MTL	Maltese Lira	1996-05-07	2007-12-31	470
+currency	MUR	Mauritian Rupee	1999-01-04	2026-11-05	480
+currency	MVR	Maldivian Rufiyaa	1999-01-04	2026-11-05	462
+currency	MWK	Malawian Kwacha	1999-01-04	2026-11-05	454
+currency	MXN	Mexican Peso	1991-11-12	2026-11-05	484
+currency	MYR	Malaysian Ringgit	1971-01-04	2026-11-05	458
+currency	MZM	Mozambican Metical (1980–2006)	1998-07-07	2006-06-30	508
+currency	MZN	Mozambican Metical	2006-07-03	2026-11-05	943
+currency	NAD	Namibian Dollar	1999-02-01	2026-11-05	516
+currency	NGN	Nigerian Naira	1999-01-04	2026-11-05	566
+currency	NIO	Nicaraguan Córdoba	1999-01-04	2026-11-05	558
+currency	NLG	Dutch Guilder	1949-12-21	2002-01-26	528
+currency	NOK	Norwegian Krone	1949-12-21	2026-11-05	578
+currency	NPR	Nepalese Rupee	1999-01-04	2026-11-05	524
+currency	NZD	New Zealand Dollar	1971-01-04	2026-11-05	554
+currency	OMR	Omani Rial	1986-01-01	2026-11-05	512
+currency	PAB	Panamanian Balboa	1998-07-07	2026-11-05	590
+currency	PEN	Peruvian Sol	1998-07-07	2026-11-05	604
+currency	PGK	Papua New Guinean Kina	1999-01-04	2026-11-05	598
+currency	PHP	Philippine Peso	1998-07-07	2026-11-05	608
+currency	PKR	Pakistani Rupee	1998-07-07	2026-11-05	586
+currency	PLN	Polish Złoty	1995-01-03	2026-11-05	985
+currency	PLZ	Polish Zloty (1950–1995)	1993-06-25	1995-01-02	616
+currency	POL	Polygon	2023-10-25	2026-11-04	
+currency	PTE	Portuguese Escudo	1952-05-14	2002-02-28	620
+currency	PYG	Paraguayan Guaraní	1999-01-04	2026-11-05	600
+currency	QAR	Qatari Riyal	1998-07-07	2026-11-05	634
+currency	ROL	Romanian Leu (1952–2006)	1996-05-07	2006-12-29	642
+currency	RON	Romanian Leu	1999-01-04	2026-11-05	946
+currency	RSD	Serbian Dinar	2000-01-03	2026-11-05	941
+currency	RUB	Russian Ruble	1998-01-02	2026-11-05	643
+currency	RUR	Russian Ruble (1991–1998)	1993-01-04	1998-01-02	810
+currency	RWF	Rwandan Franc	1999-01-04	2026-11-05	646
+currency	SAR	Saudi Riyal	1986-06-01	2026-11-05	682
+currency	SBD	Solomon Islands Dollar	1999-01-04	2026-11-05	090
+currency	SCR	Seychellois Rupee	1999-01-04	2026-11-05	690
+currency	SDD	Sudanese Dinar (1992–2007)	1999-01-04	2007-01-09	736
+currency	SDG	Sudanese Pound	2007-04-02	2026-11-05	938
+currency	SEK	Swedish Krona	1949-12-21	2026-11-05	752
+currency	SGD	Singapore Dollar	1981-01-02	2026-11-05	702
+currency	SHP	Saint Helenian Pound	1976-02-02	2026-11-05	654
+currency	SIT	Slovenian Tolar	1993-01-01	2007-01-03	705
+currency	SKK	Slovak Koruna	1995-10-16	2009-01-05	703
+currency	SLE	New Leone	2022-07-01	2026-11-05	925
+currency	SLL	Sierra Leonean Leone (1964–2022)	1999-01-04	2022-06-30	694
+currency	SOL	Solana	2020-04-10	2026-11-04	
+currency	SOS	Somali Shilling	1999-01-04	2026-11-05	706
+currency	SRD	Surinamese Dollar	2004-03-01	2026-11-05	968
+currency	SRG	Surinamese Guilder	1999-01-04	2003-12-31	740
+currency	SSP	South Sudanese Pound	2013-01-21	2026-11-04	728
+currency	STD	São Tomé & Príncipe Dobra (1977–2017)	1999-01-04	2017-12-29	678
+currency	STN	São Tomé and Príncipe Second Dobra	2018-01-02	2026-11-04	930
+currency	SUI	Sui	2023-08-17	2026-11-04	
+currency	SVC	Salvadoran Colón	1999-01-04	2026-11-05	222
+currency	SYP	Syrian Pound	1998-07-07	2026-11-05	760
+currency	SZL	Swazi Lilangeni	1999-01-04	2026-11-05	748
+currency	THB	Thai Baht	1981-01-02	2026-11-05	764
+currency	TJR	Tajikistani Ruble	1995-07-11	2001-03-30	762
+currency	TJS	Tajikistani Somoni	2000-10-30	2026-11-05	972
+currency	TMM	Turkmenistani Manat (1993–2009)	1995-11-30	2010-01-29	795
+currency	TMT	Turkmenistani Manat	2009-01-01	2026-11-05	934
+currency	TND	Tunisian Dinar	1998-07-07	2026-11-05	788
+currency	TOP	Tongan Paʻanga	1999-01-04	2026-11-05	776
+currency	TRL	Turkish Lira (1922–2005)	1994-07-30	2005-12-30	792
+currency	TRY	Turkish Lira	1996-04-16	2026-11-05	949
+currency	TTD	Trinidad and Tobago Dollar	1991-01-31	2026-11-04	780
+currency	TWD	New Taiwan Dollar	1981-01-02	2026-11-05	901
+currency	TZS	Tanzanian Shilling	1998-07-07	2026-11-05	834
+currency	UAH	Ukrainian Hryvnia	1996-09-02	2026-11-05	980
+currency	UAK	Ukrainian Karbovanets	1993-06-25	1996-08-30	804
+currency	UGX	Ugandan Shilling	1999-01-04	2026-11-05	800
+currency	UNI	Uniswap	2020-09-18	2026-11-04	
+currency	USD	United States Dollar	1948-06-21	2026-11-05	840
+currency	UYU	Uruguayan Peso	1998-07-07	2026-11-05	858
+currency	UZS	Uzbekistan Som	1994-07-01	2026-11-05	860
+currency	VEB	Venezuelan Bolívar (1871–2008)	1996-05-07	2007-12-31	862
+currency	VEF	Venezuelan Bolívar (2008–2018)	2008-01-02	2018-08-19	937
+currency	VES	Venezuelan Bolívar Soberano	2018-05-29	2026-11-04	928
+currency	VND	Vietnamese Đồng	1998-07-07	2026-11-05	704
+currency	VUV	Vanuatu Vatu	1999-01-04	2026-11-04	548
+currency	WST	Samoan Tala	1999-01-04	2026-11-05	882
+currency	XAF	Central African CFA Franc	1998-07-07	2026-11-05	950
+currency	XAG	Silver (Troy Ounce)	1999-01-05	2026-11-05	961
+currency	XAU	Gold (Troy Ounce)	1999-01-05	2026-11-05	959
+currency	XCD	East Caribbean Dollar	1999-01-04	2026-11-04	951
+currency	XCG	Caribbean Guilder	2025-03-31	2026-11-04	532
+currency	XCU	Czech-Slovak Clearing ECU	1993-02-08	1995-09-29	
+currency	XDR	Special Drawing Rights	1981-01-01	2026-11-05	960
+currency	XEU	European Currency Unit	1987-01-02	1998-12-31	954
+currency	XLM	Stellar	2015-09-30	2026-11-04	
+currency	XOF	West African CFA Franc	1998-07-07	2026-11-05	952
+currency	XPD	Palladium	2000-04-21	2026-11-05	964
+currency	XPF	CFP Franc	1999-01-04	2026-11-04	953
+currency	XPT	Platinum	1999-01-05	2026-11-05	962
+currency	XRP	XRP	2014-08-15	2026-11-04	
+currency	XTZ	Tezos	2018-06-30	2026-11-04	
+currency	YER	Yemeni Rial	1998-07-07	2026-11-05	886
+currency	YUM	Yugoslavian New Dinar (1994–2002)	1996-05-07	2004-04-23	891
+currency	YUN	Yugoslavian Convertible Dinar (1990–1992)	1991-01-01	1991-01-04	890
+currency	ZAR	South African Rand	1980-01-02	2026-11-05	710
+currency	ZEC	Zcash	2016-10-29	2026-11-04	
+currency	ZMK	Zambian Kwacha (1968–2012)	1999-01-04	2012-12-31	894
+currency	ZMW	Zambian Kwacha	2013-01-02	2026-11-05	967
+currency	ZRN	Zairean New Zaire (1993–1998)	1999-01-04	1999-06-30	180
+currency	ZWD	Zimbabwean Dollar (1980–2008)	1999-01-04	2008-07-31	716
+currency	ZWG	Zimbabwe Gold	2024-09-02	2026-11-04	924
+currency	ZWL	Zimbabwean Dollar (2009–2024)	2009-02-03	2024-08-30	932
+currency	ZWN	Zimbabwean Dollar	2006-09-01	2006-10-25	942
+currency	ZWR	Zimbabwean Dollar (2008)	2008-08-01	2009-02-04	935

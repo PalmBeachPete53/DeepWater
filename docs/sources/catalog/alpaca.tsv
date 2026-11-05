@@ -1,0 +1,43 @@
+family	title	reference_page
+Stock	Historical auctions	stockauctions-1
+Stock	Historical bars	stockbars
+Stock	Latest bars	stocklatestbars-1
+Stock	Condition codes	stockmetaconditions-1
+Stock	Exchange codes	stockmetaexchanges-1
+Stock	Historical quotes	stockquotes-1
+Stock	Latest quotes	stocklatestquotes-1
+Stock	Snapshots	stocksnapshots-1
+Stock	Historical trades	stocktrades-1
+Stock	Latest trades	stocklatesttrades-1
+Stock	Historical auctions (single)	stockauctionsingle-1
+Stock	Historical bars (single symbol)	stockbarsingle-1
+Stock	Latest bar (single symbol)	stocklatestbarsingle-1
+Stock	Historical quotes (single symbol)	stockquotesingle-1
+Stock	Latest quote (single symbol)	stocklatestquotesingle-1
+Stock	Snapshot (single symbol)	stocksnapshotsingle
+Stock	Historical trades (single symbol)	stocktradesingle-1
+Stock	Latest trade (single symbol)	stocklatesttradesingle-1
+Option	Historical bars	optionbars
+Option	Condition codes	optionmetaconditions
+Option	Exchange codes	optionmetaexchanges
+Option	Latest quotes	optionlatestquotes
+Option	Snapshots	optionsnapshots
+Option	Option chain	optionchain
+Option	Historical trades	optiontrades
+Option	Latest trades	optionlatesttrades
+Crypto	Historical bars	cryptobars-1
+Crypto	Latest bars	cryptolatestbars-1
+Crypto	Latest orderbook	cryptolatestorderbooks-1
+Crypto	Latest quotes	cryptolatestquotes-1
+Crypto	Latest trades	cryptolatesttrades-1
+Crypto	Historical quotes	cryptoquotes-1
+Crypto	Snapshots	cryptosnapshots-1
+Crypto	Historical trades	cryptotrades-1
+Fixed income	Latest prices	fixedincomelatestprices
+Fixed income	Latest quotes	fixedincomelatestquotes
+Logos	Logos	logos-5
+Screener	Most active stocks	mostactives-1
+Screener	Top market movers	movers-1
+News	News articles	news-3
+Corporate actions	Corporate actions	corporateactions-1
+Corporate actions	Subscribe to Corporate Actions Events (SSE)	subscribetocorporateactionseventssse

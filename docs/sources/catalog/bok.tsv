@@ -1,0 +1,845 @@
+stat_code	parent	name	cycle	searchable	items	first_item_cycle	first_item_start	first_item_end
+0000000001	*	1. Monetary Financial Statistics		N				
+0000000620	0000000001	1.1. Monetary and Liquidity Aggregates(New series)		N				
+0000000621	0000000620	1.1.1. Monetary Base		N				
+0000000622	0000000621	1.1.1.1. Components of Monetary Base		N				
+102Y004	0000000622	1.1.1.1.1. Components of Monetary Base(Average, SA)	M	Y	6	A	2003	2025
+102Y002	0000000622	1.1.1.1.2. Components of Monetary Base(Average)	M	Y	9	A	2003	2025
+102Y003	0000000622	1.1.1.1.3. Components of Monetary Base(End of, SA)	M	Y	6	A	2003	2025
+102Y001	0000000622	1.1.1.1.4. Components of Monetary Base(End of) 	M	Y	9	A	2003	2025
+0000000623	0000000620	1.1.2. M1(Narrow Money)		N				
+0000000624	0000000623	1.1.2.1. M1 By Type		N				
+161Y001	0000000624	1.1.2.1.1. M1 By Type (Average, SA)	M	Y	12	A	2003	2025
+161Y002	0000000624	1.1.2.1.2. M1 By Type (Average)	M	Y	12	A	2003	2025
+161Y003	0000000624	1.1.2.1.3. M1 By Type (End of, SA)	M	Y	12	A	2003	2025
+161Y004	0000000624	1.1.2.1.4. M1 By Type (End of)	M	Y	12	A	2003	2025
+0000000625	0000000620	1.1.3. M2(Broad Money)		N				
+0000000626	0000000625	1.1.3.1. M2 By Type		N				
+161Y005	0000000626	1.1.3.1.1. M2 By Type (Average, SA)	M	Y	32	A	2003	2025
+161Y006	0000000626	1.1.3.1.2. M2 By Type (Average)	M	Y	48	A	2003	2025
+161Y007	0000000626	1.1.3.1.3. M2 By Type (End of, SA)	M	Y	32	A	2003	2025
+161Y008	0000000626	1.1.3.1.4. M2 By Type (End of)	M	Y	48	A	2003	2025
+0000000627	0000000625	1.1.3.2. M2 Sectoral Money Holdings		N				
+161Y009	0000000627	1.1.3.2.1. Sectoral Money Holdings(Average, S.A.)	M	Y	33	A	2003	2025
+161Y010	0000000627	1.1.3.2.2. Sectoral Money Holdings(Average)	M	Y	33	A	2003	2025
+161Y011	0000000627	1.1.3.2.3. Sectoral Money Holdings(End of, S.A.)	M	Y	33	A	2003	2025
+161Y012	0000000627	1.1.3.2.4. Sectoral Money Holdings(End of)	M	Y	33	A	2003	2025
+0000000628	0000000625	1.1.3.3. M2 By Money Issuers		N				
+161Y013	0000000628	1.1.3.3.1. M2 By Money Issuers (Average)	M	Y	24	A	2003	2025
+161Y014	0000000628	1.1.3.3.2. M2 By Money Issuers (End of)	M	Y	24	A	2003	2025
+0000000629	0000000620	1.1.4. Lf By Type		N				
+0000000630	0000000629	1.1.4.1. Lf By Type		N				
+171Y003	0000000630	1.1.4.1.1. Lf By Type(Average, SA)	M	Y	10	A	2003	2025
+171Y004	0000000630	1.1.4.1.2. Lf By Type(Average)	M	Y	15	A	2003	2025
+171Y001	0000000630	1.1.4.1.3. Lf By Type(End of, SA)	M	Y	10	A	2003	2025
+171Y002	0000000630	1.1.4.1.4. Lf By Type(End of)	M	Y	15	A	2003	2025
+0000000631	0000000620	1.1.5. L(Liquidity Aggregates)		N				
+172Y001	0000000631	1.1.5.1. L(Liquidity Aggregates)(End of, SA)	M	Y	10	A	2003	2025
+172Y002	0000000631	1.1.5.2. L(Liquidity Aggregates)(End of)	M	Y	15	A	2003	2025
+0000000632	0000000620	1.1.6. Depository Corporations Survey		N				
+161Y015	0000000632	1.1.6.1. Depository Corporations Survey(End of)	M	Y	321	A	2003	2025
+161Y016	0000000632	1.1.6.2. Central Bank Survey (End of)	M	Y	312	A	2003	2025
+161Y017	0000000632	1.1.6.3. Other Depository Corporations Survey (End of)	M	Y	336	A	2003	2025
+0000000020	0000000001	1.2. Deposits, Loans & Discounts		N				
+0000000021	0000000020	1.2.1. Deposits		N				
+0000000022	0000000021	1.2.1.1. Deposits at CBs and SBs		N				
+104Y014	0000000022	1.2.1.1.1. Total Deposits(Average)	M	Y	27	A	1993	2025
+104Y013	0000000022	1.2.1.1.2. Total Deposits(End of)	M	Y	27	A	1992	2025
+104Y008	0000000022	1.2.1.1.3. Deposits in Domestic Currency at CBs and SBs By Type (Average)	M	Y	66	A	1971	2025
+104Y015	0000000022	1.2.1.1.4. Deposits in Domestic Currency at CBs and SBs By Type (End of)	M	Y	66	A	1960	2025
+104Y009	0000000022	1.2.1.1.5. Deposits in Domestic Currency at CBs and SBs By Depositors (End Of)	M	Y	36	A	1975	2025
+104Y010	0000000022	1.2.1.1.6. Time Deposits in Domestic Currency at CBs and SBs By Term (End Of)	M	Y	18	A	1991	2025
+0000000023	0000000021	1.2.1.2. Deposits at Non-Bank Financial Corporations		N				
+111Y008	0000000023	1.2.1.2.1. Deposits at Non-Bank Financial Corporations (Average)	M	Y	30	A	1994	2025
+111Y007	0000000023	1.2.1.2.2. Deposits at Non-Bank Financial Corporations (End of)	M	Y	30	A	1993	2025
+0000000024	0000000020	1.2.2. Loans & Discounts		N				
+104Y016	0000000024	1.2.2.1. Loans & Discounts of CBs and SBs (End of)	M	Y	132	A	1960	2025
+111Y009	0000000024	1.2.2.2. Loans & Discounts of Non-Bank Financial Corporations (End of)	M	Y	30	A	1993	2025
+0000000027	0000000020	1.2.3. Total Deposits & Loans and Discounts by Region		N				
+141Y002	0000000027	1.2.3.1. Total Deposits at CBs and SBs (End of)	M	Y	85	A	1995	2025
+141Y006	0000000027	1.2.3.2. Total Deposits at Non-Bank Financial Corporations (End of)	M	Y	82	A	2004	2025
+141Y008	0000000027	1.2.3.3. Total Deposits of Life Insurance Companies (End of)	M	Y	57	A	2004	2025
+0000000031	0000000027	1.2.3.4. Loans & Discounts By Region (CBs & SBs, End of)		N				
+141Y003	0000000031	1.2.3.4.1. Loans & Discounts by Region (End of)	M	Y	82	A	1995	2025
+151Y003	0000000031	1.2.3.4.2. Loans to Households by Region (End of)	M	Y	64	A	2003	2025
+141Y004	0000000031	1.2.3.4.3. Loans to Enterprise by Region (End of)	M	Y	67	A	2007	2025
+0000000032	0000000027	1.2.3.5. Loans & Discounts of Non-Bank Financial Corporations (End of)		N				
+141Y007	0000000032	1.2.3.5.1. Loans & Discounts of Non-Bank Financial Corporations by Region (End of)	M	Y	79	A	2004	2025
+151Y006	0000000032	1.2.3.5.2. Loans to Households of Non-Bank Financial Corporations by Region (End of)	M	Y	79	A	2007	2025
+141Y010	0000000032	1.2.3.5.3. Loans to Enterprise of Non-Bank Financial Corporations by Region (End of)	M	Y	79	A	2013	2025
+141Y009	0000000027	1.2.3.6. Loans & Discounts of Life Insurance Companies (End of)	M	Y	57	A	2004	2025
+141Y005	0000000027	1.2.3.7. Delinquency Rate by Region (CBs & SBs, End of)	M	Y	76	A	2019	2025
+0000000035	0000000020	1.2.4. Credit to Households		N				
+0000000036	0000000035	1.2.4.1. Credit to Households(Quarterly)		N				
+151Y001	0000000036	1.2.4.1.1. By Section	Q	Y	40	A	2002	2025
+151Y004	0000000036	1.2.4.1.2. By Purpose	Q	Y	30	A	2002	2025
+0000000037	0000000035	1.2.4.2. Loans to Households of Depository Corporations(Monthly)		N				
+151Y002	0000000037	1.2.4.2.1. By Section	M	Y	24	A	2003	2025
+151Y005	0000000037	1.2.4.2.2. By Purpose	M	Y	27	A	2003	2025
+0000000038	0000000020	1.2.5. Loans & Discounts by Industry		N				
+0000000039	0000000038	1.2.5.1. Depository corporations		N				
+131Y016	0000000039	1.2.5.1.1. All Industries	Q	Y	86	A	2008	2025
+131Y017	0000000039	1.2.5.1.2. By Purpose (Working Capital, Facilities Investment)	Q	Y	46	A	2008	2025
+0000000040	0000000038	1.2.5.2. Commercial & Specialized Banks		N				
+131Y013	0000000040	1.2.5.2.1. All Industries	Q	Y	86	A	1998	2025
+131Y011	0000000040	1.2.5.2.2. By Purpose (Working Capital, Facilities Investment)	Q	Y	46	A	1998	2025
+131Y010	0000000040	1.2.5.2.3. By Type (Incorporation, Unincorporation)	Q	Y	44	A	2018	2025
+131Y018	0000000040	1.2.5.2.4. By Size	Q	Y	50	A	2021	2025
+132Y001	0000000040	1.2.5.2.5. By Region	Q	Y	122	A	2007	2025
+132Y003	0000000040	1.2.5.2.6. By Region & Purpose	Q	Y	82	A	2007	2025
+0000000041	0000000038	1.2.5.3. Non-Bank Fainancial Corporations		N				
+131Y014	0000000041	1.2.5.3.1. All Industries	Q	Y	86	A	2008	2025
+131Y015	0000000041	1.2.5.3.2. By Purpose (Working Capital, Facilities Investment)	Q	Y	46	A	2008	2025
+0000000042	0000000020	1.2.6. Others Financial Statistics		N				
+104Y017	0000000042	1.2.6.1. Turnover Ratios of Deposits of CBs & SBs	M	Y	33	A	1985	2025
+901Y123	0000000042	1.2.6.2. Number of Branches and Employment by Financial Institution	Q	Y	26	A	1999	2025
+0000000043	0000000042	1.2.6.3. Delinquency Ratio for Bank Loans		N				
+901Y054	0000000043	1.2.6.3.1. Delinquency Rate on Bank Loans(1+ days)	M	Y	12	A	1998	2025
+901Y124	0000000043	1.2.6.3.2. Delinquency Rate on Bank Loans(30+ days)	M	Y	12	A	2022	2025
+901Y059	0000000042	1.2.6.4. Business Results of Insurance Companies	M	Y	18	A	2020	2020
+105Y001	0000000042	1.2.6.5. The number of accounts and Outstanding amount by Size	S	Y	16	S	2002S1	2025S2
+0000000048	0000000001	1.3. Interest Rates		N				
+722Y001	0000000048	1.3.1. Bank of Korea Base Rate & Interest Rates on Loans and Discounts of the Bank of Korea	D	Y	48	A	1999	2025
+0000000050	0000000048	1.3.2. Market Interest Rates		N				
+817Y002	0000000050	1.3.2.1. Market Interest Rates(Daily)	D	Y	27	D	19950103	20261104
+721Y001	0000000050	1.3.2.2. Market Interest Rates(Monthly, Quarterly, Annually)	M	Y	90	A	1991	2025
+0000000053	0000000048	1.3.3. CBs and SBs Weighted Averages of Interest Rates		N				
+0000000054	0000000053	1.3.3.1. Interest Rates on Deposits		N				
+121Y002	0000000054	1.3.3.1.1. Based on Newly Extended	M	Y	81	A	1996	2025
+121Y013	0000000054	1.3.3.1.2. Based on Outstanding	M	Y	57	A	2004	2025
+0000000055	0000000053	1.3.3.2. Interest Rates on Loans and Discounts		N				
+121Y006	0000000055	1.3.3.2.1. Based on Newly Extended	M	Y	57	A	1996	2025
+121Y015	0000000055	1.3.3.2.2. Based on Outstanding	M	Y	57	A	2001	2025
+121Y008	0000000053	1.3.3.3. Shares of Deposits and Loans By Interest Rates Level (Newly Extended)	M	Y	240	A	1997	2025
+0000000057	0000000053	1.3.3.4. Shares of Loans at Fixed and Floating Interes Rates		N				
+121Y010	0000000057	1.3.3.4.1. Based on Newly Extended	M	Y	54	A	2002	2025
+121Y011	0000000057	1.3.3.4.2. Based on Outstanding	M	Y	54	A	2011	2025
+0000000058	0000000048	1.3.4. NBFCs Weighted Averages of Interest Rates		N				
+121Y004	0000000058	1.3.4.1. Interest Rates on Deposits	M	Y	39	A	1996	2025
+121Y007	0000000058	1.3.4.2. Interest Rates on Loans and Discounts	M	Y	81	A	1997	2025
+0000000061	0000000001	1.4. Main Accounts of the Bank of Korea		N				
+103Y002	0000000061	1.4.1. Main Accounts of the Bank of Korea(End of)	M	Y	111	A	1970	2025
+871Y001	0000000061	1.4.2. Bank Notes and Coins Issued	M	Y	261	A	1960	2025
+0000000064	0000000061	1.4.3. Reserves of Commercial and Specialized Banks		N				
+814Y001	0000000064	1.4.3.1. Reserves of Commercial and Specialized Banks(New version, average of)	M	Y	18	M	201201	202608
+814Y002	0000000064	1.4.3.2. Reserves of Commercial and Specialized Banks(Old version, average of)	SM	Y	9	SM	200401S1	200802S2
+641Y001	0000000061	1.4.4. Loans and Discounts in Won of the BOK(End of)	M	Y	36	A	1971	2025
+0000000397	0000000001	1.5. Securities, Bonds and Government Finance		N				
+0000000398	0000000397	1.5.1. Transactions in Securiries and Stock Price index		N				
+802Y001	0000000398	1.5.1.1. Stock Market(daily)	D	Y	9	D	19950103	20261104
+901Y014	0000000398	1.5.1.2. Transactions in Securities and Stock Price Index	M	Y	48	A	1984	2025
+901Y055	0000000398	1.5.1.3. Stock Trading by Investor Group	M	Y	40	A	2004	2025
+901Y056	0000000398	1.5.1.4. Trends of Money in Securities Market	M	Y	12	A	1998	2025
+901Y057	0000000398	1.5.1.5. Transactions for Stock Price Index Futures	M	Y	8	A	2004	2025
+901Y058	0000000398	1.5.1.6. Transactions for Stock Price Index	M	Y	26	A	2006	2025
+0000000957	0000000397	1.5.2. Trade of Bonds		N				
+901Y015	0000000957	1.5.2.1. Trade of Bonds by Type	M	Y	20	A	2002	2026
+901Y120	0000000957	1.5.2.2. Trade of Bonds by Market	M	Y	14	A	2002	2026
+191Y001	0000000397	1.5.3. Issues and Outstanding Amounts of Principal Government, Public and Corporate Bonds	M	Y	20	A	1989	2025
+0000000399	0000000397	1.5.4. Central Governmnet Fiscal Balance		N				
+901Y013	0000000399	1.5.4.1. Central Governmnet Fiscal Balance	M	Y	33	M	199912	202608
+901Y081	0000000399	1.5.4.2. Amount of Tax Collection	A	Y	24	A	1980	2024
+0000001000	0000000001	1.6. Borrower-Level Household debt		N				
+0000001001	0000001000	1.6.1. Per-Borrower Amount Basis		N				
+0000001003	0000001001	1.6.1.1. Newly Issued Amount		N				
+181Y001	0000001003	1.6.1.1.1 Household Loans Newly issued per Borrower	Q	Y	60	A	2013	2025
+0000001007	0000001003	1.6.1.1.2. Newly issued Household Loans per Borrower (Cross-Level)		N				
+181Y003	0000001007	1.6.1.1.2.1. By Age Group and Region	Q	Y	26	A	2013	2025
+181Y005	0000001007	1.6.1.1.2.2. By Age Group and Financial Institution Type	Q	Y	16	A	2013	2025
+181Y007	0000001007	1.6.1.1.2.3. By Age Group and Loan Type	Q	Y	20	A	2013	2025
+181Y009	0000001007	1.6.1.1.2.4. By Loan Type and Financial Institution Type	Q	Y	16	A	2013	2025
+181Y011	0000001003	1.6.1.1.3. Mortgage Loans Newly Issued per Borrower	Q	Y	50	A	2013	2025
+0000001004	0000001001	1.6.1.2. Outstanding Balance		N				
+181Y002	0000001004	1.6.1.2.1. Outstanding Household Loans per Borrower	Q	Y	54	A	2013	2025
+0000001008	0000001004	1.6.1.2.2. Outstanding Household Loans per Borrower (Cross-Level)		N				
+181Y004	0000001008	1.6.1.2.2.1. By Age Group and Region	Q	Y	26	A	2013	2025
+181Y006	0000001008	1.6.1.2.2.2. By Age Group and Financial Institution Type	Q	Y	16	A	2013	2025
+181Y008	0000001008	1.6.1.2.2.3. By Age Group and Loan Type	Q	Y	20	A	2013	2025
+181Y010	0000001008	1.6.1.2.2.4. By Loan Type and Financial Institution Type	Q	Y	16	A	2013	2025
+181Y012	0000001004	1.6.1.2.3. Outstanding Mortgage Loans per Borrower	Q	Y	44	A	2013	2025
+0000001002	0000001000	1.6.2. Amount Share Basis		N				
+0000001005	0000001002	1.6.2.1. Newly Issued Amount		N				
+181Y013	0000001005	1.6.2.1.1. Share by Newly Issued Household Loans	Q	Y	60	A	2013	2025
+181Y015	0000001005	1.6.2.1.2. Share by Newly Issued Mortgage Loans	Q	Y	50	A	2013	2025
+0000001006	0000001002	1.6.2.2. Outstanding Balance		N				
+181Y016	0000001006	1.6.2.2.1. Share by Outstanding Household Loans	Q	Y	54	A	2013	2025
+181Y014	0000001006	1.6.2.2.2. Share by Outstanding Mortgage Loans	Q	Y	44	A	2013	2025
+0000000002	0000000001	1.7. Monetary and Liquidity Aggregates(Old series)		N				
+0000000003	0000000002	1.7.1. Monetary Base		N				
+0000000004	0000000003	1.7.1.1. Components of Monetary Base		N				
+102Y104	0000000004	1.7.1.1.1. Components of Monetary Base(Average, SA)	M	Y	6	A	2002	2003
+102Y102	0000000004	1.7.1.1.2. Components of Monetary Base(Average)	M	Y	9	A	1971	2003
+102Y103	0000000004	1.7.1.1.3. Components of Monetary Base(End of, SA)	M	Y	6	A	2002	2003
+102Y101	0000000004	1.7.1.1.4. Components of Monetary Base(End of)	M	Y	9	A	1960	2003
+0000000005	0000000002	1.7.2. M1(Narrow Money)		N				
+0000000006	0000000005	1.7.2.1. M1 By Type 		N				
+101Y018	0000000006	1.7.2.1.1. M1 By Type (Average, SA)	M	Y	8	A	1970	2003
+101Y019	0000000006	1.7.2.1.2. M1 By Type (Average)	M	Y	12	A	1970	2003
+101Y016	0000000006	1.7.2.1.3. M1 By Type (End of, SA)	M	Y	8	A	1970	2003
+101Y017	0000000006	1.7.2.1.4. M1 By Type (End of)	M	Y	12	A	1960	2003
+0000000007	0000000002	1.7.3. M2(Broad Money)		N				
+0000000008	0000000007	1.7.3.1. M2 By Type		N				
+101Y003	0000000008	1.7.3.1.1. M2 By Type (Average, SA)	M	Y	22	A	1986	2003
+101Y004	0000000008	1.7.3.1.2. M2 By Type (Average)	M	Y	48	A	1986	2003
+101Y001	0000000008	1.7.3.1.3. M2 By Type (End of, SA)	M	Y	22	A	1970	2003
+101Y002	0000000008	1.7.3.1.4. M2 By Type (End of)	M	Y	48	A	1960	2003
+0000000009	0000000007	1.7.3.2. M2 Sectoral Money Holdings		N				
+101Y006	0000000009	1.7.3.2.1. Sectoral Money Holdings(Average, S.A.)	M	Y	5	M	200112	200409
+101Y015	0000000009	1.7.3.2.2. Sectoral Money Holdings(Average)	M	Y	15	A	2002	2003
+101Y005	0000000009	1.7.3.2.3. Sectoral Money Holdings(End of, S.A.)	M	Y	5	M	200112	200409
+101Y014	0000000009	1.7.3.2.4. Sectoral Money Holdings(End of)	M	Y	15	A	2001	2003
+0000000010	0000000007	1.7.3.3. M2 By Money Issuers		N				
+101Y008	0000000010	1.7.3.3.1. M2 By Money Issuers (Average)	M	Y	39	A	1986	2003
+101Y007	0000000010	1.7.3.3.2. M2 By Money Issuers (End of)	M	Y	39	A	1960	2003
+0000000012	0000000002	1.7.4. Lf By Type		N				
+0000000013	0000000012	1.7.4.1. Lf By Type		N				
+111Y003	0000000013	1.7.4.1.1. Lf By Type(Average, SA)	M	Y	8	A	1986	2003
+111Y004	0000000013	1.7.4.1.2. Lf By Type(Average)	M	Y	39	A	1986	2003
+111Y001	0000000013	1.7.4.1.3. Lf By Type(End of, SA)	M	Y	8	A	1986	2003
+111Y002	0000000013	1.7.4.1.4. Lf By Type(End of)	M	Y	39	A	1971	2003
+0000000015	0000000002	1.7.5. L(Liquidity Aggregates)		N				
+112Y001	0000000015	1.7.5.1. L(Liquidity Aggregates)(End of, SA)	M	Y	10	A	2001	2003
+112Y002	0000000015	1.7.5.2. L(Liquidity Aggregates)(End of)	M	Y	30	A	1995	2003
+0000000017	0000000002	1.7.6. Depository Corporations Survey		N				
+101Y009	0000000017	1.7.6.1. Depository Corporations Survey(End of)	M	Y	237	A	2001	2003
+101Y010	0000000017	1.7.6.2. Central Bank Survey (End of)	M	Y	219	A	2001	2003
+101Y011	0000000017	1.7.6.3. Other Depository Corporations Survey (End of)	M	Y	252	A	2001	2003
+0000000066	*	2. National Accounts		N				
+0000000910	0000000066	2.1. National Income and Product (reference year 2020)		N				
+0000000911	0000000910	2.1.1. Main Indicators of National Accounts		N				
+200Y101	0000000911	2.1.1.1. Main Annual Indicators (reference year 2020)	A	Y	96	A	1953	2025
+200Y102	0000000911	2.1.1.2. Main Quarterly Indicators  (reference year 2020)	Q	Y	53	Q	1960Q1	2026Q3
+0000000912	0000000910	2.1.2. GDP and GDP Deflator by Output, Expenditure and Income Approach		N				
+0000000913	0000000912	2.1.2.1. GDP and GNI by Economic Activities		N				
+200Y103	0000000913	2.1.2.1.1. GDP and GNI by Economic Activities (seasonally adjusted, current prices, quarterly)	Q	Y	51	Q	1960Q1	2026Q2
+200Y104	0000000913	2.1.2.1.2. GDP and GNI by Economic Activities (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	53	Q	1960Q1	2026Q3
+200Y105	0000000913	2.1.2.1.3. GDP and GNI by Economic Activities (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	110	A	1953	2025
+200Y106	0000000913	2.1.2.1.4. GDP and GNI by Economic Activities (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	114	A	1953	2025
+0000000914	0000000912	2.1.2.2. Expenditures on Gross Domestic Product		N				
+200Y107	0000000914	2.1.2.2.1. Expenditures on GDP (seasonally adjusted, current prices, quarterly)	Q	Y	21	Q	1960Q1	2026Q2
+200Y108	0000000914	2.1.2.2.2. Expenditures on GDP (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	21	Q	1960Q1	2026Q3
+200Y109	0000000914	2.1.2.2.3. Expenditures on GDP (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	42	A	1953	2025
+200Y110	0000000914	2.1.2.2.4. Expenditures on GDP (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	42	A	1953	2025
+0000000936	0000000912	2.1.2.3. Nominal GDP by Components of Value Added		N				
+200Y160	0000000936	2.1.2.3.1. Nominal GDP by components of value added(seasonally adjusted, current prices, quarterly)	Q	Y	4	Q	2010Q1	2026Q2
+200Y161	0000000936	2.1.2.3.2. Nominal GDP by components of value added(not seasonally adjusted, current prices, quarterly and annual)	Q	Y	8	A	1970	2025
+0000000915	0000000912	2.1.2.4. GDP Deflator		N				
+200Y111	0000000915	2.1.2.4.1. GDP Deflator by Economic Activities (not seasonally adjusted, quarterly & annual)	Q	Y	36	A	1953	2025
+200Y112	0000000915	2.1.2.4.2. GDP Deflator by Expenditures on GDP (not seasonally adjusted, quarterly & annual)	Q	Y	38	A	1953	2025
+0000000916	0000000910	2.1.3. Consolidated Accounts for the Nation		N				
+0000000917	0000000916	2.1.3.1. Gross Domestic Product and Expenditure		N				
+200Y113	0000000917	2.1.3.1.1. Gross Domestic Product and Expenditure (current prices, annual)	A	Y	16	A	1970	2025
+200Y114	0000000917	2.1.3.1.2. Gross Value Added and Factor Income by Economic Activities (current prices, annual)	A	Y	37	A	1970	2024
+0000000918	0000000916	2.1.3.2. National Disposable Income and Its Appropriation		N				
+200Y115	0000000918	2.1.3.2.1. National Disposable Income and Its Appropriation (current prices, annual)	A	Y	16	A	1970	2025
+200Y116	0000000918	2.1.3.2.2. National Income and National Disposable Income (current prices, annual)	A	Y	16	A	1970	2025
+0000000919	0000000916	2.1.3.3. Capital Transactions		N				
+200Y117	0000000919	2.1.3.3.1. Capital Transactions (current prices, annual)	A	Y	11	A	1970	2025
+0000000920	0000000916	2.1.3.4. External Transactions		N				
+200Y118	0000000920	2.1.3.4.1. Current Transactions (current prices, annual)	A	Y	17	A	1970	2025
+200Y119	0000000920	2.1.3.4.2. Capital Transactions (current prices, annual)	A	Y	7	A	1970	2025
+0000000921	0000000910	2.1.4. Production, Income and Capital Accounts by Institutional Sectors		N				
+200Y120	0000000921	2.1.4.1. Production Accounts by Institutional Sectors (current prices, annual)	A	Y	21	A	2000	2024
+200Y121	0000000921	2.1.4.2. Income Accounts by Institutional Sectors (current prices, annual)	A	Y	72	A	1975	2025
+200Y162	0000000921	2.1.4.3. Income Accounts by Institutional Sectors(current prices, quarterly)	Q	Y	24	Q	2010Q1	2025Q4
+200Y122	0000000921	2.1.4.4. Capital Accounts by Institutional Sectors (current prices, annual)	A	Y	22	A	1975	2025
+0000000922	0000000910	2.1.5. Contributions to Real GDP Growth		N				
+200Y123	0000000922	2.1.5.1. Contributions to Real GDP Growth by Economic Activities (seasonally adjusted, quarterly)	Q	Y	48	Q	1960Q1	2026Q3
+200Y124	0000000922	2.1.5.2. Contributions to Real GDP Growth by Economic Activities (not seasonally adjusted, quarterly & annual)	Q	Y	104	A	1954	2025
+200Y125	0000000922	2.1.5.3. Contributions to Real GDP Growth by Expenditures (seasonally adjusted, quarterly)	Q	Y	26	Q	1960Q1	2026Q3
+200Y126	0000000922	2.1.5.4. Contributions to Real GDP Growth by Expenditures (not seasonally adjusted, quarterly & annual)	Q	Y	52	A	1954	2025
+0000000923	0000000910	2.1.6. Gross Capital Formation		N				
+0000000924	0000000923	2.1.6.1. Gross Capital Formation by Type of Capital Goods		N				
+200Y127	0000000924	2.1.6.1.1. Gross Capital Formation by Type of Capital Goods (seasonally adjusted, current prices, quarterly)	Q	Y	14	Q	1970Q1	2026Q2
+200Y128	0000000924	2.1.6.1.2. Gross Capital Formation by Type of Capital Goods (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	14	Q	1970Q1	2026Q2
+200Y129	0000000924	2.1.6.1.3. Gross Capital Formation by Type of Capital Goods (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	28	A	1970	2025
+200Y130	0000000924	2.1.6.1.4. Gross Capital Formation by Type of Capital Goods (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	28	A	1970	2025
+0000000925	0000000923	2.1.6.2. Gross Capital Formation by Sectors		N				
+200Y131	0000000925	2.1.6.2.1. Gross Capital Formation by Sectors (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	32	A	1970	2025
+200Y132	0000000925	2.1.6.2.2. Gross Capital Formation by Sectors (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	32	A	1970	2025
+200Y133	0000000925	2.1.6.2.3. Gross Fixed Capital Formation by Sectors (seasonally adjusted, current prices, quarterly)	Q	Y	12	Q	2000Q1	2026Q2
+200Y134	0000000925	2.1.6.2.4. Gross Fixed Capital Formation by Sectors (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	12	Q	2000Q1	2026Q2
+0000000926	0000000923	2.1.6.3. Gross Fixed Capital Formation by Economic Activities		N				
+200Y135	0000000926	2.1.6.3.1. Gross Fixed Capital Formation by Economic Activities (current prices, annual)	A	Y	17	A	1970	2024
+200Y136	0000000926	2.1.6.3.2. Gross Fixed Capital Formation by Economic Activities (chained 2020 year prices, annual)	A	Y	17	A	1970	2024
+200Y137	0000000926	2.1.6.3.3. Gross Fixed Capital Formation by Type and Economic Activities (current prices, annual)	A	Y	24	A	2005	2024
+0000000927	0000000923	2.1.6.4. Facilities Investments by Economic Activities		N				
+200Y138	0000000927	2.1.6.4.1. Facilities Investments by Economic Activities (current prices, annual)	A	Y	28	A	2005	2025
+200Y139	0000000927	2.1.6.4.2. Facilities Investments by Economic Activities (chained 2020 year prices, annual)	A	Y	28	A	2005	2025
+0000000928	0000000910	2.1.7. Final Consumption Expenditure		N				
+0000000929	0000000928	2.1.7.1. Final Consumption Expenditure of Resident Households by Purpose		N				
+200Y140	0000000929	2.1.7.1.1. Final Consumption Expenditure of Resident Households by Purpose (seasonally adjusted, current prices, quarterly)	Q	Y	17	Q	1970Q1	2026Q2
+200Y141	0000000929	2.1.7.1.2. Final Consumption Expenditure of Resident Households by Purpose (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	17	Q	1970Q1	2026Q2
+200Y142	0000000929	2.1.7.1.3. Final Consumption Expenditure of Resident Households by Purpose (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	34	A	1970	2025
+200Y143	0000000929	2.1.7.1.4. Final Consumption Expenditure of Resident Households by Purpose (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	34	A	1970	2025
+0000000930	0000000928	2.1.7.2. Final Consumption Expenditure of Resident Households by Type		N				
+200Y144	0000000930	2.1.7.2.1. Final Consumption Expenditure of Resident Households by Type (seasonally adjusted, current prices, quarterly)	Q	Y	8	Q	1970Q1	2026Q2
+200Y145	0000000930	2.1.7.2.2. Final Consumption Expenditure of Resident Households by Type (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	8	Q	1970Q1	2026Q2
+200Y146	0000000930	2.1.7.2.3. Final Consumption Expenditure of Resident Households by Type (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	16	A	1970	2025
+200Y147	0000000930	2.1.7.2.4. Final Consumption Expenditure of Resident Households by Type (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	16	A	1970	2025
+0000000931	0000000928	2.1.7.3. Final Consumption Expenditure of NPISH by Purpose		N				
+200Y148	0000000931	2.1.7.3.1. Final Consumption Expenditure of NPISH by Purpose (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	12	A	1970	2025
+200Y149	0000000931	2.1.7.3.2. Final Consumption Expenditure of NPISH by Purpose (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	12	A	1970	2025
+0000000932	0000000910	2.1.8. General Government and Public Sector Accounts		N				
+200Y151	0000000932	2.1.8.1. General Government Final Consumption Expenditure by Function (current prices, annual)	A	Y	55	A	1970	2024
+200Y152	0000000932	2.1.8.2. General Government Total Expenditure by Function (current prices, annual)	A	Y	63	A	1970	2024
+200Y153	0000000932	2.1.8.3. General Government Total Revenue and Total Expenditure (current prices, annual)	A	Y	54	A	1970	2025
+200Y154	0000000932	2.1.8.4. Public Sector Total Revenue and Total Expenditure (current prices, annual)	A	Y	56	A	2007	2025
+0000000933	0000000910	2.1.9. Gross Savings and Gross Investments 		N				
+200Y155	0000000933	2.1.9.1. Gross Savings and Gross Investments (seasonally adjusted, current prices, quarterly)	Q	Y	3	Q	1970Q1	2026Q2
+200Y156	0000000933	2.1.9.2. Gross Savings and Gross Investments (not seasonally adjusted, current prices, quarterly & annual)	Q	Y	19	A	1970	2025
+0000000934	0000000910	2.1.10. Information and Communication Technologies (chained 2020 year prices)		N				
+200Y157	0000000934	2.1.10.1. Information and Communication Technologies (seasonally adjusted, chained 2020 year prices, quarterly)	Q	Y	10	Q	1995Q1	2026Q2
+200Y158	0000000934	2.1.10.2. Information and Communication Technologies (not seasonally adjusted, chained 2020 year prices, quarterly & annual)	Q	Y	20	A	1995	2025
+0000000935	0000000910	2.1.11. Household Distributional Accounts (experimental statistics)		N				
+200Y159	0000000935	2.1.11.1. Household Distributional Accounts (current prices, annual)	A	Y	42	A	2018	2024
+0000000110	0000000066	2.2. Input-Output Tables		N				
+0000000901	0000000110	2.2.1. 2020 Benchmark Year		N				
+0000000903	0000000901	2.2.1.2. Data		N				
+271Y110	0000000903	2.2.1.2.1. Input-Output : Total transactions(Producer's price, Large-sized)	A	Y	90	A	2020	2024
+271Y111	0000000903	2.2.1.2.2. Input-Output : Input coefficients(Producer's price, Large-sized)	A	Y	74	A	2020	2024
+271Y112	0000000903	2.2.1.2.3. Input-Output : Production requirement coefficients(Producer's price, Large-sized)	A	Y	70	A	2020	2024
+271Y113	0000000903	2.2.1.2.4. Input-Output : Import requirement coefficients(Producer's price, Large-sized)	A	Y	68	A	2020	2024
+271Y114	0000000903	2.2.1.2.5. Input-Output : Value added requirement coefficients(Producer's price, Large-sized)	A	Y	68	A	2020	2024
+271Y115	0000000903	2.2.1.2.6. Input-Output : Total workers requirement coefficients(Producer's price, Large-sized)	A	Y	68	A	2020	2024
+271Y116	0000000903	2.2.1.2.7. Input-Output : Employees requirement coefficients(Producer's price, Large-sized)	A	Y	68	A	2020	2024
+271Y120	0000000903	2.2.1.2.8. Input-Output : Total transactions(Producer's price, Medium-sized)	A	Y	190	A	2020	2024
+271Y121	0000000903	2.2.1.2.9. Input-Output : Input coefficients(Producer's price, Medium-sized)	A	Y	174	A	2020	2024
+271Y122	0000000903	2.2.1.2.10. Input-Output : Production requirement coefficients(Producer's price, Medium-sized)	A	Y	170	A	2020	2024
+271Y123	0000000903	2.2.1.2.11. Input-Output : Import requirement coefficients(Producer's price, Medium-sized)	A	Y	168	A	2020	2024
+271Y124	0000000903	2.2.1.2.12. Input-Output : Value added requirement coefficients(Producer's price, Medium-sized)	A	Y	168	A	2020	2024
+271Y125	0000000903	2.2.1.2.13. Input-Output : Total workers requirement coefficients(Producer's price, Medium-sized)	A	Y	168	A	2020	2024
+271Y126	0000000903	2.2.1.2.14. Input-Output : Employees requirement coefficients(Producer's price, Medium-sized)	A	Y	168	A	2020	2024
+0000000531	0000000110	2.2.2. 2015 Benchmark Year		N				
+0000000533	0000000531	2.2.2.2. Data		N				
+271Y008	0000000533	2.2.2.2.1. Input-Output : Total transactions(Producer's price, Large-sized)	A	Y	90	A	2015	2019
+271Y009	0000000533	2.2.2.2.2. Input-Output : Input coefficients(Producer's price, Large-sized)	A	Y	74	A	2015	2019
+271Y010	0000000533	2.2.2.2.3. Input-Output : Production requirement coefficients(Producer's price, Large-sized)	A	Y	70	A	2015	2019
+271Y011	0000000533	2.2.2.2.4. Input-Output : Import requirement coefficients(Producer's price, Large-sized)	A	Y	68	A	2015	2019
+271Y012	0000000533	2.2.2.2.5. Input-Output : Value added requirement coefficients(Producer's price, Large-sized)	A	Y	68	A	2015	2019
+271Y013	0000000533	2.2.2.2.6. Input-Output : Total workers requirement coefficients(Producer's price, Large-sized)	A	Y	136	A	2015	2019
+271Y014	0000000533	2.2.2.2.7. Input-Output : Employees requirement coefficients(Producer's price, Large-sized)	A	Y	136	A	2015	2019
+271Y015	0000000533	2.2.2.2.8. Supply(Basic price, Large-sized)	A	Y	75	A	2015	2019
+271Y016	0000000533	2.2.2.2.9. Use(Purchaser's price, Large-sized)	A	Y	82	A	2015	2019
+271Y017	0000000533	2.2.2.2.10. Use(Basic price, Large-sized)	A	Y	84	A	2015	2019
+271Y068	0000000533	2.2.2.2.11. Input-Output : Total transactions(Producer's price, Medium-sized)	A	Y	190	A	2015	2019
+271Y069	0000000533	2.2.2.2.12. Input-Output : Input coefficients(Producer's price, Medium-sized)	A	Y	174	A	2015	2019
+271Y070	0000000533	2.2.2.2.13. Input-Output : Production requirement coefficients(Producer's price, Medium-sized)	A	Y	170	A	2015	2019
+271Y071	0000000533	2.2.2.2.14. Input-Output : Import requirement coefficients(Producer's price, Medium-sized)	A	Y	168	A	2015	2019
+271Y072	0000000533	2.2.2.2.15. Input-Output : Value added requirement coefficients(Producer's price, Medium-sized)	A	Y	168	A	2015	2019
+271Y073	0000000533	2.2.2.2.16. Input-Output : Total workers requirement coefficients(Producer's price, Medium-sized)	A	Y	336	A	2015	2019
+271Y074	0000000533	2.2.2.2.17. Input-Output : Employees requirement coefficients(Producer's price, Medium-sized)	A	Y	336	A	2015	2019
+271Y075	0000000533	2.2.2.2.18. Supply(Basic price, Medium-sized)	A	Y	171	A	2015	2019
+271Y076	0000000533	2.2.2.2.19. Use(Purchaser's price, Medium-sized)	A	Y	178	A	2015	2019
+271Y077	0000000533	2.2.2.2.20. Use(Basic price, Medium-sized)	A	Y	180	A	2015	2019
+0000000111	0000000066	2.3. Flow of Funds		N				
+0000000112	0000000111	2.3.1. SNA(2008~)		N				
+283Y001	0000000112	2.3.1.1 Main indicators of flow of funds (2009~)	Q	Y	90	A	2009	2025
+281Y001	0000000112	2.3.1.2. Financial Transaction(2009~)	Q	Y	184	A	2009	2025
+281Y002	0000000112	2.3.1.3. Financial Assets and Liabilities Outstanding(2008~)	Q	Y	184	A	2008	2025
+0000000802	0000000112	2.3.1.4. Debt Securities(2018~)		N				
+0000000804	0000000802	2.3.1.4.1. Debt Securities Issues		N				
+282Y001	0000000804	2.3.1.4.1.1. Stocks(Nominal Value)	Q	Y	44	A	2018	2025
+282Y002	0000000804	2.3.1.4.1.2. Stocks(Market Value)	Q	Y	44	A	2018	2025
+282Y003	0000000804	2.3.1.4.1.3. Net Transactions(Market Value)	Q	Y	44	A	2018	2025
+0000000805	0000000802	2.3.1.4.2. Debt Securities Holdings		N				
+282Y004	0000000805	2.3.1.4.2.1. Stocks(Market Value)	Q	Y	70	A	2018	2025
+282Y005	0000000805	2.3.1.4.2.2. Net Transactions(Market Value)	Q	Y	70	A	2018	2025
+282Y006	0000000802	2.3.1.4.3. Debt Securities Issues and Holdings(Stocks, Market Value)	Q	Y	28	A	2018	2025
+0000001009	0000000112	2.3.1.5. Detailed Flow of Funds : from whom-to-whom(2018~)		N				
+284Y001	0000001009	2.3.1.5.1. Stocks	A	Y	64	A	2018	2024
+284Y002	0000001009	2.3.1.5.2. Net Transactions	A	Y	64	A	2018	2024
+0000000115	0000000111	2.3.2. SNA(2002~2013)		N				
+281Y006	0000000115	2.3.2.1. Financial Transaction(2003~2013)	Q	Y	142	A	2003	2013
+281Y007	0000000115	2.3.2.2. Financial Assets and Liabilities Outstanding(2002~2013)	Q	Y	142	A	2002	2013
+0000000118	0000000111	2.3.3. SNA(1975~2005)		N				
+281Y004	0000000118	2.3.3.1 Financial Transactions (1975~2005)	Q	Y	116	A	1975	2005
+281Y005	0000000118	2.3.3.2 Financial Assets and Liabilities Outstanding (1975~2005)	Q	Y	114	A	1975	2005
+0000000121	0000000111	2.3.4. SNA(1969~1974, year)		N				
+281Y011	0000000121	2.3.4.1. Financial Transactions(1970~1974)	A	Y	58	A	1970	1974
+281Y012	0000000121	2.3.4.2. Financial Assets and Liabilities Outstanding(1969~1974)	A	Y	58	A	1969	1974
+0000000124	0000000111	2.3.5. SNA(1962~1970, year)		N				
+281Y009	0000000124	2.3.5.1. Financial Transactions(1963~1970)	A	Y	36	A	1963	1970
+281Y010	0000000124	2.3.5.2. Financial Assets and Liabilities Outstanding(1962~1970)	A	Y	35	A	1962	1970
+0000000940	0000000066	2.4. National Balance Sheets(reference year 2020)		N				
+0000000941	0000000940	2.4.1. Capital stock by assets		N				
+0000000942	0000000941	2.4.1.1. Net capital stock by assets		N				
+291Y501	0000000942	2.4.1.1.1. Net capital stock by assets(at current prices, year-end)	A	Y	31	A	1970	2025
+291Y502	0000000942	2.4.1.1.2. Net capital stock by assets(at chained 2020 year prices, year-end)	A	Y	31	A	1970	2025
+0000000943	0000000941	2.4.1.2. Productive capital stock by assets		N				
+291Y503	0000000943	2.4.1.2.1. Productive capital stock by assets(at current prices, year-end)	A	Y	12	A	1970	2025
+291Y504	0000000943	2.4.1.2.2. Productive capital stock by assets(at chained 2020 year prices, year-end)	A	Y	12	A	1970	2025
+0000000944	0000000940	2.4.2. Balance sheets by institutional sectors		N				
+291Y505	0000000944	2.4.2.1. Balance sheets by institutional sectors(at current prices, year-end)	A	Y	35	A	2008	2025
+291Y506	0000000944	2.4.2.2. Total changes in assets/liabilities(at current prices)	A	Y	35	A	2009	2025
+291Y507	0000000944	2.4.2.3. Changes in net worth, total(at current prices)	A	Y	16	A	2009	2025
+0000000945	0000000940	2.4.3. Net capital stock by institutional sectors		N				
+291Y508	0000000945	2.4.3.1. Net capital stock by institutional sectors(at current prices, year-end)	A	Y	38	A	1970	2025
+0000000946	0000000940	2.4.4. Holding gains by institutional sectors and non-financial assets(at current prices)		N				
+291Y509	0000000946	2.4.4.1. Nominal holding gains by institutional sectors and non-financial assets(at current prices)	A	Y	17	A	1996	2025
+291Y510	0000000946	2.4.4.2. Neutral holding gains by institutional sectors and non-financial assets(at current prices)	A	Y	17	A	1996	2025
+291Y511	0000000946	2.4.4.3. Real holding gains by institutional sectors and non-financial assets(at current prices)	A	Y	17	A	1996	2025
+0000000947	0000000940	2.4.5. Productive capital stock by institutional sectors		N				
+291Y512	0000000947	2.4.5.1. Productive capital stock by institutional sectors(at current prices, year-end)	A	Y	19	A	1970	2025
+291Y513	0000000947	2.4.5.2. Productive capital stock by institutional sectors(at chained 2020 year prices, year-end)	A	Y	19	A	1970	2025
+0000000948	0000000940	2.4.6. Volume indices of capital services by institutional sectors		N				
+291Y514	0000000948	2.4.6.1. Chained Laspeyres volume indices of capital services by institutional sectors	A	Y	5	A	1970	2025
+291Y515	0000000948	2.4.6.2. Chained Tornqvist volume indices of capital services by institutional sectors	A	Y	5	A	1970	2025
+291Y516	0000000948	2.4.6.3. Shares of user cost of capital by institutional sectors(at current prices, percentage)	A	Y	5	A	1970	2024
+0000000949	0000000940	2.4.7. Net capital stock by kind of economic activity		N				
+291Y517	0000000949	2.4.7.1. Net capital stock by kind of economic activity(at current prices, year-end)	A	Y	40	A	1970	2024
+291Y518	0000000949	2.4.7.2. Net capital stock by kind of economic activity(at chained 2020 year prices, year-end)	A	Y	39	A	1970	2024
+0000000950	0000000940	2.4.8. Productive capital stock by kind of economic activity		N				
+291Y519	0000000950	2.4.8.1. Productive capital stock by kind of economic activity(at current prices, year-end)	A	Y	38	A	1970	2024
+291Y520	0000000950	2.4.8.2. Productive capital stock by kind of economic activity(at chained 2020 year prices, year-end)	A	Y	38	A	1970	2024
+0000000951	0000000940	2.4.9. Volume indices of capital services by kind of economic activity		N				
+291Y521	0000000951	2.4.9.1. Chained Laspeyres volume indices of capital services by kind of economic activity	A	Y	38	A	1970	2024
+291Y522	0000000951	2.4.9.2. Chained Tornqvist volume indices of capital services by kind of economic activity	A	Y	38	A	1970	2024
+291Y523	0000000951	2.4.9.3. Shares of user cost of capital by kind of economic activity(at current prices, percentage)	A	Y	38	A	1970	2024
+291Y524	0000000940	2.4.10. Total value of housing by provinces(at current prices, year-end)	A	Y	18	A	1995	2025
+291Y525	0000000940	2.4.11. Net capital stock of land by provinces(at current prices, year-end)	A	Y	18	A	1995	2025
+0000000157	0000000066	2.5. Balance of Payments Statistics		N				
+0000000158	0000000157	2.5.1. Balance of Payments		N				
+301Y013	0000000158	2.5.1.1. Balance of Payments	M	Y	861	A	1980	2025
+301Y017	0000000158	2.5.1.2. Current Account(S.A.)	M	Y	19	M	198001	202609
+301Y014	0000000158	2.5.1.3. EBOPS	M	Y	438	A	2006	2025
+301Y015	0000000158	2.5.1.4. Regional Current Account	A	Y	65	A	1998	2025
+301Y016	0000000158	2.5.1.5. Regional Capital & Financial Account	A	Y	25	A	2006	2025
+0000000159	0000000157	2.5.2. Knowledge-based Services Trade Balance		N				
+0000000160	0000000159	2.5.2.1. Knowledge-based Services Trade Balance		N				
+304Y101	0000000160	2.5.2.1.1. Knowledge-based Services Trade Balance (by sector)	Q	Y	84	A	2010	2025
+304Y102	0000000160	2.5.2.1.2. Knowledge-based Services Trade Balance (by industrial types)	Q	Y	126	A	2010	2025
+304Y103	0000000160	2.5.2.1.3. Knowledge-based Services Trade Balance (by enterprise size)	Q	Y	33	A	2010	2025
+304Y104	0000000160	2.5.2.1.4. Knowledge-based Services Trade Balance (by region)	Q	Y	84	A	2010	2025
+0000000161	0000000159	2.5.2.2. Knowledge-based Services Trade Balance - ICT Classification		N				
+304Y105	0000000161	2.5.2.2.1. Knowledge-based Services Trade Balance - ICT Classification	Q	Y	222	A	2010	2025
+0000000162	0000000159	2.5.2.3. Knowledge-based Services Trade Balance - Content Classification		N				
+304Y106	0000000162	2.5.2.3.1. Knowledge-based Services Trade Balance - Content Classification	Q	Y	168	A	2010	2025
+0000000163	0000000159	2.5.2.4. Intellectual Property Right Trade Balance		N				
+304Y107	0000000163	2.5.2.4.1. Intellectual Property Right Trade Balance	Q	Y	57	A	2010	2025
+0000000167	0000000066	2.6. International Investment Position and External Debt/Assets		N				
+0000000168	0000000167	2.6.1. International Investment Position		N				
+311Y001	0000000168	2.6.1.1. International Investment Position	Q	Y	430	A	1994	2025
+311Y002	0000000168	2.6.1.2. IIP for Nations	A	Y	23	A	2002	2025
+311Y003	0000000168	2.6.1.3. IIP for Currencies	A	Y	23	A	2002	2025
+0000000172	0000000167	2.6.2. External Debt / Assets		N				
+311Y004	0000000172	2.6.2.1. External Debt	Q	Y	196	A	1994	2025
+311Y005	0000000172	2.6.2.2. External Assets	Q	Y	194	A	1994	2025
+311Y006	0000000172	2.6.2.3. Net External Assets	Q	Y	42	A	1994	2025
+0000000176	*	3. Exchange Rate/International Reserves and Trade		N				
+0000000177	0000000176	3.1. Foreign Exchange Rate		N				
+0000000178	0000000177	3.1.1. Foreign Daily Exchange Rate		N				
+731Y001	0000000178	3.1.1.1. Arbitraged Rates of Major Currencies Against Won	D	Y	53	D	19640504	20261105
+731Y002	0000000178	3.1.1.2. Cross Rate of Major Currencies Against US Dollar	D	Y	51	D	19770401	20261105
+731Y003	0000000178	3.1.1.3. Exchange Rate of Won Against US Dollar, China Yuan Renminbi, and Japan Yen	D	Y	10	D	19900302	20261105
+0000000182	0000000177	3.1.2. Average Period, End of Period		N				
+731Y004	0000000182	3.1.2.1. Arbitraged Rates of Major Currencies Against Won, Longer Frequency	M	Y	220	A	1964	2025
+731Y005	0000000182	3.1.2.2. Cross Rate of Major Currencies Against US Dollar, Longer Frequency	M	Y	212	A	1977	2025
+731Y006	0000000182	3.1.2.3. Exchange Rate of Won Against US Dollar, China Yuan Renminbi, and Japan Yen, Longer Frequency	M	Y	48	A	2004	2025
+0000000186	0000000176	3.2. External Trade		N				
+901Y118	0000000186	3.2.1. Trade Statistics for Export/Import	M	Y	4	A	2000	2025
+901Y119	0000000186	3.2.2. Import and export status by Continent	M	Y	10	M	200001	202609
+901Y121	0000000186	3.2.3. Import and Export status by country	M	Y	87	A	1965	2025
+901Y092	0000000186	3.2.4. Trades by Type of Goods	M	Y	18	A	2000	2026
+0000000190	0000000186	3.2.5. Trades based on Customs Data by Settlement Currency		N				
+0000000191	0000000190	3.2.5.1. Exports by Settlement Currency		N				
+303Y001	0000000191	3.2.5.1.1. Settlement currency by region(Export)	M	Y	336	A	1992	2025
+303Y002	0000000191	3.2.5.1.2. Settlement currency by country(Export)	M	Y	252	A	1992	2025
+303Y003	0000000191	3.2.5.1.3. Korean Won settlement by region/country(Export)	M	Y	120	A	1992	2025
+0000000192	0000000190	3.2.5.2. Imports by Settlement Currency		N				
+303Y004	0000000192	3.2.5.2.1. Settlement currency by region(Import)	M	Y	336	A	1992	2025
+303Y005	0000000192	3.2.5.2.2. Settlement currency by country(Import)	M	Y	252	A	1992	2025
+303Y006	0000000192	3.2.5.2.3. Korean Won settlement by region/country(Import)	M	Y	108	A	1992	2025
+0000000193	0000000176	3.3. Trade/Terms of Trade indices(2020=100)		N				
+0000000194	0000000193	3.3.1. Trade Value and Volume Indices		N				
+0000000195	0000000194	3.3.1.1. Export Value and Volume Indices		N				
+403Y001	0000000195	3.3.1.1.1. Export Value Indices	M	Y	716	A	1988	2025
+403Y002	0000000195	3.3.1.1.2. Export Volume Indices	M	Y	716	A	1988	2025
+0000000196	0000000194	3.3.1.2. Import Value and Volume Indices		N				
+403Y003	0000000196	3.3.1.2.1. Import value Indices	M	Y	828	A	1988	2025
+403Y004	0000000196	3.3.1.2.2. Import volume Indices	M	Y	828	A	1988	2025
+403Y005	0000000193	3.3.2. Terms of Trade Indices	M	Y	6	A	1988	2025
+0000000198	0000000176	3.4. Direct Investmnet		N				
+901Y060	0000000198	3.4.1. Direct Investment Abroad	M	Y	32	A	1980	2026
+901Y061	0000000198	3.4.2. Direct Investment in Korea(Based on Acceptance)	Q	Y	32	A	1962	2026
+732Y001	0000000176	3.5. International Reserves	M	Y	15	A	1960	2025
+0000000202	*	4. Price Indices		N				
+0000000203	0000000202	4.1. Producer Price Indices		N				
+0000000204	0000000203	4.1.1. Producer Price Indices		N				
+404Y014	0000000204	4.1.1.1. Producer Price Indices  (Basic Groups)	M	Y	1577	A	1965	2025
+404Y015	0000000204	4.1.1.2. Producer Price Indices  (Special Groups)	M	Y	33	A	1965	2025
+404Y016	0000000204	4.1.1.3. Producer Price Indices  (Item Groups)	M	Y	2680	A	1965	2025
+404Y017	0000000204	4.1.1.4. Producer Price Index(All, 1910~1964)	M	Y	3	A	1910	1964
+405Y006	0000000203	4.1.2. Domestic Supply Price Indices (2020=100)	M	Y	177	A	1980	2025
+405Y007	0000000203	4.1.3. Total Output Price Indices (2020=100)	M	Y	192	A	2010	2025
+0000000211	0000000202	4.2. Consumer Price Indices		N				
+901Y009	0000000211	4.2.1. Consumer Price indices	M	Y	1743	A	1965	2025
+901Y010	0000000211	4.2.2. Consumer Price indices (All Cities, Special Groups)	M	Y	104	A	1985	2025
+0000000214	0000000202	4.3. Export/Import Price Indices		N				
+0000000215	0000000214	4.3.1. Export Price Indices (2020=100)		N				
+402Y014	0000000215	4.3.1.1. Export Price Indices (Basic Groups)	M	Y	725	A	1971	2025
+402Y015	0000000215	4.3.1.2. Export Price Indices(Special groups)	M	Y	72	A	1971	2025
+402Y016	0000000215	4.3.1.3. Export Prices Indices(Item Groups)	M	Y	652	A	1971	2025
+0000000219	0000000214	4.3.2. Import Price Indices (2020=100)		N				
+401Y015	0000000219	4.3.2.1. Import Price Indices(Basic Groups)	M	Y	837	A	1971	2025
+401Y016	0000000219	4.3.2.2. Import Prices Indices(Special Groups)	M	Y	75	A	2000	2025
+401Y017	0000000219	4.3.2.3. Import Price Indices(Item Groups)	M	Y	732	A	1971	2025
+401Y018	0000000219	4.3.2.4. Import Price Indices(Group by use)	M	Y	480	A	1971	2025
+0000000224	0000000202	4.4. Estate Price Indices		N				
+0000000225	0000000224	4.4.1. Housing Price Index		N				
+901Y062	0000000225	4.4.1.1. House Price Index(KB)	M	Y	6	M	198601	202610
+901Y063	0000000225	4.4.1.2. House Jeonse Price Index(KB)	M	Y	6	M	198601	202610
+901Y064	0000000224	4.4.2. Fluctuation Rate of Land Price by Area	M	Y	31	M	200501	202609
+0000000227	0000000224	4.4.3. Housing Price Index by Type		N				
+0000000952	0000000227	4.4.3.1. House Price Index by Type		N				
+901Y149	0000000952	4.4.3.1.1. House Price Index by Type(base month: 2026.06)	M	Y	27	M	202106	202609
+901Y144	0000000952	4.4.3.1.2. House Price Index by Type(base month: 2026.01)	M	Y	28	M	202106	202606
+901Y113	0000000952	4.4.3.1.3. House Price Index by Type(base month: 2025.03)	M	Y	28	M	202106	202601
+901Y093	0000000952	4.4.3.1.4. House Price Index by Type(base month: 2021.06)	M	Y	28	M	200311	202503
+0000000953	0000000227	4.4.3.2. House Jeonse Price Index by Type		N				
+901Y150	0000000953	4.4.3.2.1. House Jeonse Price Index by Type(base month: 2026.06)	M	Y	27	M	202106	202609
+901Y145	0000000953	4.4.3.2.2. House Jeonse Price Index by Type(base month: 2026.01)	M	Y	28	M	202106	202606
+901Y114	0000000953	4.4.3.2.3. House Jeonse Price Index by Type(base month: 2025.03)	M	Y	28	M	202106	202601
+901Y094	0000000953	4.4.3.2.4. House Jeonse Price Index by Type(base month: 2021.06)	M	Y	28	M	200311	202503
+0000000954	0000000227	4.4.3.3. Housing Monthly Rent Index by Type		N				
+901Y151	0000000954	4.4.3.3.1. Housing Monthly Rent Index by Type(base month: 2026.06)	M	Y	27	M	202106	202609
+901Y146	0000000954	4.4.3.3.2. Housing Monthly Rent Index by Type(base month: 2026.01)	M	Y	28	M	202106	202606
+901Y115	0000000954	4.4.3.3.3. Housing Monthly Rent Index by Type(base month: 2025.03)	M	Y	28	M	202106	202601
+901Y095	0000000954	4.4.3.3.4. Housing Monthly Rent Index by Type(base month: 2021.06)	M	Y	28	M	201506	202503
+901Y089	0000000224	4.4.4. Transaction-Based Price Indices of Apartment	M	Y	29	M	200601	202608
+0000000229	0000000224	4.4.5. Rent Indices for Building by Business District		N				
+901Y096	0000000229	4.4.5.1. Rent Index for Office Building by Business District	Q	Y	17	Q	2013Q1	2026Q2
+901Y097	0000000229	4.4.5.2. Rent Index for the Medium-and-Large-Sized Stores by Business District	Q	Y	18	Q	2013Q1	2026Q2
+0000000230	*	5. Financial Statement Analysis		N				
+0000000231	0000000230	5.1. Indicators of Financial Statement Analysis		N				
+0000000400	0000000231	5.1.1. Indicators concerning Growth		N				
+501Y005	0000000400	5.1.1.1. Indicators concerning Growth(11th revised KSIC, 2009~, complete enumeration)	A	Y	141	A	2010	2025
+501Y019	0000000400	5.1.1.2. Indicators concerning Growth(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	148	A	2015	2016
+501Y020	0000000400	5.1.1.3. Indicators concerning Growth(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	148	A	2010	2014
+501Y021	0000000400	5.1.1.4. Indicators concerning Growth(2007~2010, sample survey)	A	Y	138	A	2007	2010
+501Y022	0000000400	5.1.1.5. Indicators concerning Growth(1998~2007, sample survey)	A	Y	159	A	2002	2007
+501Y023	0000000400	5.1.1.6. Indicators concerning Growth(1990~1997, sample survey)	A	Y	162	A	1990	1997
+0000000239	0000000231	5.1.2. Relationship Ratios of Income and Expenses		N				
+501Y006	0000000239	5.1.2.1. Relationship Ratios of Income and Expenses(11th revised KSIC, 2009~, complete enumeration)	A	Y	170	A	2009	2025
+501Y024	0000000239	5.1.2.2. Relationship Ratios of Income and Expenses(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	176	A	2015	2016
+501Y025	0000000239	5.1.2.3. Relationship Ratios of Income and Expenses(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	176	A	2009	2014
+501Y026	0000000239	5.1.2.4. Relationship Ratios of Income and Expenses(2007~2010, sample survey)	A	Y	166	A	2007	2010
+501Y027	0000000239	5.1.2.5. Relationship Ratios of Income and Expenses(1998~2007, sample survey)	A	Y	198	A	2002	2007
+501Y028	0000000239	5.1.2.6. Relationship Ratios of Income and Expenses(1990~1997, sample survey)	A	Y	185	A	1990	1997
+0000000245	0000000231	5.1.3. Relationship Ratios of Assets, Liabilities and Stockholder's Equity		N				
+501Y007	0000000245	5.1.3.1. Relationship Ratios of Assets, Liabilities and Stockholder's Equity(11th revised KSIC, 2009~, complete enumeration)	A	Y	148	A	2009	2025
+501Y029	0000000245	5.1.3.2. Relationship Ratios of Assets, Liabilities and Stockholder's Equity(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	155	A	2015	2016
+501Y030	0000000245	5.1.3.3. Relationship Ratios of Assets, Liabilities and Stockholder's Equity(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	155	A	2009	2014
+501Y031	0000000245	5.1.3.4. Relationship Ratios of Assets, Liabilities and Stockholder's Equity(2007~2010, sample survey)	A	Y	145	A	2007	2010
+501Y032	0000000245	5.1.3.5. Relationship Ratios of Assets, Liabilities and Stockholder's Equity(1998~2007, sample survey)	A	Y	169	A	2002	2007
+501Y033	0000000245	5.1.3.6. Relationship Ratios of Assets, Liabilities and Stockholder's Equity(1990~1997, sample survey)	A	Y	167	A	1990	1997
+0000000246	0000000231	5.1.4. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(10th revised KSIC, 2009~, complete enumeration)		N				
+501Y008	0000000246	5.1.4.1. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(11th revised KSIC, 2009~, complete enumeration)	A	Y	145	A	2009	2025
+501Y034	0000000246	5.1.4.2. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	152	A	2015	2016
+501Y035	0000000246	5.1.4.3. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	152	A	2009	2014
+501Y036	0000000246	5.1.4.4. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(2007~2010, sample survey)	A	Y	142	A	2007	2010
+501Y037	0000000246	5.1.4.5. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(1998~2007, sample survey)	A	Y	164	A	2002	2007
+501Y038	0000000246	5.1.4.6. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(1990~1997, sample survey)	A	Y	163	A	1990	1997
+0000000247	0000000231	5.1.5. Indicators concerning Productivity		N				
+501Y009	0000000247	5.1.5.1. Indicators concerning Productivity(11th revised KSIC, 2009~, complete enumeration)	A	Y	140	A	2009	2025
+501Y039	0000000247	5.1.5.2. Indicators concerning Productivity(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	147	A	2015	2016
+501Y040	0000000247	5.1.5.3. Indicators concerning Productivity(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	147	A	2009	2014
+501Y041	0000000247	5.1.5.4. Indicators concerning Productivity(2007~2010, sample survey)	A	Y	140	A	2007	2010
+501Y042	0000000247	5.1.5.5. Indicators concerning Productivity(2002~2007, sample survey)	A	Y	161	A	2002	2007
+501Y043	0000000247	5.1.5.6. Indicators concerning Productivity(1998~2006, sample survey)	A	Y	161	A	2002	2006
+501Y044	0000000247	5.1.5.7. Indicators concerning Productivity(1990~1997, sample survey)	A	Y	164	A	1990	1997
+0000000248	0000000231	5.1.6. FSA Quartiles Statistics		N				
+501Y086	0000000248	5.1.6.1. FSA Quartiles Statistics(11th revised KSIC, 2013~, complete enumeration)	A	Y	80	A	2013	2025
+0000000267	0000000230	5.2. Financial Statement Analysis(Quarterly)		N				
+502Y001	0000000267	5.2.1. Indicators concerning Growth	Q	Y	28	Q	2015Q1	2026Q2
+502Y002	0000000267	5.2.2. Relationship Ratios of Income and Expenses	Q	Y	32	Q	2015Q1	2026Q2
+502Y003	0000000267	5.2.3. Relationship Ratios of Assets, Liablitilies and Stockholder's Equity	Q	Y	30	Q	2015Q1	2026Q2
+502Y004	0000000267	5.2.4. Turnover Ratios of Assets	Q	Y	27	Q	2015Q1	2026Q2
+0000000401	0000000230	5.3. Balance Sheet		N				
+501Y001	0000000401	5.3.1. Balance Sheet(11th revised KSIC, 2009~, complete enumeration)	A	Y	176	A	2009	2025
+501Y049	0000000401	5.3.2. Balance Sheet(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	183	A	2015	2016
+501Y050	0000000401	5.3.3. Balance Sheet(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	183	A	2009	2014
+501Y051	0000000401	5.3.4. Balance Sheet(2008~2010, sample survey)	A	Y	175	A	2008	2010
+501Y052	0000000401	5.3.5. Balance Sheet(2000~2007, sample survey)	A	Y	207	A	2004	2007
+501Y053	0000000401	5.3.6. Balance Sheet(1999, sample survey)	A	Y	160	A	1999	1999
+501Y054	0000000401	5.3.7. Balance Sheet(1997~1998, sample survey)	A	Y	196	A	1997	1998
+501Y055	0000000401	5.3.8. Balance Sheet(1990~1996, sample survey)	A	Y	202	A	1990	1996
+0000000402	0000000230	5.4. Income Statement		N				
+501Y002	0000000402	5.4.1. Income Statement(11th revised KSIC, 2009~, complete enumeration)	A	Y	171	A	2009	2025
+501Y056	0000000402	5.4.2. Income Statement(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	178	A	2015	2016
+501Y057	0000000402	5.4.3. Income Statement(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	178	A	2009	2014
+501Y058	0000000402	5.4.4. Income Statement(2008~2010, sample survey)	A	Y	179	A	2008	2010
+501Y059	0000000402	5.4.5. Income Statement(2000~2007, sample survey)	A	Y	200	A	2000	2007
+501Y060	0000000402	5.4.6. Income Statement(1999, sample survey)	A	Y	160	A	1999	1999
+501Y061	0000000402	5.4.7. Income Statement(1997~1998, sample survey)	A	Y	192	A	1997	1998
+501Y062	0000000402	5.4.8. Income Statement(1990~1996, sample survey)	A	Y	187	A	1990	1996
+0000000403	0000000230	5.5. Statement of Cost of Goods Manufactured		N				
+501Y003	0000000403	5.5.1. Statement of Cost of Goods Manufactured(11th revised KSIC, 2009~, complete enumeration)	A	Y	155	A	2009	2025
+501Y063	0000000403	5.5.2. Statement of Cost of Goods Manufactured(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	162	A	2015	2016
+501Y064	0000000403	5.5.3. Statement of Cost of Goods Manufactured(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	162	A	2009	2014
+501Y065	0000000403	5.5.4. Statement of Cost of Goods Manufactured(2007~2010, sample survey)	A	Y	152	A	2008	2010
+501Y066	0000000403	5.5.5. Statement of Cost of Goods Manufactured(2000~2007, sample survey)	A	Y	172	A	2004	2007
+501Y067	0000000403	5.5.6. Statement of Cost of Goods Manufactured(1990~1999, sample survey)	A	Y	174	A	1990	1999
+0000000404	0000000230	5.6. Statement of Appropriation of Retained Earnings		N				
+501Y004	0000000404	5.6.1. Statement of Appropriation of Retained Earnings(11th revised KSIC, 2009~, complete enumeration)	A	Y	149	A	2009	2025
+501Y068	0000000404	5.6.2. Statement of Appropriation of Retained Earnings(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	156	A	2015	2016
+501Y069	0000000404	5.6.3. Statement of Appropriation of Retained Earnings(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	156	A	2009	2014
+501Y070	0000000404	5.6.4. Statement of Appropriation of Retained Earnings(2007~2010, sample survey)	A	Y	147	A	2007	2010
+501Y071	0000000404	5.6.5. Statement of Appropriation of Retained Earnings(2000~2007, sample survey)	A	Y	167	A	2002	2007
+501Y072	0000000404	5.6.6. Statement of Appropriation of Retained Earnings(1990~1999, sample survey)	A	Y	169	A	1990	1999
+0000000405	0000000230	5.7. Composition of Cross Value Added		N				
+501Y010	0000000405	5.7.1. Composition of Gross Value Added(11th revised KSIC, 2009~, complete enumeration)	A	Y	140	A	2009	2025
+501Y073	0000000405	5.7.2. Composition of Gross Value Added(Framework Act on SMEs, 2015~2016, complete enumeration)	A	Y	147	A	2015	2016
+501Y074	0000000405	5.7.3. Composition of Gross Value Added(The Restriction of Special Taxation Act, 2009~2014, complete enumeration)	A	Y	147	A	2009	2014
+501Y075	0000000405	5.7.4. Composition of Gross Value Added(2007~2010, sample survey)	A	Y	137	A	2007	2010
+501Y076	0000000405	5.7.5. Composition of Gross Value Added(2002~2007, sample survey)	A	Y	155	A	2002	2007
+501Y077	0000000405	5.7.6. Composition of Gross Value Added(1998~2006, sample survey)	A	Y	159	A	2002	2006
+501Y078	0000000405	5.7.7. Composition of Gross Value Added(1990~1997, sample survey)	A	Y	160	A	1990	1997
+0000000406	0000000230	5.8. Statement of Cash Flow		N				
+0000000407	0000000406	5.8.1. Statement of Cash Flow		N				
+501Y013	0000000407	5.8.1.1. Statement of Cash Flow(2012~)	A	Y	89	A	2011	2025
+501Y079	0000000407	5.8.1.2. Statement of Cash Flow(2008~2011)	A	Y	84	A	2007	2011
+501Y080	0000000407	5.8.1.3. Statement of Cash Flow(1995~2007)	A	Y	91	A	1994	2007
+0000000408	0000000406	5.8.2. Other Major Financial Items		N				
+501Y014	0000000408	5.8.2.1. Other Major Financial Items(2012~)	A	Y	53	A	2011	2025
+501Y081	0000000408	5.8.2.2. Other Major Financial Items(2008~2011)	A	Y	44	A	2007	2011
+501Y082	0000000408	5.8.2.3. Other Major Financial Items(1995~2007)	A	Y	51	A	1994	2007
+0000000409	0000000406	5.8.3. Cash Flow Ratios		N				
+501Y015	0000000409	5.8.3.1. Cash Flow Ratios(2012~)	A	Y	53	A	2011	2025
+501Y083	0000000409	5.8.3.2. Cash Flow Ratios(2008~2011)	A	Y	44	A	2007	2011
+501Y084	0000000409	5.8.3.3. Cash Flow Ratios(1995~2007)	A	Y	46	A	1998	2007
+0000000411	0000000230	5.9. Financial Statement Analysis(Regional)		N				
+0000000602	0000000411	5.9.1. Financial Statement Analysis(11th revised KSIC)		N				
+503Y005	0000000602	5.9.1.1. Indicators concerning Growth(the 11th revised KSIC)	A	Y	157	A	2017	2024
+503Y006	0000000602	5.9.1.2. Relationship Ratios of Income and Expenses(the 11th revised KSIC)	A	Y	185	A	2017	2024
+503Y007	0000000602	5.9.1.3. Relationship Ratios of Assets, Liabilities and Stockholder's equity(the 11th revised KSIC)	A	Y	164	A	2017	2024
+503Y008	0000000602	5.9.1.4. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(the 11th revised KSIC)	A	Y	161	A	2017	2024
+503Y009	0000000602	5.9.1.5. Indicators concerning Productivity(the 11th revised KSIC)	A	Y	156	A	2017	2024
+503Y001	0000000602	5.9.1.6. Balance Sheet(the 11th revised KSIC)	A	Y	192	A	2017	2024
+503Y002	0000000602	5.9.1.7. Income Statement(the 11th revised KSIC)	A	Y	187	A	2017	2024
+503Y003	0000000602	5.9.1.8. Statement of Cost of Goods Manufactured(the 11th revised KSIC)	A	Y	171	A	2017	2024
+503Y004	0000000602	5.9.1.9. Statement of Appropriation of Retained Earnings(the 11th revised KSIC)	A	Y	165	A	2017	2024
+503Y010	0000000602	5.9.1.10. Composition of Gross Value Added(the 11th revised KSIC)	A	Y	154	A	2017	2024
+0000000603	0000000411	5.9.2. Financial Statement Analysis(10th revised KSIC)		N				
+503Y105	0000000603	5.9.2.1. Indicators concerning Growth(the 10th revised KSIC)	A	Y	148	A	2015	2023
+503Y106	0000000603	5.9.2.2. Relationship Ratios of Income and Expenses(the 10th revised KSIC)	A	Y	176	A	2015	2023
+503Y107	0000000603	5.9.2.3. Relationship Ratios of Assets, Liabilities and Stockholder's equity(the 10th revised KSIC)	A	Y	155	A	2015	2023
+503Y108	0000000603	5.9.2.4. Turnover Ratios of Assets, Liabilities and Stockholder's Equity(the 10th revised KSIC)	A	Y	152	A	2015	2023
+503Y109	0000000603	5.9.2.5. Indicators concerning Productivity(the 10th revised KSIC)	A	Y	147	A	2015	2023
+503Y110	0000000603	5.9.2.6. Composition of Gross Value Added(the 10th revised KSIC)	A	Y	147	A	2015	2023
+503Y101	0000000603	5.9.2.7. Balance Sheet(the 10th revised KSIC)	A	Y	183	A	2015	2023
+503Y102	0000000603	5.9.2.8. Income Statement(the 10th revised KSIC)	A	Y	178	A	2015	2023
+503Y103	0000000603	5.9.2.9. Statement of Cost of Goods Manufactured(the 10th revised KSIC)	A	Y	162	A	2015	2023
+503Y104	0000000603	5.9.2.10. Statement of Appropriation of Retained Earnings(10th revised KSIC, 2009~, complete enumeration)	A	Y	154	A	2015	2023
+0000000283	*	6. Sentiment Indices		N				
+0000000284	0000000283	6.1. Business Tendency Survey 		N				
+0000000432	0000000284	6.1.1. Business Tendency Survey		N				
+512Y013	0000000432	6.1.1.1. National Tendency	M	Y	27	M	200301	202610
+512Y014	0000000432	6.1.1.2. National Future Tendency	M	Y	27	M	200302	202611
+512Y015	0000000432	6.1.1.3. (size weighted)National Tendency	M	Y	18	M	200908	202610
+512Y016	0000000432	6.1.1.4. (size weighted)National Future Tendency	M	Y	18	M	200909	202611
+512Y017	0000000432	6.1.1.5. (discontinued series)National Tendency	M	Y	25	M	200301	201206
+512Y018	0000000432	6.1.1.6. (discontinued series)National Future Tendency	M	Y	25	M	200302	201207
+0000000433	0000000284	6.1.2. Business Tendency Survey by Sector(BOK, National)(2009.8~)		N				
+512Y007	0000000433	6.1.2.1. National Tendency(2009.8~)	M	Y	61	M	200908	202610
+512Y008	0000000433	6.1.2.2. National Future Tendency(2009.9~)	M	Y	61	M	200909	202611
+0000000434	0000000284	6.1.3. Business Tendency Survey by Sector(BOK, National)(~2009.8)		N				
+512Y001	0000000434	6.1.3.1. National Tendency(~2009.7)	M	Y	111	M	200301	200907
+512Y002	0000000434	6.1.3.2. National Future Tendency(~2009.8)	M	Y	111	M	200302	200908
+512Y021	0000000284	6.1.4. operational difficulties	M	Y	16	M	200301	202610
+0000000435	0000000284	6.1.5. Business Tendency Survey(Regional)		N				
+512Y019	0000000435	6.1.5.1. Tendency(Regional)(2013.1~)	M	Y	43	M	201301	202610
+512Y020	0000000435	6.1.5.2. Future Tendency(Regional)(2013.2~)	M	Y	43	M	201302	202611
+512Y011	0000000435	6.1.5.3. Tendency(Regional)(~2012.12)	M	Y	36	M	200301	201212
+512Y012	0000000435	6.1.5.4. Future Tendency(Regional)(~2013.1)	M	Y	36	M	200301	201301
+0000000436	0000000283	6.2. Consumer Tendency Survey		N				
+511Y002	0000000436	6.2.1. Consumer Tendency Survey(BOK, National)(Monthly)(2008.9~)	M	Y	52	M	200807	202610
+511Y001	0000000436	6.2.2. Consumer Tendency Survey(BOK, National)(Quarterly)(1995.3/4~2008.2/4))	Q	Y	47	Q	1995Q3	2008Q2
+511Y003	0000000436	6.2.3. Consumer Tendency Survey(Expected Inflation)(National)	M	Y	55	M	201301	202610
+511Y004	0000000436	6.2.4. Consumer Tendency Survey(BOK, Regional)(Monthly)	M	Y	49	M	201512	201512
+513Y001	0000000283	6.3. Economic Sentiment Index 	M	Y	2	M	200301	202610
+523Y001	0000000283	6.4. News Sentiment Index(experimental statistics)	D	Y	2	D	20050101	20261101
+0000000290	0000000283	6.5. Survey on Lending Practices		N				
+514Y001	0000000290	6.5.1. Lending attitude	Q	Y	9	Q	2002Q1	2026Q4
+514Y002	0000000290	6.5.2. Credit risks	Q	Y	8	Q	2002Q1	2026Q4
+514Y003	0000000290	6.5.3. Demand for loans	Q	Y	9	Q	2002Q1	2026Q4
+0000000313	*	7. Payments Systems		N				
+0000000314	0000000313	7.1. Cleared and Dishonored Checks and Bills		N				
+801Y002	0000000314	7.1.1. Check Clearing System	M	Y	36	A	1960	2025
+801Y003	0000000314	7.1.2. Dishonored Ratios by Province	M	Y	43	A	2009	2025
+0000000323	0000000313	7.2. BOK-Wire		N				
+606Y002	0000000323	7.2.1. BOK-Wire	M	Y	30	A	1994	2025
+0000000448	0000000323	7.2.2. Daily BOK-Wire Statistics		N				
+603Y001	0000000448	7.2.2.1. Payments through BOK-Wire	M	Y	96	A	2003	2025
+603Y010	0000000448	7.2.2.2. Daily Trends of Payments and Settlement	M	Y	129	A	2000	2025
+0000000422	0000000313	7.3. Bank Giro and Other Payment Systems		N				
+604Y003	0000000422	7.3.1. Bank Giro	M	Y	18	A	1988	2021
+605Y012	0000000422	7.3.2. Other Payment Systems	M	Y	27	A	1989	2025
+0000000423	0000000313	7.4. Statistics by BIS Standard		N				
+602Y001	0000000423	7.4.1. Statistics by Payment System	M	Y	66	A	1991	2025
+602Y002	0000000423	7.4.2. Statistics by Payment Instrument	M	Y	87	A	1991	2025
+0000000425	0000000313	7.5. Credit Cards Statistics		N				
+601Y003	0000000425	7.5.1. Credit Cards	M	Y	54	A	1997	2025
+601Y002	0000000425	7.5.2. Personal Credit Card Payments by Region and Consumption Type	M	Y	61	M	200912	202308
+0000000302	0000000313	7.6. Electronic Banking and Financial Informatization Statistics		N				
+0000000303	0000000302	7.6.1. Electronic Banking		N				
+631Y001	0000000303	7.6.1.1. Internet Banking	Q	Y	54	A	2002	2025
+632Y001	0000000303	7.6.1.2. Electronic Bills	Q	Y	12	A	2005	2021
+633Y001	0000000303	7.6.1.3. E - Money	Q	Y	8	A	2004	2025
+0000000307	0000000303	7.6.1.4. Electronic Payment Service		N				
+633Y002	0000000307	7.6.1.4.1. Payment Gateway(PG)	Q	Y	7	Q	2008Q1	2026Q2
+633Y003	0000000307	7.6.1.4.2. Escrow	Q	Y	2	Q	2008Q1	2026Q2
+633Y004	0000000307	7.6.1.4.3. Electronic Pre-paid Payment Instruments	Q	Y	2	Q	2008Q1	2026Q2
+633Y005	0000000307	7.6.1.4.4. Electronic Bill Presentment and Payment(EBPP)	Q	Y	2	Q	2008Q1	2026Q2
+633Y006	0000000307	7.6.1.4.5. Electronic Debit Payment Instruments	Q	Y	2	Q	2013Q1	2026Q2
+0000000308	0000000302	7.6.2. Financial Informatization Statistics		N				
+0000000309	0000000308	7.6.2.1. Banks		N				
+621Y001	0000000309	7.6.2.1.1. Computerized Employee Status	A	Y	55	A	1992	2020
+621Y002	0000000309	7.6.2.1.2. Computerized office equipment Status	A	Y	88	A	1992	2020
+621Y003	0000000309	7.6.2.1.3. Computational Budget Status	A	Y	12	A	1992	2023
+621Y004	0000000309	7.6.2.1.4. Electronic Banking Service Status	A	Y	112	A	1992	2020
+621Y005	0000000309	7.6.2.1.5. CD/ATM Status	A	Y	69	A	1992	2020
+621Y006	0000000309	7.6.2.1.6. FET/POS Card and Usage	A	Y	5	A	1992	2023
+621Y007	0000000309	7.6.2.1.7. Check Card Issuance and Usage	A	Y	5	A	1992	2023
+621Y008	0000000309	7.6.2.1.8. Banking Network Status	A	Y	217	A	1992	2020
+621Y009	0000000309	7.6.2.1.9. Connection with External Information Network of Banking Network	A	Y	15	A	2018	2020
+0000000310	0000000308	7.6.2.2. Securities		N				
+621Y010	0000000310	7.6.2.2.1. Computerized Employee Status	A	Y	50	A	1992	2020
+621Y011	0000000310	7.6.2.2.2. Computerized office equipment Status	A	Y	78	A	1992	2020
+621Y012	0000000310	7.6.2.2.3. Computational Budget Status	A	Y	11	A	1992	2023
+621Y013	0000000310	7.6.2.2.4. Electronic Banking Service Status	A	Y	137	A	1992	2020
+621Y014	0000000310	7.6.2.2.5. Own CD/ATM Status	A	Y	20	A	1992	2020
+621Y015	0000000310	7.6.2.2.6. Securities Network	A	Y	29	A	1992	2020
+0000000311	0000000308	7.6.2.3. Insurance Instituitons		N				
+621Y016	0000000311	7.6.2.3.1. Computerized Employee Status	A	Y	84	A	1992	2020
+621Y017	0000000311	7.6.2.3.2. Computerized office equipment Status	A	Y	78	A	1992	2020
+621Y018	0000000311	7.6.2.3.3. Computational Budget Status	A	Y	36	A	1992	2020
+621Y019	0000000311	7.6.2.3.4. Electronic Banking Service Status	A	Y	27	A	1992	2020
+621Y020	0000000311	7.6.2.3.5. Joint-use System	A	Y	19	A	1992	2020
+0000000312	0000000308	7.6.2.4. Other Financial Institutions		N				
+621Y021	0000000312	7.6.2.4.1. Computerized Employee Status	A	Y	119	A	1992	2020
+621Y022	0000000312	7.6.2.4.2. Computerized office equipment Status	A	Y	92	A	1992	2020
+621Y023	0000000312	7.6.2.4.3. Computational Budget Status	A	Y	60	A	1992	2020
+0000000326	*	8. Industry, Household Economy and other Statistics		N				
+0000000327	0000000326	8.1. General Industry		N				
+0000000800	0000000327	8.1.1. Number of Establishments and Workers by Industry		N				
+901Y147	0000000800	8.1.1.1. Number of Establishments and Workers by Industry(11th revised KSIC, 2020~)	A	Y	96	A	2020	2024
+901Y085	0000000800	8.1.1.2. Number of Establishments and Workers by Industry(10th revised KSIC, 2020~2023)	A	Y	96	A	2020	2023
+901Y067	0000000327	8.1.2. Composite Index of Business Indicators	M	Y	5	M	197001	202609
+901Y066	0000000327	8.1.3. Estimation Index of Equipment Investment	M	Y	5	A	1996	2025
+901Y033	0000000327	8.1.4. Index of all industry production	M	Y	20	A	2000	2025
+0000000383	0000000326	8.2. Agriculture, Forestry and Fishing		N				
+901Y068	0000000383	8.2.1. Households and Population of Farm and Fishery	A	Y	4	A	2010	2024
+901Y016	0000000383	8.2.2. Production Index of Agriculture, Forestry	A	Y	185	A	1965	2024
+901Y069	0000000383	8.2.3. Cultivated Land Area	A	Y	3	A	1975	2025
+901Y017	0000000383	8.2.4. Production by Fisheries and Group of Species	M	Y	54	A	1970	2025
+901Y070	0000000383	8.2.5. Assets and Liabilities of Farm and Fishery	A	Y	4	A	1962	2025
+0000000437	0000000326	8.3. Mining and Manufacturing		N				
+901Y032	0000000437	8.3.1. Index of mining and manufacturing industrial product	M	Y	115	A	1975	2025
+901Y034	0000000437	8.3.2. Production Index of Manufactruing by Product Group	M	Y	73	A	1985	2025
+901Y036	0000000437	8.3.3. Machinery production index	M	Y	27	A	1985	2025
+901Y039	0000000437	8.3.4. Volume of Production, Shipment, Inventory, Domestic Demand and Exports	M	Y	213	A	2020	2025
+901Y026	0000000437	8.3.5. Index of Inventory Turnover Ratio	M	Y	1	M	198501	202609
+901Y035	0000000437	8.3.6. Index of Manufacturing Production Capacity/Manufacturing Capacity Utilization Rate	M	Y	278	A	1971	2025
+901Y025	0000000437	8.3.7. Manufacturing Average Capacity Utilization Rate	M	Y	3	A	1980	2025
+901Y018	0000000437	8.3.8. Value of Machinery Orders Received	M	Y	78	A	1997	2025
+0000000438	0000000326	8.4. Electricity/Gas/Water/Construction		N				
+901Y020	0000000438	8.4.1. Value of Domestic Construction Orders Received	M	Y	94	A	1977	2025
+901Y104	0000000438	8.4.2. Value of Construction Completed	M	Y	33	A	1997	2025
+901Y103	0000000438	8.4.3. Results of Construction Start	M	Y	15	M	201301	202609
+901Y037	0000000438	8.4.4. Construction Permit	M	Y	15	M	201301	202609
+901Y074	0000000438	8.4.5. Number of Unsold Houses in Lots	M	Y	39	A	2001	2025
+901Y105	0000000438	8.4.6. Housing construction permits	M	Y	22	M	200701	202608
+901Y106	0000000438	8.4.7. Housing Supplies Ratio	A	Y	40	A	2010	2024
+901Y071	0000000438	8.4.8. Generation of Electric Power	A	Y	6	A	2001	2025
+901Y019	0000000438	8.4.9. Consumption of Electric Power by Sector	M	Y	14	A	1993	2025
+901Y072	0000000438	8.4.10. Total primary energy supply	M	Y	20	A	1990	2025
+901Y073	0000000438	8.4.11. Supply and Demand of Petroleum Products	M	Y	70	A	1992	2025
+0000000439	0000000326	8.5. Service		N				
+901Y038	0000000439	8.5.1. Service Industry Activities Index	M	Y	410	A	2000	2025
+901Y100	0000000439	8.5.2. Sales Index by Product Group	M	Y	86	A	1995	2025
+901Y098	0000000439	8.5.3. Sales Index by Retail Business Type	M	Y	66	A	1995	2025
+901Y101	0000000439	8.5.4. Wholesale and Retail Inventory Index by Industry	Q	Y	7	Q	2020Q1	2026Q3
+901Y108	0000000439	8.5.5. Passenger Transport	A	Y	11	A	1999	2023
+901Y099	0000000439	8.5.6. Number of Registerd Motor Vehicles	M	Y	94	M	201101	202609
+901Y075	0000000439	8.5.7. Information-Communication Service Use	A	Y	8	A	1998	2023
+0000000440	0000000326	8.6. Employment, Wages		N				
+901Y028	0000000440	8.6.1. Projected Population	A	Y	5	A	1960	2072
+901Y027	0000000440	8.6.2. Summary of Economically Active Pop.	M	Y	177	A	2000	2025
+901Y086	0000000440	8.6.3. Average Wage by Occupation	A	Y	10	A	2020	2025
+0000000958	0000000440	8.6.4. Days Worked, Hours Worked, Wages by Industry		N				
+901Y148	0000000958	8.6.4.1 Days Worked, Hours Worked, Wages by Industry(11th revised KSIC, 2026~)	M	Y	312	M	202601	202608
+901Y052	0000000958	8.6.4.2. Days Worked, Hours Worked, Wages by Industry(10th revised KSIC, 2020~2025)	M	Y	416	A	2020	2025
+901Y107	0000000440	8.6.5. Index of Labor Porductivity	Q	Y	44	A	2011	2025
+901Y088	0000000440	8.6.6. Unit Labor Cost Index	Q	Y	86	A	2011	2025
+901Y102	0000000440	8.6.7. Hourly Nominal Wage Index	Q	Y	38	A	2011	2025
+901Y083	0000000440	8.6.8. Number of Workers Applied Employment Insurance	M	Y	46	A	2007	2025
+901Y084	0000000440	8.6.9. Unemployment Allowance Received	M	Y	50	A	2010	2025
+0000000700	0000000326	8.7. Household Economy		N				
+0000000701	0000000700	8.7.1. Survey of Household Finances and Living Conditions(2017~)		N				
+903Y201	0000000701	8.7.1.1. Household assets, liabilities and income by provinces(2017~)	A	Y	37	A	2017	2025
+903Y202	0000000701	8.7.1.2. Household assets liabilities and income by the kind of house(2017~)	A	Y	47	A	2017	2025
+903Y203	0000000701	8.7.1.3. Household assets liabilities and income by the type of housing(2017~)	A	Y	47	A	2017	2025
+903Y204	0000000701	8.7.1.4. Household assets liabilities and income by the number of household members(2017~)	A	Y	48	A	2017	2025
+903Y205	0000000701	8.7.1.5. Household assets liabilities and income by age groups of households head (10age)(2022~)	A	Y				
+903Y206	0000000701	8.7.1.5. Household assets liabilities and income by age groups of households head (10age)(2017~)	A	Y	50	A	2017	2025
+903Y209	0000000701	8.7.1.6. Household assets liabilities and income by the status of worker of Household head(2017~)	A	Y	47	A	2017	2025
+903Y210	0000000701	8.7.1.7. Household assets liabilities and income by income quintiles(2017~)	A	Y	48	A	2017	2025
+903Y211	0000000701	8.7.1.8. Household assets liabilities and income by assets quintiles(2017~)	A	Y	48	A	2017	2025
+903Y212	0000000701	8.7.1.9. Household assets liabilities and income by net worth quintiles(2017~)	A	Y	48	A	2017	2025
+0000000703	0000000700	8.7.2. Survey of Household Finances and Living Conditions(2012~2017)		N				
+903Y001	0000000703	8.7.2.1. Household assets, liabilities and income by provinces (2012 ~ 2017)	A	Y	36	A	2012	2017
+903Y002	0000000703	8.7.2.2. Household assets, liabilities and income by the kind of house (2012 ~ 2017)	A	Y	47	A	2012	2017
+903Y003	0000000703	8.7.2.3. Household assets, liabilities and income by the type of housing (2012 ~ 2017)	A	Y	47	A	2012	2017
+903Y004	0000000703	8.7.2.4. Household assets, liabilities and income by the number of household members (2012 ~ 2017)	A	Y	48	A	2012	2017
+903Y006	0000000703	8.7.2.5. Household assets, liabilities and income by age groups of households head (10age) (2012 ~ 2017)	A	Y	50	A	2012	2017
+903Y009	0000000703	8.7.2.6. Household assets, liabilities and income by the status of worker of Household head (2012 ~ 2017)	A	Y	47	A	2012	2017
+903Y010	0000000703	8.7.2.7. Household assets, liabilities and income by income quintiles (2012 ~ 2017)	A	Y	48	A	2012	2017
+903Y011	0000000703	8.7.2.8. Household assets, liabilities and income by assets quintiles (2012 ~ 2017)	A	Y	48	A	2012	2017
+903Y012	0000000703	8.7.2.9. Household assets, liabilities and income by net worth quintiles (2012 ~ 2017)	A	Y	48	A	2012	2017
+901Y112	0000000700	8.7.3. The Index of Income Distribution(2011~)	A	Y	20	A	2011	2024
+0000000955	0000000700	8.7.4. Average Monthly Income & Expenditure (Whole Households)		N				
+901Y117	0000000955	8.7.4.1. Average Monthly Income & Expenditure (Whole Households)(2019~)	Q	Y	57	A	2019	2025
+901Y040	0000000955	8.7.4.2. Average Monthly Income & Expenditure (Whole Households)(2019~2024)	Q	Y	57	A	2019	2024
+0000000956	0000000700	8.7.5. Average Monthly Income & Expenditure (Whole excl.1 Person and Farm)		N				
+901Y116	0000000956	8.7.5.1. Average Monthly Income & Expenditure (Whole excl.1 Person and Farm)(2019~)	Q	Y	57	A	2019	2025
+901Y050	0000000956	8.7.5.2. Average Monthly Income & Expenditure (Whole excl.1 Person and Farm)(2019~2024)	Q	Y	57	A	2019	2024
+901Y024	0000000700	8.7.6. Income and Expenditure of Farm Households	A	Y	27	A	2003	2025
+0000000394	*	9. Foreign Countries/North Korea		N				
+0000000395	0000000394	9.1. International Key Statistics		N				
+0000000441	0000000395	9.1.1. Monetary Aggregates & Policy Rate		N				
+902Y004	0000000441	9.1.1.1. Internatioanl Monetary base	M	Y	66	A	2001	2024
+902Y005	0000000441	9.1.1.2. International Broad Money	M	Y	60	A	2001	2024
+902Y006	0000000441	9.1.1.3. International Central Bank Policy Rate	M	Y	26	M	199905	202609
+0000000442	0000000395	9.1.2. Prices		N				
+902Y007	0000000442	9.1.2.1. Internatioanl Producer Price indices	M	Y	99	A	1965	2021
+902Y008	0000000442	9.1.2.2. International Consumer Price indices	M	Y	122	A	1952	2025
+0000000443	0000000395	9.1.3. Balance of Payments/Trade/Foreign Reserve		N				
+902Y009	0000000443	9.1.3.1. Internatioanl Current Account, Total, Net, US Dollars	Q	Y	80	A	1976	2025
+902Y010	0000000443	9.1.3.2. Internatioanl Current Account, Goods and Services, Goods, Net, US Dollars	Q	Y	80	A	1976	2025
+902Y011	0000000443	9.1.3.3. Internatioanl Current Account, Goods and Services, Services, Net, US Dollars	Q	Y	80	A	1976	2025
+902Y012	0000000443	9.1.3.4. Internatioanl Goods, Value of Exports, Free on board (FOB), US Dollars	M	Y	123	A	1948	2025
+902Y013	0000000443	9.1.3.5. International Goods, Value of Imports, Cost, Insurance, Freight (CIF), US Dollars	M	Y	119	A	1948	2025
+902Y014	0000000443	9.1.3.6. International Official Reserve Assets, US Dollars	M	Y	136	A	2005	2025
+0000000444	0000000395	9.1.4. GDP/GNI		N				
+902Y015	0000000444	9.1.4.1. International Growth Rate of GDP	Q	Y	84	A	1954	2025
+902Y016	0000000444	9.1.4.2. GDP	A	Y	43	A	1953	2025
+902Y019	0000000444	9.1.4.3. Gross domestic product(PPPs)	A	Y	44	A	1970	2025
+902Y017	0000000444	9.1.4.4. GNI	A	Y	38	A	1953	2025
+902Y018	0000000444	9.1.4.5. Per Capita GDP	A	Y	44	A	1970	2025
+0000000445	0000000395	9.1.5. Industry & Employment		N				
+902Y020	0000000445	9.1.5.1. Industrial Production indices(S.A.)	M	Y	103	A	1990	2025
+902Y021	0000000445	9.1.5.2. Unemployment Rates(S.A.)	M	Y	100	A	1989	2025
+902Y022	0000000445	9.1.5.3. Number of Employment(S.A.)	A	Y	74	A	1983	2025
+0000000446	0000000395	9.1.6. Financial Market Key Indicators		N				
+902Y023	0000000446	9.1.6.1. Financial Market Key Indicators	M	Y	66	A	1954	2025
+902Y002	0000000446	9.1.6.2. Stock price indices	M	Y	66	A	1981	2025
+902Y003	0000000446	9.1.6.3. World Commodity Prices	M	Y	48	A	1992	2025
+0000000396	0000000394	9.2. Economic Indicators of North Korea 		N				
+0000000447	0000000396	9.2.1. Major Indicators Comparison between South Korea and North Korea		N				
+251Y003	0000000447	9.2.1.1. Major Indicators Comparison between South Korea and North Korea	A	Y	28	A	1990	2025
+251Y002	0000000447	9.2.1.2. Major Indicators Comparison(Ratio of South to North Korea)	A	Y	24	A	1990	2025
+251Y001	0000000396	9.2.2. North Korea GDP	A	Y	58	A	1990	2025
+0000000704	0000000396	9.2.3. Market Prices and Exchange Rate in North Korea		N				
+252Y001	0000000704	9.2.3.1. Market price indices	Q	Y	88	A	2006	2025
+252Y002	0000000704	9.2.3.2. Market exchange rate	Q	Y	8	A	2006	2025

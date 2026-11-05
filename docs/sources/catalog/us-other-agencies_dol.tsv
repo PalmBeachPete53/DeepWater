@@ -1,0 +1,46 @@
+agency	tablename	name	frequency	category	status	api_url
+OWCP	OWCP_energy_statistics_weekly_20260101_present	Energy Statistics (Weekly) 20260101 – present	Weekly	Benefit	4	energy_statistics_weekly_20260101_present
+OWCP	OWCP_energy_statistics_historical_20190311_20251231	Energy Statistics (Historical) 20190311 - 20251231	Static	Benefit	4	energy_statistics_historical_20190311_20251231
+ILAB	ILAB_sweat_toil_child_labor_report_2016_to_2022	Child Labor Report (2016 to 2022)	Static	Child Labor	4	Child_Labor_Report__2016_to_2022
+ILAB	ILAB_ImportWatch_Goods_HS	ImportWatch_Goods_HS	Ad-Hoc	Child Labor	4	ImportWatch_Goods_HS
+ILAB	ILAB_ImportWatch_Core_Data	ImportWatch_Core_Data	Ad-Hoc	Child Labor	4	ImportWatch_Core_Data
+ILAB	ILAB_ImportWatch_Country_Codes	ImportWatch_Country_Codes	Ad-Hoc	Child Labor	4	ImportWatch_Country_Codes
+ILAB	ILAB_LaborShield_ReportingData	LaborShield_ReportingData	Ad-Hoc	Child Labor	4	LaborShield_ReportingData
+ILAB	ILAB_LaborShield_Goods	LaborShield_Goods	Ad-Hoc	Child Labor	4	LaborShield_Goods
+ILAB	ILAB_LaborShield_SuggestedActions	LaborShield_SuggestedActions	Ad-Hoc	Child Labor	4	LaborShield_SuggestedActions
+WB	WB_ndcp	National Database of Childcare Prices (NDCP)	Ad-Hoc	Statistical	4	ndcp
+OSHA	OSHA_accident_lookup2	Accident Lookup2	Daily	Enforcement	4	accident_lookup2
+OSHA	OSHA_accident	Accident	Daily	Enforcement	4	accident
+OSHA	OSHA_accident_abstract	Accident Abstract	Daily	Enforcement	4	accident_abstract
+OSHA	OSHA_accident_injury	Accident Injury	Daily	Enforcement	4	accident_injury
+OSHA	OSHA_inspection	Inspection	Daily	Enforcement	4	inspection
+OSHA	OSHA_related_activity	Related Activity	Daily	Enforcement	4	related_activity
+OSHA	OSHA_emphasis_codes	Emphasis Codes	Daily	Enforcement	4	emphasis_codes
+OSHA	OSHA_violation	Violation	Daily	Enforcement	4	violation
+OSHA	OSHA_violation_gen_duty_std	Violation Gen Duty Std	Daily	Enforcement	4	violation_gen_duty_std
+MSHA	MSHA_accident	Accident	Weekly	Enforcement	4	accident
+MSHA	MSHA_assessed_violations	Assessed Violations	Weekly	Enforcement	4	assessed_violations
+MSHA	MSHA_contractor_name_id_lookup	Contractor Name ID Lookup	Weekly	Enforcement	4	contractor_name_id_lookup
+MSHA	MSHA_contractor_employment_production_annual	Contractor Employment / Production (Annual)	Weekly	Enforcement	4	contractor_employment_production_annual
+MSHA	MSHA_operator_employment_production_annual	Operator Employment / Production (Annual)	Weekly	Enforcement	4	operator_employment_production_annual
+MSHA	MSHA_inspection	Inspection	Weekly	Enforcement	4	inspection
+MSHA	MSHA_mines	Mines	Weekly	Enforcement	4	mines
+MSHA	MSHA_contractor_history_at_mines	Contractor History at Mines	Weekly	Enforcement	4	contractor_history_at_mines
+MSHA	MSHA_operator_history_at_mines	Operator History at Mines	Weekly	Enforcement	4	operator_history_at_mines
+MSHA	MSHA_operator_employment_production_quarterly	Operator Employment / Production (Quarterly)	Weekly	Enforcement	4	operator_employment_production_quarterly
+MSHA	MSHA_contractor_employment_production_quarterly	Contractor Employment / Production (Quarterly)	Weekly	Enforcement	4	contractor_employment_production_quarterly
+MSHA	MSHA_violation	Violation	Weekly	Enforcement	4	violation
+OSHA	OSHA_optional_code_info	Optional Code Info	Daily	Enforcement	4	optional_code_info
+OSHA	OSHA_violation_event	Violation Event	Daily	Enforcement	4	violation_event
+MSHA	MSHA_address_of_records_mines	Address of Records - Mines	Weekly	Enforcement	4	address_of_records_mines
+MSHA	MSHA_controller_history	Controller History	Weekly	Enforcement	4	controller_history
+MSHA	MSHA_commodity_lookup	Commodity Lookup	Weekly	Enforcement	4	commodity_lookup
+EBSA	EBSA_ocats	Office of the Chief Accountant Case Tracking System (OCATS)	Quarterly	Enforcement	4	ocats
+WHD	WHD_enforcement	Enforcement	Quarterly	Enforcement	4	enforcement
+ETA	ETA_apprenticeship_data	Apprenticeship Participant Characteristics and Training Outcomes	Quarterly	Workforce	4	apprenticeship_data
+ETA	ETA_ui_national_weekly_claims	Unemployment Insurance National Weekly Claims	Weekly	Workforce	4	ui_national_weekly_claims
+ETA	ETA_ui_state_weekly_claims	Unemployment Insurance State Weekly Claims	Weekly	Workforce	4	ui_state_weekly_claims
+VETS	VETS_4212	VETS 4212 Federal Contractor Reporting	Weekly	Workforce	4	4212
+ETA	ETA_otaa_petition	OTAA Petition	Daily	Workforce	4	otaa_petition
+ODEP	ODEP_employer_survey_2018	Survey of Employer Policies on the Employment of People with Disabilities 2018	Static	Workforce	4	employer_survey_2018
+TRNG	TRNG_training_dataset_industries	Training Dataset (Industries)	Static	API Training	4	training_dataset_industries

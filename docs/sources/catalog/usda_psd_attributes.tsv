@@ -1,0 +1,70 @@
+attribute_id	attribute	rows
+004	Area Harvested	63914
+005	Catch For Reduction	2106
+006	Cows In Milk	1917
+007	Crush	52853
+020	Beginning Stocks	147199
+022	Sow Beginning Stocks	2192
+023	Dairy Cows Beg. Stocks	2671
+025	Beef Cows Beg. Stocks	2671
+028	Production	163086
+029	Arabica Production	4616
+030	Beet Sugar Production	9501
+031	Commercial Production	8882
+032	Cows Milk Production	1917
+043	Cane Sugar Production	9501
+047	Non-Comm. Production	8882
+049	Other Milk Production	1917
+053	Robusta Production	4616
+054	Rough Production	7616
+056	Other Production	4616
+057	Imports	163086
+058	Bean Imports	4616
+064	Raw Imports	9501
+074	Refined Imp.(Raw Val)	9501
+075	Roast & Ground Imports	4616
+081	TY Imports	38769
+082	Soluble Imports	4616
+084	TY Imp. from U.S.	38769
+086	Total Supply	163086
+088	Exports	163086
+089	Raw Exports	9501
+090	Bean Exports	4616
+099	Refined Exp.(Raw Val)	9501
+107	Roast & Ground Exports	4616
+113	TY Exports	38769
+114	Soluble Exports	4616
+117	Total Slaughter	4863
+118	Cow Slaughter	2671
+121	Sow Slaughter	2192
+122	Calf Slaughter	2671
+125	Domestic Consumption	134539
+126	Total Disappearance	9501
+130	Feed Dom. Consumption	31153
+131	Fluid Use Dom. Consum.	1917
+132	For Processing	5088
+135	Fresh Dom. Consumption	6406
+139	Human Dom. Consumption	9501
+140	Industrial Dom. Cons.	43698
+141	Rst,Ground Dom. Consum	4616
+142	Domestic Use	7777
+147	Factory Use Consum.	1917
+149	Food Use Dom. Cons.	60518
+150	Loss	7777
+151	Other Disappearance	9501
+154	Soluble Dom. Cons.	4616
+158	Feed Use Dom. Consum.	1917
+161	Feed Waste Dom. Cons.	60518
+169	Withdrawal From Market	8882
+172	Loss and Residual	4863
+174	Total Use	10232
+176	Ending Stocks	147199
+178	Total Distribution	163086
+181	Extr. Rate, 999.9999	38138
+182	Milling Rate (.9999)	7616
+183	Seed to Lint Ratio	2341
+184	Yield	67518
+192	FSI Consumption	31153
+194	SME	19013
+195	Stocks-to-Use	7777
+220	Annual % Change Per Cap. Cons.	2226

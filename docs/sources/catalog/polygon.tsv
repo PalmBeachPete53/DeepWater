@@ -1,0 +1,239 @@
+kind	family	doc_path	title	description
+flat-files	crypto	crypto/day-aggregates	Day Aggregates	Candlesticks with open, high, low, close, and volume at per day granularity across an expansive set of crypto pairings as a daily downloadab
+flat-files	crypto	crypto/minute-aggregates	Minute Aggregates	Candlesticks with open, high, low, close, and volume at per minute granularity across an expansive set of crypto pairings as a daily downloa
+flat-files	crypto	crypto/overview	Crypto Overview	Massive provides comprehensive historical cryptocurrency market data through downloadable CSV Flat Files
+flat-files	crypto	crypto/trades	Trades	Tick-level trades with nanosecond timestamps across an expansive set of crypto pairings, made available as a daily downloadable S3 file
+flat-files	forex	forex/day-aggregates	Day Aggregates	Candlesticks with open, high, low, close, and volume at per day granularity for over 1,750+ currency pairs, made available as a daily downlo
+flat-files	forex	forex/minute-aggregates	Minute Aggregates	Candlesticks with open, high, low, close, and volume at per minute granularity for over 1,750+ currency pairs, made available as a daily dow
+flat-files	forex	forex/overview	Forex Overview	Massive provides extensive historical forex market data via downloadable CSV Flat Files
+flat-files	forex	forex/quotes	Quotes	Global foreign exchange rate quotes from major institutions for over 1,750+ currency pairs, made available as a daily downloadable S3 file
+flat-files	futures	futures/minute-aggregates/cbot	Minute Aggregates - CBOT	Candlestick data for CBOT futures with minute-by-minute open, high, low, close, and volume aggregated from all trades
+flat-files	futures	futures/minute-aggregates/cme	Minute Aggregates - CME	Candlestick data for CME futures with minute-by-minute open, high, low, close, and volume aggregated from all trades
+flat-files	futures	futures/minute-aggregates/comex	Minute Aggregates - COMEX	Candlestick data for COMEX futures with minute-by-minute open, high, low, close, and volume aggregated from all trades
+flat-files	futures	futures/minute-aggregates/nymex	Minute Aggregates - NYMEX	Candlestick data for NYMEX futures with minute-by-minute open, high, low, close, and volume aggregated from all trades
+flat-files	futures	futures/overview	Futures Overview	Massive provides comprehensive historical U.S. futures market data through downloadable CSV Flat Files
+flat-files	futures	futures/quotes/cbot	Quotes Aggregates - CBOT	Top-of-book quotes with nanosecond timestamps for CBOT futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/quotes/cme	Quotes Aggregates - CME	Top-of-book quotes with nanosecond timestamps for CME futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/quotes/comex	Quotes Aggregates - COMEX	Top-of-book quotes with nanosecond timestamps for COMEX futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/quotes/nymex	Quotes Aggregates - NYMEX	Top-of-book quotes with nanosecond timestamps for NYMEX futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/session-aggregates/cbot	Session Aggregates - CBOT	Candlestick data for CBOT futures with open, high, low, close, and volume aggregated from all trades during each trading session
+flat-files	futures	futures/session-aggregates/cme	Session Aggregates - CME	Candlestick data for CME futures with open, high, low, close, and volume aggregated from all trades during each trading session
+flat-files	futures	futures/session-aggregates/comex	Session Aggregates - COMEX	Candlestick data for COMEX futures with open, high, low, close, and volume aggregated from all trades during each trading session
+flat-files	futures	futures/session-aggregates/nymex	Session Aggregates - NYMEX	Candlestick data for NYMEX futures with open, high, low, close, and volume aggregated from all trades during each trading session
+flat-files	futures	futures/trades/cbot	Trades Aggregates - CBOT	Tick-level trades with nanosecond timestamps for CBOT futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/trades/cme	Trades Aggregates - CME	Tick-level trades with nanosecond timestamps for CME futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/trades/comex	Trades Aggregates - COMEX	Tick-level trades with nanosecond timestamps for COMEX futures, delivered as a daily downloadable S3 file
+flat-files	futures	futures/trades/nymex	Trades Aggregates - NYMEX	Tick-level trades with nanosecond timestamps for NYMEX futures, delivered as a daily downloadable S3 file
+flat-files	indices	indices/day-aggregates	Day Aggregates	Candlestick data for a diverse set indices with daily open, high, low, and close values aggregated from all ticks throughout the day
+flat-files	indices	indices/minute-aggregates	Minute Aggregates	Candlestick data for a diverse set indices with minute-by-minute open, high, low, and close values aggregated from all ticks throughout the 
+flat-files	indices	indices/overview	Indices Overview	Massive provides extensive historical index market data through downloadable CSV Flat Files
+flat-files	indices	indices/values	Values	A daily record of tick-by-tick values for a comprehensive set of indices including S&P, Nasdaq, Dow Jones, and more as a daily downloadable 
+flat-files	options	options/day-aggregates	Day Aggregates	Candlesticks with open, high, low, close, and volume at per day granularity from all U.S. options markets, made available as a daily downloa
+flat-files	options	options/minute-aggregates	Minute Aggregates	Candlesticks with open, high, low, close, and volume at per minute granularity from all U.S. options markets, made available as a daily down
+flat-files	options	options/overview	Options Overview	Massive provides extensive historical U.S. options market data through downloadable CSV Flat Files
+flat-files	options	options/quotes	Quotes	Top of book quotes with nanosecond timestamps from all U.S. options markets including CBOE, NYSE, and NASDAQ, made available as a daily down
+flat-files	options	options/trades	Trades	Tick-level trades with nanosecond timestamps from all U.S. options markets including CBOE, NYSE, and NASDAQ, made available as a daily downl
+flat-files	quickstart	quickstart	Flat Files Quickstart	Flat Files Quickstart Guide
+flat-files	stocks	stocks/day-aggregates	Day Aggregates	Candlesticks with open, high, low, close, and volume at per-day granularity across all U.S. equities, made available as a daily downloadable
+flat-files	stocks	stocks/minute-aggregates	Minute Aggregates	Candlesticks with open, high, low, close, and volume at per minute granularity across all U.S. equities, made available as a daily downloada
+flat-files	stocks	stocks/overview	Stocks Overview	Massive provides comprehensive historical U.S. stock market data through downloadable CSV flat files
+flat-files	stocks	stocks/quotes	Quotes	Top of book quotes with nanosecond timestamps from all major U.S. exchanges and darkpools, including NYSE, Nasdaq, Cboe, Finra, and more, ma
+flat-files	stocks	stocks/trades	Trades	Tick level nanosecond timestamped trade data from all major U.S. exchanges and darkpools including NYSE, Nasdaq, Cboe, Finra, and more, made
+rest	alternative	alternative/consumer-spending/merchant-aggregates	Merchant Aggregates	Aggregated European consumer spending data powered by [Fable Data](https://www.fabledata.com/)
+rest	alternative	alternative/consumer-spending/merchant-hierarchy	Merchant Hierarchy	Reference data mapping merchants to parent companies, tickers, sectors, and industries across Fable's European consumer transaction panel
+rest	alternative	alternative/overview	Alternative Data Overview	Access alternative datasets through our REST API
+rest	crypto	crypto/aggregates/custom-bars	Custom Bars (OHLC)	Retrieve aggregated historical OHLC (Open, High, Low, Close) and volume data for a specified cryptocurrency pair over a custom date range an
+rest	crypto	crypto/aggregates/daily-market-summary	Daily Market Summary (OHLC)	Retrieve daily OHLC (open, high, low, close), volume, and volume-weighted average price (VWAP) data for all crypto tickers on a specified tr
+rest	crypto	crypto/aggregates/daily-ticker-summary	Daily Ticker Summary (OHLC)	Retrieve the opening and closing trades for a specific crypto pair on a given date
+rest	crypto	crypto/aggregates/previous-day-bar	Previous Day Bar (OHLC)	Retrieve the previous trading day's open, high, low, and close (OHLC) data for a specified cryptocurrency pair
+rest	crypto	crypto/market-operations/condition-codes	Condition Codes	Retrieve a unified and comprehensive list of trade and quote conditions from various upstream market data providers (e.g., CTA, UTP, OPRA, F
+rest	crypto	crypto/market-operations/exchanges	Exchanges	Retrieve a list of known exchanges, including their identifiers, names, market types, and other relevant attributes
+rest	crypto	crypto/market-operations/market-holidays	Market Holidays	Retrieve upcoming market holidays and their corresponding open/close times
+rest	crypto	crypto/market-operations/market-status	Market Status	Retrieve the current trading status for various exchanges and overall financial markets
+rest	crypto	crypto/overview	Crypto Overview	At Massive, we provide a comprehensive suite of cryptocurrency market data through standardized and intuitive APIs, offering extensive cover
+rest	crypto	crypto/snapshots/full-market-snapshot	Full Market Snapshot	Retrieve a comprehensive snapshot of the crypto market in a single response
+rest	crypto	crypto/snapshots/single-ticker-snapshot	Single Ticker Snapshot	Retrieve the most recent market data snapshot for a single ticker
+rest	crypto	crypto/snapshots/top-market-movers	Top Market Movers	Retrieve snapshot data highlighting the top 20 gainers or losers in the crypto market
+rest	crypto	crypto/snapshots/unified-snapshot	Unified Snapshot	Retrieve unified snapshots of market data for multiple asset classes including stocks, options, forex, and cryptocurrencies in a single requ
+rest	crypto	crypto/technical-indicators/exponential-moving-average	Exponential Moving Average (EMA)	Retrieve the Exponential Moving Average (EMA) for a specified ticker over a defined time range
+rest	crypto	crypto/technical-indicators/moving-average-convergence-divergence	Moving Average Convergence/Divergence (MACD)	Retrieve the Moving Average Convergence/Divergence (MACD) for a specified ticker over a defined time range
+rest	crypto	crypto/technical-indicators/relative-strength-index	Relative Strength Index (RSI)	Retrieve the Relative Strength Index (RSI) for a specified ticker over a defined time range
+rest	crypto	crypto/technical-indicators/simple-moving-average	Simple Moving Average (SMA)	Retrieve the Simple Moving Average (SMA) for a specified ticker over a defined time range
+rest	crypto	crypto/tickers/all-tickers	All Tickers	Retrieve a comprehensive list of ticker symbols supported by Massive across various asset classes (e.g., stocks, indices, forex, crypto)
+rest	crypto	crypto/tickers/ticker-overview	Ticker Overview	Retrieve comprehensive details for a single ticker supported by Massive that is active as-of a given date
+rest	crypto	crypto/trades/last-trade	Last Trade	Retrieve the most recent trade details for a specified cryptocurrency pair, including price, size, timestamp, exchange, and conditions
+rest	crypto	crypto/trades/trades	Trades	Retrieve comprehensive, tick-level trade data for a specified crypto ticker within a defined time range
+rest	economy	economy/funding-conditions	Funding Conditions	Daily U.S. overnight funding snapshot — one row per day showing how cheap or tight it is for banks and dealers to borrow cash overnight
+rest	economy	economy/inflation	Inflation	Retrieve key indicators of realized inflation, reflecting actual changes in consumer prices and spending behavior in the U.S. economy
+rest	economy	economy/inflation-expectations	Inflation Expectations	Retrieve a broad view of how inflation is expected to evolve over time in the U.S. economy
+rest	economy	economy/labor-market	Labor Market	Retrieve key labor market indicators from the Federal Reserve, including unemployment rate, labor force participation, average hourly earnin
+rest	economy	economy/overview	Economy Overview	Access macroeconomic data from the Federal Reserve and other official sources through our REST API
+rest	economy	economy/treasury-yields	Treasury Yields	Retrieve historical U.S. Treasury yield data for standard timeframes ranging from 1-month to 30-years, with daily historical records back to
+rest	forex	forex/aggregates/custom-bars	Custom Bars (OHLC)	Retrieve aggregated historical OHLC (Open, High, Low, Close) and volume data for a specified Forex currency pair over a custom date range an
+rest	forex	forex/aggregates/daily-market-summary	Daily Market Summary (OHLC)	Retrieve daily OHLC (open, high, low, close), volume, and volume-weighted average price (VWAP) data for all forex tickers on a specified tra
+rest	forex	forex/aggregates/previous-day-bar	Previous Day Bar (OHLC)	Retrieve the previous trading day's open, high, low, and close (OHLC) data for a specified forex pair
+rest	forex	forex/currency-conversion	Currency Conversion	Retrieve real-time currency conversion rates between any two supported currencies
+rest	forex	forex/market-operations/exchanges	Exchanges	Retrieve a list of known exchanges, including their identifiers, names, market types, and other relevant attributes
+rest	forex	forex/market-operations/market-holidays	Market Holidays	Retrieve upcoming market holidays and their corresponding open/close times
+rest	forex	forex/market-operations/market-status	Market Status	Retrieve the current trading status for various exchanges and overall financial markets
+rest	forex	forex/overview	Forex Overview	At Massive, we offer a comprehensive suite of foreign exchange (forex) market data through standardized and intuitive APIs
+rest	forex	forex/quotes/last-quote	Last Quote	Retrieve the most recent quote for a specified forex currency pair, including bid, ask, exchange, and timestamp
+rest	forex	forex/quotes/quotes	Quotes	Retrieve historical Best Bid and Offer (BBO) quotes for a specified forex currency pair over a defined time range
+rest	forex	forex/snapshots/full-market-snapshot	Full Market Snapshot	Retrieve a comprehensive snapshot of the forex market in a single response
+rest	forex	forex/snapshots/single-ticker-snapshot	Single Ticker Snapshot	Retrieve the most recent market data snapshot for a single ticker
+rest	forex	forex/snapshots/top-market-movers	Top Market Movers	Retrieve snapshot data highlighting the top 20 gainers or losers in the forex market
+rest	forex	forex/snapshots/unified-snapshot	Unified Snapshot	Retrieve unified snapshots of market data for multiple asset classes including stocks, options, forex, and cryptocurrencies in a single requ
+rest	forex	forex/technical-indicators/exponential-moving-average	Exponential Moving Average (EMA)	Retrieve the Exponential Moving Average (EMA) for a specified ticker over a defined time range
+rest	forex	forex/technical-indicators/moving-average-convergence-divergence	Moving Average Convergence/Divergence (MACD)	Retrieve the Moving Average Convergence/Divergence (MACD) for a specified ticker over a defined time range
+rest	forex	forex/technical-indicators/relative-strength-index	Relative Strength Index (RSI)	Retrieve the Relative Strength Index (RSI) for a specified ticker over a defined time range
+rest	forex	forex/technical-indicators/simple-moving-average	Simple Moving Average (SMA)	Retrieve the Simple Moving Average (SMA) for a specified ticker over a defined time range
+rest	forex	forex/tickers/all-tickers	All Tickers	Retrieve a comprehensive list of ticker symbols supported by Massive across various asset classes (e.g., stocks, indices, forex, crypto)
+rest	forex	forex/tickers/ticker-overview	Ticker Overview	Retrieve comprehensive details for a single ticker supported by Massive that is active as-of a given date
+rest	forex	forex/tickers/ticker-types	Ticker Types	Retrieve a list of all ticker types supported by Massive
+rest	futures	futures/aggregates	Aggregate Bars (OHLC)	Retrieve historical OHLC (open, high, low, close) and volume bars for a futures contract over a date range
+rest	futures	futures/contracts	Contracts	
+rest	futures	futures/market-operations/exchanges	Exchanges	Retrieve a list of supported futures exchanges, including their unique exchange codes, names, and other important details
+rest	futures	futures/market-operations/market-status	Market Status	
+rest	futures	futures/overview	Futures Overview	Explore comprehensive U.S. futures market data through Massive's REST APIs.
+rest	futures	futures/products	Products	
+rest	futures	futures/schedules	Schedules	The Schedules API provides a unified way to retrieve trading schedules for futures markets, returning precise session open and close times, 
+rest	futures	futures/snapshots/contracts-snapshot	Futures Contracts Snapshot	Retrieve real-time snapshots for a set of futures contracts, including key market data such as the latest trade, quote, session metrics (ope
+rest	futures	futures/trades-quotes/quotes	Quotes	Retrieve quote data for a specified futures contract ticker
+rest	futures	futures/trades-quotes/trades	Trades	Retrieve comprehensive, tick-level trade data for a specified futures contract ticker over a defined time range
+rest	indices	indices/aggregates/custom-bars	Custom Bars (OHLC)	Retrieve aggregated historical OHLC (Open, High, Low, Close) and value data for a specified index over a custom date range and time interval
+rest	indices	indices/aggregates/daily-ticker-summary	Daily Ticker Summary (OHLC)	Retrieve the opening and closing prices for a specific index on a given date, along with any pre-market and after-hours trade prices
+rest	indices	indices/aggregates/previous-day-bar	Previous Day Bar (OHLC)	Retrieve the previous trading day's open, high, low, and close (OHLC) data for a specified index ticker
+rest	indices	indices/market-operations/market-holidays	Market Holidays	Retrieve upcoming market holidays and their corresponding open/close times
+rest	indices	indices/market-operations/market-status	Market Status	Retrieve the current trading status for various exchanges and overall financial markets
+rest	indices	indices/overview	Indices Overview	At Massive, we provide a comprehensive suite of market data for over 10,000+ indices from multiple index families, including S&P, Nasdaq, Do
+rest	indices	indices/snapshots/indices-snapshot	Indices Snapshot	Retrieve snapshot data for one or more indices, including their current value, recent performance metrics, and trading session details
+rest	indices	indices/snapshots/unified-snapshot	Unified Snapshot	Retrieve unified snapshots of market data for multiple asset classes including stocks, options, forex, and cryptocurrencies in a single requ
+rest	indices	indices/technical-indicators/exponential-moving-average	Exponential Moving Average (EMA)	Retrieve the Exponential Moving Average (EMA) for a specified ticker over a defined time range
+rest	indices	indices/technical-indicators/moving-average-convergence-divergence	Moving Average Convergence/Divergence (MACD)	Retrieve the Moving Average Convergence/Divergence (MACD) for a specified ticker over a defined time range
+rest	indices	indices/technical-indicators/relative-strength-index	Relative Strength Index (RSI)	Retrieve the Relative Strength Index (RSI) for a specified ticker over a defined time range
+rest	indices	indices/technical-indicators/simple-moving-average	Simple Moving Average (SMA)	Retrieve the Simple Moving Average (SMA) for a specified ticker over a defined time range
+rest	indices	indices/tickers/all-tickers	All Tickers	Retrieve a comprehensive list of ticker symbols supported by Massive across various asset classes (e.g., stocks, indices, forex, crypto)
+rest	indices	indices/tickers/ticker-overview	Ticker Overview	Retrieve comprehensive details for a single ticker supported by Massive that is active as-of a given date
+rest	options	options/aggregates/custom-bars	Custom Bars (OHLC)	Retrieve aggregated historical OHLC (Open, High, Low, Close) and volume data for a specified options contract over a custom date range and t
+rest	options	options/aggregates/daily-ticker-summary	Daily Ticker Summary (OHLC)	Retrieve the opening and closing prices for a specific options contract on a given date, along with any pre-market and after-hours trade pri
+rest	options	options/aggregates/previous-day-bar	Previous Day Bar (OHLC)	Retrieve the previous trading day's open, high, low, and close (OHLC) data for a specified option contract
+rest	options	options/contracts/all-contracts	All Contracts	Retrieve a comprehensive index of options contracts, encompassing both active and expired listings
+rest	options	options/contracts/contract-overview	Contract Overview	Retrieve detailed information about a specific options contract, including its contract type (call or put), exercise style, expiration date,
+rest	options	options/market-operations/condition-codes	Condition Codes	Retrieve a unified and comprehensive list of trade and quote conditions from various upstream market data providers (e.g., CTA, UTP, OPRA, F
+rest	options	options/market-operations/exchanges	Exchanges	Retrieve a list of known exchanges, including their identifiers, names, market types, and other relevant attributes
+rest	options	options/market-operations/market-holidays	Market Holidays	Retrieve upcoming market holidays and their corresponding open/close times
+rest	options	options/market-operations/market-status	Market Status	Retrieve the current trading status for various exchanges and overall financial markets
+rest	options	options/overview	Options Overview	At Massive, we offer a comprehensive suite of U.S. options market data through standardized and intuitive APIs
+rest	options	options/snapshots/option-chain-snapshot	Option Chain Snapshot	Retrieve a comprehensive snapshot of all options contracts associated with a specified underlying ticker
+rest	options	options/snapshots/option-contract-snapshot	Option Contract Snapshot	Retrieve a comprehensive snapshot of a specified options contract, consolidating vital metrics and market data into a single response
+rest	options	options/snapshots/unified-snapshot	Unified Snapshot	Retrieve unified snapshots of market data for multiple asset classes including stocks, options, forex, and cryptocurrencies in a single requ
+rest	options	options/technical-indicators/exponential-moving-average	Exponential Moving Average (EMA)	Retrieve the Exponential Moving Average (EMA) for a specified ticker over a defined time range
+rest	options	options/technical-indicators/moving-average-convergence-divergence	Moving Average Convergence/Divergence (MACD)	Retrieve the Moving Average Convergence/Divergence (MACD) for a specified ticker over a defined time range
+rest	options	options/technical-indicators/relative-strength-index	Relative Strength Index (RSI)	Retrieve the Relative Strength Index (RSI) for a specified ticker over a defined time range
+rest	options	options/technical-indicators/simple-moving-average	Simple Moving Average (SMA)	Retrieve the Simple Moving Average (SMA) for a specified ticker over a defined time range
+rest	options	options/trades-quotes/last-trade	Last Trade	Retrieve the latest available trade for a specified options contact, including details such as price, size, exchange, and timestamp
+rest	options	options/trades-quotes/quotes	Quotes	Retrieve historical quotes for a specified options contract over a defined time range
+rest	options	options/trades-quotes/trades	Trades	Retrieve comprehensive, tick-level trade data for a specified options ticker within a defined time range
+rest	partners	partners/benzinga/analyst-details	Analyst Details	Retrieve structured data on financial analysts, including names, affiliated firms, and historical rating activity
+rest	partners	partners/benzinga/analyst-insights	Analyst Insights	Retrieve insights from financial analysts, including ratings, price targets, and the rationale behind their recommendations
+rest	partners	partners/benzinga/analyst-ratings	Analyst Ratings	Retrieve structured historical analyst ratings, including rating actions, price target changes, and firm names for publicly traded companies
+rest	partners	partners/benzinga/bulls-bears-say	Bulls Bears Say	A comprehensive database of analyst bull and bear case summaries for publicly traded companies, providing concise summaries of both bullish 
+rest	partners	partners/benzinga/consensus-ratings	Consensus Ratings	Retrieve consensus ratings from financial analysts, including aggregated rating distributions and price target ranges
+rest	partners	partners/benzinga/corporate-guidance	Corporate Guidance	Retrieve structured earnings guidance data, including projected EPS and revenue figures, from public company disclosures
+rest	partners	partners/benzinga/earnings	Earnings	Retrieve structured historical and upcoming earnings announcements for publicly traded companies, including key metrics such as earnings per
+rest	partners	partners/benzinga/firm-details	Firm Details	Retrieve structured data on analyst firms, including firm names and identifiers
+rest	partners	partners/benzinga/news	Real-time Benzinga News	Retrieve real-time structured, timestamped news articles from Benzinga, including headlines, full-text content, tickers, categories, and mor
+rest	partners	partners/etf-global/analytics	ETF Analytics	Retrieve analytical metrics and calculated insights for U.S. listed ETFs including performance data, risk measures, and derived analytics
+rest	partners	partners/etf-global/constituents	ETF Constituents	Retrieve the underlying holdings and constituents of U.S. listed ETFs
+rest	partners	partners/etf-global/fundflows	ETF Fund Flows	Retrieve capital movement and investor activity data across U.S. listed ETFs
+rest	partners	partners/etf-global/profiles	ETF Profiles & Exposure	Retrieve industry classification data for U.S. listed ETFs including sector mappings and standardized categorizations across industry framew
+rest	partners	partners/etf-global/taxonomies	ETF Taxonomies	Retrieve standardized taxonomy systems used to categorize and organize U.S. listed ETFs
+rest	partners	partners/overview	Partners Overview	Access premium third-party data through our Partner integrations
+rest	partners	partners/tmx/corporate-events	Corporate Events	Retrieve structured corporate event data from Wall Street Horizon's comprehensive global events calendar, including earnings announcements, 
+rest	quickstart	quickstart	REST Quickstart	REST API Quickstart Guide
+rest	stocks	stocks/aggregates/custom-bars	Custom Bars (OHLC)	Retrieve aggregated historical OHLC (Open, High, Low, Close) and volume data for a specified stock ticker over a custom date range and time 
+rest	stocks	stocks/aggregates/daily-market-summary	Daily Market Summary (OHLC)	Retrieve daily OHLC (open, high, low, close), volume, and volume-weighted average price (VWAP) data for all U.S. stocks on a specified tradi
+rest	stocks	stocks/aggregates/daily-ticker-summary	Daily Ticker Summary (OHLC)	Retrieve the opening and closing prices for a specific stock ticker on a given date, along with any pre-market and after-hours trade prices
+rest	stocks	stocks/aggregates/previous-day-bar	Previous Day Bar (OHLC)	Retrieve the previous trading day's open, high, low, and close (OHLC) data for a specified stock ticker
+rest	stocks	stocks/corporate-actions/dividends	Dividends	Retrieve a historical record of cash dividend distributions for a given ticker, including declaration, ex-dividend, record, and pay dates, a
+rest	stocks	stocks/corporate-actions/ipos	Initial Public Offerings (IPOs)	Retrieve comprehensive information on Initial Public Offerings (IPOs), including upcoming and historical events, starting from the year 2008
+rest	stocks	stocks/corporate-actions/reference-dividends	Dividends (Deprecated)	Retrieve a historical record of cash dividend distributions for a given ticker, including declaration, ex-dividend, record, and pay dates, a
+rest	stocks	stocks/corporate-actions/reference-splits	Splits (Deprecated)	Retrieve historical stock split events, including execution dates and ratio factors, to understand changes in a company’s share structure ov
+rest	stocks	stocks/corporate-actions/splits	Splits	Retrieve historical stock split events, including execution dates and ratio factors, to understand changes in a company’s share structure ov
+rest	stocks	stocks/corporate-actions/ticker-events	Ticker Events	Retrieve a timeline of key events associated with a given ticker, CUSIP, or Composite FIGI
+rest	stocks	stocks/filings/10-k-sections	Annual Report Sections (10-K)	Retrieve clean plain-text extracts of key narrative sections from annual 10-K filings, including Business and Risk Factors
+rest	stocks	stocks/filings/13-f-filings	Institutional Holdings (13-F)	Retrieve quarterly holdings data from SEC Form 13-F filings submitted by institutional investment managers with at least $100 million in ass
+rest	stocks	stocks/filings/8-k-disclosures	Material Event Disclosures (8-K)	SEC 8-K filing disclosure categorization
+rest	stocks	stocks/filings/8-k-text	Material Event Text (8-K)	Retrieve parsed plain-text content from the core Items sections of Form 8-K current reports
+rest	stocks	stocks/filings/disclosure-categories	Disclosure Categories	Access the full standardized hierarchical taxonomy used to classify disclosures in SEC Form 8-K filings
+rest	stocks	stocks/filings/form-3	Initial Insider Ownership (Form 3)	Retrieve SEC Form 3 filings that report the initial beneficial ownership of securities by corporate insiders (directors, officers, and 10%+ 
+rest	stocks	stocks/filings/form-4	Insider Transactions (Form 4)	Retrieve SEC Form 4 filings that disclose all changes in beneficial ownership by corporate insiders
+rest	stocks	stocks/filings/index	SEC EDGAR Index	Retrieve the master index of all SEC EDGAR filings, including form types, filing dates, CIKs, tickers, issuer names, accession numbers, and 
+rest	stocks	stocks/filings/insider-activity	Insider Trading Activity	Retrieve aggregated insider trading activity for a company — how much its corporate insiders bought and sold each day
+rest	stocks	stocks/filings/insider-holdings	Insider Holdings	Retrieve the roster of a company's insiders and the shares each one currently holds — one row per reporting owner per issuer
+rest	stocks	stocks/filings/risk-categories	Risk Categories	Access the full standardized hierarchical taxonomy used to classify risk factors in SEC filings
+rest	stocks	stocks/filings/risk-factors	Risk Factors	Standardized, machine-readable risk factor disclosures from SEC filings
+rest	stocks	stocks/fundamentals/balance-sheets	Balance Sheets	Retrieve comprehensive balance sheet data for public companies, containing quarterly and annual financial positions
+rest	stocks	stocks/fundamentals/cash-flow-statements	Cash Flow Statements	Retrieve comprehensive cash flow statement data for public companies, including quarterly, annual, and trailing twelve-month cash flows
+rest	stocks	stocks/fundamentals/float	Float	Retrieve the latest free float for a specified stock ticker
+rest	stocks	stocks/fundamentals/income-statements	Income Statements	Retrieve comprehensive income statement data for public companies, including key metrics such as revenue, expenses, and net income for vario
+rest	stocks	stocks/fundamentals/ratios	Ratios	Retrieve comprehensive financial ratios data providing key valuation, profitability, liquidity, and leverage metrics for public companies
+rest	stocks	stocks/fundamentals/short-interest	Short Interest	Retrieve aggregated short interest data reported to FINRA by broker-dealers for a specified stock ticker on a two-week cadence
+rest	stocks	stocks/fundamentals/short-volume	Short Volume	Retrieve daily aggregated short sale volume data reported to FINRA from off-exchange trading venues and alternative trading systems (ATS) fo
+rest	stocks	stocks/market-operations/condition-codes	Condition Codes	Retrieve a unified and comprehensive list of trade and quote conditions from various upstream market data providers (e.g., CTA, UTP, OPRA, F
+rest	stocks	stocks/market-operations/exchanges	Exchanges	Retrieve a list of known exchanges, including their identifiers, names, market types, and other relevant attributes
+rest	stocks	stocks/market-operations/market-holidays	Market Holidays	Retrieve upcoming market holidays and their corresponding open/close times
+rest	stocks	stocks/market-operations/market-status	Market Status	Retrieve the current trading status for various exchanges and overall financial markets
+rest	stocks	stocks/news	News	Retrieve the most recent news articles related to a specified ticker, along with summaries, source details, and sentiment analysis
+rest	stocks	stocks/overview	Stocks Overview	At Massive, we provide a comprehensive suite of U.S. stock market data through a standardized and intuitive API, offering unparalleled cover
+rest	stocks	stocks/snapshots/full-market-snapshot	Full Market Snapshot	Retrieve a comprehensive snapshot of the entire U.S. stock market, covering over 10,000+ actively traded tickers in a single response
+rest	stocks	stocks/snapshots/single-ticker-snapshot	Single Ticker Snapshot	Retrieve the most recent market data snapshot for a single ticker
+rest	stocks	stocks/snapshots/top-market-movers	Top Market Movers	Retrieve snapshot data highlighting the top 20 gainers or losers in the U.S. stock market
+rest	stocks	stocks/snapshots/unified-snapshot	Unified Snapshot	Retrieve unified snapshots of market data for multiple asset classes including stocks, options, forex, and cryptocurrencies in a single requ
+rest	stocks	stocks/technical-indicators/exponential-moving-average	Exponential Moving Average (EMA)	Retrieve the Exponential Moving Average (EMA) for a specified ticker over a defined time range
+rest	stocks	stocks/technical-indicators/moving-average-convergence-divergence	Moving Average Convergence/Divergence (MACD)	Retrieve the Moving Average Convergence/Divergence (MACD) for a specified ticker over a defined time range
+rest	stocks	stocks/technical-indicators/relative-strength-index	Relative Strength Index (RSI)	Retrieve the Relative Strength Index (RSI) for a specified ticker over a defined time range
+rest	stocks	stocks/technical-indicators/simple-moving-average	Simple Moving Average (SMA)	Retrieve the Simple Moving Average (SMA) for a specified ticker over a defined time range
+rest	stocks	stocks/tickers/all-tickers	All Tickers	Retrieve a comprehensive list of ticker symbols supported by Massive across various asset classes (e.g., stocks, indices, forex, crypto)
+rest	stocks	stocks/tickers/related-tickers	Related Tickers	Retrieve a list of tickers related to a specified ticker, identified through an analysis of news coverage and returns data
+rest	stocks	stocks/tickers/ticker-overview	Ticker Overview	Retrieve comprehensive details for a single ticker supported by Massive that is active as-of a given date
+rest	stocks	stocks/tickers/ticker-types	Ticker Types	Retrieve a list of all ticker types supported by Massive
+rest	stocks	stocks/trades-quotes/last-quote	Last Quote	Retrieve the most recent National Best Bid and Offer (NBBO) quote for a specified stock ticker, including the latest bid/ask prices, sizes, 
+rest	stocks	stocks/trades-quotes/last-trade	Last Trade	Retrieve the latest available trade for a specified stock ticker, including details such as price, size, exchange, and timestamp
+rest	stocks	stocks/trades-quotes/quotes	Quotes	Retrieve National Best Bid and Offer (NBBO) quotes for a specified stock ticker over a defined time range
+rest	stocks	stocks/trades-quotes/trades	Trades	Retrieve comprehensive, tick-level trade data for a specified stock ticker within a defined time range
+websocket	crypto	crypto/aggregates-per-minute	Aggregates (Per Minute)	Stream minute-by-minute aggregated OHLC (Open, High, Low, Close) and volume data for a specified cryptocurrency pair via WebSocket
+websocket	crypto	crypto/aggregates-per-second	Aggregates (Per Second)	Stream second-by-second aggregated OHLC (Open, High, Low, Close) and volume data for a specified cryptocurrency pair via WebSocket
+websocket	crypto	crypto/fair-market-value	Fair Market Value	Stream real-time Fair Market Value (FMV) data for a specified cryptocurrency pair via WebSocket
+websocket	crypto	crypto/overview	Crypto Overview	At Massive, we provide real-time streaming access to the global cryptocurrency market through WebSockets
+websocket	crypto	crypto/quotes	Quotes	Stream quote data for specified cryptocurrency pairs via WebSocket
+websocket	crypto	crypto/trades	Trades	Stream trade data for crypto pairs via WebSocket
+websocket	forex	forex/aggregates-per-minute	Aggregates (Per Minute)	Stream minute-by-minute aggregated OHLC (Open, High, Low, Close) and volume data for a specified Forex currency pair via WebSocket
+websocket	forex	forex/aggregates-per-second	Aggregates (Per Second)	Stream second-by-second aggregated OHLC (Open, High, Low, Close) and volume data for a specified Forex currency pair via WebSocket
+websocket	forex	forex/fair-market-value	Fair Market Value	Stream real-time Fair Market Value (FMV) data for a specified Forex currency pair via WebSocket
+websocket	forex	forex/overview	Forex Overview	At Massive, we provide real-time streaming access to global foreign exchange (forex) market data through WebSockets
+websocket	forex	forex/quotes	Quotes	Stream real-time Best Bid and Offer (BBO) quote data for specified Forex currency pairs via WebSocket
+websocket	futures	futures/aggregates-per-minute	Aggregates (Per Minute)	Stream minute-by-minute aggregated OHLC (Open, High, Low, Close) and volume data for a specified futures contract ticker via WebSocket
+websocket	futures	futures/aggregates-per-second	Aggregates (Per Second)	Stream second-by-second aggregated OHLC (Open, High, Low, Close) and volume data for a specified futures contract ticker via WebSocket
+websocket	futures	futures/overview	Futures Overview	Explore comprehensive U.S. futures market data through Massive's WebSocket streams.
+websocket	futures	futures/quotes	Quotes	Stream BBO (Best Bid and Offer) quote data for futures tickers via WebSocket
+websocket	futures	futures/trades	Trades	Stream tick-level trade data for futures tickers via WebSocket
+websocket	indices	indices/aggregates-per-minute	Aggregates (Per Minute)	Stream minute-by-minute aggregated OHLC (Open, High, Low, Close) for a specified index via WebSocket
+websocket	indices	indices/aggregates-per-second	Aggregates (Per Second)	Stream second-by-second aggregated OHLC (Open, High, Low, Close) for a specified index via WebSocket
+websocket	indices	indices/overview	Indices Overview	At Massive, we provide real-time streaming access to index values and aggregates through WebSockets, enabling your applications to receive c
+websocket	indices	indices/value	Value	Stream real-time index value updates for specified index tickers via WebSocket
+websocket	options	options/aggregates-per-minute	Aggregates (Per Minute)	Stream minute-by-minute aggregated OHLC (Open, High, Low, Close) and volume data for a specified options contract via WebSocket
+websocket	options	options/aggregates-per-second	Aggregates (Per Second)	Stream second-by-second aggregated OHLC (Open, High, Low, Close) and volume data for a specified options contract via WebSocket
+websocket	options	options/fair-market-value	Fair Market Value	Stream real-time Fair Market Value (FMV) data for a specified options contract via WebSocket
+websocket	options	options/overview	Options Overview	At Massive, we provide real-time streaming access to U.S. options market data through WebSockets, allowing you to receive a continuous flow 
+websocket	options	options/quotes	Quotes	Stream quote data for specified options contracts via WebSocket
+websocket	options	options/trades	Trades	Stream tick-level trade data for option contracts via WebSocket
+websocket	quickstart	quickstart	WebSocket Quickstart	WebSocket API Quickstart Guide
+websocket	stocks	stocks/aggregates-per-minute	Aggregates (Per Minute)	Stream minute-by-minute aggregated OHLC (Open, High, Low, Close) and volume data for specified tickers via WebSocket
+websocket	stocks	stocks/aggregates-per-second	Aggregates (Per Second)	Stream second-by-second aggregated OHLC (Open, High, Low, Close) and volume data for specified tickers via WebSocket
+websocket	stocks	stocks/fair-market-value	Fair Market Value	Stream real-time Fair Market Value (FMV) data for a specified stock ticker via WebSocket
+websocket	stocks	stocks/imbalances	Net Order Imbalance (NOI)	Stream real-time Net Order Imbalance (NOI) events for specified stock tickers via WebSocket
+websocket	stocks	stocks/luld	Limit Up - Limit Down (LULD)	Stream real-time Limit Up - Limit Down (LULD) events for specified stock tickers via WebSocket across multiple U.S. exchanges (including NYS
+websocket	stocks	stocks/overview	Stocks Overview	At Massive, we provide real-time streaming access to U.S. stock market data through WebSockets, delivering a continuous flow of updates dire
+websocket	stocks	stocks/quotes	Quotes	Stream NBBO (National Best Bid and Offer) quote data for stock tickers via WebSocket
+websocket	stocks	stocks/trades	Trades	Stream tick-level trade data for stock tickers via WebSocket

@@ -1,0 +1,337 @@
+release_id	name
+1	Small Business Credit Survey
+2	Risk-On Risk-Off Index
+3	Treasury International Capital: Continuous Securities Long Term (CSLT)
+4	Kansas City Fed Policy Rate Skew
+5	Survey of Household Economics and Decisionmaking (SHED)
+6	Real-Time Population Survey: Generative Artificial Intelligence Adoption Tracker
+7	RecessionRisk.com
+9	Advance Monthly Sales for Retail and Food Services
+10	Consumer Price Index
+11	Employment Cost Index
+13	G.17 Industrial Production and Capacity Utilization
+14	G.19 Consumer Credit
+15	G.5 Foreign Exchange Rates
+17	H.10 Foreign Exchange Rates
+18	H.15 Selected Interest Rates
+19	H.3 Aggregate Reserves of Depository Institutions and the Monetary Base
+20	H.4.1 Factors Affecting Reserve Balances
+21	H.6 Money Stock Measures
+22	H.8 Assets and Liabilities of Commercial Banks in the United States
+23	Ramp AI Index
+24	Database of Global Economic Indicators
+25	Manufacturing and Trade Inventories and Sales
+26	Median PCE Inflation
+27	New Residential Construction
+29	Personal Consumption Expenditures Excluding Energy Goods
+46	Producer Price Index
+47	Productivity and Costs
+49	U.S. International Transactions
+50	Employment Situation
+51	U.S. International Trade in Goods and Services
+52	Z.1 Financial Accounts of the United States
+53	Gross Domestic Product
+54	Personal Income and Outlays
+55	Reports of Condition and Income for All Insured U.S. Commercial Banks
+59	National Population Estimates
+61	Money Zero Maturity (MZM)
+62	Monetary Services Index (MSI)
+63	M2 Related Series
+64	Long-Term U.S. Treasury Securities - Market Yield
+70	Monthly Treasury Inflation-Indexed Securities
+71	Weekly Treasury Inflation-Indexed Securities
+72	Daily Treasury Inflation-Indexed Securities
+78	St. Louis Monthly Reserves and Monetary Base
+79	St. Louis Bi-Weekly Reserves and Monetary Base
+80	Treasury Bulletin
+81	Fiscal Year Budget Data
+82	Economic Report of the President
+86	Commercial Paper
+87	Transitional Euro Country Exchange Rates
+89	Household Debt Service Ratios
+91	Surveys of Consumers
+92	Selected Real Retail Sales Series
+93	Supplemental Estimates, Motor Vehicles
+94	Survey of Secondary Market Prices and Yields, and Interest Rates for Home Loans
+95	Manufacturer's Shipments, Inventories, and Orders (M3) Survey
+97	New Residential Sales
+99	Budget and Economic Outlook
+100	Seasonal Credit Rate
+101	FOMC Press Release
+102	Wall Street Journal
+103	Discount Rate Meeting Minutes
+104	Federal Reserve Bulletin
+105	St. Louis Weekly Reserves and Monetary Base
+106	M2 Own Rate
+107	Total Factor Productivity for Major Industries
+109	State Coincident Indexes
+110	Personal Income by State
+111	Annual Estimates of the Population of Metropolitan and Micropolitan Statistical Areas
+112	State Employment and Unemployment
+113	Metropolitan Area Employment and Unemployment
+116	Unemployment in States and Local Areas (all other areas)
+118	Annual Estimates of the Population for the U.S. and States, and for Puerto Rico
+119	Annual Estimates of the Population for Counties
+121	H.6 Historical Data
+122	H.4.1 Factors Affecting Reserve Balances (data not included in press release)
+131	G.13 Selected Interest Rates
+138	BEA Regions Employment and Unemployment
+140	Gross Domestic Product by State
+143	Annual Survey of State Government Tax Collections
+144	Residential Vacancies and Homeownership Annual Statistics
+148	Housing Units Authorized By Building Permits
+152	Health Insurance Coverage
+153	BEA Regions Health Insurance Coverage
+165	Australian Foreign Exchange Transactions
+166	German Foreign Exchange Intervention
+167	Italian Foreign Exchange Intervention
+168	Swiss Foreign Exchange Intervention
+169	Turkish Foreign Exchange Intervention
+170	U.S. Foreign Exchange Intervention
+171	House Price Index
+172	Japan Foreign Exchange Intervention
+173	BEA Regions Housing Units Authorized By Building Permits
+175	Personal Income by County
+178	Mexican Foreign Exchange Intervention
+179	Quarterly Retail E-Commerce Sales
+180	Unemployment Insurance Weekly Claims Report
+183	Gasoline and Diesel Fuel Update
+185	Interest Rate on Reserve Balances
+186	G.5A Foreign Exchange Rates
+187	St. Louis Fed Financial Stress Index
+188	U.S. Import and Export Price Indexes
+189	Standard & Poors
+190	Primary Mortgage Market Survey
+191	Senior Loan Officer Opinion Survey on Bank Lending Practices
+192	Job Openings and Labor Turnover Survey
+193	Money Velocity
+194	ADP National Employment Report
+197	Dow Jones Averages
+198	Kansas City Financial Stress Index
+199	S&P Cotality Case-Shiller Home Price Indices
+200	CBOE Market Statistics
+201	International Indexes of Consumer Prices
+202	International Unemployment Rates and Employment Indexes
+203	International Comparisons of Annual Labor Force Statistics
+204	International Comparisons of GDP per Capita and per Hour
+205	Main Economic Indicators
+206	Quarterly National Accounts
+208	State Leading Indexes
+209	ICE BofA Indices
+212	Spot Prices
+216	E.2 Survey of Terms of Business Lending
+219	Chicago Fed National Activity Index
+221	Chicago Fed National Financial Conditions Index
+228	Quarterly Starts and Completions by Purpose and Design
+229	Construction Spending
+230	International Comparisons of Manufacturing Productivity and Unit Labor Cost Trends
+231	Charge-Off and Delinquency Rates on Loans and Leases at Commercial Banks
+234	World Development Indicators
+236	Monthly Housing Affordability Index
+238	Financial Soundness Indicators
+239	International Financial Statistics
+240	World Economic Outlook
+242	Recession Indicators Series
+245	Summary Measures of the Foreign Exchange Value of the Dollar
+249	Income and Poverty in the United States
+251	Harmonized Indices of Consumer Prices (HICP)
+254	Travel Volume Trends
+257	NBER Macrohistory Database
+258	Penn World Table 7.1
+260	CredAbility Consumer Distress Index
+261	U.S. Recession Probabilities
+262	Failures and Assistance Transactions
+263	Debt to Gross Domestic Product Ratios
+264	Weekly U.S. and State Bond Prices, 1855-1865
+266	Bank of Japan Accounts
+267	National Accounts - GDP (Eurostat)
+268	United Kingdom Main Aggregates of National Accounts
+269	National Accounts of Japan
+270	Bankstats (Monetary & Financial Statistics)
+271	Weekly Financial Statements of the Eurosystem
+274	University of Louisville and Oklahoma State University: LoDI National Index
+275	Global Financial Development
+279	Economic Policy Uncertainty
+280	Cass Freight Index Report
+281	Supplemental Estimates, Underlying Detail Tables
+282	Supplemental Estimates, Underlying Detail Tables, Spliced Series
+283	H.3 Aggregate Reserves of Depository Institutions and the Monetary Base (data not included in press release)
+285	Penn World Table 11.0
+286	Federal Recovery Programs and BEA Statistics
+287	Nikkei Indexes
+288	Quarterly Services Survey
+289	Service Annual Survey
+290	Monthly Wholesale Trade: Sales and Inventories
+291	Existing Home Sales
+292	Chicago Fed Midwest Manufacturing Index
+295	Sticky Wages and Sectoral Labor Comovement
+296	Housing Vacancies and Homeownership
+298	Texas Employment Data
+301	Real Money Stock Measures
+302	Cleveland Financial Stress Index
+304	Interest Rate Spreads
+305	Swiss National Bank Monthly Statistical Bulletin
+306	Swiss National Bank Historical Time Series
+308	State and Metro Area Employment, Hours, and Earnings
+311	Currency and Coin Services
+313	Sticky Price CPI
+315	Current Median CPI
+316	G.20 Finance Companies
+317	National Rates and Rate Caps - Monthly Update
+319	BIS Effective Exchange Rate Indices
+320	Tech Pulse
+321	Empire State Manufacturing Survey
+322	Business Leaders Survey
+323	Trimmed Mean PCE Inflation Rate
+325	Credit to Non-Financial Sector
+326	Summary of Economic Projections
+327	International Debt Securities
+328	Nasdaq Daily Index Data
+329	Education Statistics
+330	Educational Attainment
+331	Gross Domestic Product by Industry
+332	Weekly and Hourly Earnings from the Current Population Survey
+333	Chicago Fed Midwest Economy Index
+334	Labor Force Status Flows from the Current Population Survey
+336	Selected Property Price Series
+337	Federal Reserve Board of Governors Labor Market Conditions Index
+341	Kansas City Fed Labor Market Conditions Indicators
+342	Natural Gas Spot and Futures Prices (NYMEX)
+343	Metro Area Economic Conditions Indexes
+345	Research Consumer Price Index
+346	Small Area Income and Poverty Estimates
+349	Transportation Services Index and Seasonally-Adjusted Transportation Data
+351	Manufacturing Business Outlook Survey
+352	Nonmanufacturing Business Outlook Survey
+353	Alternative Measures of Labor Underutilization for States
+354	An Arbitrage-Free Three-Factor Term Structure Model and the Recent Behavior of Long-Term Yields and Distant-Horizon Forward Rates
+355	Minimum Wage Rates
+356	Fixed Assets
+357	Hours of Wage and Salary Workers on Nonfarm Payrolls by Sector
+358	Number of Exporters and Known Value for All Countries on a State-by-State Basis
+359	U.S. International Investment Position
+360	Health Care Satellite Account
+362	Quarterly Census of Employment and Wages
+363	Monthly Treasury Statement
+364	St. Louis Fed Price Pressures Measures
+365	Primary Commodity Prices
+366	Asia and Pacific Regional Economic Outlook
+367	Western Hemisphere Regional Economic Outlook
+368	Middle East and Central Asia Regional Economic Outlook
+369	Sub-Saharan Africa Regional Economic Outlook
+370	Financial Access Survey
+371	Hornstein-Kudlyak-Lange Non-Employment Index
+372	Chicago Fed Survey of Economic Conditions
+373	GDP-Based Recession Indicator Index
+374	Texas Manufacturing Outlook Survey
+375	Overnight Bank Funding Rate Data
+376	Texas Service Sector Outlook Survey
+377	Texas Retail Outlook Survey
+378	Federal Funds Data
+379	Temporary Open Market Operations
+382	Real Trade-Weighted Value of the Dollar by U.S. State
+383	Market Value of U.S. Government Debt
+384	Characteristics of Minimum Wage Workers
+386	GDPNow
+387	Minimum Wage Rate by State
+388	Banking and Monetary Statistics, 1914-1941
+389	A Millennium of Macroeconomic Data for the UK
+391	Personal Consumption Expenditures by State
+394	Spliced Oil Price
+395	Families and Living Arrangements
+396	G.17.2 Retail Instalment Credit at Furniture and Household Appliance Stores
+397	Gross Domestic Product by County
+399	Net Migration Flows for Counties and County Equivalents in the United States
+400	St. Louis Fed Economic News Index
+401	SOI Tax Stats - Historical Data Tables
+402	Corporate Bond Yield Curve
+403	Real Personal Income for States
+406	Homeownership Rate
+408	Disconnected Youth
+409	Equifax Credit Quality
+410	Offenses Known to Law Enforcement
+412	Single Parent Households with Children
+413	Burdened Households
+414	Income Inequality
+415	Mean Commute Time
+416	County Poverty Status
+417	Preventable Hospital Admissions
+419	Racial Dissimilarity Index
+426	U.S. Treasury-Owned Gold
+427	Moody's Daily Corporate Bond Yield Averages
+428	DHI Hiring Indicators
+429	County Population Estimates By Race And Ethnicity
+430	County Median Age
+431	Premature Death Rate
+432	New Patent Assignments
+433	Age-Adjusted Premature Death Rate
+434	Quarterly Financial Report
+435	Advance Economic Indicators
+436	Monthly Retail Trade and Food Services
+439	Mean Household Wages Adjusted by Cost of Living
+440	Coinbase Index
+441	Coinbase Cryptocurrencies
+443	Business Formation Statistics
+445	Secured Overnight Financing Rate Data
+446	Labor Force Participation by State
+447	FR Y-14M Large Bank Credit Card and Mortgage Data
+449	U.S. Trade in Goods by State, by NAICS-Based Product
+450	Quarterly Survey of Public Pensions
+453	Distributional Financial Accounts
+454	Average Price Data
+455	Quarterly Summary of State & Local Tax Revenue
+456	Sahm Rule Recession Indicator
+458	Cotton Production in New England
+459	Survey of Business Uncertainty
+460	Seasonal Factors for Domestic Auto and Truck Production
+461	Energy-Related CO2 Emissions by State
+462	Housing Inventory Core Metrics
+463	Market Hotness Index
+465	Weekly Economic Index (Lewis-Mertens-Stock)
+468	Weekly Business Formation Statistics
+469	State Unemployment Insurance Weekly Claims Report
+470	World Uncertainty Index
+471	Manufactured Housing Survey
+472	Daily Federal Funds Rate
+473	Optimal Blue Mortgage Market Indices
+476	Job Postings on Indeed
+477	Monthly State Retail Sales
+478	Pandemic Claims Weekly Report
+479	Consumer Expenditure Surveys
+480	Total Energy
+481	The Federal Reserve System's Weekly Balance Sheet Since 1914
+482	FDIC Quarterly Banking Profile
+483	SOFR Averages and Index Data
+484	Key ECB Interest Rates
+485	U.S. Granted Utility Patents by Counties and CBSAs
+486	U.S. Granted Patents by States, Territories, and Countries
+487	Index of Global Real Economic Activity
+488	Brave-Butters-Kelley Indexes
+489	AD&Co US Mortgage High Yield Index
+490	Industry Productivity
+491	The Effects of the 1930s HOLC "Redlining" Maps
+492	SONIA Interest Rate Benchmark
+494	Chicago Fed Advance Retail Trade Summary
+499	EONIA: Euro Interbank Offered Rate
+500	Inflation Expectations
+502	Euro Short Term Rate
+503	Zillow Home Value Index (ZHVI)
+504	Historical Overnight AMERIBOR Unsecured Interest Rate
+505	Community Bank Sentiment Index
+571	Senior Credit Officer Opinion Survey on Dealer Financing Terms
+605	Underlying Inflation Gauge (UIG)
+637	Wage Growth Tracker
+670	Macroeconomic Uncertainty Index for United States
+705	Financial and Real Uncertainty Indexes
+736	Visa Spending Momentum Index
+737	National Housing Survey
+738	Quits and Layoffs to Nonemployment Based on the Consumer Population Survey (CPS)
+739	Kansas City Fed Policy Rate Uncertainty
+740	Survey of Regional Conditions and Expectations (SORCE)
+741	Bankrate Consumer Polls
+742	Bankrate Monitor (BRM) National Index
+769	Fujita, Moscarini, and Postel-Vinay Employer-to-Employer Transition Probability
+868	Annual Integrated Economic Survey (AIES)
+1033	Select time series based on the U.S. Survey of Working Arrangements and Attitudes (SWAA)
+1105	Tri-Party General Collateral Rate Data
+1132	Dallas Fed Energy Survey

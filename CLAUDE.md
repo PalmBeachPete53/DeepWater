@@ -16,6 +16,10 @@ when present; `third_party/llama.cpp` (vendored, Metal) builds `deepwater-llm`, 
 bundle (AI › Local, one-architecture builds only); on macOS the News reader renders with the system's WebKit (`src/NewsWebHostMac.mm`, Objective-C++). `README.md` documents every tab, data source and the layout of `src/`; read its
 section for the tab you touch before changing it, and keep it current when you add something.
 
+`docs/sources/INDEX.md` inventories what every source holds (data sets, fields, coverage, not the values) and what the app
+reads of it. Check it, and `zgrep` its `catalog/`, before implementing a data set, adding a source or saying a piece of
+data doesn't exist. A new source gets a card there (format in `docs/sources/README.md`).
+
 Build and tests:
 
 ```sh
@@ -38,12 +42,13 @@ deepwater [--theme <id>] --page <id> [--devtools] [--country FRA] [--indicator <
 ```
 
 Working rules:
-- The graph covers `src/`, `tests/` and the docs; `third_party/`, `i18n/`, `build/` and data files are excluded
+- The graph covers `src/`, `tests/` and the docs; `third_party/`, `i18n/`, `build/`, `docs/sources/` and data files are excluded
   (`.graphifyignore`). A `Stop` hook (`.claude/hooks/graphify-update.sh`) runs `graphify update .` in the background
   at the end of every turn that changed a source or doc file, so the graph is current at the start of the next
   turn; within a long turn, run `graphify update .` yourself before querying code you just edited. Code changes
   are AST-only (no tokens); after editing README.md or another doc, run `/graphify . --update` once for its
-  semantic nodes. `graphify-out/` is not committed (a rebuild takes a few seconds).
+  semantic nodes, ending with `$(cat graphify-out/.graphify_python) tools/graphify_update_docs.py graphify-out/.graphify_chunk_*.json`
+  instead of the skill's merge steps (a re-extraction never keeps the node ids, so graphify refuses a plain replace); for edits that add no concept, `--keep <docs>` with no extraction. `graphify-out/` is not committed (a rebuild takes a few seconds).
 - `graphify explain "Class::method()"`, `graphify affected "function"` and `graphify path "A" "B"` are the reliable
   queries; free-text `graphify query` is keyword-based and noisy. Method calls through a pointer
   (`MarketState::instance()->publishRegime(...)`) and Qt `connect()` links are not call edges: grep for those.

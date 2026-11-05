@@ -1,0 +1,1593 @@
+category	meaning_id	name
+6	MACCSO	Acceptances - own
+6	LACCEP,MACCS,AACCS	Acceptances - total
+6	LAACCR	Accrued amounts payable
+6	AACCRR	Accrued amounts receivable
+5	AX	Activities auxiliary to financial intermediation
+5	VD	Activities of venture and development capital companies
+5	AM	Administrative and support services
+9	5R	Advanced Economies - total
+9	AF	Afghanistan
+9	R5	Africa and Middle East Emerging Market and Developing Economies - nsi
+9	4W	Africa and Middle East Emerging Market and Developing Economies - total
+9	9Q	Africa, Middle East and Asia - total
+9	7J,9L,U7,UR	African developing countries - nsi
+9	4P,8J	African developing countries - total
+4	AGFI	Agriculture, Hunting, Forestry and Fishing
+5	AF	Agriculture, forestry and fishing industries
+5	AG	Agriculture, hunting and forestry industries
+9	AL	Albania
+9	DZ	Algeria
+4	ALUK	All UK issuers
+4	UKOT	All UK residents excluding MFIS, OFCs and PNFCs
+5	TS	All corporate sectors
+6	WOLCCB	All credit cards BT
+6	WOLCCP	All credit cards purchases
+4	ALIS	All issuers
+4	ALNR	All non resident issuers
+6	ALLPRB	All programme bonds
+6	ALLSEC	All securities
+6	ALLSHR	All shares
+6	ALLSAB	All stand alone bonds
+9	9F	Americas (North and South) - nsi
+9	9G	Americas (North and South) - total
+9	9P	Americas (North and South) and the Caribbean - total
+9	AD	Andorra
+9	AO	Angola
+6	ALSVAX	Approvals
+6	ALSNAH	Approvals - No. for house purchase
+6	ALSNAX	Approvals - No. for house purchase and identified remortgaging
+6	ALSNAO	Approvals - No. for other secured lending
+6	ALSNAR	Approvals - No. for remortgaging
+6	ALSNAP	Approvals - No. for secured lending
+6	ALSNTO	Approvals - No. for secured lending total
+6	ALSVAH	Approvals - value for house purchase
+6	ALSVAO	Approvals - value for other secured lending
+6	ALSVAR	Approvals - value for remortgaging
+6	ALSVAP,NLSVAP	Approvals - value for secured lending
+6	ALSVTO	Approvals - value for secured lending total
+9	AR	Argentina
+9	AM	Armenia
+9	AW	Aruba
+9	R6	Asia and Pacific Emerging Market and Developing Economies - nsi
+9	4Y	Asia and Pacific Emerging Market and Developing Economies - total
+9	U8,9H,7K	Asian developing countries - nsi
+9	4Q,8K	Asian developing countries - total
+6	AOCNR	Asset claims - other
+6	AOTHER,AOTHR,AOASS	Assets - other
+6	AOSTAS	Assets - other short term
+6	ASASST	Assets - short term
+6	ATOTAL,AFCAS,ATOTL,ACRTOT	Assets - total
+6	AFCDBK	Assets - total, of which with banks
+6	AASSL	Assets leased
+9	9I	Australasia and Oceania countries - nsi
+9	9J	Australasia and Oceania countries - total
+9	AU	Australia
+9	AT	Austria
+6	AUFAC	Autonomous factors
+9	AZ	Azerbaijan
+9	U1	BIS area countries - nsi
+9	5X	BIS area countries - total
+9	8A	BIS industrial area countries - total
+9	8R	BIS reporting countries - total
+9	BS	Bahamas
+9	BH	Bahrain
+6	BODD	Balance of overdrafts drawn
+6	ABOPRA	Balance of payment reserve assets
+9	BD	Bangladesh
+6	ARPRBB	Bank bill reverse repos
+6	LBKBOR	Bank borrowing
+5	BH	Bank holding companies
+5	BD,BOED	Bank of England Banking Department
+4	BOEI	Bank of England Issue Department
+5	BA	Bank of England counterparties
+6	TBOEOP	Bank of England operations
+4	BBIS	Banks in the BIS reporting area
+6	TBALS	Banks' operational balances at the Bank of England
+9	BB	Barbados
+6	BRTRK	Base rate tracker mortgage
+9	BY	Belarus
+9	BE	Belgium
+9	BL	Belgium and Luxembourg - total
+9	BZ	Belize
+9	BJ	Benin
+9	BM	Bermuda
+9	BT	Bhutan
+6	ABILLT	Bills - Treasury
+6	ABILLE	Bills - eligible
+6	ABILLO	Bills - non-eligible
+6	AOBILL	Bills - other (excl Treasury Bills)
+6	LBILLS,ABILL,LBONDS	Bills - total
+6	ABLAC	Bills and acceptances
+9	BO	Bolivia
+6	LBOND,ABOND	Bonds
+6	LBOUF	Bonds and all other instruments of up to and including five years' original maturity
+6	ABN	Bonds and notes
+6	BOSAMT	Bonds and other securities acquired via market transactions
+6	LSTB	Bonds, short term
+9	A5	Bop vade mecum:  efta - european free trade association
+9	E2	Bop vade mecum: other european countries
+9	E7	Bop vade mecum: total america
+9	BA	Bosnia-Herzegovina
+9	BW	Botswana
+6	IBRCAP	Branches' inward capital transactions from
+6	IBRWOR	Branches' inward level of working capital
+6	DBRCAP	Branches' outward capital transactions of
+6	DBRPRO	Branches' outward current transactions - profits |AMPERSAND| losses
+6	DBRWOR	Branches' outward level of working capital
+9	BR	Brazil
+6	ALBADV	Bridging finance
+6	ALBRID	Bridging finance lending
+9	1W	British Overseas Territories
+9	BV	British Virgin Islands
+9	BN	Brunei
+4	BSOC,BS	Building societies
+9	BG	Bulgaria
+9	BF	Burkina Faso
+9	BI	Burundi
+5	BO	Business and other services
+5	DR	Buying, selling and renting of real estate
+6	LCD,ACD	CDs
+6	ACDCP,LCDCP	CDs and commercial paper
+6	LCDOP	CDs and other paper
+6	ACDSTP,LCDSTP	CDs, commercial paper and other short term paper
+9	KH	Cambodia
+9	CM	Cameroon
+9	CA	Canada
+5	CA	Canadian government
+9	CV	Cape Verde
+6	LCAPI	Capital Issues
+6	LCAPOF	Capital and other internal funds
+6	QCAPEX	Capital expenditure acquisitions
+6	ACAPEX	Capital expenditure aquisitions
+6	GCAPEX,DCAPEX	Capital expenditure disposals
+6	ECAPEX	Capital expenditure new building work
+6	ACDTOT,AFCD	Cash and deposits
+6	ACRDS	Cash ratio deposits
+9	KY	Cayman Islands
+9	CF	Central African Republic
+4	CTBK,CB	Central Bank
+4	CGOV,CG	Central Government
+6	NCGNCR	Central Government Net Cash Requirement (CGNCR)
+5	CY	Central clearing counterparties
+6	RSCD3M	Certificates of deposit (sterling) interest rate, 3 months, mean offer/bid
+6	ACTD,LNCTD,LCTDS	Certificates of tax deposit
+9	TD	Chad
+5	CT	Channel Islands |AMPERSAND| Isle of Man
+5	CS	Channel Islands |AMPERSAND| Isle of Man - Household Sector
+4	CIOM,CM	Channel Islands |AMPERSAND| Isle of Man - Monetary financial institutions
+5	CF	Channel Islands |AMPERSAND| Isle of Man - Other financial corporations
+5	CN	Channel Islands |AMPERSAND| Isle of Man - Private non-financial corporations
+5	CC	Channel Islands |AMPERSAND| Isle of Man - Public Sector
+5	CI	Chemical and allied industries
+5	CH	Chemical, man-made fibres, rubber and plastic manufacturers
+9	CL	Chile
+9	CN	China, People's Republic of
+5	CV	Civil Engineering
+6	AOREP	Claims on account of reverse repo transactions
+6	ACOIN	Coin
+5	CW	Cold water purification companies and suppliers
+9	CO	Colombia
+6	TCBOR	Commercial borrowing - total
+6	ACP,LCP,COMPAP	Commercial paper
+6	ACPBIL	Commercial paper and bills
+9	KM	Comoros
+5	CR	Computer companies and related firms
+5	CL	Computer software purchased under license payments
+9	CG	Congo
+9	CD	Congo, Democratic Republic of
+6	TCGD|PERCENTAGE|G	Consolidated gross debt as |PERCENTAGE| of GDP
+4	CSBK	Consortium banks
+4	CONN	Construction
+5	CO	Construction companies
+5	CK	Construction of commercial buildings
+5	CE	Construction of domestic buildings
+6	ALOGRO	Consumer credit - gross lending
+6	ALONET	Consumer credit - net lending
+6	ALONEX	Consumer credit lending excluding securitisations - net
+6	CTREPF	Contingent term repo facility
+5	CP	Corporates
+9	CR	Costa Rica
+6	ACOURT	Court funds
+6	AURCRC,AIBCRC	Credit Commitments
+6	SLCGRO	Credit card - gross lending
+6	RCREDC	Credit card - interest rates
+6	ALCNET	Credit card - net lending
+6	ALCNEH	Credit card - net lending (historical measure)
+6	ALCRRG	Credit card - repayments
+6	ALCADV	Credit card lending
+6	ALCNEX	Credit card lending excluding securitisations - net
+6	AADCSE	Credit card loans - of which securitised
+6	AFACIL	Credit facilities
+6	AFLNSD	Credit facilities - secured lending (including bridging finance)
+6	AFLCON	Credit facilities - unsecured lending
+6	AUNFAC	Credit facilities - unused
+5	CU	Credit unions
+9	HR	Croatia
+6	AURCBC	Cross-border claims
+6	AC11T	Cross-border claims - total
+6	AC<6M	Cross-border claims of less than 6 months
+6	AC>2Y	Cross-border claims of over 2 years
+6	AC1113	Cross-border claims over 1 year to 2 years
+6	AC1112	Cross-border claims over 6 months to 1 year
+6	AC1117	Cross-border claims unanalysed by maturity
+6	APINV	Cross-border portfolio investments
+9	CU	Cuba
+9	CW	Curacao
+6	IDIVPA	Current inward transactions - dividends paid
+6	IINPAI	Current inward transactions - interest paid
+6	DDIVRE	Current outward transactions - dividends received
+6	DINREC	Current outward transactions - interest received
+9	CY	Cyprus
+9	CZ	Czech Republic
+6	DEALPR	Dealing profits
+6	DPDERV	Dealing profits from derivatives
+6	DPFORX	Dealing profits from foreign exchange
+6	DPSECS	Dealing profits from securities
+6	DPRESI	Dealing profits residual (not captured by product breakdown)
+6	LOSDBT,LGDEBT,LGCDBT,AGDEBT	Debt
+6	LASDBT	Debt - assigned
+6	AODEBT	Debt - other
+6	ATDEBT	Debt - temporary
+6	ADEBT	Debt - total
+6	AGD1_3	Debt - with residual maturity of 1-3 months
+6	AGD3_1	Debt - with residual maturity of 3 months to 1 year
+6	AGD<1M	Debt - with residual maturity of under 1 month
+6	AGD<1	Debt - with residual maturity of under 1 year
+6	ADSEC,LDSEC	Debt securities
+9	DK	Denmark
+6	DBONDH	Denominated bond holdings
+6	RPMDF	Deposit facility - repayment of
+6	USEDF	Deposit facility - use of
+6	LDEPLS	Deposit liabilities
+6	LDPCD	Deposits (including CDs)
+6	LDEPOG	Deposits - (intragroup) total
+6	LISA2F	Deposits - 2 year fixed ISA
+6	LDPCO	Deposits - call and overnight
+6	LISA	Deposits - cash ISAs
+6	LDPSRI	Deposits - interest bearing retail
+6	DPRICD	Deposits - interest bearing, repos, cds and stp
+6	LRETL	Deposits - retail
+6	LDPS	Deposits - sight
+6	LDPST	Deposits - sight and time
+6	LDPSI	Deposits - sight interest bearing
+6	LDPSN	Deposits - sight non-interest bearing
+6	LDPSNT	Deposits - sight plus transit and suspense
+6	LDPT,DDPT	Deposits - time
+6	LDPXTS	Deposits - time (excl. TESSAs)
+6	LDPTI	Deposits - time interest bearing
+6	LDPT2Y	Deposits - time with a 2 year maturity
+6	LDPT3M	Deposits - time with a 3 months notice period
+6	LDPTCD	Deposits - time, and CDs
+6	LTRPCD	Deposits - time, repos and CDs
+6	ADEPOS,LDEPS,LDEPOS	Deposits - total
+6	LDPMMI	Deposits and money market instruments
+6	LDPRP	Deposits and repos
+6	LDEPXN	Deposits excl. notes
+6	LDPWCP	Deposits, wholesale and commerical paper
+6	PEDEPR	Depreciation and amortisation
+6	AFRAS	Derivatives - FRA assets
+6	AFORX	Derivatives - assets by foreign exchange risk
+6	AINTR	Derivatives - assets by interest-rate risk
+6	AOTRR	Derivatives - assets by other risk
+6	AOTRP	Derivatives - assets in other products
+6	AC11A	Derivatives - claims under contracts with non-residents
+6	ACOEQ	Derivatives - commodity/equity assets
+6	AIBDRV,AURDRV	Derivatives - contracts with non-residents
+6	ACRDV	Derivatives - credit derivatives assets
+6	LCRDV	Derivatives - credit derivatives liabilities
+6	AFUFO	Derivatives - futures |AMPERSAND| forwards assets
+6	LFORX	Derivatives - liabilities by foreign exchange risk
+6	LINTR	Derivatives - liabilities by interest-rate risk
+6	LOTRR	Derivatives - liabilities by other risk
+6	LFRAS	Derivatives - liabilities in FRAs
+6	LCOEQ	Derivatives - liabilities in commodity/equity contracts
+6	LFUFO	Derivatives - liabilities in futures |AMPERSAND| forwards
+6	LOPTN	Derivatives - liabilities in options
+6	LOTRP	Derivatives - liabilities in other products
+6	LFDERI,LDERIV	Derivatives - net
+6	NTOTC	Derivatives - net asset positions
+6	AOPTN	Derivatives - options assets
+6	ASWAP	Derivatives - swap assets
+6	LSWAP	Derivatives - swap liabilities
+6	ATOTR	Derivatives - total  assets by risk
+6	LTOTR	Derivatives - total  liabilities by risk
+6	ATOTC	Derivatives - total assets by counterparty
+6	LTOTC	Derivatives - total liabilities by counterparty
+9	9M	Developed countries (excl. USA) - nsi
+9	8E,3J,U3	Developed countries - nsi
+4	ODEV	Developed countries-owned banks - other
+9	UQ	Developing countries - nsi
+9	4K	Developing countries - total
+5	DE,CD	Development of buildings
+6	NDINPL	Direct investment income - branches' profits |AMPERSAND| losses (net)
+6	RDINPL	Direct investment income - branches' profits |AMPERSAND| losses (receivable)
+6	PODINV	Direct investment income payable - other
+6	PDINPL	Direct investment income profits and losses
+6	RODINV	Direct investment income receivable - other
+6	NODINV	Direct investment income, net - other
+4	DISC,DH	Discount houses
+6	RDDT3M	Discount rate, 3 month Treasury Bills, US dollar
+6	RSDT3M	Discount rate, 3 month treasury bills, sterling
+6	RDEBE	Discount, BoE Euro Bills, euro
+6	DIS295,DISC2Y	Discounted rate mortgage, 2 year
+6	NDIVI	Dividends - net
+6	PDIVI	Dividends paid
+6	RDIVI	Dividends received
+6	LDVIN	Divisia
+9	DJ	Djibouti
+9	DM	Dominica
+9	DO	Dominican Republic
+6	AECGD	ECGD-guaranteed lending
+6	LECS	ECS repayments
+9	9A	EFTA countries - nsi
+9	9B	EFTA countries - total
+4	ERAL	ER Reporters banks and bulding societies
+9	TL	East Timor
+9	U4	Eastern European countries - nsi
+9	UX,3E,8F	Eastern European countries - total
+9	EC	Ecuador
+5	ED	Education providers
+9	EG	Egypt
+9	SV	El Salvador
+5	EE	Electrical engineering industries
+5	EM	Electrical, medical and optical equipment manufacturers
+4	EGWS	Electricity, Gas and Water Supply
+5	SE	Electricity, gas and heated water suppliers
+5	EG	Electricity, gas and water suppliers
+4	ELIG	Eligible banks
+6	REBD1M	Eligible bills discount rate, 1 month
+6	REBD3M	Eligible bills discount rate, 3 months
+6	LELS	Eligible liabilities
+9	4T	Emerging Market and Developing Economies - total
+5	EW	Energy and water supply industries
+9	GQ	Equatorial Guinea
+6	AEQ	Equities
+9	EA	Eritrea
+9	EE	Estonia
+9	ET	Ethiopia
+6	RECPR1	Euro commercial paper rates 1 month
+6	RECPR2	Euro commercial paper rates 2 months
+6	RECPR3	Euro commercial paper rates 3 months
+6	RECPR6	Euro commercial paper rates 6 months
+6	RECORD	Euro currency offered rate 3 month, US dollar
+6	REDIRM	Euro dollar deposit interest rate, mean offer/bid
+6	REIIRO	Euro interbank interest rate 3 month, offered rate
+6	REIL3M	Euro interbank lending offered rate, 3 months
+6	RESIRM	Euro sterling deposit interest rate, mean offer/bid
+9	R1	European Advanced Economies - nsi
+9	5K	European Advanced Economies - total
+9	5E	European Area countries - total
+9	R3	European Emerging Market and Developing Economies - nsi
+9	3C	European Emerging Market and Developing Economies - total
+9	5C	European Monetary Union countries - total
+9	UC,5B	European Union countries - total
+9	9C	European countries - nsi
+9	9E	European countries - total
+9	5L	European countries other than EU - total
+9	9D	European countries, other - total
+9	8D	European developed countries - nsi
+4	OTEU	European-owned (excl. UK-owned) banks
+6	RAUSZ	Exchange rate (effective) - Australian dollar
+6	RAUSSZ	Exchange rate (effective) - Austrian schilling
+6	RBELGZ	Exchange rate (effective) - Belgian franc
+6	RCANZ	Exchange rate (effective) - Canadian dollar
+6	RDANKZ	Exchange rate (effective) - Danish krone
+6	RDEUTZ	Exchange rate (effective) - Deutschemark
+6	REURZ	Exchange rate (effective) - Euro
+6	RFINMZ	Exchange rate (effective) - Finnish markka
+6	RFFRAZ	Exchange rate (effective) - French franc
+6	RGDRAZ	Exchange rate (effective) - Greek drachma
+6	RIPUNZ	Exchange rate (effective) - Irish punt
+6	RILIRZ	Exchange rate (effective) - Italian lira
+6	RJAPZ	Exchange rate (effective) - Japanese yen
+6	RBETHZ	Exchange rate (effective) - Netherlands guilder
+6	RNEWZZ	Exchange rate (effective) - New Zealand dollar
+6	RNORWZ	Exchange rate (effective) - Norwegian krone
+6	RPESCZ	Exchange rate (effective) - Portuguese escudo
+6	RSPESZ	Exchange rate (effective) - Spanish peseta
+6	RSWEDZ	Exchange rate (effective) - Swedish krona
+6	RSWISZ	Exchange rate (effective) - Swiss franc
+6	RUSZ	Exchange rate (effective) - US dollar
+6	RSTEZ	Exchange rate (effective) - sterling
+6	RUSF	Exchange rate (forward) - US dollar into sterling
+6	RAUSX	Exchange rate (spot) - Australian dollar into US dollar
+6	RAUSD	Exchange rate (spot) - Australian dollar into sterling
+6	RAUSSX	Exchange rate (spot) - Austrian schilling into US dollar
+6	RAUSSC	Exchange rate (spot) - Austrian schilling into sterling
+6	RBELGX	Exchange rate (spot) - Belgian franc into US dollar
+6	RBELGF	Exchange rate (spot) - Belgian franc into sterling
+6	RCANX	Exchange rate (spot) - Canadian dollar into US dollar
+6	RCAND	Exchange rate (spot) - Canadian dollar into sterling
+6	RCYUAX	Exchange rate (spot) - Chinese Yuan into US dollar
+6	RCYPRX	Exchange rate (spot) - Cyprus pound into US dollar
+6	RCYPRE	Exchange rate (spot) - Cyprus pound into euro
+6	RCYPRU	Exchange rate (spot) - Cyprus pound into sterling
+6	RCZECX	Exchange rate (spot) - Czech koruna into US dollar
+6	RCZECE	Exchange rate (spot) - Czech koruna into euro
+6	RCZECH	Exchange rate (spot) - Czech koruna into sterling
+6	RDANKX	Exchange rate (spot) - Danish krone into US dollar
+6	RDANKR	Exchange rate (spot) - Danish krone into sterling
+6	RDEUTX	Exchange rate (spot) - Deutschemark into US dollar
+6	RDEUTS	Exchange rate (spot) - Deutschemark into sterling
+6	RESTOX	Exchange rate (spot) - Estonian kroon into US dollar
+6	RESTOE	Exchange rate (spot) - Estonian kroon into euro
+6	RESTON	Exchange rate (spot) - Estonian kroon into sterling
+6	REURX	Exchange rate (spot) - Euro into US dollar
+6	REURO	Exchange rate (spot) - Euro into sterling
+6	RFINMX	Exchange rate (spot) - Finnish markka into US dollar
+6	RFINMA	Exchange rate (spot) - Finnish markka into sterling
+6	RFFRAX	Exchange rate (spot) - French franc into US dollar
+6	RFFRAN	Exchange rate (spot) - French franc into sterling
+6	RGDRAX	Exchange rate (spot) - Greek drachma into US dollar
+6	RGDRAC	Exchange rate (spot) - Greek drachma into sterling
+6	RHOKOX	Exchange rate (spot) - Hong Kong Dollar into US Dollar
+6	RHOKOD	Exchange rate (spot) - Hong Kong dollar into sterling
+6	RHUNGX	Exchange rate (spot) - Hungarian forint into US dollar
+6	RHUNGE	Exchange rate (spot) - Hungarian forint into euro
+6	RHUNGA	Exchange rate (spot) - Hungarian forint into sterling
+6	RIRUPX	Exchange rate (spot) - Indian Ruppee into US dollar
+6	RIPUNX	Exchange rate (spot) - Irish punt into US dollar
+6	RIPUNT	Exchange rate (spot) - Irish punt into sterling
+6	RISHEX	Exchange rate (spot) - Israeli Shekel into US dollar
+6	RILIRX	Exchange rate (spot) - Italian lira into US dollar
+6	RILIRA	Exchange rate (spot) - Italian lira into sterling
+6	RJAPX	Exchange rate (spot) - Japanese yen into US dollar
+6	RJAPY	Exchange rate (spot) - Japanese yen into sterling
+6	RLATVX	Exchange rate (spot) - Latvian lats into US dollar
+6	RLATVE	Exchange rate (spot) - Latvian lats into euro
+6	RLATVL	Exchange rate (spot) - Latvian lats into sterling
+6	RLITHX	Exchange rate (spot) - Lithuanian litas into US dollar
+6	RLITHE	Exchange rate (spot) - Lithuanian litas into euro
+6	RLITHU	Exchange rate (spot) - Lithuanian litas into sterling
+6	RMRINX	Exchange rate (spot) - Malaysian Ringgit into US dollar
+6	RMALTX	Exchange rate (spot) - Maltese lira into US dollar
+6	RMALTE	Exchange rate (spot) - Maltese lira into euro
+6	RMALTL	Exchange rate (spot) - Maltese lira into sterling
+6	RBETHX	Exchange rate (spot) - Netherlands guilder into US dollar
+6	RBETHG	Exchange rate (spot) - Netherlands guilder into sterling
+6	RNEWZX	Exchange rate (spot) - New Zealand dollar into US dollar
+6	RNEWZD	Exchange rate (spot) - New Zealand dollar into sterling
+6	RNORWX	Exchange rate (spot) - Norwegian krone into US dollar
+6	RNORWK	Exchange rate (spot) - Norwegian krone into sterling
+6	RPOLSX	Exchange rate (spot) - Polish zloty into US dollar
+6	RPOLSE	Exchange rate (spot) - Polish zloty into euro
+6	RPOLSZ	Exchange rate (spot) - Polish zloty into sterling
+6	RPESCX	Exchange rate (spot) - Portuguese escudo into US dollar
+6	RPESCU	Exchange rate (spot) - Portuguese escudo into sterling
+6	RRRUBX	Exchange rate (spot) - Russian Ruble into US dollar
+6	RSRIYX	Exchange rate (spot) - Saudi Riyal into US Dollar
+6	RSRIYA	Exchange rate (spot) - Saudi riyal into sterling
+6	RSINGX	Exchange rate (spot) - Singapore Dollar into US Dollar
+6	RSINGD	Exchange rate (spot) - Singapore dollar into sterling
+6	RSLVEX	Exchange rate (spot) - Slovak koruna into US dollar
+6	RSLVKE	Exchange rate (spot) - Slovak koruna into euro
+6	RSLVKR	Exchange rate (spot) - Slovak koruna into sterling
+6	RSLOVX	Exchange rate (spot) - Slovenian tolar into US dollar
+6	RSLOVE	Exchange rate (spot) - Slovenian tolar into euro
+6	RSLOVT	Exchange rate (spot) - Slovenian tolar into sterling
+6	RSARAX	Exchange rate (spot) - South African Rand into US Dollar
+6	RSARAN	Exchange rate (spot) - South African rand into sterling
+6	RSWANX	Exchange rate (spot) - South Korean Wan into US dollar
+6	RSPESX	Exchange rate (spot) - Spanish peseta into US dollar
+6	RSPESE	Exchange rate (spot) - Spanish peseta into sterling
+6	RSTRUS	Exchange rate (spot) - Sterling into us dollar
+6	RSWEDX	Exchange rate (spot) - Swedish krona into US dollar
+6	RSWEDK	Exchange rate (spot) - Swedish krona into sterling
+6	RSWISX	Exchange rate (spot) - Swiss franc into US dollar
+6	RSWISF	Exchange rate (spot) - Swiss franc into sterling
+6	RTAIDX	Exchange rate (spot) - Taiwan Dollar into US Dollar
+6	RTAIDO	Exchange rate (spot) - Taiwan dollar into sterling
+6	RTBAHX	Exchange rate (spot) - Thai Baht into US dollar
+6	RTLIRX	Exchange rate (spot) - Turkish Lira into US dollar
+6	RUSD	Exchange rate (spot) - US dollar into sterling
+6	NOTIX	Expenditure - net with other income
+6	NEXTS,NEXTO	Externals
+5	EI	Extractive industries and mineral product manufacturers
+5	FC	Factoring corporations
+9	FK	Falkland Islands
+9	UF	Far East countries - total
+9	FA	Faroe Islands
+9	FM	Federated States of Micronesia
+6	NFEES	Fees and commissions - net
+6	PFEES	Fees and commissions payable
+6	PFDERI	Fees and commissions payable in connection with derivative instruments
+6	PFLACU	Fees and commissions payable in connection with loans, advances, commitment and utilisation services
+6	PFOTNF	Fees and commissions payable in connection with other financial and non-financial services provided
+6	PFIMSE	Fees and commissions payable on investment management and securities
+6	PFBKCA	Fees and commissions payable related to current account services
+6	RFEES	Fees and commissions receivable
+6	RFOTC	Fees and commissions receivable - other (including credit card fees)
+6	RFDERI	Fees and commissions receivable in connection with derivative instruments
+6	RFLACU	Fees and commissions receivable in connection with loans, advances, commitment and utilisation serv.
+6	RFOTNF	Fees and commissions receivable in connection with other financial and non-financial services
+6	RFIMSE	Fees and commissions receivable on investment management and securities
+6	RFBKCA	Fees and commissions receivable related to current account services
+6	RFINSR	Fees and commissions receivable related to insurance
+6	RFIBAB	Fees and commissions receivable related to investment banking, advisory, brokerage and underwriting
+6	RFIBFS	Fees and commissions receivable related to investment banking, fiduciary and securitisation
+6	RFLNAD	Fees and commissions receivable related to loans and advances
+6	RFOTH	Fees and commissions receivable related to other services
+9	FJ	Fiji
+5	FP	Financial corporations
+5	FN	Financial intermediaries
+5	FI	Financial intermediation (excl. insurance companies and pension funds)
+5	AA	Financial intermediation auxiliary companies
+5	FL	Financial leasing corporations
+6	FTRPA	Fine-tuning reverse repos
+9	FI	Finland
+5	WH	Firms involved in distribution, hotels |AMPERSAND| restaurants
+5	WW	Firms involved in water supply and sewerage
+5	FS	Fishing industries
+6	FIXRBD	Fixed rate bond deposits
+6	FR1075	Fixed rate mortgage, 10 year
+6	FR2Y90,FR2Y75,RFRM2Y	Fixed rate mortgage, 2 year
+6	FR2Y60	Fixed rate mortgage, 2 year 60|PERCENTAGE|
+6	BTL275	Fixed rate mortgage, 2 year 75|PERCENTAGE| BTL
+6	FR2Y85	Fixed rate mortgage, 2 year 85|PERCENTAGE|
+6	FRM2Y	Fixed rate mortgage, 2yrs
+6	RFRM3Y,FR3Y75	Fixed rate mortgage, 3 year
+6	FRM3Y	Fixed rate mortgage, 3yrs
+6	RFRM5Y,FR5Y75	Fixed rate mortgage, 5 year
+6	FRM5Y	Fixed rate mortgage, 5yrs
+6	LFRNS	Floating rate notes
+6	WLOFB1,WLNFB1	Floating, SMEs, Bank Rate linked
+6	WLNFB2,WLOFB2	Floating, SMEs, Bank Rate linked daily reset
+6	WLOFB3,WLNFB3	Floating, SMEs, Bank Rate linked reset <3mths
+6	WLOFB4,WLNFB4	Floating, SMEs, Bank Rate linked reset >=3mths
+6	WLOFL1,WLNFL1	Floating, SMEs, LIBOR linked
+6	WLNFL2,WLOFL2	Floating, SMEs, LIBOR linked daily reset
+6	WLOFL3,WLNFL3	Floating, SMEs, LIBOR linked reset <3mths
+6	WLNFL4,WLOFL4	Floating, SMEs, LIBOR linked reset >=3mths
+5	FB	Food, beverage and tobacco manufacturers
+5	MY	For Monetary Policy
+6	AFXFF	Foreign Exchange Futures and Forwards - Assets
+6	LFXFF	Foreign Exchange Futures and Forwards - Liabilities
+6	AFXOP	Foreign Exchange Options - Assets
+6	LFXOP	Foreign Exchange Options - Liabilities
+6	AFXOT	Foreign Exchange Other - Assets
+6	LFXOT	Foreign Exchange Others - Liabilities
+6	AFXSW	Foreign Exchange Swaps - Assets
+6	LFXSW	Foreign Exchange Swaps - Liabilities
+6	AIB6MU	Foreign claims - 6 months and under
+6	AIB12Y	Foreign claims - over 1 year to 2 years
+6	AIBOTH	Foreign claims - over 2 years including unanalysed
+6	AIB6M1	Foreign claims - over 6 months to 1 year
+6	ATFRC,AURTFC,AIBTFC	Foreign claims - total
+6	AFCAD	Foreign currency and deposits
+6	AFCRES	Foreign currency reserves claims on residents
+4	OFBT	Foreign-owned banks - other
+6	RUSFPD	Forward premium/discount rate - US dollar
+6	ASWP	Forwards and swaps (incl. sterling leg)
+9	FR	France
+9	PF	French Polynesia
+4	FRAN	French-owned banks
+5	FM	Fund management companies
+5	F4	Fund managers - on behalf of UK individuals
+5	F3	Fund managers - on behalf of UK insurance companies and pension funds
+5	F1	Fund managers - on behalf of UK investment and unit trusts other than money market mutual funds
+5	F2	Fund managers - on behalf of UK money market mutual funds
+5	F6	Fund managers - on behalf of non-residents
+5	F5	Fund managers - on behalf of other UK residents
+5	F7	Fund managers - on behalf of unidentified sectors
+6	TBORX	Funds raised from UK MFIs and capital markets (excluding securitisations)
+9	GA	Gabon
+9	GM	Gambia
+5	GD	Garages, distribution, hotels and catering companies
+4	GGOV,GG	General Government (central and local)
+6	PPRGEN	General provision charge for bad and doubtful debts
+6	NGENSE	General service earnings (net), excluding foreign exchange transactions
+9	GE	Georgia
+9	DD	German Democratic Republic
+6	RGER10	German government bonds, 10 year
+4	RGER	German-owned banks
+9	DE	Germany
+9	GH	Ghana
+9	GI	Gibraltar
+6	ABS13M	Gilt buy/sellbacks - 1-3 month maturity
+6	ABS28D	Gilt buy/sellbacks - 2 - 8 day maturity
+6	ABS36M	Gilt buy/sellbacks - 3-6 month maturity
+6	ABS91M	Gilt buy/sellbacks - 9 day - 1 month maturity
+6	ABSCAL	Gilt buy/sellbacks - on-call and next-day maturity
+6	ABS>6M	Gilt buy/sellbacks - over 6 month maturity
+6	ABUYS	Gilt buy/sellbacks - total
+6	RGRI1M	Gilt repo interest rate, 1 month
+6	RGRI1W	Gilt repo interest rate, 1 week
+6	RGRI1Y	Gilt repo interest rate, 1 year
+6	RGRI2W	Gilt repo interest rate, 2 week
+6	RGRI3M	Gilt repo interest rate, 3 months
+6	RGRI6M	Gilt repo interest rate, 6 months
+6	RGRIO	Gilt repo interest rate, overnight
+6	LR13M	Gilt repos - 1-3 month maturity
+6	LR28D	Gilt repos - 2-8 day maturity
+6	LR36M	Gilt repos - 3-6 month maturity
+6	LR91M	Gilt repos - 9 day - 1 month maturity
+6	LRCAL	Gilt repos - on-call and next-day maturity
+6	LR>6M	Gilt repos - over 6 month maturity
+6	LTO13M	Gilt repos, stock lending and sell/buy backs - 1-3  month maturity
+6	LTO28D	Gilt repos, stock lending and sell/buy backs - 2-8 day maturity
+6	LTO36M	Gilt repos, stock lending and sell/buy backs - 3-6 month maturity
+6	LTO91M	Gilt repos, stock lending and sell/buy backs - 9 day-1 month maturity
+6	LTOCAL	Gilt repos, stock lending and sell/buy backs - on-call and next-day maturity total out
+6	LTO>6M	Gilt repos, stock lending and sell/buy backs - over 6 month maturity
+6	LTOTOU	Gilt repos, stock lending and sell/buy backs - total
+6	ARR91M	Gilt reverse repos -  9 day - 1 month maturity
+6	ARR13M	Gilt reverse repos - 1-3 month maturity
+6	ARR28D	Gilt reverse repos - 2-8 day maturity
+6	ARR36M	Gilt reverse repos - 3-6 month maturity
+6	ARRCAL	Gilt reverse repos - on-call and next-day maturity
+6	ARR>6M	Gilt reverse repos - over 6 month maturity
+6	ARPRG	Gilt reverse repos - total
+6	ATI36M	Gilt reverse repos, stock borrowing and buy/sell backs -  3-6 month maturity
+6	ATI91M	Gilt reverse repos, stock borrowing and buy/sell backs -  9 day - 1 month maturity
+6	ATI>6M	Gilt reverse repos, stock borrowing and buy/sell backs -  over 6 month maturity
+6	ATI13M	Gilt reverse repos, stock borrowing and buy/sell backs - 1-3 month maturity
+6	ATI28D	Gilt reverse repos, stock borrowing and buy/sell backs - 2-8 day maturity
+6	ATICAL	Gilt reverse repos, stock borrowing and buy/sell backs - on-call and next-day maturity
+6	ATOTIN	Gilt reverse repos, stock borrowing and buy/sell backs - total
+6	LSB91M	Gilt sell/buybacks -  9 day - 1 month maturity
+6	LSB13M	Gilt sell/buybacks - 1-3 month maturity
+6	LSB28D	Gilt sell/buybacks - 2-8 day maturity
+6	LSB36M	Gilt sell/buybacks - 3-6 month maturity
+6	LSBCAL	Gilt sell/buybacks - on-call and next-day maturity
+6	LSB>6M	Gilt sell/buybacks - over 6 month maturity
+6	LSELLB	Gilt sell/buybacks - total
+6	ASR36M	Gilt stock borrowed -  3-6 month maturity
+6	ASRCAL	Gilt stock borrowed -  on-call and next-day maturity
+6	ASR13M	Gilt stock borrowed - 1-3 month maturity
+6	ASR28D	Gilt stock borrowed - 2-8 day maturity
+6	ASR91M	Gilt stock borrowed - 9 day - 1 month maturity
+6	ASR>6M	Gilt stock borrowed - over 6 month maturity
+6	ASBRW	Gilt stock borrowed - total
+6	LSL36M	Gilt stock lending -  3-6 month maturity
+6	LSL13M	Gilt stock lending - 1-3 month maturity
+6	LSL28D	Gilt stock lending - 2-8 day maturity
+6	LSL91M	Gilt stock lending - 9 day - 1 month maturity
+6	LSLCAL	Gilt stock lending - on-call and next-day maturity
+6	LSL>6M	Gilt stock lending - over 6 month maturity
+6	LSLENT	Gilt stock lending - total
+6	LSBGS,NBGSSP	Gilts
+6	GLL5T	Gilts (of which index-linked)  - long 5-25
+6	GLL<1	Gilts (of which index-linked)  - long <1
+6	GLL<5	Gilts (of which index-linked)  - long <5
+6	GLL10F	Gilts (of which index-linked)  - long >10<15
+6	GLLFTW	Gilts (of which index-linked)  - long >15<20
+6	GLL1T2	Gilts (of which index-linked)  - long >1<2
+6	GLLTWT	Gilts (of which index-linked)  - long >20<25
+6	GLL>25	Gilts (of which index-linked)  - long >25
+6	GLLTTH	Gilts (of which index-linked)  - long >25<30
+6	GLL2T3	Gilts (of which index-linked)  - long >2<3
+6	GLL>TH	Gilts (of which index-linked)  - long >30
+6	GLL3T4	Gilts (of which index-linked)  - long >3<4
+6	GLL4T5	Gilts (of which index-linked)  - long >4<5
+6	GLL5T6	Gilts (of which index-linked)  - long >5<6
+6	GLL6T7	Gilts (of which index-linked)  - long >6<7
+6	GLL7T8	Gilts (of which index-linked)  - long >7<8
+6	GLL8T9	Gilts (of which index-linked)  - long >8<9
+6	GLL910	Gilts (of which index-linked)  - long >9<10
+6	GSL5T	Gilts (of which index-linked)  - short 5-25
+6	GSL<1	Gilts (of which index-linked)  - short <1
+6	GSL<5	Gilts (of which index-linked)  - short <5
+6	GSL10F	Gilts (of which index-linked)  - short >10<15
+6	GSLFTW	Gilts (of which index-linked)  - short >15<20
+6	GSL1T2	Gilts (of which index-linked)  - short >1<2
+6	GSLTWT	Gilts (of which index-linked)  - short >20<25
+6	GSLTTH	Gilts (of which index-linked)  - short >25<30
+6	GSL2T3	Gilts (of which index-linked)  - short >2<3
+6	GSL>TH	Gilts (of which index-linked)  - short >30
+6	GSL3T4	Gilts (of which index-linked)  - short >3<4
+6	GSL4T5	Gilts (of which index-linked)  - short >4<5
+6	GSL5T6	Gilts (of which index-linked)  - short >5<6
+6	GSL6T7	Gilts (of which index-linked)  - short >6<7
+6	GSL7T8	Gilts (of which index-linked)  - short >7<8
+6	GSL8T9	Gilts (of which index-linked)  - short >8<9
+6	GSL910	Gilts (of which index-linked)  - short >9<10
+6	GLLT	Gilts (of which index-linked)  - total long
+6	GLNT	Gilts (of which index-linked)  - total net
+6	GSLT	Gilts (of which index-linked)  - total short
+6	LNBGS	Gilts - NILO
+6	APBGS	Gilts - Purchases
+6	ADBGS	Gilts - Redemptions
+6	AVBGS	Gilts - Revaluations
+6	YBGSC,NBGSC,ABGSC,ZBGSC	Gilts - conventional
+6	ZBG1_5	Gilts - conventional maturity of 1-5 years
+6	YBGSC1	Gilts - conventional maturity of less than 1 year
+6	ZBGO15	Gilts - conventional maturity of over 15 years
+6	ZBGS5O	Gilts - conventional maturity of over 5 years and up to 15 years
+6	YBGSCR	Gilts - conventional redemptions
+6	YBGSCA	Gilts - conventional, repos of
+6	NBGSI,ZBGSI	Gilts - index linked
+6	ABGSI,LBGSI,YBGSI	Gilts - index-linked
+6	AIBGS	Gilts - instalments due
+6	AGILT1	Gilts - less than 1 years maturity
+6	GIL5T	Gilts - long 5-25
+6	GIL<1	Gilts - long <1
+6	GIL<5	Gilts - long <5
+6	GIL10F	Gilts - long >10<15
+6	GILFTW	Gilts - long >15<20
+6	GIL1T2	Gilts - long >1<2
+6	GILTWT	Gilts - long >20<25
+6	GIL>25	Gilts - long >25
+6	GILTTH	Gilts - long >25<30
+6	GIL2T3	Gilts - long >2<3
+6	GIL>TH	Gilts - long >30
+6	GIL3T4	Gilts - long >3<4
+6	GIL4T5	Gilts - long >4<5
+6	GIL5T6	Gilts - long >5<6
+6	GIL6T7	Gilts - long >6<7
+6	GIL7T8	Gilts - long >7<8
+6	GIL8T9	Gilts - long >8<9
+6	GIL910	Gilts - long >9<10
+6	TBGMO5	Gilts - maturity changes on conversion - 5-15 years
+6	TBGM15	Gilts - maturity changes on conversion - over 15 years
+6	TBGMU5	Gilts - maturity changes on conversion - up to 5 years
+6	AGILT5	Gilts - maturity of 1-5yrs
+6	PBGSL	Gilts - purchases - long curve segment
+6	PBGSLL	Gilts - purchases - long curve segment lowest accepted yield
+6	PBGSLW	Gilts - purchases - long curve segment weighted average accepted yield
+6	PBGSM	Gilts - purchases - medium curve segment
+6	PBGSML	Gilts - purchases - medium curve segment lowest accepted yield
+6	PBGSMW	Gilts - purchases - medium curve segment weighted average accepted yield
+6	PBGSS	Gilts - purchases - short curve segment
+6	PBGSSL	Gilts - purchases - short curve segment lowest accepted yield
+6	ABGS<1	Gilts - residual maturity under 1 year
+6	GIS5T	Gilts - short 5-25
+6	GIS<1	Gilts - short <1
+6	GIS<5	Gilts - short <5
+6	GIS10F	Gilts - short >10<15
+6	GISFTW	Gilts - short >15<20
+6	GIS1T2	Gilts - short >1<2
+6	GISTWT	Gilts - short >20<25
+6	GIS>25	Gilts - short >25
+6	GISTTH	Gilts - short >25<30
+6	GIS2T3	Gilts - short >2<3
+6	GIS>TH	Gilts - short >30
+6	GIS3T4	Gilts - short >3<4
+6	GIS4T5	Gilts - short >4<5
+6	GIS5T6	Gilts - short >5<6
+6	GIS6T7	Gilts - short >6<7
+6	GIS7T8	Gilts - short >7<8
+6	GIS8T9	Gilts - short >8<9
+6	GIS910	Gilts - short >9<10
+6	ABGS,AINVG,LBGS	Gilts - total
+6	GILT	Gilts - total long
+6	GIST	Gilts - total short
+6	ARPRBG	Gilts and euro debt reverse repos
+6	RGOLD	Gold price
+5	GO	Government and other services
+9	GR	Greece
+9	GL	Greenland
+9	GD	Grenada
+6	ALGNAH	Gross approvals - No. for house purchase
+6	ALGNAP	Gross approvals - total number
+6	ALGVAP	Gross approvals - total value
+6	ALGVAH	Gross approvals - value for house purchase
+6	ALGNCH	Gross cancellations - No. for house purchase
+6	ALGNCP	Gross cancellations - total number
+6	ALGVCP	Gross cancellations - total value
+6	ALGVCH	Gross cancellations - value for house purchase
+6	GLENDG	Gross lending - total
+6	RGRY10	Gross par redemption yield on British government stocks, 10 year
+6	GREPAY	Gross repayments - total
+6	AIBGUR,AURGUR	Guarantees
+9	GT	Guatemala
+9	GG	Guernsey
+9	GN	Guinea
+9	GW	Guinea-Bissau
+9	GY	Guyana
+9	HT	Haiti
+5	HE	Health and social work organisations
+5	HF	Hire-purchase finance houses
+6	ABONDO	Holdings of bonds and other debt securities issued by
+6	ASHQQ	Holdings of quoted shares issued by
+6	ASECQU	Holdings of unquoted shares and all other securities
+9	HN	Honduras
+9	HK	Hong Kong
+5	HC	Hotels and catering companies
+4	HORE,HR	Hotels and restaurants
+5	HS	Household sector
+4	HHLD,HH	Households
+5	HA	Housing associations
+6	LMEW	Housing equity withdrawal (previously called mortgage equity withdrawal)
+9	HU	Hungary
+6	WOLCIB	IB Credit cards BT
+6	WOLCIC	IB Credit cards cash withdrawal
+6	WOLCIP	IB Credit cards purchase
+6	WDPSIC	IB: Sight, current accounts
+6	FRB2	IB: Time FRB 1-2yr
+6	FRB1	IB: Time FRB <=1yr
+6	FRB3	IB: Time FRB >2yr
+6	FRBN2	IB: Time of which FRBs 1-2yrs
+6	FRBN1	IB: Time of which FRBs <=1yr
+6	FRBN3	IB: Time of which FRBs >2yrs
+6	NLNISA	IB: Time of which NISAs
+6	LIMFD	IMF debt
+6	LIMFN	IMF interest-free notes
+6	AIMF	IMF reserve tranche position
+9	IS	Iceland
+6	NTI	Income - net
+6	ROTIX	Income and expenditure receivable - other
+6	RTI	Income receivable - total
+6	INEQ	Income receivable on equity issued by
+6	ILTREP	Index linked term repos
+6	R2006	Index linked treasury stock (2|PERCENTAGE| ) 2006
+6	R2016	Index linked treasury stock (2.5|PERCENTAGE|) 2016
+6	GSL>25	Index-linked short over 25yr maturity
+6	ILTRPO	Indexed long-term repos
+9	IN	India
+5	IX,IN,INDV	Individuals
+5	IH	Individuals and housing associations
+5	IL	Individuals and individual trusts
+9	ID	Indonesia
+5	TI	Industrial sectors - total
+6	RIMF10	Inflation implied forward, 10 year
+6	RIMF20	Inflation implied forward, 20 year
+6	RIMF05	Inflation implied forward, 5 year
+6	RIZC10	Inflation zero coupon, 10 year
+6	RIZC20	Inflation zero coupon, 20 year
+6	RIZC05	Inflation zero coupon, 5 year
+5	IM	Information and communication
+6	RIADA	Instant access deposit account
+6	INSACC	Instant access deposits
+6	IACXIS	Instant access deposits (excl ISAs)
+6	TREPNO	Institutions conducting gilt repo business - no.
+4	OTRS	Institutions conducting gilt repo business - non-banks
+4	TORS	Institutions conducting gilt repo business - total
+4	INCO,IC	Insurance companies
+5	IP	Insurance companies and pension funds
+6	RILR1M	Interbank lending rate  1 month mean
+6	RILR1W	Interbank lending rate  1 week mean
+6	RILR1Y	Interbank lending rate  1 year mean
+6	RILR2W	Interbank lending rate  2 week mean
+6	RILR3M	Interbank lending rate  3 month mean
+6	RILR6M	Interbank lending rate  6 month mean
+6	NTOIN	Interest - net
+6	NINTDV	Interest - net, plus dividends
+6	LIRFF	Interest Rate Future and Forwards - Liabilities
+6	AIRFF	Interest Rate Futures and Forwards - Assets
+6	AIROP	Interest Rate Options - Assets
+6	LIROP	Interest Rate Options - Liabilities
+6	AIROT	Interest Rate Other - Assets
+6	LIROT	Interest Rate Other - Liabilities
+6	AIRSW	Interest Rate Swaps - Assets
+6	LIRSW	Interest Rate Swaps - Liabilities
+6	PINTDV	Interest and dividends paid
+6	RIDSEC	Interest and dividends receivable on securities
+6	RINTDV	Interest and dividends received
+6	LINTCR	Interest credited
+6	PTOIN	Interest payable
+6	PIBFRN	Interest payable on bonds and FRNs
+6	PIDEPS	Interest payable on deposits
+6	PILADV	Interest payable on loans
+6	PINTMM	Interest payable on money market instruments
+6	PIR|AMPERSAND|RV	Interest payable on repos and reverse repos
+6	RTOIN	Interest receivable
+6	RIBFRN	Interest receivable on bonds and FRNs
+6	RILADV	Interest receivable on loans
+6	RILMMI	Interest receivable on loans and money market instruments
+6	RINTMM	Interest receivable on money market instruments
+6	RILOTH	Interest receivable on other loans
+6	RIR|AMPERSAND|RV	Interest receivable on repos and reverse repos
+5	IT	Intermediate OFCs
+9	EO	International Organisations - EEC
+9	OO	International Organisations - other than EU
+9	1C	International Organisations - total
+6	PEIGTP	Intra-group transfer pricing expenditure
+6	RIGTP	Intra-group transfer pricing income
+5	IK	Intragroup banks
+4	INVU,IV	Investment and unit trusts
+5	IU	Investment and unit trusts excl. money market mutual funds
+6	POTINV	Investment income payable - other
+6	ROTINV	Investment income receivable - other
+6	NOTINV	Investment income, net - other
+6	AINVNG	Investments (excl. Gilts)
+6	AINVNS	Investments (excl. Govt Securities)
+6	AINVO	Investments - other
+6	AIBPI	Investments - portfolio
+6	AINV,LINV	Investments - total
+6	AINVIG	Investments - total (intragroup)
+6	AINVB	Investments and bills
+6	IAITOT	Inward Direct Investment income: total (all inclusive)
+6	IAIBPL	Inward Direct investment income: branch profits |AMPERSAND|losses (all inclusive) payable
+6	IAISPL	Inward Direct investment income: subsidiary profits |AMPERSAND|losses (all inclusive) payable
+6	IPROFL	Inward current transactions - profits and losses
+6	IFRDIV	Inward foreign direct investment dividends paid
+6	INNRLO	Inward foreign direct investment: net interest accrued on loan capital
+6	ISTODI	Inward level of stock of direct investment
+9	IR	Iran
+9	IQ	Iraq
+9	IE	Ireland
+9	IM	Isle Of Man
+9	IL	Israel
+4	ITAL	Italian-owned banks
+9	IT	Italy
+9	CI	Ivory Coast
+9	JM	Jamaica
+9	JP	Japan
+4	JAPN,JAPT	Japanese-owned banks
+9	JE	Jersey
+9	JO	Jordan
+9	KZ	Kazakhstan
+9	KE	Kenya
+9	KG	Kirgizstan
+9	KI	Kiribati
+9	KP	Korea, Democratic People's Republic of
+9	KR	Korea, Republic of
+9	KW	Kuwait
+5	LB	Land and building
+9	LA	Lao People's Democratic Republic
+5	LW	Large businesses
+5	YV	Large businesses - Agriculture, forestry and fishing industries
+5	YB	Large businesses - Buying, selling and renting of real estate
+5	YC	Large businesses - Construction companies
+5	YD	Large businesses - Development of buildings
+5	YE	Large businesses - Education providers
+5	YG	Large businesses - Electricity, gas and water suppliers
+5	YS	Large businesses - Health and social work organisations
+5	YH	Large businesses - Hotels and restaurants
+5	YN	Large businesses - Manufacturers
+5	YM	Large businesses - Mining and quarrying industries
+5	YP	Large businesses - Public administration and defence
+5	YO	Large businesses - Real estate and related activities on a fee or contract basis
+5	YR	Large businesses - Real estate, renting, computing or other business service activities
+5	YX	Large businesses - Recreational, personal and community service organisations
+5	YT	Large businesses - Transport, storage and communication companies
+5	YW	Large businesses - Wholesale and retail trade and repair
+6	ALFAC	Late facilities
+9	R4	Latin America and Caribbean Emerging Market and Developing Economies - nsi
+9	4U	Latin America and Caribbean Emerging Market and Developing Economies - total
+9	U5,7H	Latin America and Caribbean developing countries - nsi
+9	8H,4N	Latin America and Caribbean developing countries - total
+9	LV	Latvia
+5	LC	Leasing companies
+5	LF	Leasing under leasing finance
+5	LH	Leasing, hiring and renting
+9	LB	Lebanon
+5	LE	Legal, accountancy, business consultancy and other business services
+6	AOLNDG	Lending - other than loans and investments
+6	ALENDG	Lending - total
+6	ALENDX	Lending excluding securitisations - total
+6	RPMLF	Lending facility - repayment of
+6	USELF	Lending facility - use of
+6	ALNHP	Lending for house purchases
+6	ALFSRP	Lending fully secured on residential property
+6	ALHADV	Lending secured on dwellings (excluding bridging finance)
+9	LS	Lesotho
+6	NLIABS	Liabilities - net of assets
+6	LOTHR,LOLIAB,LOTHER	Liabilities - other
+6	LTOTAL,LCRTOT,LTOTL,LTOTRA	Liabilities - total
+9	LR	Liberia
+9	LY	Libya
+9	LI	Liechtenstein
+6	AOLIQA	Liquid assets - other
+6	ALIQA	Liquid assets - total
+6	AGDP|PERCENTAGE|	Liquid assets as a |PERCENTAGE| of GDP
+9	LT	Lithuania
+6	LLOAN	Loan liabilities
+6	ALOLDG	Loan to APF for temporary long dated gilt purchases
+6	ALOAPF	Loan to Asset Purchase Facility
+6	ALNXEC	Loans (excluding ECGD-guaranteed lending)
+6	ALNRXO	Loans (excluding overdrafts) and reverse repos to
+6	LNXRCP	Loans (excluding reverse repos and commercial paper) to
+6	AADV	Loans - non-market
+6	AADSEC	Loans - of which securitised
+6	AOTHLO	Loans - other
+6	AOTLRI	Loans - other (intragroup) including repos
+6	ALSFSO	Loans - other fully secured on land
+6	ALNCON	Loans - other unsecured
+6	LSTLN	Loans - short term
+6	AADVO,ALOANS,ALEND,LLOANS	Loans - total
+6	AOLNIV	Loans and investments
+6	AADVRP,ALNRPR	Loans and reverse repos
+6	ALOANG	Loans and reverse repos - total
+6	ALNRPX	Loans and reverse repos exc securitisations
+6	ALOANC	Loans excluding commercial paper
+6	ALOANX	Loans excluding securitisations - total
+6	ALXRR	Loans including CDs, CP and bills, but not reverse repos (for write-off aggregates)
+6	AADVRF	Loans ring fenced as part of a covered bond programme
+6	AADDSE	Loans secured on dwellings - of which securitised
+6	AADDRF	Loans secured on dwellings ring fenced as part of a covered bond programme
+6	ALOAOT	Loans with original maturity over twelve months to
+6	ALORUT	Loans with original maturity up to and including twelve months, repos and short term paper to
+6	ALCDCP	Loans, CDs and commercial paper
+6	ALNRCP	Loans, reverse repos and commercial paper
+5	LG,LGOV	Local Government
+6	AURLCF	Local claims
+6	AC121	Local currency claims on local residents
+6	AC122	Local currency liabilities to local residents
+4	LCBK	London Clearing banks
+6	LLGLN	Long term debt
+6	LTOPER	Long-term operations
+6	LTMOPR	Longer-term open market operations with Bank of England counterparties (in sterling millions) not s
+6	LTREP	Longer-term reverse repos
+9	LU	Luxembourg
+6	LM0	M0
+6	LM1EMU	M1 (estimate of EMU aggregate for the UK)
+6	LM2EMU	M2  (estimate of EMU aggregate for the UK)
+6	LM3EMU	M3  (estimate of EMU aggregate for the UK)
+6	LM3H	M3H (harmonised European aggregate)
+6	LM4,LM4L	M4
+6	LM4RET	M4 - Retail
+6	LWSALE	M4 - Wholesale
+6	M4ADJ	M4 excluding intermediate OFCs
+6	M4LADJ	M4Lx excluding intermidate OFCs
+6	AMKRPG	MARKET LOANS INC REPOS (INTRA)
+4	SPVT	MFI owned SPVs
+4	SPVU	MFI owned UK resident SPVs
+4	SPVN	MFI owned non-resident SPVs
+4	MFOS	MFI's and MFI-owned OSLs
+9	MO	Macao
+9	MK	Macedonia
+5	RM	Machinery and equipment rental companies
+5	ME	Machinery, equipment not elsewhere classified and transport equipment manufacturers
+9	MG	Madagascar
+9	MW	Malawi
+9	MY	Malaysia
+9	MV	Maldives
+9	ML	Mali
+9	MT	Malta
+5	MN	Manufacturers
+6	ADEBT|PERCENTAGE|	Market holdings of National Debt as a |PERCENTAGE| of GDP
+6	AMLOAN	Market loans
+6	AMKRPR	Market loans and reverse repos
+6	ADPCD	Market loans, CDs and commercial paper
+9	MH	Marshall Islands
+9	MR	Mauritania
+9	MU	Mauritius
+5	MG	Mechanical engineering industries
+6	LDA>1Y	Medium and long term deposits
+6	LLTLN	Medium and long term loans
+6	AMTN	Medium term notes
+4	MERT	Merchant banks
+5	ML	Metal manufacturers
+9	MX	Mexico
+9	U6	Middle East developing countries - nsi
+9	4O,8I	Middle East developing countries - total
+4	MIQU	Mining and quarrying
+5	MQ	Mining and quarrying industries
+6	AUNID	Miscellaneous assets
+9	MD	Moldova
+9	MC	Monaco
+4	MFIS,MF	Monetary financial institutions
+5	MX	Monetary financial institutions excluding central bank
+5	MB	Monetary financial institutions other than banks and building societies
+6	AMCALL	Money at call
+6	NOTINF	Money market - other influences on the cash position
+6	TINF	Money market - total influences on the cash position
+6	ASMMI,LSMMI,AMMIS	Money market instruments
+5	MM	Money market mutual funds
+9	MN	Mongolia
+9	ME	Montenegro
+9	MA	Morocco
+5	MH	Mortgage and housing credit corporations
+6	LMEWPI	Mortgage equity withdrawal as a percentage of post tax income
+5	VE	Motor vehicle manufacturers
+9	MZ	Mozambique
+4	MUTL	Mutual institutions
+9	MM	Myanmar
+9	NA	Namibia
+4	NSAV,NV	National Savings
+6	ANSDII	National Savings - accrued interest and indexing
+6	ANSXOR	National Savings - excl. Ordinary A/C |AMPERSAND| accrued interest etc
+6	AORDAC	National Savings - ordinary account
+6	ANSDBT,AHTOTL	National Savings - total
+5	NF	National loans fund
+9	NR	Nauru
+9	NP	Nepal
+6	NAISPL	Net (Outward less Inward) Direct Investment Income : subsidiary profits |AMPERSAND| losses (all inclusive)
+6	NAITOT	Net Direct Investment income: total (all inclusive)
+6	NTIS	Net Trade in Services
+6	ANETFC	Net assets
+6	NCAPEX	Net capital expenditure
+6	NDEBT	Net debt
+6	TNB|PERCENTAGE|G	Net debt as |PERCENTAGE| of GDP
+6	NDEPOS	Net deposits
+6	NFLACU	Net fees and comm payable in connection with loans, advances, commitment and utilisation services
+6	NSERVI	Net fees and commissions from non-residents - total
+6	NFOTNF	Net fees and commissions in connection with other financial and non-financial services provided
+6	NFDERI	Net fees and commissions payable in connection with derivative instrument
+6	NFIMSE	Net fees and commissions payable on investment management and securities
+6	NFBKCA	Net fees and commissions payable related to current account services
+6	NNNRLO	Net foreign direct investment: net interest accrued on loan capital
+6	NLENDG	Net lending (Lending less Deposits)
+6	ALENDH	Net lending (historical measure)
+6	NNDLS	Net non-deposit liabilities
+6	NOTHER	Net other assets
+6	ALNOXX	Net other consumer credit loans (excluding overdrafts) excluding securitisations to
+6	ALNOXO	Net other consumer credit loans (excluding overdrafts) to
+6	ALNOXH	Net other consumer credit loans (historical measure) (excluding overdrafts) to
+6	PPROVI	Net provisions for bad and doubtful debts
+6	NSALES	Net sales
+6	XLSSAD	Net securitisations/acquisitions of secured lending to Individuals
+6	XLUSAD	Net securitisations/acquisitions of unsecured lending to Individuals
+6	NSERCF	Net service earnings - commitment fees
+6	NSERCB	Net service earnings - credit and bill transactions
+6	NSERDT	Net service earnings - derivatives
+6	NSERFX	Net service earnings - foreign exchange transactions
+6	NMISCE	Net service earnings - miscellaneous earnings
+6	NSERNI	Net service earnings - new issues of securities
+6	NSEROM	Net service earnings - other miscellaneous earnings
+6	NSERPM	Net service earnings - portfolio management and security transactions
+6	NSECTR	Net service earnings - securities transactions
+6	RNSED	Net spread earnings (derivatives dealing) receivable
+6	NNSEFX	Net spread earnings (forex dealing) manual calculation
+6	RNSES	Net spread earnings (securities dealing) receivable
+6	NSEFSD	Net spread earnings total transactions
+6	ALUNEH	Net unsecured lending (historical measure) to
+9	NL	Netherlands
+9	AN	Netherlands Antilles
+9	NC	New Caledonia
+6	FIXRBN	New Fixed rate bond deposits
+9	NZ	New Zealand
+9	NI	Nicaragua
+9	NE	Niger
+9	NG	Nigeria
+6	RNIF10	Nominal implied forward, 10 year
+6	RNIF20	Nominal implied forward, 20 year
+6	RNIF05	Nominal implied forward, 5 year
+6	RNPY10	Nominal par yield, 10 year
+6	RNPY20	Nominal par yield, 20 year
+6	RNPY05	Nominal par yield, 5 year
+6	RNZC10	Nominal zero coupon, 10 year
+6	RNZC20	Nominal zero coupon, 20 year
+6	RNZC05	Nominal zero coupon, 5 year
+5	RB	Non resident branches
+5	CX	Non resident companies
+5	GP	Non resident group companies
+5	RS	Non resident subsidiaries and associates
+5	NT	Non-bank credit grantors (excl. credit unions)
+5	NL	Non-financial corporations
+5	NP	Non-profit institutions serving households
+4	OPUB	Non-public sector
+4	NRCM,NC	Non-resident CMIs
+5	NG	Non-resident Central Government
+5	NK	Non-resident banks (excl. CMIs)
+5	NB	Non-resident banks (inc. CMIs)
+5	NN	Non-resident banks - other
+5	NM	Non-resident deposit-taking corporations
+5	NS	Non-resident non-bank private sector
+5	NU	Non-resident non-bank public sector (inc. CMIs)
+5	NX	Non-resident non-banks
+5	NH	Non-resident other financial corporations
+5	NR,NRES	Non-residents
+5	NE	Non-residents (excl. CMIs)
+5	NO	Non-residents - other
+9	9K	North African countries - nsi
+5	IG	Northern Ireland Government
+4	NIBK	Northern Irish banks
+4	INIB	Northern Irish note issuing banks
+9	NO	Norway
+6	LNOTEI,ANOTES	Notes
+6	LNCOIN,ANCOIN,SNCOIN	Notes and coin
+6	SNCOIX	Notes and coin adjusted
+6	LNCIRC	Notes in circulation
+6	NOTIM	Notice and time deposits
+6	NTSRP	Number of transactions secured on residential property
+9	UU	OECD countries - nsi
+5	XF	OFCs excluding intermediate  OFCs
+6	RBASER	Official Bank Rate
+6	TCOBOR	Official and commercial borrowing - total
+6	LODEBT	Official debt - total
+6	ARESV	Official reserves
+9	R2,U2	Offshore centres - nsi
+9	8T,4R,1N	Offshore centres - total
+9	7C	Offshore centres non-reporting countries - nsi
+9	8C	Offshore centres non-reporting countries - total
+9	8B	Offshore centres reporting countries - total
+9	UP	Oil exporting countries - total
+9	OM	Oman
+6	AONLND	On-lending to local government and public corporations
+6	WKSBB	One week sterling Bank bills
+6	NOMORF	Open Market Operations
+6	PEOEX	Operating expenses
+6	PEOEXS	Operating expenses excluding staff costs
+6	OPINC	Operating income
+6	PEROFI	Operating profit before provisions for bad and doubtful debts and tax
+6	TDPOPS	Operational deposits at the Bank of England
+6	TOFOP	Operations - offsetting total
+5	OT	Other
+5	US	Other EMU member states non-financial corporations
+6	PEOTHX	Other administrative expenses (excl. Transfer pricing)
+5	AZ	Other auxiliary activities, excluding Central clearing counterparties
+5	XB	Other business and services
+5	CQ	Other construction activities
+6	ALONEH	Other consumer credit - net lending (historical measure)
+4	OCCL	Other consumer credit lenders (OSLS |AMPERSAND| retailers |AMPERSAND| insurance companies)
+4	OCCX	Other consumer credit lenders (excluding the Student Loans Company)
+6	AOTDP	Other deposits with Bank of England
+9	8S	Other developed countries - total
+5	XD	Other distribution
+5	OE	Other energy and water industries
+5	GM	Other engineering and metal goods manufacturers
+5	OA	Other financial auxiliaries
+5	OF,OFCS	Other financial corporations
+5	FO,OI	Other financial intermediaries
+5	IA	Other financial intermediaries intragroup transactions
+4	OTHL	Other lenders
+4	OTHX	Other lenders (excluding the Student Loans Company)
+4	OTHI	Other lenders to individuals
+6	AADOSE	Other loans - of which securitised
+5	XM,ZM	Other manufacturers
+6	OMSREP	Other maturity within-maintenance period reverse repos
+6	OMSBB	Other maturity within-maintenance period sterling Bank bills
+5	ON	Other non-metallic mineral products and metals manufacturers
+6	OOPINX	Other operating income (excluding transfer pricing)
+6	AOP1Y	Other paper - with a maturing within 1 year
+5	XP	Other production industries
+6	ROTHPL	Other profit/loss, including those which are exceptional and extraordinary
+5	OD	Other retail distributors
+4	OSLS	Other specialist lenders
+4	OSLX	Other specialist lenders (excluding the Student Loans Company)
+6	PTRANS	Other transfers from post-tax profit
+5	TE	Other transport equipment manufacturers
+6	ALORTO	Other unsecured lending- repayments total
+4	OTHE	Other-owned banks
+9	8U	Outside BIS area countries - total
+6	OAITOT	Outward Direct Investment income: total (all inclusive)
+6	OAIBPL	Outward Direct investment income: branches profits and losses receivable (all inclusive)
+6	OAISPL	Outward Direct investment income: subsidiary profits and losses receivable (all inclusive)
+6	FRDIV,FRDIVI	Outward foreign direct investment dividends received
+6	ONNRLO	Outward foreign direct investment: net interest accrued on loan capital
+6	DSTODI	Outward level of stock of direct investment
+6	ROVERD,ALNROD	Overdrafts
+6	ALODTS	Overdrafts and transit and suspense items with
+6	RSONIA	Overnight interbank average (SONIA)
+5	SK	Own UK resident special purpose vehicles (SPVs), total
+5	SF	Own non-resident special purpose vehicles (SPVs), total
+5	SO	Own special purpose vehicles (SPVs), total
+9	PK	Pakistan
+9	PW	Palau
+9	PS	Palestinian Autonomy
+9	PA	Panama
+9	PG	Papau New Guinea
+9	PY	Paraguay
+5	PF,PENF	Pension funds
+6	RPLOAN	Personal loan - interest rates
+6	PSNL10	Personal loan, 10K
+6	PSNL5	Personal loan, 5K
+5	PS	Personal or community service activities
+9	PE	Peru
+9	PH	Philippines
+5	PM	Plant and machinery
+9	PL	Poland
+6	RPOINV	Portfolio investment income receivable
+9	PT	Portugal
+6	APEOSC	Premises, equipment and other securities
+5	OC	Private Sector - other
+5	PP,PVPB	Private and public sectors
+4	PNFC,PN	Private non-financial corporations
+5	HP	Private non-financial corporations and household sector
+4	PNMS	Private non-financial corporations plus Network Rail
+4	PRIV,PV	Private sector
+5	PW	Private sector and non-residents
+5	XV	Private sector excluding intermediate OFCs
+5	PX	Professional, scientific and miscellaneous industries
+5	TP	Professional, scientific and technical activities
+6	RPROBT	Profit on ordinary activities before tax
+5	PY	Property companies
+6	PTPROV	Provisions - total
+6	NPSNCR	Public Sector Net Cash Requirement (PSNCR)
+5	PU	Public administration and defence
+4	PDEH	Public administration, defence, education, health and other community services
+5	PC,PUBC	Public corporations
+4	PCLG,PL	Public corporations and local government
+4	PUBL,PB	Public sector
+6	FCPBI	Public securities issued
+5	PG	Public utilities and national government
+5	PR	Pulp, paper, publishing and printing companies
+9	QA	Qatar
+6	RDRT3M	Rate of discount, 3 month Treasury Bills, US dollar
+6	RSRT3M	Rate of discount, 3 month Treasury Bills, sterling
+6	RISA	Rate of return - ISA cash deposits
+6	RBNCHX	Rate of return - benchmark asset (excluding tax)
+6	RDP	Rate of return - deposits
+6	RDPS	Rate of return - sight deposits
+6	RDPT	Rate of return - time deposits
+6	RDRXT	Rate of return - time deposits (excl. TESSAs)
+5	RF	Real estate and related activities on a fee or contract basis
+4	REBA	Real estate, renting and business activities
+5	RE	Real estate, renting, computing or other business service activities
+6	RRIF10	Real implied forward, 10 year
+6	RRIF20	Real implied forward, 20 year
+6	RRIF05	Real implied forward, 5 year
+6	RRZC10	Real zero coupon, 10 Year
+6	RRZC20	Real zero coupon, 20 year
+6	RRZC05	Real zero coupon, 5 year
+6	PPRECS	Recoveries for bad and doubtful debts
+5	RC	Recreational, cultural and sporting organisations
+5	RP	Recreational, personal and community service organisations
+6	AREFIN	Refinancing
+6	PPRREL	Releases for bad and doubtful debts
+6	LREPOS	Repos
+6	FTRPL	Repos - fine tuning
+6	LRPG	Repos - gilt
+6	ATOTRP	Reserve assets - Press Release Assets (Excl. asset derivatives)
+6	AUCLRA	Reserve assets - adjusted
+6	ACLRA,ATOTRA	Reserve assets - total
+6	AINTOT	Reserve assets - total by instrument
+6	ARESRC	Reserve assets, of which claims
+6	RSBAL	Reserve balance
+6	RESER	Reserves
+6	LRESOC	Reserves and other accounts
+6	LDEBT	Reserves debt - total
+4	RETL	Retail banks
+6	LRETLX	Retail deposits excluding notes and coin
+5	RD	Retail distribution
+5	MT	Retail motor traders
+5	RR	Retail trade and repair (excl. motor vehicles and motorcycles)
+4	RETS	Retailers
+6	RETPRA	Retained profit after provisions for bad and doubtful debts
+6	AREPOR	Reverse repos
+6	YMTRM,YMAMT	Reverse repos - 12 month
+6	YLWAC	Reverse repos - 12 month lowest accepted rate
+6	YWAAR	Reverse repos - 12 month weighted average accepted rate
+6	3MAMT,3MTRM	Reverse repos - 3 month
+6	3LWAC	Reverse repos - 3 month lowest accepted rate
+6	3WAAR	Reverse repos - 3 month weighted average accepted rate
+6	6MAMT,6MTRM	Reverse repos - 6 month
+6	6LWAC	Reverse repos - 6 month lowest accepted rate
+6	6WAAR	Reverse repos - 6 month weighted average accepted rate
+6	9MTRM,9MAMT	Reverse repos - 9 month
+6	9LWAC	Reverse repos - 9 month lowest accepted rate
+6	9WAAR	Reverse repos - 9 month weighted average accepted rate
+6	MATFT	Reverse repos - maturing fine tune
+6	MATLT	Reverse repos - maturing longer term
+6	MATWR	Reverse repos - maturing weekly
+6	NEWFT	Reverse repos - new fine tune
+6	NEWLT	Reverse repos - new longer term
+6	NEWWR	Reverse repos - new weekly
+6	ANRTFC	Risk Transfer - Net
+6	ACEXUR	Risk exposure - net
+6	ANRDRV	Risk transfers - derivative contracts (net)
+6	ACIRT,AIRTFC	Risk transfers - inward
+6	ACIRTN	Risk transfers - inward plus net local currency claims
+6	ANRCRC	Risk transfers - net credit commitments
+6	ANRGUR	Risk transfers - net guarantees
+6	ACORT,AORTFC	Risk transfers - outward
+9	RO	Romania
+9	RU	Russia
+9	RW	Rwanda
+6	LSAYE	SAYE deposits
+9	LC	Saint Lucia
+9	VC	Saint Vincent and The Grenadines
+5	MV	Sale and repair of motor vehicles or the retail sale of automotive fuel
+9	WS	Samoa
+9	SM	San Marino
+9	ST	Sao Tome and Principe
+9	SA	Saudi Arabia
+4	SCBK	Scottish Clearing banks
+4	SNIB	Scottish note issuing banks
+6	SLSGRO	Secured - gross lending
+6	SLGRAH	Secured - gross lending of which for house purchase
+6	SLGRAO	Secured - gross lending of which for other advances
+6	SLGRAR	Secured - gross lending of which for remortgaging
+6	ALNSEC	Secured lending
+6	ALSNEH	Secured lending (historical measure) - net
+6	ALNSD	Secured lending (including bridging finance)
+6	ALSNET	Secured lending - net
+6	ALSRRG	Secured lending - regular repayments
+6	ALSROL	Secured lending - repayments of other lump sum
+6	ALSRRD	Secured lending - repayments on redemption
+6	ALSRTO	Secured lending - repayments total
+6	ALSNEX	Secured lending excluding securitisations - net
+6	WLNHFO,WLAHFO	Secured loans - fixed 3|AMPERSAND|4yr
+6	WLNHFV,WLAHFV	Secured loans - fixed 5yr
+6	WLNHFT,WLAHFT	Secured loans - fixed <=2yr
+6	WLAHUF,WLNHUF	Secured loans - fixed <=5yr
+6	WLNHLT	Secured loans - floating LTT
+6	ASECS,ASECSO,ASEC	Securities
+6	LBFRN	Securities - international issues
+6	LOSECI	Securities - other than money market instruments
+5	SD	Securities dealers
+6	ALUSAD	Securitisations/Acquisitions - consumer credit portfolios
+6	ALSSAD	Securitisations/Acquisitions - mortgage portfolios
+9	SN	Senegal
+9	RS	Serbia
+9	CS	Serbia |AMPERSAND| Montenegro
+5	SR,SC	Services
+4	STBK	Settlement banks
+9	SC	Seychelles
+5	SV	Ship, vehicles and aircraft
+5	SM	Shipbuilding
+6	LSMLN	Short and medium term debt
+6	STMOPR,LSTMOP	Short-term market operations
+9	SL	Sierra Leone
+9	SG	Singapore
+9	SX	Sint Maarten
+9	SK	Slovakia
+9	SI	Slovenia
+5	JO	Small |AMPERSAND| medium-sized enterprises - Real estate |AMPERSAND| related activities on a fee/contract basis
+5	JR	Small |AMPERSAND| medium-sized enterprises - Real estate, professional services and support activities
+5	JX	Small |AMPERSAND| medium-sized enterprises - Recreational, personal and community service organisations
+5	SA	Small and medium sized enterprises
+5	JV	Small and medium-sized enterprises - Agriculture, forestry and fishing industries
+5	JB	Small and medium-sized enterprises - Buying, selling and renting of real estate
+5	JC	Small and medium-sized enterprises - Construction companies
+5	JD	Small and medium-sized enterprises - Development of buildings
+5	JE	Small and medium-sized enterprises - Education providers
+5	JG	Small and medium-sized enterprises - Electricity, gas and water suppliers
+5	JS	Small and medium-sized enterprises - Health and social work organisations
+5	JH	Small and medium-sized enterprises - Hotels and restaurants
+5	JN	Small and medium-sized enterprises - Manufacturers
+5	JM	Small and medium-sized enterprises - Mining and quarrying industries
+5	JP	Small and medium-sized enterprises - Public administration and defence
+5	JT	Small and medium-sized enterprises - Transport, storage and communication companies
+5	JW	Small and medium-sized enterprises - Wholesale and retail trade and repair
+9	SB	Solomon Islands
+9	SO	Somalia
+9	ZA	South Africa
+9	SU	Soviet Union, former
+9	ES	Spain
+6	AOTSD	Special deposits and other balances with Bank of England
+6	ASPDP	Special deposits with Bank of England
+6	AOTSDC	Special deposits, cash ratio deposits and other balances with Bank of England
+6	ASDRAS,LSDR,ASDR	Special drawing rights (SDRs)
+5	SU	Special purpose vehicles related to securitisation
+6	PPRSPE	Specific provision charge for bad and doubtful debts
+9	LK	Sri Lanka
+9	SH	St Helena
+6	PESTAF	Staff costs
+6	PESTXW	Staff costs excluding wages
+6	RSVRM	Standard variable rate mortgage
+6	LDFAC	Standing facility assets (lending facility)
+6	DPFAC	Standing facility deposits (deposit facility)
+6	ASASS	Stock of assistance
+6	ISAORD	Subsidiaries and associates' inward capital transactions in ordinary shares
+6	ISAPRE	Subsidiaries and associates' inward capital transactions in preference shares
+6	ISAPLO	Subsidiaries and associates' inward current transactions - profits |AMPERSAND| losses
+6	ISUBLP	Subsidiaries and associates' inward level of loan capital |AMPERSAND| preference shares
+6	ISUBDI	Subsidiaries and associates' inward level of net direct investment
+6	ISUBOR	Subsidiaries and associates' inward level of ordinary shares
+6	ISUBOT	Subsidiaries and associates' inward level of other capital funds, reserves |AMPERSAND| working capital
+6	DSAORD	Subsidiaries and associates' outward capital transactions in ordinary shares
+6	DSAPRE	Subsidiaries and associates' outward capital transactions in preference shares
+6	DSAPLO	Subsidiaries and associates' outward current transactions - profits |AMPERSAND| losses
+6	DSUBLP	Subsidiaries and associates' outward level of loan capital |AMPERSAND| preference shares
+6	DSUBDI	Subsidiaries and associates' outward level of net direct investment
+6	DSUBOR	Subsidiaries and associates' outward level of ordinary shares
+6	DSUBOT	Subsidiaries and associates' outward level of other capital funds, reserves |AMPERSAND| working capital
+6	DSUBBO	Subsidiaries and associates' outward level of subordinated bond issues
+9	SD	Sudan
+9	SR	Suriname
+6	LTRSCF	Suspense and transmission, capital and other funds
+6	AGOLDR,LGOLDR	Swapped or on loan
+9	SZ	Swaziland
+9	SE	Sweden
+4	SWIT	Swiss-owned banks
+9	CH	Switzerland
+9	SY	Syria
+6	LTESSA	TESSAs
+9	TW	Taiwan
+9	TJ	Tajikistan
+9	TZ	Tanzania
+6	PTAXTO	Tax paid
+6	LTDEPS	Temporary deposits
+5	TL	Textile and leather manufacturers
+5	FT	Textiles, leather, clothing and footwear manufacturers
+9	TH	Thailand
+6	TIMXIA	Time deposits (excl Instant Access)
+6	ATCDCP	Time deposits, CDs and commercial paper
+9	TG	Togo
+9	TO	Tonga
+5	IF	Total
+4	TOTX	Total (excluding the Student Loans Company)
+5	FD	Total financial and non-financial businesses
+4	TMAN	Total manufacturing
+6	WOLOVT	Total overdrafts (IB and FC)
+5	TR	Total production
+6	TISEX	Trade in Services Exports
+6	LTRSUS,ATRSUS	Transit and suspense items
+5	TC	Transport, storage and communication companies
+4	TSPT	Transport, strorage, postal services and telecommunications
+5	AN	Transportation |AMPERSAND| storage companies
+6	ARPRTB	Treasury bill reverse repos
+6	LTBILL,NTBSP,ATBILL	Treasury bills
+6	TILT	Treasury bills - total long
+6	TIST	Treasury bills - total short
+6	LTNOTS	Treasury notes
+6	ATNOTE	Treasury notes - total
+6	RTN275	Treasury notes 2.75|PERCENTAGE| to 2006
+6	RTN45	Treasury notes 4.5|PERCENTAGE| to 2004
+9	TT	Trinidad and Tobago
+9	TN	Tunisia
+9	TR	Turkey
+9	TM	Turkmenistan
+9	TC	Turks and Caicos Islands
+9	TV	Tuvalu
+6	RBBRAT	UK (4) Banks' base rates
+5	UR	UK (excluding offshore islands) residents
+5	ZB	UK non-banks
+4	QXQX,DQQR,RRAL,DQBK,CXBC,ERBK,BKRS	UK resident banks
+4	BKXM	UK resident banks (ex. Central Bank) excluding bank-owned mutuals
+5	BK,BKSX	UK resident banks (excl. Central Bank)
+5	BB	UK resident banks (excl. Central Bank) and building societies
+4	BKCB,BC	UK resident banks (inc. Central Bank)
+4	BCXM	UK resident banks (inc. Central Bank) excluding bank-owned mutuals
+4	BKQR	UK resident banks (quarterly balance sheet reporters)
+4	WORP	UK resident banks and building societies
+5	BP	UK resident banks and private sector
+4	BKBB	UK resident banks inc. BoE Banking Department
+4	BKBD	UK resident banks inc. BoE Banking Department (monthly balance sheet reporters)
+4	UBRA	UK resident branches of foreign owned banks'
+4	FKCB	UK resident foreign owned banks'
+4	ALLB	UK resident monetary financial institutions
+4	BKBS	UK resident monetary financial institutions (excl. Central Bank)
+4	USUB	UK resident subsidiaries and associates of foreign owned banks'
+5	UK,RO	UK residents
+4	OTUK	UK residents - other
+4	UKNA	UK-owned banks
+4	UKIN	UK-owned banks (excl. Central Bank)
+4	OBRT	UK-owned banks - other
+4	UKMF	UK-owned monetary financial institutions
+4	UKMX	UK-owned monetary financial institutions (excl. Central Bank)
+4	C1UK	UK-owned monetary financial institutions (excl. Central Bank) - consolidated
+9	PU	US Trust Territories in the Pacific
+5	UA	US government
+4	USAN,USAT	US-owned banks
+6	RUSA10	USA government bonds, 10 year
+9	UG	Uganda
+9	UA	Ukraine
+9	U9,5M	Unallocated by country
+5	UI	Unidentified/unspecified sector
+5	UB	Unincorporated businesses
+5	UN	Unincorporated businesses and non-profit institutions serving households
+9	AE	United Arab Emirates
+9	UK	United Kingdom
+9	US	United States
+6	SLUGRO	Unsecured - gross lending
+6	ALUNET	Unsecured - net lending
+6	ALURTO	Unsecured lending - repayments total
+6	ALUNEX	Unsecured lending excluding securitisations - net
+6	WOLAUS	Unsecured loans
+6	WLNUFF,WLAUFF	Unsecured loans - fixed
+6	WLNUF2,WLAUF2	Unsecured loans - fixed 1-5yr
+6	WLAUF1,WLNUF1	Unsecured loans - fixed <=1yr
+6	WLAUF5,WLNUF5	Unsecured loans - fixed >5yr
+6	WLAUFR,WLNUFR	Unsecured loans - floating
+6	WLNAUS	Unsecured loans, total
+6	LBOOF	Unsubordinated instruments of more than five years' original maturity
+6	AC14T	Unused commitments
+6	ACUIRT	Unused commitments inward risk transfers
+6	ACUORT	Unused commitments outward risk transfers
+9	UY	Uruguay
+9	UZ	Uzbekistan
+9	VU	Vanuatu
+9	VA	Vatican City State
+9	VE	Venezuela
+9	VN	Vietnam, Socialist Republic of
+6	PEWAGE	Wages and salaries
+9	WF	Wallis and Futuna Islands
+6	RWSL35	War stock loan 3.5|PERCENTAGE|
+5	WM	Waste management, related services and remediation activities
+6	AWYMNS	Ways and means advances
+6	WKREP	Weekly reverse repos
+6	WOLABF,WOLNBF	Weighted average interest rate - bridging finance
+6	WOLACC	Weighted average interest rate - composite credit card loans
+6	WOLACI	Weighted average interest rate - credit card loans
+6	WDPSI	Weighted average interest rate - interest bearing sight deposits
+6	WLASFF,WLAHFF	Weighted average interest rate - loans secured on
+6	WLNSF1,WOLASP,WLNSF6,WLASF2,WLNSFF,WLAHF6,WLNHF5,WOLAHP,WLAHFR,WLAHF1,WLAHF2,WLAHF3,WLNSFR,WOLSNP,WLASFR,WLASF6,WLASF1,WLNSF2,WLNHFF,WOLANP,WLNHF4,WLNHF3,WLNHF2,WLNHF1,WLAHF4,WLNHFR	Weighted average interest rate - loans secured on dwellings
+6	WLANF,WLNAFR,WLNF2,WLNF3,WLAFF,WLNOA,WLANFF,WL1,WL2,WL3,WLNF1,WLANF1,WLOA,WOLAOT,WLOAFT,WLAF1,WLAF2,WLAF3	Weighted average interest rate - other loans
+6	WOLAOV	Weighted average interest rate - overdrafts
+6	WDPN3,WDPNT,WDPN4,WDPN5,WDTF4,WDTRN2,WDTRN1,WDPN7,WDPT2,WDTF3,WDPN2,WDTF2,WDTRN,WDTF1,WDPT,WDPN6,WDTRN3,WDTRN4	Weighted average interest rate - time deposits
+6	WDTF5	Weighted average interest rate - time deposits with fixed original maturity <=2 years
+6	WDTF6	Weighted average interest rate - time deposits with fixed original maturity >2 years
+6	WDPN1	Weighted average interest rates - time deposits
+6	RWISA	Weighted rate of return on ISA cash deposits
+9	1Z	West Indies UK
+9	UW	Western European countries - nsi
+5	WR	Wholesale and retail trade and repair
+4	WRTR	Wholesale and retail trade and repairs
+5	HD	Wholesale distribution companies
+5	WT	Wholesale trade (excl. motor vehicles and motorcycles)
+5	WG	Wholesale trade and garages
+9	3P	World (excl. UK)
+6	AWLNCC	Write-offs - credit card lending
+6	AWLNCO	Write-offs - other unsecured lending
+6	AWLNSE	Write-offs - secured lending
+6	AWOFFS	Write-offs - total
+9	YE	Yemen, The Republic of
+9	YU	Yugoslavia, former
+9	ZM	Zambia
+6	ZERO	Zero Series
+9	ZW,84,SJ,86,98,99,82,83,57,58,59,62,66,67,68,69,BU,85	Zimbabwe

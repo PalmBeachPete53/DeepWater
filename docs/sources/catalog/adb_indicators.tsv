@@ -1,0 +1,692 @@
+code	name
+LP_PE_NUM_MOP	Total population
+LP_PE_PD_PS	Population density
+LP_MOP_PTX_PS	Growth Rates in Population
+LP_UP_PTX_PS	Urban population %
+SM_POP_NETM_RT_PS	Net International Migration Rate
+SP_POP_0014_TO_ZS	Population Aged 0-14 Years
+SP_POP_1564_TO_ZS	Population Aged 15-64 Years
+SP_POP_GTE_65_TO_ZS_RT_PS	Population Aged 65 Years and Older
+SP_POP_DPND	Age Dependency Ratio
+SI_POV_DDAY	Proportion of Population below $3.00 a Day (2021 PPP)
+SI_POV_2DAY_RT_PS	Proportion of Population below $4.20 a Day (2021 PPP)
+SI_POV_IR_H20L20_RT_PS	Income Ratio of Highest 20% to Lowest 20%
+SI_POV_GINI	Gini Coefficient
+SI_POV_HDI_RT_PS	Human Development Index
+SI_POV_HDI_LYR_RT_PS	Human Development Index (Rank)
+SP_DYN_LE00_IN	Life Expectancy at Birth, Both Sexes
+SP_DYN_LE00_FE_IN	Life Expectancy at Birth, Female
+SP_DYN_LE00_MA_IN	Life Expectancy at Birth, Male
+SP_DYN_CBRT_IN	Crude Birth Rate
+SP_DYN_CDRT_IN	Crude Death Rate
+SP_DYN_TFRT_IN	Total Fertility Rate
+SE_ADT_LITR_ZS	Adult (15 Years and Older) Literacy Rate, Both Sexes
+SE_ADT_LITR_FE_ZS	Adult (15 Years and Older) Literacy Rate, Female
+SE_ADT_LITR_MA_ZS	Adult (15 Years and Older) Literacy Rate, Male
+SI_YSE_RT_PS	Expected Years of Schooling, Both Sexes
+SI_YSE_FE_RT_PS	Expected Years of Schooling, Female
+SI_YSE_MA_RT_PS	Expected Years of Schooling, Male
+SI_YSM_RT_PS	Mean Years of Schooling, Both Sexes
+SI_YSM_FE_RT_PS	Mean Years of Schooling, Female
+SI_YSM_MA_RT_PS	Mean Years of Schooling, Male
+SE_PRI_TR_RT_PS	Pupil/Trained Teacher Ratio, Primary
+SE_SEC_TR_RT_PS	Pupil/Trained Teacher Ratio, Secondary
+SE_PRI_QLFD_RT_PS	Pupil/Qualified Teacher Ratio, Primary
+SE_SEC_QLFD_RT_PS	Pupil/Qualified Teacher Ratio, Secondary
+SH_MED_PHYS_ZS	Physicians
+SH_MED_BEDS_ZS	Hospital Beds
+SH_HIV_GTE_15_RT_PS	Adults Aged 15 Years and Older Living with HIV, All Adults
+SH_HIV_GTE_15_FE_RT_PS	Adults Aged 15 Years and Older Living with HIV, Women
+LLF_PE_NUM	Labor Force
+LE_PE_NUM	Employed, Total
+LE_PE_NUM_A_PS	Employed, Agriculture, forestry, and fishing
+LE_PE_NUM_B_PS	Employed, Mining and quarrying
+LE_PE_NUM_C_PS	Employed, Manufacturing
+LE_PE_NUM_D_PS	Employed, Electricity, gas, steam, and air-conditioning supply; water supply; sewerage, waste management, and remediation activities
+LE_PE_NUM_E_PS	Employed, Water supply; sewerage, waste management, and remediation activities
+LE_PE_NUM_F_PS	Employed, Construction
+LE_PE_NUM_G_PS	Employed, Wholesale and retail trade; repair of motor vehicles and motorcycles
+LE_PE_NUM_H_PS	Employed, Accommodation and food service activities
+LE_PE_NUM_I_PS	Employed, Transportation and storage
+LE_PE_NUM_J_PS	Employed, Information and communication
+LE_PE_NUM_K_PS	Employed, Financial and insurance activities
+LE_PE_NUM_L_PS	Employed, Real estate activities
+LE_PE_NUM_OT_PS	Employed, Others
+LUD_PE_NUM_PS	Underemployed
+LUW_PE_NUM_PS	Unpaid work
+LU_PE_NUM	Unemployed
+LUR_PT	Unemployment rate
+LLF_PTX_PS	Labor force (% annual change)
+LPR_RATE	Labor force participation rate
+LPR_RATE_M_PS	Labor force participation rate (male)
+LPR_RATE_F_PS	Labor force participation rate (female)
+LE_PE_NUM_RES_PS	Employed Residents
+NGDP_XDC	GDP at current prices
+NGDPVA_ISIC4_A_XDC	Agriculture, forestry, and fishing at current prices
+NGDPVA_ISIC4_B_XDC	Mining and quarrying at current prices
+NGDPVA_ISIC4_C_XDC	Manufacturing at current prices
+NGDPVA_ISIC4_D_XDC	Electricity, gas, steam, and air-conditioning supply at current prices
+NGDPVA_ISIC4_E_XDC	Water supply; sewerage, waste management, and remediation activities at current prices
+NGDPVA_ISIC4_F_XDC	Construction at current prices
+NGDPVA_WT_XDC_PS	Wholesale trade at current prices
+NGDPVA_RT_XDC_PS	Retail trade at current prices
+NGDPVA_ISIC4_G_XDC	Wholesale and retail trade; repair of motor vehicles and motorcycles at current prices
+NGDPVA_ISIC4_I_XDC	Accommodation and food service activities at current prices
+NGDPVA_ISIC4_H_XDC	Transportation and storage at current prices
+NGDPVA_ISIC4_J_XDC	Information and communication at current prices
+NGDPVA_ISIC4_K_XDC	Financial and insurance activities at current prices
+NGDPVA_ISIC4_L_XDC	Real estate activities at current prices
+NGDPVA_ISIC4_M_XDC	Professional, scientific, and technical activities at current prices
+NGDPVA_ASSA_XDC_PS	Administrative and support service activities at current prices
+NGDPVA_ISIC4_O_XDC	Public administration and defense; compulsory social security at current prices
+NGDPVA_ISIC4_P_XDC	Education at current prices
+NGDPVA_ISIC4_Q_XDC	Human health and social work activities at current prices
+NGDPVA_AER_XDC_PS	Arts, entertainment, and recreation at current prices
+NGDPVA_OSA_XDC_PS	Other service activities at current prices
+NGDPVA_ISIC4_T_XDC	Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use at current prices
+NGDPVA_AEOB_XDC_PS	Activities of extraterritorial organizations and bodies at current prices
+NGDPVA_XDC	Gross value added at current prices, Total
+NGDPSF_XDC	Financial intermediation services indirectly measured at current prices
+NGDP_IB_XDC_PS	Imputed bank service charges at current prices
+NGDPTXS_IM_XDC_PS	Taxes less subsidies on production and imports at current prices
+NGDPCT_GCF_XDC_PS	Consumption taxes for gross capital formation at current prices
+NGDPS_XDC_PS	Subsidies at current prices
+NGDPSOP_XDC	Subsidies on products at current prices
+NGDP_IMD_XDC_PS	Import duties at current prices
+NGDPVAT_XDC_PS	Value-added tax at current prices
+NSDGDP_XDC	Statistical discrepancy at current prices
+NGDPNFIA_XDC_PS	Net factor income from abroad at current prices
+NYG_XDC	GNI at current prices
+NGDPSO_AGR_XGDP_PS	Agriculture (%)
+NGDPSO_IND_XGDP_PS	Industry (%)
+NGDPSO_SER_XGDP_PS	Services (%)
+NGDE_XDC	Expenditure at current prices, Total
+NC_XDC	Final consumption expenditure at current prices
+NC_HFC_XDC_PS	Household final consumption at current prices
+NC_NFC_XDC_PS	NPISHs final consumption at current prices
+NCGG_XDC	General government final consumption at current prices
+NI_XDC	Gross capital formation at current prices
+NI_IPP_XDC_PS	Intellectual property products at current prices
+NFI_XDC_PS	Gross fixed capital formation at current prices
+NFIG_XDC	Gross fixed capital formation (public) at current prices
+NFIP_XDC_PS	Gross fixed capital formation (private) at current prices
+NINV_XDC	Changes in inventories at current prices
+NI_ALDV_XDC_PS	Acquisitions less disposals of valuables at current prices
+NEGS_XDC_PS	Exports of goods and services at current prices
+NEGS_EG_XDC_PS	Exports of goods at current prices
+NEGS_ES_XDC_PS	Exports of services at current prices
+NIGS_XDC_PS	Imports of goods and services at current prices
+NIGS_IG_XDC_PS	Imports of goods at current prices
+NIGS_IS_XDC_PS	Imports of services at current prices
+NSDGDP_XDC_EXPGDP	Statistical discrepancy at current prices
+NC_HFC_XGDP_PS	Household final consumption (%)
+NCGG_XGDP_PS	Government final consumption (%)
+NI_XGDP_PS	Gross capital formation (%)
+NINV_XGDP_PS	Changes in inventories (%)
+NEGS_XGDP_PS	Exports of goods and services (%)
+NIGS_XGDP_PS	Imports of goods and services (%)
+NSDGDP_XGDP_EXPGDP_PS	Statistical discrepancy (%)
+NGDPPC_XDC	Gross Domestic Product per Capita
+NYGPC_XDC	Gross National Income per Capita
+NGDP_R_XDC	GDP at constant prices
+NGDPVA_R_ISIC4_A_XDC	Agriculture, forestry, and fishing at constant prices
+NGDPVA_R_ISIC4_B_XDC	Mining and quarrying at constant prices
+NGDPVA_R_ISIC4_C_XDC	Manufacturing at constant prices
+NGDPVA_R_ISIC4_D_XDC	Electricity, gas, steam, and air-conditioning supply at constant prices
+NGDPVA_R_ISIC4_E_XDC	Water supply; sewerage, waste management, and remediation activities at constant prices
+NGDPVA_R_ISIC4_F_XDC	Construction at constant prices
+NGDPVA_WT_R_XDC_PS	Wholesale trade at constant prices
+NGDPVA_RT_R_XDC_PS	Retail trade at constant prices
+NGDPVA_R_ISIC4_G_XDC	Wholesale and retail trade; repair of motor vehicles and motorcycles at constant prices
+NGDPVA_R_ISIC4_I_XDC	Accommodation and food service activities at constant prices
+NGDPVA_R_ISIC4_H_XDC	Transportation and storage at constant prices
+NGDPVA_R_ISIC4_J_XDC	Information and communication at constant prices
+NGDPVA_R_ISIC4_K_XDC	Financial and insurance activities at constant prices
+NGDPVA_R_ISIC4_L_XDC	Real estate activities at constant prices
+NGDPVA_R_ISIC4_M_XDC	Professional, scientific, and technical activities at constant prices
+NGDPVA_R_ISIC4_N_XDC	Administrative and support service activities at constant prices
+NGDPVA_R_ISIC4_O_XDC	Public administration and defense; compulsory social security at constant prices
+NGDPVA_R_ISIC4_P_XDC	Education at constant prices
+NGDPVA_R_ISIC4_Q_XDC	Human health and social work activities at constant prices
+NGDPVA_R_ISIC4_R_XDC	Arts, entertainment, and recreation at constant prices
+NGDPVA_OSA_R_XDC_PS	Other service activities at constant prices
+NGDPVA_R_ISIC4_T_XDC	Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use at constant prices
+NGDPVA_R_ISIC4_U_XDC	Activities of extraterritorial organizations and bodies at constant prices
+NGDPVA_R_XDC	Gross value added at constant prices, Total
+NGDPSF_R_XDC	Financial intermediation services indirectly measured at constant prices
+NGDP_IB_R_XDC_PS	Imputed bank service charges at constant prices
+NGDPTXS_IM_R_XDC_PS	Taxes less subsidies on production and imports at constant prices
+NGDPCT_GCF_R_XDC_PS	Consumption taxes for gross capital formation at constant prices
+NGDPSOP_R_XDC	Subsidies on products at constant prices
+NGDP_IMD_R_XDC_PS	Import duties at constant prices
+NGDPVAT_R_XDC_PS	Value-added tax at constant prices
+NSDGDP_R_XDC_CTP_SDISCP	Statistical discrepancy at constant prices
+NGDPNFIA_R_XDC_PS	Net factor income from abroad at constant prices
+NYG_R_XDC	GNI at constant prices
+NGDP_R_PTX_PS	GDP (% annual change)
+NGDPVA_R_ISIC4_A_PC_CP_A_PT	Agriculture (% annual change)
+NGDPVA_IND_R_PTX_PS	Industry (% annual change)
+NGDPVA_SER_R_PTX_PS	Services (% annual change)
+NGDE_R_XDC	Expenditure at constant prices, Total
+NC_R_XDC	Final consumption expenditure at constant prices
+NC_HFC_R_XDC_PS	Household final consumption at constant prices
+NC_NFC_R_XDC_PS	NPISHs final consumption at constant prices
+NCGG_R_XDC	General government final consumption at constant prices
+NI_R_XDC_PS	Gross capital formation at constant prices
+NI_IPP_R_XDC_PS	Intellectual property products at constant prices
+NFI_R_XDC	Gross fixed capital formation at constant prices
+NFIG_R_XDC_PS	Gross fixed capital formation (public) at constant prices
+NFIP_R_XDC_PS	Gross fixed capital formation (private) at constant prices
+NINV_R_XDC	Changes in inventories at constant prices
+NI_ALDV_R_XDC_PS	Acquisitions less disposals of valuables at constant prices
+NEGS_R_XDC_PS	Exports of goods and services at constant prices
+NEGS_EG_R_XDC_PS	Exports of goods at constant prices
+NEGS_ES_R_XDC_PS	Exports of services at constant prices
+NIGS_R_XDC_PS	Imports of goods and services at constant prices
+NIGS_IG_R_XDC_PS	Imports of goods at constant prices
+NIGS_IS_R_XDC_PS	Imports of services at constant prices
+NSDGDP_R_XDC	Statistical discrepancy at constant prices
+NC_HFC_PTX_PS	Household final consumption (% annual change)
+NCGG_PTX_PS	Government final consumption (% annual change)
+NI_PTX_PS	Gross capital formation (% annual change)
+NEGS_PTX_PS	Exports of goods and services (% annual change)
+NIGS_PTX_PS	Imports of goods and services (% annual change)
+NIF_GCF_PS	Gross capital formation at current prices
+NIF_GNS_PS	Gross national saving at current prices
+NIF_GDS_PS	Gross domestic saving at current prices
+NIF_GNS_NFIA_PS	Net factor income from abroad at current prices
+NIF_GNS_NCTA_PS	Net current transfers from abroad at current prices
+NIF_GDS_XGDP_PS	Gross domestic saving (%)
+NIF_GNS_XGDP_PS	Gross national saving (%)
+NIF_GCF_XGDP_PS	Gross capital formation (%)
+NYG_USD	GNI (current $ million)
+NY_GDP_MKTP_CD	Gross Domestic Product
+NY_GDP_PCAP_CD	Gross Domestic Product per Capita
+NY_GDP_MKTP_PP_CD	Gross Domestic Product at Purchasing Power Parity
+NY_GDP_PCAP_PP_CD	Gross Domestic Product per Capita at Purchasing Power Parity
+NY_GNP_PCAP_CD	Gross National Income per Capita, Atlas Method
+NGDP_PC_R_PTX_RT_PS	Growth Rates of Real Gross Domestic Product per Capita
+AIPAGR_IX_PS	Agriculture production index
+AIP_IX	Industry production index
+AIPMI_IX	Mining production index
+AIPMA_IX	Manufacturing production index
+AOMPC_BBL	Crude petroleum production
+ENCR_EX_PS	Crude petroleum exports
+ENCR_IM_PS	Crude petroleum imports
+ENCR_CS_PS	Crude petroleum consumption
+ENCO_PR_PS	Coal production
+ENCO_EX_PS	Coal exports
+ENCO_IM_PS	Coal imports
+ENCO_CS_PS	Coal consumption
+ENEL_PR_PS	Electricity production
+ENEL_EX_PS	Electricity exports
+ENEL_IM_PS	Electricity imports
+ENEL_CS_PS	Electricity consumption
+ENNG_PR_PS	Natural gas production
+ENNG_EX_PS	Natural gas exports
+ENNG_IM_PS	Natural gas imports
+ENNG_CS_PS	Natural gas consumption
+ENRP_GP_PS	Gasoline (Premium)
+ENRP_DS_PS	Diesel
+AG_LND_AGRI_ZS	Agricultural Land
+AG_LND_ARBL_ZS	Arable Land
+AG_LND_CROP_ZS	Permanent Cropland
+ER_H2O_INTR_K3	Internal Renewable Freshwater Resources
+ER_H2O_INTR_PC	Internal Renewable Freshwater Resources
+ER_H2O_FWTL_K3	Annual Freshwater Withdrawals
+ER_GDP_FWTL_M3_KD	Water Productivity
+EN_ATM_GHGT_KT_CE	Total Greenhouse Gas Emissions
+AG_DFR_AVEPTX_RT_PS	Deforestation Rate
+EN_ATM_CO2E_KT	Carbon Dioxide Emissions
+EN_ATM_NOXE_KT_CE	Nitrous Oxide Emissions
+EN_ATM_METH_KT_CE	Methane Emissions
+EN_TMPRT_CHNG	Temperature change with respect to a baseline climatology, corresponding to the period 1951-1980
+VC_DSR_TOT	Climate related disasters frequency: Total Number of Disasters
+PCPI_IX	Consumer price index (national), All items
+PCPI_CP_01_IX	CPI (national)-Food and nonalcoholic beverages price index
+PCPI_CP_02_IX	CPI (national)-Alcoholic beverages, tobacco, and narcotics price index
+PCPI_CP_03_IX	CPI (national)-Clothing and footwear price index
+PCPI_CP_04_IX	CPI (national)-Housing, water, electricity, gas, and other fuels price index
+PCPI_CP_05_IX	CPI (national)-Furnishings, household equipment, and routine household maintenance price index
+PCPI_CP_06_IX	CPI (national)-Health price index
+PCPI_CP_07_IX	CPI (national)-Transport price index
+PCPI_CP_08_IX	CPI (national)-Information and communication price index
+PCPI_CP_09_IX	CPI (national)-Recreation, sport, and culture price index
+PCPI_CP_10_IX	CPI (national)-Education services price index
+PCPI_CP_11_IX	CPI (national)-Restaurants and accommodation services price index
+PCPI_CP_13_IX	CPI (national)-Personal care, social protection, and miscellaneous goods and services price index
+PCPI_CP18_12_IX	CPI (national)-Insurance and financial services price index
+PCPICAP_IX	Consumer price index (capital city), All items
+PCPICAP_CP_01_IX_PS	CPI (capital city)-Food and nonalcoholic beverages price index
+PCPICAP_CP_02_IX_PS	CPI (capital city)-Alcoholic beverages, tobacco, and narcotics price index
+PCPICAP_CP_03_IX_PS	CPI (capital city)-Clothing and footwear price index
+PCPICAP_CP_04_IX_PS	CPI (capital city)-Housing, water, electricity, gas, and other fuels price index
+PCPICAP_CP_05_IX_PS	CPI (capital city)-Furnishings, household equipment, and routine household maintenance price index
+PCPICAP_CP_06_IX_PS	CPI (capital city)-Health price index
+PCPICAP_CP_07_IX_PS	CPI (capital city)-Transport price index
+PCPICAP_CP_08_IX_PS	CPI (capital city)-Information and communication price index
+PCPICAP_CP_09_IX_PS	CPI (capital city)-Recreation, sport, and culture price index
+PCPICAP_CP_10_IX_PS	CPI (capital city)-Education services price index
+PCPICAP_CP_11_IX_PS	CPI (capital city)-Restaurants and accommodation services price index
+PCPICAP_CP_13_IX_PS	CPI (capital city)-Personal care, social protection, and miscellaneous goods and services price index
+PCPICAP_CP18_12_IX_PS	CPI (capital city)-Insurance and financial services
+PPPI_IX	Producer price index
+PPIR_IX_PS	Retail price index
+PWPI_IX	Wholesale price index
+PWPICAP_IX_PS	Wholesale price index (capital city)
+PPI_IGDPD_IX_PS	Implicit GDP deflator
+PCPI_PC_PP_PT	CPI (national)-CPI (% annual change)
+PCPI_CAP_PTX_PS	CPI (capital city)-CPI (% annual change)
+PCPI_01_PTX_PS	CPI (national)-Food and nonalcoholic beverages price index (% annual change)
+PPPI_PC_PP_PT	Producer price index (% annual change)
+PWPI_PTX_PS	Wholesale price index (% annual change)
+PPIR_PTX_PS	Retail price index (% annual change)
+PPI_IGDPD_PTX_PS	Implicit GDP deflator (% annual change)
+PCPI_01_PTX_DUP_PS	CPI (capital city)-Food and nonalcoholic beverages price index (% annual change)
+FM2_PTX_PS	Money supply (% annual change)
+FM2_XGDP_PS	Money supply (%)
+FMDMB_XDC_PS	Deposit Money Banks, Total
+FMDMB_DD_XDC_PS	Demand deposits
+FMDMB_SD_XDC_PS	Savings deposits (Deposit Money Banks)
+FMDMB_TD_XDC_PS	Time deposits
+FMDMB_LA_XDC_PS	Loans and advances
+FMDMB_DCO_XDC_PS	Domestic credits outstanding
+FMDMB_SDT_XDC_PS	Savings and time deposits
+FMDMB_OD_XDC_PS	Other deposits
+FMIR_OD_S_XPA_PS	Interest rates (% per annum), On deposits, Savings
+FMIR_OD_T6_XPA_PS	Interest rates (% per annum), On deposits, Time: 6 months
+FMIR_OD_T12_XPA_PS	Interest rates (% per annum), On deposits, Time: 12 months
+FMIR_OD_TO12_XPA_PS	Interest rates (% per annum), On deposits, Time: over 12 months
+FIDD_PA	Interest rates period averages (% per annum), On deposits, Demand
+FMIR_OLD_PRI_XPA_PS	Interest rates (% per annum), On loans and discounts, Private
+FMIR_OLD_PUB_XPA_PS	Interest rates (% per annum), On loans and discounts, Public
+FMIR_OLD_ST_XPA_PS	Interest rates (% per annum), On loans and discounts, Short-Term
+FMIR_OLD_LT_XPA_PS	Interest rates (% per annum), On loans and discounts, Long-Term
+FMIR_OLD_CB_XPA_PS	Interest rates (% per annum), On loans and discounts, Commercial bills
+FMIR_OLD_EC_XPA_PS	Interest rates (% per annum), On loans and discounts, Export credit
+FMIR_OLD_OCB_XPA_PS	Interest rates (% per annum), On loans and discounts, Other commercial bills
+FMN_XDC	Narrow Money (M1), Total
+FMN_CIC_XDC_PS	Currency in circulation
+FMN_DD_XDC_PS	Demand deposits
+FMOD_XDC_PS	Quasi-money
+FMIR_BM_M2_XDC_PS	Broad Money (M2)
+FMIR_BM_M3_XDC_PS	Broad Money (M3)
+FMIR_FA_XDC_PS	Foreign assets (net)
+FMIR_DC_XDC_PS	Domestic claims, Total
+FMIR_DC_CCG_XDC_PS	Claims on central government (net)
+FMIR_DC_CPS_XDC_PS	Claims on private sector
+FMIR_DC_CLG_XDC_PS	Claims on local government
+FMIR_DC_CSSO_XDC_PS	Claims on social security organizations
+FMIR_DC_CNFC_XDC_PS	Claims on nonfinancial corporations
+FMIR_DC_CHHS_XDC_PS	Claims on households
+FMIR_DC_CNBFI_XDC_PS	Claims on nonbank financial institutions
+FMIR_DC_CNFPE_XDC_PS	Claims on nonfinancial public enterprise
+FMIR_DC_COFC_XDC_PS	Claims on other financial corporations
+FMIR_DC_CSLGU_XDC_PS	Claims on state and local government units
+FMIR_DC_CPNFC_XDC_PS	Claims on public nonfinancial corporations
+FMIR_OT_XDC_PS	Other items
+FMIR_LIBM_XDC_PS	Liabilities included in Broad Money, Total
+FMIR_LIBM_CODC_XDC_PS	Currency outside depository corporations
+FMIR_LIBM_TD_XDC_PS	Transferable deposits
+FMIR_LIBM_OD_XDC_PS	Other deposits
+FMIR_LIBM_SOTS_XDC_PS	Securities other than shares
+FMIR_LEBM_XDC_PS	Liabilities excluded from Broad Money
+FITB_PA	Yield on Short-Term Treasury Bills
+FILR_PA	Lending Interest Rates
+FD_AST_PRVT_GD_ZS	Domestic Credit Provided by Banking Sector
+FSANL_PT	Bank Nonperforming Loans
+CM_MKT_LCAP_CD	Stock Market Capitalization
+CM_MKT_LCAP_GD_ZS	Stock Market Capitalization
+FPE_PTX_RT_PS	Growth Rates of Stock Market Price Index
+GR_G14_GG_XDC	Revenue
+GRT_G14_GG_XDC	Taxes
+GRTI_G14_GG_XDC	Taxes on income, profits, and capital gains
+GRTII_G14_GG_XDC	Taxes on income, profits, and capital gains-Payable by individuals
+GRTIC_G14_GG_XDC	Taxes on income, profits, and capital gains-Payable by corporations and other enterprises
+GRTIU_G14_GG_XDC	Other taxes on income, profits, and capital gains
+GRTPAY_G14_GG_XDC	Taxes on payroll and workforce
+GRTP_G14_GG_XDC	Taxes on property
+GRTGS_G14_GG_XDC	Taxes on goods and services
+GRTT_G14_GG_XDC	Taxes on international trade and transaction
+GRTO_G14_GG_XDC	Other taxes
+GRS_G14_GG_XDC	Social contributions
+GRG_G14_GG_XDC	Revenue-Grants
+GRO_G14_GG_XDC	Other revenue
+GE_G14_GG_XDC	Expense
+GECE_G14_GG_XDC	Compensation of employees
+GEGS_G14_GG_XDC	Use of goods and services
+GEKC_G14_GG_XDC	Consumption of fixed capital
+GEI_G14_GG_XDC	Interest
+GEST_G14_GG_XDC	Subsidies
+GEG_G14_GG_XDC	Expense-Grants
+GES_G14_GG_XDC	Social benefits
+GEO_G14_GG_XDC	Other expense
+GXCBN_G14_GG_XDC	Net operating balance
+GXCBG_G14_GG_XDC	Gross operating balance
+GADAN_T_G14_GG_XDC	Net/gross investment in nonfinancial assets
+GADANF_T_G14_GG_XDC	Fixed assets
+GADANI_T_G14_GG_XDC	Inventories
+GADANV_T_G14_GG_XDC	Valuables
+GADANN_T_G14_GG_XDC	Nonproduced assets
+GX_G14_GG_XDC	Expenditure
+GXCNL_G14_GG_XDC	Net lending/Net borrowing
+GXOPB_G14_GG_XDC	Primary balance
+GADAF_T_G14_GG_XDC	Net acquisition of financial assets
+GADAFD_T_G14_GG_XDC	Net acquisition of financial assets-Domestic
+GADAFF_T_G14_GG_XDC	Net acquisition of financial assets-External
+GADL_T_G14_GG_XDC	Net incurrence of liabilities
+GADLD_T_G14_GG_XDC	Net incurrence of liabilities-Domestic
+GADLF_T_G14_GG_XDC	Net incurrence of liabilities-External
+GR_G14_GG_XGDP_PS	Revenue (%)
+GRT_G14_GG_XGDP_PS	Taxes (%)
+GRTII_G14_GG_XGDP_PS	Taxes payable by individuals (%)
+GRTIC_G14_GG_XGDP_PS	Taxes payable by corporations and other enterprises (%)
+GX_G14_GG_XGDP_PS	Expenditure (%)
+GXCNL_G14_GG_XGDP_PS	Net lending/Net borrowing (%)
+GXOPB_G14_GG_XGDP_PS	Primary balance (%)
+GTRG_G86_XDC_PS	Total revenue and grants
+GTRG_TR_G86_XDC_PS	Total revenue
+GTRG_CR_G86_XDC_PS	Current revenue
+GTRG_CRT_G86_XDC_PS	Taxes (Current revenue)
+GTRG_CRN_G86_XDC_PS	Nontaxes
+GTRG_CAPR_G86_XDC_PS	Capital receipts
+GTRG_G_G86_XDC_PS	Grants
+GTENL_G86_XDC_PS	Total expenditure and net lending
+GTENL_TE_G86_XDC_PS	Total expenditure
+GTENL_CE_G86_XDC_PS	Current expenditure
+GTENL_CAPE_G86_XDC_PS	Capital expenditure
+GTENL_NL_G86_XDC_PS	Net lending
+GCSD_G86_XDC_PS	Current surplus/deficit
+GCASD_G86_XDC_PS	Capital account surplus/deficit
+GOBSD_G86_XDC_PS	Overall budgetary surplus/deficit
+GF_G86_XDC_PS	Financing
+GF_DB_G86_XDC_PS	Domestic borrowing
+GF_FB_G86_XDC_PS	Foreign borrowing
+GF_SR_G86_XDC_PS	Special receipts
+GF_UCB_G86_XDC_PS	Use of cash balances
+GTRG_TR_G86_XGDP_PS	Total revenue (% of GDP at current market prices)
+GTRG_CRT_G86_XGDP_PS	Taxes (% of GDP at current market prices)
+GTENL_TE_G86_XGDP_PS	Total expenditure (% of GDP at current market prices)
+GOBSD_G86_XGDP_PS	Overall budgetary surplus/deficit (% of GDP at current market prices)
+GEFTE_XDC_PS	Total expenditure (by Function)
+GEFTE_GP_XDC_PS	General public services
+GEFTE_D_XDC_PS	Defense
+GEFTE_POS_XDC_PS	Public order and safety
+GEFTE_EA_XDC_PS	Economic affairs
+GEFTE_EAA_XDC_PS	Agriculture
+GEFTE_EAI_XDC_PS	Industry
+GEFTE_EAE_XDC_PS	Electricity, gas, and water
+GEFTE_EAT_XDC_PS	Transport and communications
+GEFTE_EAS_XDC_PS	Science and technology
+GEFTE_EAO_XDC_PS	Other economic services
+GEFTE_EP_XDC_PS	Environmental protection
+GEFTE_HCA_XDC_PS	Housing and community amenities
+GEFTE_H_XDC_PS	Expenditure-Health
+GEFTE_RCR_XDC_PS	Recreation, culture, and religion
+GEFTE_E_XDC_PS	Expenditure-Education
+GEFTE_SP_XDC_PS	Expenditure-Social protection
+GEFTE_O_XDC_PS	Others
+GEFTE_RF_XDC_PS	Reserve fund
+GEFTE_E_XGDP_PS	Education (%)
+GEFTE_H_XGDP_PS	Health (%)
+GEFTE_SP_XGDP_PS	Social protection (%)
+GPOLG_XDC_PS	Provincial and Other Local Governments
+GPOLG_R_XDC_PS	Revenue
+GPOLG_RT_XDC_PS	Tax
+GPOLG_RN_XDC_PS	Nontax
+GPOLG_RSG_XDC_PS	Subsidies and/or grants
+GPOLG_E_XDC_PS	Expenditure
+OP_EFF_BE_OVL	Pillar III - Operational Efficiency of Business Entry, Overall (Score)
+OP_EFF_BE_DOM_FIRM_OVL	Domestic Firms, Overall (Score)
+OP_EFF_BE_DOM_FIRM_TOT_TIME	Domestic Firms, Total Time to Register a New Domestic Firm (Score)
+OP_EFF_BE_DOM_FIRM_TOT_COST	Domestic Firms, Total Cost to Register a New Domestic Firm (Score)
+OP_EFF_BE_FOR_FIRM_OVL	Foreign Firms, Overall (Score)
+OP_EFF_BE_FOR_FIRM_TOT_TIME	Foreign Firms, Total Time to Register a New Foreign Firm (Score)
+OP_EFF_BE_FOR_FIRM_TOT_COST	Foreign Firms, Total Cost to Register a New Foreign Firm (Score)
+IC_CP_IX_RT_PS	Corruption Perceptions Index
+IC_CP_IXR_LY_RT_PS	Corruption Perceptions Index (Rank)
+TXG_FOB_XDC	External trade-Exports, fob
+TMG_CIF_XDC	External trade-Imports, cif
+TGB_XDC	Trade balance
+TXG_FOB_PTX_PS	External trade-Exports (% annual change)
+TMG_CIF_PTX_PS	External trade-Imports (% annual change)
+BCA_BP6_USD	Current account
+BG_BP6_USD	Balance on goods
+BXG_BP6_USD	Balance on goods-Exports
+BMG_BP6_USD	Balance on goods-Imports
+BS_BP6_USD	Balance on services
+BXS_BP6_USD	Balance on services-Credit
+BMS_BP6_USD	Balance on services-Debit
+BIP_BP6_USD	Balance on primary income
+BXIP_BP6_USD	Balance on primary income-Credit
+BMIP_BP6_USD	Balance on primary income-Debit
+BIS_BP6_USD	Balance on secondary income
+BXIS_BP6_USD	Balance on secondary income-Credit
+BMIS_BP6_USD	Balance on secondary income-Debit
+BK_BP6_USD	Capital account
+BK_CD_BP6_USD	Capital account-Credit
+BK_DB_BP6_USD	Capital account-Debit
+BF_BP6_USD	Financial account
+BFD_BP6_USD	Direct investment
+BFP_BP6_USD	Portfolio investment
+BFF_BP6_USD	Financial derivatives
+BFO_BP6_USD	Other investment
+BOP_BP6_USD	Net errors and omissions
+BO_BP6_FY_USD	Overall balance
+BTRUE_BP6_FY_USD	Reserves and related items
+RAFA_USD	Reserve assets
+RAFA_UIMF_CL_XDC_PS	Use of IMF credit and loans
+I_BP6_USD	International investment position
+BXG_BP6_XGDP_PS	BOP-Exports (%)
+BMG_BP6_XGDP_PS	BOP-Imports (%)
+BG_BP6_XGDP_PS	BOP-Balance on goods (%)
+BCA_BP6_XGDP_PS	BOP-Current account balance (%)
+BO_BP6_FY_XGDP_PS	BOP-Overall balance (%)
+BOP_BAL_ON_SVC	BOP-Balance on services (%)
+TXG_FOB_USD	Merchandise Exports
+TMG_CIF_USD	Merchandise Imports
+DT_ODA_ODAT_KD_RT_PS	Net Official Development Assistance from All Sources to Developing Economies
+DT_OOF_ODAT_DE_RT_PS	Net Other Official Flows from All Sources to Developing Economies
+DT_PF_ODAT_DE_RT_PS	Net Private Flows from All Sources to Developing Economies
+DT_ANRF_ODAT_DE_RT_PS	Aggregate Net Resource Flows from All Sources to Developing Economies
+ST_INT_ARVL	International Tourist Arrivals
+ST_INT_RCPT_CD	International Tourism Receipts
+BX_TRF_PWKR_CD_DT	Total Remittances, Inflows-Dollar Amounts
+BX_TRF_PWKR_DT_GD_ZS	Total Remittances, Inflows-Proportion of Economic Activity
+BX_KLT_DINV_CD_WD	Foreign Direct Investment, Net Inflows-Dollar Amounts
+BX_KLT_DINV_WD_GD_ZS	Foreign Direct Investment, Net Inflows-Proportion of Economic Activity
+TR_NRV_RT_PS	Road Indicators-Registered Vehicles
+TR_RIN_TOT_RT_PS	Road Indicators Network, Total
+TR_RFKT_RT_PS	Road Freight Travel
+TR_RPT_RT_PS	Road Passenger Travel
+IS_RRS_TOTL_KM	Rail Lines, Total Route
+IS_RRS_LPLA_KM_RT_PS	Rail Network, Length per Land Area
+IS_RRS_PASG_KM	Rail Indicators-Passengers Carried
+IS_RRS_GOOD_MT_K6	Rail Indicators-Goods transported
+IS_AIR_GOOD_MT_K1	Aviation Freight Transport
+TR_AT_RT_PS	Aviation Passenger Transport
+IS_SHP_GOOD_TU	Container Port Traffic
+IS_SHP_GCNW_XQ	Liner Shipping Connectivity Index
+LP_LPI_OVRL_XQ	Logistics Performance Index
+TR_ERTD_RT_PS	Estimated Road Traffic Deaths, Total
+TR_ERTD_DR_RT_PS	Death rate due to road traffic injuries
+TR_RUD_4WV_RT_PS	Road User Deaths, Four-Wheeled Vehicles
+TR_RUD_2A3WV_RT_PS	Road User Deaths, Two- and Three-Wheeled Vehicles
+TR_RUD_CYC_RT_PS	Road User Deaths, Cyclists
+TR_RUD_PED_RT_PS	Road User Deaths, Pedestrians
+TR_RUD_OT_RT_PS	Road User Deaths, Others
+IT_MLT_MAIN	Fixed Telephone Subscribers
+IT_CEL_SETS	Mobile Phone Subscribers
+IT_NET_BBND	Fixed Broadband Subscribers
+IT_MLT_MAIN_P2	Fixed Telephones-Subscriptions per 100 People
+IT_CEL_SETS_P2	Mobile Phones-Subscriptions per 100 People
+IT_NET_BBND_P2	Fixed Broadband-Subscriptions per 100 People
+IT_NET_USER_P2	Internet Users (per 100 People)
+RAFA_USD_TOT	International Reserves, Total
+RAFAGOLDNV_USD	Gold, national valuation
+RAXGFX_USD	Foreign exchange
+RAFAIMF_USD	Reserve position in the IMF
+RAFASDR_USD	SDRs
+ENDE_XDC_USD_RATE	End of period
+ENDA_XDC_USD_RATE_AP	Average of period
+PA_NUS_PPP	Purchasing Power Parity Conversion Factor
+PA_PLI_PPP_RT_PS	Price Level Indexes
+DT_DOD_DECT_CD	Total debt outstanding and disbursed
+DT_DOD_DLXF_CD	Long-term debt
+DT_DOD_DPPG_CD	Public and publicly guaranteed
+DT_DOD_DPNG_CD	Private nonguaranteed
+DT_DOD_DSTC_CD	Short-term debt
+DT_DOD_DIMF_CD	Use of IMF credit
+DT_INT_DECT_CD	Total debt service payments
+DT_DOD_DECT_GDP_ZS_PS	External debt (%)
+DT_DOD_DECT_GN_ZS	External debt %
+DT_DOD_DLXF_XTD_PS	Total long-term debt (% of total debt)
+DT_DOD_DSTC_ZS	Short-term debt (% of total debt)
+DT_TDS_DECT_EX_ZS	Total debt service paid as a percentage of exports of goods, services, and primary income.
+DT_AMT_DLXF_CD	Principal repayments on long-term debt
+DT_INT_DLXF_CD	Interest on long-term debt
+DT_INT_DSTC_CD	Interest on short-term debt
+DT_INR_DPPG	Interest rate (% per annum)
+DT_MAT_DPPG	Maturity (years)
+DT_GPA_DPPG	Grace period (years)
+DT_GRE_DPPG	Grant element (%)
+SI_POV_EMP1_15T	Proportion of Employed Population Living below the International Poverty Line, Ages 15+, Total
+SI_POV_EMP1_15F	Proportion of Employed Population Living below the International Poverty Line, Ages 15+, Female
+SI_POV_EMP1_15M	Proportion of Employed Population Living below the International Poverty Line, Ages 15+, Male
+SI_POV_EMP1_1524	Proportion of Employed Population Living below the International Poverty Line, Ages 15-24
+SI_POV_EMP1_25	Proportion of Employed Population Living below the International Poverty Line, Ages 25+
+SI_POV_NAHC_URT	Proportion of the population living below the national poverty line, by sex, age, Total
+SI_POV_NAHC_URR	Proportion of the population living below the national poverty line, by sex, age, Rural
+SI_POV_NAHC_URU	Proportion of the population living below the national poverty line, by sex, age, Urban
+SD_MDP_MUHC	Proportion of men, women and children of all ages living in poverty in all its dimensions according to national definitions
+SI_COV_BENFTS	Proportion of Population Covered by at least One Social Protection Benefit
+SI_COV_PENSN	Proportion of Population above Statutory Pensionable Age Receiving a Pension
+SI_COV_POOR	Proportion of Poor Population Receiving Social Assistance Cash Benefit
+SI_COV_VULN	Proportion of Vulnerable Population Receiving Social Assistance Cash Benefit
+SI_COV_CHLD	Proportion of Children/Households Receiving Child/Family Cash Benefit
+DC_ODA_POVLG	Official Development Assistance for Poverty Reduction, By Recipient Economies
+SN_ITK_DEFC	Prevalence of Undernourishment
+SH_STA_STNT	Prevalence of Stunting among Children under 5 years of age
+SN_STA_OVWGT	Prevalence of Malnutrition (Overweight) among Children under 5 years of age
+SH_STA_WAST	Prevalence of Malnutrition (Wasting) among Children under 5 years of age
+AG_PRD_ORTIND	The agriculture orientation index for government expenditures
+DC_TOF_AGRL	Total official flows (official development assistance plus other official flows) to the agriculture sector
+SH_STA_MORT	Maternal mortality ratio
+SH_STA_BRTC	Proportion of births attended by skilled health personnel
+SH_DYN_MORT	Under-5 Mortality Rate
+SH_DYN_NMRT	Neonatal Mortality Rate
+SH_HIV_INCD	Number of new HIV infections per 1,000 uninfected population, by sex, age, and key populations
+SH_TBS_INCD	Tuberculosis incidence per 100,000 population
+SH_STA_MALR	Malaria incidence per 1,000 population
+SH_DTH_NCOM	Mortality Rate Attributed to Cardiovascular Disease, Cancer, Diabetes, or Chronic Respiratory Disease
+SH_STA_SCIDE_TOT	Suicide mortality rate, Total
+SH_STA_SCIDE_FEMALE	Suicide mortality rate, Female
+SH_STA_SCIDE_MALE	Suicide mortality rate, Male
+SH_STA_TRAF	Death Rate Due to Road Traffic Injuries
+SH_FPL_MTMM	Proportion of women of reproductive age (15-49 years) who have their need for family planning satisfied by modern methods
+SP_DYN_ADKL	Adolescent birth rate (15-19 years) per 1,000 women in that age group
+SH_ACS_UNHC	Coverage of essential health services
+SH_STA_AIRP	Mortality rate attributed to household and ambient air pollution
+SH_STA_WASH	Mortality rate attributed to unsafe water, unsafe sanitation, and lack of hygiene-exposure to unsafe water, sanitation, and hygiene for all (WASH) services
+SH_MED_DEN_MD	Health Worker Density, Medical Doctors
+SH_MED_DEN_NMP	Health Worker Density, Nursing and Midwifery Personnel
+SH_IHR_CAPPRD	International Health Regulations Capacity and Health Emergency Preparedness, Average of 15 International Health Regulations Core Capacity Scores
+SE_PRE_PARTN_TOTAL	Participation Rate in Organized Learning (1 Year before the Official Primary Entry Age), Total
+SE_PRE_PARTN_FEMALE	Participation Rate in Organized Learning (1 Year before the Official Primary Entry Age), Female
+SE_PRE_PARTN_MALE	Participation Rate in Organized Learning (1 Year before the Official Primary Entry Age), Male
+SE_TRA_GRDL_PRE	Proportion of Teachers Who Have Received at Least the Minimum Organized Teacher Training, Preprimary
+SE_TRA_GRDL_PRI	Proportion of Teachers Who Have Received at Least the Minimum Organized Teacher Training, Primary
+SE_TRA_GRDL_LSE	Proportion of Teachers Who Have Received at Least the Minimum Organized Teacher Training, Lower Secondary
+SE_TRA_GRDL_USE	Proportion of Teachers Who Have Received at Least the Minimum Organized Teacher Training, Upper Secondary
+SE_TOT_PRFL_EP	Proportion of Children and Young People at the End of Primary School Achieving at Least a Minimum Proficiency Level, Reading
+SE_TOT_PRFL_ES	Proportion of Children and Young People at the End of Lower Secondary School Achieving at Least a Minimum Proficiency Level, Reading
+SE_TOT_PRFL_EP_M	Proportion of Children and Young People at the End of Primary School Achieving at Least a Minimum Proficiency Level, Mathematics
+SE_TOT_PRFL_ES_M	Proportion of Children and Young People at the End of Lower Secondary School Achieving at Least a Minimum Proficiency Level, Mathematics
+SE_TOT_CPLR_T	Completion Rate, Lower Secondary, Total
+SE_TOT_CPLR_Q1	Completion Rate, Lower Secondary, Q1
+SE_TOT_CPLR_Q2	Completion Rate, Lower Secondary, Q2
+SE_TOT_CPLR_T_U	Completion Rate, Upper Secondary, Total
+SE_TOT_CPLR_Q1_U	Completion Rate, Upper Secondary, Q1
+SE_TOT_CPLR_Q2_U	Completion Rate, Upper Secondary, Q2
+SE_TOT_CPLR_T_P	Completion Rate, Primary, Total
+SE_TOT_CPLR_Q1_P	Completion Rate, Primary, Q1
+SE_TOT_CPLR_Q2_P	Completion Rate, Primary, Q2
+SP_DYN_MRBF15	Proportion of Women Aged 20-24 Years Who Were Married or in a Union, Before Age 15
+SP_DYN_MRBF18	Proportion of Women Aged 20-24 Years Who Were Married or in a Union, Before Age 18
+SG_GEN_PARL	Proportion of Seats Held by Women in National Parliaments
+IC_GEN_MGTL	Proportion of Women in Managerial Positions
+SH_H2O_SAFE_TOTAL	Proportion of Population Using Safely Managed Drinking Water, Total
+SH_H2O_SAFE_URBAN	Proportion of Population Using Safely Managed Drinking Water, Urban
+SH_H2O_SAFE_RURAL	Proportion of Population Using Safely Managed Drinking Water, Rural
+SH_SAN_SAFE_TOTAL	Proportion of Population Using Safely Managed Sanitation, Total
+SH_SAN_SAFE_URBAN	Proportion of Population Using Safely Managed Sanitation, Urban
+SH_SAN_SAFE_RURAL	Proportion of Population Using Safely Managed Sanitation, Rural
+ER_H2O_STRESS	Level of Water Stress, Freshwater Withdrawal as a Proportion of Available Freshwater Resources
+DC_TOF_WASHL	Amount of Water- and Sanitation-Related Official Development Assistance as Part of a Government-Coordinated Spending Plan
+EG_ACS_ELEC_T	Proportion of Population with Access to Electricity, Total
+EG_ACS_ELEC_U	Proportion of Population with Access to Electricity, Urban
+EG_ACS_ELEC_R	Proportion of Population with Access to Electricity, Rural
+EG_EGY_CLEAN	Proportion of Population with Primary Reliance on Clean Fuels and Technology
+EG_FEC_RNEW	Renewable Energy Share in Total Final Energy Consumption
+EG_EGY_PRIM	Energy Intensity Measured in Terms of Primary Energy and GDP
+NY_GDP_PCAP	Annual Growth Rate of Real GDP per Capita
+SL_EMP_PCAP	Annual Growth Rate of Real GDP per Employed Person
+SL_TLF_UEM_15T	Unemployment rate for age group 15+ - Total
+SL_TLF_UEM_15F	Unemployment rate for age group 15+ - Female
+SL_TLF_UEM_15M	Unemployment rate for age group 15+ - Male
+SL_TLF_UEM_1524T	Unemployment rate for age group 15-24 - Total
+SL_TLF_UEM_1524F	Unemployment rate for age group 15-24 - Female
+SL_TLF_UEM_1524M	Unemployment rate for age group 15-24 - Male
+SL_TLF_UEM_25T	Unemployment rate for age group 25+ - Total
+SL_TLF_UEM_25F	Unemployment rate for age group 25+ - Female
+SL_TLF_UEM_25M	Unemployment rate for age group 25+ - Male
+SL_TLF_NEET	Proportion of Youth (Aged 15-24 Years) not in Education, Employment, or Training
+SL_TLF_CHLDEA_T	Proportion of Children (Aged 5-17 Years) Engaged in Child Labor, Total
+SL_TLF_CHLDEA_F	Proportion of Children (Aged 5-17 Years) Engaged in Child Labor, Female
+SL_TLF_CHLDEA_M	Proportion of Children (Aged 5-17 Years) Engaged in Child Labor, Male
+FB_CBK_BRCH	Number of Commercial Bank Branches per 100,000 Adults
+FB_ATM_TOTL	Number of ATMs per 100,000 Adults
+FB_BNK_ACCSS	Proportion of Adults (15 Years and Older) with an Account at a Bank or Other Financial Institution or with a Mobile-Money Service Provider
+DC_TOF_TRDCML	Aid for Trade-commitments
+DC_TOF_TRDDBML	Aid for Trade-disbursement
+NV_IND_MANF	Manufacturing value added as a proportion of GDP
+NV_IND_MANFPC	Manufacturing Value - Added Per Capita
+SL_TLF_MANF	Manufacturing Employment as a Proportion of Total Employment
+EN_ATM_CO2GDP	Carbon Dioxide Emissions, Per Unit of GDP (PPP)
+EN_ATM_CO2MVA	Carbon dioxide (CO2) emissions per unit of value-added
+GB_XPD_RSDV	Research and Development Expenditure as a Proportion of GDP
+GB_POP_SCIERD	Researchers (Full-Time Equivalent)
+DC_TOF_INFRAL	Total Official International Support to Infrastructure
+NV_IND_TECH	Proportion of Medium and High-Tech Industry Value Added in Total Value Added
+IT_MOB_2GNTWK	Proportion of Population Covered by 2G Mobile Networks
+IT_MOB_3GNTWK	Proportion of Population Covered by 3G Mobile Networks
+IT_MOB_4GNTWK	Proportion of Population Covered by LTE Mobile Networks
+SI_HEI_TOTL_BOT	Growth Rates of Household Expenditure or Income per Capita among the Bottom 40% of the Population
+SI_HEI_TOTL	Growth Rates of Household Expenditure or Income per Capita
+EN_LND_SLUM	Proportion of Urban Population Living in Slums, Informal Settlements, or Inadequate Housing
+VC_DSR_GDPLS	Direct Economic Loss Attributed to Disasters
+EN_ATM_PM25	Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted), Total
+EN_ATM_PM25_U	Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted), Urban
+EN_MAT_FTPRTN	Material Footprint, All
+EN_MAT_FTPRPC	Material Footprint, Per Capita
+EN_MAT_DOMCMPT	Domestic Material Consumption, All
+EN_MAT_DOMCMPC	Domestic material consumption, per capita
+ER_FFS_CMPT_GDP	Amount of fossil-fuel subsidies (production and consumption) per unit of GDP
+SG_DSR_SILS	Proportion of local governments that adopt and implement local DRR strategies in line with national DRR strategies
+VC_DSR_AFFCT	Number of people affected by disasters
+VC_DSR_MORT	Number of Deaths Due to Disaster
+SG_DSR_LGRGSR	Number of economies that adopt and implement national disaster risk reduction (DRR) strategies in line with the Sendai Framework for Disaster Risk Reduction 2015-2030
+ER_MRN_MPA	Average Proportion of Marine Key Biodiversity Areas Covered by Protected Areas
+AG_LND_FRST	Forest Area as a Proportion of Total Land Area
+ER_PTD_TERR	Proportion of Important Sites for Terrestrial Biodiversity that are Covered by Protected Areas
+ER_PTD_FRHWTR	Proportion of Important Sites for Freshwater Biodiversity that are Covered by Protected Areas
+ER_PTD_MTN	Coverage by Protected Areas of Important Sites for Mountain Biodiversity
+ER_RSK_LST	Red List Index
+VC_IHR_PSRC	Number of Victims of Intentional Homicide
+VC_PRS_UNSNT	Unsentenced Detainees as a Proportion of Overall Prison Population
+IC_FRM_BRIB	Proportion of Firms Experiencing at least One Bribe Payment Request
+SG_REG_BRTH	Proportion of Children Under 5 Years of Age Whose Births have been Registered with a Civil Authority
+DT_TDS_DECT	Debt service as a Proportion of Exports of Goods, Services and Primary Income
+DC_FTA_TOTAL	Dollar Value of Financial and Technical Assistance Committed to Developing Economies
+SG_STT_CAPTY	Dollar Value of All Resources Made Available to Strengthen Statistical Capacity in Developing Economies
+SG_REG_CENSUSN	Economies that Have Conducted at Least One Population and Housing Census in the Past 10 Years
