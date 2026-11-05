@@ -48,4 +48,4 @@ Training classical models on Deepwater's data:
 
 ## Voice
 
-In the side panel, on macOS, hold **Hold to talk** and speak: what you said goes in the box and is sent when you let go. **Read the answers aloud** speaks the model's answers. Nothing listens unless the button is held, there's no wake word, and recognition runs on this Mac: if your language has no on-device recognition yet, it says so rather than use Apple's servers, and you can turn on Dictation for it in System Settings › Keyboard. The first use asks for the microphone and speech recognition permissions.
+In the side panel, on macOS and Windows, hold **Hold to talk** and speak: what you said goes in the box and is sent when you let go. **Read the answers aloud** speaks the model's answers. Nothing listens unless the button is held, there's no wake word, and recognition runs on this Mac: if your language has no on-device recognition yet, it says so rather than use Apple's servers, and you can turn on Dictation for it in System Settings › Keyboard. The first use asks for the microphone and speech recognition permissions.

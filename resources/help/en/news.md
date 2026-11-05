@@ -22,4 +22,4 @@ Each headline is read by its words for an impact (a tag on the card) and for top
 
 In the reader, **Ask the AI** sends the article's headline and its feed summary to your local model in the [side panel](help:ai). The model doesn't read the page itself.
 
-**Translate** puts the page's text in your language in place, on this Mac, with Apple's Translation on macOS 26 or later: nothing is sent anywhere. Only languages installed in System Settings › General › Language & Region › Translation Languages are used; for another, the reader says which to add. Links and formatting inside paragraphs are lost until **Original** brings the page back. [Settings](help:start) › News turns it off.
+**Translate** puts the page's text in your language in place, on this computer. On macOS 26 or later it uses Apple's Translation; elsewhere, the local model: nothing is sent anywhere. Only languages installed in System Settings › General › Language & Region › Translation Languages are used; for another, the reader says which to add. Links and formatting inside paragraphs are lost until **Original** brings the page back. [Settings](help:start) › News turns it off.

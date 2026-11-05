@@ -197,6 +197,7 @@ jobs:
           foreach ($f in 'deepwater.exe', 'deepwater-llm.exe', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
             if (-not (Test-Path "$dir\$f")) { throw "$f isn't at the top of the packed folder" }
           }
+          $fullPath = $env:PATH
           $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
           Remove-Item Env:QT_PLUGIN_PATH, Env:QML2_IMPORT_PATH, Env:QT_ROOT_DIR -ErrorAction SilentlyContinue
           $shot = "$PWD\build\dist\smoke-windows.png"
@@ -232,7 +233,27 @@ jobs:
             throw "deepwater.exe exited with code $($p.ExitCode)"
           }
           if (-not (Test-Path $shot)) { throw "no screenshot" }
-          if (-not (Select-String -Path $log -Pattern 'Example Domain' -Quiet)) { throw "the reader didn't render the page" }
+          if (-not (Select-String -Path $log -Pattern 'Example Domain' -Quiet)) {
+            # Why not: the network without the app, then the reader without Chromium's sandbox and with the full PATH.
+            try { "plain request to example.com: $((Invoke-WebRequest https://example.com -UseBasicParsing).StatusCode)" } catch { "plain request failed: $_" }
+            $try = {
+              param($name)
+              $t = "$PWD\build\dist\smoke-$name.log"
+              $q = Start-Process "$dir\deepwater.exe" -PassThru -RedirectStandardError $t -ArgumentList `
+                   '--page', 'news', '--news-url', 'https://example.com', '--delay', '20000', '--screenshot', "`"$PWD\build\dist\smoke-$name.png`""
+              $null = $q.Handle
+              if (-not $q.WaitForExit(90000)) { $q.Kill() }
+              "--- $name"; Get-Content $t -ErrorAction SilentlyContinue | Select-String 'reader|ERROR|FATAL|sandbox' | Select-Object -Last 25
+            }
+            $env:QTWEBENGINE_CHROMIUM_FLAGS = '--enable-logging=stderr --v=0'
+            & $try 'logging'
+            $env:QTWEBENGINE_DISABLE_SANDBOX = '1'
+            & $try 'nosandbox'
+            Remove-Item Env:QTWEBENGINE_DISABLE_SANDBOX
+            $env:PATH = $fullPath
+            & $try 'fullpath'
+            throw "the reader didn't render the page"
+          }
           "Screenshot: $((Get-Item $shot).Length) bytes"
 
       - uses: actions/upload-artifact@v4

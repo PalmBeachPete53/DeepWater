@@ -95,6 +95,16 @@ public:
             installEarlyHide(url);
             emit urlChanged(url);
         });
+        if (qEnvironmentVariableIsSet("DEEPWATER_READER_LOG")) {
+            connect(m_view->page(), &QWebEnginePage::loadingChanged, this, [](const QWebEngineLoadingInfo &info) {
+                qWarning().noquote() << "reader:" << info.url().toString() << "status" << int(info.status()) << "domain"
+                                     << int(info.errorDomain()) << "code" << info.errorCode() << info.errorString();
+            });
+            connect(m_view->page(), &QWebEnginePage::renderProcessTerminated, this,
+                    [](QWebEnginePage::RenderProcessTerminationStatus status, int code) {
+                        qWarning().noquote() << "reader: renderer ended, status" << int(status) << "code" << code;
+                    });
+        }
         connect(m_view->page(), &QWebEnginePage::loadingChanged, this, [this](const QWebEngineLoadingInfo &info) {
             if (info.status() == QWebEngineLoadingInfo::LoadFailedStatus && info.errorDomain() == QWebEngineLoadingInfo::HttpStatusCodeDomain)
                 emit httpError(info.url(), info.errorCode());
