@@ -14,7 +14,7 @@ The sources are grouped by the page they feed: the map and shipping, forex, macr
 
 The search box filters the rows. The states refresh once a second while the tab is shown.
 
-**The official catalogue.** Below the app's own sources, five collapsed groups list the bodies behind the world's statistics — statistical offices, central banks, ministries and agencies, international organisations, private institutes, about 1,400 — as cards: what each publishes, its access (free, headline free, paid) and API, the state of its site at the last inventory, **Test** and **Open the site**. The search box and the country and access filters apply to them too.
+**The official catalogue.** Below the app's own sources, five collapsed groups list the bodies behind the world's statistics — statistical offices, central banks, ministries and agencies, international organisations, private institutes, about 1,300 — as cards: what each publishes, its access (free, headline free, paid) and API, the state of its site at the last inventory, **Test** and **Open the site**. The search box and the country and access filters apply to them too.
 
 ## Data
 

@@ -269,9 +269,9 @@ EvdsIndicators::EvdsIndicators(QObject *parent)
 
 QList<QUrl> EvdsIndicators::urls() const
 {
-    // TP.FG.J0: consumer price index (2003 = 100), monthly.
+    // TP.GENENDEKS.T1: consumer price index (2003 = 100), monthly (TP.FG.J0, its predecessor, went to the archive).
     const QDate today = QDate::currentDate();
-    return {QUrl(QString("https://evds2.tcmb.gov.tr/service/evds/series=TP.FG.J0&startDate=%1&endDate=%2&type=json")
+    return {QUrl(QString("https://evds3.tcmb.gov.tr/igmevdsms-dis/series=TP.GENENDEKS.T1&startDate=%1&endDate=%2&type=json")
                      .arg(today.addYears(-2).toString("dd-MM-yyyy"), today.toString("dd-MM-yyyy")))};
 }
 
@@ -287,7 +287,7 @@ QByteArray EvdsIndicators::joinParts(const QList<QByteArray> &parts) const
     for (const QJsonValue &v : QJsonDocument::fromJson(parts.value(0)).object().value("items").toArray()) {
         const QJsonObject o = v.toObject();
         const QStringList ym = o.value("Tarih").toString().split('-');   // "2026-9"
-        const QJsonValue value = o.value("TP_FG_J0");
+        const QJsonValue value = o.value("TP_GENENDEKS_T1");
         const double x = value.isDouble() ? value.toDouble() : value.toString().toDouble();
         if (ym.size() == 2 && x > 0)
             level.insert(ym[0].toInt() + (ym[1].toInt() - 0.5) / 12.0, x);

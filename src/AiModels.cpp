@@ -49,6 +49,9 @@ void HuggingFaceHub::search(const QString &query)
     q.addQueryItem("limit", "30");
     q.addQueryItem("sort", "downloads");
     q.addQueryItem("direction", "-1");
+    // A search leaves out `gated` and `lastModified` unless asked, and asking replaces the default fields.
+    for (const char *field : {"downloads", "likes", "pipeline_tag", "library_name", "createdAt", "lastModified", "gated"})
+        q.addQueryItem("expand[]", field);
     url.setQuery(q);
     QNetworkRequest req = request(url);
     req.setTransferTimeout(30000);

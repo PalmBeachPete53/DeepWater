@@ -5632,7 +5632,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>FxData</name>
     <message>
-        <location filename="../src/FxData.cpp" line="+102"/>
+        <location filename="../src/FxData.cpp" line="+116"/>
         <source>No rates returned</source>
         <translation>Aucun taux reçu</translation>
     </message>
@@ -5830,7 +5830,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>HuggingFaceHub</name>
     <message>
-        <location filename="../src/AiModels.cpp" line="+91"/>
+        <location filename="../src/AiModels.cpp" line="+94"/>
         <source>Gated repository: a Hub token that accepted its terms is needed (Sources › AI)</source>
         <translation>Dépôt à accès restreint : il faut un jeton Hub ayant accepté ses conditions (Sources › IA)</translation>
     </message>
@@ -8364,7 +8364,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>OfficialSources</name>
     <message>
-        <location filename="../src/OfficialSources.cpp" line="+160"/>
+        <location filename="../src/OfficialSources.cpp" line="+162"/>
         <source>Statistical office</source>
         <translation>Institut statistique</translation>
     </message>
@@ -10394,9 +10394,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Banque du Mexique</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>INEGI (Mexico)</source>
-        <translation>INEGI (Mexique)</translation>
+        <translation type="vanished">INEGI (Mexique)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -10683,12 +10682,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+162"/>
+        <location line="+161"/>
         <source>Journal</source>
         <translation>Journal</translation>
     </message>
     <message>
-        <location line="-161"/>
+        <location line="-160"/>
         <source>Charts</source>
         <translation>Graphiques</translation>
     </message>
@@ -10703,7 +10702,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>IA</translation>
     </message>
     <message>
-        <location line="+127"/>
+        <location line="+126"/>
         <source>Country series</source>
         <translation>Séries par pays</translation>
     </message>
@@ -11505,13 +11504,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <location line="+116"/>
-        <location line="+159"/>
+        <location line="+155"/>
         <location line="+8"/>
         <source>Bank for International Settlements</source>
         <translation>Banque des règlements internationaux</translation>
     </message>
     <message>
-        <location line="-282"/>
+        <location line="-278"/>
         <source>Forex: policy rates and the carry on each pair</source>
         <translation>Forex : taux directeurs et portage de chaque paire</translation>
     </message>
@@ -11600,7 +11599,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Economy : l&apos;indice Fear &amp; Greed crypto ; celui des actions est une estimation de Deepwater à partir des cours de Yahoo Finance et des spreads de FRED</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+114"/>
         <source>Quant</source>
         <translation>Quant</translation>
     </message>
@@ -11644,8 +11643,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Perspectives de l’économie mondiale (WEO)</translation>
     </message>
     <message>
-        <location line="-170"/>
-        <location line="+170"/>
+        <location line="-166"/>
+        <location line="+166"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+18"/>
@@ -11693,8 +11692,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Secteurs d’activité</translation>
     </message>
     <message>
-        <location line="-187"/>
-        <location line="+187"/>
+        <location line="-183"/>
+        <location line="+183"/>
         <location line="+15"/>
         <source>World Bank</source>
         <translation>Banque mondiale</translation>
@@ -11770,13 +11769,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Carte : dernière inflation, chômage, production, ventes au détail, confiance, taux, PIB et balance courante d&apos;environ 45 économies (fiche pays, deux cartes thermiques)</translation>
     </message>
     <message>
-        <location line="-198"/>
-        <location line="+201"/>
+        <location line="-194"/>
+        <location line="+197"/>
         <source>European statistics</source>
         <translation>Statistiques européennes</translation>
     </message>
     <message>
-        <location line="-486"/>
+        <location line="-482"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
@@ -12155,27 +12154,23 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pays › Norvège : IPC-ATE, croissance du PIB continental ; Suède : CPIF hors énergie</translation>
     </message>
     <message>
-        <location line="+11"/>
         <source>Mexican indicators (BIE)</source>
-        <translation>Indicateurs mexicains (BIE)</translation>
+        <translation type="vanished">Indicateurs mexicains (BIE)</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>INEGI (free token)</source>
-        <translation>INEGI (jeton gratuit)</translation>
+        <translation type="vanished">INEGI (jeton gratuit)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Countries › Mexico: the national statistics office&apos;s indicators, with Banxico&apos;s (Map · national offices)</source>
-        <translation>Pays › Mexique : les indicateurs de l’institut national de statistique, avec ceux de Banxico (Carte · instituts nationaux)</translation>
+        <translation type="vanished">Pays › Mexique : les indicateurs de l’institut national de statistique, avec ceux de Banxico (Carte · instituts nationaux)</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Free token at inegi.org.mx › Servicio web / API de indicadores</source>
-        <translation>Jeton gratuit sur inegi.org.mx › Servicio web / API de indicadores</translation>
+        <translation type="vanished">Jeton gratuit sur inegi.org.mx › Servicio web / API de indicadores</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+11"/>
         <source>Indonesian statistics</source>
         <translation>Statistiques indonésiennes</translation>
     </message>
@@ -12451,8 +12446,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Free key at evds2.tcmb.gov.tr (account › API key)</source>
-        <translation>Clé gratuite sur evds2.tcmb.gov.tr (compte › clé API)</translation>
+        <source>Free key at evds3.tcmb.gov.tr (account › API key)</source>
+        <translation>Clé gratuite sur evds3.tcmb.gov.tr (compte › clé API)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12724,7 +12719,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         </translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Official statistics · every source</source>
         <translation>Statistiques officielles · toutes les sources</translation>
     </message>
@@ -12744,7 +12739,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Afficher %1 de plus</translation>
     </message>
     <message numerus="yes">
-        <location line="+63"/>
+        <location line="+64"/>
         <source>%n source(s)</source>
         <translation>
             <numerusform>%n source</numerusform>
@@ -12835,13 +12830,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1417"/>
-        <location line="+438"/>
+        <location line="-1415"/>
+        <location line="+434"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
     </message>
     <message>
-        <location line="-597"/>
+        <location line="-593"/>
         <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
         <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
     </message>
@@ -12876,7 +12871,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tous les accès</translation>
     </message>
     <message>
-        <location line="+545"/>
+        <location line="+541"/>
         <source>Charts: the Calendar tab</source>
         <translation>Graphiques : l’onglet Calendar</translation>
     </message>
@@ -12931,7 +12926,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Fournis avec l’application</translation>
     </message>
     <message>
-        <location line="-517"/>
+        <location line="-513"/>
         <source>Map: daily transits through the chokepoints by vessel type, a few days behind</source>
         <translation>Carte : transits quotidiens dans les points de passage par type de navire, avec quelques jours de retard</translation>
     </message>
@@ -13025,7 +13020,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pays › Suisse : M1, M2, M3, prix à la consommation, SARON. Desk › Taux : la courbe de la Confédération et les dates de réunion</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+31"/>
         <source>Countries › Indonesia: monthly inflation, unemployment (February and August), exports, imports, foreign tourist visits; three years per request, so since 2015</source>
         <translation>Pays › Indonésie : inflation mensuelle, chômage (février et août), exportations, importations, visites de touristes étrangers ; trois ans par requête, donc depuis 2015</translation>
     </message>
@@ -13055,7 +13050,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Graphiques : symboles CSV:…</translation>
     </message>
     <message>
-        <location line="+375"/>
+        <location line="+377"/>
         <source>Test</source>
         <translation>Tester</translation>
     </message>
@@ -13159,7 +13154,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Pays (zone euro et membres) : M1, M2, M3, prêts, taux hypothécaires, débiteurs et de dépôt, bilans des banques centrales. Desk › Taux : la courbe de la zone euro et les dates de réunion</translation>
     </message>
     <message>
-        <location line="-1225"/>
+        <location line="-1223"/>
         <source>Countries: policy rates, residential property prices, household and private debt in % of GDP. Desk › Notes: central bankers&apos; speeches</source>
         <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
     </message>
@@ -13182,7 +13177,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Pays › Suisse : M1, M2, M3, prix à la consommation, SARON. Desk › Taux : les dates de réunion</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+90"/>
         <source>Desk › Positioning: the share of lots long and short of its community on forex and CFDs. Connect the account there: the password isn&apos;t kept</source>
         <translation>Desk › Positionnement : la part de lots long et short de sa communauté sur le forex et les CFD. Le compte se connecte là-bas : le mot de passe n&apos;est pas conservé</translation>
     </message>
@@ -13227,7 +13222,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Desk › Taux : la courbe des taux</translation>
     </message>
     <message>
-        <location line="+907"/>
+        <location line="+909"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -17549,7 +17544,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>news::Wire</name>
     <message>
-        <location filename="../src/NewsData.cpp" line="+361"/>
+        <location filename="../src/NewsData.cpp" line="+360"/>
         <source>The news feeds are turned off in Sources</source>
         <translation>Les flux d’actualité sont désactivés dans Sources</translation>
     </message>

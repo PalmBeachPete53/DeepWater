@@ -342,7 +342,7 @@ it credits; the free ones with a machine-readable API that cover many countries 
   `keys/<id>`, entered in Sources; without one the set reports "No API key" and never downloads): FRED (PCE
   inflation from the index, housing starts, initial claims, trade balance, Michigan sentiment), EIA (weekly crude
   stocks and production, gasoline price), BEA (NIPA T10101, GDP at an annual rate), Banxico (SIE: annual inflation,
-  target rate), Bank of Korea (ECOS 901Y009, CPI index), Turkish central bank (EVDS `TP.FG.J0`, key in a `key`
+  target rate), Bank of Korea (ECOS 901Y009, CPI index), Turkish central bank (EVDS `TP.GENENDEKS.T1`, key in a `key`
   header). Their parsers follow the documented formats but were written without keys: the Sources **Test**
   button and the first download will tell.
 - **UN Comtrade** (`ComtradeProducts`, on demand): the economy sheet's **Trade by product** section, exports and
@@ -928,8 +928,8 @@ Sources:
   Riksbank, GUS, Statistik Austria, NBB) answer without a key, ISTAT timed out. With the user's free key (the same
   `keys/<id>` as the map's national sources; without it these rows fall back to the compilations): the Bank of
   Korea's ECOS (`STAT/CYCLE/ITEM` ids, checked with ECOS's `sample` key: base rate, CPI, GDP, current account,
-  10-year yield, reserves, KB house prices, business and consumer surveys, unemployment), Banxico's SIE and INEGI's
-  BIE (Mexico), the Turkish central bank's EVDS (key in a `key` header), Statistics Indonesia's web API (BPS: at most
+  10-year yield, reserves, KB house prices, business and consumer surveys, unemployment), Banxico's SIE (Mexico),
+  the Turkish central bank's EVDS (key in a `key` header), Statistics Indonesia's web API (BPS: at most
   three years per request, so four requests from 2015; a cell's key is vervar + var + turvar + year id + period id;
   monthly inflation, unemployment, exports, imports, tourist visits), e-Stat (Japan: the 2025-base CPI table
   0004052037 filtered by `q`, all items, less fresh food, less fresh food and energy, services; times YYYY00MMMM). Banxico's APIIF (public token)
@@ -1038,7 +1038,7 @@ shows a notice under its header and **Open in the browser** is the way.
 - **Providers**: with a Financial Modeling Prep key saved in Sources › News, its `stable/news/*-latest` endpoints
   (and `news/stock|crypto|forex?symbols=` for the filter) give every article a ticker; without one, free RSS feeds,
   merged, deduplicated by URL and sorted newest first (60 at most): CNBC top news and finance, MarketWatch and BBC
-  Business (general); Nasdaq Stocks and Markets, MarketWatch market pulse, Seeking Alpha market currents and
+  Business (general); Nasdaq Stocks and Markets, Seeking Alpha market currents and
   Investing.com (stocks); Cointelegraph, Decrypt, CoinDesk and Investing.com (crypto); FXStreet and Investing.com
   (forex). A failed FMP request falls back to the feeds and says why in the strip.
 - **Ticker badge** with the feeds: the feed's own ticker list (Nasdaq's `nasdaq:tickers`, Seeking Alpha's symbol
@@ -1573,7 +1573,7 @@ three views; Economy's dashboards, Countries and Indicators; Research; Quant; Ch
 not checked yet, dashed when off). Hovering a source, a part or a link brings its data out and lists its data sets
 in the side card; a click pins it, and **Show in the list** opens the List with only those data sets (a chip clears
 the filter). Below the sources, **Listed, not read by the app**: the official catalogue's bodies (Statistical
-offices, Central banks, Ministries and agencies, International organisations, Private institutes, about 1,400 in
+offices, Central banks, Ministries and agencies, International organisations, Private institutes, about 1,300 in
 all) whose site the app doesn't read — a body counts as read when its site's domain (`bcb.gov.br`, `ecb.europa.eu`)
 is one a row reads from. Hollow dots, no links; the side card gives their access (free, headline, paid), how many
 answered the last check, and their names by country (those of more than ten countries together), and **Show in the
@@ -1787,6 +1787,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `resources/markets.json` | Commodities (futures symbol, IMF series, units) and sample sites (edit to add data) |
 | `resources/countries.json` | Natural Earth 1:50m countries (public domain), stripped to geometry |
 | `resources/data_sources.json` | Catalogue of the data sources named on tradingeconomics.com, built by `docs/audit-tradingeconomics.md`'s crawl |
+| `docs/sources/` | What every source holds (data sets, fields, coverage, not the values) and what the app reads of it: `INDEX.md`, one card per source, the catalogue's bodies, long lists in `catalog/`; rebuilt with `tools/source-inventory/` |
 
 ## Translations
 

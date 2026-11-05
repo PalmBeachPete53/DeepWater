@@ -321,7 +321,7 @@
       {"p": "wb", "source": "15", "id": "CORENS"}]},
     "core_inflation": {"name": "Core Inflation Rate", "unit": "percent", "src": [
       {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0161&cdArea=00000", "note": "all items less fresh food"},
-      {"p": "pxweb", "flow": "ssb", "id": "05327", "q": "Konsumgrp=JAE_TOTAL&ContentsCode=Tolvmanedersendring", "note": "CPI-ATE"},
+      {"p": "pxweb", "flow": "ssb", "id": "14706", "q": "KPIavledetSerie=KPI-JAE&ContentsCode=Tolvmanedersendring", "note": "CPI-ATE"},
       {"p": "pxweb", "flow": "scb", "id": "TAB6593", "q": "ContentsCode=000007ZV", "note": "CPIF excluding energy"},
       {"p": "statcan", "id": "108785715", "note": "CPI-trim"},
       {"p": "abs", "flow": "CPI,2.0.0", "key": "3.999902.20.50.M", "note": "trimmed mean"},

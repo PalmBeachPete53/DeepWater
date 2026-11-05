@@ -37,7 +37,6 @@ const char *const GeneralFeeds[] {
 };
 const char *const StockFeeds[] {
     "https://www.nasdaq.com/feed/rssoutbound?category=Stocks",
-    "https://feeds.content.dowjones.io/public/rss/mw_marketpulse",
     "https://seekingalpha.com/market_currents.xml",
     "https://www.investing.com/rss/news_25.rss",
     "https://www.nasdaq.com/feed/rssoutbound?category=Markets",

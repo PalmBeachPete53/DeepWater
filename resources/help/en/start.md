@@ -49,7 +49,7 @@ Deepwater works without any key. These free ones add data; all are entered in [S
 | Hugging Face | Downloads of gated models (the open ones need nothing) |
 | Anthropic | The Claude integration's settings and model list |
 | UN Comtrade | Trade by product beyond the public preview's limits |
-| BEA, Banxico, Bank of Korea, Turkish central bank, INEGI, BPS, e-Stat | National series for those countries |
+| BEA, Banxico, Bank of Korea, Turkish central bank, BPS, e-Stat | National series for those countries |
 | Alpaca, Polygon | Extra data providers for the Charts page |
 
 Each source also has a **switch**: off, it makes no more requests, and the last copy saved on disk stays in use.

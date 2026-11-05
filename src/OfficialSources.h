@@ -16,6 +16,7 @@ public:
     enum class Access { Free, Headline, Paid, Mixed, Proprietary };
     struct Source {
         QString name;
+        QStringList aliases;     // the other names it is credited under, found by the search
         QString url;
         Kind kind;
         Access access;

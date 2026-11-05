@@ -27,6 +27,8 @@ OfficialSources::OfficialSources()
         const QJsonObject o = v.toObject();
         Source s;
         s.name = o.value("name").toString();
+        for (const QJsonValue &a : o.value("aliases").toArray())
+            s.aliases << a.toString();
         s.url = o.value("url").toString();
         const QString kind = o.value("kind").toString();
         s.kind = kind == "stat"       ? Kind::Statistics

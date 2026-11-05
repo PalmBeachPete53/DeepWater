@@ -12,7 +12,7 @@ Le lecteur a un **bloqueur de publicités**, le moteur de Brave avec les listes 
 
 ## Sources
 
-Sans clé, des flux RSS gratuits fusionnés et triés du plus récent : CNBC, MarketWatch et BBC Business (general) ; Nasdaq, MarketWatch, Seeking Alpha et Investing.com (stocks) ; Cointelegraph, Decrypt, CoinDesk et Investing.com (crypto) ; FXStreet et Investing.com (forex). Le badge de ticker vient du flux quand il en donne un, sinon du texte (« (NASDAQ: NFLX) », « $NVDA », la monnaie ou la devise nommée en premier). Avec le filtre par ticker, l'onglet Stocks lit les flux de Yahoo Finance et du Nasdaq sur ce symbole ; les autres onglets gardent les articles qui le nomment.
+Sans clé, des flux RSS gratuits fusionnés et triés du plus récent : CNBC, MarketWatch et BBC Business (general) ; Nasdaq, Seeking Alpha et Investing.com (stocks) ; Cointelegraph, Decrypt, CoinDesk et Investing.com (crypto) ; FXStreet et Investing.com (forex). Le badge de ticker vient du flux quand il en donne un, sinon du texte (« (NASDAQ: NFLX) », « $NVDA », la monnaie ou la devise nommée en premier). Avec le filtre par ticker, l'onglet Stocks lit les flux de Yahoo Finance et du Nasdaq sur ce symbole ; les autres onglets gardent les articles qui le nomment.
 
 Avec une clé **Financial Modeling Prep** enregistrée dans Sources › News, ses points d'accès donnent un ticker à chaque article et le filtre les interroge directement. Une requête qui échoue revient aux flux et le dit dans le bandeau.
 

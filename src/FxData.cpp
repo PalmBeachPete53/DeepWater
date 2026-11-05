@@ -3,7 +3,9 @@
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QJsonArray>
 #include <QJsonDocument>
+#include <QJsonObject>
 #include <QJsonObject>
 #include <QNetworkReply>
 #include <QSaveFile>
@@ -65,7 +67,7 @@ void FxData::fetch()
                 symbols << c;
     const QDate end = QDate::currentDate();
     const QDate start = end.addDays(-HistoryDays);
-    const QUrl url(QString("https://api.frankfurter.dev/v1/%1..%2?base=USD&symbols=%3")
+    const QUrl url(QString("https://api.frankfurter.dev/v2/rates?from=%1&to=%2&base=USD&quotes=%3&providers=ECB")
                        .arg(start.toString(Qt::ISODate), end.toString(Qt::ISODate), symbols.join(',')));
     QNetworkRequest request(url);
     request.setTransferTimeout(30 * 1000);
@@ -86,8 +88,9 @@ void FxData::fetch()
         QDir().mkpath(QFileInfo(cachePath()).absolutePath());
         QSaveFile file(cachePath());
         if (file.open(QIODevice::WriteOnly)) {
+            const QJsonDocument response = QJsonDocument::fromJson(body);
             QJsonObject cache {{"fetchedAt", m_fetchedAt.toString(Qt::ISODate)},
-                               {"response", QJsonDocument::fromJson(body).object()}};
+                               {"response", response.isArray() ? QJsonValue(response.array()) : QJsonValue(response.object())}};
             file.write(QJsonDocument(cache).toJson(QJsonDocument::Compact));
             file.commit();
         }
@@ -97,7 +100,18 @@ void FxData::fetch()
 
 bool FxData::parse(const QByteArray &json)
 {
-    const QJsonObject rates = QJsonDocument::fromJson(json).object().value("rates").toObject();
+    // v2 gives one {date, quote, rate} per line; a cache file saved by v1 still holds {"rates": {date: {currency: rate}}}.
+    const QJsonDocument doc = QJsonDocument::fromJson(json);
+    QJsonObject rates = doc.object().value("rates").toObject();
+    if (doc.isArray()) {
+        QHash<QString, QJsonObject> days;
+        for (const QJsonValue &v : doc.array()) {
+            const QJsonObject o = v.toObject();
+            days[o.value("date").toString()].insert(o.value("quote").toString(), o.value("rate"));
+        }
+        for (auto it = days.begin(); it != days.end(); ++it)
+            rates.insert(it.key(), it.value());
+    }
     if (rates.isEmpty()) {
         m_error = tr("No rates returned");
         return false;
@@ -130,7 +144,9 @@ void FxData::loadCache()
     if (!file.open(QIODevice::ReadOnly))
         return;
     const QJsonObject cache = QJsonDocument::fromJson(file.readAll()).object();
-    if (parse(QJsonDocument(cache.value("response").toObject()).toJson(QJsonDocument::Compact)))
+    const QJsonValue response = cache.value("response");
+    const QJsonDocument saved = response.isArray() ? QJsonDocument(response.toArray()) : QJsonDocument(response.toObject());
+    if (parse(saved.toJson(QJsonDocument::Compact)))
         m_fetchedAt = QDateTime::fromString(cache.value("fetchedAt").toString(), Qt::ISODate);
     m_error.clear();
 }

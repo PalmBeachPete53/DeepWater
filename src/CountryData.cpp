@@ -1425,7 +1425,7 @@ void CountryLoader::fetch(const SourceSpec &s, SeriesDone done)
     if (s.provider == "evds") {
         // The Turkish central bank's EVDS: the key goes in a "key" header; {"items": [{"Tarih": "2026-9" (or
         // "30-10-2026", "2026-Q3"), "TP_FG_J0": "…"}]}, the series code with '_' for '.'.
-        QUrl url(QString("https://evds2.tcmb.gov.tr/service/evds/series=%1&startDate=01-01-1950&endDate=%2&type=json")
+        QUrl url(QString("https://evds3.tcmb.gov.tr/igmevdsms-dis/series=%1&startDate=01-01-1950&endDate=%2&type=json")
                      .arg(s.id, QDate::currentDate().toString("dd-MM-yyyy")));
         const QString field = QString(s.id).replace('.', '_');
         client->raw("evds:" + s.id, url, 12 * Hour, true, {{"key", sourceKey("evds").toUtf8()}}, this,
@@ -1588,9 +1588,9 @@ void CountryLoader::fetch(const SourceSpec &s, SeriesDone done)
 
     if (s.provider == "pxweb") {
         // PxWeb API 2 (Statistics Norway "ssb", Statistics Sweden "scb"): a table (`id`), the values of its other
-        // dimensions (`q`: "Konsumgrp=JAE_TOTAL&ContentsCode=Tolvmanedersendring") and every period, as JSON-stat 2.
-        const QString base = s.flow == "scb" ? QStringLiteral("https://api.scb.se/OV0104/v2beta/api/v2/tables/")
-                                             : QStringLiteral("https://data.ssb.no/api/pxwebapi/v2-beta/tables/");
+        // dimensions (`q`: "KPIavledetSerie=KPI-JAE&ContentsCode=Tolvmanedersendring") and every period, as JSON-stat 2.
+        const QString base = s.flow == "scb" ? QStringLiteral("https://statistikdatabasen.scb.se/api/v2/tables/")
+                                             : QStringLiteral("https://data.ssb.no/api/pxwebapi/v2/tables/");
         QUrlQuery q;
         q.addQueryItem("lang", "en");
         q.addQueryItem("outputFormat", "json-stat2");

@@ -14,7 +14,7 @@ Les sources sont groupées par la page qu'elles alimentent : la carte et les nav
 
 Le champ de recherche filtre les lignes. Les états se rafraîchissent chaque seconde tant que l'onglet est affiché.
 
-**Le catalogue officiel.** Sous les sources de l'application, cinq groupes repliés listent les organismes derrière les statistiques du monde — offices statistiques, banques centrales, ministères et agences, organisations internationales, instituts privés, environ 1 400 — en cartes : ce que chacun publie, son accès (gratuit, titres gratuits, payant) et son API, l'état de son site au dernier inventaire, **Test** et **Ouvrir le site**. Le champ de recherche et les filtres par pays et par accès s'appliquent aussi à eux.
+**Le catalogue officiel.** Sous les sources de l'application, cinq groupes repliés listent les organismes derrière les statistiques du monde — offices statistiques, banques centrales, ministères et agences, organisations internationales, instituts privés, environ 1 300 — en cartes : ce que chacun publie, son accès (gratuit, titres gratuits, payant) et son API, l'état de son site au dernier inventaire, **Test** et **Ouvrir le site**. Le champ de recherche et les filtres par pays et par accès s'appliquent aussi à eux.
 
 ## Données
 

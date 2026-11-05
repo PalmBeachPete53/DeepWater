@@ -49,7 +49,7 @@ Deepwater fonctionne sans aucune clé. Celles-ci, gratuites, ajoutent des donné
 | Hugging Face | Le téléchargement des modèles à accès restreint (les ouverts n'ont besoin de rien) |
 | Anthropic | Les réglages de l'intégration Claude et sa liste de modèles |
 | UN Comtrade | Le commerce par produit au-delà des limites de l'aperçu public |
-| BEA, Banxico, Banque de Corée, banque centrale turque, INEGI, BPS, e-Stat | Les séries nationales de ces pays |
+| BEA, Banxico, Banque de Corée, banque centrale turque, BPS, e-Stat | Les séries nationales de ces pays |
 | Alpaca, Polygon | Des fournisseurs de données supplémentaires pour la page Graphiques |
 
 Chaque source a aussi un **interrupteur** : coupée, elle ne fait plus aucune requête, et la dernière copie enregistrée sur le disque reste en usage.

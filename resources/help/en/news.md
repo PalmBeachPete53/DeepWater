@@ -12,7 +12,7 @@ The reader runs an **ad blocker**, Brave's engine with the lists it turns on by 
 
 ## Sources
 
-Without a key, free RSS feeds merged and sorted newest first: CNBC, MarketWatch and BBC Business (general); Nasdaq, MarketWatch, Seeking Alpha and Investing.com (stocks); Cointelegraph, Decrypt, CoinDesk and Investing.com (crypto); FXStreet and Investing.com (forex). The ticker badge comes from the feed when it gives one, else from the text ("(NASDAQ: NFLX)", "$NVDA", the coin or currency named first). With the ticker filter, the Stocks tab reads Yahoo Finance's and Nasdaq's feeds about that symbol; the other tabs keep the articles that name it.
+Without a key, free RSS feeds merged and sorted newest first: CNBC, MarketWatch and BBC Business (general); Nasdaq, Seeking Alpha and Investing.com (stocks); Cointelegraph, Decrypt, CoinDesk and Investing.com (crypto); FXStreet and Investing.com (forex). The ticker badge comes from the feed when it gives one, else from the text ("(NASDAQ: NFLX)", "$NVDA", the coin or currency named first). With the ticker filter, the Stocks tab reads Yahoo Finance's and Nasdaq's feeds about that symbol; the other tabs keep the articles that name it.
 
 With a **Financial Modeling Prep** key saved in Sources › News, its news endpoints give every article a ticker and the filter asks them directly. A failed request falls back to the feeds and says why in the strip.
 

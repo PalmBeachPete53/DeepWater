@@ -175,7 +175,7 @@ void SourcesPage::applySaved(const Targets &t)
     t.marketSessions->setEnabled(on("yahoo_sessions"));
     for (const char *group : {"yahoo", "nasdaq", "sec", "wikipedia", "wikidata", "treasury", "fred", "oecd", "coinmarketcap",
                               "alternative", "worldbank", "imf", "eurostat", "bis", "ecb", "ilo", "eia", "ons", "boe", "bcb",
-                              "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "inegi", "bps", "estat",
+                              "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "bps", "estat",
                               "fed", "cftc", "binance", "investinglive", "ing", "mof", "philly"})
         research::Client::instance()->setEnabled(group, on(QByteArray("research_") + group));
     Myfxbook::instance()->setEnabled(on("myfxbook"));
@@ -390,7 +390,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     section(tr("Forex"));
     add(buildRow({"fx", Kind::Dataset, tr("Reference exchange rates"), tr("European Central Bank, via Frankfurter"),
                   "api.frankfurter.dev", tr("Forex: pairs, sparklines, correlations")},
-                 dataset(m_t.fx, 6 * 3600, QUrl("https://api.frankfurter.dev/v1/latest?base=USD&symbols=EUR"))));
+                 dataset(m_t.fx, 6 * 3600, QUrl("https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR&providers=ECB"))));
     add(buildRow({"bis_daily", Kind::Dataset, tr("Central bank policy rates"), tr("Bank for International Settlements"),
                   "stats.bis.org", tr("Forex: policy rates and the carry on each pair")},
                  dataset(m_t.policyRates, 12 * 3600, m_t.policyRates->sourceUrl())));
@@ -566,9 +566,9 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                   "servicios.ine.es", tr("Countries › Spain: international tourist arrivals (FRONTUR)")},
                  research("ine", QUrl("https://servicios.ine.es/wstempus/js/EN/DATOS_SERIE/FREG337?nult=1"))));
     add(buildRow({"research_pxweb", Kind::Dataset, tr("PxWeb tables"), tr("Statistics Norway · Statistics Sweden"),
-                  "data.ssb.no · api.scb.se", tr("Countries › Norway: CPI-ATE, Mainland GDP growth; Sweden: CPIF excluding "
+                  "data.ssb.no · statistikdatabasen.scb.se", tr("Countries › Norway: CPI-ATE, Mainland GDP growth; Sweden: CPIF excluding "
                                                  "energy")},
-                 research("pxweb", QUrl("https://data.ssb.no/api/pxwebapi/v2-beta/tables/05327/metadata?lang=en"))));
+                 research("pxweb", QUrl("https://data.ssb.no/api/pxwebapi/v2/tables/14706/metadata?lang=en"))));
     // Offices that want a user's free key: the key is entered here (Banxico, ECOS and EVDS have theirs under Map ·
     // national offices, read directly; Countries reads the same keys).
     auto keyedResearch = [&](const QString &group, const QUrl &probe, const QString &keyId, const QString &hint) {
@@ -577,10 +577,6 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
         d.keyHint = hint;
         return d;
     };
-    add(buildRow({"research_inegi", Kind::Dataset, tr("Mexican indicators (BIE)"), tr("INEGI (free token)"), "www.inegi.org.mx",
-                  tr("Countries › Mexico: the national statistics office's indicators, with Banxico's (Map · national offices)")},
-                 keyedResearch("inegi", QUrl("https://www.inegi.org.mx/app/api/indicadores/"), "inegi",
-                               tr("Free token at inegi.org.mx › Servicio web / API de indicadores"))));
     add(buildRow({"research_bps", Kind::Dataset, tr("Indonesian statistics"), tr("Statistics Indonesia (BPS, free key)"),
                   "webapi.bps.go.id", tr("Countries › Indonesia: monthly inflation, unemployment (February and August), exports, imports, "
                                          "foreign tourist visits; three years per request, so since 2015")},
@@ -733,9 +729,9 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     add(buildRow({"ecos", Kind::Dataset, tr("South Korea"), tr("Bank of Korea (ECOS API, free key)"), "ecos.bok.or.kr",
                   tr("Map: consumer prices of South Korea")},
                  keyed(m_t.ecos, 12 * 3600, m_t.ecos->sourceUrl(), "ecos", tr("Free key at ecos.bok.or.kr › Open API"))));
-    add(buildRow({"evds", Kind::Dataset, tr("Türkiye"), tr("Central Bank of the Republic of Türkiye (EVDS, free key)"), "evds2.tcmb.gov.tr",
+    add(buildRow({"evds", Kind::Dataset, tr("Türkiye"), tr("Central Bank of the Republic of Türkiye (EVDS, free key)"), "evds3.tcmb.gov.tr",
                   tr("Map: consumer prices of Türkiye")},
-                 keyed(m_t.evds, 12 * 3600, m_t.evds->sourceUrl(), "evds", tr("Free key at evds2.tcmb.gov.tr (account › API key)"))));
+                 keyed(m_t.evds, 12 * 3600, m_t.evds->sourceUrl(), "evds", tr("Free key at evds3.tcmb.gov.tr (account › API key)"))));
     l->addSpacing(12);
 
     section(tr("Map · databases with a free key"));
@@ -1006,7 +1002,8 @@ QWidget *SourcesPage::buildCatalogueRow(int source)
     d.probeUrl = url;
     QWidget *card = buildRow(info, d);
     m_rows.last().catalogue = source;
-    m_rows.last().search += ' ' + slugs.join(' ').replace('-', ' ').toLower() + ' ' + s.countries.join(' ').toLower();
+    m_rows.last().search += ' ' + slugs.join(' ').replace('-', ' ').toLower() + ' ' + s.countries.join(' ').toLower() + ' '
+                            + s.aliases.join(' ').toLower();
     return card;
 }
 
@@ -1131,7 +1128,8 @@ void SourcesPage::applyFilter()
                 const auto it = m_index.constFind(QString("cat:%1").arg(i));
                 const QString haystack = it != m_index.constEnd()
                                              ? m_rows[it.value()].search
-                                             : (src.name + ' ' + src.url + ' ' + src.api + ' ' + src.countries.join(' ') + ' '
+                                             : (src.name + ' ' + src.aliases.join(' ') + ' ' + src.url + ' ' + src.api + ' '
+                                                + src.countries.join(' ') + ' '
                                                 + catalogue.indicatorsOf(i).join(' ').replace('-', ' ')).toLower();
                 if (!matches(haystack)) continue;
             }
