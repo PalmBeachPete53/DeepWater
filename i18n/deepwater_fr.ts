@@ -7410,7 +7410,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1363"/>
+        <location filename="../src/MainWindow.cpp" line="+1369"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -7418,7 +7418,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-1084"/>
+        <location filename="../src/MainWindow.cpp" line="-1089"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
@@ -7488,7 +7488,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+876"/>
+        <location line="+881"/>
         <source>Trade in goods</source>
         <translation>Commerce de biens</translation>
     </message>
@@ -10078,7 +10078,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../src/SettingsDialog.cpp" line="+154"/>
+        <location filename="../src/SettingsDialog.cpp" line="+191"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
@@ -10089,18 +10089,24 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Language</source>
         <translation>Langue</translation>
     </message>
     <message>
-        <location line="-1"/>
-        <location line="+3"/>
+        <location line="-2"/>
+        <location line="+4"/>
         <source>Theme</source>
         <translation>Thème</translation>
     </message>
     <message>
-        <location line="-1"/>
+        <location line="-3"/>
+        <location line="+5"/>
+        <source>News</source>
+        <translation>News</translation>
+    </message>
+    <message>
+        <location line="-3"/>
         <source>Choose the language used across the interface and market data.</source>
         <translation>Choisissez la langue de l&apos;interface et des données de marché.</translation>
     </message>
@@ -10108,6 +10114,21 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+2"/>
         <source>Choose the color palette for the globe and panels.</source>
         <translation>Choisissez la palette de couleurs du globe et des panneaux.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Article translation puts a Translate button in the article reader. Turned off, the button goes away and the reader translates nothing.</source>
+        <translation>La traduction des articles ajoute un bouton Traduire au lecteur d&apos;articles. Désactivée, le bouton disparaît et le lecteur ne traduit plus rien.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Article translation on</source>
+        <translation>Traduction des articles activée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Article translation off</source>
+        <translation>Traduction des articles désactivée</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -12960,7 +12981,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+62"/>
         <source>Countries (euro area and members): M1, M2, M3, loans, mortgage, lending and deposit rates, central bank balance sheets. Desk › Rates: the euro area yield curve, €STR and meeting dates. Desk › Forecasts: its Survey of Professional Forecasters</source>
-        <translation>Pays (zone euro et membres) : M1, M2, M3, prêts, taux hypothécaires, débiteurs et de dépôt, bilans des banques centrales. Desk › Taux : la courbe de la zone euro, l'€STR et les dates de réunion. Desk › Prévisions : son enquête auprès des prévisionnistes professionnels</translation>
+        <translation>Pays (zone euro et membres) : M1, M2, M3, prêts, taux hypothécaires, débiteurs et de dépôt, bilans des banques centrales. Desk › Taux : la courbe de la zone euro, l&apos;€STR et les dates de réunion. Desk › Prévisions : son enquête auprès des prévisionnistes professionnels</translation>
     </message>
     <message>
         <location line="+26"/>
@@ -13157,7 +13178,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+1"/>
         <source>Desk › Forecasts: how far apart forecasters are on US inflation, growth and unemployment</source>
-        <translation>Desk › Prévisions : l'écart entre prévisionnistes sur l'inflation, la croissance et le chômage américains</translation>
+        <translation>Desk › Prévisions : l&apos;écart entre prévisionnistes sur l&apos;inflation, la croissance et le chômage américains</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14446,7 +14467,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="-138"/>
         <source>How far apart forecasters are</source>
-        <translation>L'écart entre prévisionnistes</translation>
+        <translation>L&apos;écart entre prévisionnistes</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -14481,7 +14502,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+2"/>
         <source>Each forecaster&apos;s own answer in the latest Survey of Professional Forecasters: the ECB&apos;s, quarterly, and the Philadelphia Fed&apos;s, quarterly. Yearly figures, not the range for one release: no free source publishes that one for a calendar event.</source>
-        <translation>La réponse de chaque prévisionniste dans la dernière enquête auprès des prévisionnistes professionnels : celle de la BCE et celle de la Fed de Philadelphie, trimestrielles. Des chiffres annuels, pas la fourchette d'une publication : aucune source gratuite ne la publie pour un événement du calendrier.</translation>
+        <translation>La réponse de chaque prévisionniste dans la dernière enquête auprès des prévisionnistes professionnels : celle de la BCE et celle de la Fed de Philadelphie, trimestrielles. Des chiffres annuels, pas la fourchette d&apos;une publication : aucune source gratuite ne la publie pour un événement du calendrier.</translation>
     </message>
     <message>
         <location line="+135"/>
@@ -15795,22 +15816,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+2"/>
         <source>Policy rates from the BIS; decisions and votes from the banks&apos; own pages, where they publish them. The RBA and the RBNZ refuse programs, so their dates are kept in the app and updated with it. 2Y − rate is the 2-year government yield against the policy rate: where the market sees rates, with a term premium. No free source that allows it publishes short rate futures for the other banks; ING&apos;s forecasts for them are in Forecasts.</source>
-        <translation>Taux directeurs de la BRI ; décisions et votes d'après les pages des banques, quand elles les publient. La RBA et la RBNZ refusent les programmes : leurs dates sont gardées dans l'application et mises à jour avec elle. 2 ans − taux est le rendement d'État à 2 ans face au taux directeur : où le marché voit les taux, avec une prime de terme. Aucune source gratuite qui l'autorise ne publie de contrats à terme courts pour les autres banques ; les prévisions d'ING sont dans Prévisions.</translation>
+        <translation>Taux directeurs de la BRI ; décisions et votes d&apos;après les pages des banques, quand elles les publient. La RBA et la RBNZ refusent les programmes : leurs dates sont gardées dans l&apos;application et mises à jour avec elle. 2 ans − taux est le rendement d&apos;État à 2 ans face au taux directeur : où le marché voit les taux, avec une prime de terme. Aucune source gratuite qui l&apos;autorise ne publie de contrats à terme courts pour les autres banques ; les prévisions d&apos;ING sont dans Prévisions.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Latest published: US Treasury and Japan&apos;s finance ministry par yields, the ECB&apos;s AAA euro area curve, the Bank of England&apos;s gilt zero-coupon curve, the Bank of Canada&apos;s benchmark bonds, long-term shown at 30 years, the SNB&apos;s Confederation spot rates. Methods differ, so levels compare roughly.</source>
-        <translation>Dernière publication : rendements au pair du Trésor américain et du ministère japonais des Finances, courbe AAA de la zone euro de la BCE, courbe zéro-coupon des gilts de la Banque d'Angleterre, obligations de référence de la Banque du Canada, long terme placé à 30 ans, taux au comptant de la Confédération de la BNS. Les méthodes diffèrent : les niveaux se comparent approximativement.</translation>
+        <translation>Dernière publication : rendements au pair du Trésor américain et du ministère japonais des Finances, courbe AAA de la zone euro de la BCE, courbe zéro-coupon des gilts de la Banque d&apos;Angleterre, obligations de référence de la Banque du Canada, long terme placé à 30 ans, taux au comptant de la Confédération de la BNS. Les méthodes diffèrent : les niveaux se comparent approximativement.</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>The Bank of England&apos;s daily OIS forward curve (Bloomberg Finance L.P. and Bank calculations), shown for your own use. Each meeting&apos;s move is the forward a week after it against the one before, spread on the two nearest quarter points as for the Fed: a simplification with a small premium in it, not a survey of odds.</source>
-        <translation>La courbe OIS à terme quotidienne de la Banque d'Angleterre (Bloomberg Finance L.P. et calculs de la Banque), affichée pour votre usage personnel. Le mouvement d'une réunion est le taux à terme une semaine après, face au précédent, réparti sur les deux quarts de point les plus proches comme pour la Fed : une simplification avec une petite prime, pas une enquête de probabilités.</translation>
+        <translation>La courbe OIS à terme quotidienne de la Banque d&apos;Angleterre (Bloomberg Finance L.P. et calculs de la Banque), affichée pour votre usage personnel. Le mouvement d&apos;une réunion est le taux à terme une semaine après, face au précédent, réparti sur les deux quarts de point les plus proches comme pour la Fed : une simplification avec une petite prime, pas une enquête de probabilités.</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Euro area: €STR futures, by quarter</source>
-        <translation>Zone euro : contrats à terme sur l'€STR, par trimestre</translation>
+        <translation>Zone euro : contrats à terme sur l&apos;€STR, par trimestre</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -15820,7 +15841,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <source>Against €STR today</source>
-        <translation>Face à l'€STR du jour</translation>
+        <translation>Face à l&apos;€STR du jour</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -15835,7 +15856,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+2"/>
         <source>CME&apos;s three-month €STR futures, delayed, against the ECB&apos;s latest €STR. A quarter holds about two ECB meetings, so this reads the path, not one meeting&apos;s odds. Most of this market trades elsewhere, so a low volume means a thin price.</source>
-        <translation>Les contrats à terme CME sur l'€STR à trois mois, différés, face au dernier €STR de la BCE. Un trimestre contient environ deux réunions de la BCE : cela lit le chemin, pas les chances d'une réunion. Ce marché se traite surtout ailleurs : un faible volume signale un prix peu fiable.</translation>
+        <translation>Les contrats à terme CME sur l&apos;€STR à trois mois, différés, face au dernier €STR de la BCE. Un trimestre contient environ deux réunions de la BCE : cela lit le chemin, pas les chances d&apos;une réunion. Ce marché se traite surtout ailleurs : un faible volume signale un prix peu fiable.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -15860,7 +15881,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+2"/>
         <source>The OECD&apos;s monthly interbank and long-term rates: their central banks refuse programs and no free daily curve was found, so only these two points, some weeks old.</source>
-        <translation>Les taux mensuels interbancaires et à long terme de l'OCDE : leurs banques centrales refusent les programmes et aucune courbe quotidienne gratuite n'a été trouvée, d'où ces deux seuls points, vieux de quelques semaines.</translation>
+        <translation>Les taux mensuels interbancaires et à long terme de l&apos;OCDE : leurs banques centrales refusent les programmes et aucune courbe quotidienne gratuite n&apos;a été trouvée, d&apos;où ces deux seuls points, vieux de quelques semaines.</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -16863,7 +16884,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>newsui::Reader</name>
     <message>
-        <location filename="../src/NewsReader.cpp" line="+56"/>
+        <location filename="../src/NewsReader.cpp" line="+57"/>
         <source>Back</source>
         <translation>Retour</translation>
     </message>
@@ -16880,7 +16901,7 @@ heure locale %2, horaires %3–%4 là-bas
     <message>
         <location line="+6"/>
         <source>Translates the page&apos;s text on this Mac, with the languages installed in macOS: nothing is sent anywhere. Links and formatting inside paragraphs are lost until you go back to the original.</source>
-        <translation>Traduit le texte de la page sur ce Mac, avec les langues installées dans macOS : rien n'est envoyé nulle part. Les liens et la mise en forme à l'intérieur des paragraphes sont perdus jusqu'au retour à l'original.</translation>
+        <translation>Traduit le texte de la page sur ce Mac, avec les langues installées dans macOS : rien n&apos;est envoyé nulle part. Les liens et la mise en forme à l&apos;intérieur des paragraphes sont perdus jusqu&apos;au retour à l&apos;original.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -16918,7 +16939,7 @@ Résumé : %1</translation>
     </message>
     <message>
         <location line="-61"/>
-        <location line="+80"/>
+        <location line="+103"/>
         <location line="+27"/>
         <source>Translate</source>
         <translation>Traduire</translation>
@@ -16928,7 +16949,7 @@ Résumé : %1</translation>
         <translation type="vanished">Fait traduire le titre et le résumé du flux par le modèle local du panneau latéral ; la page elle-même n&apos;est pas traduite</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="-76"/>
         <source>Translate this into %1, faithfully, and answer with the translation only.
 
 Headline: %2</source>
@@ -16937,14 +16958,14 @@ Headline: %2</source>
 Titre : %2</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+73"/>
         <source>Translating…</source>
         <translation>Traduction…</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>This page has no text to translate.</source>
-        <translation>Cette page n'a pas de texte à traduire.</translation>
+        <translation>Cette page n&apos;a pas de texte à traduire.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -16954,7 +16975,7 @@ Titre : %2</translation>
     <message>
         <location line="+3"/>
         <source>The language of this page (%1) isn&apos;t installed for translation: add it in System Settings › General › Language &amp; Region › Translation Languages. Nothing is downloaded without you.</source>
-        <translation>La langue de cette page (%1) n'est pas installée pour la traduction : ajoutez-la dans Réglages Système › Général › Langue et région › Langues de traduction. Rien n'est téléchargé sans vous.</translation>
+        <translation>La langue de cette page (%1) n&apos;est pas installée pour la traduction : ajoutez-la dans Réglages Système › Général › Langue et région › Langues de traduction. Rien n&apos;est téléchargé sans vous.</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -48,6 +48,7 @@
 #include "MacroPanel.h"
 #include "OverviewPage.h"
 #include "NewsPage.h"
+#include "NewsReader.h"
 #include "EconomyPage.h"
 #include "CountryData.h"
 #include "SettingsDialog.h"
@@ -643,7 +644,7 @@ void MainWindow::setLanguage(const QString &code)
     applyLanguage(code);
     rebuildUi();
     if (m_settings)
-        m_settings->setCurrent(m_language, Theme::current().id);
+        m_settings->setCurrent(m_language, Theme::current().id, newsui::Reader::translationEnabled());
     if (m_help)
         m_help->setLanguage(m_language);
 }
@@ -656,7 +657,7 @@ void MainWindow::setTheme(const QString &id)
     applyTheme(id);
     rebuildUi();
     if (m_settings)
-        m_settings->setCurrent(m_language, Theme::current().id);
+        m_settings->setCurrent(m_language, Theme::current().id, newsui::Reader::translationEnabled());
     if (m_help)
         m_help->retheme();
 }
@@ -718,10 +719,15 @@ void MainWindow::openSettings()
         m_settings = new SettingsDialog(this);
         connect(m_settings, &SettingsDialog::languageChosen, this, &MainWindow::setLanguage);
         connect(m_settings, &SettingsDialog::themeChosen, this, &MainWindow::setTheme);
+        connect(m_settings, &SettingsDialog::newsTranslationChosen, this, [this](bool on) {
+            newsui::Reader::setTranslationEnabled(on);
+            for (auto *reader : findChildren<newsui::Reader *>())   // the News page's and Desk's
+                reader->applyTranslationSetting();
+        });
         // Float it near the gear icon, top-right of the window.
         m_settings->move(mapToGlobal(QPoint(width() - m_settings->width() - 24, 64)));
     }
-    m_settings->setCurrent(m_language, Theme::current().id);
+    m_settings->setCurrent(m_language, Theme::current().id, newsui::Reader::translationEnabled());
     m_settings->show();
     m_settings->raise();
     m_settings->activateWindow();

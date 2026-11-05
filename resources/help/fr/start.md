@@ -30,10 +30,11 @@ Le crayon après les onglets active le mode édition : glissez un onglet pour le
 
 ## Paramètres
 
-L'engrenage ouvre une fenêtre flottante à deux pages :
+L'engrenage ouvre une fenêtre flottante à trois pages :
 
 - **Langue** : anglais ou français. Toute l'interface bascule aussitôt, données de marché comprises (noms des matières premières et des pays, catégories). Les nombres suivent la langue : `1 234,5` en français, `1,234.5` en anglais ; le terminal Graphiques garde ses textes anglais.
 - **Thème** : neuf palettes, appliquées aussitôt à toutes les pages, au globe et aux graphiques. Six sombres (Ember, Abyss, Jade, Oxide, Nova, Bloomberg) et trois claires (Glacier, Dune, Sakura).
+- **News** : active ou désactive la traduction des articles. Désactivée, le lecteur d'articles n'a plus de bouton **Traduire**.
 
 ## Clés et sources de données
 

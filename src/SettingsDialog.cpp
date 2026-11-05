@@ -50,12 +50,14 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_nav->setCursor(Qt::PointingHandCursor);
     m_nav->addItem(QString());
     m_nav->addItem(QString());
+    m_nav->addItem(QString());
     sl->addWidget(m_nav, 1);
     layout->addWidget(sidebar);
 
     m_pages = new QStackedWidget;
     m_pages->addWidget(buildLanguagePage());
     m_pages->addWidget(buildThemePage());
+    m_pages->addWidget(buildNewsPage());
     layout->addWidget(m_pages, 1);
 
     connect(m_nav, &QListWidget::currentRowChanged, m_pages, &QStackedWidget::setCurrentIndex);
@@ -129,12 +131,47 @@ QWidget *SettingsDialog::buildThemePage()
     return page;
 }
 
-void SettingsDialog::setCurrent(const QString &language, const QString &themeId)
+QWidget *SettingsDialog::buildNewsPage()
+{
+    auto *page = new QWidget;
+    auto *l = new QVBoxLayout(page);
+    l->setContentsMargins(28, 24, 28, 24);
+    l->setSpacing(6);
+    m_newsTitle = new QLabel;
+    m_newsTitle->setObjectName("pageTitle");
+    m_newsHint = new QLabel;
+    m_newsHint->setObjectName("dim");
+    m_newsHint->setWordWrap(true);
+    l->addWidget(m_newsTitle);
+    l->addWidget(m_newsHint);
+    l->addSpacing(14);
+
+    auto *group = new QButtonGroup(page);
+    const auto card = [&](bool on) {
+        auto *b = new QPushButton;
+        b->setAttribute(Qt::WA_LayoutUsesWidgetRect);   // without it, the Mac style's margins make these two overlap
+        b->setObjectName("optionCard");
+        b->setCheckable(true);
+        b->setCursor(Qt::PointingHandCursor);
+        b->setMinimumHeight(48);
+        group->addButton(b);
+        l->addWidget(b);
+        connect(b, &QPushButton::clicked, this, [this, on] { emit newsTranslationChosen(on); });
+        return b;
+    };
+    m_translationOn = card(true);
+    m_translationOff = card(false);
+    l->addStretch();
+    return page;
+}
+
+void SettingsDialog::setCurrent(const QString &language, const QString &themeId, bool newsTranslation)
 {
     if (QPushButton *b = m_languageButtons.value(language))
         b->setChecked(true);
     if (QAbstractButton *b = m_themeButtons.value(themeId))
         b->setChecked(true);
+    (newsTranslation ? m_translationOn : m_translationOff)->setChecked(true);
 }
 
 void SettingsDialog::showPage(int index)
@@ -155,10 +192,15 @@ void SettingsDialog::retranslateUi()
     m_sidebarTitle->setText(tr("SETTINGS"));
     m_nav->item(0)->setText(tr("Language"));
     m_nav->item(1)->setText(tr("Theme"));
+    m_nav->item(2)->setText(tr("News"));
     m_languageTitle->setText(tr("Language"));
     m_languageHint->setText(tr("Choose the language used across the interface and market data."));
     m_themeTitle->setText(tr("Theme"));
     m_themeHint->setText(tr("Choose the color palette for the globe and panels."));
+    m_newsTitle->setText(tr("News"));
+    m_newsHint->setText(tr("Article translation puts a Translate button in the article reader. Turned off, the button goes away and the reader translates nothing."));
+    m_translationOn->setText(tr("Article translation on"));
+    m_translationOff->setText(tr("Article translation off"));
 
     const QHash<QString, QString> descriptions {
         {"ember", tr("Warm bronze tones of the original design.")},

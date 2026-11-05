@@ -17,7 +17,7 @@ CMake builds `third_party/adblock-ffi` and the reader gets Brave's ad blocker; w
 `--screenshot out.png` renders the window to a PNG and exits (handy for UI checks); `--page <id>`, `--theme <id>`,
 `--devtools`, `--country <ISO3>`, `--indicator <n>`, `--supply [port:<id>|oil:<id>|event:<id>]` (the supply chain layer's overview or one of its sheets), `--search <text>` (the Sources page's search box),
 `--ai-search <text>` (the AI tab's Hub search), `--ai-local <prompt>` (AI › Local: loads the first model of a bound slot and sends the prompt), `--news-ticker <sym>`, `--news-article <n>`, `--news-favorite <n>` and `--news-url <url>` (the News
-tab's filter, its reader, a card's star, any page in the reader), `--settings [0|1]` (opens the settings window on its language or theme
+tab's filter, its reader, a card's star, any page in the reader), `--settings [0|1|2]` (opens the settings window on its language, theme or news
 page; the screenshot then captures that window), `--scroll <0..1>`, `--scroll-end` and `--delay <ms>` choose what it
 shows first.
 
@@ -999,7 +999,7 @@ page embedded through Qt WebEngine, the title, site, date and ticker, a back but
 opens the browser directly. The star in a card's corner, or in the reader's header, keeps the article in the
 **Favorites** tab (as it was when starred: `news-favorites.json` in the app data folder, newest star first; the
 ticker filter applies to their badge and text). The web view is created the first time it is needed (WebEngine starts a helper process)
-and loads a blank page when the reader closes. **Translate** rewrites the page's paragraphs in place on the Mac (`src/PageTranslator.*`, macOS 26); without it, the local model translates the headline. Code: `src/NewsData.*` (providers, parsing, the symbol guess),
+and loads a blank page when the reader closes. **Translate** rewrites the page's paragraphs in place on the Mac (`src/PageTranslator.*`, macOS 26); without it, the local model translates the headline. Settings › News removes the button (`news/translate`). Code: `src/NewsData.*` (providers, parsing, the symbol guess),
 `src/NewsPage.*` (sub-header, strip, cards and grid), `src/NewsReader.*` (the reader), `src/AdBlock.*` (its ad blocker).
 
 **Ad blocker.** The reader runs Brave's engine, [adblock-rust](https://github.com/brave/adblock-rust), through a
@@ -1689,7 +1689,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 |---|---|
 | `src/HeaderBar.*` | Top bar: brand, navigation tabs (a tab added since the saved order takes its default place), UTC clock, developer tools, help and settings icons |
 | `src/MainWindow.*` | Page stack; `addPage(id, label, widget)` registers a new nav tab + page, `addPage(id, label, factory)` one built the first time it is shown (Overview, Forex, Calendar, News, Research, Quant, AI and Sources are; the map and Charts are built at launch, Charts because it plays the alerts) |
-| `src/SettingsDialog.*` | Floating settings window (gear icon): language, theme |
+| `src/SettingsDialog.*` | Floating settings window (gear icon): language, theme, news (article translation) |
 | `src/HelpWindow.*`, `resources/help/<lang>/*.md` | The documentation window (? icon, F1): chapters in Markdown per language, search, theme colours applied to the document |
 | `src/DevTools.*` | Developer tools: the flap on the right edge (`SideFlap`) and the full-width tabbed panel it opens (`DevToolsDock`) |
 | `src/CodeGraphView.*` | The Codebase tab: `codegraph::load` (graph.json and graph.html's nodes and edges), `GraphCanvas` (graph.html in 3D: ForceAtlas2 layout, vis-style dots, labels and dashed links, cached scene, orbit, hover, filter) and `CodeGraphView` (communities ↔ one community's nodes, status, file watcher) |

@@ -30,6 +30,12 @@ public:
     void closeReader();
     bool isOpen() const { return isVisible(); }
 
+    // Settings › News: whether the reader offers to translate. Off, a page showing a translation goes back to its
+    // original, since the button that would bring it back is gone.
+    static bool translationEnabled();
+    static void setTranslationEnabled(bool on);
+    void applyTranslationSetting();
+
 signals:
     void askAi(const QString &prompt);
 

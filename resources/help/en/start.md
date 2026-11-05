@@ -30,10 +30,11 @@ The pencil after the tabs turns on the edit mode: drag a tab to move it, click i
 
 ## Settings
 
-The gear opens a floating window with two pages:
+The gear opens a floating window with three pages:
 
 - **Language**: English or French. The whole interface switches at once, market data included (commodity and country names, categories). Figures follow the language too: `1 234,5` in French, `1,234.5` in English; the Charts terminal keeps its English texts.
 - **Theme**: nine palettes, applied at once to every page, the globe and the charts. Six dark ones (Ember, Abyss, Jade, Oxide, Nova, Bloomberg) and three light ones (Glacier, Dune, Sakura).
+- **News**: turns article translation on or off. Off, the article reader has no **Translate** button.
 
 ## Keys and data sources
 

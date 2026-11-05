@@ -16,6 +16,7 @@
 #include <QPainter>
 #include <QProgressBar>
 #include <QPushButton>
+#include <QSettings>
 #include <QShortcut>
 #include <QToolButton>
 #include <QVBoxLayout>
@@ -156,6 +157,29 @@ Reader::Reader(QWidget *parent)
     auto *esc = new QShortcut(QKeySequence(Qt::Key_Escape), m_panel);
     esc->setContext(Qt::WidgetWithChildrenShortcut);
     connect(esc, &QShortcut::activated, this, &Reader::closeReader);
+    applyTranslationSetting();
+}
+
+bool Reader::translationEnabled()
+{
+    return QSettings().value("news/translate", true).toBool();
+}
+
+void Reader::setTranslationEnabled(bool on)
+{
+    QSettings().setValue("news/translate", on);
+}
+
+void Reader::applyTranslationSetting()
+{
+    const bool on = translationEnabled();
+    m_translate->setVisible(on);
+    if (on)
+        return;
+    const bool translated = m_translated;
+    resetTranslate();   // an answer on its way is dropped
+    if (translated && m_host)
+        m_host->load(m_host->url());
 }
 
 void Reader::resetTranslate()
