@@ -56,10 +56,33 @@ Outlook parseOutlook(const QByteArray &json)
         if (!r.symbol.isEmpty() && r.longPct + r.shortPct > 0)
             out.rows.push_back(r);
     }
+    if (const QJsonObject general = root.value("general").toObject(); general.contains("demoAccountsPercentage"))
+        out.demoPct = number(general, {"demoAccountsPercentage"});
     out.ok = !out.rows.isEmpty();
     if (!out.ok)
         out.message = QStringLiteral("no symbol in the answer");
     return out;
+}
+
+OutlookSummary summarizeOutlook(const QVector<OutlookRow> &rows, int minPositions)
+{
+    OutlookSummary s;
+    double sum = 0;
+    for (const OutlookRow &r : rows) {
+        if (r.positions() < minPositions)
+            continue;
+        if (!s.counted || r.longPct > s.mostLong.longPct)
+            s.mostLong = r;
+        if (!s.counted || r.longPct < s.mostShort.longPct)
+            s.mostShort = r;
+        ++s.counted;
+        sum += r.longPct;
+        s.crowdedLong += r.longPct >= 70;
+        s.crowdedShort += r.longPct <= 30;
+    }
+    if (s.counted)
+        s.meanLong = sum / s.counted;
+    return s;
 }
 
 QString parseLogin(const QByteArray &json, QString *message)

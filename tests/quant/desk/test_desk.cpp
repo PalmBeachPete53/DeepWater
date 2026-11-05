@@ -633,6 +633,22 @@ void testPositioning()
     check(!o.ok && !o.sessionInvalid && o.message == "Too many requests.", "another refusal keeps the session");
     check(!parseOutlook("<html>").ok, "not JSON");
     check(!parseOutlook(R"({"error":false,"symbols":[]})").ok, "nothing in it");
+    // A real answer's shape: percentages of lots, a general block.
+    o = parseOutlook(R"({"error":false,"message":"","symbols":[
+        {"name":"EURUSD","shortPercentage":19,"longPercentage":81,"shortVolume":3668.98,"longVolume":15213.76,"longPositions":27769,"shortPositions":12017,"totalPositions":39786,"avgShortPrice":1.1091,"avgLongPrice":1.1419},
+        {"name":"GBPUSD","shortPercentage":65,"longPercentage":35,"shortVolume":3577.71,"longVolume":1934.15,"longPositions":6866,"shortPositions":14139,"totalPositions":21005},
+        {"name":"USDTRY","shortPercentage":100,"longPercentage":0,"longPositions":0,"shortPositions":1,"totalPositions":1}],
+        "general":{"demoAccountsPercentage":41,"realAccountsPercentage":58}})");
+    eqi(3, o.rows.size(), "every symbol is kept");
+    check(o.demoPct == 41, "the share of demo accounts");
+    const OutlookSummary sum = summarizeOutlook(o.rows);
+    eqi(2, sum.counted, "a thin symbol isn't counted");
+    eqs("EURUSD", sum.mostLong.symbol, "the most long");
+    eqs("GBPUSD", sum.mostShort.symbol, "the thin one at 0% doesn't win the most short");
+    eqi(1, sum.crowdedLong, "crowded long");
+    eqi(0, sum.crowdedShort, "the thin one isn't crowded");
+    check(sum.meanLong == 58, "the mean of those counted");
+    eqi(0, summarizeOutlook({}).counted, "nothing to count");
     QString message;
     eqs("abc", parseLogin(R"({"error":false,"message":"","session":"abc"})", &message), "a session");
     check(parseLogin(R"({"error":true,"message":"Invalid email or password."})", &message).isEmpty(), "refused");

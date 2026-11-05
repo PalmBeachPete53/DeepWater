@@ -636,7 +636,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
         d.everySecs = 30 * 60;
         d.probeUrl = QUrl("https://www.myfxbook.com/api/get-community-outlook.json");
         add(buildRow({"myfxbook", Kind::Dataset, tr("Community outlook"), tr("Myfxbook (free account)"), "www.myfxbook.com",
-                      tr("Desk › Positioning: the share of long and short positions of its community on forex and CFDs. "
+                      tr("Desk › Positioning: the share of lots long and short of its community on forex and CFDs. "
                          "Connect the account there: the password isn't kept")},
                      d));
     }

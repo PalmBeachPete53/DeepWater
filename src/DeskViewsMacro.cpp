@@ -364,7 +364,7 @@ public:
         m_message = quant::label({}, "qtNote");
         m_message->setWordWrap(true);
         v->addWidget(m_message);
-        auto *note = quant::label(tr("The share of positions of the traders whose accounts are connected to Myfxbook: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Myfxbook's own figures, under its terms of use. COT positions are in Quant › COT."), "qtNote");
+        auto *note = quant::label(tr("The share of lots long and short of the traders whose accounts are connected to Myfxbook, demo accounts included: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Symbols with few positions stay in the list, dimmed, but don't count in the tiles. Myfxbook's own figures, under its terms of use. COT positions are in Quant › COT."), "qtNote");
         note->setWordWrap(true);
         v->addWidget(note);
         v->addStretch(1);
@@ -419,50 +419,48 @@ private:
         m_message->setText(m->errorString().isEmpty() ? (rows.isEmpty() ? tr("Loading Myfxbook's figures…") : QString()) : m->errorString());
         if (!connected || rows.isEmpty())
             return;
-        std::sort(rows.begin(), rows.end(), [](const auto &a, const auto &b) { return std::abs(a.longPct - 50) > std::abs(b.longPct - 50); });
-        m_updated->setText(tr("updated %1").arg(QLocale().toString(m->fetchedAt().toLocalTime().time(), "HH:mm")));
+        // The most traded first: the thin symbols, at 0% or 100% on a handful of positions, would otherwise lead.
+        std::sort(rows.begin(), rows.end(), [](const auto &a, const auto &b) { return a.positions() > b.positions(); });
+        const double demo = m->outlook().demoPct;
+        m_updated->setText(demo >= 0 ? tr("%1% of the community's accounts are demo · updated %2").arg(amount(demo, 0), QLocale().toString(m->fetchedAt().toLocalTime().time(), "HH:mm"))
+                                     : tr("updated %1").arg(QLocale().toString(m->fetchedAt().toLocalTime().time(), "HH:mm")));
         m_table->setRowCount(rows.size());
-        int crowdedLong = 0, crowdedShort = 0;
-        double sum = 0;
-        const desk::OutlookRow *mostLong = nullptr, *mostShort = nullptr;
         for (int r = 0; r < rows.size(); ++r) {
             const desk::OutlookRow &row = rows[r];
-            sum += row.longPct;
-            if (!mostLong || row.longPct > mostLong->longPct) mostLong = &row;
-            if (!mostShort || row.longPct < mostShort->longPct) mostShort = &row;
-            crowdedLong += row.longPct >= 70;
-            crowdedShort += row.longPct <= 30;
+            const bool thin = row.positions() < desk::OutlookMinPositions;
             QString status = tr("BALANCED");
             QColor color = pal.TextDim;
-            if (row.longPct >= 70) { status = tr("CROWDED LONG"); color = pal.Up; }
+            if (thin) { status = tr("FEW POSITIONS"); color = pal.TextFaint; }
+            else if (row.longPct >= 70) { status = tr("CROWDED LONG"); color = pal.Up; }
             else if (row.longPct <= 30) { status = tr("CROWDED SHORT"); color = pal.Down; }
             else if (row.longPct >= 55) { status = tr("LEANING LONG"); color = pal.Up; }
             else if (row.longPct <= 45) { status = tr("LEANING SHORT"); color = pal.Down; }
-            m_table->setItem(r, 0, cell(row.symbol, {}, Qt::AlignLeft, true));
+            m_table->setItem(r, 0, cell(row.symbol, thin ? pal.TextDim : QColor(), Qt::AlignLeft, !thin));
             auto *split = cell({});
             split->setData(Qt::UserRole, row.longPct);
             m_table->setItem(r, 1, split);
-            m_table->setItem(r, 2, cell(QString("%1%").arg(amount(row.longPct, 0)), pal.Up));
-            m_table->setItem(r, 3, cell(QString("%1%").arg(amount(row.shortPct, 0)), pal.Down));
+            m_table->setItem(r, 2, cell(QString("%1%").arg(amount(row.longPct, 0)), thin ? pal.TextDim : pal.Up));
+            m_table->setItem(r, 3, cell(QString("%1%").arg(amount(row.shortPct, 0)), thin ? pal.TextDim : pal.Down));
             m_table->setItem(r, 4, cell(amount(row.longVolume, 0)));
             m_table->setItem(r, 5, cell(amount(row.shortVolume, 0)));
-            m_table->setItem(r, 6, cell(amount(row.longPositions + row.shortPositions, 0), pal.TextDim));
+            m_table->setItem(r, 6, cell(amount(row.positions(), 0), pal.TextDim));
             const int decimals = priceDecimals(row.avgLongPrice > 0 ? row.avgLongPrice : row.avgShortPrice);
             m_table->setItem(r, 7, cell(row.avgLongPrice > 0 ? QLocale().toString(row.avgLongPrice, 'f', decimals) : "—"));
             m_table->setItem(r, 8, cell(row.avgShortPrice > 0 ? QLocale().toString(row.avgShortPrice, 'f', decimals) : "—"));
-            m_table->setItem(r, 9, cell(status, color, Qt::AlignCenter, true));
+            m_table->setItem(r, 9, cell(status, color, Qt::AlignCenter, !thin));
         }
         fitHeight(m_table);
-        m_crowdedLong->setText(QString::number(crowdedLong));
-        m_crowdedLongSub->setText(tr("of %1, at 70% or more").arg(rows.size()));
-        m_crowdedShort->setText(QString::number(crowdedShort));
-        m_crowdedShortSub->setText(tr("of %1, at 30% or less").arg(rows.size()));
-        m_mostLong->setText(mostLong->symbol);
-        m_mostLongSub->setText(tr("%1% long").arg(amount(mostLong->longPct, 0)));
-        m_mostShort->setText(mostShort->symbol);
-        m_mostShortSub->setText(tr("%1% short").arg(amount(mostShort->shortPct, 0)));
-        m_lean->setText(tr("%1% long").arg(amount(sum / rows.size(), 0)));
-        m_leanSub->setText(tr("the mean of these markets"));
+        const desk::OutlookSummary sum = desk::summarizeOutlook(rows);
+        m_crowdedLong->setText(QString::number(sum.crowdedLong));
+        m_crowdedLongSub->setText(tr("of %1 symbols with %2 positions or more, at 70% or more").arg(sum.counted).arg(desk::OutlookMinPositions));
+        m_crowdedShort->setText(QString::number(sum.crowdedShort));
+        m_crowdedShortSub->setText(tr("of %1 symbols with %2 positions or more, at 30% or less").arg(sum.counted).arg(desk::OutlookMinPositions));
+        m_mostLong->setText(sum.counted ? sum.mostLong.symbol : QStringLiteral("—"));
+        m_mostLongSub->setText(sum.counted ? tr("%1% long").arg(amount(sum.mostLong.longPct, 0)) : QString());
+        m_mostShort->setText(sum.counted ? sum.mostShort.symbol : QStringLiteral("—"));
+        m_mostShortSub->setText(sum.counted ? tr("%1% short").arg(amount(sum.mostShort.shortPct, 0)) : QString());
+        m_lean->setText(sum.counted ? tr("%1% long").arg(amount(sum.meanLong, 0)) : QStringLiteral("—"));
+        m_leanSub->setText(tr("the mean of these %1 symbols").arg(sum.counted));
     }
 
     QFrame *m_login;

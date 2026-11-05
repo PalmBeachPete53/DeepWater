@@ -12201,12 +12201,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Myfxbook (compte gratuit)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Desk › Positioning: the share of long and short positions of its community on forex and CFDs. Connect the account there: the password isn&apos;t kept</source>
-        <translation>Desk › Positionnement : la part de positions long et short de sa communauté sur le forex et les CFD. Le compte se connecte là-bas : le mot de passe n'est pas conservé</translation>
+        <translation type="vanished">Desk › Positionnement : la part de positions long et short de sa communauté sur le forex et les CFD. Le compte se connecte là-bas : le mot de passe n&apos;est pas conservé</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Market headlines</source>
         <translation>Titres de marché</translation>
     </message>
@@ -13081,7 +13080,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
     </message>
     <message>
-        <location line="+1044"/>
+        <location line="+129"/>
+        <source>Desk › Positioning: the share of lots long and short of its community on forex and CFDs. Connect the account there: the password isn&apos;t kept</source>
+        <translation>Desk › Positionnement : la part de lots long et short de sa communauté sur le forex et les CFD. Le compte se connecte là-bas : le mot de passe n'est pas conservé</translation>
+    </message>
+    <message>
+        <location line="+915"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -14020,7 +14024,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::AppetiteView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+657"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+655"/>
         <source>Composite risk appetite</source>
         <translation>Appétit pour le risque composite</translation>
     </message>
@@ -14446,14 +14450,14 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::FxPositioningPanel</name>
     <message>
-        <location line="-852"/>
+        <location line="-850"/>
         <source>Connect your Myfxbook account</source>
         <translation>Connecter votre compte Myfxbook</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Myfxbook publishes its community&apos;s positions to accounts through its official API. A free account is enough. Your password goes once to Myfxbook, over HTTPS, to open a session, and isn&apos;t kept: only the session is. It ends after a month or when your internet address changes, and then this asks again. The figures are asked at most every half hour.</source>
-        <translation>Myfxbook publie les positions de sa communauté pour les comptes, par son API officielle. Un compte gratuit suffit. Votre mot de passe part une seule fois vers Myfxbook, en HTTPS, pour ouvrir une session, et n'est pas conservé : seule la session l'est. Elle se termine après un mois ou quand votre adresse internet change, et la section redemande alors. Les chiffres sont demandés au plus toutes les demi-heures.</translation>
+        <translation>Myfxbook publie les positions de sa communauté pour les comptes, par son API officielle. Un compte gratuit suffit. Votre mot de passe part une seule fois vers Myfxbook, en HTTPS, pour ouvrir une session, et n&apos;est pas conservé : seule la session l&apos;est. Elle se termine après un mois ou quand votre adresse internet change, et la section redemande alors. Les chiffres sont demandés au plus toutes les demi-heures.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -14557,11 +14561,30 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>The share of positions of the traders whose accounts are connected to Myfxbook: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Myfxbook&apos;s own figures, under its terms of use. COT positions are in Quant › COT.</source>
-        <translation>La part de positions des traders dont les comptes sont reliés à Myfxbook : une communauté de particuliers, pas tout le marché, et cela ne dit pas quand une position encombrée se retourne. Chiffres de Myfxbook, selon ses conditions d'utilisation. Les positions COT sont dans Quant › COT.</translation>
+        <source>The share of lots long and short of the traders whose accounts are connected to Myfxbook, demo accounts included: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Symbols with few positions stay in the list, dimmed, but don&apos;t count in the tiles. Myfxbook&apos;s own figures, under its terms of use. COT positions are in Quant › COT.</source>
+        <translation>La part de lots long et short des traders dont les comptes sont reliés à Myfxbook, comptes de démo inclus : une communauté de particuliers, pas tout le marché, et cela ne dit pas quand une position encombrée se retourne. Les symboles avec peu de positions restent dans la liste, atténués, mais ne comptent pas dans les tuiles. Chiffres de Myfxbook, selon ses conditions d'utilisation. Les positions COT sont dans Quant › COT.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+88"/>
+        <source>of %1 symbols with %2 positions or more, at 70% or more</source>
+        <translation>sur %1 symboles d'au moins %2 positions, à 70 % ou plus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>of %1 symbols with %2 positions or more, at 30% or less</source>
+        <translation>sur %1 symboles d'au moins %2 positions, à 30 % ou moins</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>the mean of these %1 symbols</source>
+        <translation>la moyenne de ces %1 symboles</translation>
+    </message>
+    <message>
+        <source>The share of positions of the traders whose accounts are connected to Myfxbook: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Myfxbook&apos;s own figures, under its terms of use. COT positions are in Quant › COT.</source>
+        <translation type="vanished">La part de positions des traders dont les comptes sont reliés à Myfxbook : une communauté de particuliers, pas tout le marché, et cela ne dit pas quand une position encombrée se retourne. Chiffres de Myfxbook, selon ses conditions d&apos;utilisation. Les positions COT sont dans Quant › COT.</translation>
+    </message>
+    <message>
+        <location line="-85"/>
         <source>Connecting…</source>
         <translation>Connexion…</translation>
     </message>
@@ -14571,17 +14594,27 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Chargement des chiffres de Myfxbook…</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+6"/>
+        <source>%1% of the community&apos;s accounts are demo · updated %2</source>
+        <translation>%1 % des comptes de la communauté sont en démo · mis à jour %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>updated %1</source>
         <translation>mis à jour %1</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+5"/>
         <source>BALANCED</source>
         <translation>ÉQUILIBRÉ</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>FEW POSITIONS</source>
+        <translation>PEU DE POSITIONS</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>CROWDED LONG</source>
         <translation>LONG ENCOMBRÉ</translation>
     </message>
@@ -14601,17 +14634,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>PENCHE SHORT</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>of %1, at 70% or more</source>
-        <translation>sur %1, à 70 % ou plus</translation>
+        <translation type="vanished">sur %1, à 70 % ou plus</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>of %1, at 30% or less</source>
-        <translation>sur %1, à 30 % ou moins</translation>
+        <translation type="vanished">sur %1, à 30 % ou moins</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+22"/>
         <location line="+3"/>
         <source>%1% long</source>
         <translation>%1 % long</translation>
@@ -14622,9 +14653,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 % short</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>the mean of these markets</source>
-        <translation>la moyenne de ces marchés</translation>
+        <translation type="vanished">la moyenne de ces marchés</translation>
     </message>
 </context>
 <context>
@@ -14954,7 +14984,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::PositioningView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+23"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+25"/>
         <source>Forex and CFDs · Myfxbook</source>
         <translation>Forex et CFD · Myfxbook</translation>
     </message>
@@ -15032,7 +15062,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+7"/>
         <source>Binance&apos;s public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. COT positions are in Quant › COT.</source>
-        <translation>Le ratio public de Binance des comptes long et short sur ses perpétuels USDT, une mesure de la foule, pas de l'argent. Les positions COT sont dans Quant › COT.</translation>
+        <translation>Le ratio public de Binance des comptes long et short sur ses perpétuels USDT, une mesure de la foule, pas de l&apos;argent. Les positions COT sont dans Quant › COT.</translation>
     </message>
     <message>
         <source>Binance&apos;s public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. Forex and CFD positioning isn&apos;t here: the brokers&apos; and communities&apos; figures aren&apos;t published for free to a program (Myfxbook refuses programs). COT positions are in Quant › COT.</source>
@@ -15108,7 +15138,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::RatesView</name>
     <message>
-        <location line="-575"/>
+        <location line="-573"/>
         <source>Fed funds, implied today</source>
         <translation>Fed funds, implicite aujourd&apos;hui</translation>
     </message>
@@ -15484,7 +15514,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::SeasonalityView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+549"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+547"/>
         <source>YEARS</source>
         <translation>ANNÉES</translation>
     </message>

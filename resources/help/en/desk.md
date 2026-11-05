@@ -36,7 +36,7 @@ Only the Fed has probabilities: no free source publishes rate futures for the ot
 
 Two lists, for two crowds. For futures positions, see [Quant](help:quant) › COT.
 
-- **Forex and CFDs**: Myfxbook's community outlook, through its official API and your free account: the share long and short, lots, positions and average prices by symbol. Connect here with your email and password. The password goes once to Myfxbook, over HTTPS, to open a session, and isn't kept. The session ends after a month or when your internet address changes, and the section then asks again. Figures are asked at most every half hour, and there is no history. It is one community of retail traders, not the whole market.
+- **Forex and CFDs**: Myfxbook's community outlook, through its official API and your free account: the share of lots long and short, the number of positions and the average prices by symbol, the most traded first. The community includes demo accounts, and the share is shown above the list. Half the symbols have only a few dozen positions and read 0% or 100%: they stay in the list, dimmed, but the tiles only count symbols with 500 positions or more. Connect here with your email and password. The password goes once to Myfxbook, over HTTPS, to open a session, and isn't kept. The session ends after a month or when your internet address changes, and the section then asks again. Figures are asked at most every half hour, and there is no history. It is one community of retail traders, not the whole market.
 - **Crypto**: Binance's public ratio of accounts long and short on twelve USDT perpetuals, with the last 30 days: a measure of the crowd, not of money.
 
 ## Risk appetite
