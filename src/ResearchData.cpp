@@ -106,6 +106,16 @@ QString hostGroup(const QUrl &url)
         return "wikipedia";
     if (h.contains("treasury.gov"))
         return "treasury";
+    if (h.contains("federalreserve.gov"))
+        return "fed";
+    if (h.contains("cftc.gov"))
+        return "cftc";
+    if (h.contains("binance"))
+        return "binance";
+    if (h.contains("investinglive"))
+        return "investinglive";
+    if (h.contains("think.ing.com"))
+        return "ing";
     if (h.contains("stlouisfed.org"))
         return "fred";
     if (h.contains("oecd.org"))
@@ -997,11 +1007,15 @@ void Client::quotes(const QStringList &symbols, qint64 maxAgeSecs, QObject *ctx,
     sorted.sort();
     QUrl url("https://query1.finance.yahoo.com/v7/finance/quote");
     url.setQuery("symbols=" + QUrl::toPercentEncoding(sorted.join(','), ","));
-    get("yahoo:quote:" + sorted.join(','), url, maxAgeSecs, YahooCrumb, ctx, [done](const QByteArray &body, const QString &err) {
+    get("yahoo:quote:" + sorted.join(','), url, maxAgeSecs, YahooCrumb, ctx, [done, sorted](const QByteArray &body, const QString &err) {
         QHash<QString, QJsonObject> out;
         for (const QJsonValue &v : QJsonDocument::fromJson(body).object().value("quoteResponse").toObject()
                                        .value("result").toArray())
             out.insert(v.toObject().value("symbol").toString(), v.toObject());
+        // Yahoo answers "CAD=X" and "CHF=X" under the name "USDCAD=X" and "USDCHF=X".
+        for (const QString &s : sorted)
+            if (s.endsWith("=X") && !out.contains(s) && out.contains("USD" + s))
+                out.insert(s, out.value("USD" + s));
         done(out, out.isEmpty() && err.isEmpty() ? tr("No quotes") : err);
     });
 }

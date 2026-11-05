@@ -4,6 +4,7 @@
 #include "desk/Journal.h"
 #include "desk/Market.h"
 #include "desk/NewsTags.h"
+#include "desk/Rates.h"
 #include "desk/Risk.h"
 #include "desk/Sessions.h"
 
@@ -560,6 +561,58 @@ void testNews()
     check(tagHeadline("Prefed").topics.isEmpty(), "whole words only");
 }
 
+void testRates()
+{
+    CAT = "rates";
+    const QString html = R"(<h4><a id="1">2026 FOMC Meetings</a></h4>
+<div class="row fomc-meeting"><div class="fomc-meeting__month col"><strong>October</strong></div><div class="fomc-meeting__date col">27-28</div></div>
+<div class="row fomc-meeting"><div class="fomc-meeting__month col"><strong>Dec</strong></div><div class="fomc-meeting__date col">8-9*</div></div>
+<h4><a id="2">2025 FOMC Meetings</a></h4>
+<div class="row fomc-meeting"><div class="fomc-meeting__month col"><strong>Apr/May</strong></div><div class="fomc-meeting__date col">30-1</div></div>
+<div class="row fomc-meeting"><div class="fomc-meeting__month col"><strong>August</strong></div><div class="fomc-meeting__date col">22 (notation vote)</div></div>)";
+    const QVector<QDate> meetings = parseFomcCalendar(html);
+    eqi(3, meetings.size(), "three scheduled meetings, the notation vote left out");
+    if (meetings.size() == 3) {
+        check(meetings[0] == QDate(2025, 5, 1), "a meeting across two months ends in the second");
+        check(meetings[2] == QDate(2026, 12, 9), "a starred date");
+    }
+    eqs("ZQZ26.CBT", fedFutureSymbol(QDate(2026, 12, 1)), "december");
+    eqs("ZQF27.CBT", fedFutureSymbol(QDate(2027, 1, 15)), "january");
+
+    // 4.00% until 16 Dec, then 25 bp higher priced in full: December's average is (15 x 4 + 16 x 4.25) / 31.
+    const double dec = (15 * 4.0 + 16 * 4.25) / 31;
+    FedPath path = fedPath({{QDate(2026, 11, 1), 96.0}, {QDate(2026, 12, 1), 100 - dec}, {QDate(2027, 1, 1), 95.75}, {QDate(2027, 2, 1), 95.75}},
+                           {QDate(2026, 10, 28), QDate(2026, 12, 15), QDate(2027, 1, 27)}, QDate(2026, 11, 5));
+    near(4, path.currentRate, 1e-9, "the rate today");
+    eqi(2, path.meetings.size(), "past meetings left out");
+    near(25, path.meetings[0].changeBp, 0.5, "a full hike in December");
+    near(100, path.meetings[0].pHike, 2, "priced in full");
+    near(0, path.meetings[1].changeBp, 1, "nothing more in January");
+    near(25, path.meetings[1].cumulativeBp, 1, "cumulative");
+    near(100, path.meetings[1].pHold, 5, "a hold after that");
+
+    // Half a step: 50% hold, 50% +25.
+    FedPath half = fedPath({{QDate(2026, 11, 1), 96.0}, {QDate(2026, 12, 1), 96.0 - 0.125 * 16 / 31}, {QDate(2027, 1, 1), 95.875}},
+                           {QDate(2026, 12, 15)}, QDate(2026, 11, 5));
+    near(50, half.meetings[0].pHike, 1, "half a hike");
+    near(50, half.meetings[0].pHold, 1, "half a hold");
+    FedPath cut = fedPath({{QDate(2026, 11, 1), 96.0}, {QDate(2026, 12, 1), 96.25}, {QDate(2027, 1, 1), 96.25}}, {QDate(2026, 12, 25)}, QDate(2026, 11, 5));
+    near(100, cut.meetings[0].pCut, 1, "a cut, from the next month's contract late in the month");
+    check(fedPath({}, meetings, QDate(2026, 1, 1)).meetings.isEmpty(), "no contract, no path");
+
+    near(100, rangePosition({1, 2, 3}), 1e-9, "top of the range");
+    near(0, rangePosition({3, 2, 1}), 1e-9, "bottom of the range");
+    near(50, rangePosition({2, 2}), 1e-9, "flat");
+    near(-1, rangePosition({}), 1e-9, "no data");
+    near(100, rangePosition({100, 1, 2}, 2), 1e-9, "only the window counts");
+
+    const QVector<TffWeek> tff = parseTff(R"([{"report_date_as_yyyy_mm_dd":"2026-10-27T00:00:00.000","open_interest_all":"100","lev_money_positions_long":"7","lev_money_positions_short":"3"},
+                                              {"report_date_as_yyyy_mm_dd":"2026-10-20T00:00:00.000","open_interest_all":"90"},{"nothing":"1"}])");
+    eqi(2, tff.size(), "rows with a date");
+    check(tff.first().date == QDate(2026, 10, 20), "oldest first");
+    eqi(7, tff.last().levLong, "a field");
+}
+
 } // namespace
 
 int main(int argc, char **argv)
@@ -578,6 +631,7 @@ int main(int argc, char **argv)
     testFundamentals();
     testSessions();
     testNews();
+    testRates();
     std::cout << checks << " checks, " << fails << " failed\n";
     return fails ? 1 : 0;
 }

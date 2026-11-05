@@ -3,6 +3,7 @@
 #include "QuantViews.h"
 #include "Theme.h"
 
+#include <QDateTime>
 #include <QHeaderView>
 #include <QLabel>
 #include <QLocale>
@@ -451,6 +452,93 @@ void GaugeDial::paintEvent(QPaintEvent *)
     p.drawText(QRectF(center.x() - 70, center.y() - 42, 140, 42), Qt::AlignCenter, QString::number(qRound(value)));
     p.setFont(quant::chartFont(11, true));
     p.drawText(QRectF(center.x() - 120, center.y() + 2, 240, 18), Qt::AlignCenter, m_caption);
+}
+
+// ------------------------------------------------------------------ LevelsChart
+
+LevelsChart::LevelsChart(QWidget *parent)
+    : Chart(parent)
+{
+    m_margins = QMargins(10, 30, 110, 26);
+    setMinimumHeight(380);
+}
+
+void LevelsChart::setData(const QVector<qint64> &times, const QVector<double> &closes, const QVector<Level> &levels, int decimals)
+{
+    m_times = times;
+    m_closes = closes;
+    m_levels = levels;
+    m_decimals = decimals;
+    update();
+}
+
+QString LevelsChart::aiRead() const
+{
+    QStringList parts;
+    for (const Level &l : m_levels)
+        parts << QString("%1 %2").arg(l.label, aiNumber(l.price));
+    return aiTitle() + QString(": last %1; levels: ").arg(m_closes.isEmpty() ? QString("-") : aiNumber(m_closes.last())) + parts.join(", ");
+}
+
+void LevelsChart::paint(QPainter &p, const QRectF &plot)
+{
+    const Palette &c = Theme::current();
+    if (m_closes.size() < 2) {
+        drawEmpty(p, tr("No data"));
+        return;
+    }
+    auto [lowIt, highIt] = std::minmax_element(m_closes.begin(), m_closes.end());
+    double lo = *lowIt, hi = *highIt;
+    // Only the levels near the price widen the scale: a far one would flatten the line.
+    const double span = hi - lo;
+    QVector<Level> shown;
+    for (const Level &l : m_levels)
+        if (l.price >= lo - span * 0.35 && l.price <= hi + span * 0.35) {
+            shown.push_back(l);
+            lo = std::min(lo, l.price);
+            hi = std::max(hi, l.price);
+        }
+    const double pad = std::max(hi - lo, std::abs(hi) * 1e-6) * 0.05;
+    lo -= pad;
+    hi += pad;
+    const auto y = [&](double v) { return plot.bottom() - (v - lo) / (hi - lo) * plot.height(); };
+    const int n = m_closes.size();
+    p.setPen(QPen(c.PanelLine, 1));
+    p.drawRect(plot);
+    p.setFont(quant::chartFont(9));
+    double lastLabel = -100;
+    QVector<Level> ordered = shown;
+    std::sort(ordered.begin(), ordered.end(), [](const Level &a, const Level &b) { return a.price > b.price; });
+    for (const Level &l : ordered) {
+        p.setPen(QPen(l.color, 1, l.dashed ? Qt::DashLine : Qt::SolidLine));
+        p.drawLine(QPointF(plot.left(), y(l.price)), QPointF(plot.right(), y(l.price)));
+        const double at = std::max(y(l.price), lastLabel + 12);
+        lastLabel = at;
+        p.setPen(l.color);
+        p.drawText(QRectF(plot.right() + 5, at - 7, m_margins.right() - 6, 14), Qt::AlignLeft | Qt::AlignVCenter,
+                   QString("%1 %2").arg(l.label, QLocale().toString(l.price, 'f', m_decimals)));
+    }
+    QPainterPath path;
+    for (int i = 0; i < n; ++i) {
+        const QPointF pt(plot.left() + plot.width() * i / (n - 1), y(m_closes[i]));
+        if (i == 0) path.moveTo(pt); else path.lineTo(pt);
+    }
+    p.setPen(QPen(c.Text, 1.3));
+    p.setBrush(Qt::NoBrush);
+    p.drawPath(path);
+    p.setPen(c.TextFaint);
+    for (int i = 0; i < 5; ++i) {
+        const int k = (n - 1) * i / 4;
+        const QDateTime t = QDateTime::fromSecsSinceEpoch(m_times.value(k)).toLocalTime();
+        p.drawText(QRectF(plot.left() + plot.width() * i / 4 - 40, plot.bottom() + 5, 80, 14), Qt::AlignCenter, QLocale().toString(t.date(), "d MMM"));
+    }
+    if (m_hovering && plot.contains(m_mouse)) {
+        const int k = std::clamp(int(std::round((m_mouse.x() - plot.left()) / plot.width() * (n - 1))), 0, n - 1);
+        const QDateTime t = QDateTime::fromSecsSinceEpoch(m_times.value(k)).toLocalTime();
+        p.setPen(QPen(c.ControlBorderHover, 1, Qt::DashLine));
+        p.drawLine(QPointF(plot.left() + plot.width() * k / (n - 1), plot.top()), QPointF(plot.left() + plot.width() * k / (n - 1), plot.bottom()));
+        drawTooltip(p, m_mouse, {QLocale().toString(t, QLocale::ShortFormat), QLocale().toString(m_closes[k], 'f', m_decimals)}, {});
+    }
 }
 
 // ------------------------------------------------------------------ split bars

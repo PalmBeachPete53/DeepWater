@@ -127,6 +127,31 @@ private:
     QString m_caption;
 };
 
+// A price line with horizontal levels over it, named at the right edge.
+class LevelsChart : public quant::Chart
+{
+    Q_OBJECT
+public:
+    struct Level {
+        double price = 0;
+        QColor color;
+        QString label;
+        bool dashed = false;
+    };
+    explicit LevelsChart(QWidget *parent = nullptr);
+    void setData(const QVector<qint64> &times, const QVector<double> &closes, const QVector<Level> &levels, int decimals);
+    QString aiRead() const override;
+
+protected:
+    void paint(QPainter &p, const QRectF &plot) override;
+
+private:
+    QVector<qint64> m_times;
+    QVector<double> m_closes;
+    QVector<Level> m_levels;
+    int m_decimals = 2;
+};
+
 // A long / short split, drawn in a table cell's colours: the delegate for a column whose items hold the long share (0-100).
 class SplitBarDelegate;
 void useSplitBars(QTableWidget *t, int column);

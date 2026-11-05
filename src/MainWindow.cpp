@@ -32,6 +32,7 @@
 #include <cmath>
 #include "QuantData.h"
 #include "QuantMarketState.h"
+#include "DeskPage.h"
 #include "JournalPage.h"
 #include "QuantPage.h"
 #include "ResearchPage.h"
@@ -334,6 +335,11 @@ void MainWindow::buildUi()
     addPage("news", tr("News"), [] { return new NewsPage; });
     addPage("research", tr("Research"), [] { return new ResearchPage; });
     addPage("quant", tr("Quant"), [this] { return new QuantPage(m_cotReport); });
+    addPage("desk", tr("Desk"), [this] {
+        auto *desk = new DeskPage(m_economicCalendar, m_policyRates);
+        connect(desk, &DeskPage::askAi, this, &MainWindow::askAiDock);
+        return desk;
+    });
     addPage("journal", tr("Journal"), [] { return new JournalPage; });
     addPage("ai", tr("AI"), [this] { return new AiPage(mlSources()); });
     addPage("sources", tr("Sources"), [this] {

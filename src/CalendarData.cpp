@@ -226,6 +226,29 @@ void EconomicCalendar::fetchDay(const QDate &day)
     });
 }
 
+void EconomicCalendar::fetchRange(const QDate &from, const QDate &to, QObject *ctx,
+                                  std::function<void(const QVector<EconomicCalendar::Event> &, const QString &)> done)
+{
+    QNetworkRequest request(rangeUrl(from, to));
+    request.setTransferTimeout(60 * 1000);
+    request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("Deepwater/0.1"));
+    prepare(request);
+    QNetworkReply *reply = m_dayNet.get(request);
+    connect(reply, &QNetworkReply::finished, ctx, [reply, done = std::move(done)] {
+        reply->deleteLater();
+        if (reply->error() != QNetworkReply::NoError) {
+            done({}, reply->errorString());
+            return;
+        }
+        const QJsonObject root = QJsonDocument::fromJson(reply->readAll()).object();
+        if (root.value("status").toString() != "ok") {
+            done({}, tr("unexpected answer from TradingView"));
+            return;
+        }
+        done(parseEvents(root.value("result").toArray()), {});
+    });
+}
+
 // ---------------------------------------------------------------- CorporateCalendar
 
 CorporateCalendar::CorporateCalendar(QObject *parent)

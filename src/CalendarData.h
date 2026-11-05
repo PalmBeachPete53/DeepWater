@@ -8,6 +8,8 @@
 #include <QNetworkAccessManager>
 #include <QVector>
 
+#include <functional>
+
 // The Calendar page's data: economic releases (TradingView), US corporate events (Nasdaq) and the
 // sessions exchanges really traded (Yahoo, to catch holidays and early closes).
 
@@ -41,6 +43,9 @@ public:
     const QVector<Event> &events() const { return m_events; }
 
     void fetchDay(const QDate &day);
+    // A longer range on its own (the Desk's fundamentals read the last months' releases), for `ctx`'s lifetime.
+    void fetchRange(const QDate &from, const QDate &to, QObject *ctx,
+                    std::function<void(const QVector<EconomicCalendar::Event> &events, const QString &error)> done);
     // The request for a range of days and the events of an answer: shared with the survey headlines.
     static QUrl rangeUrl(const QDate &from, const QDate &to);
     static QVector<Event> parseEvents(const QJsonArray &result);
