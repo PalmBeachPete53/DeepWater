@@ -10,7 +10,7 @@ The sources are grouped by the page they feed: the map and shipping, forex, macr
 - **Test**: a small request, timed.
 - **Refresh**, for downloaded data sets.
 - A **switch**: off, the source makes no more requests. The map and forex data sets keep the last copy saved on disk; the Charts page moves on to the next provider in its chain and says so on the chart. The survey publishers' rows only carry a switch: off, their figures leave the country sheets.
-- Its **API key**, where one applies: aisstream, FRED, EIA, BEA, Banxico, the Bank of Korea, the Turkish central bank, UN Comtrade, Financial Modeling Prep, Hugging Face, Anthropic, Alpaca and Polygon. A keyed source without a key says so and makes no request.
+- Its **API key**, where one applies: aisstream, FRED, EIA, BEA, Banxico, the Bank of Korea, the Turkish central bank, UN Comtrade, Financial Modeling Prep, Hugging Face, Anthropic, Alpaca, Polygon and GitHub (the app's updates). A keyed source without a key says so and makes no request.
 
 The search box filters the rows. The states refresh once a second while the tab is shown.
 

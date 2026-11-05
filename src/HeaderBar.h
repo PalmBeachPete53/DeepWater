@@ -27,12 +27,15 @@ public:
     void setNavHidden(const QStringList &ids);
     // Checks the </> icon (devToolsToggled() is not emitted).
     void setDevToolsChecked(bool on);
+    // The update icon in the accent colour with a dot: a new build can be installed.
+    void setUpdateAvailable(bool available);
 
 signals:
     void navigationRequested(const QString &id);
     void navOrderChanged(const QStringList &ids);
     void navHiddenChanged(const QStringList &ids);
     void settingsRequested();
+    void updateRequested();        // the update icon
     void helpRequested();          // the ? icon: the documentation window
     void devToolsToggled(bool on);
 
@@ -62,4 +65,5 @@ private:
     bool m_dragMoved = false;
     QLabel *m_clock;
     QToolButton *m_devButton;
+    QToolButton *m_updateButton;
 };

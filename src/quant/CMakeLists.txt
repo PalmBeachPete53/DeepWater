@@ -36,6 +36,9 @@ target_compile_features(qtm_ui PUBLIC cxx_std_20)
 target_link_libraries(qtm_ui PUBLIC qtm_core qtm_server qtm_chart Qt6::Widgets Qt6::Svg Qt6::Network Qt6::WebSockets Qt6::Multimedia)
 # The Terminal tab (ui/Terminal.cpp): libvterm, built by the top-level CMakeLists.
 target_link_libraries(qtm_ui PUBLIC vterm)
+# What a chart gives the AI tools to read (ChartPane::aiRead): in this library, since every program linking it needs it.
+target_sources(qtm_ui PRIVATE ${CMAKE_SOURCE_DIR}/src/AiRead.cpp)
+
 # Desktop notifications for alerts: UserNotifications on macOS (Objective-C++; OBJCXX is enabled at the top level),
 # the system tray elsewhere (ui/Notifications.cpp, empty on macOS). The Terminal tab's pty is ConPTY on Windows.
 if(APPLE)

@@ -1639,6 +1639,34 @@ The overviews follow the view when the window is resized. While it moves, each f
 of small images (turned text is drawn glyph by glyph as paths): about 6 ms a frame, 60 frames a second, against
 45 ms drawn sharp; at rest it is drawn sharp. The links' mouse bands are stroked only when the mouse needs them.
 
+## Updates
+
+The arrow icon left of `</>` in the header says whether a newer build exists, and installs it. A desktop app can't receive
+GitHub's events, so it asks. The CI publishes each successful build of `main` as the one release `latest-main`, with a
+body naming its commit and time (`.github/workflows/build.yml`, job `update-release`). The app reads that release 20 s
+after starting and then every 15 minutes (`src/Updater.*`, with an ETag: an unchanged answer doesn't count against
+GitHub's limit), and compares it with the commit it was built from, compiled in by `cmake/BuildInfo.cmake`. Only a later
+commit counts, so a build from a checkout ahead of the release isn't told to go back; and since only a successful
+build is published, a commit that doesn't compile is never offered.
+
+A new build turns the icon violet with a dot and, once per commit (`updates/announced`), shows a banner in the window
+and a desktop notification, whose click opens the dialog (`src/UpdateDialog.*`): installed and latest builds, what's new
+(GitHub's comparison of the two commits), and **Update**. That downloads the `.dmg` from the API's asset address (GitHub
+redirects to its storage, and the token isn't sent there), checks its size and SHA-256, copies the app out of it and runs
+the copy with `--version`, which must name the release's commit. Then **Restart and install**: the app quits and a small
+script (`install.sh` in `<app data>/update`, its output in `install.log`), once the process is gone, moves the old
+bundle to `previous.app` there, puts the new one in place, and starts it. If a step fails it puts back what was there. Data
+and settings live outside the bundle and aren't touched. An app in a CMake build folder installs to `/Applications`
+instead, since the next `cmake --build` would write over a foreign bundle; one still on its disk image, or run by macOS
+from a temporary copy, is asked to move to Applications first.
+
+The repository is private, so reading it takes a token: the key saved in Sources › Updates (`keys/github`, read access to
+the repository's contents), or else `gh auth token` when the GitHub CLI is signed in, kept in memory only. Without
+either, the dialog says so. The row's switch stops the requests; the dialog's check box stops the periodic ones only.
+`src/UpdateRelease.*` holds the parsing and decisions, tested by `qtm_test_update`. `--update-dialog` opens the dialog
+and checks. For tests against a local server, `DEEPWATER_UPDATE_API` replaces the repository's API address,
+`DEEPWATER_UPDATE_PRETEND` ("<commit> <time>") plays an older build, and `--update-auto` installs without a click.
+
 ## Help
 
 The `?` icon between `</>` and the gear (also `F1` and the platform's help shortcut, `Cmd+?` on macOS) opens the
@@ -1692,6 +1720,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/HeaderBar.*` | Top bar: brand, navigation tabs (a tab added since the saved order takes its default place), UTC clock, developer tools, help and settings icons |
 | `src/MainWindow.*` | Page stack; `addPage(id, label, widget)` registers a new nav tab + page, `addPage(id, label, factory)` one built the first time it is shown (Overview, Forex, Calendar, News, Research, Quant, AI and Sources are; the map and Charts are built at launch, Charts because it plays the alerts) |
 | `src/SettingsDialog.*` | Floating settings window (gear icon): language, theme, news (article translation) |
+| `src/Updater.*`, `src/UpdateDialog.*`, `src/UpdateRelease.*`, `cmake/BuildInfo.cmake` | The update system (README › Updates): checks the release `latest-main`, the dialog, the parsing and decisions; the commit compiled into a build |
 | `src/HelpWindow.*`, `resources/help/<lang>/*.md` | The documentation window (? icon, F1): chapters in Markdown per language, search, theme colours applied to the document |
 | `src/DevTools.*` | Developer tools: the flap on the right edge (`SideFlap`) and the full-width tabbed panel it opens (`DevToolsDock`) |
 | `src/CodeGraphView.*` | The Codebase tab: `codegraph::load` (graph.json and graph.html's nodes and edges), `GraphCanvas` (graph.html in 3D: ForceAtlas2 layout, vis-style dots, labels and dashed links, cached scene, orbit, hover, filter) and `CodeGraphView` (communities ↔ one community's nodes, status, file watcher) |

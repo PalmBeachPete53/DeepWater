@@ -62,7 +62,7 @@ const QStringList MarketIds {"binance", "coinbase", "kraken", "yahoo", "nasdaq",
 // Keys kept in the settings ("keys/<id>") and read by a page itself (the AI tab, the News tab).
 bool settingsKeyRow(const QString &id)
 {
-    return id == "anthropic" || id == "huggingface" || id == "fmp";
+    return id == "anthropic" || id == "huggingface" || id == "fmp" || id == "github";
 }
 
 QStringList disabledIds()
@@ -821,6 +821,11 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                   tr("AI: the conversation with Claude (Messages API, streamed)")}));
     add(buildRow({"huggingface", Kind::Key, tr("Hugging Face Hub"), tr("Access token from huggingface.co › Settings › Tokens (optional)"),
                   "huggingface.co", tr("AI: model search and downloads; the token opens gated repositories")}));
+    l->addSpacing(12);
+
+    section(tr("Updates"));
+    add(buildRow({"github", Kind::Key, "GitHub", tr("Token with read access to the repository's contents (optional with the GitHub CLI)"),
+                  "api.github.com", tr("The app's updates: the latest build of main")}));
     l->addSpacing(12);
 
     section(tr("Charts · market data"));

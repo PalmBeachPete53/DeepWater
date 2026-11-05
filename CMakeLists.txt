@@ -183,6 +183,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/DomesticFinance.h src/DomesticFinance.cpp
     src/KeyIndicators.h src/KeyIndicators.cpp
     src/OfficialSources.h src/OfficialSources.cpp
+    src/UpdateRelease.h src/UpdateRelease.cpp src/Updater.h src/Updater.cpp src/UpdateDialog.h src/UpdateDialog.cpp
     src/NationalSources.h src/NationalSources.cpp
     src/KeyedSources.h src/KeyedSources.cpp
     src/SurveyHeadlines.h src/SurveyHeadlines.cpp
@@ -215,7 +216,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/AiLocalView.h src/AiLocalView.cpp
     src/LocalChat.h src/LocalChat.cpp
     src/OpencodeRun.h src/OpencodeRun.cpp
-    src/AiRead.h src/AiRead.cpp
+    src/AiRead.h
     src/AiOrganize.h src/AiOrganize.cpp
     src/AiDock.h src/AiDock.cpp
     src/LocalTools.h src/LocalTools.cpp
@@ -267,6 +268,14 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
 )
 
 target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov fusion desk ZLIB::ZLIB)
+# The commit this build comes from, for the update system (src/Updater.cpp) and --version.
+set(DEEPWATER_BUILDINFO ${CMAKE_BINARY_DIR}/generated/BuildInfo.h)
+add_custom_target(deepwater_buildinfo
+    COMMAND ${CMAKE_COMMAND} -DSOURCE=${CMAKE_SOURCE_DIR} -DOUT=${DEEPWATER_BUILDINFO} -P ${CMAKE_SOURCE_DIR}/cmake/BuildInfo.cmake
+    BYPRODUCTS ${DEEPWATER_BUILDINFO}
+    COMMENT "Reading the commit")
+add_dependencies(deepwater deepwater_buildinfo)
+target_include_directories(deepwater PRIVATE ${CMAKE_BINARY_DIR}/generated)
 if(DEEPWATER_LLM)   # built before the app, so that the bundle is signed with it inside
     add_dependencies(deepwater deepwater-llm)
 endif()

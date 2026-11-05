@@ -61,6 +61,8 @@
 #include "quant/server/Server.h"
 #include "quant/ui/App.h"
 #include "quant/ui/Notifications.h"
+#include "UpdateDialog.h"
+#include "Updater.h"
 #include "quant/ui/Theme.h"
 
 #include <QApplication>
@@ -71,6 +73,10 @@
 #include <QScrollBar>
 #include <QSettings>
 #include <QShortcut>
+#include <QFrame>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
 #include <QTimer>
 #include <QSplitter>
 #include <QStackedWidget>
@@ -161,7 +167,10 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
         if (isMinimized()) showNormal();
         raise();
         activateWindow();
-        showPage("charts");
+        if (m_updateNotified)
+            openUpdates();
+        else
+            showPage("charts");
     });
 
     m_seaRoutes.load(":/searoutes.json");
@@ -317,6 +326,25 @@ void MainWindow::buildUi()
     connect(m_header, &HeaderBar::navigationRequested, this, &MainWindow::showPage);
     connect(m_header, &HeaderBar::settingsRequested, this, &MainWindow::openSettings);
     connect(m_header, &HeaderBar::helpRequested, this, [this] { openHelp(); });
+    connect(m_header, &HeaderBar::updateRequested, this, [this] { openUpdates(); });
+    delete m_updateDialog;   // its texts follow the language; the updater keeps its state
+    if (!m_updater) {
+        m_updater = new Updater(this);
+        connect(m_updater, &Updater::changed, this, [this] { m_header->setUpdateAvailable(m_updater->hasUpdate()); });
+        connect(m_updater, &Updater::updateFound, this, [this] {
+            showUpdateToast();
+            m_updateNotified = true;
+            auto *notifications = qtm::Notifications::instance();
+            const auto notify = [this, notifications] {
+                notifications->notify(tr("Deepwater: a new version is available"), tr("Open the update icon to install it."));
+            };
+            if (notifications->permission() == "default")
+                notifications->requestPermission([notify](const QString &) { notify(); });
+            else
+                notify();
+        });
+    }
+    m_header->setUpdateAvailable(m_updater->hasUpdate());
 
     // The map is built at once, the other pages the first time they are shown. The Charts page is built at
     // once too: it is cheap, and it is what plays an alert's sound and desktop notification.
@@ -758,6 +786,56 @@ void MainWindow::openHelp(const QString &chapter)
         m_help->move(mapToGlobal(QPoint(qMax(0, width() - m_help->width() - 24), 64)));
     }
     m_help->showChapter(chapter.isEmpty() ? m_pageById.key(m_pages->currentWidget()) : chapter);
+}
+
+void MainWindow::openUpdates(bool checkNow)
+{
+    m_updateNotified = false;
+    if (!m_updateDialog) {
+        m_updateDialog = new UpdateDialog(m_updater, this);
+        connect(m_updateDialog, &UpdateDialog::openSourcesRequested, this, [this] {
+            m_updateDialog->close();
+            showSourcesTab(0);
+            searchSources("github");
+        });
+    }
+    m_updateDialog->show();
+    m_updateDialog->raise();
+    m_updateDialog->activateWindow();
+    if (checkNow || m_updater->state() == Updater::State::Idle)
+        m_updater->check();
+}
+
+QWidget *MainWindow::updateDialog() const
+{
+    return m_updateDialog;
+}
+
+void MainWindow::installUpdatesUnattended()
+{
+    m_updater->setUnattended(true);
+}
+
+// Inside the window, under the update icon: seen even when desktop notifications are off.
+void MainWindow::showUpdateToast()
+{
+    auto *toast = new QFrame(this);
+    toast->setObjectName("updateToast");
+    auto *row = new QHBoxLayout(toast);
+    row->setContentsMargins(14, 10, 10, 10);
+    row->setSpacing(12);
+    row->addWidget(new QLabel(tr("A new version of Deepwater is available.")));
+    auto *see = new QPushButton(tr("See"));
+    row->addWidget(see);
+    connect(see, &QPushButton::clicked, this, [this, toast] {
+        toast->deleteLater();
+        openUpdates();
+    });
+    toast->adjustSize();
+    toast->move(width() - toast->width() - 24, m_header->height() + 10);
+    toast->show();
+    toast->raise();
+    QTimer::singleShot(15000, toast, &QObject::deleteLater);
 }
 
 QWidget *MainWindow::helpWindow() const

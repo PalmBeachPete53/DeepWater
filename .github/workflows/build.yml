@@ -23,7 +23,7 @@ env:
 jobs:
   macos:
     name: macOS (.dmg)
-    runs-on: macos-15
+    runs-on: macos-26   # the reader's translator needs the macOS 26 SDK
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
@@ -68,6 +68,30 @@ jobs:
           retention-days: 5
           compression-level: 0
           if-no-files-found: error
+
+  # What the app's update system reads: one release that always holds the latest build of main that succeeded. Its body
+  # names the commit, in the form src/UpdateRelease.cpp parses. A tag made with this token starts no workflow.
+  update-release:
+    name: Update release
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: [macos]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: deepwater-macos
+          path: artifact
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete latest-main --cleanup-tag --yes || true
+          notes="$(printf 'Latest build of main, for the update system.\n\ncommit: %s\ntime: %s\n' "$GITHUB_SHA" "$(git log -1 --format=%ct)")"
+          gh release create latest-main artifact/*.dmg --prerelease --target "$GITHUB_SHA" \
+            --title "Latest build of main" --notes "$notes"
 
   release:
     name: GitHub Release

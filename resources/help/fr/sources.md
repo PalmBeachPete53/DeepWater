@@ -10,7 +10,7 @@ Les sources sont groupées par la page qu'elles alimentent : la carte et les nav
 - **Test** : une petite requête, chronométrée.
 - **Rafraîchir**, pour les jeux de données téléchargés.
 - Un **interrupteur** : coupée, la source ne fait plus aucune requête. Les jeux de données de la carte et du forex gardent la dernière copie enregistrée sur le disque ; la page Graphiques passe au fournisseur suivant de sa chaîne et le dit sur le graphique. Les lignes des éditeurs d'enquêtes n'ont qu'un interrupteur : coupé, leurs chiffres quittent les fiches pays.
-- Sa **clé d'API**, quand il y en a une : aisstream, FRED, EIA, BEA, Banxico, la Banque de Corée, la banque centrale turque, UN Comtrade, Financial Modeling Prep, Hugging Face, Anthropic, Alpaca et Polygon. Une source à clé sans clé le dit et ne fait aucune requête.
+- Sa **clé d'API**, quand il y en a une : aisstream, FRED, EIA, BEA, Banxico, la Banque de Corée, la banque centrale turque, UN Comtrade, Financial Modeling Prep, Hugging Face, Anthropic, Alpaca, Polygon et GitHub (les mises à jour de l'application). Une source à clé sans clé le dit et ne fait aucune requête.
 
 Le champ de recherche filtre les lignes. Les états se rafraîchissent chaque seconde tant que l'onglet est affiché.
 

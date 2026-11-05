@@ -1,3 +1,4 @@
+#include "BuildInfo.h"
 #include "HttpCache.h"
 #include "AiRead.h"
 #include "JournalData.h"
@@ -23,6 +24,13 @@
 
 int main(int argc, char *argv[])
 {
+    // The update system runs a downloaded copy with --version before installing it: it must load and name its commit.
+    for (int i = 1; i < argc; ++i)
+        if (qstrcmp(argv[i], "--version") == 0) {
+            QTextStream(stdout) << "Deepwater " << DEEPWATER_COMMIT << '\n';
+            return 0;
+        }
+
     // The News reader embeds web pages (Qt WebEngine), which wants shared GL contexts set before the application.
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
     QApplication app(argc, argv);
@@ -144,6 +152,11 @@ int main(int argc, char *argv[])
         if (settingsArg + 1 < args.size())
             static_cast<SettingsDialog *>(w.settingsWindow())->showPage(args.at(settingsArg + 1).toInt());
     }
+    // --update-dialog: the update icon's dialog, checking at once. --update-auto: installs what it finds (tests).
+    if (args.contains("--update-dialog") || args.contains("--update-auto"))
+        w.openUpdates(true);
+    if (args.contains("--update-auto"))
+        w.installUpdatesUnattended();
     if (const int helpArg = args.indexOf("--help-page"); helpArg > 0)
         w.openHelp(helpArg + 1 < args.size() && !args.at(helpArg + 1).startsWith("--") ? args.at(helpArg + 1) : QString());
     const int delayArg = args.indexOf("--delay");
@@ -156,7 +169,8 @@ int main(int argc, char *argv[])
                               : scrollArg > 0 && scrollArg + 1 < args.size() ? args.at(scrollArg + 1).toDouble() : -1;
         // --settings and --help-page shoot their floating window instead of the main one.
         QWidget *floating = args.contains("--settings") ? w.settingsWindow()
-                            : args.contains("--help-page") ? w.helpWindow() : nullptr;
+                            : args.contains("--help-page") ? w.helpWindow()
+                            : args.contains("--update-dialog") ? w.updateDialog() : nullptr;
         QTimer::singleShot(delay, &app, [&w, path, scroll, floating] {
             if (scroll >= 0) {
                 w.scrollDetailToEnd(scroll);

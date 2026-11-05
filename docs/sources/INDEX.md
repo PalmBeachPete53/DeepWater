@@ -44,7 +44,7 @@ holds (a country's tax office, a national labour ministry, a small central bank)
 
 ## The cards
 
-132 cards. **called**: its catalogue or a sample answered (99). **docs**: public documentation and code only, usually for lack of a key (16). **refused**: it refused or failed, so the card says what could not be seen (16).
+133 cards. **called**: its catalogue or a sample answered (100). **docs**: public documentation and code only, usually for lack of a key (16). **refused**: it refused or failed, so the card says what could not be seen (16).
 
 | Card | Holds | Access | Confidence |
 |---|---|---|---|
@@ -103,6 +103,7 @@ holds (a country's tax office, a national labour ministry, a small central bank)
 | [frankfurter](frankfurter.md) | An open source API over official exchange rates. | free, no key | called |
 | [fred](fred.md) | An aggregator: | free key | docs |
 | [freddiemac](freddiemac.md) | US mortgage rates (the weekly PMMS), a house price index, and the loan-level data of its book. | free, no key | called |
+| [github](github.md) | The app's own updates: | free key | called |
 | [gus](gus.md) | Three APIs: | free, no key | called |
 | [hkcsd](hkcsd.md) | Hong Kong's official statistics: | free, no key | called |
 | [huggingface](huggingface.md) | A catalogue of machine-learning models, data sets and demo apps, with their files. | free, no key | called |

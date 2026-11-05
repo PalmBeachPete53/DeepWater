@@ -4,7 +4,7 @@ Deepwater is a desktop terminal for commodity markets and the world economy: a g
 
 ## The window
 
-The header holds the brand, the tabs, the UTC clock and three icons: `</>` (the developer tools), `?` (this help) and the gear (settings). Each tab is a page:
+The header holds the brand, the tabs, the UTC clock and four icons: the arrow (updates), `</>` (the developer tools), `?` (this help) and the gear (settings). Each tab is a page:
 
 | Tab | What it shows |
 |---|---|
@@ -27,6 +27,12 @@ The `?` icon opens this help on the chapter of the page you are on. The search b
 ## Arranging the tabs
 
 The pencil after the tabs turns on the edit mode: drag a tab to move it, click its × to hide it, and use the + to bring a hidden tab back. At least one tab always stays. The order and the hidden tabs are remembered.
+
+## Updates
+
+When a new version is out, the arrow in the header turns violet with a dot, and a banner and a desktop notification say so. Click the arrow to see what's new, then **Update**: Deepwater downloads the new version and checks it; **Restart and install** closes the app and starts the new one. Your data and settings aren't touched, and the old version is kept in the app's data folder (`update/previous.app`).
+
+The app checks every 15 minutes, which you can turn off in that window. While the repository is private it needs access to GitHub: a token saved in [Sources](help:sources) › Updates, or the GitHub CLI signed in on this computer.
 
 ## Settings
 

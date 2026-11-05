@@ -5760,18 +5760,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>HeaderBar</name>
     <message>
-        <location filename="../src/HeaderBar.cpp" line="+179"/>
+        <location filename="../src/HeaderBar.cpp" line="+201"/>
         <source>Show a hidden tab</source>
         <translation>Afficher un onglet masqué</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location line="+199"/>
+        <location line="+220"/>
         <source>Edit tabs</source>
         <translation>Modifier les onglets</translation>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-183"/>
         <source>Developer tools</source>
         <translation>Outils de développement</translation>
     </message>
@@ -5786,7 +5786,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Paramètres</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+24"/>
+        <source>A new version is available</source>
+        <translation>Une nouvelle version est disponible</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Updates</source>
+        <translation>Mises à jour</translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <source>Hide this tab</source>
         <translation>Masquer cet onglet</translation>
     </message>
@@ -7415,7 +7425,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1381"/>
+        <location filename="../src/MainWindow.cpp" line="+1459"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -7423,12 +7433,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-1098"/>
+        <location filename="../src/MainWindow.cpp" line="-1167"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+59"/>
         <source>Map</source>
         <translation>Carte</translation>
     </message>
@@ -7448,7 +7458,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Overview</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-13"/>
+        <source>Deepwater: a new version is available</source>
+        <translation>Deepwater : une nouvelle version est disponible</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open the update icon to install it.</source>
+        <translation>Ouvrez l’icône de mise à jour pour l’installer.</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Economy</source>
         <translation>Economy</translation>
     </message>
@@ -7493,7 +7513,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+890"/>
+        <location line="+436"/>
+        <source>A new version of Deepwater is available.</source>
+        <translation>Une nouvelle version de Deepwater est disponible.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>See</source>
+        <translation>Voir</translation>
+    </message>
+    <message>
+        <location line="+503"/>
         <source>Trade in goods</source>
         <translation>Commerce de biens</translation>
     </message>
@@ -12651,6 +12681,21 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>Updates</source>
+        <translation>Mises à jour</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Token with read access to the repository&apos;s contents (optional with the GitHub CLI)</source>
+        <translation>Jeton avec accès en lecture au contenu du dépôt (facultatif avec la CLI GitHub)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The app&apos;s updates: the latest build of main</source>
+        <translation>Mises à jour de l’application : le dernier build de main</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Charts · market data</source>
         <translation>Graphiques · données de marché</translation>
     </message>
@@ -12830,13 +12875,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1415"/>
-        <location line="+434"/>
+        <location line="-1420"/>
+        <location line="+439"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
     </message>
     <message>
-        <location line="-593"/>
+        <location line="-598"/>
         <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
         <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
     </message>
@@ -12871,7 +12916,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tous les accès</translation>
     </message>
     <message>
-        <location line="+541"/>
+        <location line="+546"/>
         <source>Charts: the Calendar tab</source>
         <translation>Graphiques : l’onglet Calendar</translation>
     </message>
@@ -12926,7 +12971,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Fournis avec l’application</translation>
     </message>
     <message>
-        <location line="-513"/>
+        <location line="-518"/>
         <source>Map: daily transits through the chokepoints by vessel type, a few days behind</source>
         <translation>Carte : transits quotidiens dans les points de passage par type de navire, avec quelques jours de retard</translation>
     </message>
@@ -13030,7 +13075,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pays › Japon : l’indice des prix à la consommation du Bureau des statistiques (ensemble, hors produits frais, hors produits frais et énergie, services), avec les séries de la Banque du Japon (ci-dessus)</translation>
     </message>
     <message>
-        <location line="+268"/>
+        <location line="+273"/>
         <source>Map: production sites (a sample), routes and countries</source>
         <translation>Carte : sites de production (un échantillon), routes et pays</translation>
     </message>
@@ -13154,7 +13199,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Pays (zone euro et membres) : M1, M2, M3, prêts, taux hypothécaires, débiteurs et de dépôt, bilans des banques centrales. Desk › Taux : la courbe de la zone euro et les dates de réunion</translation>
     </message>
     <message>
-        <location line="-1223"/>
+        <location line="-1228"/>
         <source>Countries: policy rates, residential property prices, household and private debt in % of GDP. Desk › Notes: central bankers&apos; speeches</source>
         <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
     </message>
@@ -13222,7 +13267,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Desk › Taux : la courbe des taux</translation>
     </message>
     <message>
-        <location line="+909"/>
+        <location line="+914"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -13916,6 +13961,188 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+2"/>
         <source>TARGET</source>
         <translation>OBJECTIF</translation>
+    </message>
+</context>
+<context>
+    <name>UpdateDialog</name>
+    <message>
+        <location filename="../src/UpdateDialog.cpp" line="+22"/>
+        <source>unknown build</source>
+        <translation>build inconnu</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+7"/>
+        <source>Updates</source>
+        <translation>Mises à jour</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>What&apos;s new</source>
+        <translation>Nouveautés</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Check every 15 minutes</source>
+        <translation>Vérifier toutes les 15 minutes</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Check now</source>
+        <translation>Vérifier maintenant</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Downloading: %1 of %2 MB.</source>
+        <translation>Téléchargement : %1 sur %2 Mo.</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Not checked yet.</source>
+        <translation>Pas encore vérifié.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Checking GitHub…</source>
+        <translation>Vérification sur GitHub…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Deepwater is up to date.</source>
+        <translation>Deepwater est à jour.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The repository is private, so checking takes a GitHub token. Save one in Sources › Updates (read access to the repository&apos;s contents), or sign in with the GitHub CLI (gh auth login).</source>
+        <translation>Le dépôt est privé : la vérification demande un jeton GitHub. Enregistrez-en un dans Sources › Mises à jour (accès en lecture au contenu du dépôt), ou connectez-vous avec la CLI GitHub (gh auth login).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open Sources</source>
+        <translation>Ouvrir Sources</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A new build is ready. This copy runs from a build folder, so it will be installed in Applications and started from there.</source>
+        <translation>Un nouveau build est prêt. Cette copie tourne depuis un dossier de compilation : il sera installé dans Applications et démarré depuis là.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>A new build is ready. Your data and settings aren&apos;t touched.</source>
+        <translation>Un nouveau build est prêt. Vos données et réglages ne sont pas touchés.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Update</source>
+        <translation>Mettre à jour</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Downloading…</source>
+        <translation>Téléchargement…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Checking the new version…</source>
+        <translation>Vérification de la nouvelle version…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The new version is ready. Deepwater will close and start again.</source>
+        <translation>La nouvelle version est prête. Deepwater va se fermer puis redémarrer.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Restart and install</source>
+        <translation>Redémarrer et installer</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The update failed: %1</source>
+        <translation>La mise à jour a échoué : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Try again</source>
+        <translation>Réessayer</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Installed: %1</source>
+        <translation>Installé : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Latest: %1</source>
+        <translation>Dernier : %1</translation>
+    </message>
+</context>
+<context>
+    <name>Updater</name>
+    <message>
+        <location filename="../src/Updater.cpp" line="+74"/>
+        <source>Updates install on macOS only for now.</source>
+        <translation>Pour l’instant, les mises à jour ne s’installent que sur macOS.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Move Deepwater to your Applications folder first: macOS runs it from a temporary copy here.</source>
+        <translation>Déplacez d’abord Deepwater dans le dossier Applications : ici, macOS l’exécute depuis une copie temporaire.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Deepwater can&apos;t write to %1.</source>
+        <translation>Deepwater ne peut pas écrire dans %1.</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>GitHub is turned off in Sources.</source>
+        <translation>GitHub est désactivé dans Sources.</translation>
+    </message>
+    <message>
+        <location line="+41"/>
+        <source>GitHub&apos;s answer holds no build.</source>
+        <translation>La réponse de GitHub ne contient aucun build.</translation>
+    </message>
+    <message>
+        <location line="+187"/>
+        <source>The download is incomplete.</source>
+        <translation>Le téléchargement est incomplet.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>The download doesn&apos;t match GitHub&apos;s checksum.</source>
+        <translation>Le téléchargement ne correspond pas à l’empreinte donnée par GitHub.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>The disk image couldn&apos;t be opened.</source>
+        <translation>L’image disque n’a pas pu être ouverte.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The disk image holds no application.</source>
+        <translation>L’image disque ne contient aucune application.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The application couldn&apos;t be copied out of the disk image.</source>
+        <translation>L’application n’a pas pu être copiée depuis l’image disque.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The application in the disk image is incomplete.</source>
+        <translation>L’application de l’image disque est incomplète.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The new version didn&apos;t start, so nothing was changed.</source>
+        <translation>La nouvelle version n’a pas démarré : rien n’a été modifié.</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>The installer couldn&apos;t start.</source>
+        <translation>L’installateur n’a pas pu démarrer.</translation>
     </message>
 </context>
 <context>

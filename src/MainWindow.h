@@ -86,6 +86,10 @@ public:
     QWidget *settingsWindow() const;   // the settings window once opened (for --settings screenshots)
     // The documentation window (header ? icon, F1), on a chapter: a page id, or empty for the page shown.
     void openHelp(const QString &chapter = QString());
+    // The update icon's dialog; `checkNow` asks GitHub at once.
+    void openUpdates(bool checkNow = false);
+    QWidget *updateDialog() const;
+    void installUpdatesUnattended();   // --update-auto, tests
     QWidget *currentPage() const;      // the page shown
     QWidget *makeDeskStrip();
     QWidget *helpWindow() const;       // once opened (for --help-page screenshots)
@@ -223,6 +227,10 @@ private:
     QList<QTranslator *> m_translators;
     QPointer<SettingsDialog> m_settings;
     QPointer<HelpWindow> m_help;
+    void showUpdateToast();
+    class Updater *m_updater = nullptr;   // lives through UI rebuilds, as a download may be under way
+    QPointer<class UpdateDialog> m_updateDialog;
+    bool m_updateNotified = false;        // the next click on a desktop notification opens the updates
     // The Charts page (Quant Terminal port). Its backend runs for the whole session so alerts
     // keep firing; the page itself is kept across UI rebuilds so charts don't reload.
     qtm::Backend *m_quantBackend = nullptr;

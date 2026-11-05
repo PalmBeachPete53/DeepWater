@@ -6,7 +6,7 @@ changed; several did not hold.
 ## Confirmed and fixed
 | Finding | Evidence | Fix | Verified |
 |---|---|---|---|
-| SSB table `05327` closed at 2025M12, freezing Norway's CPI-ATE | its metadata; `14706` runs to 2026M09 | `14706`, `KPIavledetSerie=KPI-JAE`, on the current `v2` API | exact request by hand; not yet seen in the app |
+| SSB table `05327` closed at 2025M12, freezing Norway's CPI-ATE | its metadata; `14706` runs to 2026M09 | `14706`, `KPIavledetSerie=KPI-JAE`, on the current `v2` API | in the app: Norway's core inflation, September 2026, Statistics Norway |
 | MarketPulse feed dead (newest item 2025-07-03) | the feed | removed from the Stocks feeds | code removal |
 | Hugging Face search never had `gated` or `lastModified`, so "Updated" was empty | the answer's fields | `expand[]` for the fields the app uses | in the app: the column fills |
 | INEGI's row asked for a token and fed nothing | no series in `resources/country_indicators.json` | row removed; the loader stays | diagram and list rebuilt from the rows |

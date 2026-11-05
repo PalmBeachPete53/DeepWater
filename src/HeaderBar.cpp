@@ -72,6 +72,28 @@ QPixmap helpPixmap(const QColor &color)
     return pm;
 }
 
+// An arrow down into a tray; with `dot`, a dot at the top right.
+QPixmap updatePixmap(const QColor &color, bool dot)
+{
+    const int size = 18;
+    QPixmap pm(size * 2, size * 2);
+    pm.setDevicePixelRatio(2);
+    pm.fill(Qt::transparent);
+    QPainter p(&pm);
+    p.setRenderHint(QPainter::Antialiasing);
+    p.setPen(QPen(color, 1.6, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+    p.setBrush(Qt::NoBrush);
+    p.drawLine(QPointF(9, 2.5), QPointF(9, 11.5));
+    p.drawPolyline(QPolygonF({QPointF(5.2, 8), QPointF(9, 11.8), QPointF(12.8, 8)}));
+    p.drawPolyline(QPolygonF({QPointF(3, 12.5), QPointF(3, 15.5), QPointF(15, 15.5), QPointF(15, 12.5)}));
+    if (dot) {
+        p.setPen(Qt::NoPen);
+        p.setBrush(color);
+        p.drawEllipse(QPointF(14.6, 3.4), 2.8, 2.8);
+    }
+    return pm;
+}
+
 QPixmap devPixmap(const QColor &color)
 {
     const int size = 18;
@@ -213,6 +235,17 @@ HeaderBar::HeaderBar(QWidget *parent)
     layout->addWidget(m_clock);
     layout->addSpacing(12);
 
+    m_updateButton = new QToolButton;
+    m_updateButton->setObjectName("headerIconButton");
+    m_updateButton->setCursor(Qt::PointingHandCursor);
+    m_updateButton->setFocusPolicy(Qt::NoFocus);
+    m_updateButton->setFixedSize(34, 34);
+    m_updateButton->setIconSize(QSize(18, 18));
+    setUpdateAvailable(false);
+    connect(m_updateButton, &QToolButton::clicked, this, &HeaderBar::updateRequested);
+    layout->addWidget(m_updateButton);
+    layout->addSpacing(2);
+
     m_devButton = new QToolButton;
     m_devButton->setObjectName("headerIconButton");
     m_devButton->setToolTip(tr("Developer tools"));
@@ -263,6 +296,16 @@ HeaderBar::HeaderBar(QWidget *parent)
     connect(timer, &QTimer::timeout, this, &HeaderBar::updateClock);
     timer->start(1000);
     updateClock();
+}
+
+void HeaderBar::setUpdateAvailable(bool available)
+{
+    const Palette &theme = Theme::current();
+    QIcon icon;
+    icon.addPixmap(updatePixmap(available ? theme.Accent : theme.TextDim, available), QIcon::Normal);
+    icon.addPixmap(updatePixmap(available ? theme.Accent : theme.Text, available), QIcon::Active);
+    m_updateButton->setIcon(icon);
+    m_updateButton->setToolTip(available ? tr("A new version is available") : tr("Updates"));
 }
 
 void HeaderBar::setDevToolsChecked(bool on)
