@@ -16,7 +16,9 @@ La régression des rendements d'une action sur ceux d'un indice (SPY par défaut
 
 ## COT
 
-Le rapport hebdomadaire *Commitments of Traders* de la CFTC (format legacy, contrats à terme seulement ; positions du mardi, publiées le vendredi) pour les contrats consolidés S&P 500, Nasdaq-100 et Dow, le Russell 2000 E-mini, le bitcoin, l'or et l'argent : positions, variation sur la semaine, part de l'intérêt ouvert et nombre d'opérateurs non commerciaux, commerciaux et non déclarants ; long contre short par groupe ; positions nettes sur deux ans ; l'historique hebdomadaire.
+Le rapport hebdomadaire *Commitments of Traders* de la CFTC (format legacy, contrats à terme seuls ; positions du mardi, publiées le vendredi) pour 23 marchés, à choisir dans la liste : indices américains, bitcoin, devises, indice dollar, métaux, énergie et céréales. Positions, variation sur la semaine, part des positions ouvertes et nombre d'opérateurs des non commerciaux, commerciaux et non déclarables ; acheteurs contre vendeurs par groupe ; positions nettes sur deux ans ; l'historique hebdomadaire.
+
+En dessous, le degré d'extension : le net des spéculateurs, leur part acheteuse, leur place et celle des commerciaux dans leur fourchette sur 52 semaines, et une lecture simple en mots fixes, avec **Demander à l'IA de le lire** pour votre modèle local. Un extrême dit que la position est encombrée, pas quand elle se retourne. Pour les indices, les devises et le bitcoin, le rapport *Traders in Financial Futures* ajoute qui détient : courtiers, gérants d'actifs, fonds à levier, autres.
 
 ## Signals
 

@@ -1,5 +1,7 @@
 #include "CalendarData.h"
 
+#include <QSet>
+
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLocale>
@@ -229,23 +231,62 @@ void EconomicCalendar::fetchDay(const QDate &day)
 void EconomicCalendar::fetchRange(const QDate &from, const QDate &to, QObject *ctx,
                                   std::function<void(const QVector<EconomicCalendar::Event> &, const QString &)> done)
 {
-    QNetworkRequest request(rangeUrl(from, to));
+    fetchRange(QString(), from, to, ctx, std::move(done));
+}
+
+void EconomicCalendar::fetchRange(const QString &country, const QDate &from, const QDate &to, QObject *ctx,
+                                  std::function<void(const QVector<EconomicCalendar::Event> &, const QString &)> done)
+{
+    fetchPage(country, from, to, ctx, std::move(done), {}, 0);
+}
+
+// TradingView answers at most 2000 events, the earliest of the range: a longer range takes several requests, each
+// from the day the last answer ended on (its events come twice and are dropped).
+void EconomicCalendar::fetchPage(const QString &country, const QDate &from, const QDate &to, QObject *ctx,
+                                 std::function<void(const QVector<EconomicCalendar::Event> &, const QString &)> done,
+                                 QVector<EconomicCalendar::Event> soFar, int pages)
+{
+    static constexpr int PageLimit = 2000, MaxPages = 15;
+    QUrl url = rangeUrl(from, to);
+    if (!country.isEmpty()) {
+        QUrlQuery q(url);
+        q.removeQueryItem("countries");
+        q.addQueryItem("countries", country);
+        url.setQuery(q);
+    }
+    QNetworkRequest request(url);
     request.setTransferTimeout(60 * 1000);
     request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("Deepwater/0.1"));
     prepare(request);
     QNetworkReply *reply = m_dayNet.get(request);
-    connect(reply, &QNetworkReply::finished, ctx, [reply, done = std::move(done)] {
+    connect(reply, &QNetworkReply::finished, ctx, [this, reply, country, from, to, ctx, done = std::move(done), soFar = std::move(soFar), pages]() mutable {
         reply->deleteLater();
+        // A later page that fails leaves what came before: most of the range beats nothing.
         if (reply->error() != QNetworkReply::NoError) {
-            done({}, reply->errorString());
+            done(soFar, reply->errorString());
             return;
         }
         const QJsonObject root = QJsonDocument::fromJson(reply->readAll()).object();
         if (root.value("status").toString() != "ok") {
-            done({}, tr("unexpected answer from TradingView"));
+            done(soFar, tr("unexpected answer from TradingView"));
             return;
         }
-        done(parseEvents(root.value("result").toArray()), {});
+        const QVector<Event> page = parseEvents(root.value("result").toArray());
+        QSet<QString> seen;
+        for (const Event &e : std::as_const(soFar))
+            seen.insert(e.country + e.title + e.period + QString::number(e.time.toSecsSinceEpoch()));
+        for (const Event &e : page)
+            if (!seen.contains(e.country + e.title + e.period + QString::number(e.time.toSecsSinceEpoch())))
+                soFar.push_back(e);
+        QDate last;
+        for (const Event &e : page)
+            if (!last.isValid() || e.time.toLocalTime().date() > last)
+                last = e.time.toLocalTime().date();
+        if (page.size() < PageLimit || pages + 1 >= MaxPages || !last.isValid() || last >= to) {
+            done(soFar, {});
+            return;
+        }
+        fetchPage(country, last > from ? last : from.addDays(1), to, ctx, std::move(done), std::move(soFar), pages + 1);
     });
 }
 

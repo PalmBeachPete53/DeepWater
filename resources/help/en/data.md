@@ -6,6 +6,8 @@ What to know before trusting a figure: where it comes from, how fresh it is, and
 
 | Data | How fresh |
 |---|---|
+| Desk | Yahoo Finance prices, delayed about fifteen minutes; CFTC positions are as of Tuesday; the wire is minutes behind at best |
+| Journal | Your statements, as of the last import; open positions at delayed quotes |
 | Commodity futures, stock quotes, Overview, Research, Quant | Yahoo Finance, delayed by about ten to fifteen minutes; the Overview refreshes every minute |
 | Charts (Binance pairs) | Live, tick by tick; other symbols are polled every few seconds |
 | Ships | Every minute or two per ship; dropped after 30 minutes of silence |

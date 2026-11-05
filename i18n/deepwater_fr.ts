@@ -2,6 +2,142 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fr">
 <context>
+    <name>AccountDialog</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="+332"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Currency</source>
+        <translation>Devise</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Starting balance</source>
+        <translation>Solde initial</translation>
+    </message>
+</context>
+<context>
+    <name>AdvancedView</name>
+    <message>
+        <location line="+502"/>
+        <location line="+33"/>
+        <source>Drawdown</source>
+        <translation>Drawdown</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Result by time of day</source>
+        <translation>Résultat par heure de la journée</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Result by holding time</source>
+        <translation>Résultat par durée de détention</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>P&amp;L by weekday</source>
+        <translation>P&amp;L par jour de la semaine</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Top 5 trades</source>
+        <translation>5 meilleurs trades</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Top 5 symbols, P&amp;L</source>
+        <translation>5 meilleurs symboles, P&amp;L</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Trades by weekday</source>
+        <translation>Trades par jour de la semaine</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bottom 5 trades</source>
+        <translation>5 pires trades</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trades, top 5 symbols</source>
+        <translation>Trades, 5 meilleurs symboles</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>%1 closed trades.</source>
+        <translation>%1 trades clôturés.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No closed trade matches these filters.</source>
+        <translation>Aucun trade clôturé ne correspond à ces filtres.</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <location line="+25"/>
+        <source>%1 · %2 %3
+Opened %4
+Held %5
+%6</source>
+        <translation>%1 · %2 %3
+Ouvert le %4
+Durée %5
+%6</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <location line="+25"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <location line="+25"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Mon</source>
+        <translation>Lun</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tue</source>
+        <translation>Mar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wed</source>
+        <translation>Mer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Thu</source>
+        <translation>Jeu</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Fri</source>
+        <translation>Ven</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sat</source>
+        <translation>Sam</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sun</source>
+        <translation>Dim</translation>
+    </message>
+</context>
+<context>
     <name>AiClaudeView</name>
     <message>
         <location filename="../src/AiPage.cpp" line="+525"/>
@@ -117,7 +253,7 @@
 <context>
     <name>AiDock</name>
     <message>
-        <location filename="../src/AiDock.cpp" line="+35"/>
+        <location filename="../src/AiDock.cpp" line="+39"/>
         <source>AI</source>
         <translation>IA</translation>
     </message>
@@ -137,12 +273,12 @@
     </message>
     <message>
         <location line="+16"/>
-        <location line="+89"/>
+        <location line="+91"/>
         <source>Load</source>
         <translation>Charger</translation>
     </message>
     <message>
-        <location line="-76"/>
+        <location line="-78"/>
         <source>Ask from anywhere in the app · Cmd+Enter sends</source>
         <translation>Demandez depuis n&apos;importe où dans l&apos;app · Cmd+Entrée envoie</translation>
     </message>
@@ -167,7 +303,7 @@
         <translation>Nouvelle conversation</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+62"/>
         <source>Unload</source>
         <translation>Décharger</translation>
     </message>
@@ -175,6 +311,52 @@
         <location line="+23"/>
         <source>Context: %1</source>
         <translation>Contexte : %1</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <location line="+24"/>
+        <source>Hold to talk</source>
+        <translation>Maintenir pour parler</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>Listens only while held. Recognition runs on this Mac: no sound or text leaves it.</source>
+        <translation>N&apos;écoute que pendant l&apos;appui. La reconnaissance tourne sur ce Mac : aucun son ni texte n&apos;en sort.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Read the answers aloud</source>
+        <translation>Lire les réponses à voix haute</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Listening…</source>
+        <translation>Écoute…</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Nothing was understood.</source>
+        <translation>Rien n&apos;a été compris.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Deepwater may not use the microphone or speech recognition: allow them in System Settings › Privacy &amp; Security.</source>
+        <translation>Deepwater n&apos;a pas le droit d&apos;utiliser le micro ou la reconnaissance vocale : autorisez-les dans Réglages Système › Confidentialité et sécurité.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>This Mac has no on-device recognition for %1 yet: turn on Dictation for that language in System Settings › Keyboard. Nothing is sent to a server instead.</source>
+        <translation>Ce Mac n&apos;a pas encore de reconnaissance sur l&apos;appareil pour %1 : activez la dictée pour cette langue dans Réglages Système › Clavier. Rien n&apos;est envoyé à un serveur à la place.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>No microphone is available. %1</source>
+        <translation>Aucun micro n&apos;est disponible. %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Recognition failed: %1</source>
+        <translation>Échec de la reconnaissance : %1</translation>
     </message>
 </context>
 <context>
@@ -1291,7 +1473,7 @@
 <context>
     <name>CalendarPage</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="+61"/>
+        <location filename="../src/CalendarPage.cpp" line="+63"/>
         <source>Euro area</source>
         <translation>Zone euro</translation>
     </message>
@@ -1301,7 +1483,7 @@
         <translation>Hong Kong</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+153"/>
         <source>High</source>
         <translation>Élevé</translation>
     </message>
@@ -1316,7 +1498,7 @@
         <translation>Faible</translation>
     </message>
     <message>
-        <location line="+974"/>
+        <location line="+1093"/>
         <source>Economic</source>
         <translation>Économique</translation>
     </message>
@@ -1783,7 +1965,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CorporateCalendar</name>
     <message>
-        <location filename="../src/CalendarData.cpp" line="+280"/>
+        <location filename="../src/CalendarData.cpp" line="+344"/>
         <location line="+125"/>
         <source>unexpected answer from Nasdaq</source>
         <translation>réponse inattendue de Nasdaq</translation>
@@ -2004,7 +2186,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CotReport</name>
     <message>
-        <location filename="../src/QuantData.cpp" line="+408"/>
+        <location filename="../src/QuantData.cpp" line="+416"/>
         <source>Unexpected CFTC response</source>
         <translation>Réponse inattendue de la CFTC</translation>
     </message>
@@ -2128,6 +2310,431 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/DomesticFinance.cpp" line="+169"/>
         <source>No data in the response</source>
         <translation>Aucune donnée dans la réponse</translation>
+    </message>
+</context>
+<context>
+    <name>DashboardView</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="-371"/>
+        <source>Net P&amp;L</source>
+        <translation>P&amp;L net</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trade win %</source>
+        <translation>Taux de réussite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+99"/>
+        <source>Profit factor</source>
+        <translation>Facteur de profit</translation>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>Max drawdown</source>
+        <translation>Drawdown max</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Avg win / loss</source>
+        <translation>Gain / perte moyens</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Expectancy / trade</source>
+        <translation>Espérance / trade</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Performance score</source>
+        <translation>Score de performance</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>This app&apos;s own mean of the six measures above, each on a plain scale: not a standard.</source>
+        <translation>Moyenne propre à cette application des six mesures ci-dessus, chacune sur une échelle simple : ce n&apos;est pas un standard.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Cumulative net P&amp;L</source>
+        <translation>P&amp;L net cumulé</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Month P&amp;L</source>
+        <translation>P&amp;L du mois</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Quarter P&amp;L</source>
+        <translation>P&amp;L du trimestre</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Last trades P&amp;L</source>
+        <translation>P&amp;L des derniers trades</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Sharpe-like ratio</source>
+        <translation>Ratio type Sharpe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sortino-like ratio</source>
+        <translation>Ratio type Sortino</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Winning streak</source>
+        <translation>Série de gains</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Average holding time</source>
+        <translation>Durée moyenne de détention</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Recovery factor</source>
+        <translation>Facteur de récupération</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Open positions</source>
+        <translation>Positions ouvertes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Side</source>
+        <translation>Sens</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Volume</source>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Opened</source>
+        <translation>Ouvert le</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open</source>
+        <translation>Ouverture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Live</source>
+        <translation>En direct</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unrealised P&amp;L</source>
+        <translation>P&amp;L latent</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>No closed trade yet: import a statement of MetaTrader 4, MetaTrader 5 or cTrader, or log a trade by hand.</source>
+        <translation>Aucun trade clôturé pour l&apos;instant : importez un relevé de MetaTrader 4, MetaTrader 5 ou cTrader, ou saisissez un trade à la main.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 closed trades</source>
+        <translation>%1 trades clôturés</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 won, %2 flat, %3 lost</source>
+        <translation>%1 gagnés, %2 neutres, %3 perdus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 won for %2 lost</source>
+        <translation>%1 gagnés pour %2 perdus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1% of the balance at its peak</source>
+        <translation>%1 % du solde à son sommet</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 average win, %2 average loss</source>
+        <translation>%1 de gain moyen, %2 de perte moyenne</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>net per trade</source>
+        <translation>net par trade</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Win %</source>
+        <translation>% réussite</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Avg win/loss</source>
+        <translation>Gain/perte moy.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Recovery</source>
+        <translation>Récupération</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Drawdown</source>
+        <translation>Drawdown</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Consistency</source>
+        <translation>Régularité</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Cumulative</source>
+        <translation>Cumul</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>mean over spread of the trades&apos; results, not annualised</source>
+        <translation>moyenne sur dispersion des résultats des trades, non annualisée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>the same with the losses&apos; spread only</source>
+        <translation>la même avec la dispersion des seules pertes</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>longest losing streak: %1</source>
+        <translation>plus longue série de pertes : %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>from open to close</source>
+        <translation>de l&apos;ouverture à la clôture</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>net P&amp;L over the largest drawdown</source>
+        <translation>P&amp;L net sur le plus grand drawdown</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>From the same delayed quotes as the rest of the terminal, refreshed every minute: %1 %2 over %3 of %4 positions, with the contract sizes of a standard account.</source>
+        <translation>D&apos;après les mêmes cours différés que le reste du terminal, rafraîchis chaque minute : %1 %2 sur %3 de %4 positions, avec les tailles de contrat d&apos;un compte standard.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Quotes unavailable: %1</source>
+        <translation>Cours indisponibles : %1</translation>
+    </message>
+</context>
+<context>
+    <name>DeskPage</name>
+    <message>
+        <location filename="../src/DeskPage.cpp" line="+16"/>
+        <source>Markets</source>
+        <translation>Marchés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Strength</source>
+        <translation>Force</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Sessions</source>
+        <translation>Sessions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Recap</source>
+        <translation>Récap</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wire</source>
+        <translation>Fil</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rates</source>
+        <translation>Taux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Positioning</source>
+        <translation>Positionnement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Risk appetite</source>
+        <translation>Appétit pour le risque</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Seasonality</source>
+        <translation>Saisonnalité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Fundamentals</source>
+        <translation>Fondamentaux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Technicals</source>
+        <translation>Technique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Liquidity</source>
+        <translation>Liquidité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Notes</source>
+        <translation>Notes</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Workspaces</source>
+        <translation>Espaces</translation>
+    </message>
+</context>
+<context>
+    <name>DeskStrip</name>
+    <message>
+        <location filename="../src/DeskStrip.cpp" line="+36"/>
+        <source>FX sessions</source>
+        <translation>Sessions FX</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open the Desk&apos;s sessions</source>
+        <translation>Ouvrir les sessions du Desk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Strongest currency, 24 hours</source>
+        <translation>Devise la plus forte, 24 heures</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open the Desk&apos;s currency strength</source>
+        <translation>Ouvrir la force des devises du Desk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Risk appetite</source>
+        <translation>Appétit pour le risque</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open the Desk&apos;s risk appetite</source>
+        <translation>Ouvrir l'appétit pour le risque du Desk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next high-impact release</source>
+        <translation>Prochaine publication à fort impact</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open the Desk&apos;s wire</source>
+        <translation>Ouvrir le fil du Desk</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>%1 min</source>
+        <translation>%1 min</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 h %2</source>
+        <translation>%1 h %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 d %2 h</source>
+        <translation>%1 j %2 h</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Closed</source>
+        <translation>Fermé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 opens in %2</source>
+        <translation>%1 ouvre dans %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>%1, in %2</source>
+        <translation>%1, dans %2</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>None this week</source>
+        <translation>Aucune cette semaine</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>weakest: %1 %2</source>
+        <translation>la plus faible : %1 %2</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>extreme risk-off</source>
+        <translation>risk-off extrême</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>risk-off</source>
+        <translation>risk-off</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>neutral</source>
+        <translation>neutre</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>risk-on</source>
+        <translation>risk-on</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>extreme risk-on</source>
+        <translation>risk-on extrême</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1, %2 a week ago</source>
+        <translation>%1, %2 il y a une semaine</translation>
     </message>
 </context>
 <context>
@@ -3855,9 +4462,10 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>EconomicCalendar</name>
     <message>
-        <location filename="../src/CalendarData.cpp" line="-250"/>
+        <location filename="../src/CalendarData.cpp" line="-312"/>
         <location line="+32"/>
         <location line="+35"/>
+        <location line="+47"/>
         <source>unexpected answer from TradingView</source>
         <translation>réponse inattendue de TradingView</translation>
     </message>
@@ -3865,7 +4473,27 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>EconomicView</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="-440"/>
+        <location filename="../src/CalendarPage.cpp" line="-663"/>
+        <source>due</source>
+        <translation>attendu</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 min</source>
+        <translation>%1 min</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h %2</source>
+        <translation>%1 h %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 d %2 h</source>
+        <translation>%1 j %2 h</translation>
+    </message>
+    <message>
+        <location line="+99"/>
         <source>Economic events</source>
         <translation>Événements économiques</translation>
     </message>
@@ -3943,11 +4571,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+19"/>
+        <location line="+44"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-44"/>
         <source>Time</source>
         <translation>Heure</translation>
     </message>
@@ -3958,27 +4587,73 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
+        <location line="+44"/>
+        <location line="+122"/>
         <source>Actual</source>
         <translation>Publié</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-165"/>
+        <location line="+43"/>
+        <location line="+122"/>
         <source>Forecast</source>
         <translation>Prévision</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-165"/>
         <source>Previous</source>
         <translation>Précédent</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+0"/>
+        <location line="+43"/>
+        <source>Surprise</source>
+        <translation>Surprise</translation>
+    </message>
+    <message>
+        <location line="-43"/>
+        <source>In</source>
+        <translation>Dans</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Click an event for its past figures against the forecasts</source>
+        <translation>Cliquez sur un événement pour voir ses chiffres passés face aux prévisions</translation>
+    </message>
+    <message>
+        <location line="+26"/>
+        <source>Period</source>
+        <translation>Période</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Loading three years of releases…</source>
+        <translation>Chargement de trois ans de publications…</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <location line="+66"/>
         <location line="+5"/>
         <source>TradingView: %1</source>
         <translation>TradingView : %1</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-71"/>
+        <source>No past release of this event.</source>
+        <translation>Aucune publication passée de cet événement.</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>%1 releases, none with a forecast.</source>
+        <translation>%1 publications, aucune avec une prévision.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 releases: %2 above the forecast, %3 below, mean surprise %4.</source>
+        <translation>%1 publications : %2 au-dessus de la prévision, %3 en dessous, surprise moyenne %4.</translation>
+    </message>
+    <message>
+        <location line="+34"/>
         <source>Loading %1 from TradingView…</source>
         <translation>Chargement du %1 depuis TradingView…</translation>
     </message>
@@ -3989,11 +4664,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+24"/>
-        <source>Source: %1</source>
-        <translation>Source : %1</translation>
+        <source>Source: %1. Click for its past figures against the forecasts.</source>
+        <translation>Source : %1. Cliquez pour voir ses chiffres passés face aux prévisions.</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <source>Source: %1</source>
+        <translation type="vanished">Source : %1</translation>
+    </message>
+    <message>
+        <location line="+28"/>
         <location line="+7"/>
         <source>No event for these filters</source>
         <translation>Aucun événement pour ces filtres</translation>
@@ -4841,7 +5520,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>ForexPage</name>
     <message>
-        <location filename="../src/ForexPage.cpp" line="+38"/>
+        <location filename="../src/ForexPage.cpp" line="+39"/>
         <source>Forex</source>
         <translation>Forex</translation>
     </message>
@@ -4886,7 +5565,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>1A</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+45"/>
         <source>European Central Bank reference rates via frankfurter.dev: one fix per business day around 16:00 CET, no intraday data.</source>
         <translation>Taux de référence de la Banque centrale européenne via frankfurter.dev : un fixing par jour ouvré vers 16 h (heure de Paris), pas de données intrajournalières.</translation>
     </message>
@@ -4951,7 +5630,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>FxPairCard</name>
     <message>
-        <location filename="../src/ForexPage.cpp" line="-469"/>
+        <location filename="../src/ForexPage.cpp" line="-476"/>
         <source>carry %1%2 pp</source>
         <translation>portage %1%2 pts</translation>
     </message>
@@ -5117,7 +5796,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+1"/>
         <source>Search the help</source>
-        <translation>Chercher dans l'aide</translation>
+        <translation>Chercher dans l&apos;aide</translation>
     </message>
 </context>
 <context>
@@ -5159,6 +5838,105 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+36"/>
         <source>The file&apos;s SHA-256 doesn&apos;t match the Hub&apos;s: download it again</source>
         <translation>Le SHA-256 du fichier ne correspond pas à celui du Hub : téléchargez-le à nouveau</translation>
+    </message>
+</context>
+<context>
+    <name>ImportDialog</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="-620"/>
+        <source>Import trades</source>
+        <translation>Importer des trades</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+22"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <location line="+22"/>
+        <source>Side</source>
+        <translation>Sens</translation>
+    </message>
+    <message>
+        <location line="-22"/>
+        <location line="+23"/>
+        <source>Volume</source>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <location line="+23"/>
+        <source>Opened</source>
+        <translation>Ouvert le</translation>
+    </message>
+    <message>
+        <location line="-23"/>
+        <location line="+24"/>
+        <source>Closed</source>
+        <translation>Clôturé le</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Open</source>
+        <translation>Ouverture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Close</source>
+        <translation>Clôture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Costs</source>
+        <translation>Coûts</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+24"/>
+        <source>Profit</source>
+        <translation>Profit</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Import</source>
+        <translation>Importer</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Not in the file</source>
+        <translation>Absent du fichier</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>The columns weren&apos;t recognised: choose the symbol, a time and the profit below.</source>
+        <translation>Les colonnes n&apos;ont pas été reconnues : choisissez le symbole, une date et le profit ci-dessous.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The file is empty.</source>
+        <translation>Le fichier est vide.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No closed trade was found. Export the account history from the terminal, as an HTML report or a CSV file.</source>
+        <translation>Aucun trade clôturé trouvé. Exportez l&apos;historique du compte depuis le terminal, en rapport HTML ou en fichier CSV.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1: %2 trades found, %3 rows skipped (balance lines, orders, unreadable rows). A trade already imported is updated, not added twice.</source>
+        <translation>%1 : %2 trades trouvés, %3 lignes ignorées (lignes de solde, ordres, lignes illisibles). Un trade déjà importé est mis à jour, pas ajouté deux fois.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short</source>
+        <translation>Short</translation>
     </message>
 </context>
 <context>
@@ -5330,6 +6108,148 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/IndicatorsView.cpp" line="+44"/>
         <source>Search indicators…</source>
         <translation>Rechercher un indicateur…</translation>
+    </message>
+</context>
+<context>
+    <name>JournalBar</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="+185"/>
+        <source>Long and short</source>
+        <translation>Long et short</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>ACCOUNT</source>
+        <translation>COMPTE</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Edit</source>
+        <translation>Modifier</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <location line="+40"/>
+        <source>New account</source>
+        <translation>Nouveau compte</translation>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>Delete this account and its trades</source>
+        <translation>Supprimer ce compte et ses trades</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>+ LOG TRADE</source>
+        <translation>+ SAISIR UN TRADE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IMPORT TRADES</source>
+        <translation>IMPORTER DES TRADES</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Edit the account</source>
+        <translation>Modifier le compte</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Delete the account</source>
+        <translation>Supprimer le compte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Delete “%1” and its %2 trades? This can&apos;t be undone.</source>
+        <translation>Supprimer « %1 » et ses %2 trades ? Cette action est irréversible.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <location line="+5"/>
+        <source>Import trades</source>
+        <translation>Importer des trades</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Statements (*.htm *.html *.csv *.txt);;All files (*)</source>
+        <translation>Relevés (*.htm *.html *.csv *.txt);;Tous les fichiers (*)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>The file can&apos;t be read: %1</source>
+        <translation>Impossible de lire le fichier : %1</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>%1 added, %2 updated</source>
+        <translation>%1 ajoutés, %2 mis à jour</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>All years</source>
+        <translation>Toutes les années</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>All instruments</source>
+        <translation>Tous les instruments</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>All strategies</source>
+        <translation>Toutes les stratégies</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Last import %1</source>
+        <translation>Dernier import %1</translation>
+    </message>
+</context>
+<context>
+    <name>JournalPage</name>
+    <message>
+        <location line="+771"/>
+        <source>Dashboard</source>
+        <translation>Tableau de bord</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trade log</source>
+        <translation>Registre des trades</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Advanced details</source>
+        <translation>Détails avancés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Risk calculator</source>
+        <translation>Calculateur de risque</translation>
+    </message>
+</context>
+<context>
+    <name>JournalStore</name>
+    <message>
+        <location filename="../src/JournalData.cpp" line="+56"/>
+        <location line="+61"/>
+        <source>Main account</source>
+        <translation>Compte principal</translation>
+    </message>
+    <message>
+        <location line="+72"/>
+        <source>Sample account</source>
+        <translation>Compte d&apos;exemple</translation>
     </message>
 </context>
 <context>
@@ -6480,7 +7400,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1324"/>
+        <location filename="../src/MainWindow.cpp" line="+1363"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -6488,7 +7408,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-1048"/>
+        <location filename="../src/MainWindow.cpp" line="-1084"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
@@ -6498,27 +7418,27 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Carte</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Forex</source>
         <translation>Forex</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+7"/>
         <source>Charts</source>
         <translation>Graphiques</translation>
     </message>
     <message>
-        <location line="-13"/>
+        <location line="-18"/>
         <source>Overview</source>
         <translation>Overview</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Economy</source>
         <translation>Economy</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>Calendar</source>
         <translation>Calendrier</translation>
     </message>
@@ -6528,7 +7448,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>News</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+5"/>
         <source>Research</source>
         <translation>Research</translation>
     </message>
@@ -6536,6 +7456,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+1"/>
         <source>Quant</source>
         <translation>Quant</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Desk</source>
+        <translation>Desk</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Journal</source>
+        <translation>Journal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6548,7 +7478,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+859"/>
+        <location line="+876"/>
         <source>Trade in goods</source>
         <translation>Commerce de biens</translation>
     </message>
@@ -6629,12 +7559,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MarketCard</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="-267"/>
+        <location filename="../src/CalendarPage.cpp" line="-386"/>
         <source>%1d %2h %3m</source>
         <translation>%1j %2h %3m</translation>
     </message>
     <message>
-        <location line="+569"/>
+        <location line="+688"/>
         <source>Open</source>
         <translation>Ouvert</translation>
     </message>
@@ -6913,7 +7843,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MarketSessions</name>
     <message>
-        <location filename="../src/CalendarData.cpp" line="+246"/>
+        <location filename="../src/CalendarData.cpp" line="+261"/>
         <source>no trading sessions in Yahoo&apos;s answer</source>
         <translation>aucune séance dans la réponse de Yahoo</translation>
     </message>
@@ -7203,12 +8133,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>NewsPage</name>
     <message>
-        <location filename="../src/NewsPage.cpp" line="+164"/>
+        <location filename="../src/NewsPage.cpp" line="+167"/>
         <source>MMM d, yyyy HH:mm</source>
         <translation>d MMM yyyy HH:mm</translation>
     </message>
     <message>
-        <location line="+238"/>
+        <location line="+30"/>
+        <source>HIGH IMPACT</source>
+        <translation>IMPACT FORT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>IMPORTANT</source>
+        <translation>IMPORTANT</translation>
+    </message>
+    <message>
+        <location line="+224"/>
         <source>General</source>
         <translation>Général</translation>
     </message>
@@ -7238,7 +8178,72 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Filtrer un ticker...</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
+        <source>Read from the words of the headline, not its meaning: a guide, not a verdict</source>
+        <translation>Lu d&apos;après les mots du titre, pas son sens : un repère, pas un verdict</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>All impacts</source>
+        <translation>Tous les impacts</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Important and high</source>
+        <translation>Important et fort</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>High impact</source>
+        <translation>Impact fort</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>All topics</source>
+        <translation>Tous les thèmes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central banks</source>
+        <translation>Banques centrales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Inflation</source>
+        <translation>Inflation</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Employment</source>
+        <translation>Emploi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>GDP</source>
+        <translation>PIB</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>PMI</source>
+        <translation>PMI</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Retail sales</source>
+        <translation>Ventes au détail</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trade</source>
+        <translation>Commerce</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Earnings</source>
+        <translation>Résultats</translation>
+    </message>
+    <message>
+        <location line="+22"/>
         <source>News wire</source>
         <translation>Fil d’actualité</translation>
     </message>
@@ -7258,13 +8263,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Actualiser</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+129"/>
         <location line="+1"/>
         <source>Loading…</source>
         <translation>Chargement…</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+38"/>
+        <source>No article for these filters</source>
+        <translation>Aucun article pour ces filtres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>No favorite yet: star a card, or the article in the reader.</source>
         <translation>Aucun favori pour l’instant : cliquez l’étoile d’une carte, ou celle de l’article dans le lecteur.</translation>
     </message>
@@ -7280,6 +8290,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
             <numerusform>%n article</numerusform>
             <numerusform>%n articles</numerusform>
         </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 of %2 articles</source>
+        <translation>%1 articles sur %2</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7437,7 +8452,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Services de communication</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+134"/>
         <source>Index performance</source>
         <translation>Performance des indices</translation>
     </message>
@@ -7670,30 +8685,30 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/ResearchData.cpp" line="+634"/>
+        <location filename="../src/ResearchData.cpp" line="+644"/>
         <source>Revenue</source>
         <translation>Chiffre d&apos;affaires</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1327"/>
+        <location line="+1331"/>
         <source>Gross Profit</source>
         <translation>Résultat brut</translation>
     </message>
     <message>
-        <location line="-1326"/>
-        <location line="+1331"/>
+        <location line="-1330"/>
+        <location line="+1335"/>
         <source>Operating Income</source>
         <translation>Résultat d&apos;exploitation</translation>
     </message>
     <message>
-        <location line="-1330"/>
-        <location line="+1339"/>
+        <location line="-1334"/>
+        <location line="+1343"/>
         <source>Net Income</source>
         <translation>Résultat net</translation>
     </message>
     <message>
-        <location line="-1338"/>
+        <location line="-1342"/>
         <source>EBITDA</source>
         <translation>EBITDA</translation>
     </message>
@@ -7724,12 +8739,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1351"/>
+        <location line="+1355"/>
         <source>Total Assets</source>
         <translation>Total de l&apos;actif</translation>
     </message>
     <message>
-        <location line="-1350"/>
+        <location line="-1354"/>
         <source>Total Liabilities</source>
         <translation>Total des passifs</translation>
     </message>
@@ -7740,29 +8755,29 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1386"/>
+        <location line="+1390"/>
         <source>Total Debt</source>
         <translation>Dette totale</translation>
     </message>
     <message>
-        <location line="-1385"/>
+        <location line="-1389"/>
         <source>Cash &amp; Equivalents</source>
         <translation>Trésorerie et équivalents</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1390"/>
+        <location line="+1394"/>
         <source>Operating Cash Flow</source>
         <translation>Flux de trésorerie d&apos;exploitation</translation>
     </message>
     <message>
-        <location line="-1389"/>
-        <location line="+1437"/>
+        <location line="-1393"/>
+        <location line="+1441"/>
         <source>Free Cash Flow</source>
         <translation>Flux de trésorerie disponible</translation>
     </message>
     <message>
-        <location line="-1436"/>
+        <location line="-1440"/>
         <source>CapEx</source>
         <translation>Investissements (CapEx)</translation>
     </message>
@@ -7773,17 +8788,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1309"/>
+        <location line="+1313"/>
         <source>Cost of Revenue</source>
         <translation>Coût des ventes</translation>
     </message>
     <message>
-        <location line="-1308"/>
+        <location line="-1312"/>
         <source>Depreciation &amp; Amortization</source>
         <translation>Dotations aux amortissements</translation>
     </message>
     <message>
-        <location line="+1307"/>
+        <location line="+1311"/>
         <source>Total Revenue</source>
         <translation>Chiffre d&apos;affaires total</translation>
     </message>
@@ -8637,6 +9652,67 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <source>%1 B</source>
         <translation>%1 o</translation>
     </message>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="-1185"/>
+        <source>%1 min</source>
+        <translation>%1 min</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 h</source>
+        <translation>%1 h</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 d</source>
+        <translation>%1 j</translation>
+    </message>
+    <message>
+        <location filename="../src/DeskViewsMarket.cpp" line="+36"/>
+        <location line="+460"/>
+        <location line="+0"/>
+        <location line="+0"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="-459"/>
+        <location line="+457"/>
+        <location line="+0"/>
+        <location line="+0"/>
+        <source>Indices</source>
+        <translation>Indices</translation>
+    </message>
+    <message>
+        <location line="-456"/>
+        <source>Commodities</source>
+        <translation>Matières premières</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stocks</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+457"/>
+        <location line="+0"/>
+        <source>Crypto</source>
+        <translation>Crypto</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <location line="+0"/>
+        <source>Metals</source>
+        <translation>Métaux</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+0"/>
+        <location line="+235"/>
+        <source>Energy</source>
+        <translation>Énergie</translation>
+    </message>
 </context>
 <context>
     <name>QuantPage</name>
@@ -8752,6 +9828,199 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+0"/>
         <source>at close</source>
         <translation>à la clôture</translation>
+    </message>
+</context>
+<context>
+    <name>RiskView</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="+919"/>
+        <source>Trade parameters</source>
+        <translation>Paramètres du trade</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Instrument</source>
+        <translation>Instrument</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Account currency</source>
+        <translation>Devise du compte</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Account balance</source>
+        <translation>Solde du compte</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Amount</source>
+        <translation>Montant</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Risk per trade</source>
+        <translation>Risque par trade</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entry price</source>
+        <translation>Prix d&apos;entrée</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Stop loss</source>
+        <translation>Stop loss</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Take profit (optional)</source>
+        <translation>Take profit (facultatif)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the live price</source>
+        <translation>Utiliser le cours en direct</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Lot size</source>
+        <translation>Taille en lots</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Position size</source>
+        <translation>Taille de position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stop distance</source>
+        <translation>Distance du stop</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Risk</source>
+        <translation>Risque</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reward</source>
+        <translation>Gain visé</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Trade map</source>
+        <translation>Carte du trade</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Risk / reward ratio</source>
+        <translation>Ratio risque / gain</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Loading the live rate…</source>
+        <translation>Chargement du cours en direct…</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Live rate unavailable: %1. Type the levels by hand.</source>
+        <translation>Cours en direct indisponible : %1. Saisissez les niveaux à la main.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Levels prefilled from the live price, yours to change. Quotes are about 15 minutes delayed.</source>
+        <translation>Niveaux préremplis d&apos;après le cours en direct, modifiables. Les cours ont environ 15 minutes de retard.</translation>
+    </message>
+    <message>
+        <location line="+43"/>
+        <source>Enter the account&apos;s balance.</source>
+        <translation>Saisissez le solde du compte.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enter what you accept to lose.</source>
+        <translation>Saisissez ce que vous acceptez de perdre.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The stop must differ from the entry.</source>
+        <translation>Le stop doit différer de l&apos;entrée.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The rate from %1 to %2 isn&apos;t known yet.</source>
+        <translation>Le taux de %1 vers %2 n&apos;est pas encore connu.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The target must be on the other side of the entry from the stop.</source>
+        <translation>L&apos;objectif doit être de l&apos;autre côté de l&apos;entrée par rapport au stop.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Position size = risk ÷ (stop distance × value of the quote currency). 1 lot of %1 = %2 units, the size of a standard account: check your broker&apos;s. Rate from %3 to %4: %5.</source>
+        <translation>Taille de position = risque ÷ (distance du stop × valeur de la devise de cotation). 1 lot de %1 = %2 unités, la taille d&apos;un compte standard : vérifiez celle de votre courtier. Taux de %3 vers %4 : %5.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>lots</source>
+        <translation>lots</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>LONG: units</source>
+        <translation>LONG : unités</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>SHORT: units</source>
+        <translation>SHORT : unités</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source> of the price</source>
+        <translation> du prix</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1, %2% of the balance</source>
+        <translation>%1, %2 % du solde</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 at the take profit</source>
+        <translation>%1 au take profit</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>POOR</source>
+        <translation>MAUVAIS</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>THIN</source>
+        <translation>JUSTE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ACCEPTABLE</source>
+        <translation>ACCEPTABLE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>STRONG</source>
+        <translation>SOLIDE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Breakeven win rate: %1%</source>
+        <translation>Taux de réussite d&apos;équilibre : %1 %</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>no take profit</source>
+        <translation>pas de take profit</translation>
     </message>
 </context>
 <context>
@@ -8938,6 +10207,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+1"/>
         <source>Federal Reserve Bank of New York</source>
         <translation>Réserve fédérale de New York</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Federal Reserve Board</source>
+        <translation>Federal Reserve Board</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -9166,6 +10440,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>InvestingLive</source>
+        <translation>InvestingLive</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ING Think</source>
+        <translation>ING Think</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Cointelegraph · Decrypt</source>
         <translation>Cointelegraph · Decrypt</translation>
     </message>
@@ -9304,6 +10588,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Desk</source>
+        <translation>Desk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Journal</source>
+        <translation>Journal</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Charts</source>
         <translation>Graphiques</translation>
     </message>
@@ -9318,7 +10612,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>IA</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+124"/>
         <source>Country series</source>
         <translation>Séries par pays</translation>
     </message>
@@ -10013,7 +11307,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>SourcesPage</name>
     <message>
-        <location filename="../src/SourcesPage.cpp" line="+238"/>
+        <location filename="../src/SourcesPage.cpp" line="+239"/>
         <source>Sources</source>
         <translation>Sources</translation>
     </message>
@@ -10104,14 +11398,14 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+114"/>
-        <location line="+117"/>
+        <location line="+115"/>
+        <location line="+137"/>
         <location line="+8"/>
         <source>Bank for International Settlements</source>
         <translation>Banque des règlements internationaux</translation>
     </message>
     <message>
-        <location line="-238"/>
+        <location line="-259"/>
         <source>Forex: policy rates and the carry on each pair</source>
         <translation>Forex : taux directeurs et portage de chaque paire</translation>
     </message>
@@ -10126,7 +11420,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Forex : flux de capitaux des gérants d’actifs et des fonds à effet de levier</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+46"/>
         <source>Head counts and supply chain</source>
         <translation>Effectifs et chaîne d&apos;approvisionnement</translation>
     </message>
@@ -10200,7 +11494,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Economy : l&apos;indice Fear &amp; Greed crypto ; celui des actions est une estimation de Deepwater à partir des cours de Yahoo Finance et des spreads de FRED</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="+117"/>
         <source>Quant</source>
         <translation>Quant</translation>
     </message>
@@ -10210,12 +11504,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Commitments of Traders (legacy, futures seulement)</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Quant: positions of non-commercial, commercial and non-reportable traders in index, bitcoin, gold and silver futures (COT); prices and key figures come from Yahoo Finance (Research, above)</source>
-        <translation>Quant : positions des opérateurs non commerciaux, commerciaux et non déclarables sur les futures d&apos;indices, de bitcoin, d&apos;or et d&apos;argent (COT) ; les prix et chiffres clés viennent de Yahoo Finance (Research, ci-dessus)</translation>
+        <translation type="vanished">Quant : positions des opérateurs non commerciaux, commerciaux et non déclarables sur les futures d&apos;indices, de bitcoin, d&apos;or et d&apos;argent (COT) ; les prix et chiffres clés viennent de Yahoo Finance (Research, ci-dessus)</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+16"/>
         <source>Regimes and volatility forecasts</source>
         <translation>Régimes et prévisions de volatilité</translation>
     </message>
@@ -10235,7 +11528,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Quant et Research : le régime HMM et la prévision MS-GARCH de chaque symbole de l&apos;état partagé (Portefeuille, bandeaux), réestimés quand ils datent d&apos;avant le dernier jour de bourse</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+24"/>
         <source>Map · macroeconomics</source>
         <translation>Carte · macroéconomie</translation>
     </message>
@@ -10245,8 +11538,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Perspectives de l’économie mondiale (WEO)</translation>
     </message>
     <message>
-        <location line="-127"/>
-        <location line="+127"/>
+        <location line="-147"/>
+        <location line="+147"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+18"/>
@@ -10294,8 +11587,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Secteurs d’activité</translation>
     </message>
     <message>
-        <location line="-144"/>
-        <location line="+144"/>
+        <location line="-164"/>
+        <location line="+164"/>
         <location line="+15"/>
         <source>World Bank</source>
         <translation>Banque mondiale</translation>
@@ -10371,13 +11664,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Carte : dernière inflation, chômage, production, ventes au détail, confiance, taux, PIB et balance courante d&apos;environ 45 économies (fiche pays, deux cartes thermiques)</translation>
     </message>
     <message>
-        <location line="-155"/>
-        <location line="+158"/>
+        <location line="-175"/>
+        <location line="+178"/>
         <source>European statistics</source>
         <translation>Statistiques européennes</translation>
     </message>
     <message>
-        <location line="-442"/>
+        <location line="-463"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
@@ -10497,7 +11790,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Carte : tonnage routier, expéditions de fret, services de fret et prix du fret maritime hauturier</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+58"/>
+        <source>Research: profile, key statistics, statements, analysts&apos; ratings and targets, prices, peers. Desk and Journal: quotes and bars, fed funds futures</source>
+        <translation>Research : profil, statistiques clés, états financiers, notes et objectifs des analystes, cours, sociétés comparables. Desk et Journal : cours et barres, contrats à terme sur fed funds</translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>Economy: about fifty US series (VIX, spreads, GDP, prices, jobs, rates, housing, money, the dollar against the yen…) and about 170 more in Countries › United States; through FRED&apos;s API with the key saved under Map · databases with a free key, else FRED&apos;s public CSV</source>
         <translation>Economy : une cinquantaine de séries américaines (VIX, écarts de crédit, PIB, prix, emploi, taux, immobilier, monnaie, dollar contre yen…) et environ 170 de plus dans Pays › États-Unis ; par l’API de FRED avec la clé enregistrée sous Carte · bases à clé gratuite, sinon par le CSV public de FRED</translation>
     </message>
@@ -10552,12 +11850,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Taux directeurs, prix immobiliers et crédit</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Countries: policy rates, residential property prices, household and private debt in % of GDP</source>
-        <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB</translation>
+        <translation type="vanished">Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+5"/>
         <source>Labour force surveys</source>
         <translation>Enquêtes sur la population active</translation>
     </message>
@@ -10815,7 +12112,72 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Identifiant d’application gratuit sur e-stat.go.jp › API (inscription)</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+5"/>
+        <source>Quant: positions of non-commercial, commercial and non-reportable traders in 23 futures markets: indices, bitcoin, currencies, metals, energy, grains (COT); prices and key figures come from Yahoo Finance (Research, above)</source>
+        <translation>Quant : positions des opérateurs non commerciaux, commerciaux et non déclarables sur 23 marchés à terme : indices, bitcoin, devises, métaux, énergie, céréales (COT) ; les prix et chiffres clés viennent de Yahoo Finance (Research, ci-dessus)</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Desk</source>
+        <translation>Desk</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meeting calendar and press releases</source>
+        <translation>Calendrier des réunions et communiqués de presse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Federal Reserve Board</source>
+        <translation>Federal Reserve Board</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Desk › Rates: the dates of the FOMC&apos;s meetings; Desk › Notes: its monetary press releases</source>
+        <translation>Desk › Taux : les dates des réunions du FOMC ; Desk › Notes : ses communiqués de politique monétaire</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Traders in Financial Futures</source>
+        <translation>Traders in Financial Futures</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quant › COT: dealers, asset managers and leveraged funds in index, currency and bitcoin futures</source>
+        <translation>Quant › COT : courtiers, gérants d&apos;actifs et fonds à levier sur les contrats à terme d&apos;indices, de devises et de bitcoin</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Long and short accounts</source>
+        <translation>Comptes long et short</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Desk › Positioning: the share of accounts long and short on twelve USDT perpetuals</source>
+        <translation>Desk › Positionnement : la part des comptes long et short sur douze perpétuels USDT</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Market headlines</source>
+        <translation>Titres de marché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Desk › Wire and Recap: its public feed of market headlines</source>
+        <translation>Desk › Fil et Récap : son flux public de titres de marché</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Economic research</source>
+        <translation>Recherche économique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Desk › Notes: the titles of its public research</source>
+        <translation>Desk › Notes : les titres de sa recherche publique</translation>
+    </message>
+    <message>
+        <location line="+43"/>
         <source>Eurostat (from the national offices)</source>
         <translation>Eurostat (depuis les instituts nationaux)</translation>
     </message>
@@ -11360,13 +12722,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1373"/>
-        <location line="+394"/>
+        <location line="-1394"/>
+        <location line="+415"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
     </message>
     <message>
-        <location line="-553"/>
+        <location line="-574"/>
         <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
         <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
     </message>
@@ -11401,7 +12763,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tous les accès</translation>
     </message>
     <message>
-        <location line="+501"/>
+        <location line="+522"/>
         <source>Charts: the Calendar tab</source>
         <translation>Graphiques : l’onglet Calendar</translation>
     </message>
@@ -11456,7 +12818,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Fournis avec l’application</translation>
     </message>
     <message>
-        <location line="-473"/>
+        <location line="-494"/>
         <source>Map: daily transits through the chokepoints by vessel type, a few days behind</source>
         <translation>Carte : transits quotidiens dans les points de passage par type de navire, avec quelques jours de retard</translation>
     </message>
@@ -11501,12 +12863,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Données des sociétés et cours</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Research: profile, key statistics, statements, analysts&apos; ratings and targets, prices, peers</source>
-        <translation>Research : profil, statistiques clés, états financiers, notes et objectifs des analystes, cours, sociétés comparables</translation>
+        <translation type="vanished">Research : profil, statistiques clés, états financiers, notes et objectifs des analystes, cours, sociétés comparables</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Holders, insiders and listings</source>
         <translation>Actionnaires, initiés et cotations</translation>
     </message>
@@ -11536,7 +12897,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Research : le S&amp;P 500 et le Dow, avec leur secteur GICS</translation>
     </message>
     <message>
-        <location line="+141"/>
+        <location line="+142"/>
         <source>Countries › Indonesia: monthly inflation, unemployment (February and August), exports, imports, foreign tourist visits; three years per request, so since 2015</source>
         <translation>Pays › Indonésie : inflation mensuelle, chômage (février et août), exportations, importations, visites de touristes étrangers ; trois ans par requête, donc depuis 2015</translation>
     </message>
@@ -11546,7 +12907,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pays › Japon : l’indice des prix à la consommation du Bureau des statistiques (ensemble, hors produits frais, hors produits frais et énergie, services), avec les séries de la Banque du Japon (ci-dessus)</translation>
     </message>
     <message>
-        <location line="+227"/>
+        <location line="+246"/>
         <source>Map: production sites (a sample), routes and countries</source>
         <translation>Carte : sites de production (un échantillon), routes et pays</translation>
     </message>
@@ -11666,7 +13027,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>HTTP %1</translation>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="-1203"/>
+        <source>Countries: policy rates, residential property prices, household and private debt in % of GDP. Desk › Notes: central bankers&apos; speeches</source>
+        <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
+    </message>
+    <message>
+        <location line="+1029"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -12087,6 +13453,105 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>TradeDialog</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="-1012"/>
+        <source>Log a trade</source>
+        <translation>Saisir un trade</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Edit the trade</source>
+        <translation>Modifier le trade</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <location line="+21"/>
+        <source>Closed</source>
+        <translation>Clôturé</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Still open</source>
+        <translation>Encore ouvert</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Side</source>
+        <translation>Sens</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Volume (lots)</source>
+        <translation>Volume (lots)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Opened</source>
+        <translation>Ouvert le</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>State</source>
+        <translation>État</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open price</source>
+        <translation>Prix d&apos;ouverture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Close price</source>
+        <translation>Prix de clôture</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stop loss</source>
+        <translation>Stop loss</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Take profit</source>
+        <translation>Take profit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commission and swap</source>
+        <translation>Commission et swap</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Profit</source>
+        <translation>Profit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Strategy</source>
+        <translation>Stratégie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Notes</source>
+        <translation>Notes</translation>
+    </message>
+</context>
+<context>
     <name>TradeFlows</name>
     <message>
         <location filename="../src/MacroData.cpp" line="+529"/>
@@ -12100,9 +13565,135 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>TradeLogView</name>
+    <message>
+        <location filename="../src/JournalPage.cpp" line="+474"/>
+        <source>Trades</source>
+        <translation>Trades</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Closed</source>
+        <translation>Clôturé le</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Side</source>
+        <translation>Sens</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Volume</source>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open</source>
+        <translation>Ouverture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Close</source>
+        <translation>Clôture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Held</source>
+        <translation>Durée</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Costs</source>
+        <translation>Coûts</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Profit</source>
+        <translation>Profit</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Net</source>
+        <translation>Net</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Strategy</source>
+        <translation>Stratégie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Notes</source>
+        <translation>Notes</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>No trade matches these filters.</source>
+        <translation>Aucun trade ne correspond à ces filtres.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>open</source>
+        <translation>ouvert</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Edit</source>
+        <translation>Modifier</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Delete this trade</source>
+        <translation>Supprimer ce trade</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Delete the trade</source>
+        <translation>Supprimer le trade</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Delete this %1 trade?</source>
+        <translation>Supprimer ce trade sur %1 ?</translation>
+    </message>
+</context>
+<context>
+    <name>TradeMap</name>
+    <message>
+        <location line="+183"/>
+        <source>STOP</source>
+        <translation>STOP</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ENTRY</source>
+        <translation>ENTRÉE</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>TARGET</source>
+        <translation>OBJECTIF</translation>
+    </message>
+</context>
+<context>
     <name>WorldEconomy</name>
     <message>
-        <location line="-310"/>
+        <location filename="../src/MacroData.cpp" line="-310"/>
         <source>Unexpected IMF response</source>
         <translation>Réponse du FMI inattendue</translation>
     </message>
@@ -12378,6 +13969,1960 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>deskui::AppetiteView</name>
+    <message>
+        <location filename="../src/DeskViewsMacro.cpp" line="+460"/>
+        <source>Composite risk appetite</source>
+        <translation>Appétit pour le risque composite</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Composite, last year</source>
+        <translation>Composite, dernière année</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Components: percentile against their own past year</source>
+        <translation>Composantes : percentile par rapport à leur dernière année</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Component</source>
+        <translation>Composante</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Measure</source>
+        <translation>Mesure</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Percentile</source>
+        <translation>Percentile</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>What it reads</source>
+        <translation>Ce que cela lit</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Seven markets, daily closes, each ranked against its last 252 days and averaged. Under 40 is risk-off, over 60 risk-on. This app&apos;s own composite: an estimate, not a published index.</source>
+        <translation>Sept marchés, clôtures journalières, chacun classé par rapport à ses 252 derniers jours, puis moyennés. Sous 40 c&apos;est risk-off, au-dessus de 60 risk-on. Composite propre à cette application : une estimation, pas un indice publié.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Loading seven markets…</source>
+        <translation>Chargement de sept marchés…</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <source>Volatility (VIX)</source>
+        <translation>Volatilité (VIX)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Lower volatility, more appetite</source>
+        <translation>Moins de volatilité, plus d&apos;appétit</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Equity trend</source>
+        <translation>Tendance des actions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>S&amp;P 500 against its 125-day average</source>
+        <translation>S&amp;P 500 par rapport à sa moyenne sur 125 jours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Credit appetite</source>
+        <translation>Appétit pour le crédit</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>High yield against investment grade bonds, 20-day change</source>
+        <translation>Haut rendement contre obligations investment grade, variation sur 20 jours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>AUD/JPY</source>
+        <translation>AUD/JPY</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Australian dollar against the yen, 20-day change</source>
+        <translation>Dollar australien contre yen, variation sur 20 jours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copper / Gold</source>
+        <translation>Cuivre / Or</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Growth against safety, 20-day change of the ratio</source>
+        <translation>Croissance contre sécurité, variation du ratio sur 20 jours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stocks vs safe haven</source>
+        <translation>Actions contre valeur refuge</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>S&amp;P 500&apos;s 20-day return minus gold&apos;s</source>
+        <translation>Rendement du S&amp;P 500 sur 20 jours moins celui de l&apos;or</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crypto momentum</source>
+        <translation>Momentum crypto</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bitcoin&apos;s 20-day change</source>
+        <translation>Variation du bitcoin sur 20 jours</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Not enough history yet.</source>
+        <translation>Pas encore assez d&apos;historique.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>EXTREME RISK-OFF</source>
+        <translation>RISK-OFF EXTRÊME</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>RISK-OFF</source>
+        <translation>RISK-OFF</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>NEUTRAL</source>
+        <translation>NEUTRE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>RISK-ON</source>
+        <translation>RISK-ON</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>EXTREME RISK-ON</source>
+        <translation>RISK-ON EXTRÊME</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>1 week ago %1 · 1 month ago %2</source>
+        <translation>Il y a 1 semaine %1 · il y a 1 mois %2</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Composite</source>
+        <translation>Composite</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 pts</source>
+        <translation>%1 pts</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::BarsChart</name>
+    <message>
+        <location filename="../src/DeskWidgets.cpp" line="+153"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::DotsChart</name>
+    <message>
+        <location line="+135"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::FundamentalsView</name>
+    <message>
+        <location filename="../src/DeskViewsMacro.cpp" line="+206"/>
+        <source>Currencies on their fundamentals, strongest first</source>
+        <translation>Devises selon leurs fondamentaux, les plus fortes d&apos;abord</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ASK THE AI TO READ IT</source>
+        <translation>DEMANDER À L&apos;IA DE LE LIRE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use read_page on the Desk page, section Fundamentals, then say which currencies the table favours and why, in a few sentences. Use only what the page shows and say what is missing.</source>
+        <translation>Utilisez read_page sur la page Desk, section Fondamentaux, puis dites quelles devises le tableau favorise et pourquoi, en quelques phrases. N&apos;utilisez que ce que la page montre et dites ce qui manque.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+31"/>
+        <source>Currency</source>
+        <translation>Devise</translation>
+    </message>
+    <message>
+        <location line="-31"/>
+        <source>Score</source>
+        <translation>Score</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Bias</source>
+        <translation>Biais</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+180"/>
+        <source>Rates</source>
+        <translation>Taux</translation>
+    </message>
+    <message>
+        <location line="-180"/>
+        <location line="+180"/>
+        <source>Inflation</source>
+        <translation>Inflation</translation>
+    </message>
+    <message>
+        <location line="-180"/>
+        <location line="+180"/>
+        <source>Growth</source>
+        <translation>Croissance</translation>
+    </message>
+    <message>
+        <location line="-180"/>
+        <location line="+180"/>
+        <source>Labour</source>
+        <translation>Emploi</translation>
+    </message>
+    <message>
+        <location line="-180"/>
+        <location line="+180"/>
+        <source>Activity</source>
+        <translation>Activité</translation>
+    </message>
+    <message>
+        <location line="-180"/>
+        <location line="+180"/>
+        <source>Sentiment</source>
+        <translation>Sentiment</translation>
+    </message>
+    <message>
+        <location line="-178"/>
+        <source>From each economy&apos;s latest releases on the economic calendar and the BIS&apos;s policy rates. Each theme reads strong, neutral or weak by fixed rules (a hike, inflation above 2.5%, growth above 0.3%, unemployment falling, a PMI above 50.5, confidence rising are strong) and the score is their mean, from −100 to +100. This app&apos;s own simple reading: not a forecast, and a theme without a recent release is left out.</source>
+        <translation>D&apos;après les dernières publications de chaque économie au calendrier économique et les taux directeurs de la BRI. Chaque thème se lit fort, neutre ou faible selon des règles fixes (une hausse de taux, une inflation au-dessus de 2,5 %, une croissance au-dessus de 0,3 %, un chômage en baisse, un PMI au-dessus de 50,5, une confiance en hausse sont forts) et le score est leur moyenne, de −100 à +100. Lecture simple propre à cette application : ce n&apos;est pas une prévision, et un thème sans publication récente est écarté.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Pair comparator</source>
+        <translation>Comparateur de paires</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+152"/>
+        <source>Theme</source>
+        <translation>Thème</translation>
+    </message>
+    <message>
+        <location line="-152"/>
+        <location line="+152"/>
+        <source>Difference</source>
+        <translation>Écart</translation>
+    </message>
+    <message>
+        <location line="-149"/>
+        <source>Latest figures</source>
+        <translation>Derniers chiffres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Policy rate</source>
+        <translation>Taux directeur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>CPI</source>
+        <translation>IPC</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>GDP</source>
+        <translation>PIB</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unemployment</source>
+        <translation>Chômage</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>PMI</source>
+        <translation>PMI</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Confidence</source>
+        <translation>Confiance</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loading five months of releases…</source>
+        <translation>Chargement de cinq mois de publications…</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The calendar is unavailable: %1</source>
+        <translation>Le calendrier est indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>Hike</source>
+        <translation>Hausse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hold</source>
+        <translation>Statu quo</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cut</source>
+        <translation>Baisse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Above target</source>
+        <translation>Au-dessus de la cible</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Near target</source>
+        <translation>Près de la cible</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Below target</source>
+        <translation>Sous la cible</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Expanding</source>
+        <translation>En expansion</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Flat</source>
+        <translation>À plat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Contracting</source>
+        <translation>En contraction</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Tightening</source>
+        <translation>En tension</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Stable</source>
+        <translation>Stable</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Softening</source>
+        <translation>En détente</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Expansion</source>
+        <translation>Expansion</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Contraction</source>
+        <translation>Contraction</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Improving</source>
+        <translation>En amélioration</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weakening</source>
+        <translation>En dégradation</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>BULLISH</source>
+        <translation>HAUSSIER</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>BEARISH</source>
+        <translation>BAISSIER</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>NEUTRAL</source>
+        <translation>NEUTRE</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>%1/%2: too close to call on these figures</source>
+        <translation>%1/%2 : trop serré pour trancher d&apos;après ces chiffres</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1/%2: the figures favour %3, %4 to %5 on the themes</source>
+        <translation>%1/%2 : les chiffres favorisent %3, %4 à %5 sur les thèmes</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::HBarsChart</name>
+    <message>
+        <location filename="../src/DeskWidgets.cpp" line="-77"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::LevelsChart</name>
+    <message>
+        <location line="+276"/>
+        <source>No data</source>
+        <translation>Aucune donnée</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::LiquidityView</name>
+    <message>
+        <location filename="../src/DeskViewsTech.cpp" line="+255"/>
+        <source>Daily</source>
+        <translation>Journalier</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Stop-run likelihood</source>
+        <translation>Risque de chasse aux stops</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Untested pools</source>
+        <translation>Zones non testées</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pool above</source>
+        <translation>Zone au-dessus</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pool below</source>
+        <translation>Zone en dessous</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last sweep</source>
+        <translation>Dernier balayage</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Liquidity pools</source>
+        <translation>Zones de liquidité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+4"/>
+        <source>Side</source>
+        <translation>Sens</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+4"/>
+        <source>Level</source>
+        <translation>Niveau</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <location line="+4"/>
+        <source>Touches</source>
+        <translation>Touches</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>Distance</source>
+        <translation>Distance</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>State</source>
+        <translation>État</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sweep alerts</source>
+        <translation>Alertes de balayage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>When</source>
+        <translation>Quand</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Session extremes</source>
+        <translation>Extrêmes des séances</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Day</source>
+        <translation>Jour</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+64"/>
+        <source>High</source>
+        <translation>Haut</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <location line="+64"/>
+        <source>Low</source>
+        <translation>Bas</translation>
+    </message>
+    <message>
+        <location line="-60"/>
+        <source>Stops are assumed to rest beyond swing highs and lows: swings close together make one pool, and a pool is swept when a later bar trades through it. Inferred from price alone, for every market, with no order data. On Binance pairs, the Charts page&apos;s liquidity heatmap shows the real order book.</source>
+        <translation>Les stops sont supposés se trouver au-delà des plus hauts et plus bas de swing : des swings proches forment une seule zone, et une zone est balayée quand une bougie ultérieure la traverse. Déduit du seul prix, pour tous les marchés, sans données d&apos;ordres. Sur les paires Binance, la heatmap de liquidité de la page Graphiques montre le vrai carnet d&apos;ordres.</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Loading %1…</source>
+        <translation>Chargement de %1…</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Moderate</source>
+        <translation>Modéré</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>the nearest pool is %1, by distance in average ranges</source>
+        <translation>la zone la plus proche est %1, par distance en ranges moyens</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+15"/>
+        <source>above</source>
+        <translation>au-dessus</translation>
+    </message>
+    <message>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>below</source>
+        <translation>en dessous</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>of %1 pools found</source>
+        <translation>sur %1 zones trouvées</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>%1, %2</source>
+        <translation>%1, %2</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+11"/>
+        <source>Buy-side</source>
+        <translation>Buy-side</translation>
+    </message>
+    <message>
+        <location line="-11"/>
+        <location line="+11"/>
+        <source>Sell-side</source>
+        <translation>Sell-side</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Swept</source>
+        <translation>Balayée</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Untested</source>
+        <translation>Non testée</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::MarketsView</name>
+    <message>
+        <location filename="../src/DeskViewsMarket.cpp" line="-674"/>
+        <source>Search %1 markets: EUR/USD, Gold, Nvidia, Bitcoin…</source>
+        <translation>Chercher parmi %1 marchés : EUR/USD, Or, Nvidia, Bitcoin…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>CHANGE OVER</source>
+        <translation>VARIATION SUR</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>ORDER</source>
+        <translation>ORDRE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Default</source>
+        <translation>Par défaut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Performance</source>
+        <translation>Performance</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>A-Z</source>
+        <translation>A-Z</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Breadth</source>
+        <translation>Largeur du marché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Average move</source>
+        <translation>Mouvement moyen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leader</source>
+        <translation>Meneur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Laggard</source>
+        <translation>À la traîne</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Market</source>
+        <translation>Marché</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Last</source>
+        <translation>Dernier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Change</source>
+        <translation>Variation</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market to read its signals.</source>
+        <translation>Cours Yahoo Finance, différés d&apos;environ 15 minutes pour la plupart des marchés, rafraîchis chaque minute. Cliquez sur un marché pour lire ses signaux.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Loading the quotes…</source>
+        <translation>Chargement des cours…</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Quotes unavailable: %1</source>
+        <translation>Cours indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+46"/>
+        <source>%1 up, %2 down</source>
+        <translation>%1 en hausse, %2 en baisse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 markets with a quote</source>
+        <translation>%1 marchés avec un cours</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>across the markets shown</source>
+        <translation>sur les marchés affichés</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::NotesView</name>
+    <message>
+        <location filename="../src/DeskViewsTech.cpp" line="+50"/>
+        <source>All publishers</source>
+        <translation>Tous les éditeurs</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Search the titles</source>
+        <translation>Chercher dans les titres</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Date</source>
+        <translation>Date</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Publisher</source>
+        <translation>Éditeur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Title</source>
+        <translation>Titre</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Only what is free and offered as a public feed: ING&apos;s research and the central banks&apos; own releases and speeches. The large banks&apos; notes and their FX forecasts by quarter are for clients, with no public feed, so they aren&apos;t here. A click opens the note in your browser.</source>
+        <translation>Seulement ce qui est gratuit et proposé en flux public : la recherche d&apos;ING et les communiqués et discours des banques centrales elles-mêmes. Les notes des grandes banques et leurs prévisions de change par trimestre sont réservées à leurs clients, sans flux public : elles ne sont donc pas ici. Un clic ouvre la note dans votre navigateur.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Loading the feeds…</source>
+        <translation>Chargement des flux…</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Unavailable: %1</source>
+        <translation>Indisponible : %1</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::PositioningView</name>
+    <message>
+        <location filename="../src/DeskViewsMacro.cpp" line="-662"/>
+        <source>Crowded long</source>
+        <translation>Long encombré</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crowded short</source>
+        <translation>Short encombré</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Most long</source>
+        <translation>Le plus long</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Most short</source>
+        <translation>Le plus short</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crowd lean</source>
+        <translation>Penchant de la foule</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Crypto perpetuals: accounts long and short</source>
+        <translation>Perpétuels crypto : comptes long et short</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Positioning</source>
+        <translation>Positionnement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+116"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="-116"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>24h Δ long</source>
+        <translation>Δ long 24 h</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Status</source>
+        <translation>Statut</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Share of accounts long, 30 days</source>
+        <translation>Part des comptes long, 30 jours</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Binance&apos;s public ratio of accounts long and short on its USDT perpetuals, a measure of the crowd, not of money. Forex and CFD positioning isn&apos;t here: the brokers&apos; and communities&apos; figures aren&apos;t published for free to a program (Myfxbook refuses programs). COT positions are in Quant › COT.</source>
+        <translation>Ratio public de Binance des comptes long et short sur ses perpétuels USDT, une mesure de la foule, pas de l&apos;argent. Le positionnement forex et CFD n&apos;est pas ici : les chiffres des courtiers et des communautés ne sont pas publiés gratuitement pour un programme (Myfxbook refuse les programmes). Les positions COT sont dans Quant › COT.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Loading Binance&apos;s ratios…</source>
+        <translation>Chargement des ratios de Binance…</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Binance&apos;s ratios are unavailable: %1</source>
+        <translation>Les ratios de Binance sont indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>BALANCED</source>
+        <translation>ÉQUILIBRÉ</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>CROWDED LONG</source>
+        <translation>LONG ENCOMBRÉ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CROWDED SHORT</source>
+        <translation>SHORT ENCOMBRÉ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LEANING LONG</source>
+        <translation>PENCHE LONG</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>LEANING SHORT</source>
+        <translation>PENCHE SHORT</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 pt</source>
+        <translation>%1 pt</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>of %1, at 70% or more</source>
+        <translation>sur %1, à 70 % ou plus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>of %1, at 30% or less</source>
+        <translation>sur %1, à 30 % ou moins</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+3"/>
+        <source>%1% long</source>
+        <translation>%1 % long</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>%1% short</source>
+        <translation>%1 % short</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>the mean of these markets</source>
+        <translation>la moyenne de ces marchés</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::RatesView</name>
+    <message>
+        <location line="-381"/>
+        <source>Fed funds, implied today</source>
+        <translation>Fed funds, implicite aujourd&apos;hui</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Next FOMC</source>
+        <translation>Prochain FOMC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Priced for it</source>
+        <translation>Intégré dans les prix</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Priced by the end of the path</source>
+        <translation>Intégré à la fin du chemin</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Implied fed funds rate after each meeting</source>
+        <translation>Taux fed funds implicite après chaque réunion</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Implied change at each meeting, basis points</source>
+        <translation>Variation implicite à chaque réunion, points de base</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Meeting by meeting</source>
+        <translation>Réunion par réunion</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Meeting</source>
+        <translation>Réunion</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+10"/>
+        <source>In</source>
+        <translation>Dans</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>Rate before</source>
+        <translation>Taux avant</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rate after</source>
+        <translation>Taux après</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Change</source>
+        <translation>Variation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cumulative</source>
+        <translation>Cumul</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+106"/>
+        <source>Hold</source>
+        <translation>Statu quo</translation>
+    </message>
+    <message>
+        <location line="-104"/>
+        <source>Read from CME 30-day fed funds futures, delayed, with the Fed&apos;s own calendar: each contract is 100 minus the month&apos;s average rate, so a meeting&apos;s move is what the month after it must be for the average to hold. Each move is spread on the two nearest quarter-point steps, the usual simplification. It reads what is priced, not what will happen.</source>
+        <translation>Lu sur les contrats à terme CME sur fed funds à 30 jours, différés, avec le calendrier de la Fed : chaque contrat vaut 100 moins le taux moyen du mois, donc le mouvement d&apos;une réunion est ce que doit être le mois suivant pour que la moyenne tienne. Chaque mouvement est réparti entre les deux quarts de point les plus proches, la simplification habituelle. Cela lit ce qui est intégré dans les prix, pas ce qui arrivera.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Central banks</source>
+        <translation>Banques centrales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank</source>
+        <translation>Banque</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rate</source>
+        <translation>Taux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Last move</source>
+        <translation>Dernier mouvement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>On</source>
+        <translation>Le</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>1 year</source>
+        <translation>1 an</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Next decision</source>
+        <translation>Prochaine décision</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Policy rates from the BIS; decisions from the Fed&apos;s own calendar and the economic calendar, which only lists some of them ahead. No free source publishes rate futures for the other banks, so only the Fed has probabilities here.</source>
+        <translation>Taux directeurs de la BRI ; décisions d&apos;après le calendrier de la Fed et le calendrier économique, qui n&apos;en annonce que certaines à l&apos;avance. Aucune source gratuite ne publie de contrats à terme de taux pour les autres banques : seule la Fed a donc des probabilités ici.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Sovereign yield curves</source>
+        <translation>Courbes des taux souveraines</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>US Treasury par yields and the ECB&apos;s AAA euro area spot curve, latest published.</source>
+        <translation>Rendements au pair du Trésor américain et courbe au comptant AAA de la zone euro de la BCE, dernière publication.</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Loading the futures and the Fed&apos;s calendar…</source>
+        <translation>Chargement des contrats à terme et du calendrier de la Fed…</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>The Fed&apos;s calendar is unavailable: %1</source>
+        <translation>Le calendrier de la Fed est indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>The fed funds futures are unavailable: %1</source>
+        <translation>Les contrats à terme sur fed funds sont indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>100 minus the nearest future</source>
+        <translation>100 moins le contrat le plus proche</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>in %1 days</source>
+        <translation>dans %1 jours</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hike</source>
+        <translation>Hausse</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Cut</source>
+        <translation>Baisse</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 bp implied</source>
+        <translation>%1 pb implicites</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 bp by %2</source>
+        <translation>%1 pb d&apos;ici %2</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+45"/>
+        <source>%1 d</source>
+        <translation>%1 j</translation>
+    </message>
+    <message>
+        <location line="-33"/>
+        <source>Implied rate</source>
+        <translation>Taux implicite</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+3"/>
+        <source>%1 bp</source>
+        <translation>%1 pb</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>United States</source>
+        <translation>États-Unis</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Euro area</source>
+        <translation>Zone euro</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::RecapView</name>
+    <message>
+        <location filename="../src/DeskViewsMarket.cpp" line="+328"/>
+        <source>Recaps</source>
+        <translation>Récaps</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Sessions</source>
+        <translation>Sessions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Weeks</source>
+        <translation>Semaines</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Written by the app from the figures below, by fixed rules.</source>
+        <translation>Écrit par l&apos;application à partir des chiffres ci-dessous, selon des règles fixes.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>ASK THE AI TO READ IT</source>
+        <translation>DEMANDER À L&apos;IA DE LE LIRE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use read_page on the Desk page, section Recap, then explain this session in a few sentences: what moved most, the releases and headlines that may explain it. Use only what the page shows and say what it doesn&apos;t show.</source>
+        <translation>Utilisez read_page sur la page Desk, section Récap, puis expliquez cette session en quelques phrases : ce qui a le plus bougé, les publications et les titres qui peuvent l&apos;expliquer. N&apos;utilisez que ce que la page montre et dites ce qu&apos;elle ne montre pas.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Moves of the window, open to close, 15-minute bars</source>
+        <translation>Mouvements de la période, de l&apos;ouverture à la clôture, bougies de 15 minutes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Market</source>
+        <translation>Marché</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Group</source>
+        <translation>Groupe</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Open</source>
+        <translation>Ouverture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Close</source>
+        <translation>Clôture</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Change</source>
+        <translation>Variation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>High</source>
+        <translation>Haut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Low</source>
+        <translation>Bas</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The window&apos;s largest move</source>
+        <translation>Le plus grand mouvement de la période</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Releases in the window</source>
+        <translation>Publications de la période</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+5"/>
+        <source>Time</source>
+        <translation>Heure</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Event</source>
+        <translation>Événement</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Actual</source>
+        <translation>Publié</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Forecast</source>
+        <translation>Prévision</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Previous</source>
+        <translation>Précédent</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Wire in the window</source>
+        <translation>Fil de la période</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Headline</source>
+        <translation>Titre</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Loading the bars and the wire…</source>
+        <translation>Chargement des bougies et du fil…</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Week of %1</source>
+        <translation>Semaine du %1</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>  · live</source>
+        <translation>  · en direct</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>%1 SESSION</source>
+        <translation>SESSION %1</translation>
+    </message>
+    <message>
+        <location line="+58"/>
+        <source>%1 to %2 your time · breadth %3 up, %4 down · %5 releases · %6 headlines%7</source>
+        <translation>%1 à %2, votre heure · largeur %3 en hausse, %4 en baisse · %5 publications · %6 titres%7</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source> · running</source>
+        <translation> · en cours</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No bar was found in this window: the markets were closed, or the prices aren&apos;t loaded yet.</source>
+        <translation>Aucune bougie trouvée sur cette période : les marchés étaient fermés, ou les prix ne sont pas encore chargés.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The largest move was %1 at %2.</source>
+        <translation>Le plus grand mouvement a été %1 à %2.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>%1 %2 at %3 for %4 expected</source>
+        <translation>%1 %2 à %3 pour %4 attendu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>High-impact releases: %1.</source>
+        <translation>Publications à fort impact : %1.</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::SeasonalityView</name>
+    <message>
+        <location filename="../src/DeskViewsMacro.cpp" line="+355"/>
+        <source>YEARS</source>
+        <translation>ANNÉES</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>PERIOD</source>
+        <translation>PÉRIODE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Full</source>
+        <translation>Année</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Leave out extreme years (beyond 1.5σ)</source>
+        <translation>Écarter les années extrêmes (au-delà de 1,5σ)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Win rate</source>
+        <translation>Taux de réussite</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Mean return of the period</source>
+        <translation>Rendement moyen de la période</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Best month</source>
+        <translation>Meilleur mois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Worst month</source>
+        <translation>Pire mois</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Volatility ratio</source>
+        <translation>Ratio de volatilité</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Average path of the year and this year, % from 1 January</source>
+        <translation>Chemin moyen de l&apos;année et année en cours, % depuis le 1er janvier</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Mean return by month</source>
+        <translation>Rendement moyen par mois</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Mean daily return by weekday, in the period</source>
+        <translation>Rendement quotidien moyen par jour de la semaine, sur la période</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>The period, year by year</source>
+        <translation>La période, année par année</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Daily closes from Yahoo Finance; the current year is left out of the averages. History shorter than asked for is used as it is. Past seasonality doesn&apos;t predict a given year.</source>
+        <translation>Clôtures journalières de Yahoo Finance ; l&apos;année en cours est exclue des moyennes. Un historique plus court que demandé est utilisé tel quel. La saisonnalité passée ne prédit pas une année donnée.</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Loading %1&apos;s history…</source>
+        <translation>Chargement de l&apos;historique de %1…</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Not enough history for this period.</source>
+        <translation>Pas assez d&apos;historique pour cette période.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>%1 up, %2 down, over %3 years</source>
+        <translation>%1 en hausse, %2 en baisse, sur %3 ans</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>compounded over the period</source>
+        <translation>composé sur la période</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>the period&apos;s daily volatility over the whole year&apos;s</source>
+        <translation>la volatilité quotidienne de la période sur celle de toute l&apos;année</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Average, %1 years</source>
+        <translation>Moyenne, %1 ans</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::SessionsView</name>
+    <message>
+        <location filename="../src/DeskViewsMarket.cpp" line="-325"/>
+        <source>Today, in your time</source>
+        <translation>Aujourd&apos;hui, à votre heure</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>The usual business hours of each centre, Monday to Friday, with daylight saving; FX trades around the clock, so these mark when each centre&apos;s desks are active. Public holidays aren&apos;t known.</source>
+        <translation>Les horaires de bureau habituels de chaque place, du lundi au vendredi, avec l&apos;heure d&apos;été ; le forex se traite en continu, donc ils indiquent quand les desks de chaque place sont actifs. Les jours fériés ne sont pas connus.</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>OVERLAP: %1</source>
+        <translation>CHEVAUCHEMENT : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>OPEN: %1</source>
+        <translation>OUVERT : %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>ALL SESSIONS CLOSED</source>
+        <translation>TOUTES LES SESSIONS SONT FERMÉES</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Open</source>
+        <translation>Ouvert</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Closed</source>
+        <translation>Fermé</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>closes in %1</source>
+        <translation>ferme dans %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>opens in %1</source>
+        <translation>ouvre dans %1</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1
+local time %2, hours %3–%4 there
+%5 to %6 for you</source>
+        <translation>%1
+heure locale %2, horaires %3–%4 là-bas
+%5 à %6 pour vous</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::StrengthView</name>
+    <message>
+        <location line="-242"/>
+        <source>Unweighted currency indices: each currency against the seven others, every pair counting the same.</source>
+        <translation>Indices de devises non pondérés : chaque devise contre les sept autres, chaque paire comptant autant.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Currency strength, % since the first bar on screen</source>
+        <translation>Force des devises, % depuis la première bougie à l&apos;écran</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Ranking</source>
+        <translation>Classement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Currency</source>
+        <translation>Devise</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Change</source>
+        <translation>Variation</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Loading the seven dollar pairs…</source>
+        <translation>Chargement des sept paires du dollar…</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::TechnicalView</name>
+    <message>
+        <location filename="../src/DeskViewsTech.cpp" line="-428"/>
+        <location line="+16"/>
+        <location line="+74"/>
+        <source>Bullish</source>
+        <translation>Haussier</translation>
+    </message>
+    <message>
+        <location line="-89"/>
+        <location line="+15"/>
+        <location line="+74"/>
+        <source>Bearish</source>
+        <translation>Baissier</translation>
+    </message>
+    <message>
+        <location line="-88"/>
+        <location line="+89"/>
+        <source>Overbought</source>
+        <translation>Suracheté</translation>
+    </message>
+    <message>
+        <location line="-88"/>
+        <location line="+88"/>
+        <source>Oversold</source>
+        <translation>Survendu</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <source>Near liquidity</source>
+        <translation>Près de la liquidité</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Market lean</source>
+        <translation>Penchant du marché</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Filter</source>
+        <translation>Filtrer</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>FX</source>
+        <translation>FX</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Indices</source>
+        <translation>Indices</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Commodities</source>
+        <translation>Matières premières</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Stocks</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Crypto</source>
+        <translation>Crypto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>All trends</source>
+        <translation>Toutes les tendances</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+74"/>
+        <location line="+1"/>
+        <source>Neutral</source>
+        <translation>Neutre</translation>
+    </message>
+    <message>
+        <location line="-67"/>
+        <source>Market</source>
+        <translation>Marché</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Last</source>
+        <translation>Dernier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>1D</source>
+        <translation>1J</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+150"/>
+        <source>Trend</source>
+        <translation>Tendance</translation>
+    </message>
+    <message>
+        <location line="-150"/>
+        <location line="+150"/>
+        <source>Momentum</source>
+        <translation>Momentum</translation>
+    </message>
+    <message>
+        <location line="-150"/>
+        <location line="+150"/>
+        <source>Volatility</source>
+        <translation>Volatilité</translation>
+    </message>
+    <message>
+        <location line="-150"/>
+        <location line="+150"/>
+        <source>Volume</source>
+        <translation>Volume</translation>
+    </message>
+    <message>
+        <location line="-150"/>
+        <location line="+150"/>
+        <source>Structure</source>
+        <translation>Structure</translation>
+    </message>
+    <message>
+        <location line="-150"/>
+        <location line="+150"/>
+        <source>Liquidity</source>
+        <translation>Liquidité</translation>
+    </message>
+    <message>
+        <location line="-145"/>
+        <source>Signal file</source>
+        <translation>Fiche de signaux</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Computed here from Yahoo Finance&apos;s daily candles: EMA 20 against EMA 50, RSI 14, 20-day volatility against the year&apos;s, volume over 5 days against 60 (a listed fund stands in for markets without volume, or none), the last swings, the nearest stop pool. Plain readings, not signals to trade.</source>
+        <translation>Calculé ici d&apos;après les bougies journalières de Yahoo Finance : EMA 20 contre EMA 50, RSI 14, volatilité sur 20 jours contre celle de l&apos;année, volume sur 5 jours contre 60 (un fonds coté remplace les marchés sans volume, ou aucun), les derniers swings, la zone de stops la plus proche. Des lectures simples, pas des signaux de trading.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Loading the markets: 0 of %1…</source>
+        <translation>Chargement des marchés : 0 sur %1…</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Loading the markets: %1 of %2…</source>
+        <translation>Chargement des marchés : %1 sur %2…</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>High</source>
+        <translation>Élevée</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Low</source>
+        <translation>Faible</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Normal</source>
+        <translation>Normale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Above avg</source>
+        <translation>Au-dessus moy.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Below avg</source>
+        <translation>Sous la moy.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Average</source>
+        <translation>Moyen</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Higher highs</source>
+        <translation>Hauts croissants</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Lower lows</source>
+        <translation>Bas décroissants</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ranging</source>
+        <translation>En range</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Pool above %1</source>
+        <translation>Zone au-dessus %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Pool below %1</source>
+        <translation>Zone en dessous %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Near a pool %1</source>
+        <translation>Près d&apos;une zone %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Swept</source>
+        <translation>Balayée</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>%1% of %2</source>
+        <translation>%1 % de %2</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>RSI at 70 or more</source>
+        <translation>RSI à 70 ou plus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>RSI at 30 or less</source>
+        <translation>RSI à 30 ou moins</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>within one daily range of a stop pool</source>
+        <translation>à moins d&apos;un range journalier d&apos;une zone de stops</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>leaning bullish</source>
+        <translation>penchant haussier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>leaning bearish</source>
+        <translation>penchant baissier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>balanced</source>
+        <translation>équilibré</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Trend: %1, EMA 20 at %2 from EMA 50.</source>
+        <translation>Tendance : %1, EMA 20 à %2 de l&apos;EMA 50.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Momentum: RSI %1, %2.</source>
+        <translation>Momentum : RSI %1, %2.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Volatility: %1% a year on 20 days, %2% over the period.</source>
+        <translation>Volatilité : %1 % par an sur 20 jours, %2 % sur la période.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Volume: %1 times its 60-day average.</source>
+        <translation>Volume : %1 fois sa moyenne sur 60 jours.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Structure: %1.</source>
+        <translation>Structure : %1.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Liquidity: %1.</source>
+        <translation>Liquidité : %1.</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::WireView</name>
+    <message>
+        <location filename="../src/DeskViewsMarket.cpp" line="+487"/>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Headlines</source>
+        <translation>Titres</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Movers</source>
+        <translation>Mouvements</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Releases</source>
+        <translation>Publications</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>LIVE TV</source>
+        <translation>TV EN DIRECT</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Opens the channel&apos;s live stream on YouTube, in your browser</source>
+        <translation>Ouvre le direct de la chaîne sur YouTube, dans votre navigateur</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Time</source>
+        <translation>Heure</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Age</source>
+        <translation>Âge</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Kind</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Item</source>
+        <translation>Élément</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Headlines from InvestingLive&apos;s public feed, refreshed every minute; moves over 3% from the delayed quotes; releases from the economic calendar. A feed, not a professional squawk: minutes behind at best. Click a headline to open it.</source>
+        <translation>Titres du flux public d&apos;InvestingLive, rafraîchis chaque minute ; mouvements de plus de 3 % d&apos;après les cours différés ; publications du calendrier économique. Un flux, pas un squawk professionnel : quelques minutes de retard au mieux. Cliquez sur un titre pour l&apos;ouvrir.</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>The wire is unavailable: %1</source>
+        <translation>Le fil est indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>%1 %2, now %3</source>
+        <translation>%1 %2, maintenant %3</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source> (forecast %1, previous %2)</source>
+        <translation> (prévision %1, précédent %2)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 headlines, %2 movers, %3 releases</source>
+        <translation>%1 titres, %2 mouvements, %3 publications</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>HEADLINE</source>
+        <translation>TITRE</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>MOVER</source>
+        <translation>MOUVEMENT</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>RELEASE</source>
+        <translation>PUBLICATION</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1m ago</source>
+        <translation>il y a %1 min</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1h ago</source>
+        <translation>il y a %1 h</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1d ago</source>
+        <translation>il y a %1 j</translation>
+    </message>
+</context>
+<context>
+    <name>deskui::WorkspacesView</name>
+    <message>
+        <location filename="../src/DeskViewsTech.cpp" line="+292"/>
+        <source>WORKSPACE</source>
+        <translation>ESPACE</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+35"/>
+        <source>New workspace</source>
+        <translation>Nouvel espace</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>Rename</source>
+        <translation>Renommer</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Delete this workspace</source>
+        <translation>Supprimer cet espace</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>ADD A PANEL</source>
+        <translation>AJOUTER UN PANNEAU</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Add</source>
+        <translation>Ajouter</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Each panel is a live copy of a Desk section.</source>
+        <translation>Chaque panneau est une copie en direct d&apos;une section du Desk.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+11"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rename the workspace</source>
+        <translation>Renommer l&apos;espace</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Delete the workspace</source>
+        <translation>Supprimer l&apos;espace</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Delete “%1”?</source>
+        <translation>Supprimer « %1 » ?</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>Workspaces</source>
+        <translation>Espaces</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>A workspace holds six panels at most.</source>
+        <translation>Un espace contient six panneaux au maximum.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Macro desk</source>
+        <translation>Desk macro</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Remove this panel</source>
+        <translation>Retirer ce panneau</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>This workspace is empty: add a panel above.</source>
+        <translation>Cet espace est vide : ajoutez un panneau ci-dessus.</translation>
+    </message>
+</context>
+<context>
     <name>news::Wire</name>
     <message>
         <location filename="../src/NewsData.cpp" line="+361"/>
@@ -12438,7 +15983,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>newsui::Card</name>
     <message>
-        <location filename="../src/NewsPage.cpp" line="-367"/>
+        <location filename="../src/NewsPage.cpp" line="-427"/>
         <source>Remove from favorites</source>
         <translation>Retirer des favoris</translation>
     </message>
@@ -12457,6 +16002,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+25"/>
+        <source>Ask the AI</source>
+        <translation>Demander à l&apos;IA</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Sends this article&apos;s headline and its feed summary to the local model in the side panel; the page itself stays here</source>
+        <translation>Envoie le titre de cet article et le résumé de son flux au modèle local du panneau latéral ; la page elle-même reste ici</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Open in the browser</source>
         <translation>Ouvrir dans le navigateur</translation>
     </message>
@@ -12466,7 +16021,25 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Fermer (Échap)</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+31"/>
+        <source>Explain what this article means for the markets, in a few sentences. You only have its headline and its summary: say so if that isn&apos;t enough, and don&apos;t invent figures.
+
+Headline: %1
+Source: %2</source>
+        <translation>Expliquez ce que cet article signifie pour les marchés, en quelques phrases. Vous n&apos;avez que son titre et son résumé : dites-le si cela ne suffit pas, et n&apos;inventez pas de chiffres.
+
+Titre : %1
+Source : %2</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>
+Summary: %1</source>
+        <translation>
+Résumé : %1</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>%1 refuses the embedded view (HTTP %2): its bot protection does not accept this web engine. Use &quot;Open in the browser&quot;.</source>
         <translation>%1 refuse l’affichage intégré (HTTP %2) : sa protection anti-bot n’accepte pas ce moteur web. Utilisez « Ouvrir dans le navigateur ».</translation>
     </message>
@@ -12832,7 +16405,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>quant::CotTable</name>
     <message>
-        <location filename="../src/QuantCotView.cpp" line="+54"/>
+        <location filename="../src/QuantCotView.cpp" line="+58"/>
         <source>No data</source>
         <translation>Aucune donnée</translation>
     </message>
@@ -12901,7 +16474,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>quant::CotView</name>
     <message>
-        <location line="+97"/>
+        <location line="+100"/>
         <source>COT — Commitments of Traders: weekly CFTC report of futures positions (futures only, legacy format).</source>
         <translation>COT — Commitments of Traders : rapport hebdomadaire de la CFTC sur les positions en futures (futures seulement, format legacy).</translation>
     </message>
@@ -12921,7 +16494,87 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Positions nettes</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+11"/>
+        <source>Speculators, net</source>
+        <translation>Spéculateurs, net</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Speculators long</source>
+        <translation>Spéculateurs long</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Speculators in their 52-week range</source>
+        <translation>Spéculateurs dans leur fourchette 52 semaines</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commercials in their 52-week range</source>
+        <translation>Commerciaux dans leur fourchette 52 semaines</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Plain reading</source>
+        <translation>Lecture simple</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ask the AI to read it</source>
+        <translation>Demander à l&apos;IA de le lire</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Read the COT section of the Quant page with your tool for reading pages, then say in a few sentences what the positioning of %1 shows and what it doesn&apos;t. Don&apos;t predict the price.</source>
+        <translation>Lisez la section COT de la page Quant avec votre outil de lecture des pages, puis dites en quelques phrases ce que le positionnement de %1 montre et ce qu&apos;il ne montre pas. Ne prédisez pas le prix.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Traders in financial futures</source>
+        <translation>Traders in financial futures</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Category</source>
+        <translation>Catégorie</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Net</source>
+        <translation>Net</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Change</source>
+        <translation>Variation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>% of OI</source>
+        <translation>% pos. ouv.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>52-week range</source>
+        <translation>Fourchette 52 sem.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>The CFTC&apos;s split of a financial future&apos;s holders, published with the legacy report. Asset managers are mostly hedged long-term money; leveraged funds are the fast money. Where a market has several contracts, this is its main one.</source>
+        <translation>La répartition par la CFTC des détenteurs d&apos;un contrat à terme financier, publiée avec le rapport legacy. Les gérants d&apos;actifs sont surtout de l&apos;argent à long terme couvert ; les fonds à levier sont l&apos;argent rapide. Quand un marché a plusieurs contrats, c&apos;est le principal.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>HISTORICAL DATA</source>
         <translation>HISTORIQUE</translation>
     </message>
@@ -12956,7 +16609,119 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Net ND</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+50"/>
+        <source>%1 this week</source>
+        <translation>%1 cette semaine</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>of their long and short contracts</source>
+        <translation>de leurs contrats long et short</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>0 the lowest net of the year, 100 the highest</source>
+        <translation>0 le net le plus bas de l&apos;année, 100 le plus haut</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>usually the other side of the speculators</source>
+        <translation>en général la contrepartie des spéculateurs</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Speculators are net long %1 contracts</source>
+        <translation>Les spéculateurs sont net long de %1 contrats</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Speculators are net short %1 contracts</source>
+        <translation>Les spéculateurs sont net short de %1 contrats</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>close to the most long they have been in a year</source>
+        <translation>près de leur maximum long de l&apos;année</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>close to the most short they have been in a year</source>
+        <translation>près de leur maximum short de l&apos;année</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>inside their range of the last year</source>
+        <translation>dans leur fourchette de la dernière année</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Their net position rose by %1 this week. </source>
+        <translation>Leur position nette a augmenté de %1 cette semaine. </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Their net position fell by %1 this week. </source>
+        <translation>Leur position nette a baissé de %1 cette semaine. </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Their net position didn&apos;t change this week. </source>
+        <translation>Leur position nette n&apos;a pas changé cette semaine. </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Positions are as of Tuesday, so a few days old, and an extreme says the trade is crowded, not when it turns.</source>
+        <translation>Positions au mardi, donc vieilles de quelques jours, et un extrême dit que le trade est encombré, pas quand il se retourne.</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Unavailable: %1</source>
+        <translation>Indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>no data</source>
+        <translation>aucune donnée</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>as of %1</source>
+        <translation>au %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Dealers</source>
+        <translation>Courtiers</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+29"/>
+        <source>Asset managers</source>
+        <translation>Gérants d’actifs</translation>
+    </message>
+    <message>
+        <location line="-28"/>
+        <location line="+28"/>
+        <source>Leveraged funds</source>
+        <translation>Fonds à levier</translation>
+    </message>
+    <message>
+        <location line="-27"/>
+        <source>Other reportable</source>
+        <translation>Autres déclarables</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Non-reportable</source>
+        <translation>Non déclarables</translation>
+    </message>
+    <message>
+        <location line="+37"/>
         <source>Loading the CFTC report…</source>
         <translation>Chargement du rapport CFTC…</translation>
     </message>
@@ -12987,7 +16752,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>La CFTC publie les positions du mardi le vendredi à 15 h 30 (heure de New York), un jour plus tard les semaines fériées.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>Open Interest:</source>
         <translation>Positions ouvertes :</translation>
     </message>
@@ -14794,7 +18559,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>research::Client</name>
     <message>
-        <location filename="../src/ResearchData.cpp" line="-1575"/>
+        <location filename="../src/ResearchData.cpp" line="-1579"/>
         <source>This source is turned off in Sources</source>
         <translation>Cette source est désactivée dans Sources</translation>
     </message>
@@ -14819,7 +18584,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Symbole inconnu</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+51"/>
         <source>No quotes</source>
         <translation>Aucune cotation</translation>
     </message>

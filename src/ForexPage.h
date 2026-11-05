@@ -6,6 +6,7 @@ class CotData;
 class FxData;
 class PolicyRates;
 class QButtonGroup;
+class QVBoxLayout;
 class QLabel;
 
 // One card per currency pair: last fix, daily change and a 90-day sparkline.
@@ -89,9 +90,12 @@ class ForexPage : public QWidget
     Q_OBJECT
 public:
     ForexPage(FxData *fx, PolicyRates *rates, CotData *cot, QWidget *parent = nullptr);
+    void setTopStrip(QWidget *strip);   // under the page's title
 
 private:
     void refresh();
+
+    QVBoxLayout *m_layout;
 
     FxData *m_fx;
     PolicyRates *m_rates;

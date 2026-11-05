@@ -4,7 +4,7 @@ Trois vues, dans le sous-bandeau ; la dernière affichée est mémorisée. Les t
 
 ## Économique
 
-Les publications de 21 grandes économies et de la zone euro : la semaine dernière, hier, aujourd'hui, demain, cette semaine, la semaine prochaine ou une date choisie, filtrées par pays et par impact (les deux mémorisés). Chaque événement donne le chiffre publié, la prévision et la valeur précédente avec l'unité telle que publiée ; le chiffre est vert au-dessus de la prévision, rouge en dessous. Les heures sont dans votre fuseau horaire. La liste est rafraîchie toutes les dix minutes tant que l'onglet est affiché. La source est le calendrier économique public de TradingView.
+Les publications de 21 grandes économies et de la zone euro : la semaine dernière, hier, aujourd'hui, demain, cette semaine, la semaine prochaine ou une date choisie, filtrées par pays et par impact (les deux mémorisés). Chaque événement donne le chiffre publié, la prévision et la valeur précédente avec l'unité telle que publiée ; le chiffre est vert au-dessus de la prévision, rouge en dessous. Les heures sont dans votre fuseau horaire. La liste est rafraîchie toutes les dix minutes tant que l'onglet est affiché. La source est le calendrier économique public de TradingView. **Surprise** est le chiffre publié moins la prévision, et **Dans** compte le temps avant une publication à venir. Le calendrier donne une seule prévision, pas la fourchette des estimations des économistes.
 
 ## Sociétés
 

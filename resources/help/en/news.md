@@ -15,3 +15,9 @@ The reader runs an **ad blocker**, Brave's engine with the lists it turns on by 
 Without a key, free RSS feeds merged and sorted newest first: CNBC, MarketWatch and BBC Business (general); Nasdaq, MarketWatch, Seeking Alpha and Investing.com (stocks); Cointelegraph, Decrypt, CoinDesk and Investing.com (crypto); FXStreet and Investing.com (forex). The ticker badge comes from the feed when it gives one, else from the text ("(NASDAQ: NFLX)", "$NVDA", the coin or currency named first). With the ticker filter, the Stocks tab reads Yahoo Finance's and Nasdaq's feeds about that symbol; the other tabs keep the articles that name it.
 
 With a **Financial Modeling Prep** key saved in Sources › News, its news endpoints give every article a ticker and the filter asks them directly. A failed request falls back to the feeds and says why in the strip.
+
+## Impact and topics
+
+Each headline is read by its words for an impact (a tag on the card) and for topics: central banks, inflation, employment, GDP, PMI, retail sales, trade, earnings. Two lists in the sub-header filter on them. It reads words, not meaning: a guide, not a verdict.
+
+In the reader, **Ask the AI** sends the article's headline and its feed summary to your local model in the [side panel](help:ai). The model doesn't read the page itself, and there's no translation of articles.

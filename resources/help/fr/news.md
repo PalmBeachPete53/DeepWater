@@ -15,3 +15,9 @@ Le lecteur a un **bloqueur de publicités**, le moteur de Brave avec les listes 
 Sans clé, des flux RSS gratuits fusionnés et triés du plus récent : CNBC, MarketWatch et BBC Business (general) ; Nasdaq, MarketWatch, Seeking Alpha et Investing.com (stocks) ; Cointelegraph, Decrypt, CoinDesk et Investing.com (crypto) ; FXStreet et Investing.com (forex). Le badge de ticker vient du flux quand il en donne un, sinon du texte (« (NASDAQ: NFLX) », « $NVDA », la monnaie ou la devise nommée en premier). Avec le filtre par ticker, l'onglet Stocks lit les flux de Yahoo Finance et du Nasdaq sur ce symbole ; les autres onglets gardent les articles qui le nomment.
 
 Avec une clé **Financial Modeling Prep** enregistrée dans Sources › News, ses points d'accès donnent un ticker à chaque article et le filtre les interroge directement. Une requête qui échoue revient aux flux et le dit dans le bandeau.
+
+## Impact et thèmes
+
+Chaque titre est lu d'après ses mots pour un impact (une étiquette sur la carte) et des thèmes : banques centrales, inflation, emploi, PIB, PMI, ventes au détail, commerce, résultats. Deux listes du sous-en-tête filtrent dessus. Cela lit des mots, pas le sens : un repère, pas un verdict.
+
+Dans le lecteur, **Demander à l'IA** envoie le titre de l'article et son résumé de flux à votre modèle local dans le [panneau latéral](help:ai). Le modèle ne lit pas la page elle-même, et les articles ne sont pas traduits.

@@ -250,6 +250,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/AdBlock.h src/AdBlock.cpp
     src/NewsWebHost.h src/NewsWebHost.cpp src/NewsWebHostQt.cpp
     src/Voice.h
+    src/DeskStrip.h src/DeskStrip.cpp
     src/HelpWindow.h src/HelpWindow.cpp
     src/DeskWidgets.h src/DeskWidgets.cpp
     src/JournalData.h src/JournalData.cpp

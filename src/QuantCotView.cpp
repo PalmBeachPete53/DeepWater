@@ -279,6 +279,7 @@ CotView::CotView(CotReport *report, QWidget *parent)
     auto *tffRow = new QHBoxLayout;
     tffRow->setSpacing(10);
     m_tff = deskui::table({tr("Category"), tr("Long"), tr("Short"), tr("Net"), tr("Change"), tr("% of OI"), tr("52-week range")});
+    m_tff->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);   // names stay whole
     tffRow->addWidget(m_tff, 3, Qt::AlignTop);
     m_tffChart = new MultiLineChart;
     m_tffChart->setMinimumHeight(190);

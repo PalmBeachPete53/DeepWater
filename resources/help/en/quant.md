@@ -16,7 +16,9 @@ The regression of a stock's returns on an index's (SPY by default), daily or wee
 
 ## COT
 
-The CFTC's weekly *Commitments of Traders* report (legacy format, futures only; positions as of Tuesday, published Friday) for the S&P 500, Nasdaq-100 and Dow consolidated contracts, the Russell 2000 E-mini, bitcoin, gold and silver: positions, week-on-week change, share of open interest and number of traders of non-commercial, commercial and non-reportable traders; long against short per group; net positions over two years; the weekly history.
+The CFTC's weekly *Commitments of Traders* report (legacy format, futures only; positions as of Tuesday, published Friday) for 23 markets, chosen in the list: US indices, bitcoin, currencies, the dollar index, metals, energy and grains. Positions, week-on-week change, share of open interest and number of traders of non-commercial, commercial and non-reportable traders; long against short per group; net positions over two years; the weekly history.
+
+Below, how stretched it is: the speculators' net, their long share, where they and the commercials sit in their 52-week range, and a plain reading in fixed words, with **Ask the AI to read it** for your local model. An extreme says the trade is crowded, not when it turns. For indices, currencies and bitcoin, the *Traders in Financial Futures* report adds who holds it: dealers, asset managers, leveraged funds, others.
 
 ## Signals
 

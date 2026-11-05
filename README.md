@@ -735,7 +735,9 @@ The **Calendar** tab has a sub-header with three tabs (the last one shown is rem
 - **Economic**: releases of 21 large economies and the euro area from TradingView's public economic calendar
   (`economic-calendar.tradingview.com/events`, no key, it wants a `tradingview.com` Origin): last week, yesterday,
   today, tomorrow, this week, next week or a date picked, filtered by country and impact (both remembered). Actual,
-  forecast and previous with the unit and scale as published; the actual is green above the forecast, red below. One
+  forecast and previous with the unit and scale as published; the actual is green above the forecast, red below;
+  **Surprise** is actual minus forecast and **In** counts down to a release still to come (no public source gives the
+  range of economists' estimates). One
   request covers last week to the end of next week (~1 MB, ~1000 events), kept in a compact cache
   (`cache_tradingview_economic_calendar.bin`) and refreshed every 10 minutes while the tab is shown; a date outside
   that window is downloaded on its own. Times are in your time zone.
@@ -1131,7 +1133,7 @@ through the `Country` context of `i18n/deepwater_data_fr.ts`, and the GICS secto
 
 ## Quant
 
-The **Quant** tab has a sub-header with five sections (the one shown is remembered). Prices and company figures
+The **Quant** tab has a sub-header with its sections (the one shown is remembered). Prices and company figures
 come from Yahoo Finance through the Research client (`research::Client`, cached on disk, listed in **Sources**
 under Research). The page is translated; numbers keep the English grouping (`1,234.5`) in every language. Code: `src/QuantPage.*`, `src/QuantViews.h` and the
 `src/Quant*View*.cpp` files, charts in `src/QuantCharts.*`, statistics and the COT data set in `src/QuantData.*`.
@@ -1161,12 +1163,16 @@ under Research). The page is translated; numbers keep the English grouping (`1,2
   the start of the range, green between the curves where the stock leads and red where it lags, or their spread.
 - **COT**: the CFTC's weekly *Commitments of Traders* report, legacy format, futures only
   (`publicreporting.cftc.gov`, dataset `6dca-aqww`, no key; positions as of Tuesday, published Friday), for the
-  S&P 500, NASDAQ-100 and DJIA consolidated contracts, the Russell 2000 E-mini, bitcoin, gold and silver: positions,
+  23 markets in a list (`quant/cot/market`, new ones are added at the end): US indices, bitcoin, the majors, the dollar index,
+  metals, energy and grains: positions,
   week-on-week change, share of open interest and number of traders of non-commercial (long, short, spreads),
   commercial, total reportable and non-reportable traders; long against short per group; net positions over two
-  years; and the weekly history (open interest, its change, net positions). One request for the seven contracts
-  over two years (~800 rows), refreshed every 12 hours, cached in `cache_cftc_legacy.bin`; in **Sources**
-  (section Quant). The RELEASE date is the Tuesday plus three days (a day later on holiday weeks).
+  years; and the weekly history (open interest, its change, net positions). One request for all the contracts
+  over two years (~2,500 rows), refreshed every 12 hours, cached in `cache_cftc_legacy_full.bin`; in **Sources**
+  (section Quant). The RELEASE date is the Tuesday plus three days (a day later on holiday weeks). Below: the speculators'
+  net, long share and place in their 52-week range (`desk::rangePosition`), a plain reading in fixed words with an Ask-AI
+  button, and for financial markets the *Traders in Financial Futures* report (dataset `gpe5-46if`, `desk::parseTff`,
+  fetched per market through `research::Client`, group `cftc`, **Sources › Desk**).
 - **Signals**: a scan of 48 large US stocks (the Dow and the biggest of the S&P 500, plus the Compare tickers) on
   five timeframes (5m and 15m over five days, 1h over a month, 4h built from the hourly candles of each day, 1d
   over six months; Yahoo chart candles, intraday ones cached five minutes): RSI(14) beyond 30 / 70, streaks of
@@ -1265,6 +1271,41 @@ under Research). The page is translated; numbers keep the English grouping (`1,2
   draws its regime with the shared state's current probabilities and takes that regime's volatility, scaled so the
   mixture matches the forecast; the shocks are correlated through the Cholesky factor of the historical
   correlations), with the histogram of daily P&L, history against simulation.
+
+## Desk
+
+The **Desk** tab is a trader's reading of the markets in 14 sub-tabs built when first shown (`desk/section`, `--section <name>`).
+Market logic is in `src/desk/` (static library `desk`, Qt Core only, tested by `qtm_test_desk`), the views in
+`src/DeskPage.*` and `src/DeskViews{Market,Macro,Tech}.cpp`, the shared pieces in `src/DeskWidgets.*` and `src/DeskData.*`.
+Public sources only, listed in **Sources › Desk**. Texts are fixed rules; an **Ask the AI** button sends a question that
+holds no figures, and the model reads the section through `read_page`.
+
+- **Markets**: the 109 instruments of `desk/Instruments` by class, with search, period and order; a row opens Technicals.
+- **Strength**: unweighted currency indices from the seven dollar pairs on 15m, 1h, 4h or daily bars, and the ranking.
+- **Sessions**: Sydney, Tokyo, London and New York on a timeline in local time (`desk/Sessions`, with daylight saving).
+- **Recap**: a session or week: moves from open to close, the largest drawn, releases and headlines of the window.
+- **Wire**: InvestingLive's feed, markets crossing another 3% step, and calendar releases; live TV links open YouTube.
+- **Rates**: the Fed's path from CME 30-day futures on Yahoo (`ZQ<month><yy>.CBT`) and the FOMC's calendar page
+  (`desk/Rates`: 100 minus the price, each month's average solved for the meeting's move, split between the two nearest
+  quarter points); BIS policy rates with next decisions (the economic calendar lists few ahead: `fetchRange` over 125 days,
+  the Fed from its page); US Treasury and ECB AAA yield curves.
+- **Positioning**: Binance's public long/short account ratio on twelve USDT perpetuals. Myfxbook refuses programs (403),
+  so there is no FX retail positioning.
+- **Risk appetite**: seven markets ranked over 252 days and averaged (`computeAppetite`); this app's own estimate.
+- **Seasonality**: `computeSeasonal` over 25 years of daily closes; `range=max` would make Yahoo answer monthly bars.
+- **Fundamentals**: six themes per currency from 150 days of calendar releases and BIS rates (`desk/Fundamentals`).
+- **Technicals**: six signals per market (`computeSignals`), filters, radar.
+- **Liquidity**: stop pools from equal highs and lows (`findLiquidity`), an estimate from candles, not an order book.
+- **Notes**: ING Think, Fed, ECB, BoE and BIS speeches, from their feeds. Banks' client research has no public feed.
+- **Workspaces**: named sets of up to six live panels (`desk/workspaces`).
+
+## Journal
+
+The **Journal** tab holds real trades on this computer (`AppData/journal/journal.json`, `src/JournalData.*`), by account.
+No broker connection and no password: `desk/Journal` reads MetaTrader 4 and 5 HTML statements (UTF-16 included), cTrader CSV
+and any CSV by column names or a mapping dialog; `mergeTrades` skips what is already there. Four sub-tabs in
+`src/JournalPage.*`: Dashboard (`computeStats`), Trade log, Advanced details, and the Risk calculator (`computeRisk`).
+Dev flag: `--journal-sample <file>` loads a statement in memory for screenshots, without touching the file.
 
 ## AI
 
@@ -1420,6 +1461,10 @@ Claude settings and opencode, with the slots under both (either can be dragged i
     the ECB rate" → `list_data`, a wrong series corrected, `country_series(imf_cpi, cpi_yoy, FRA)`,
     `policy_rate(EA)`, then a sourced answer; "SPY over a year" → `prices` (150 ms), +10.06 %; with the skill unticked,
     a forced `list_data` call was refused and logged.
+- **Voice** (`src/Voice.h`, `src/VoiceMac.mm`): in the side panel on macOS, **Hold to talk** listens only while held and sends
+  what was understood when released; **Read the answers aloud** (`ai/speakAnswers`) uses the system's voices. Recognition is
+  `SFSpeechRecognizer` with `requiresOnDeviceRecognition`: a language without on-device recognition is refused, never sent to
+  Apple's servers. No wake word. Elsewhere than macOS the button isn't shown (`src/VoiceStub.cpp`).
 - **Models › Integration**, Claude (`src/ClaudeClient.*`): the settings of Claude through the Messages API
   (`api.anthropic.com/v1/messages`, API version `2026-10-21`, raw HTTP since there is no C++ SDK): the model
   (`ai/model`; the API's list when a key is set, else Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.1; `claude-opus-5-5` by
@@ -1637,6 +1682,10 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/LocalChat.*` | The conversation with a model of the slots shared by AI › Local and the side panel: engine, messages, tool-call rounds, journal; `ChatTranscript` draws it |
 | `src/AiRead.*` | What the `read_page` tool reads: a page as data, from its table models, the text its widgets draw and its charts' values |
 | `src/OpencodeRun.*` | opencode as the model of that conversation: `opencode run --standalone` with its own tools denied, the same session from one message to the next |
+| `src/DeskPage.*`, `src/DeskViews*.cpp`, `src/DeskWidgets.*`, `src/DeskData.*` | The Desk tab: 14 sections, shared tables, tiles and charts, candle and feed loading |
+| `src/desk/` | Market logic without UI (library `desk`): instruments, risk, journal parsing and statistics, strength, signals, liquidity, seasonality, appetite, sessions, fundamentals, headline tags, Fed path, TFF |
+| `src/JournalPage.*`, `src/JournalData.*` | The Journal tab and its store |
+| `src/Voice.h`, `src/VoiceMac.mm`, `src/VoiceStub.cpp` | Push-to-talk and spoken answers of the side panel: on-device recognition, system voices; `cmake/Info.plist.in` holds the permission texts |
 | `src/AiDock.*` | The AI side panel: a flap on the right edge, a panel to ask a model of the slots from any page with a context line |
 | `src/SideFlap.*` | The flap that opens a side panel (DEV, AI) and the panels' close button |
 | `src/LocalTools.*` | The tools a local model may call, by skill (`read_data`: country series, WEO, policy rates, FX, COT, prices; `trade`: tester and paper account), Hermes-format prompt and parsing, checks at every call, order cap |
@@ -1665,7 +1714,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/AdBlock.*` | The reader's ad blocker: `adblock::Blocker` (Brave's default filter lists downloaded daily, the adblock-rust engine built on the thread pool, request checks from the IO thread, cosmetic rules) and `adblock::Interceptor` (the profile's request interceptor) |
 | `third_party/llama.cpp/` | llama.cpp b12070 (MIT): only what libllama needs, unchanged (`VERSION` names the tag) |
 | `third_party/adblock-ffi/` | A Rust crate (`staticlib`) exposing Brave's `adblock` crate as a C ABI (`include/adblock_ffi.h`): build, check a request, cosmetic resources, hidden selectors, (de)serialization; built by cargo from CMake |
-| `src/QuantPage.*`, `src/QuantViews.h`, `src/Quant{Compare,Pair,Cot,Signals}View*.cpp` | The Quant tab: sub-header and its five sections (compare, correlation, risk & beta, COT, signals) |
+| `src/QuantPage.*`, `src/QuantViews.h`, `src/Quant{Compare,Pair,Cot,Signals}View*.cpp` | The Quant tab: sub-header and its sections (compare, correlation, risk & beta, COT, signals, Markov, portfolio) |
 | `src/QuantCharts.*` | Quant charts (QPainter): multi-line with end labels, dual-axis overlay, spread and band, z-score, scatter with regression and marginal histograms, long/short bars, step chart; the multi-line chart keeps everything but the hover crosshair and tooltip as an image, redrawn when its data, size or theme change |
 | `src/QuantData.*` | Quant statistics (OLS, ADF with MacKinnon p-values, half-life, z-score, RSI, Student's t) and the CFTC legacy COT report |
 | `src/QuantJob.*` | Estimations off the UI thread: `JobRunner` (QtConcurrent, typed result, progress relayed to the UI thread, cancellation) and `JobBar` |

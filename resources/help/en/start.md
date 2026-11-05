@@ -17,6 +17,8 @@ The header holds the brand, the tabs, the UTC clock and three icons: `</>` (the 
 | [News](help:news) | Headlines by category, a reader with an ad blocker, favorites |
 | [Research](help:research) | One company at a time: metrics, statements, ownership, ratings, peers, sectors, supply chain |
 | [Quant](help:quant) | Pairs, beta, COT, signals, Markov regimes, volatility forecasts, execution, portfolio risk |
+| [Desk](help:desk) | A trader's reading: strength, sessions, recaps, wire, rates, positioning, risk appetite, seasonality, fundamentals, technicals, liquidity, notes, workspaces |
+| [Journal](help:journal) | Your real trades from MetaTrader or cTrader statements, their statistics and a risk calculator |
 | [AI](help:ai) | Local language models, their skills, the Claude and opencode integrations, machine learning |
 | [Sources](help:sources) | Every data source, its state, its switch, your API keys, and a diagram of where the data goes |
 

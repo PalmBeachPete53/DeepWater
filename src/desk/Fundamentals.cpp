@@ -101,8 +101,9 @@ PairVerdict comparePair(const Score &a, const Score &b)
         if (valueOf(ra) > valueOf(rb)) ++v.leadsA;
         else if (valueOf(rb) > valueOf(ra)) ++v.leadsB;
     }
-    if (v.compared && a.score != b.score && std::abs(a.score - b.score) >= 10)
-        v.favoured = a.score > b.score ? a.currency : b.currency;
+    // On the themes both have: two scores can rest on different themes, so they don't decide.
+    if (v.leadsA != v.leadsB)
+        v.favoured = v.leadsA > v.leadsB ? a.currency : b.currency;
     return v;
 }
 

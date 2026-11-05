@@ -31,9 +31,10 @@ cmake --build build -j 10 --target deepwater
 ./build/tests-quant/klinestream/qtm_test_klinestream                # the live candles shared by the chart panes (server/KlineStream), fake source
 ./build/tests-quant/navigator/qtm_test_navigator                    # the range slider under the charts (core/RangeSlider + ChartNavigator on a real chart, offscreen)
 ./build/tests-quant/heatmap/qtm_test_heatmap [load]                 # liquidity heatmap: book, sampling, store, pyramid, filters, events, recordings (src/quant/core/OrderBook.*, Heatmap*.*, DepthRecord.*)
+./build/tests-quant/desk/qtm_test_desk                              # Desk and Journal logic: instruments, risk, statements, stats, strength, signals, seasonality, rates (src/desk)
 ./build/tests-quant/pinets/qtm_test_pinets                          # Pine Script via PineTS on Node.js (src/quant/core/PineScript.cpp); SKIPPED without Node
 deepwater --pine-js file.pine                                      # print the JavaScript PineTS runs for a Pine Script and exit
-deepwater [--theme <id>] --page <id> [--devtools] [--country FRA] [--indicator <n>] [--search <text>] [--ai-search <text>] [--ai-local <prompt>] [--ai-dock [prompt]] [--news-ticker <sym>] [--news-article <n>] [--news-favorite <n>] [--news-url <url>] [--settings [0|1]] [--sources-tab 0|1] [--sources-disc [floor:1|ai:0|access:2|open:source:3]] [--help-page [chapter]] [--ml-train <csv> <target>] [--scroll <0..1>|--scroll-end] --delay <ms> --screenshot out.png   # render a page (a country sheet, a heatmap, the Sources page) and exit
+deepwater [--theme <id>] --page <id> [--devtools] [--country FRA] [--indicator <n>] [--search <text>] [--ai-search <text>] [--ai-local <prompt>] [--ai-dock [prompt]] [--news-ticker <sym>] [--news-article <n>] [--news-favorite <n>] [--news-url <url>] [--section <name>] [--journal-sample <file>] [--settings [0|1]] [--sources-tab 0|1] [--sources-disc [floor:1|ai:0|access:2|open:source:3]] [--help-page [chapter]] [--ml-train <csv> <target>] [--scroll <0..1>|--scroll-end] --delay <ms> --screenshot out.png   # render a page (a country sheet, a heatmap, the Sources page) and exit
 ```
 
 Working rules:

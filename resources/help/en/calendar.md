@@ -4,7 +4,7 @@ Three views, in the sub-header; the last one shown is remembered. All three are 
 
 ## Economic
 
-The releases of 21 large economies and the euro area: last week, yesterday, today, tomorrow, this week, next week or a date you pick, filtered by country and impact (both remembered). Each event gives the actual, the forecast and the previous value with the unit as published; the actual is green above the forecast, red below. Times are in your time zone. The list is refreshed every ten minutes while the tab is shown. The source is TradingView's public economic calendar.
+The releases of 21 large economies and the euro area: last week, yesterday, today, tomorrow, this week, next week or a date you pick, filtered by country and impact (both remembered). Each event gives the actual, the forecast and the previous value with the unit as published; the actual is green above the forecast, red below. **Surprise** is the actual minus the forecast, and **In** counts down to a release not yet out. The economic calendar gives one forecast, not the range of economists' estimates. Times are in your time zone. The list is refreshed every ten minutes while the tab is shown. The source is TradingView's public economic calendar.
 
 ## Corporate
 

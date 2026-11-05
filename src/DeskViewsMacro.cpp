@@ -489,19 +489,20 @@ protected:
     void load() override
     {
         setStatus(tr("Loading seven markets…"));
-        deskdata::loadCandles({"^VIX", "^GSPC", "HYG", "LQD", "AUDJPY=X", "HG=F", "GC=F", "BTC-USD"}, "2y", "1d", this, [this](const deskdata::Candles &c, const QString &error) {
+        deskdata::loadCandles(symbols(), "2y", "1d", this, [this](const deskdata::Candles &c, const QString &error) {
             compute(c, error);
         });
     }
 
-private:
-    void compute(const deskdata::Candles &c, const QString &error)
+public:
+    static QStringList symbols() { return {"^VIX", "^GSPC", "HYG", "LQD", "AUDJPY=X", "HG=F", "GC=F", "BTC-USD"}; }
+
+    // The composite from the candles of symbols(); also read by the strip on Overview and Forex.
+    static desk::Appetite composite(const deskdata::Candles &c)
     {
         const QVector<desk::Candle> spx = c.value("^GSPC");
-        if (spx.size() < 300) {
-            setStatus(tr("Prices unavailable: %1").arg(error));
-            return;
-        }
+        if (spx.size() < 300)
+            return {};
         // Every market on the S&P 500's days, the last close known carried forward.
         QVector<QDate> dates;
         const auto dayOf = [](qint64 t) { return QDateTime::fromSecsSinceEpoch(t, QTimeZone::UTC).date(); };
@@ -555,7 +556,17 @@ private:
             {"stocks", tr("Stocks vs safe haven"), tr("S&P 500's 20-day return minus gold's"), stocksGold},
             {"crypto", tr("Crypto momentum"), tr("Bitcoin's 20-day change"), change(aligned("BTC-USD"), 20)},
         };
-        const desk::Appetite a = desk::computeAppetite(dates, comps);
+        return desk::computeAppetite(dates, comps);
+    }
+
+private:
+    void compute(const deskdata::Candles &c, const QString &error)
+    {
+        if (c.value("^GSPC").size() < 300) {
+            setStatus(tr("Prices unavailable: %1").arg(error));
+            return;
+        }
+        const desk::Appetite a = composite(c);
         if (!a.valid) {
             setStatus(tr("Not enough history yet."));
             return;
@@ -990,6 +1001,11 @@ QWidget *makeAppetite(const Context &) { return new AppetiteView; }
 QWidget *makeSeasonality(const Context &) { return new SeasonalityView; }
 QWidget *makeFundamentals(const Context &c) { return new FundamentalsView(c); }
 
+} // namespace deskui
+
+namespace deskui {
+QStringList appetiteSymbols() { return AppetiteView::symbols(); }
+desk::Appetite appetiteComposite(const deskdata::Candles &candles) { return AppetiteView::composite(candles); }
 } // namespace deskui
 
 #include "DeskViewsMacro.moc"

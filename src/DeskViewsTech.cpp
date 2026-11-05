@@ -64,6 +64,7 @@ public:
         body->setContentsMargins(4, 4, 4, 4);
         m_table = table({tr("Market"), tr("Last"), tr("1D"), tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")});
         m_table->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);   // "Pool above +0,12%" stays whole
+        m_table->horizontalHeader()->setSectionResizeMode(7, QHeaderView::ResizeToContents);   // "Plus bas décroissants" too
         m_table->setCursor(Qt::PointingHandCursor);
         body->addWidget(m_table);
         row->addWidget(listCard, 3, Qt::AlignTop);

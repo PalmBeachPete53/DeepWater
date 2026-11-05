@@ -18,6 +18,7 @@
 #include "KeyedSources.h"
 #include "NationalSources.h"
 #include "SurveyHeadlines.h"
+#include "DeskStrip.h"
 #include "ForexPage.h"
 #include "FxData.h"
 #include "MacroData.h"
@@ -318,6 +319,7 @@ void MainWindow::buildUi()
     addPage("map", tr("Map"), splitter);
     addPage("overview", tr("Overview"), [this] {
         auto *overview = new OverviewPage;
+        overview->setTopStrip(makeDeskStrip());
         connect(overview, &OverviewPage::openResearch, this, [this](const QString &symbol) {
             showPage("research");
             if (auto *research = qobject_cast<ResearchPage *>(m_pageById.value("research")))
@@ -326,7 +328,11 @@ void MainWindow::buildUi()
         return overview;
     });
     addPage("economy", tr("Economy"), [] { return new EconomyPage; });
-    addPage("forex", tr("Forex"), [this] { return new ForexPage(m_fx, m_policyRates, m_cot); });
+    addPage("forex", tr("Forex"), [this] {
+        auto *forex = new ForexPage(m_fx, m_policyRates, m_cot);
+        forex->setTopStrip(makeDeskStrip());
+        return forex;
+    });
     if (!m_quantPage)
         m_quantPage = new qtm::App;
     addPage("charts", tr("Charts"), m_quantPage);
@@ -1008,6 +1014,18 @@ QString MainWindow::pageContext() const
         QMetaObject::invokeMethod(page, "aiContext", Qt::DirectConnection, Q_RETURN_ARG(QString, detail));
     const QString label = m_pageLabels.value(id);
     return detail.isEmpty() ? label : label + QString::fromUtf8(" › ") + detail;
+}
+
+// The strip on Overview and Forex: a click goes to the Desk section behind a tile.
+QWidget *MainWindow::makeDeskStrip()
+{
+    auto *strip = new DeskStrip(m_economicCalendar);
+    connect(strip, &DeskStrip::openSection, this, [this](int section) {
+        showPage("desk");
+        if (auto *desk = qobject_cast<DeskPage *>(currentPage()))
+            desk->showSection(section);
+    });
+    return strip;
 }
 
 void MainWindow::askAiDock(const QString &prompt)

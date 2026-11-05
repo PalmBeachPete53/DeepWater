@@ -442,6 +442,7 @@ ForexPage::ForexPage(FxData *fx, PolicyRates *rates, CotData *cot, QWidget *pare
     auto *content = new QWidget;
     content->setObjectName("panelContent");
     auto *l = new QVBoxLayout(content);
+    m_layout = l;
     l->setContentsMargins(32, 26, 32, 32);
     l->setSpacing(6);
 
@@ -538,6 +539,12 @@ ForexPage::ForexPage(FxData *fx, PolicyRates *rates, CotData *cot, QWidget *pare
     connect(m_rates, &PolicyRates::updated, this, &ForexPage::refresh);
     connect(m_cot, &CotData::updated, this, &ForexPage::refresh);
     refresh();
+}
+
+void ForexPage::setTopStrip(QWidget *strip)
+{
+    m_layout->insertWidget(3, strip);   // the title, the source, a space, then the strip
+    m_layout->insertSpacing(4, 14);
 }
 
 void ForexPage::refresh()

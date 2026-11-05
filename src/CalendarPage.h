@@ -20,6 +20,9 @@ class QToolButton;
 
 // Economic tab: releases of the day, the week or a chosen date, filtered by country and impact, with the
 // actual figure against the forecast.
+namespace quant { class MultiLineChart; }
+class QFrame;
+
 class EconomicView : public QWidget
 {
     Q_OBJECT
@@ -34,6 +37,7 @@ private:
     enum Range { LastWeek, Yesterday, Today, Tomorrow, ThisWeek, NextWeek, Day };
     void setRange(int range);
     void rebuild();
+    void showHistory(const QString &country, const QString &title);
 
     EconomicCalendar *m_cal;
     int m_range = Today;
@@ -47,6 +51,11 @@ private:
     QCheckBox *m_impact[3];
     QTableWidget *m_table;
     QLabel *m_empty;                // instead of the table when nothing matches
+    QFrame *m_history = nullptr;    // one release's past figures against their forecasts, under the table
+    QLabel *m_historyTitle = nullptr, *m_historyNote = nullptr;
+    QTableWidget *m_historyTable = nullptr;
+    quant::MultiLineChart *m_historyChart = nullptr;
+    int m_historySerial = 0;
     QLabel *m_status;
     QTimer m_poll;                  // fresh actuals while the tab is shown
 };

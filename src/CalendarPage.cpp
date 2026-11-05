@@ -1,5 +1,7 @@
 #include "CalendarPage.h"
 
+#include "DeskWidgets.h"
+#include "QuantCharts.h"
 #include "Theme.h"
 
 #include <QButtonGroup>
@@ -372,6 +374,43 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
             m_table->model()->setHeaderData(i, Qt::Horizontal, int(Qt::AlignCenter), Qt::TextAlignmentRole);
     }
     body->addWidget(m_table, 1);
+    // A click on an event shows its past releases.
+    m_table->setToolTip(tr("Click an event for its past figures against the forecasts"));
+    connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
+        if (const QTableWidgetItem *it = m_table->item(row, 3))
+            showHistory(it->data(Qt::UserRole).toString(), it->data(Qt::UserRole + 1).toString());
+    });
+    m_history = new QFrame;
+    m_history->setObjectName("qtCard");
+    m_history->setFixedHeight(290);
+    auto *hv = new QVBoxLayout(m_history);
+    hv->setContentsMargins(12, 8, 12, 8);
+    hv->setSpacing(6);
+    auto *hh = new QHBoxLayout;
+    m_historyTitle = new QLabel;
+    m_historyTitle->setObjectName("qtCardTitle");
+    hh->addWidget(m_historyTitle);
+    m_historyNote = new QLabel;
+    m_historyNote->setObjectName("qtNote");
+    hh->addWidget(m_historyNote, 1);
+    auto *historyClose = new QPushButton("✕");
+    historyClose->setObjectName("qtChip");
+    historyClose->setCursor(Qt::PointingHandCursor);
+    connect(historyClose, &QPushButton::clicked, m_history, &QWidget::hide);
+    hh->addWidget(historyClose);
+    hv->addLayout(hh);
+    auto *hb = new QHBoxLayout;
+    hb->setSpacing(10);
+    m_historyTable = deskui::table({tr("Date"), tr("Period"), tr("Actual"), tr("Forecast"), tr("Surprise")});
+    m_historyTable->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    hb->addWidget(m_historyTable, 2);
+    m_historyChart = new quant::MultiLineChart;
+    m_historyChart->setZeroLine(false);
+    m_historyChart->setLegend(true);
+    hb->addWidget(m_historyChart, 3);
+    hv->addLayout(hb, 1);
+    m_history->hide();
+    body->addWidget(m_history);
     auto *clock = new QTimer(this);
     connect(clock, &QTimer::timeout, this, [this] {
         if (!isVisible())
@@ -431,6 +470,68 @@ void EconomicView::setRange(int range)
     rebuild();
 }
 
+void EconomicView::showHistory(const QString &country, const QString &title)
+{
+    if (title.isEmpty())
+        return;
+    const int serial = ++m_historySerial;
+    m_history->show();
+    m_historyTitle->setText(QString("%1 · %2").arg(countryName(country), title));
+    m_historyNote->setText(tr("Loading three years of releases…"));
+    m_historyTable->setRowCount(0);
+    const QDate today = QDate::currentDate();
+    m_cal->fetchRange(country, today.addDays(-3 * 365), today.addDays(1), this,
+                      [this, serial, title](const QVector<EconomicCalendar::Event> &events, const QString &error) {
+        if (serial != m_historySerial)
+            return;
+        const Palette &ui = Theme::current();
+        QVector<EconomicCalendar::Event> past;
+        for (const EconomicCalendar::Event &e : events)
+            if (e.title == title && !std::isnan(e.actual))
+                past.push_back(e);
+        std::sort(past.begin(), past.end(), [](const auto &a, const auto &b) { return a.time < b.time; });
+        if (past.isEmpty()) {
+            m_historyNote->setText(error.isEmpty() ? tr("No past release of this event.") : tr("TradingView: %1").arg(error));
+            m_historyChart->setData({}, {}, {});
+            return;
+        }
+        QVector<QDate> dates;
+        QVector<double> actual, forecast;
+        int beat = 0, missed = 0, compared = 0;
+        double sum = 0;
+        m_historyTable->setRowCount(past.size());
+        for (int i = 0; i < past.size(); ++i) {
+            const EconomicCalendar::Event &e = past[i];
+            dates << e.time.toLocalTime().date();
+            actual << e.actual;
+            forecast << e.forecast;
+            const double surprise = e.actual - e.forecast;
+            const int decimals = std::max({decimalsOf(e.actual), decimalsOf(e.forecast)});
+            if (!std::isnan(surprise)) {
+                ++compared;
+                sum += surprise;
+                beat += surprise > 0;
+                missed += surprise < 0;
+            }
+            const int r = past.size() - 1 - i;   // newest first
+            const QString surpriseText = formatValue(surprise, decimals, e.unit, e.scale);
+            m_historyTable->setItem(r, 0, deskui::cell(QLocale().toString(dates.last(), "d MMM yyyy"), ui.TextDim));
+            m_historyTable->setItem(r, 1, deskui::cell(e.period, ui.TextDim));
+            m_historyTable->setItem(r, 2, deskui::cell(formatValue(e.actual, decimals, e.unit, e.scale)));
+            m_historyTable->setItem(r, 3, deskui::cell(formatValue(e.forecast, decimals, e.unit, e.scale), std::isnan(e.forecast) ? ui.TextFaint : ui.Text));
+            m_historyTable->setItem(r, 4, deskui::cell(surprise > 0 ? "+" + surpriseText : surpriseText,
+                                                       std::isnan(surprise) ? ui.TextFaint : surprise > 0 ? ui.Up : surprise < 0 ? ui.Down : ui.TextDim));
+        }
+        const QString unit = past.last().unit, scale = past.last().scale;
+        m_historyChart->setData(dates, {{tr("Actual"), ui.Accent, actual}, {tr("Forecast"), ui.TextDim, forecast}},
+                                [unit, scale](double v) { return formatValue(v, decimalsOf(v), unit, scale); });
+        m_historyNote->setText(compared == 0 ? tr("%1 releases, none with a forecast.").arg(past.size())
+                                             : tr("%1 releases: %2 above the forecast, %3 below, mean surprise %4.")
+                                                   .arg(past.size()).arg(beat).arg(missed)
+                                                   .arg(formatValue(sum / compared, std::max(2, decimalsOf(past.last().actual)), unit, scale)));
+    });
+}
+
 void EconomicView::rebuild()
 {
     const Palette &ui = Theme::current();
@@ -487,7 +588,9 @@ void EconomicView::rebuild()
             m_table->setItem(rows, 2, cell(flag(e.country) + "  " + countryName(e.country)));
             auto *title = cell(e.period.isEmpty() ? e.title : QString("%1 (%2)").arg(e.title, e.period));
             if (!e.source.isEmpty())
-                title->setToolTip(tr("Source: %1").arg(e.source));
+                title->setToolTip(tr("Source: %1. Click for its past figures against the forecasts.").arg(e.source));
+            title->setData(Qt::UserRole, e.country);
+            title->setData(Qt::UserRole + 1, e.title);
             m_table->setItem(rows, 3, title);
             auto *impact = cell({});
             impact->setData(Qt::UserRole, e.impact);

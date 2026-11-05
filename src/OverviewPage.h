@@ -9,6 +9,7 @@
 #include <QWidget>
 
 class QButtonGroup;
+class QVBoxLayout;
 class QLabel;
 class QPushButton;
 
@@ -29,6 +30,7 @@ class OverviewPage : public QWidget
     Q_OBJECT
 public:
     explicit OverviewPage(QWidget *parent = nullptr);
+    void setTopStrip(QWidget *strip);   // above the panels
 
 signals:
     // A stock was clicked: open it in Research.
@@ -39,6 +41,7 @@ protected:
     void hideEvent(QHideEvent *) override;
 
 private:
+    QVBoxLayout *m_layout = nullptr;
     void refresh();
     void fetchChart();
     void fetchBoard();

@@ -6,6 +6,8 @@ Ce qu'il faut savoir avant de se fier à un chiffre : d'où il vient, sa fraîch
 
 | Données | Fraîcheur |
 |---|---|
+| Desk | Prix Yahoo Finance, environ quinze minutes de retard ; positions CFTC du mardi ; le fil a quelques minutes de retard au mieux |
+| Journal | Vos relevés, à la date du dernier import ; positions ouvertes aux cours retardés |
 | Contrats à terme, cotations, Vue d'ensemble, Research, Quant | Yahoo Finance, avec dix à quinze minutes de retard ; la Vue d'ensemble se rafraîchit chaque minute |
 | Graphiques (paires Binance) | En direct, transaction par transaction ; les autres symboles sont interrogés toutes les quelques secondes |
 | Navires | Toutes les une à deux minutes par navire ; retiré après 30 minutes de silence |

@@ -17,6 +17,10 @@
 // What the Desk's sections share.
 namespace deskui {
 
+// The risk appetite composite, for the strip on other pages (DeskViewsMacro.cpp).
+QStringList appetiteSymbols();
+desk::Appetite appetiteComposite(const deskdata::Candles &candles);
+
 inline QComboBox *deskCombo()
 {
     auto *c = new QComboBox;

@@ -44,6 +44,9 @@ public:
 
     void fetchDay(const QDate &day);
     // A longer range on its own (the Desk's fundamentals read the last months' releases), for `ctx`'s lifetime.
+    // `country` empty: every country of the calendar; set, only that one (a few years of a country stay small).
+    void fetchRange(const QString &country, const QDate &from, const QDate &to, QObject *ctx,
+                    std::function<void(const QVector<EconomicCalendar::Event> &, const QString &)> done);
     void fetchRange(const QDate &from, const QDate &to, QObject *ctx,
                     std::function<void(const QVector<EconomicCalendar::Event> &events, const QString &error)> done);
     // The request for a range of days and the events of an answer: shared with the survey headlines.
@@ -61,6 +64,9 @@ protected:
     Parser parser() override;   // the ~1 MB answer is parsed and compacted on the thread pool
 
 private:
+    void fetchPage(const QString &country, const QDate &from, const QDate &to, QObject *ctx,
+                   std::function<void(const QVector<EconomicCalendar::Event> &, const QString &)> done,
+                   QVector<EconomicCalendar::Event> soFar, int pages);
     static QByteArray compact(const QVector<Event> &events, const QDate &from, const QDate &to);
     static void window(QDate *from, QDate *to);
 

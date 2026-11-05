@@ -17,6 +17,8 @@ Le bandeau porte la marque, les onglets, l'horloge UTC et trois icônes : `</>` 
 | [News](help:news) | Les titres par catégorie, un lecteur avec bloqueur de publicités, les favoris |
 | [Research](help:research) | Une société à la fois : ratios, états financiers, actionnariat, notations, pairs, secteurs, chaîne d'approvisionnement |
 | [Quant](help:quant) | Paires, bêta, COT, signaux, régimes de Markov, prévisions de volatilité, exécution, risque de portefeuille |
+| [Desk](help:desk) | Une lecture de trader : force des devises, sessions, récaps, fil, taux, positionnement, appétit pour le risque, saisonnalité, fondamentaux, technique, liquidité, notes, espaces |
+| [Journal](help:journal) | Vos vrais trades depuis les relevés MetaTrader ou cTrader, leurs statistiques et un calculateur de risque |
 | [IA](help:ai) | Les modèles de langage locaux, leurs compétences, les intégrations Claude et opencode, l'apprentissage automatique |
 | [Sources](help:sources) | Chaque source de données, son état, son interrupteur, vos clés d'API, et un diagramme du chemin des données |
 

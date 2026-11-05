@@ -218,6 +218,11 @@ double mean(const QVector<double> &v)
 
 } // namespace
 
+void OverviewPage::setTopStrip(QWidget *strip)
+{
+    m_layout->insertWidget(0, strip);
+}
+
 OverviewPage::OverviewPage(QWidget *parent)
     : QWidget(parent)
 {
@@ -235,6 +240,7 @@ OverviewPage::OverviewPage(QWidget *parent)
     content->setMinimumWidth(1180);
     scroll->setWidget(content);
     auto *v = new QVBoxLayout(content);
+    m_layout = v;
     v->setContentsMargins(6, 6, 6, 6);
     v->setSpacing(6);
     QSettings settings;

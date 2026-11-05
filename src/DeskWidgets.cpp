@@ -359,7 +359,12 @@ void RadarChart::paintEvent(QPaintEvent *)
     QPainter p(this);
     p.setRenderHint(QPainter::Antialiasing);
     const QPointF center(width() / 2.0, height() / 2.0 + 2);
-    const double radius = std::min(width() / 2.0 - 78, height() / 2.0 - 24);
+    // Room for the longest name beside the web: names differ a lot in length between languages.
+    const QFontMetricsF labels(quant::chartFont(10));
+    double longest = 0;
+    for (const QString &name : m_names)
+        longest = std::max(longest, labels.horizontalAdvance(name));
+    const double radius = std::max(30.0, std::min(width() / 2.0 - std::max(62.0, longest * 0.87 + 16), height() / 2.0 - 24));
     const auto at = [&](int i, double r) {
         const double a = -M_PI / 2 + 2 * M_PI * i / n;
         return center + QPointF(std::cos(a) * r, std::sin(a) * r);
@@ -391,8 +396,8 @@ void RadarChart::paintEvent(QPaintEvent *)
         const QPointF pt = at(i, radius + 12);
         const double cosA = std::cos(-M_PI / 2 + 2 * M_PI * i / n);
         const Qt::Alignment horizontal = cosA > 0.2 ? Qt::AlignLeft : cosA < -0.2 ? Qt::AlignRight : Qt::AlignHCenter;
-        const QRectF box = horizontal == Qt::AlignLeft ? QRectF(pt.x(), pt.y() - 9, 80, 18)
-                         : horizontal == Qt::AlignRight ? QRectF(pt.x() - 80, pt.y() - 9, 80, 18)
+        const QRectF box = horizontal == Qt::AlignLeft ? QRectF(pt.x(), pt.y() - 9, width() - pt.x(), 18)
+                         : horizontal == Qt::AlignRight ? QRectF(0, pt.y() - 9, pt.x(), 18)
                                                         : QRectF(pt.x() - 60, pt.y() - 9, 120, 18);
         p.drawText(box, horizontal | Qt::AlignVCenter, m_names[i]);
     }

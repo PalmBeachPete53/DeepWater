@@ -174,7 +174,8 @@ void SourcesPage::applySaved(const Targets &t)
     t.marketSessions->setEnabled(on("yahoo_sessions"));
     for (const char *group : {"yahoo", "nasdaq", "sec", "wikipedia", "wikidata", "treasury", "fred", "oecd", "coinmarketcap",
                               "alternative", "worldbank", "imf", "eurostat", "bis", "ecb", "ilo", "eia", "ons", "boe", "bcb",
-                              "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "inegi", "bps", "estat"})
+                              "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "inegi", "bps", "estat",
+                              "fed", "cftc", "binance", "investinglive", "ing"})
         research::Client::instance()->setEnabled(group, on(QByteArray("research_") + group));
     news::Wire::instance()->setEnabled("rss", on("news_feeds"));
     news::Wire::instance()->setEnabled("fmp", on("fmp"));
@@ -425,7 +426,8 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
         return d;
     };
     add(buildRow({"research_yahoo", Kind::Dataset, tr("Company data and prices"), "Yahoo Finance", "query1.finance.yahoo.com",
-                  tr("Research: profile, key statistics, statements, analysts' ratings and targets, prices, peers")},
+                  tr("Research: profile, key statistics, statements, analysts' ratings and targets, prices, peers. Desk and "
+                     "Journal: quotes and bars, fed funds futures")},
                  research("yahoo", QUrl("https://query1.finance.yahoo.com/v1/finance/search?q=AAPL&quotesCount=1&newsCount=0"))));
     add(buildRow({"research_nasdaq", Kind::Dataset, tr("Holders, insiders and listings"), "Nasdaq", "api.nasdaq.com",
                   tr("Research: institutional holders (13F), insider trades (Form 4), every US listing with its sector "
@@ -503,7 +505,8 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                                       "?format=csvdata&lastNObservations=1"))));
     add(buildRow({"research_bis", Kind::Dataset, tr("Policy rates, property prices and credit"),
                   tr("Bank for International Settlements"), "stats.bis.org",
-                  tr("Countries: policy rates, residential property prices, household and private debt in % of GDP")},
+                  tr("Countries: policy rates, residential property prices, household and private debt in % of GDP. "
+                     "Desk › Notes: central bankers' speeches")},
                  research("bis", QUrl("https://stats.bis.org/api/v2/data/dataflow/BIS/WS_CBPOL/1.0/M.XM?format=csv&detail=dataonly&lastNObservations=1"))));
     add(buildRow({"research_ilo", Kind::Dataset, tr("Labour force surveys"), tr("International Labour Organization (ILOSTAT)"),
                   "rplumber.ilo.org",
@@ -587,8 +590,9 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
 
     section(tr("Quant"));
     add(buildRow({"cftc_legacy", Kind::Dataset, tr("Commitments of Traders (legacy, futures only)"), "CFTC", "publicreporting.cftc.gov",
-                  tr("Quant: positions of non-commercial, commercial and non-reportable traders in index, bitcoin, gold and "
-                     "silver futures (COT); prices and key figures come from Yahoo Finance (Research, above)")},
+                  tr("Quant: positions of non-commercial, commercial and non-reportable traders in 23 futures markets: "
+                     "indices, bitcoin, currencies, metals, energy, grains (COT); prices and key figures come from Yahoo "
+                     "Finance (Research, above)")},
                  dataset(m_t.cotReport, 12 * 3600, m_t.cotReport->sourceUrl())));
     {
         // The Markov models' background re-estimation: not a download, but it behaves like one (runs on its own,
@@ -607,6 +611,24 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                          "strips), re-estimated when older than the last trading day")},
                      d));
     }
+    l->addSpacing(12);
+
+    section(tr("Desk"));
+    add(buildRow({"research_fed", Kind::Dataset, tr("Meeting calendar and press releases"), tr("Federal Reserve Board"),
+                  "www.federalreserve.gov", tr("Desk › Rates: the dates of the FOMC's meetings; Desk › Notes: its monetary press releases")},
+                 research("fed", QUrl("https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"))));
+    add(buildRow({"research_cftc", Kind::Dataset, tr("Traders in Financial Futures"), "CFTC", "publicreporting.cftc.gov",
+                  tr("Quant › COT: dealers, asset managers and leveraged funds in index, currency and bitcoin futures")},
+                 research("cftc", QUrl("https://publicreporting.cftc.gov/resource/gpe5-46if.json?$limit=1"))));
+    add(buildRow({"research_binance", Kind::Dataset, tr("Long and short accounts"), "Binance", "fapi.binance.com",
+                  tr("Desk › Positioning: the share of accounts long and short on twelve USDT perpetuals")},
+                 research("binance", QUrl("https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=BTCUSDT&period=1d&limit=1"))));
+    add(buildRow({"research_investinglive", Kind::Dataset, tr("Market headlines"), "InvestingLive", "investinglive.com",
+                  tr("Desk › Wire and Recap: its public feed of market headlines")},
+                 research("investinglive", QUrl("https://investinglive.com/feed/"))));
+    add(buildRow({"research_ing", Kind::Dataset, tr("Economic research"), "ING Think", "think.ing.com",
+                  tr("Desk › Notes: the titles of its public research")},
+                 research("ing", QUrl("https://think.ing.com/rss/"))));
     l->addSpacing(12);
 
     section(tr("Map · macroeconomics"));
