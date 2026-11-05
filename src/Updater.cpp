@@ -55,15 +55,20 @@ Updater::Updater(QObject *parent)
     connect(&m_timer, &QTimer::timeout, this, &Updater::keepListening);
     m_timer.start();
     keepListening();
+#ifdef Q_OS_MACOS
     QTimer::singleShot(FirstCheckMs, this, [this] {
         if (autoCheck() && !turnedOff()) check();
     });
+#endif
 }
 
 // Every 30 s: connected if it should be, and only then. A socket that closed is opened again here, so a relay that is
 // down costs one attempt each time.
 void Updater::keepListening()
 {
+#ifndef Q_OS_MACOS
+    return;   // builds are published for macOS only: nothing to hear, nothing this platform could install
+#endif
     const bool wanted = autoCheck() && !turnedOff();
     const QAbstractSocket::SocketState state = m_socket.state();
     if (!wanted) {
