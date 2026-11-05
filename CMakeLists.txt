@@ -138,16 +138,47 @@ target_include_directories(desk PUBLIC src)
 
 # Local models (AI › Local): llama.cpp b12070 (MIT, third_party/llama.cpp: only what libllama needs, unchanged), built
 # static with Metal, behind deepwater-llm (src/llm), a helper process the app starts in a Seatbelt sandbox
-# (src/LocalEngine.cpp). macOS only, one architecture per build (ggml picks its CPU code by the target architecture):
-# a universal build goes without it, and the app then says the local engine isn't part of this build.
+# (src/LocalEngine.cpp). macOS only. ggml picks its CPU code by the target architecture, so a universal build makes it
+# once per architecture (src/llm/CMakeLists.txt) and joins the two with lipo.
 set(DEEPWATER_LLM OFF)
+set(DEEPWATER_LLM_UNIVERSAL OFF)
 if(APPLE)
     list(LENGTH DEEPWATER_ARCHS _dw_narch)
     if(_dw_narch EQUAL 1)
         set(DEEPWATER_LLM ON)
     else()
-        message(STATUS "Universal build: the local engine (deepwater-llm) is left out")
+        set(DEEPWATER_LLM_UNIVERSAL ON)
     endif()
+endif()
+if(DEEPWATER_LLM_UNIVERSAL)
+    include(ExternalProject)
+    set(_dw_llm_slices)
+    foreach(_a IN LISTS DEEPWATER_ARCHS)
+        ExternalProject_Add(deepwater-llm-${_a}
+            SOURCE_DIR ${CMAKE_SOURCE_DIR}/src/llm
+            BINARY_DIR ${CMAKE_BINARY_DIR}/llm-${_a}
+            CMAKE_ARGS -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=${_a}
+                       -DCMAKE_OSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET}
+                       -DCMAKE_CXX_FLAGS=${_dw_cpu_${_a}} -DCMAKE_C_FLAGS=${_dw_cpu_${_a}}
+                       -DLLAMA_DIR=${CMAKE_SOURCE_DIR}/third_party/llama.cpp
+                       -DDEEPWATER_X86_LEVEL=${DEEPWATER_X86_LEVEL}
+            BUILD_ALWAYS OFF
+            INSTALL_COMMAND ""
+            BUILD_BYPRODUCTS ${CMAKE_BINARY_DIR}/llm-${_a}/deepwater-llm)
+        list(APPEND _dw_llm_slices ${CMAKE_BINARY_DIR}/llm-${_a}/deepwater-llm)
+    endforeach()
+    # Inside the bundle, next to deepwater (Contents/MacOS), as in a build for one architecture.
+    set(_dw_llm ${CMAKE_BINARY_DIR}/deepwater.app/Contents/MacOS/deepwater-llm)
+    add_custom_command(OUTPUT ${_dw_llm}
+        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/deepwater.app/Contents/MacOS
+        COMMAND lipo -create ${_dw_llm_slices} -output ${_dw_llm}
+        COMMAND codesign --force --sign - ${_dw_llm}   # lipo leaves it unsigned, and signing the bundle then fails
+        DEPENDS ${_dw_llm_slices}
+        COMMENT "Joining deepwater-llm's slices")
+    add_custom_target(deepwater-llm DEPENDS ${_dw_llm})
+    foreach(_a IN LISTS DEEPWATER_ARCHS)
+        add_dependencies(deepwater-llm deepwater-llm-${_a})
+    endforeach()
 endif()
 if(DEEPWATER_LLM)
     set(BUILD_SHARED_LIBS OFF)
@@ -276,7 +307,7 @@ add_custom_target(deepwater_buildinfo
     COMMENT "Reading the commit")
 add_dependencies(deepwater deepwater_buildinfo)
 target_include_directories(deepwater PRIVATE ${CMAKE_BINARY_DIR}/generated)
-if(DEEPWATER_LLM)   # built before the app, so that the bundle is signed with it inside
+if(DEEPWATER_LLM OR DEEPWATER_LLM_UNIVERSAL)   # built before the app, so that the bundle is signed with it inside
     add_dependencies(deepwater deepwater-llm)
 endif()
 
@@ -352,25 +383,28 @@ set_target_properties(deepwater PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURR
 set_source_files_properties(resources/icon/deepwater.icns PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
 set_target_properties(deepwater PROPERTIES MACOSX_BUNDLE_ICON_FILE deepwater.icns)
 # deepwater-translate: the reader's on-device translation (Apple's Translation framework), a small Swift helper next to
-# deepwater in the bundle. It needs one architecture and swiftc; without them the reader falls back on the local model.
+# deepwater in the bundle, compiled once per architecture and joined with lipo. It needs swiftc; without it the reader falls
+# back on the local model.
 if(APPLE)
     find_program(SWIFTC swiftc)
-    list(LENGTH CMAKE_OSX_ARCHITECTURES _dw_arch_count)
-    if(SWIFTC AND _dw_arch_count LESS_EQUAL 1)
-        if(CMAKE_OSX_ARCHITECTURES)
-            set(_dw_swift_arch ${CMAKE_OSX_ARCHITECTURES})
-        else()
-            set(_dw_swift_arch ${CMAKE_HOST_SYSTEM_PROCESSOR})
-        endif()
+    if(SWIFTC)
         if(CMAKE_OSX_DEPLOYMENT_TARGET)
             set(_dw_swift_min ${CMAKE_OSX_DEPLOYMENT_TARGET})
         else()
             set(_dw_swift_min 14.4)
         endif()
-        set(_dw_translate ${CMAKE_BINARY_DIR}/deepwater-translate)
+        set(_dw_translate ${CMAKE_BINARY_DIR}/deepwater-translate-joined)   # not the target's name, which Make would loop on
+        set(_dw_translate_slices)
+        set(_dw_translate_build)
+        foreach(_a IN LISTS DEEPWATER_ARCHS)
+            list(APPEND _dw_translate_slices ${_dw_translate}-${_a})
+            list(APPEND _dw_translate_build COMMAND ${SWIFTC} -O -target ${_a}-apple-macos${_dw_swift_min}
+                 -o ${_dw_translate}-${_a} ${CMAKE_CURRENT_SOURCE_DIR}/src/translate-helper.swift)
+        endforeach()
         add_custom_command(OUTPUT ${_dw_translate}
-            COMMAND ${SWIFTC} -O -target ${_dw_swift_arch}-apple-macos${_dw_swift_min} -o ${_dw_translate}
-                    ${CMAKE_CURRENT_SOURCE_DIR}/src/translate-helper.swift
+            ${_dw_translate_build}
+            COMMAND lipo -create ${_dw_translate_slices} -output ${_dw_translate}
+            COMMAND codesign --force --sign - ${_dw_translate}   # lipo leaves it unsigned
             DEPENDS src/translate-helper.swift
             COMMENT "Building deepwater-translate")
         add_custom_target(deepwater-translate DEPENDS ${_dw_translate})

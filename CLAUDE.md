@@ -13,7 +13,7 @@ Rules:
 
 Qt 6 (with WebEngine) / C++20 desktop app (CMake); `cargo` builds `third_party/adblock-ffi` (the reader's ad blocker)
 when present; `third_party/llama.cpp` (vendored, Metal) builds `deepwater-llm`, the sandboxed local-model helper in the
-bundle (AI › Local, one-architecture builds only); on macOS the News reader renders with the system's WebKit (`src/NewsWebHostMac.mm`, Objective-C++). `README.md` documents every tab, data source and the layout of `src/`; read its
+bundle (AI › Local; a universal build makes it per architecture and joins them with `lipo`); on macOS the News reader renders with the system's WebKit (`src/NewsWebHostMac.mm`, Objective-C++). `README.md` documents every tab, data source and the layout of `src/`; read its
 section for the tab you touch before changing it, and keep it current when you add something.
 
 `docs/sources/INDEX.md` inventories what every source holds (data sets, fields, coverage, not the values) and what the app

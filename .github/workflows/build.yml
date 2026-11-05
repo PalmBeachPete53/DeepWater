@@ -1,8 +1,7 @@
-# Builds Deepwater on GitHub's machines: an installer .exe on Windows, and on macOS a .dmg: Apple silicon on a branch push, universal (Apple
-# silicon + Intel, about twice the build time) for a tag v* or a run started by hand. The .dmg is in the run's
-# "Artifacts" (kept 5 days); a tag v* also publishes it in a GitHub Release. Locally, the same packaging is
-# `cmake --build build --target dist` (README › Packaging). The Windows job (MSVC, NSIS .exe, smoke test) was
-# dropped on 2026-11-02 to keep development on macOS only; it is in git history (commit 7a4ba3f) to bring back.
+# Builds Deepwater on GitHub's machines and packs it: an installer .exe on Windows, a .dmg on macOS (Apple silicon on a
+# branch push, Apple silicon + Intel for a tag v* or a run started by hand). The packages are in the run's "Artifacts"
+# (kept 5 days); a tag v* also publishes them in a GitHub Release. Locally, the same packaging on macOS is
+# `cmake --build build --target dist` (README › Packaging).
 name: Build
 
 on:
@@ -121,6 +120,13 @@ jobs:
             if ($_ -match '^([^=]+)=(.*)$') { "$($Matches[1])=$($Matches[2])" | Out-File $env:GITHUB_ENV -Append -Encoding utf8 }
           }
 
+      # A cache of compilations, so that a run only recompiles what changed (a full build takes about 25 minutes).
+      - uses: mozilla-actions/sccache-action@v0.0.9
+      - name: Use the cache
+        shell: pwsh
+        run: |
+          "SCCACHE_GHA_ENABLED=true" | Out-File $env:GITHUB_ENV -Append -Encoding utf8
+
       # Ninja rather than MSBuild: with -k 0 it compiles every file even after errors, so one run shows them all.
       - name: Configure
         shell: pwsh
@@ -131,9 +137,21 @@ jobs:
           -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT\scripts\buildsystems\vcpkg.cmake"
           -DVCPKG_TARGET_TRIPLET=x64-windows-static-md
           -DDEEPWATER_PACKAGE_VERSION="$env:PKG_VERSION"
+          -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache -DDEEPWATER_LTO=OFF
 
       - name: Build and package
         run: cmake --build build --target dist -- -k 0
+
+      # Before the smoke test, so that a package exists whatever the test says.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deepwater-windows
+          path: |
+            build/dist/*.exe
+            ${{ startsWith(github.ref, 'refs/tags/') && 'build/dist/*.zip' || '' }}
+          retention-days: 5
+          compression-level: 0
+          if-no-files-found: error
 
       # The packed folder must run on its own: launch it with Qt off the PATH and no Qt variables, open the News
       # reader on a page (Qt WebEngine and its QtWebEngineProcess.exe on Windows), and take a screenshot.
@@ -148,10 +166,26 @@ jobs:
           $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
           Remove-Item Env:QT_PLUGIN_PATH, Env:QML2_IMPORT_PATH, Env:QT_ROOT_DIR -ErrorAction SilentlyContinue
           $shot = "$PWD\build\dist\smoke-windows.png"
-          $p = Start-Process "$dir\deepwater.exe" -PassThru -ArgumentList `
+          $log = "$PWD\build\dist\smoke-windows.log"
+          $env:QT_FORCE_STDERR_LOGGING = '1'
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -RedirectStandardError $log -ArgumentList `
                '--page', 'news', '--news-url', 'https://example.com', '--delay', '20000', '--screenshot', "`"$shot`""
           $null = $p.Handle   # without it, ExitCode stays empty after WaitForExit
-          if (-not $p.WaitForExit(120000)) { $p.Kill(); throw "deepwater.exe didn't exit within 2 minutes" }
+          if (-not $p.WaitForExit(120000)) {
+            # Stuck: what it says, what the screen shows, whether it got as far as the screenshot, and where its threads are.
+            "Screenshot written: $(Test-Path $shot). CPU: $($p.TotalProcessorTime). Threads: $($p.Threads.Count)."
+            Add-Type -AssemblyName System.Windows.Forms, System.Drawing
+            $b = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+            $bmp = New-Object System.Drawing.Bitmap $b.Width, $b.Height
+            [System.Drawing.Graphics]::FromImage($bmp).CopyFromScreen($b.Location, [System.Drawing.Point]::Empty, $b.Size)
+            $bmp.Save("$PWD\build\dist\smoke-desktop.png")
+            $cdb = "${env:ProgramFiles(x86)}\Windows Kits\10\Debuggers\x64\cdb.exe"
+            if (Test-Path $cdb) { & $cdb -pv -p $p.Id -c "~*k 25; qd" 2>&1 | Select-Object -Last 220 } else { "no cdb" }
+            $p.Kill()
+            "--- its log"; Get-Content $log -ErrorAction SilentlyContinue | Select-Object -Last 60
+            throw "deepwater.exe didn't exit within 2 minutes"
+          }
+          "--- its log"; Get-Content $log -ErrorAction SilentlyContinue | Select-Object -Last 60
           if ($p.ExitCode -ne 0) { throw "deepwater.exe exited with code $($p.ExitCode)" }
           if (-not (Test-Path $shot)) { throw "no screenshot" }
           "Screenshot: $((Get-Item $shot).Length) bytes"
@@ -160,19 +194,12 @@ jobs:
         if: always()
         with:
           name: smoke-windows
-          path: build/dist/smoke-windows.png
+          path: |
+            build/dist/smoke-windows.png
+            build/dist/smoke-windows.log
+            build/dist/smoke-desktop.png
           retention-days: 5
           if-no-files-found: ignore
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: deepwater-windows
-          path: |
-            build/dist/*.exe
-            ${{ startsWith(github.ref, 'refs/tags/') && 'build/dist/*.zip' || '' }}
-          retention-days: 5
-          compression-level: 0
-          if-no-files-found: error
 
   # What the app's update system reads: one release that always holds the latest build of main that succeeded. Its body
   # names the commit, in the form src/UpdateRelease.cpp parses. A tag made with this token starts no workflow.

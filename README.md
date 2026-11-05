@@ -1393,9 +1393,7 @@ Claude settings and opencode, with the slots under both (either can be dragged i
   (Qwen3, DeepSeek-R1) is shown dim and italic above the answer and left out of the conversation sent back. The
   status line gives the tokens, tokens per second, and the prompt's tokens with those already evaluated. Sampling:
   temperature 0.7, top-k 40, top-p 0.9, min-p 0.05, 2,048 tokens per answer. Measured on this Mac (36 GB) with
-  Qwen3-6B Q8_0 (6.3 GB): loaded in 0.4 s, 16 to 18 tokens/s. The helper is built only for a one-architecture build
-  (CMake `DEEPWATER_LLM`; ggml chooses its CPU code by the target architecture): a universal build goes without, and
-  the section says so. Dev flag `--ai-local <prompt>` loads the first model offered and sends the prompt.
+  Qwen3-6B Q8_0 (6.3 GB): loaded in 0.4 s, 16 to 18 tokens/s. ggml chooses its CPU code by the target architecture, so a universal build makes the helper once per architecture (`src/llm/CMakeLists.txt`) and joins the two with `lipo`; the Intel slice uses the app's x86 level (`DEEPWATER_X86_LEVEL`). The same speed on Apple silicon was measured in both builds on 5 November 2026 (15.8 and 15.9 tokens/s); the Intel slice has never been run here, as this Mac has no Rosetta. Dev flag `--ai-local <prompt>` loads the first model offered and sends the prompt.
   The conversation itself is `LocalChat` (`src/LocalChat.*`: the engine, the messages, the tool rounds, the journal),
   drawn by `ChatTranscript`; AI › Local and the side panel are two views of it (one model in memory, one
   conversation).

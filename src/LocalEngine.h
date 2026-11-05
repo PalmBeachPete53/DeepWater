@@ -23,7 +23,7 @@ public:
     explicit LocalEngine(QObject *parent = nullptr);
     ~LocalEngine() override;
 
-    // Whether this build has the engine (a universal build doesn't), and where it is.
+    // Whether this build has the engine (macOS only), and where it is.
     static QString helperPath();
     static bool available();
     // The Seatbelt profile for a model's files (exposed for the tests and the README's description).
