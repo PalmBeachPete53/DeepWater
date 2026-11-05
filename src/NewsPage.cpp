@@ -4,8 +4,10 @@
 #include "NewsReader.h"
 #include "QuantCharts.h"
 #include "Theme.h"
+#include "desk/NewsTags.h"
 
 #include <QButtonGroup>
+#include <QComboBox>
 #include <QDesktopServices>
 #include <QHBoxLayout>
 #include <QIcon>
@@ -130,6 +132,7 @@ QPainterPath starPath(const QRectF &r)
 void Card::setItem(const news::Item &item)
 {
     m_item = item;
+    m_impact = int(desk::tagHeadline(item.title).impact);
     QString tip = item.title;
     if (!item.summary.isEmpty()) tip += "\n\n" + item.summary;
     if (!item.url.isEmpty()) tip += "\n\n" + item.url;
@@ -187,6 +190,22 @@ void Card::paintEvent(QPaintEvent *)
         p.setFont(badgeFont);
         p.setPen(c.Accent);
         p.drawText(badge, Qt::AlignCenter, m_item.symbol);
+        badgeLeft = badge.left() - 10;
+    }
+    if (m_impact != int(desk::NewsImpact::Normal)) {
+        const bool high = m_impact == int(desk::NewsImpact::High);
+        const QString tag = high ? NewsPage::tr("HIGH IMPACT") : NewsPage::tr("IMPORTANT");
+        const QFontMetricsF bm(badgeFont);
+        const qreal w = bm.horizontalAdvance(tag) + 14;
+        const qreal h = bm.height() + 4;
+        const QRectF badge(badgeLeft - w, inner.bottom() - h + 1, w, h);
+        const QColor color = high ? c.Down : c.TextDim;
+        p.setPen(Qt::NoPen);
+        p.setBrush(withAlpha(color, 46));
+        p.drawRoundedRect(badge, 2, 2);
+        p.setFont(badgeFont);
+        p.setPen(color);
+        p.drawText(badge, Qt::AlignCenter, tag);
         badgeLeft = badge.left() - 10;
     }
     if (!m_item.site.isEmpty()) {
@@ -418,6 +437,42 @@ NewsPage::NewsPage(QWidget *parent)
     m_filter->setFixedWidth(180);
     m_filter->setFixedHeight(22);
     sh->addWidget(m_filter);
+    sh->addSpacing(14);
+    const auto makeCombo = [&](const QString &tip) {
+        auto *combo = new QComboBox;
+        combo->setObjectName("resCombo");
+        combo->setCursor(Qt::PointingHandCursor);
+        combo->setFixedHeight(24);
+        combo->setToolTip(tip);
+        sh->addWidget(combo);
+        return combo;
+    };
+    const QString tagsTip = tr("Read from the words of the headline, not its meaning: a guide, not a verdict");
+    m_impact = makeCombo(tagsTip);
+    m_impact->addItem(tr("All impacts"), 0);
+    m_impact->addItem(tr("Important and high"), 1);
+    m_impact->addItem(tr("High impact"), 2);
+    sh->addSpacing(6);
+    m_topic = makeCombo(tagsTip);
+    m_topic->addItem(tr("All topics"), QString());
+    m_topic->addItem(tr("Central banks"), "central_bank");
+    m_topic->addItem(tr("Inflation"), "inflation");
+    m_topic->addItem(tr("Employment"), "employment");
+    m_topic->addItem(tr("GDP"), "gdp");
+    m_topic->addItem(tr("PMI"), "pmi");
+    m_topic->addItem(tr("Retail sales"), "retail");
+    m_topic->addItem(tr("Trade"), "trade");
+    m_topic->addItem(tr("Earnings"), "earnings");
+    m_impact->setCurrentIndex(std::clamp(QSettings().value("news/impact", 0).toInt(), 0, m_impact->count() - 1));
+    m_topic->setCurrentIndex(std::max(0, m_topic->findData(QSettings().value("news/topic").toString())));
+    connect(m_impact, &QComboBox::currentIndexChanged, this, [this](int i) {
+        QSettings().setValue("news/impact", i);
+        applyTags();
+    });
+    connect(m_topic, &QComboBox::currentIndexChanged, this, [this] {
+        QSettings().setValue("news/topic", m_topic->currentData().toString());
+        applyTags();
+    });
     sh->addStretch(1);
     v->addWidget(sub);
 
@@ -476,6 +531,7 @@ NewsPage::NewsPage(QWidget *parent)
     v->addWidget(m_scroll, 1);
 
     m_reader = new newsui::Reader(this);
+    connect(m_reader, &newsui::Reader::askAi, this, &NewsPage::askAi);
     adblock::Blocker::instance()->start();   // the lists download while the headlines are read
     connect(m_grid, &newsui::Grid::starToggled, this, [](const news::Item &item) { news::Favorites::instance()->toggle(item); });
     connect(news::Favorites::instance(), &news::Favorites::changed, this, [this] {
@@ -595,24 +651,43 @@ void NewsPage::fill(const QVector<news::Item> &items, const QString &provider, c
 {
     m_refresh->setEnabled(true);
     m_lastRefresh = QDateTime::currentDateTimeUtc();
+    m_received = items;
+    m_provider = provider;
+    m_error = error;
+    applyTags();
+    if (m_pendingFavorite >= 0 && !items.isEmpty())
+        toggleFavorite(m_pendingFavorite);
+    if (m_pendingArticle >= 0 && !items.isEmpty())
+        openArticle(m_pendingArticle);
+}
+
+void NewsPage::applyTags()
+{
+    const int minImpact = m_impact->currentData().toInt();
+    const QString topic = m_topic->currentData().toString();
+    QVector<news::Item> items;
+    for (const news::Item &i : std::as_const(m_received)) {
+        const desk::NewsTags tags = desk::tagHeadline(i.title);
+        if (int(tags.impact) >= minImpact && (topic.isEmpty() || tags.topics.contains(topic)))
+            items.push_back(i);
+    }
+    const QString &provider = m_provider, &error = m_error;
     m_grid->setItems(items);
     m_scroll->verticalScrollBar()->setValue(0);
     if (items.isEmpty())
-        m_grid->setMessage(provider == "favorites" ? tr("No favorite yet: star a card, or the article in the reader.")
-                           : error.isEmpty()       ? tr("No article")
-                                                   : error);
+        m_grid->setMessage(!m_received.isEmpty()       ? tr("No article for these filters")
+                           : provider == "favorites"   ? tr("No favorite yet: star a card, or the article in the reader.")
+                           : error.isEmpty()           ? tr("No article")
+                                                       : error);
     QStringList note;
-    note << tr("%n article(s)", nullptr, items.size());
+    note << (items.size() == m_received.size() ? tr("%n article(s)", nullptr, items.size())
+                                               : tr("%1 of %2 articles").arg(items.size()).arg(m_received.size()));
     note << (provider == "fmp" ? "Financial Modeling Prep" : provider == "favorites" ? tr("favorites") : tr("free feeds"));
     note << QLocale().toString(m_lastRefresh.toLocalTime(), "HH:mm");
     if (!error.isEmpty() && !items.isEmpty())
         note << error;
     m_note->setText(note.join(" · "));
     m_note->setToolTip(error);
-    if (m_pendingFavorite >= 0 && !items.isEmpty())
-        toggleFavorite(m_pendingFavorite);
-    if (m_pendingArticle >= 0 && !items.isEmpty())
-        openArticle(m_pendingArticle);
 }
 
 void NewsPage::openUrl(const QString &url)

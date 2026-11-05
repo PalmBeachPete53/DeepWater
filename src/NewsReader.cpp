@@ -74,6 +74,11 @@ Reader::Reader(QWidget *parent)
     m_star->setCheckable(true);
     m_star->setCursor(Qt::PointingHandCursor);
     h->addWidget(m_star);
+    m_ask = new QPushButton(tr("Ask the AI").toUpper());
+    m_ask->setObjectName("newsRefresh");
+    m_ask->setCursor(Qt::PointingHandCursor);
+    m_ask->setToolTip(tr("Sends this article's headline and its feed summary to the local model in the side panel; the page itself stays here"));
+    h->addWidget(m_ask);
     m_browser = new QPushButton(tr("Open in the browser").toUpper());
     m_browser->setObjectName("newsRefresh");
     m_browser->setCursor(Qt::PointingHandCursor);
@@ -109,6 +114,12 @@ Reader::Reader(QWidget *parent)
     v->addWidget(m_body, 1);
 
     connect(m_close, &QToolButton::clicked, this, &Reader::closeReader);
+    connect(m_ask, &QPushButton::clicked, this, [this] {
+        // Words of an article, not a table or a chart: they can go in the question.
+        const QString summary = m_item.summary.trimmed();
+        emit askAi(tr("Explain what this article means for the markets, in a few sentences. You only have its headline and its summary: say so if that isn't enough, and don't invent figures.\n\nHeadline: %1\nSource: %2").arg(m_item.title, m_item.site)
+                   + (summary.isEmpty() ? QString() : tr("\nSummary: %1").arg(summary.left(1500))));
+    });
     connect(m_browser, &QPushButton::clicked, this, [this] {
         const QUrl url = m_host && m_host->url().isValid() && m_host->url().scheme().startsWith("http") ? m_host->url() : QUrl(m_item.url);
         QDesktopServices::openUrl(url);

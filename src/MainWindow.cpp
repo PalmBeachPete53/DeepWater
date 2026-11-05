@@ -332,7 +332,11 @@ void MainWindow::buildUi()
     addPage("charts", tr("Charts"), m_quantPage);
     addPage("calendar", tr("Calendar"),
             [this] { return new CalendarPage(m_economicCalendar, m_corporateCalendar, m_marketSessions); });
-    addPage("news", tr("News"), [] { return new NewsPage; });
+    addPage("news", tr("News"), [this] {
+        auto *newsPage = new NewsPage;
+        connect(newsPage, &NewsPage::askAi, this, &MainWindow::askAiDock);
+        return newsPage;
+    });
     addPage("research", tr("Research"), [] { return new ResearchPage; });
     addPage("quant", tr("Quant"), [this] {
         auto *quantPage = new QuantPage(m_cotReport);

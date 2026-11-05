@@ -30,6 +30,9 @@ public:
     void closeReader();
     bool isOpen() const { return isVisible(); }
 
+signals:
+    void askAi(const QString &prompt);
+
 protected:
     void paintEvent(QPaintEvent *) override;
     void mousePressEvent(QMouseEvent *) override;
@@ -48,6 +51,7 @@ private:
     QToolButton *m_back;
     QToolButton *m_star;
     QPushButton *m_browser;
+    QPushButton *m_ask;
     QToolButton *m_close;
     QProgressBar *m_progress;
     QLabel *m_notice;                 // the site refused the embedded view (HTTP 403…)

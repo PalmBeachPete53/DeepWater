@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <QWidget>
 
+class QComboBox;
+
 class QButtonGroup;
 class QLabel;
 class QLineEdit;
@@ -47,6 +49,7 @@ private:
     bool m_hover = false;
     bool m_starHover = false;
     bool m_compact = false;
+    int m_impact = 0;   // desk::NewsImpact of the headline, read once
 };
 
 // The cards, newest first: in as many columns as the width allows (420 px each), or one per line (the column
@@ -107,6 +110,9 @@ public:
     void openUrl(const QString &url);
     static constexpr int FavoritesTab = 4;   // the tab after the four categories
 
+signals:
+    void askAi(const QString &prompt);   // the article being read, for the AI side panel
+
 protected:
     void showEvent(QShowEvent *) override;
     void hideEvent(QHideEvent *) override;
@@ -115,9 +121,14 @@ protected:
 private:
     void refresh(bool force);
     void fill(const QVector<news::Item> &items, const QString &provider, const QString &error);
+    void applyTags();   // the impact and topic filters, over the last list received
 
     QButtonGroup *m_tabs;
     QLineEdit *m_filter;
+    QComboBox *m_impact;
+    QComboBox *m_topic;
+    QVector<news::Item> m_received;
+    QString m_provider, m_error;
     QLabel *m_note;
     QButtonGroup *m_views;
     QPushButton *m_refresh;
