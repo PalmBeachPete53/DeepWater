@@ -5,3 +5,4 @@ build-*/
 # code graphs
 graphify-out/
 .code-graph/
+dist-release/

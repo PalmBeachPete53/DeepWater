@@ -49,6 +49,25 @@ refuses it the first time (System Settings › Privacy & Security › *Open Anyw
 `xattr -dr com.apple.quarantine /Applications/deepwater.app`); notarisation would need an Apple Developer ID. Only
 the universal .dmg runs on Intel Macs.
 
+### Windows (.exe)
+
+The Windows installer is built by the CI only, on a `windows-2025` machine (the base of Windows 11 24H2), with MSVC and Ninja:
+`Deepwater-<version>-windows-x64.exe`, made by NSIS through CPack (Start menu and desktop shortcuts, an uninstaller), in the
+run's *Artifacts* for 5 days. It runs at every push to `main` or a `ci/...` branch. The VC++ runtime and Qt are installed
+beside the app, and the app isn't signed, so SmartScreen warns the first time (*More info › Run anyway*).
+
+Windows builds with **Qt 6.11.3**, not the Mac's 6.12.0: 6.12.0's WebEngine for MSVC (built in July) and its qtbase (September)
+don't load together, as a constructor went from public to protected and MSVC writes access into the symbol, so the app stopped
+at once with `0xC0000139`. `tools/check_pe_imports.py <folder>` compares what a folder's DLLs ask of each other without
+running anything, on any system. The CI runs it, then checks the engine's sandbox, starts the packed app, renders a page in
+the reader, installs with the `.exe`, starts the installed app and uninstalls.
+
+What differs from the Mac: the **local models** run on the CPU (AVX2), in an AppContainer (`src/LocalSandboxWin.*`, no network,
+read access to the model and the app's folder only, a job forbidding child processes; the engine doesn't start if it can't be
+set up). The **reader** uses Qt WebEngine rather than WebKit, and its **translation** the local model, as Apple's framework
+doesn't exist there. **Voice** uses SAPI, on this PC only (`src/VoiceWin.cpp`), which needs the language's speech pack; it has
+only been compiled, as the CI has no microphone. **Updates** aren't offered yet: only the Mac's are written.
+
 ### Universal binary and build options
 
 A universal binary (arm64 + x86_64) needs a universal Qt: Homebrew's is arm64 only, the online installer's is
@@ -1393,7 +1412,7 @@ Claude settings and opencode, with the slots under both (either can be dragged i
   (Qwen3, DeepSeek-R1) is shown dim and italic above the answer and left out of the conversation sent back. The
   status line gives the tokens, tokens per second, and the prompt's tokens with those already evaluated. Sampling:
   temperature 0.7, top-k 40, top-p 0.9, min-p 0.05, 2,048 tokens per answer. Measured on this Mac (36 GB) with
-  Qwen3-6B Q8_0 (6.3 GB): loaded in 0.4 s, 16 to 18 tokens/s. ggml chooses its CPU code by the target architecture, so a universal build makes the helper once per architecture (`src/llm/CMakeLists.txt`) and joins the two with `lipo`; the Intel slice uses the app's x86 level (`DEEPWATER_X86_LEVEL`). The same speed on Apple silicon was measured in both builds on 5 November 2026 (15.8 and 15.9 tokens/s); the Intel slice has never been run here, as this Mac has no Rosetta. Dev flag `--ai-local <prompt>` loads the first model offered and sends the prompt.
+  Qwen3-6B Q8_0 (6.3 GB): loaded in 0.4 s, 16 to 18 tokens/s. On Windows it runs on the CPU in an AppContainer (README › Windows). ggml chooses its CPU code by the target architecture, so a universal build makes the helper once per architecture (`src/llm/CMakeLists.txt`) and joins the two with `lipo`; the Intel slice uses the app's x86 level (`DEEPWATER_X86_LEVEL`). The same speed on Apple silicon was measured in both builds on 5 November 2026 (15.8 and 15.9 tokens/s); the Intel slice has never been run here, as this Mac has no Rosetta. Dev flag `--ai-local <prompt>` loads the first model offered and sends the prompt.
   The conversation itself is `LocalChat` (`src/LocalChat.*`: the engine, the messages, the tool rounds, the journal),
   drawn by `ChatTranscript`; AI › Local and the side panel are two views of it (one model in memory, one
   conversation).

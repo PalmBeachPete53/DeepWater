@@ -12,6 +12,8 @@
 #include <QWebEngineHistory>
 #include <QWebEngineLoadingInfo>
 #include <QWebEnginePage>
+#include <QDebug>
+#include <QVariant>
 #include <QWebEngineProfile>
 #include <QWebEngineScript>
 #include <QWebEngineScriptCollection>
@@ -77,6 +79,12 @@ public:
         connect(m_view, &QWebEngineView::loadProgress, this, &WebHost::loadProgress);
         connect(m_view, &QWebEngineView::loadFinished, this, [this](bool ok) {
             emit loadFinished(ok);
+            // The CI's check that a page really renders here: a screenshot of a Chromium view can come out blank.
+            if (qEnvironmentVariableIsSet("DEEPWATER_READER_LOG"))
+                m_view->page()->runJavaScript("document.title + ' | ' + document.body.innerText.slice(0, 120)",
+                                              [ok](const QVariant &text) {
+                                                  qWarning().noquote() << "reader loaded:" << ok << text.toString();
+                                              });
             applyCosmetics();
             const int generation = m_generation;
             QTimer::singleShot(2500, this, [this, generation] {
