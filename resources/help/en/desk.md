@@ -22,13 +22,15 @@ What happened in a session or a week: the moves of the main markets from open to
 
 ## Wire
 
-One list of three things, newest first: headlines from InvestingLive's public feed, refreshed every minute; markets crossing another 3% step on the day; and releases from the calendar. It is a feed, not a professional squawk: minutes behind at best. **Live TV** opens a channel's live stream on YouTube in your browser.
+One list of three things, newest first: headlines from InvestingLive's public feed, refreshed every minute; markets crossing another 3% step on the day; and releases from the calendar. It is a feed, not a professional squawk: minutes behind at best. Headlines open in the reader, and **Live TV** opens a channel's live stream on YouTube there too.
 
 ## Rates
 
 - **The Fed's path**: what CME 30-day fed funds futures imply at each meeting of the Fed's own calendar: the rate after the meeting, the change, the cumulative change, and the probabilities of −50, −25, hold, +25 and +50 basis points. Each move is split between the two nearest quarter points, the usual simplification. It reads what is priced, not what will happen.
 - **Central banks**: nine policy rates from the BIS, the last move and its date, the change over a year, the last vote where the bank publishes one in its text (the Fed's dissents, the Bank of England's count), and the next decision from the banks' own pages. The RBA and the RBNZ refuse programs, so their dates only appear when the economic calendar lists them.
 - **Yield curves**: the United States, the euro area, the United Kingdom, Japan and Canada, latest published. Their methods differ, so levels compare roughly.
+
+- **United Kingdom**: the rate implied by the Bank of England's daily OIS curve, and what it prices just after its next meetings. A forward rate isn't a probability: it mixes the meetings before it and a small premium.
 
 Only the Fed has probabilities: no free source that allows it publishes rate futures for the other banks. ING's forecasts for their rates are in Forecasts.
 
@@ -45,11 +47,11 @@ A composite from 0 to 100 of seven markets on daily closes: the VIX, the S&P 500
 
 ## Seasonality
 
-How a market behaved over the calendar: the average path of the year against this year, the win rate and the mean return of the period, the mean return by month and by weekday, and the period year by year. Choose 5, 10, 15 or 20 years, the full year, a half or a quarter, and whether to leave out extreme years beyond 1.5 standard deviations. The current year is left out of the averages. Past seasonality doesn't predict a given year.
+How a market behaved over the calendar: the average path of the year against this year, the win rate and the mean return of the period, the mean return by month and by weekday, and the period year by year. Choose 5, 10, 15 or 20 years, the full year, a half or a quarter, or drag across the months on the chart, and whether to leave out extreme years beyond 1.5 standard deviations. The current year is left out of the averages. Past seasonality doesn't predict a given year.
 
 ## Fundamentals
 
-Eight currencies on six themes: rates, inflation, growth, labour, activity and sentiment, from each economy's latest releases on the economic calendar and the BIS's policy rates. Each theme reads strong, neutral or weak by fixed rules, shown under the table, and the score is their mean from −100 to +100. A theme without a recent release is left out. The comparator sets two currencies side by side. It is a simple reading, not a forecast, and **Ask the AI** has your local model comment on it.
+Eight currencies on six themes: rates, inflation, growth, labour, activity and sentiment, from each economy's latest releases on the economic calendar and the BIS's policy rates. Each theme reads strong, neutral or weak by fixed rules, shown under the table, and the score is their mean from −100 to +100. The bias compares the score with the mean of the eight currencies, so it says which stand out, not which are strong in themselves. A theme without a recent release is left out. The comparator sets two currencies side by side. It is a simple reading, not a forecast, and **Ask the AI** has your local model comment on it.
 
 ## Technicals
 
@@ -57,15 +59,15 @@ Every market on six signals: trend (EMA 20 against EMA 50), momentum (RSI), vola
 
 ## Liquidity
 
-Stop pools read from price alone: equal highs and lows on 1-hour or daily bars, where stops tend to sit. The chart draws the pools, the previous day's high and low; the tables give each pool's touches, distance and state, the recent sweeps and the sessions' extremes. It is an estimate from candles, not an order book. For the real depth, see the heatmap in [Charts](help:charts).
+Stop pools read from price alone: equal highs and lows on 1-hour or daily bars, where stops tend to sit. The chart draws the pools, the previous day's high and low; the tables give each pool's touches, distance and state, the recent sweeps and the sessions' extremes. **Notify me of a new sweep** sends a desktop notification for the market and timeframe shown, checked every 15 minutes while Deepwater is open and the section has been opened. It is an estimate from candles, not an order book. For the real depth, see the heatmap in [Charts](help:charts).
 
 ## Notes
 
-Titles from ING Think, the Fed, the ECB, the Bank of England and the BIS's central bankers' speeches, by publisher and with a search. A click opens the note in your browser. **The large banks' notes and FX forecasts are for their clients**, with no public feed, so they aren't here.
+Titles from ING Think, the Fed, the ECB, the Bank of England and the BIS's central bankers' speeches, by publisher and with a search. A click opens the note in the reader, with its **Ask the AI** and **Translate** buttons. **The large banks' notes and FX forecasts are for their clients**, with no public feed, so they aren't here.
 
 ## Forecasts
 
-Other people's forecasts, side by side. **ING Think** by quarter, for growth, inflation, policy rates, three-month rates, bonds, FX and commodities, with the date of its last update. The **IMF** and the **OECD** by year for growth, inflation and unemployment in the eight main economies. The **Fed's own projections**, which need the free FRED key in [Sources](help:sources). TD, KBC, MUFG and RBC also publish FX tables, but their terms don't allow or don't state a right to reuse their figures, so they are links to their sites.
+Other people's forecasts, side by side. **ING Think** by quarter, for growth, inflation, policy rates, three-month rates, bonds, FX and commodities, with the date of its last update; in the FX tab, a click on a pair draws ING's path after a year of its price. The **IMF** and the **OECD** by year for growth, inflation and unemployment in the eight main economies; a click on a row draws its past figures and the forecasts. The **Fed's own projections**, which need the free FRED key in [Sources](help:sources). TD, KBC, MUFG and RBC also publish FX tables, but their terms don't allow or don't state a right to reuse their figures, so they are links to their sites.
 
 ## Workspaces
 

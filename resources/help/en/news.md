@@ -20,4 +20,4 @@ With a **Financial Modeling Prep** key saved in Sources › News, its news endpo
 
 Each headline is read by its words for an impact (a tag on the card) and for topics: central banks, inflation, employment, GDP, PMI, retail sales, trade, earnings. Two lists in the sub-header filter on them. It reads words, not meaning: a guide, not a verdict.
 
-In the reader, **Ask the AI** sends the article's headline and its feed summary to your local model in the [side panel](help:ai). The model doesn't read the page itself, and there's no translation of articles.
+In the reader, **Ask the AI** sends the article's headline and its feed summary to your local model in the [side panel](help:ai). **Translate** has it translate the same two texts. The model doesn't read the page itself, so the full article isn't translated.

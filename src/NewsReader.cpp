@@ -79,6 +79,11 @@ Reader::Reader(QWidget *parent)
     m_ask->setCursor(Qt::PointingHandCursor);
     m_ask->setToolTip(tr("Sends this article's headline and its feed summary to the local model in the side panel; the page itself stays here"));
     h->addWidget(m_ask);
+    m_translate = new QPushButton(tr("Translate").toUpper());
+    m_translate->setObjectName("newsRefresh");
+    m_translate->setCursor(Qt::PointingHandCursor);
+    m_translate->setToolTip(tr("Has the local model in the side panel translate the headline and the feed's summary; the page itself isn't translated"));
+    h->addWidget(m_translate);
     m_browser = new QPushButton(tr("Open in the browser").toUpper());
     m_browser->setObjectName("newsRefresh");
     m_browser->setCursor(Qt::PointingHandCursor);
@@ -114,6 +119,12 @@ Reader::Reader(QWidget *parent)
     v->addWidget(m_body, 1);
 
     connect(m_close, &QToolButton::clicked, this, &Reader::closeReader);
+    connect(m_translate, &QPushButton::clicked, this, [this] {
+        const QString language = QLocale().nativeLanguageName();
+        const QString summary = m_item.summary.trimmed();
+        emit askAi(tr("Translate this into %1, faithfully, and answer with the translation only.\n\nHeadline: %2").arg(language, m_item.title)
+                   + (summary.isEmpty() ? QString() : tr("\nSummary: %1").arg(summary.left(1500))));
+    });
     connect(m_ask, &QPushButton::clicked, this, [this] {
         // Words of an article, not a table or a chart: they can go in the question.
         const QString summary = m_item.summary.trimmed();

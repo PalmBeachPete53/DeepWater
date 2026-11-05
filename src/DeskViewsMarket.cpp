@@ -1,5 +1,6 @@
 // The Desk's live sections: Markets, Strength, Sessions, Recap, Wire.
 #include "DeskViews.h"
+#include "NewsReader.h"
 
 #include "desk/NewsTags.h"
 #include "desk/Sessions.h"
@@ -792,13 +793,13 @@ public:
         h->addWidget(m_counts);
         h->addStretch(1);
         h->addWidget(quant::label(tr("LIVE TV"), "qtFieldLabel"));
-        const struct { const char *name, *url; } channels[] = {{"Bloomberg Television", "https://www.youtube.com/@BloombergTelevision/live"},
+        const struct { const char *name, *url; } channels[] = {{"Bloomberg Television", "https://www.youtube.com/@markets/live"},
                                                                {"Yahoo Finance", "https://www.youtube.com/@YahooFinance/live"},
                                                                {"CNBC Television", "https://www.youtube.com/@CNBCtelevision/live"}};
         for (const auto &ch : channels) {
             auto *b = deskAction(ch.name);
-            b->setToolTip(tr("Opens the channel's live stream on YouTube, in your browser"));
-            connect(b, &QPushButton::clicked, this, [url = QString(ch.url)] { QDesktopServices::openUrl(QUrl(url)); });
+            b->setToolTip(tr("Opens the channel's live stream on YouTube, here"));
+            connect(b, &QPushButton::clicked, this, [this, url = QString(ch.url), name = QString(ch.name)] { openHere(url, name); });
             h->addWidget(b);
         }
         content()->addWidget(top);
@@ -811,7 +812,7 @@ public:
         connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
             const QString url = m_table->item(row, 0)->data(Qt::UserRole).toString();
             if (!url.isEmpty())
-                QDesktopServices::openUrl(QUrl(url));
+                openHere(url, m_table->item(row, 3)->text());
         });
         body->addWidget(m_table);
         content()->addWidget(card);
@@ -826,6 +827,12 @@ public:
     }
 
 protected:
+    void resizeEvent(QResizeEvent *e) override
+    {
+        View::resizeEvent(e);
+        if (m_reader && m_reader->isOpen())
+            m_reader->setGeometry(rect());
+    }
     void load() override
     {
         fetch();
@@ -833,6 +840,21 @@ protected:
     }
 
 private:
+    // In the News reader, over this section: articles, and the TV channels' live pages.
+    void openHere(const QString &url, const QString &title)
+    {
+        news::Item item;
+        item.url = url;
+        item.title = title;
+        item.site = QUrl(url).host();
+        if (!m_reader) {
+            m_reader = new newsui::Reader(this);
+            if (m_context.page)
+                connect(m_reader, &newsui::Reader::askAi, m_context.page, &DeskPage::askAi);
+        }
+        m_reader->open(item);
+    }
+
     struct Entry {
         QDateTime time;
         int kind;   // 1 headline, 2 mover, 3 release
@@ -916,6 +938,7 @@ private:
     QTableWidget *m_table;
     QTimer *m_timer;
     QVector<news::Item> m_items;
+    newsui::Reader *m_reader = nullptr;
     QVector<Entry> m_movers;
     QHash<QString, double> m_moverLevels;
 };

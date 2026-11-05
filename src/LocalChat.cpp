@@ -1,5 +1,7 @@
 #include "LocalChat.h"
 
+#include <QRegularExpression>
+
 #include "LocalEngine.h"
 #include "ModelSlots.h"
 #include "OpencodeRun.h"
@@ -57,7 +59,9 @@ void splitThinking(const QString &text, QString *thinking, QString *answer)
 
 QString html(const QString &text)
 {
-    return text.toHtmlEscaped().replace('\n', "<br>");
+    // Models write **bold** whatever they are told: shown as such rather than with its stars.
+    static const QRegularExpression bold(R"(\*\*([^*\n]+)\*\*)");
+    return text.toHtmlEscaped().replace(bold, "<b>\\1</b>").replace('\n', "<br>");
 }
 
 } // namespace

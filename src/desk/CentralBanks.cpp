@@ -5,8 +5,10 @@
 #include <QJsonObject>
 #include <QLocale>
 #include <QRegularExpression>
+#include <QXmlStreamReader>
 
 #include <algorithm>
+#include <cmath>
 
 namespace desk {
 
@@ -58,7 +60,7 @@ QVector<QDate> parseBoeMeetings(const QString &html)
 {
     // "<h2>2026 confirmed dates</h2><table>…<td>Thursday 5 February</td>…"; the non-breaking space varies.
     static const QRegularExpression head(R"(<h2[^>]*>\s*(\d{4})[^<]*dates[^<]*</h2>(.*?)</table>)", Dot | NoCase);
-    static const QRegularExpression day(R"(<td[^>]*>\s*[A-Za-z]+day(?:\s|&nbsp;)+(\d{1,2})(?:\s|&nbsp;)+([A-Za-z]+)\s*</td>)");
+    static const QRegularExpression day(R"(<td[^>]*>\s*[A-Za-z]+day(?:\s|&nbsp;)+(\d{1,2})(?:\s|&nbsp;)+([A-Za-z]+)(?:\s|&nbsp;)*</td>)");
     QVector<QDate> out;
     for (auto it = head.globalMatch(html); it.hasNext();) {
         const auto block = it.next();
@@ -286,6 +288,85 @@ QVector<ForecastTab> parseIngForecasts(const QString &html)
         }
         if (!tab.tables.isEmpty())
             out << tab;
+    }
+    return out;
+}
+
+QDate forecastPeriodEnd(const QString &label)
+{
+    static const QRegularExpression quarter(R"(^([1-4])Q(\d{2})F?$)"), year(R"(^(\d{4})F?$)");
+    if (const auto m = quarter.match(label.trimmed()); m.hasMatch()) {
+        const int month = m.captured(1).toInt() * 3;
+        return QDate(2000 + m.captured(2).toInt(), month, 1).addMonths(1).addDays(-1);
+    }
+    if (const auto m = year.match(label.trimmed()); m.hasMatch())
+        return QDate(m.captured(1).toInt(), 12, 31);
+    return {};
+}
+
+double OisCurve::at(double months) const
+{
+    if (points.isEmpty() || months < points.first().first || months > points.last().first)
+        return std::nan("");
+    for (int i = 1; i < points.size(); ++i)
+        if (months <= points[i].first) {
+            const auto &a = points[i - 1], &b = points[i];
+            return a.second + (b.second - a.second) * (months - a.first) / (b.first - a.first);
+        }
+    return points.last().second;
+}
+
+OisCurve parseBoeOisSheet(const QByteArray &sheetXml)
+{
+    // Rows of cells named "B5": a header whose first numbers are 1, 2, 3 (months), then one row per day, column A an
+    // Excel date. Text and error cells are left out; a day can have blanks.
+    const auto columnOf = [](const QString &ref) {
+        int c = 0;
+        for (const QChar ch : ref) {
+            if (!ch.isLetter())
+                break;
+            c = c * 26 + (ch.unicode() - 'A' + 1);
+        }
+        return c;
+    };
+    QHash<int, double> months;
+    OisCurve out;
+    QHash<int, double> row;
+    QXmlStreamReader xml(sheetXml);
+    int column = 0;
+    bool numeric = false;
+    const auto endRow = [&] {
+        if (months.isEmpty()) {
+            // Fractions of a year come first in this file's second header: months start at about 1 and step by 1.
+            if (std::abs(row.value(2, 0) - 1) < 0.01 && std::abs(row.value(3, 0) - 2) < 0.01)
+                months = row;
+        } else if (row.value(1, 0) > 30000) {
+            OisCurve day;
+            day.date = QDate(1899, 12, 30).addDays(qint64(row.value(1)));
+            QVector<int> columns = months.keys();
+            std::sort(columns.begin(), columns.end());
+            for (const int c : std::as_const(columns))
+                if (c > 1 && row.contains(c))
+                    day.points.push_back({months.value(c), row.value(c)});
+            if (day.points.size() >= 3)
+                out = day;
+        }
+        row.clear();
+    };
+    while (!xml.atEnd()) {
+        xml.readNext();
+        if (xml.isStartElement() && xml.name() == u"c") {
+            column = columnOf(xml.attributes().value("r").toString());
+            const auto type = xml.attributes().value("t");
+            numeric = type.isEmpty() || type == u"n";
+        } else if (xml.isStartElement() && xml.name() == u"v" && numeric) {
+            bool good = false;
+            const double v = xml.readElementText().toDouble(&good);
+            if (good)
+                row.insert(column, v);
+        } else if (xml.isEndElement() && xml.name() == u"row") {
+            endRow();
+        }
     }
     return out;
 }

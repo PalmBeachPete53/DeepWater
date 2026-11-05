@@ -20,4 +20,4 @@ Avec une clé **Financial Modeling Prep** enregistrée dans Sources › News, se
 
 Chaque titre est lu d'après ses mots pour un impact (une étiquette sur la carte) et des thèmes : banques centrales, inflation, emploi, PIB, PMI, ventes au détail, commerce, résultats. Deux listes du sous-en-tête filtrent dessus. Cela lit des mots, pas le sens : un repère, pas un verdict.
 
-Dans le lecteur, **Demander à l'IA** envoie le titre de l'article et son résumé de flux à votre modèle local dans le [panneau latéral](help:ai). Le modèle ne lit pas la page elle-même, et les articles ne sont pas traduits.
+Dans le lecteur, **Demander à l'IA** envoie le titre de l'article et son résumé de flux à votre modèle local dans le [panneau latéral](help:ai). **Traduire** lui fait traduire ces deux mêmes textes. Le modèle ne lit pas la page elle-même : l'article complet n'est pas traduit.

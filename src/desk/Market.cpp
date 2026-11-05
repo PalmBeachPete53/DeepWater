@@ -248,6 +248,15 @@ Signals computeSignals(const QVector<Candle> &daily, const QVector<Candle> &volu
 
 // ------------------------------------------------------------------ stop pools
 
+QVector<Sweep> sweepsSince(const QVector<Sweep> &sweeps, qint64 lastSeen)
+{
+    QVector<Sweep> out;
+    for (const Sweep &s : sweeps)
+        if (s.time > lastSeen)
+            out.push_back(s);
+    return out;
+}
+
 Liquidity findLiquidity(const QVector<Candle> &bars, int pivot, double tolerance)
 {
     Liquidity out;

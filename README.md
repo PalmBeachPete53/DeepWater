@@ -1284,12 +1284,14 @@ holds no figures, and the model reads the section through `read_page`.
 - **Strength**: unweighted currency indices from the seven dollar pairs on 15m, 1h, 4h or daily bars, and the ranking.
 - **Sessions**: Sydney, Tokyo, London and New York on a timeline in local time (`desk/Sessions`, with daylight saving).
 - **Recap**: a session or week: moves from open to close, the largest drawn, releases and headlines of the window.
-- **Wire**: InvestingLive's feed, markets crossing another 3% step, and calendar releases; live TV links open YouTube.
+- **Wire**: InvestingLive's feed, markets crossing another 3% step, and calendar releases; headlines and live TV open in the News reader.
 - **Rates**: the Fed's path from CME 30-day futures on Yahoo (`ZQ<month><yy>.CBT`) and the FOMC's calendar page
   (`desk/Rates`: 100 minus the price, each month's average solved for the meeting's move, split between the two nearest
   quarter points); BIS policy rates; next decisions and votes from the banks' own pages (`desk/CentralBanks`; the RBA and RBNZ
   answer 403, so they fall back on the calendar's `fetchRange` over 125 days); yield curves of the US, euro area, UK (BoE IADB),
   Japan (MoF CSV) and Canada (Valet). `fetchRange` pages through TradingView's cap of 2000 events per answer.
+  The UK's implied rate comes from the BoE's OIS sheet (`parseBoeOisSheet`, an xlsx inside a zip, read with `unzipFile`). The BoE's terms
+  allow display for personal, non-commercial use and the data is Bloomberg's: check before any commercial distribution.
 - **Positioning**: Binance's public long/short account ratio on twelve USDT perpetuals, and Myfxbook's community outlook on
   forex and CFDs through its official API (`src/Myfxbook.*`, `desk/Positioning`). That needs the user's free account: the password
   goes once to `login.json` and isn't kept, only the session (`desk/myfxbook/session`), which ends after a month or when the
@@ -1298,13 +1300,16 @@ holds no figures, and the model reads the section through `read_page`.
   (`myfxbook_outlook`) and asked at most every 30 minutes, across launches. `--myfxbook-sample <file>` shows an answer in memory.
 - **Risk appetite**: seven markets ranked over 252 days and averaged (`computeAppetite`); this app's own estimate.
 - **Seasonality**: `computeSeasonal` over 25 years of daily closes; `range=max` would make Yahoo answer monthly bars.
+  Dragging on the year's path picks the months (`SeasonalPathChart`).
 - **Fundamentals**: six themes per currency from 150 days of calendar releases and BIS rates (`desk/Fundamentals`).
+  The bias of a list is against its mean (`scoreAll`): with absolute rules nearly every currency read bullish.
 - **Technicals**: six signals per market (`computeSignals`), filters, radar.
 - **Liquidity**: stop pools from equal highs and lows (`findLiquidity`), an estimate from candles, not an order book.
-- **Notes**: ING Think, Fed, ECB, BoE and BIS speeches, from their feeds. Banks' client research has no public feed.
+- **Notes**: ING Think, Fed, ECB, BoE and BIS speeches, from their feeds, opened in the News reader. Banks' client research has no public feed.
 - **Forecasts**: ING Think by quarter (`parseIngForecasts`; ING's terms allow reuse with attribution), IMF WEO and OECD Economic
   Outlook (`DSD_EO@DF_EO`) by year, the Fed's projections through FRED. RBC and MUFG forbid extraction, TD and KBC state no right,
-  so they are links. Kalshi's public API is **not used**: its Developer Agreement limits the API to a member's own trading.
+  so they are links. A click on a pair draws ING's path on a year of prices, on an economy its past figures and forecasts.
+  Kalshi's public API is **not used**: its Developer Agreement limits the API to a member's own trading.
 - **Workspaces**: named sets of up to six live panels (`desk/workspaces`).
 
 ## Journal

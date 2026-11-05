@@ -7,6 +7,8 @@
 #include <QStringList>
 #include <QVector>
 
+#include <utility>
+
 // Central banks' own pages: the dates of their decisions, how the last one was voted, their governments' yield
 // curves. Pages change: each parser returns nothing rather than a guess, and the Desk then shows a dash.
 namespace desk {
@@ -47,5 +49,16 @@ struct ForecastTab {
     QVector<ForecastTable> tables;
 };
 QVector<ForecastTab> parseIngForecasts(const QString &html);
+// "4Q26F" or "2027F": the last day of that period; invalid otherwise.
+QDate forecastPeriodEnd(const QString &label);
+
+// The Bank of England's OIS forward curve, from the sheet "fwds, short end" of its daily file: the last day's rate by
+// months ahead, oldest maturity first.
+struct OisCurve {
+    QDate date;
+    QVector<std::pair<double, double>> points;   // months ahead, rate %
+    double at(double months) const;              // interpolated; NaN outside the curve
+};
+OisCurve parseBoeOisSheet(const QByteArray &sheetXml);
 
 } // namespace desk

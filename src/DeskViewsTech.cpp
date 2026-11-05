@@ -1,7 +1,12 @@
 // The Desk's analysis sections: Technicals, Liquidity, Notes, Workspaces.
 #include "DeskViews.h"
+#include "NewsReader.h"
+#include "quant/ui/Notifications.h"
+
+#include <QTimer>
 
 #include <QButtonGroup>
+#include <QCheckBox>
 #include <QDesktopServices>
 #include <QGridLayout>
 #include <QHBoxLayout>
@@ -255,6 +260,19 @@ public:
         h->addWidget(m_instrument);
         h->addWidget(quant::segments({"1H", tr("Daily")}, &m_timeframe));
         h->addStretch(1);
+        m_notify = new QCheckBox(tr("Notify me of a new sweep"));
+        m_notify->setObjectName("qtCheck");
+        m_notify->setToolTip(tr("For the market and timeframe shown, checked every 15 minutes while Deepwater is open, on delayed prices"));
+        m_notify->setChecked(QSettings().value("desk/liquidity/notify", false).toBool());
+        h->addWidget(m_notify);
+        connect(m_notify, &QCheckBox::toggled, this, [this](bool on) {
+            QSettings().setValue("desk/liquidity/notify", on);
+            if (on)
+                qtm::Notifications::instance()->requestPermission();
+            updateWatch();
+        });
+        m_watch.setInterval(15 * 60 * 1000);
+        connect(&m_watch, &QTimer::timeout, this, &LiquidityView::fetch);
         content()->addWidget(top);
         auto *tiles = new QHBoxLayout;
         tiles->setSpacing(10);
@@ -293,9 +311,38 @@ public:
     }
 
 protected:
-    void load() override { fetch(); }
+    void load() override
+    {
+        fetch();
+        updateWatch();
+    }
 
 private:
+    void updateWatch()
+    {
+        if (m_notify->isChecked())
+            m_watch.start();
+        else
+            m_watch.stop();
+    }
+
+    // Only what appeared since the last look: the first look at a market sets the mark and says nothing.
+    void notifySweeps(const QString &id, const QString &label, const desk::Liquidity &l, bool hourly)
+    {
+        if (l.sweeps.isEmpty())
+            return;
+        const QString key = QString("desk/liquidity/seen/%1/%2").arg(id, hourly ? "1h" : "1d");
+        QSettings settings;
+        const bool known = settings.contains(key);
+        const QVector<desk::Sweep> fresh = desk::sweepsSince(l.sweeps, settings.value(key).toLongLong());
+        settings.setValue(key, qint64(l.sweeps.first().time));
+        if (!known || !m_notify->isChecked())
+            return;
+        for (const desk::Sweep &s : fresh)
+            qtm::Notifications::instance()->notify(tr("%1: stops swept").arg(label),
+                                                   tr("The pool %1 at %2 was taken out").arg(s.buySide ? tr("above") : tr("below"), QLocale().toString(s.price, 'f', priceDecimals(s.price))));
+    }
+
     void fetch()
     {
         const desk::Instrument *i = desk::findInstrument(m_instrument->currentData().toString());
@@ -305,13 +352,15 @@ private:
         const bool hourly = m_timeframe->checkedId() == 0;
         setStatus(tr("Loading %1…").arg(i->label));
         const int serial = ++m_serial;
-        deskdata::loadCandles({i->symbol}, hourly ? "1mo" : "1y", hourly ? "60m" : "1d", this, [this, serial, sym = i->symbol, label = i->label, hourly](const deskdata::Candles &c, const QString &error) {
+        deskdata::loadCandles({i->symbol}, hourly ? "1mo" : "1y", hourly ? "60m" : "1d", this, [this, serial, sym = i->symbol, id = i->id, label = i->label, hourly](const deskdata::Candles &c, const QString &error) {
             if (serial != m_serial)
                 return;
             const QVector<desk::Candle> bars = c.value(sym);
             setStatus(bars.isEmpty() ? tr("Prices unavailable: %1").arg(error) : QString());
             if (!bars.isEmpty())
                 fill(bars, label, hourly);
+            if (!bars.isEmpty())
+                notifySweeps(id, label, desk::findLiquidity(bars, hourly ? 4 : 3), hourly);
         });
     }
 
@@ -392,6 +441,8 @@ private:
         fitHeight(m_days);
     }
 
+    QCheckBox *m_notify;
+    QTimer m_watch;
     QComboBox *m_instrument;
     QButtonGroup *m_timeframe;
     QLabel *m_stopRun, *m_stopRunSub, *m_untested, *m_untestedSub, *m_above, *m_aboveSub, *m_below, *m_belowSub, *m_sweep, *m_sweepSub;
@@ -415,8 +466,9 @@ class NotesView : public quant::View
 {
     Q_OBJECT
 public:
-    explicit NotesView(QWidget *parent = nullptr)
+    explicit NotesView(const Context &c, QWidget *parent = nullptr)
         : View(parent)
+        , m_context(c)
     {
         QHBoxLayout *h;
         auto *top = quant::bar(&h);
@@ -439,7 +491,7 @@ public:
         m_table->setCursor(Qt::PointingHandCursor);
         body->addWidget(m_table);
         content()->addWidget(card);
-        auto *note = quant::label(tr("Only what is free and offered as a public feed: ING's research and the central banks' own releases and speeches. The large banks' notes and their FX forecasts by quarter are for clients, with no public feed, so they aren't here. A click opens the note in your browser."), "qtNote");
+        auto *note = quant::label(tr("Only what is free and offered as a public feed: ING's research and the central banks' own releases and speeches. A click opens the note here. The large banks' client research has no public feed; ING's forecasts are in Forecasts."), "qtNote");
         note->setWordWrap(true);
         content()->addWidget(note);
         content()->addStretch(1);
@@ -447,12 +499,29 @@ public:
         connect(m_search, &QLineEdit::textChanged, this, &NotesView::fill);
         connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
             const QString url = m_table->item(row, 0)->data(Qt::UserRole).toString();
-            if (!url.isEmpty())
-                QDesktopServices::openUrl(QUrl(url));
+            if (url.isEmpty())
+                return;
+            news::Item item;
+            item.url = url;
+            item.title = m_table->item(row, 2)->text();
+            item.publisher = m_table->item(row, 1)->text();
+            item.site = QUrl(url).host();
+            if (!m_reader) {
+                m_reader = new newsui::Reader(this);
+                if (m_context.page)
+                    connect(m_reader, &newsui::Reader::askAi, m_context.page, &DeskPage::askAi);
+            }
+            m_reader->open(item);
         });
     }
 
 protected:
+    void resizeEvent(QResizeEvent *e) override
+    {
+        View::resizeEvent(e);
+        if (m_reader && m_reader->isOpen())
+            m_reader->setGeometry(rect());
+    }
     void load() override
     {
         setStatus(tr("Loading the feeds…"));
@@ -493,6 +562,8 @@ private:
         fitHeight(m_table);
     }
 
+    Context m_context;
+    newsui::Reader *m_reader = nullptr;
     QComboBox *m_publisher;
     QLineEdit *m_search;
     QTableWidget *m_table;
@@ -700,7 +771,7 @@ private:
 
 QWidget *makeTechnical(const Context &) { return new TechnicalView; }
 QWidget *makeLiquidity(const Context &) { return new LiquidityView; }
-QWidget *makeNotes(const Context &) { return new NotesView; }
+QWidget *makeNotes(const Context &c) { return new NotesView(c); }
 QWidget *makeWorkspaces(const Context &c) { return new WorkspacesView(c); }
 
 } // namespace deskui

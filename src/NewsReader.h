@@ -52,6 +52,7 @@ private:
     QToolButton *m_star;
     QPushButton *m_browser;
     QPushButton *m_ask;
+    QPushButton *m_translate;
     QToolButton *m_close;
     QProgressBar *m_progress;
     QLabel *m_notice;                 // the site refused the embedded view (HTTP 403…)

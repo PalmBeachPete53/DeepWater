@@ -455,7 +455,7 @@ void MultiLineChart::paint(QPainter &p, const QRectF &plot)
         const double x = X(h);
         p.setPen(QPen(c.ControlBorderHover, 1, Qt::DashLine));
         p.drawLine(QPointF(x, plot.top()), QPointF(x, plot.bottom()));
-        QStringList lines {byLabel ? m_xLabels[h] : dateText(m_dates[h])};
+        QStringList lines {byLabel ? m_xLabels[h] : (m_dateFormat == QLatin1String("MMM") ? QLocale().toString(m_dates[h], "d MMM") : dateText(m_dates[h]))};
         QVector<QColor> sw;
         for (const Line &l : m_lines) {
             const double v = l.values.value(h, NaN);

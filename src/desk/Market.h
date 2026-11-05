@@ -99,6 +99,8 @@ struct Liquidity {
 };
 // `pivot`: bars on each side of a swing. Swings closer than `tolerance` ATR merge into one pool.
 Liquidity findLiquidity(const QVector<Candle> &bars, int pivot = 3, double tolerance = 0.25);
+// The sweeps newer than `lastSeen` (newest first, as in `sweeps`).
+QVector<Sweep> sweepsSince(const QVector<Sweep> &sweeps, qint64 lastSeen);
 
 // --- Seasonality from daily closes.
 

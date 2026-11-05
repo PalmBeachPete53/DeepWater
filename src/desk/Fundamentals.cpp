@@ -87,6 +87,16 @@ QVector<Score> scoreAll(const QVector<Macro> &macros)
     for (const Macro &m : macros)
         out.push_back(scoreCurrency(m));
     std::stable_sort(out.begin(), out.end(), [](const Score &a, const Score &b) { return a.score > b.score; });
+    // A currency is only strong against others: with every economy above its fixed rules, an absolute bias reads
+    // bullish everywhere. So the bias of a list is against the list's mean.
+    if (out.size() >= 3) {
+        double sum = 0;
+        for (const Score &s : std::as_const(out))
+            sum += s.score;
+        const double mean = sum / out.size();
+        for (Score &s : out)
+            s.bias = s.score >= mean + 15 ? Score::Bullish : s.score <= mean - 15 ? Score::Bearish : Score::Neutral;
+    }
     return out;
 }
 

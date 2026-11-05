@@ -4,6 +4,7 @@
 #include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
 #include "KeyedSources.h"
+#include "MacroData.h"
 #include "ResearchCharts.h"
 #include "Myfxbook.h"
 #include "desk/Rates.h"
@@ -19,6 +20,8 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QLocale>
+#include <QMouseEvent>
+#include <QPainter>
 #include <QRegularExpression>
 #include <QSettings>
 #include <QStackedWidget>
@@ -95,6 +98,22 @@ public:
         body->addWidget(yieldsNote);
         low->addWidget(yieldsCard, 2);
         content()->addLayout(low);
+        auto *ukRow = new QHBoxLayout;
+        ukRow->setSpacing(10);
+        auto *oisCard = quant::card(tr("United Kingdom: rate implied by the OIS curve"), &body);
+        m_ois = new quant::MultiLineChart;
+        m_ois->setMinimumHeight(220);
+        m_ois->setZeroLine(false);
+        body->addWidget(m_ois);
+        ukRow->addWidget(oisCard, 3);
+        auto *oisMeetings = quant::card(tr("Priced at the next Bank of England meetings"), &body);
+        m_oisTable = table({tr("Meeting"), tr("Implied rate"), tr("Against Bank Rate")});
+        body->addWidget(m_oisTable);
+        auto *oisNote = quant::label(tr("The Bank of England's daily OIS forward curve (Bloomberg Finance L.P. and Bank calculations), shown for your own use. The forward rate around a meeting isn't a probability of it: it mixes the meetings before it and a small premium."), "qtNote");
+        oisNote->setWordWrap(true);
+        body->addWidget(oisNote);
+        ukRow->addWidget(oisMeetings, 2);
+        content()->addLayout(ukRow);
         content()->addStretch(1);
         if (c.rates)
             connect(c.rates, &RemoteDataSet::updated, this, &RatesView::fillBanks);
@@ -110,9 +129,48 @@ protected:
         fillBanks();
         fetchDecisions();
         fetchOfficial();
+        research::Client::instance()->raw("boe:ois", QUrl("https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/latest-yield-curve-data.zip"), 6 * 3600, false, this,
+                                          [this](const QByteArray &zip, const QString &) {
+            // A zip of workbooks, each a zip: the second sheet is "1. fwds, short end".
+            m_oisCurve = desk::parseBoeOisSheet(unzipFile(unzipFile(zip, "OIS daily"), "xl/worksheets/sheet2.xml"));
+            fillOis();
+        });
     }
 
 private:
+    void fillOis()
+    {
+        const Palette &pal = Theme::current();
+        if (m_oisCurve.points.isEmpty()) {
+            m_oisTable->setRowCount(0);
+            return;
+        }
+        const QLocale loc;
+        QVector<QDate> dates;
+        QVector<double> rates;
+        for (const auto &point : std::as_const(m_oisCurve.points))
+            if (point.first <= 36) {
+                dates << m_oisCurve.date.addDays(qint64(point.first * 30.44));
+                rates << point.second;
+            }
+        m_ois->setData(dates, {{tr("Implied rate"), pal.Accent, rates}}, [](double v) { return QString("%1%").arg(amount(v)); });
+        const double bankRate = m_context.rates && m_context.rates->hasRate("GBP") ? m_context.rates->current("GBP") : std::nan("");
+        QVector<QDate> next;
+        for (const QDate &d : m_meetings_.value("GBP"))
+            if (d > QDate::currentDate() && next.size() < 6)
+                next << d;
+        m_oisTable->setRowCount(next.size());
+        for (int r = 0; r < next.size(); ++r) {
+            // Just after the meeting, once the new rate applies.
+            const double rate = m_oisCurve.at((m_oisCurve.date.daysTo(next[r]) + 7) / 30.44);
+            const double bp = (rate - bankRate) * 100.0;
+            m_oisTable->setItem(r, 0, cell(loc.toString(next[r], "d MMM yyyy"), {}, Qt::AlignCenter, true));
+            m_oisTable->setItem(r, 1, cell(std::isnan(rate) ? QStringLiteral("—") : QString("%1%").arg(amount(rate))));
+            m_oisTable->setItem(r, 2, cell(std::isnan(bp) ? QStringLiteral("—") : tr("%1 bp").arg(signedAmount(bp, 0)), std::isnan(bp) ? pal.TextDim : bp >= 0 ? pal.Up : pal.Down));
+        }
+        fitHeight(m_oisTable);
+    }
+
     // The banks' own calendars and how the last decision was voted. A page that changes gives a dash, not a guess.
     void fetchOfficial()
     {
@@ -130,6 +188,7 @@ private:
         page("boe:mpc-dates", "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates", [this, page, dates](const QString &html) {
             const QVector<QDate> list = desk::parseBoeMeetings(html);
             dates("GBP", list);
+            fillOis();
             QDate last;
             for (const QDate &d : list)
                 if (d < QDate::currentDate())
@@ -374,6 +433,9 @@ private:
     QVector<EconomicCalendar::Event> m_decisions;
     QHash<QString, QVector<QDate>> m_meetings_;   // by currency, from the banks' own pages
     QHash<QString, desk::Vote> m_votes;
+    desk::OisCurve m_oisCurve;
+    quant::MultiLineChart *m_ois;
+    QTableWidget *m_oisTable;
     QDate m_nextFomc;
     QLabel *m_current, *m_currentSub, *m_next, *m_nextSub, *m_priced, *m_pricedSub, *m_end, *m_endSub;
     quant::MultiLineChart *m_curve, *m_yields;
@@ -749,6 +811,26 @@ public:
         body->addWidget(ingNote);
         content()->addWidget(ing);
 
+        m_priceCard = quant::card(tr("ING's path on the price"), &body);
+        m_priceTitle = quant::label({}, "qtCardValue");
+        body->addWidget(m_priceTitle);
+        m_price = new quant::MultiLineChart;
+        m_price->setMinimumHeight(260);
+        m_price->setZeroLine(false);
+        m_price->setLegend(true);
+        body->addWidget(m_price);
+        auto *priceNote = quant::label(tr("A year of daily closes from Yahoo Finance, then a straight line through ING's end-of-quarter forecasts. Click a pair in the table to see it."), "qtNote");
+        priceNote->setWordWrap(true);
+        body->addWidget(priceNote);
+        content()->addWidget(m_priceCard);
+        connect(m_ing, &QTableWidget::cellClicked, this, [this](int row, int) {
+            for (int c = 0; c < m_ing->columnCount(); ++c)
+                if (const QTableWidgetItem *it = m_ing->item(row, c); it && it->text().contains('/')) {
+                    showPair(it->text());
+                    return;
+                }
+        });
+
         auto *row = new QHBoxLayout;
         row->setSpacing(10);
         auto *macro = quant::card(tr("Growth, inflation and unemployment, by year"), &body);
@@ -757,17 +839,29 @@ public:
         m_macro = table({tr("Economy"), tr("GDP %1 IMF").arg(now), tr("GDP %1 IMF").arg(next), tr("GDP %1 OECD").arg(now), tr("GDP %1 OECD").arg(next),
                          tr("CPI %1 IMF").arg(now), tr("CPI %1 IMF").arg(next), tr("Unemp. %1 IMF").arg(next), tr("Unemp. %1 OECD").arg(next)});
         body->addWidget(m_macro);
-        auto *macroNote = quant::label(tr("IMF World Economic Outlook and OECD Economic Outlook, in % a year. Germany stands in for the euro at the IMF, the euro area at the OECD."), "qtNote");
+        auto *macroNote = quant::label(tr("IMF World Economic Outlook and OECD Economic Outlook, in % a year. In the second row, the IMF's figures are Germany's and the OECD's the euro area's."), "qtNote");
         macroNote->setWordWrap(true);
         body->addWidget(macroNote);
-        row->addWidget(macro, 3);
+        QHBoxLayout *macroBar = new QHBoxLayout;
+        m_macroTitle = quant::label({}, "qtCardValue");
+        macroBar->addWidget(m_macroTitle);
+        macroBar->addStretch(1);
+        macroBar->addWidget(quant::segments({tr("GDP"), tr("CPI"), tr("Unemployment")}, &m_macroMeasure));
+        body->addLayout(macroBar);
+        m_macroChart = new quant::MultiLineChart;
+        m_macroChart->setMinimumHeight(220);
+        m_macroChart->setLegend(true);
+        body->addWidget(m_macroChart);
+        connect(m_macroMeasure, &QButtonGroup::idClicked, this, [this] { showEconomy(m_economyIndex); });
+        connect(m_macro, &QTableWidget::cellClicked, this, [this](int row, int) { showEconomy(row); });
+        row->addWidget(macro, 5);
         auto *fed = quant::card(tr("The Fed's own projections, median"), &body);
         m_fed = table({tr("Measure"), QString::number(year), QString::number(year + 1), QString::number(year + 2)});
         body->addWidget(m_fed);
         m_fedNote = quant::label(tr("The FOMC's Summary of Economic Projections, through FRED."), "qtNote");
         m_fedNote->setWordWrap(true);
         body->addWidget(m_fedNote);
-        row->addWidget(fed, 2);
+        row->addWidget(fed, 2, Qt::AlignTop);
         content()->addLayout(row);
 
         auto *others = quant::card(tr("Other banks, on their own sites"), &body);
@@ -887,15 +981,124 @@ private:
             }
         }
         fitHeight(m_ing);
+        const bool fx = tab.id == "fx";
+        m_priceCard->setVisible(fx);
+        if (fx && m_price->property("shown").isNull()) {
+            m_price->setProperty("shown", true);
+            showPair("EUR/USD");
+        }
+    }
+
+    struct Economy { const char *imf, *oecd, *name; };
+    static const QVector<Economy> &economyList()
+    {
+        static const QVector<Economy> list {
+            {"USA", "USA", QT_TR_NOOP("United States")}, {"DEU", "EA17", QT_TR_NOOP("Germany · euro area")}, {"JPN", "JPN", QT_TR_NOOP("Japan")}, {"GBR", "GBR", QT_TR_NOOP("United Kingdom")},
+            {"CHE", "CHE", QT_TR_NOOP("Switzerland")}, {"CAN", "CAN", QT_TR_NOOP("Canada")}, {"AUS", "AUS", QT_TR_NOOP("Australia")}, {"NZL", "NZL", QT_TR_NOOP("New Zealand")}};
+        return list;
+    }
+
+    // The IMF's published years, then its projections, with the OECD's forecasts when it has this measure.
+    void showEconomy(int index)
+    {
+        const QVector<Economy> &list = economyList();
+        if (index < 0 || index >= list.size() || !m_context.economy)
+            return;
+        m_economyIndex = index;
+        const Economy &e = list[index];
+        const int measure = std::max(0, m_macroMeasure->checkedId());
+        const WorldEconomy::Indicator indicator = measure == 0 ? WorldEconomy::GdpGrowth : measure == 1 ? WorldEconomy::Inflation : WorldEconomy::Unemployment;
+        const QMap<int, double> series = m_context.economy->series(e.imf, indicator);
+        const int year = QDate::currentDate().year();
+        QVector<QDate> dates;
+        QVector<double> past, projected, oecd;
+        for (int y = year - 12; y <= year + 5; ++y) {
+            const double v = series.value(y, std::nan(""));
+            dates << QDate(y, 7, 1);
+            past << (y < year ? v : std::nan(""));
+            projected << (y >= year - 1 ? v : std::nan(""));   // from the last published year, so the lines meet
+            const char *code = measure == 0 ? "GDPV_ANNPCT" : measure == 2 ? "UNR" : nullptr;
+            oecd << (code ? m_oecd.value(QString("%1/%2/%3").arg(e.oecd, code).arg(y), std::nan("")) : std::nan(""));
+        }
+        const Palette &pal = Theme::current();
+        m_macroTitle->setText(tr(e.name));
+        QVector<quant::MultiLineChart::Line> lines {{tr("IMF, published"), pal.Text, past}, {tr("IMF, projected"), pal.Accent, projected}};
+        if (measure != 1)
+            lines.push_back({tr("OECD, forecast"), pal.Up, oecd});
+        m_macroChart->setData(dates, lines, [](double v) { return QString("%1%").arg(amount(v, 1)); });
+    }
+
+    void showPair(const QString &pair)
+    {
+        const desk::Instrument *instrument = desk::findInstrument(pair);
+        m_priceTitle->setText(pair);
+        const desk::ForecastTable::Row *found = nullptr;
+        const desk::ForecastTable *table = nullptr;
+        for (const desk::ForecastTab &tab : std::as_const(m_tabs))
+            for (const desk::ForecastTable &t : tab.tables)
+                for (const auto &row : t.rows)
+                    if (!found && row.labels.contains(pair)) {
+                        found = &row;
+                        table = &t;
+                    }
+        if (!instrument || !found) {
+            m_priceTitle->setText(tr("%1: no price for this pair in the Desk's markets").arg(pair));
+            m_price->setData({}, {}, {});
+            return;
+        }
+        QVector<std::pair<QDate, double>> targets;
+        for (int c = 0; c < found->values.size() && c < table->columns.size(); ++c) {
+            bool good = false;
+            const double v = found->values[c].toDouble(&good);
+            const QDate end = desk::forecastPeriodEnd(table->columns[c]);
+            if (good && end.isValid())
+                targets.push_back({end, v});
+        }
+        const int serial = ++m_priceSerial;
+        const QString symbol = instrument->symbol;
+        deskdata::loadCandles({symbol}, "1y", "1d", this, [this, serial, symbol, targets](const deskdata::Candles &c, const QString &) {
+            if (serial != m_priceSerial)
+                return;
+            const QVector<desk::Candle> bars = c.value(symbol);
+            if (bars.isEmpty() || targets.isEmpty())
+                return;
+            QVector<QDate> dates;
+            QVector<double> price, path;
+            for (const desk::Candle &b : bars) {
+                dates << QDateTime::fromSecsSinceEpoch(b.time, QTimeZone::UTC).date();
+                price << b.close;
+                path << std::nan("");
+            }
+            path.last() = price.last();
+            // A straight line from the last close through each quarter's end, on weekdays like the prices.
+            QDate from = dates.last();
+            double level = price.last();
+            for (const auto &target : targets) {
+                const qint64 days = from.daysTo(target.first);
+                if (days <= 0)
+                    continue;
+                for (QDate d = from.addDays(1); d <= target.first; d = d.addDays(1)) {
+                    if (d.dayOfWeek() > 5)
+                        continue;
+                    dates << d;
+                    price << std::nan("");
+                    path << level + (target.second - level) * double(from.daysTo(d)) / double(days);
+                }
+                from = target.first;
+                level = target.second;
+            }
+            const Palette &pal = Theme::current();
+            const int decimals = priceDecimals(price.first());
+            m_price->setData(dates, {{tr("Price"), pal.Text, price}, {tr("ING forecast"), pal.Accent, path}},
+                             [decimals](double v) { return QLocale().toString(v, 'f', decimals); });
+        });
     }
 
     void fillMacro()
     {
-        const struct { const char *imf, *oecd, *name; } economies[] = {
-            {"USA", "USA", QT_TR_NOOP("United States")}, {"DEU", "EA17", QT_TR_NOOP("Euro area")}, {"JPN", "JPN", QT_TR_NOOP("Japan")}, {"GBR", "GBR", QT_TR_NOOP("United Kingdom")},
-            {"CHE", "CHE", QT_TR_NOOP("Switzerland")}, {"CAN", "CAN", QT_TR_NOOP("Canada")}, {"AUS", "AUS", QT_TR_NOOP("Australia")}, {"NZL", "NZL", QT_TR_NOOP("New Zealand")}};
+        const QVector<Economy> &economies = economyList();
         const int year = QDate::currentDate().year();
-        m_macro->setRowCount(int(std::size(economies)));
+        m_macro->setRowCount(int(economies.size()));
         const auto figure = [](double v) { return std::isnan(v) ? QStringLiteral("—") : amount(v, 1); };
         const auto imf = [&](const char *iso, WorldEconomy::Indicator ind, int y) {
             return m_context.economy ? m_context.economy->value(iso, ind, y) : std::nan("");
@@ -919,6 +1122,7 @@ private:
         fitColumns(m_macro);
         m_macro->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);   // names stay whole
         fitHeight(m_macro);
+        showEconomy(m_economyIndex);
     }
 
     void fetchFed()
@@ -963,6 +1167,11 @@ private:
     QComboBox *m_tab;
     QLabel *m_updated, *m_fedNote;
     QTableWidget *m_ing, *m_macro, *m_fed;
+    QFrame *m_priceCard;
+    QLabel *m_priceTitle, *m_macroTitle;
+    quant::MultiLineChart *m_price, *m_macroChart;
+    QButtonGroup *m_macroMeasure = nullptr;
+    int m_economyIndex = 0, m_priceSerial = 0;
     QVector<desk::ForecastTab> m_tabs;
     QHash<QString, double> m_oecd;
     bool m_filling = false;
@@ -1122,6 +1331,69 @@ private:
 
 // ------------------------------------------------------------------ Seasonality
 
+// The year's path, on which dragging picks the months of the period.
+class SeasonalPathChart : public quant::MultiLineChart
+{
+    Q_OBJECT
+public:
+    using MultiLineChart::MultiLineChart;
+    void setHighlight(int firstMonth, int lastMonth)
+    {
+        m_first = firstMonth;
+        m_last = lastMonth;
+        update();
+    }
+
+signals:
+    void monthsPicked(int firstMonth, int lastMonth);
+
+protected:
+    void paint(QPainter &p, const QRectF &plot) override
+    {
+        MultiLineChart::paint(p, plot);
+        const int from = m_dragging ? std::min(m_anchor, m_current) : m_first;
+        const int to = m_dragging ? std::max(m_anchor, m_current) : m_last;
+        if (from <= 0 || (from == 1 && to == 12))
+            return;
+        QColor shade = Theme::current().Accent;
+        shade.setAlpha(36);
+        const double w = plot.width() / 12.0;
+        p.fillRect(QRectF(plot.left() + (from - 1) * w, plot.top(), (to - from + 1) * w, plot.height()), shade);
+    }
+    void mousePressEvent(QMouseEvent *e) override
+    {
+        if (e->button() != Qt::LeftButton)
+            return;
+        m_dragging = true;
+        m_anchor = m_current = monthAt(e->position().x());
+        update();
+    }
+    void mouseMoveEvent(QMouseEvent *e) override
+    {
+        if (m_dragging)
+            m_current = monthAt(e->position().x());
+        MultiLineChart::mouseMoveEvent(e);
+    }
+    void mouseReleaseEvent(QMouseEvent *e) override
+    {
+        if (!m_dragging)
+            return;
+        m_dragging = false;
+        m_current = monthAt(e->position().x());
+        emit monthsPicked(std::min(m_anchor, m_current), std::max(m_anchor, m_current));
+    }
+
+private:
+    int monthAt(double x) const
+    {
+        const QRectF plot = plotRect();
+        return std::clamp(int((x - plot.left()) / plot.width() * 12.0) + 1, 1, 12);
+    }
+
+    bool m_dragging = false;
+    int m_anchor = 0, m_current = 0, m_first = 0, m_last = 0;
+};
+
 class SeasonalityView : public quant::View
 {
     Q_OBJECT
@@ -1157,7 +1429,19 @@ public:
 
         QVBoxLayout *body;
         auto *pathCard = quant::card(tr("Average path of the year and this year, % from 1 January"), &body);
-        m_path = new quant::MultiLineChart;
+        m_path = new SeasonalPathChart;
+        m_path->setToolTip(tr("Drag across the months to study them"));
+        m_path->setCursor(Qt::CrossCursor);
+        connect(m_path, &SeasonalPathChart::monthsPicked, this, [this](int first, int last) {
+            m_customFirst = first;
+            m_customLast = last;
+            // A period of its own: no segment stands for it.
+            m_period->setExclusive(false);
+            if (QAbstractButton *b = m_period->checkedButton())
+                b->setChecked(false);
+            m_period->setExclusive(true);
+            compute();
+        });
         m_path->setMinimumHeight(290);
         m_path->setDateFormat("MMM");
         m_path->setLegend(true);
@@ -1185,7 +1469,10 @@ public:
 
         connect(m_instrument, &QComboBox::currentIndexChanged, this, &SeasonalityView::fetch);
         connect(m_years, &QButtonGroup::idClicked, this, &SeasonalityView::compute);
-        connect(m_period, &QButtonGroup::idClicked, this, &SeasonalityView::compute);
+        connect(m_period, &QButtonGroup::idClicked, this, [this] {
+            m_customFirst = 0;
+            compute();
+        });
         connect(m_outliers, &QCheckBox::toggled, this, &SeasonalityView::compute);
     }
 
@@ -1218,8 +1505,10 @@ private:
         const int firstMonths[] = {1, 1, 7, 1, 4, 7, 10}, lastMonths[] = {12, 6, 12, 3, 6, 9, 12};
         desk::SeasonalOptions o;
         o.years = yearsList[m_years->checkedId()];
-        o.firstMonth = firstMonths[m_period->checkedId()];
-        o.lastMonth = lastMonths[m_period->checkedId()];
+        const int preset = std::max(0, m_period->checkedId());
+        o.firstMonth = m_customFirst > 0 ? m_customFirst : firstMonths[preset];
+        o.lastMonth = m_customFirst > 0 ? m_customLast : lastMonths[preset];
+        m_path->setHighlight(o.firstMonth, o.lastMonth);
         o.excludeOutliers = m_outliers->isChecked();
         const int year = QDate::currentDate().year();
         const desk::Seasonal s = desk::computeSeasonal(m_bars, o, year);
@@ -1295,7 +1584,8 @@ private:
     QButtonGroup *m_years, *m_period;
     QCheckBox *m_outliers;
     QLabel *m_win, *m_winSub, *m_mean, *m_meanSub, *m_best, *m_bestSub, *m_worst, *m_worstSub, *m_vol, *m_volSub;
-    quant::MultiLineChart *m_path;
+    SeasonalPathChart *m_path = nullptr;
+    int m_customFirst = 0, m_customLast = 0;
     BarsChart *m_months, *m_weekdays, *m_yearBars;
     QVector<desk::Candle> m_bars;
     int m_serial = 0;
@@ -1318,7 +1608,7 @@ public:
                                     tr("Use read_page on the Desk page, section Fundamentals, then say which currencies the table favours and why, in a few sentences. Use only what the page shows and say what is missing.")));
         m_map = table({tr("Currency"), tr("Score"), tr("Bias"), tr("Rates"), tr("Inflation"), tr("Growth"), tr("Labour"), tr("Activity"), tr("Sentiment")});
         body->addWidget(m_map);
-        auto *method = quant::label(tr("From each economy's latest releases on the economic calendar and the BIS's policy rates. Each theme reads strong, neutral or weak by fixed rules (a hike, inflation above 2.5%, growth above 0.3%, unemployment falling, a PMI above 50.5, confidence rising are strong) and the score is their mean, from −100 to +100. This app's own simple reading: not a forecast, and a theme without a recent release is left out."), "qtNote");
+        auto *method = quant::label(tr("From each economy's latest releases on the economic calendar and the BIS's policy rates. Each theme reads strong, neutral or weak by fixed rules (a hike, inflation above 2.5%, growth above 0.3%, unemployment falling, a PMI above 50.5, confidence rising are strong) and the score is their mean, from −100 to +100. The bias compares it with the mean of the eight currencies. This app's own simple reading: not a forecast, and a theme without a recent release is left out."), "qtNote");
         method->setWordWrap(true);
         body->addWidget(method);
         content()->addWidget(mapCard);

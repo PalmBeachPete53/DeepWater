@@ -526,7 +526,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                                        "current account, production, saving, productivity")},
                  research("ons", QUrl("https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7g7/mm23/data"))));
     add(buildRow({"research_boe", Kind::Dataset, tr("Money and mortgages"), tr("Bank of England"), "www.bankofengland.co.uk",
-                  tr("Countries › United Kingdom: M4, mortgage approvals, fixed mortgage rates. Desk › Rates: the gilt curve, meeting dates and the last vote")},
+                  tr("Countries › United Kingdom: M4, mortgage approvals, fixed mortgage rates. Desk › Rates: the gilt and OIS curves, meeting dates and the last vote")},
                  research("boe", QUrl("https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes"
                                       "&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDBEDR&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N"))));
     add(buildRow({"research_bcb", Kind::Dataset, tr("Brazilian time series (SGS)"), tr("Central Bank of Brazil"), "api.bcb.gov.br",

@@ -514,6 +514,19 @@ void testFundamentals()
     eqi(2, v.compared, "only shared themes compared");
     eqi(2, v.leadsA, "USD leads both");
     check(comparePair(s, s).favoured.isEmpty(), "a tie favours nobody");
+    {
+        // Everyone above the fixed rules: the bias still tells them apart, against the mean of the list.
+        Macro high = {}, mid = {}, low = {};
+        high.currency = "AAA"; mid.currency = "BBB"; low.currency = "CCC";
+        high.policyRate = 4; high.policyChange = 0.25; high.cpi = 4;   // +100
+        mid.policyRate = 3; mid.policyChange = 0; mid.cpi = 4;      // +50
+        low.policyRate = 3; low.policyChange = 0; low.cpi = 2.3;    // 0
+        const QVector<Score> list = scoreAll({low, mid, high});
+        eqs("AAA", list.value(0).currency, "the strongest first");
+        check(list.value(0).bias == Score::Bullish, "above the mean");
+        check(list.value(1).bias == Score::Neutral, "near the mean");
+        check(list.value(2).bias == Score::Bearish, "below the mean, though not weak by the rules");
+    }
 }
 
 void testSessions()
@@ -615,6 +628,17 @@ void testRates()
     eqi(7, tff.last().levLong, "a field");
 }
 
+void testSweepsSince()
+{
+    CAT = "sweeps since";
+    Sweep a, b, c;
+    a.time = 300; b.time = 200; c.time = 100;
+    eqi(1, sweepsSince({a, b, c}, 200).size(), "only what is newer");
+    check(sweepsSince({a, b, c}, 200).first().time == 300, "the new one");
+    eqi(0, sweepsSince({a}, 300).size(), "nothing new");
+    eqi(0, sweepsSince({}, 0).size(), "no sweep");
+}
+
 void testPositioning()
 {
     CAT = "positioning";
@@ -666,8 +690,8 @@ void testCentralBanks()
     eqi(1, d.size(), "the ECB's decision day only");
     check(d.value(0) == QDate(2026, 12, 17), "day 2");
     d = parseBoeMeetings(R"(<h2>2026 confirmed dates</h2> <table> <tbody> <tr> <td>Thursday 5 February</td> <td><a href="x">February MPC</a></td> </tr>
-        <tr> <td>Thursday&nbsp;17 December</td> <td>y</td> </tr> </tbody> </table> <h2>2027 provisional dates</h2><table><tr><td>Thursday 4 February</td></tr></table>)");
-    eqi(3, d.size(), "the BoE's dates over two years");
+        <tr> <td>Thursday&nbsp;17 December</td> <td>y</td> </tr> </tbody> </table> <h2>2027 provisional dates</h2><table><tr><td>Thursday 4 February</td></tr><tr><td>Thursday 18 March&nbsp;</td></tr></table>)");
+    eqi(4, d.size(), "the BoE's dates over two years, with a stray space after the month");
     check(d.value(1) == QDate(2026, 12, 17) && d.value(2) == QDate(2027, 2, 4), "with a non-breaking space, and the next year");
     d = parseBojMeetings(R"(<caption class="non-caption">Table : 2026</caption> <tbody> <tr> <td><a href="k.pdf">Jan. 22 (Thurs.), 23 (Fri.) [PDF 171KB]</a></td> <td>Jan. 23 (Fri.)</td> </tr>
         <tr> <td>Apr. 30 (Thurs.), May 1 (Fri.)</td> <td>May 1</td> </tr> </tbody></table>
@@ -717,6 +741,22 @@ void testCentralBanks()
     eqs("1.13", tabs.value(0).tables.value(0).rows.value(0).values.value(1), "a value");
     eqs("2.75", tabs.value(1).tables.value(0).rows.value(0).values.value(0), "one label");
     eqi(0, parseIngForecasts("<html></html>").size(), "nothing when the page changed");
+    check(forecastPeriodEnd("4Q26F") == QDate(2026, 12, 31), "a quarter's end");
+    check(forecastPeriodEnd("1Q27F") == QDate(2027, 3, 31), "the first quarter");
+    check(forecastPeriodEnd("2028F") == QDate(2028, 12, 31), "a year's end");
+    check(!forecastPeriodEnd("G10").isValid(), "not a period");
+
+    const OisCurve ois = parseBoeOisSheet(R"(<worksheet><sheetData>
+        <row r="3"><c r="A3" t="s"><v>7</v></c><c r="B3"><v>1.00000004</v></c><c r="C3"><v>2.00000008</v></c><c r="D3"><v>3.00000012</v></c><c r="E3"><v>4</v></c></row>
+        <row r="4"><c r="A4" t="s"><v>8</v></c><c r="B4"><v>0.083</v></c><c r="C4"><v>0.166</v></c></row>
+        <row r="6"><c r="A6"><v>46325</v></c><c r="B6"><v>3.70</v></c><c r="C6"><v>3.80</v></c><c r="D6"><v>3.90</v></c><c r="E6" t="e"><v>#VALUE!</v></c></row>
+        <row r="7"><c r="A7"><v>46329</v></c><c r="B7"><v>3.72</v></c><c r="C7"><v>3.82</v></c><c r="D7"><v>3.92</v></c></row>
+        <row r="8"><c r="A8"><v>46330</v></c><c r="B8"><v>3.75</v></c></row></sheetData></worksheet>)");
+    check(ois.date == QDate(1899, 12, 30).addDays(46329), "the last full day, an incomplete one left out");
+    eqi(3, ois.points.size(), "three maturities");
+    check(std::abs(ois.at(1.5) - 3.77) < 1e-6, "between two months");
+    check(std::isnan(ois.at(10)), "outside the curve");
+    check(parseBoeOisSheet("<worksheet/>").points.isEmpty(), "nothing in it");
 }
 
 } // namespace
@@ -738,6 +778,7 @@ int main(int argc, char **argv)
     testSessions();
     testNews();
     testRates();
+    testSweepsSince();
     testPositioning();
     testCentralBanks();
     std::cout << checks << " checks, " << fails << " failed\n";
