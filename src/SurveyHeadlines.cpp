@@ -105,7 +105,9 @@ QList<QUrl> SurveyHeadlines::urls() const
 {
     // The last ten weeks: every monthly survey has been released at least once, most twice.
     const QDate today = QDate::currentDate();
-    return {EconomicCalendar::rangeUrl(today.addDays(-70), today.addDays(1))};
+    // TradingView answers at most 2000 events, the earliest of the range, about six weeks of all these countries.
+    return {EconomicCalendar::rangeUrl(today.addDays(-70), today.addDays(-46)), EconomicCalendar::rangeUrl(today.addDays(-46), today.addDays(-23)),
+            EconomicCalendar::rangeUrl(today.addDays(-23), today.addDays(1))};
 }
 
 void SurveyHeadlines::prepare(QNetworkRequest &request) const
@@ -117,8 +119,9 @@ QByteArray SurveyHeadlines::joinParts(const QList<QByteArray> &parts) const
 {
     // The compact form, plus a line per figure naming its publisher ("# ISO3 k publisher").
     QByteArray out = header();
-    const QJsonObject root = QJsonDocument::fromJson(parts.value(0)).object();
-    const QVector<EconomicCalendar::Event> events = EconomicCalendar::parseEvents(root.value("result").toArray());
+    QVector<EconomicCalendar::Event> events;
+    for (const QByteArray &part : parts)
+        events += EconomicCalendar::parseEvents(QJsonDocument::fromJson(part).object().value("result").toArray());
     // The rule each event matches, and for each country and series the publisher whose rule comes first (the
     // Conference Board over Michigan for US consumer sentiment, the ISM over S&P Global for US PMIs).
     struct Match {
