@@ -142,6 +142,7 @@ jobs:
           -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache -DDEEPWATER_LTO=OFF
 
       - name: Build and package
+        id: package
         run: cmake --build build --target dist -- -k 0
 
       # Before the smoke test, so that a package exists whatever the test says.
@@ -164,6 +165,8 @@ jobs:
       # The local engine, from the packed folder: refused the network and the user's files inside its sandbox, and able to
       # load and run a small model there.
       - name: Local engine in its sandbox
+        id: engine
+        continue-on-error: true
         shell: pwsh
         run: |
           $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
@@ -184,7 +187,9 @@ jobs:
 
       # The packed folder must run on its own: launch it with Qt off the PATH and no Qt variables, open the News
       # reader on a page (Qt WebEngine and its QtWebEngineProcess.exe on Windows), and take a screenshot.
+      # Each check below tells something of its own: one failing doesn't hide the next.
       - name: Smoke test
+        if: ${{ !cancelled() && steps.package.outcome == 'success' }}
         shell: pwsh
         run: |
           $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
@@ -238,6 +243,49 @@ jobs:
             build/dist/smoke-desktop.png
           retention-days: 5
           if-no-files-found: ignore
+
+      # What a user does: run the installer, then start the app from where it put it. Silent here, since no one can click.
+      - name: The installer installs
+        if: ${{ !cancelled() && steps.package.outcome == 'success' }}
+        shell: pwsh
+        run: |
+          $exe = (Get-ChildItem build/dist/*.exe | Select-Object -First 1).FullName
+          "Installer: $exe, $([math]::Round((Get-Item $exe).Length / 1MB)) MB"
+          $i = Start-Process $exe -ArgumentList '/S' -Wait -PassThru
+          if ($i.ExitCode -ne 0) { throw "the installer exited with code $($i.ExitCode)" }
+          $home_ = Get-ChildItem "$env:ProgramFiles" -Directory -Filter 'Deepwater*' | Select-Object -First 1
+          if (-not $home_) { throw "nothing installed under Program Files" }
+          "Installed in $($home_.FullName)"
+          foreach ($f in 'deepwater.exe', 'deepwater-llm.exe', 'Uninstall.exe') {
+            if (-not (Test-Path "$($home_.FullName)\$f")) { throw "$f wasn't installed" }
+          }
+          $menu = Get-ChildItem "$env:ProgramData\Microsoft\Windows\Start Menu\Programs" -Recurse -Filter '*Deepwater*.lnk' -ErrorAction SilentlyContinue
+          "Start menu: $($menu.Name -join ', ')"
+          if (-not $menu) { throw "no Start menu shortcut" }
+          $out = "$PWD\build\dist\installed-version.txt"
+          $v = Start-Process "$($home_.FullName)\deepwater.exe" -ArgumentList '--version' -Wait -PassThru -RedirectStandardOutput $out
+          "--version: $(Get-Content $out) (exit $($v.ExitCode))"
+          if ($v.ExitCode -ne 0) { throw "the installed app doesn't start" }
+          $shot = "$PWD\build\dist\smoke-installed.png"
+          $p = Start-Process "$($home_.FullName)\deepwater.exe" -PassThru -ArgumentList '--page', 'overview', '--delay', '15000', '--screenshot', "`"$shot`""
+          $null = $p.Handle
+          if (-not $p.WaitForExit(120000)) { $p.Kill(); throw "the installed app didn't finish its screenshot" }
+          if (-not (Test-Path $shot)) { throw "the installed app took no screenshot (exit $($p.ExitCode))" }
+          $u = Start-Process "$($home_.FullName)\Uninstall.exe" -ArgumentList '/S' -Wait -PassThru
+          "Uninstaller exit: $($u.ExitCode)"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-installed
+          path: build/dist/smoke-installed.png
+          retention-days: 5
+          if-no-files-found: ignore
+
+      # The engine's check doesn't stop the others, but it counts.
+      - name: Local engine's result
+        if: ${{ steps.engine.outcome == 'failure' }}
+        run: exit 1
 
   # What the app's update system reads: one release that always holds the latest build of main that succeeded. Its body
   # names the commit, in the form src/UpdateRelease.cpp parses. A tag made with this token starts no workflow.

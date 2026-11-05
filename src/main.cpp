@@ -69,8 +69,10 @@ int main(int argc, char *argv[])
                 qWarning().noquote() << "failed:" << why;
                 QCoreApplication::exit(1);
             });
-            QTimer::singleShot(180000, &app, [] { QCoreApplication::exit(2); });
-            engine.load("check", {args.at(llmArg + 1)}, 512);
+            QTimer::singleShot(120000, &app, [] { QCoreApplication::exit(2); });
+            // Once the loop runs: a helper that can't start says so at once, and exit() only counts inside the loop.
+            const QString model = args.at(llmArg + 1);
+            QTimer::singleShot(0, &app, [&engine, model] { engine.load("check", {model}, 512); });
             return app.exec();
         }
     }

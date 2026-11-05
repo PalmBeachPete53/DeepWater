@@ -124,6 +124,13 @@ void LocalEngine::load(const QString &model, const QStringList &files, int conte
     // An environment of its own: nothing of the app's (keys, paths) reaches the helper.
     QProcessEnvironment env;
     env.insert("LANG", "en_US.UTF-8");
+#ifdef Q_OS_WIN
+    // Windows won't create a process in an AppContainer without these, which locate the system and the container's folder.
+    // None holds anything of the app's; the keys stay out as on macOS.
+    const QProcessEnvironment system = QProcessEnvironment::systemEnvironment();
+    for (const char *name : {"SystemRoot", "SystemDrive", "USERPROFILE", "LOCALAPPDATA", "APPDATA", "TEMP", "TMP"})
+        if (system.contains(name)) env.insert(name, system.value(name));
+#endif
     m_process->setProcessEnvironment(env);
 #ifdef Q_OS_WIN
     m_process->setWorkingDirectory(QCoreApplication::applicationDirPath());
