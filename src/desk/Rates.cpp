@@ -51,6 +51,19 @@ QString fedFutureSymbol(const QDate &month)
     return QString("ZQ%1%2.CBT").arg(QChar(codes[month.month() - 1])).arg(month.year() % 100, 2, 10, QChar('0'));
 }
 
+void splitMove(MeetingPricing &p)
+{
+    const double steps = std::clamp(p.changeBp / 25.0, -2.0, 2.0);
+    const double lower = std::floor(steps);
+    const double weight = steps - lower;
+    p.probability[int(lower) + 2] += (1 - weight) * 100.0;
+    if (lower < 2)
+        p.probability[int(lower) + 3] += weight * 100.0;
+    p.pCut = p.probability[0] + p.probability[1];
+    p.pHold = p.probability[2];
+    p.pHike = p.probability[3] + p.probability[4];
+}
+
 FedPath fedPath(const QVector<FedContract> &contracts, const QVector<QDate> &meetings, const QDate &today)
 {
     FedPath out;
@@ -107,15 +120,7 @@ FedPath fedPath(const QVector<FedContract> &contracts, const QVector<QDate> &mee
         cumulative += p.changeBp;
         p.cumulativeBp = cumulative;
 
-        const double steps = std::clamp(p.changeBp / 25.0, -2.0, 2.0);
-        const double lower = std::floor(steps);
-        const double weight = steps - lower;
-        p.probability[int(lower) + 2] += (1 - weight) * 100.0;
-        if (lower < 2)
-            p.probability[int(lower) + 3] += weight * 100.0;
-        p.pCut = p.probability[0] + p.probability[1];
-        p.pHold = p.probability[2];
-        p.pHike = p.probability[3] + p.probability[4];
+        splitMove(p);
         out.meetings.push_back(p);
         pre = post;
     }
@@ -155,6 +160,22 @@ QVector<TffWeek> parseTff(const QByteArray &json)
         out.push_back(w);
     }
     std::sort(out.begin(), out.end(), [](const TffWeek &a, const TffWeek &b) { return a.date < b.date; });
+    return out;
+}
+
+QString estrFutureSymbol(const QDate &month)
+{
+    static const QHash<int, QChar> codes {{3, 'H'}, {6, 'M'}, {9, 'U'}, {12, 'Z'}};
+    return QString("ESR%1%2.CME").arg(codes.value(month.month())).arg(month.year() % 100, 2, 10, QLatin1Char('0'));
+}
+
+QVector<QDate> nextQuarterMonths(const QDate &today, int count)
+{
+    QVector<QDate> out;
+    // A quarter's contract covers about three months from the third Wednesday of its month.
+    for (QDate m(today.year(), today.month(), 1); out.size() < count; m = m.addMonths(1))
+        if (m.month() % 3 == 0 && (m > today || today.day() < 15))
+            out << m;
     return out;
 }
 

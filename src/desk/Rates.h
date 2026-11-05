@@ -32,6 +32,8 @@ struct FedPath {
     QVector<MeetingPricing> meetings;
 };
 // Meetings after `today` that a contract covers. `contracts` in any order; a missing month ends the path.
+// Spreads a meeting's changeBp on the two nearest quarter points: the usual simplification.
+void splitMove(MeetingPricing &p);
 FedPath fedPath(const QVector<FedContract> &contracts, const QVector<QDate> &meetings, const QDate &today);
 
 // --- The CFTC's Traders in Financial Futures report.
@@ -48,5 +50,10 @@ struct TffWeek {
 // Where the last of `nets` sits in its range over the last `window` values: 0 lowest, 100 highest; -1 without data.
 double rangePosition(const QVector<double> &nets, int window = 52);
 QVector<TffWeek> parseTff(const QByteArray &json);
+
+// CME's three-month €STR future of a quarter's month: "ESRZ26.CME".
+QString estrFutureSymbol(const QDate &month);
+// The quarterly months whose contract hasn't started yet, the next `count` of them.
+QVector<QDate> nextQuarterMonths(const QDate &today, int count);
 
 } // namespace desk

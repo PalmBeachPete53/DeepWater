@@ -40,6 +40,8 @@ public:
     virtual void newPage() = 0;
 
     virtual void snapshot(std::function<void(const QImage &)> done) = 0;
+    // Runs a script in the page; `done` gets its result as a string (empty when it isn't one).
+    virtual void runScript(const QString &script, std::function<void(const QString &)> done) = 0;
 
 signals:
     void loadStarted();

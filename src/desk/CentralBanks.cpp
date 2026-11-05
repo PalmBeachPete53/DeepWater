@@ -371,4 +371,218 @@ OisCurve parseBoeOisSheet(const QByteArray &sheetXml)
     return out;
 }
 
+FedPath oisMeetingPath(const OisCurve &curve, double currentRate, const QVector<QDate> &meetings, const QDate &today)
+{
+    FedPath out;
+    out.currentRate = currentRate;
+    if (curve.points.isEmpty() || std::isnan(currentRate))
+        return out;
+    double before = currentRate, cumulative = 0;
+    for (const QDate &m : meetings) {
+        if (m < today)
+            continue;
+        // A week after the meeting, once the new rate applies; the curve starts a month ahead.
+        const double months = std::max((curve.date.daysTo(m) + 7) / 30.44, curve.points.first().first);
+        const double after = curve.at(months);
+        if (std::isnan(after))
+            break;
+        MeetingPricing p;
+        p.date = m;
+        p.rateBefore = before;
+        p.rateAfter = after;
+        p.changeBp = (after - before) * 100.0;
+        cumulative += p.changeBp;
+        p.cumulativeBp = cumulative;
+        splitMove(p);
+        out.meetings.push_back(p);
+        before = after;
+    }
+    return out;
+}
+
+QVector<QDate> bundledMeetings(const QString &currency)
+{
+    if (currency == "AUD")   // rba.gov.au, board meeting schedules: the second day of each meeting
+        return {QDate(2026, 12, 8), QDate(2027, 2, 9), QDate(2027, 3, 23), QDate(2027, 5, 4), QDate(2027, 6, 22),
+                QDate(2027, 8, 10), QDate(2027, 9, 28), QDate(2027, 11, 2), QDate(2027, 12, 14)};
+    if (currency == "NZD")   // the RBNZ's dates to February 2028 as listed by financecalendar.com; those after October 2027 weren't found
+        return {QDate(2026, 12, 9), QDate(2027, 2, 10), QDate(2027, 3, 17), QDate(2027, 5, 5), QDate(2027, 6, 16),
+                QDate(2027, 8, 4), QDate(2027, 9, 15), QDate(2027, 10, 27)};
+    return {};
+}
+
+QHash<QString, double> parseSnbYields(const QString &csv)
+{
+    // "Date";"D0";"D1";"Value", then "2026-10-30";"CHF";"2J";"0.799"; a day can have empty values.
+    QHash<QString, QHash<QString, double>> days;
+    QString latest;
+    for (const QString &line : csv.split('\n')) {
+        QStringList cells = line.trimmed().split(';');
+        if (cells.size() < 4)
+            continue;
+        for (QString &c : cells)
+            c.remove('"');
+        bool good = false;
+        const double v = cells[3].toDouble(&good);
+        if (cells[1] != "CHF" || !good || !cells[2].endsWith('J'))
+            continue;
+        days[cells[0]].insert(cells[2].chopped(1) + 'Y', v);
+        if (cells[0] > latest)
+            latest = cells[0];
+    }
+    return days.value(latest);
+}
+
+namespace {
+
+ForecastRange rangeOf(const QString &topic, int year, const QString &survey, QVector<double> values)
+{
+    ForecastRange r;
+    r.topic = topic;
+    r.year = year;
+    r.survey = survey;
+    r.count = int(values.size());
+    std::sort(values.begin(), values.end());
+    r.low = values.first();
+    r.high = values.last();
+    const int n = int(values.size());
+    r.median = n % 2 ? values[n / 2] : (values[n / 2 - 1] + values[n / 2]) / 2;
+    return r;
+}
+
+} // namespace
+
+QVector<ForecastRange> parseEcbSpf(const QString &csv)
+{
+    QVector<ForecastRange> out;
+    const QStringList lines = csv.split('\n', Qt::SkipEmptyParts);
+    if (lines.size() < 2)
+        return out;
+    const QStringList head = lines.first().trimmed().split(',');
+    const int topic = head.indexOf("FCT_TOPIC"), horizon = head.indexOf("FCT_HORIZON"), source = head.indexOf("FCT_SOURCE"),
+              period = head.indexOf("TIME_PERIOD"), value = head.indexOf("OBS_VALUE");
+    if (topic < 0 || horizon < 0 || source < 0 || period < 0 || value < 0)
+        return out;
+    QString latest;
+    QHash<QString, QVector<double>> answers;   // "topic/year/survey"
+    static const QRegularExpression digits("^\\d+$");
+    for (int i = 1; i < lines.size(); ++i) {
+        const QStringList c = lines[i].trimmed().split(',');
+        if (c.size() <= std::max({topic, horizon, source, period, value}) || !digits.match(c[source]).hasMatch() || !digits.match(c[horizon]).hasMatch())
+            continue;
+        bool good = false;
+        const double v = c[value].toDouble(&good);
+        if (!good)
+            continue;
+        answers[c[topic] + '/' + c[horizon] + '/' + c[period]] << v;
+        if (c[period] > latest)
+            latest = c[period];
+    }
+    const QHash<QString, QString> names {{"HICP", "CPI"}, {"RGDP", "GDP"}, {"UNEM", "UNEMP"}, {"CORE", "CORE"}};
+    for (auto it = answers.begin(); it != answers.end(); ++it) {
+        const QStringList key = it.key().split('/');
+        if (key[2] == latest)
+            out << rangeOf(names.value(key[0], key[0]), key[1].toInt(), latest, it.value());
+    }
+    std::sort(out.begin(), out.end(), [](const ForecastRange &a, const ForecastRange &b) { return a.topic == b.topic ? a.year < b.year : a.topic < b.topic; });
+    return out;
+}
+
+QVector<ForecastRange> parsePhillyIndividual(const QByteArray &sheetXml, const QByteArray &sharedStringsXml, const QString &variable)
+{
+    QVector<ForecastRange> out;
+    QStringList strings;
+    {
+        QXmlStreamReader xml(sharedStringsXml);
+        while (!xml.atEnd()) {
+            xml.readNext();
+            if (xml.isStartElement() && xml.name() == u"t")
+                strings << xml.readElementText();
+        }
+    }
+    const auto columnOf = [](QStringView ref) {
+        int c = 0;
+        for (const QChar ch : ref) {
+            if (!ch.isLetter())
+                break;
+            c = c * 26 + (ch.unicode() - 'A' + 1);
+        }
+        return c;
+    };
+    QHash<QString, int> head;
+    QVector<QHash<int, double>> rows;
+    QHash<int, double> row;
+    QHash<int, QString> rowText;
+    QXmlStreamReader xml(sheetXml);
+    int column = 0;
+    bool isString = false, isError = false;
+    while (!xml.atEnd()) {
+        xml.readNext();
+        if (xml.isStartElement() && xml.name() == u"c") {
+            column = columnOf(xml.attributes().value("r"));
+            const auto type = xml.attributes().value("t");
+            isString = type == u"s";
+            isError = type == u"e";
+        } else if (xml.isStartElement() && xml.name() == u"v") {
+            const QString text = xml.readElementText();
+            if (isString)
+                rowText.insert(column, strings.value(text.toInt()));
+            else if (!isError) {
+                bool good = false;
+                const double v = text.toDouble(&good);
+                if (good)
+                    row.insert(column, v);
+            }
+        } else if (xml.isEndElement() && xml.name() == u"row") {
+            if (head.isEmpty())
+                for (auto it = rowText.begin(); it != rowText.end(); ++it)
+                    head.insert(it.value(), it.key());
+            else
+                rows << row;
+            row.clear();
+            rowText.clear();
+        }
+    }
+    const int yearCol = head.value("YEAR"), quarterCol = head.value("QUARTER");
+    if (!yearCol || !quarterCol)
+        return out;
+    int year = 0, quarter = 0;
+    for (const auto &r : std::as_const(rows)) {
+        const int y = int(r.value(yearCol)), q = int(r.value(quarterCol));
+        if (y * 10 + q > year * 10 + quarter) {
+            year = y;
+            quarter = q;
+        }
+    }
+    const QString survey = QString("%1-Q%2").arg(year).arg(quarter);
+    QVector<QHash<int, double>> latest;
+    for (const auto &r : std::as_const(rows))
+        if (int(r.value(yearCol)) == year && int(r.value(quarterCol)) == quarter)
+            latest << r;
+    const QStringList letters {"A", "B", "C", "D"};
+    if (variable == "RGDP") {
+        // Levels: growth of each year's average on the one before.
+        for (int k = 1; k < 3; ++k) {
+            const int before = head.value(variable + letters[k - 1]), after = head.value(variable + letters[k]);
+            QVector<double> values;
+            for (const auto &r : std::as_const(latest))
+                if (r.contains(before) && r.contains(after) && r.value(before) > 0)
+                    values << (r.value(after) / r.value(before) - 1) * 100.0;
+            if (!values.isEmpty())
+                out << rangeOf("GDP", year + k, survey, values);
+        }
+    } else {
+        for (int k = 0; k < 3; ++k) {
+            const int col = head.value(variable + letters[k]);
+            QVector<double> values;
+            for (const auto &r : std::as_const(latest))
+                if (r.contains(col))
+                    values << r.value(col);
+            if (col && !values.isEmpty())
+                out << rangeOf(variable, year + k, survey, values);
+        }
+    }
+    return out;
+}
+
 } // namespace desk

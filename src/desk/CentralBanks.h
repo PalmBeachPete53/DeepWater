@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Rates.h"
+
 #include <QByteArray>
 #include <QDate>
 #include <QHash>
@@ -60,5 +62,28 @@ struct OisCurve {
     double at(double months) const;              // interpolated; NaN outside the curve
 };
 OisCurve parseBoeOisSheet(const QByteArray &sheetXml);
+// What a curve prices at each meeting ahead, from `currentRate`, moves split as for the Fed's.
+FedPath oisMeetingPath(const OisCurve &curve, double currentRate, const QVector<QDate> &meetings, const QDate &today);
+
+// Meetings of the banks whose sites refuse programs (the RBA, the RBNZ): their published dates, kept here and updated
+// with the app. Empty for the others.
+QVector<QDate> bundledMeetings(const QString &currency);
+
+// The SNB's spot rates on Confederation bonds (cube rendeiduebd), last day published.
+QHash<QString, double> parseSnbYields(const QString &csv);
+
+// How far apart professional forecasters are: one survey's individual answers for a year.
+struct ForecastRange {
+    QString topic;     // "CPI", "GDP", "UNEMP"
+    int year = 0;
+    QString survey;    // "2026-Q4"
+    int count = 0;
+    double low = 0, median = 0, high = 0;
+};
+// The ECB's Survey of Professional Forecasters, individual point forecasts, latest survey.
+QVector<ForecastRange> parseEcbSpf(const QString &csv);
+// The Philadelphia Fed's file of individual forecasts for "CPI", "UNEMP" or "RGDP", latest survey: an xlsx's first sheet
+// and shared strings, unzipped.
+QVector<ForecastRange> parsePhillyIndividual(const QByteArray &sheetXml, const QByteArray &sharedStringsXml, const QString &variable);
 
 } // namespace desk

@@ -122,6 +122,10 @@ public:
         m_blocked = 0;
         m_generation++;
     }
+    void runScript(const QString &script, std::function<void(const QString &)> done) override
+    {
+        m_view->page()->runJavaScript(script, [done](const QVariant &result) { done(result.toString()); });
+    }
     void snapshot(std::function<void(const QImage &)> done) override { done(m_view->grab().toImage()); }
 
 private:

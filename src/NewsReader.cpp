@@ -1,13 +1,17 @@
 #include "NewsReader.h"
 
 #include "NewsWebHost.h"
+#include "PageTranslator.h"
 #include "Theme.h"
 
 #include <QDesktopServices>
 #include <QFrame>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QJsonArray>
+#include <QJsonDocument>
 #include <QLocale>
+#include <QTimer>
 #include <QMouseEvent>
 #include <QPainter>
 #include <QProgressBar>
@@ -82,7 +86,9 @@ Reader::Reader(QWidget *parent)
     m_translate = new QPushButton(tr("Translate").toUpper());
     m_translate->setObjectName("newsRefresh");
     m_translate->setCursor(Qt::PointingHandCursor);
-    m_translate->setToolTip(tr("Has the local model in the side panel translate the headline and the feed's summary; the page itself isn't translated"));
+    m_translate->setToolTip(PageTranslator::available()
+                                ? tr("Translates the page's text on this Mac, with the languages installed in macOS: nothing is sent anywhere. Links and formatting inside paragraphs are lost until you go back to the original.")
+                                : tr("Has the local model in the side panel translate the headline and the feed's summary"));
     h->addWidget(m_translate);
     m_browser = new QPushButton(tr("Open in the browser").toUpper());
     m_browser->setObjectName("newsRefresh");
@@ -120,9 +126,18 @@ Reader::Reader(QWidget *parent)
 
     connect(m_close, &QToolButton::clicked, this, &Reader::closeReader);
     connect(m_translate, &QPushButton::clicked, this, [this] {
-        const QString language = QLocale().nativeLanguageName();
+        if (m_translated) {
+            if (m_host)
+                m_host->load(m_host->url());
+            return;
+        }
+        if (PageTranslator::available()) {
+            translatePage();
+            return;
+        }
+        // No on-device translation here: the local model, for what the feed gives.
         const QString summary = m_item.summary.trimmed();
-        emit askAi(tr("Translate this into %1, faithfully, and answer with the translation only.\n\nHeadline: %2").arg(language, m_item.title)
+        emit askAi(tr("Translate this into %1, faithfully, and answer with the translation only.\n\nHeadline: %2").arg(QLocale().nativeLanguageName(), m_item.title)
                    + (summary.isEmpty() ? QString() : tr("\nSummary: %1").arg(summary.left(1500))));
     });
     connect(m_ask, &QPushButton::clicked, this, [this] {
@@ -143,6 +158,94 @@ Reader::Reader(QWidget *parent)
     connect(esc, &QShortcut::activated, this, &Reader::closeReader);
 }
 
+void Reader::resetTranslate()
+{
+    ++m_translateSerial;
+    m_translated = false;
+    m_translate->setEnabled(true);
+    m_translate->setText(tr("Translate").toUpper());
+}
+
+void Reader::translatePage()
+{
+    if (!m_host)
+        return;
+    // The paragraphs of the article, or of the page without one; kept in the page for the answer to find them.
+    static const QString collect = QStringLiteral(R"((function () {
+        var root = document.querySelector('article') || document.querySelector('main') || document.body;
+        var sel = 'h1,h2,h3,h4,p,li,blockquote,figcaption,td';
+        var found = Array.prototype.slice.call(root.querySelectorAll(sel));
+        var title = document.querySelector('h1');
+        if (title && found.indexOf(title) < 0) found.unshift(title);
+        var els = found.filter(function (e) {
+            var t = (e.innerText || '').trim();
+            return t.length > 1 && e.getClientRects().length > 0 && !e.querySelector(sel);
+        }).slice(0, 600);
+        window.__deepwaterText = els;
+        return JSON.stringify(els.map(function (e) { return e.innerText.trim(); }));
+    })())");
+    const int serial = ++m_translateSerial;
+    m_notice->hide();
+    m_translate->setEnabled(false);
+    m_translate->setText(tr("Translating…").toUpper());
+    const auto fail = [this](const QString &message) {
+        m_translate->setEnabled(true);
+        m_translate->setText(tr("Translate").toUpper());
+        m_notice->setText(message);
+        m_notice->show();
+    };
+    m_host->runScript(collect, [this, serial, fail](const QString &json) {
+        if (serial != m_translateSerial)
+            return;
+        QStringList texts;
+        for (const QJsonValue &v : QJsonDocument::fromJson(json.toUtf8()).array())
+            texts << v.toString();
+        if (texts.isEmpty()) {
+            fail(tr("This page has no text to translate."));
+            return;
+        }
+        const QString title = m_item.title;
+        texts.append(title);   // the header's, last: it stays out of the page's paragraphs
+        PageTranslator::translate(texts, QLocale().name().left(2), this, [this, serial, fail, title](const PageTranslator::Result &r) {
+            if (serial != m_translateSerial)
+                return;
+            switch (r.failure) {
+            case PageTranslator::Failure::None:
+                break;
+            case PageTranslator::Failure::SameLanguage:
+                fail(tr("This page is already in your language."));
+                return;
+            case PageTranslator::Failure::NotInstalled:
+                fail(tr("The language of this page (%1) isn't installed for translation: add it in System Settings › General › Language & Region › Translation Languages. Nothing is downloaded without you.").arg(r.source));
+                return;
+            case PageTranslator::Failure::Unsupported:
+                fail(tr("macOS can't translate this page's language (%1).").arg(r.source));
+                return;
+            case PageTranslator::Failure::SystemTooOld:
+                fail(tr("Translating a page needs macOS 26 or later."));
+                return;
+            case PageTranslator::Failure::Failed:
+                fail(tr("The translation failed."));
+                return;
+            }
+            QStringList paragraphs = r.texts;
+            if (paragraphs.isEmpty())
+                return;
+            const QString newTitle = paragraphs.takeLast();
+            const QString apply = QString("(function (t) { (window.__deepwaterText || []).forEach(function (e, i) { if (t[i]) e.textContent = t[i]; }); })(%1)")
+                                      .arg(QString::fromUtf8(QJsonDocument(QJsonArray::fromStringList(paragraphs)).toJson(QJsonDocument::Compact)));
+            m_host->runScript(apply, [this, serial, newTitle](const QString &) {
+                if (serial != m_translateSerial)
+                    return;
+                m_title->setText(newTitle);
+                m_translated = true;
+                m_translate->setEnabled(true);
+                m_translate->setText(tr("Original").toUpper());
+            });
+        });
+    });
+}
+
 void Reader::open(const news::Item &item)
 {
     m_item = item;
@@ -150,6 +253,7 @@ void Reader::open(const news::Item &item)
         m_host = WebHost::create(m_body);
         m_body->layout()->addWidget(m_host);
         connect(m_host, &WebHost::loadStarted, this, [this] {
+            resetTranslate();
             m_progress->setValue(0);
             m_progress->show();
             m_notice->hide();

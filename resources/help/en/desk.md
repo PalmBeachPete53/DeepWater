@@ -28,11 +28,13 @@ One list of three things, newest first: headlines from InvestingLive's public fe
 
 - **The Fed's path**: what CME 30-day fed funds futures imply at each meeting of the Fed's own calendar: the rate after the meeting, the change, the cumulative change, and the probabilities of −50, −25, hold, +25 and +50 basis points. Each move is split between the two nearest quarter points, the usual simplification. It reads what is priced, not what will happen.
 - **Central banks**: nine policy rates from the BIS, the last move and its date, the change over a year, the last vote where the bank publishes one in its text (the Fed's dissents, the Bank of England's count), and the next decision from the banks' own pages. The RBA and the RBNZ refuse programs, so their dates only appear when the economic calendar lists them.
-- **Yield curves**: the United States, the euro area, the United Kingdom, Japan and Canada, latest published. Their methods differ, so levels compare roughly.
+- **Yield curves**: the United States, the euro area, the United Kingdom, Japan, Canada and Switzerland, latest published. Their methods differ, so levels compare roughly.
 
-- **United Kingdom**: the rate implied by the Bank of England's daily OIS curve, and what it prices just after its next meetings. A forward rate isn't a probability: it mixes the meetings before it and a small premium.
+- **United Kingdom**: the rate implied by the Bank of England's daily OIS curve and, meeting by meeting, the move it prices spread on quarter points as for the Fed. It holds a small premium and isn't a survey of odds.
+- **Euro area**: CME's three-month €STR futures by quarter against today's €STR. A quarter holds about two ECB meetings, so this reads the path, not one meeting; volumes are thin and shown.
+- **Australia and New Zealand**: the OECD's monthly 3-month and 10-year rates, since their central banks refuse programs and no free daily curve was found. The dates of their decisions are kept in the app and updated with it.
 
-Only the Fed has probabilities: no free source that allows it publishes rate futures for the other banks. ING's forecasts for their rates are in Forecasts.
+**2Y − rate**, in the central banks' table, is the 2-year government yield against the policy rate: where the market sees rates, with a term premium. It is the only market reading for the BoJ, the SNB and the BoC, since no free source that allows it publishes short rate futures for them. ING's forecasts are in Forecasts.
 
 ## Positioning
 
@@ -63,11 +65,11 @@ Stop pools read from price alone: equal highs and lows on 1-hour or daily bars, 
 
 ## Notes
 
-Titles from ING Think, the Fed, the ECB, the Bank of England and the BIS's central bankers' speeches, by publisher and with a search. A click opens the note in the reader, with its **Ask the AI** and **Translate** buttons. **The large banks' notes and FX forecasts are for their clients**, with no public feed, so they aren't here.
+Titles from ING Think, the Fed, the ECB, the Bank of England and the BIS's central bankers' speeches, by publisher and with a search. A click opens the note in the reader, with its **Ask the AI** and **Translate** buttons. Central banks' sites are exempt from the ad blocker's lists, one of which left the Fed's pages white. **The large banks' notes and FX forecasts are for their clients**, with no public feed, so they aren't here.
 
 ## Forecasts
 
-Other people's forecasts, side by side. **ING Think** by quarter, for growth, inflation, policy rates, three-month rates, bonds, FX and commodities, with the date of its last update; in the FX tab, a click on a pair draws ING's path after a year of its price. The **IMF** and the **OECD** by year for growth, inflation and unemployment in the eight main economies; a click on a row draws its past figures and the forecasts. The **Fed's own projections**, which need the free FRED key in [Sources](help:sources). TD, KBC, MUFG and RBC also publish FX tables, but their terms don't allow or don't state a right to reuse their figures, so they are links to their sites.
+Other people's forecasts, side by side. **ING Think** by quarter, for growth, inflation, policy rates, three-month rates, bonds, FX and commodities, with the date of its last update; in the FX tab, a click on a pair draws ING's path after a year of its price. The **IMF** and the **OECD** by year for growth, inflation and unemployment in the eight main economies; a click on a row draws its past figures and the forecasts. The **Fed's own projections**, which need the free FRED key in [Sources](help:sources). **How far apart forecasters are** gives the lowest, median and highest answer in the latest surveys of professional forecasters, the ECB's and the Philadelphia Fed's: yearly figures. No free source publishes that range for a single release on the calendar. TD, KBC, MUFG and RBC also publish FX tables, but their terms don't allow or don't state a right to reuse their figures, so they are links to their sites.
 
 ## Workspaces
 

@@ -20,4 +20,6 @@ Avec une clé **Financial Modeling Prep** enregistrée dans Sources › News, se
 
 Chaque titre est lu d'après ses mots pour un impact (une étiquette sur la carte) et des thèmes : banques centrales, inflation, emploi, PIB, PMI, ventes au détail, commerce, résultats. Deux listes du sous-en-tête filtrent dessus. Cela lit des mots, pas le sens : un repère, pas un verdict.
 
-Dans le lecteur, **Demander à l'IA** envoie le titre de l'article et son résumé de flux à votre modèle local dans le [panneau latéral](help:ai). **Traduire** lui fait traduire ces deux mêmes textes. Le modèle ne lit pas la page elle-même : l'article complet n'est pas traduit.
+Dans le lecteur, **Demander à l'IA** envoie le titre de l'article et son résumé de flux à votre modèle local dans le [panneau latéral](help:ai). Le modèle ne lit pas la page elle-même.
+
+**Traduire** met le texte de la page dans votre langue, sur place et sur ce Mac, avec la traduction d'Apple sur macOS 26 ou plus récent : rien n'est envoyé nulle part. Seules les langues installées dans Réglages Système › Général › Langue et région › Langues de traduction sont utilisées ; pour une autre, le lecteur indique laquelle ajouter. Les liens et la mise en forme à l'intérieur des paragraphes sont perdus jusqu'à ce que **Original** rétablisse la page.

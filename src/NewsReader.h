@@ -43,6 +43,8 @@ private:
     void updateMeta();
     void updateShield();
     void updateStar();
+    void translatePage();
+    void resetTranslate();
 
     news::Item m_item;
     QFrame *m_panel;
@@ -53,6 +55,8 @@ private:
     QPushButton *m_browser;
     QPushButton *m_ask;
     QPushButton *m_translate;
+    bool m_translated = false;        // the page shows a translation: the button brings the original back
+    int m_translateSerial = 0;        // a page that changed meanwhile drops the answer
     QToolButton *m_close;
     QProgressBar *m_progress;
     QLabel *m_notice;                 // the site refused the embedded view (HTTP 403…)

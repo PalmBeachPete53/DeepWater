@@ -176,7 +176,7 @@ void SourcesPage::applySaved(const Targets &t)
     for (const char *group : {"yahoo", "nasdaq", "sec", "wikipedia", "wikidata", "treasury", "fred", "oecd", "coinmarketcap",
                               "alternative", "worldbank", "imf", "eurostat", "bis", "ecb", "ilo", "eia", "ons", "boe", "bcb",
                               "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "inegi", "bps", "estat",
-                              "fed", "cftc", "binance", "investinglive", "ing", "mof"})
+                              "fed", "cftc", "binance", "investinglive", "ing", "mof", "philly"})
         research::Client::instance()->setEnabled(group, on(QByteArray("research_") + group));
     Myfxbook::instance()->setEnabled(on("myfxbook"));
     news::Wire::instance()->setEnabled("rss", on("news_feeds"));
@@ -502,7 +502,8 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     add(buildRow({"research_ecb", Kind::Dataset, tr("Money, credit and bank rates"), tr("European Central Bank"),
                   "data-api.ecb.europa.eu",
                   tr("Countries (euro area and members): M1, M2, M3, loans, mortgage, lending and deposit rates, central "
-                     "bank balance sheets. Desk › Rates: the euro area yield curve and meeting dates")},
+                     "bank balance sheets. Desk › Rates: the euro area yield curve, €STR and meeting dates. Desk › Forecasts: its Survey of "
+                     "Professional Forecasters")},
                  research("ecb", QUrl("https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.A2C.A.R.A.2250.EUR.N"
                                       "?format=csvdata&lastNObservations=1"))));
     add(buildRow({"research_bis", Kind::Dataset, tr("Policy rates, property prices and credit"),
@@ -546,7 +547,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                      "Bank's assets, bank loans and lending rate, balance of payments. Desk › Rates: meeting dates")},
                  research("boj", QUrl("https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM01&code=STRDCLUCON&startDate=202610"))));
     add(buildRow({"research_snb", Kind::Dataset, tr("Data portal"), tr("Swiss National Bank"), "data.snb.ch",
-                  tr("Countries › Switzerland: M1, M2, M3, consumer prices, SARON. Desk › Rates: meeting dates")},
+                  tr("Countries › Switzerland: M1, M2, M3, consumer prices, SARON. Desk › Rates: the Confederation curve and meeting dates")},
                  research("snb", QUrl("https://data.snb.ch/api/cube/plkopr/data/csv/en"))));
     add(buildRow({"research_abs", Kind::Dataset, tr("Australian statistics"), tr("Australian Bureau of Statistics"),
                   "data.api.abs.gov.au", tr("Countries › Australia: labour force, monthly CPI and trimmed mean, GDP, saving "
@@ -647,6 +648,9 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                   tr("Desk › Notes: the titles of its public research. Desk › Forecasts: its forecasts by quarter for growth, "
                      "inflation, rates, bonds, FX and commodities")},
                  research("ing", QUrl("https://think.ing.com/rss/"))));
+    add(buildRow({"research_philly", Kind::Dataset, tr("Survey of Professional Forecasters"), tr("Federal Reserve Bank of Philadelphia"), "www.philadelphiafed.org",
+                  tr("Desk › Forecasts: how far apart forecasters are on US inflation, growth and unemployment")},
+                 research("philly", QUrl("https://www.philadelphiafed.org/surveys-and-data/cpi-spf"))));
     add(buildRow({"research_mof", Kind::Dataset, tr("Japanese government bond yields"), tr("Ministry of Finance, Japan"), "www.mof.go.jp",
                   tr("Desk › Rates: the yield curve")},
                  research("mof", QUrl("https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv"))));

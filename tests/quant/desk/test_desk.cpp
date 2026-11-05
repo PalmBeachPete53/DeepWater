@@ -757,6 +757,51 @@ void testCentralBanks()
     check(std::abs(ois.at(1.5) - 3.77) < 1e-6, "between two months");
     check(std::isnan(ois.at(10)), "outside the curve");
     check(parseBoeOisSheet("<worksheet/>").points.isEmpty(), "nothing in it");
+
+    // What the curve prices, with moves split.
+    OisCurve curve;
+    curve.date = QDate(2026, 11, 4);
+    curve.points = {{1, 4.00}, {2, 4.00}, {3, 4.25}, {6, 4.25}};
+    const FedPath ukPath = oisMeetingPath(curve, 3.75, {QDate(2026, 11, 1), QDate(2026, 11, 5), QDate(2027, 2, 20), QDate(2030, 1, 1)}, QDate(2026, 11, 4));
+    eqi(2, ukPath.meetings.size(), "past meetings and those beyond the curve are left out");
+    near(25, ukPath.meetings.value(0).changeBp, 1e-9, "the first move against the bank rate");
+    near(100, ukPath.meetings.value(0).probability[3], 1e-9, "a full quarter point");
+    near(25, ukPath.meetings.value(1).changeBp, 2, "the next against the one before");
+    check(oisMeetingPath({}, 3.75, {QDate(2026, 12, 1)}, QDate(2026, 11, 4)).meetings.isEmpty(), "no curve");
+
+    eqs("ESRZ26.CME", estrFutureSymbol(QDate(2026, 12, 1)), "the €STR future");
+    eqs("ESRH27.CME", estrFutureSymbol(QDate(2027, 3, 1)), "next year's");
+    QVector<QDate> quarters = nextQuarterMonths(QDate(2026, 11, 5), 3);
+    check(quarters.value(0) == QDate(2026, 12, 1) && quarters.value(2) == QDate(2027, 6, 1), "the quarters ahead");
+    check(nextQuarterMonths(QDate(2026, 12, 20), 1).value(0) == QDate(2027, 3, 1), "a contract already running is skipped");
+
+    eqi(0, bundledMeetings("USD").size(), "only the banks that refuse programs");
+    check(bundledMeetings("AUD").contains(QDate(2027, 9, 28)), "the RBA's own date");
+    y = parseSnbYields(QStringLiteral("\"CubeId\";\"rendeiduebd\"\n\n\"Date\";\"D0\";\"D1\";\"Value\"\n\"2026-10-29\";\"CHF\";\"2J\";\"0.2\"\n\"2026-10-30\";\"CHF\";\"2J\";\"0.25\"\n\"2026-10-30\";\"CHF\";\"10J\";\"\"\n\"2026-10-30\";\"GBC\";\"2J\";\"0.799\"\n"));
+    check(y.value("2Y") == 0.25 && !y.contains("10Y") && y.size() == 1, "the SNB's last day, Confederation only");
+
+    const QVector<ForecastRange> euro = parseEcbSpf(QStringLiteral(
+        "KEY,FREQ,REF_AREA,FCT_TOPIC,FCT_BREAKDOWN,FCT_HORIZON,SURVEY_FREQ,FCT_SOURCE,TIME_PERIOD,OBS_VALUE\n"
+        "k,Q,U2,HICP,POINT,2027,Q,001,2026-Q4,2.0\nk,Q,U2,HICP,POINT,2027,Q,002,2026-Q4,3.0\nk,Q,U2,HICP,POINT,2027,Q,003,2026-Q4,2.2\n"
+        "k,Q,U2,HICP,POINT,2027,Q,AVG,2026-Q4,2.4\nk,Q,U2,HICP,POINT,2027,Q,004,2026-Q1,9.9\nk,Q,U2,HICP,POINT,P24M,Q,005,2026-Q4,8.0\n"));
+    eqi(1, euro.size(), "one year, the latest survey, individual answers");
+    eqs("CPI", euro.value(0).topic, "named");
+    eqi(3, euro.value(0).count, "three forecasters");
+    check(euro.value(0).low == 2.0 && euro.value(0).median == 2.2 && euro.value(0).high == 3.0, "low, median, high");
+    eqi(0, parseEcbSpf("oops").size(), "not the table");
+
+    const QByteArray strings = R"(<sst><si><t>YEAR</t></si><si><t>QUARTER</t></si><si><t>ID</t></si><si><t>CPIA</t></si><si><t>CPIB</t></si><si><t>#N/A</t></si></sst>)";
+    const QByteArray sheet = R"(<worksheet><sheetData>
+        <row><c r="A1" t="s"><v>0</v></c><c r="B1" t="s"><v>1</v></c><c r="C1" t="s"><v>2</v></c><c r="D1" t="s"><v>3</v></c><c r="E1" t="s"><v>4</v></c></row>
+        <row><c r="A2"><v>2026.0</v></c><c r="B2"><v>2</v></c><c r="C2"><v>1</v></c><c r="D2"><v>9</v></c><c r="E2"><v>9</v></c></row>
+        <row><c r="A3"><v>2026.0</v></c><c r="B3"><v>3</v></c><c r="C3"><v>1</v></c><c r="D3"><v>3.5</v></c><c r="E3" t="s"><v>5</v></c></row>
+        <row><c r="A4"><v>2026.0</v></c><c r="B4"><v>3</v></c><c r="C4"><v>2</v></c><c r="D4"><v>2.5</v></c><c r="E4"><v>2.1</v></c></row>
+        </sheetData></worksheet>)";
+    const QVector<ForecastRange> us = parsePhillyIndividual(sheet, strings, "CPI");
+    eqi(2, us.size(), "two years in the file");
+    eqs("2026-Q3", us.value(0).survey, "the latest survey");
+    check(us.value(0).year == 2026 && us.value(0).low == 2.5 && us.value(0).high == 3.5 && us.value(0).median == 3.0, "this year");
+    eqi(1, us.value(1).count, "a missing answer is left out");
 }
 
 } // namespace

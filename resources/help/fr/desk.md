@@ -28,11 +28,13 @@ Une seule liste de trois choses, les plus récentes d'abord : les titres du flux
 
 - **Le chemin de la Fed** : ce qu'impliquent les contrats à terme CME sur fed funds à 30 jours à chaque réunion du calendrier de la Fed : le taux après la réunion, la variation, le cumul, et les probabilités de −50, −25, statu quo, +25 et +50 points de base. Chaque mouvement est réparti entre les deux quarts de point les plus proches, la simplification habituelle. Cela lit ce qui est intégré dans les prix, pas ce qui arrivera.
 - **Banques centrales** : neuf taux directeurs de la BRI, le dernier mouvement et sa date, la variation sur un an, le dernier vote quand la banque le publie dans son texte (les dissidences à la Fed, le décompte à la Banque d'Angleterre) et la prochaine décision d'après les pages des banques. La RBA et la RBNZ refusent les programmes : leurs dates n'apparaissent que si le calendrier économique les annonce.
-- **Courbes des taux** : États-Unis, zone euro, Royaume-Uni, Japon et Canada, dernière publication. Les méthodes diffèrent : les niveaux se comparent approximativement.
+- **Courbes des taux** : États-Unis, zone euro, Royaume-Uni, Japon, Canada et Suisse, dernière publication. Les méthodes diffèrent : les niveaux se comparent approximativement.
 
-- **Royaume-Uni** : le taux implicite de la courbe OIS quotidienne de la Banque d'Angleterre, et ce qu'elle intègre juste après ses prochaines réunions. Un taux à terme n'est pas une probabilité : il mêle les réunions d'avant et une petite prime.
+- **Royaume-Uni** : le taux implicite de la courbe OIS quotidienne de la Banque d'Angleterre et, réunion par réunion, le mouvement intégré réparti sur les quarts de point comme pour la Fed. Il contient une petite prime et ce n'est pas une enquête de probabilités.
+- **Zone euro** : les contrats à terme CME sur l'€STR à trois mois, par trimestre, face à l'€STR du jour. Un trimestre contient environ deux réunions de la BCE : cela lit le chemin, pas une réunion ; les volumes sont faibles et affichés.
+- **Australie et Nouvelle-Zélande** : les taux mensuels à 3 mois et à 10 ans de l'OCDE, car leurs banques centrales refusent les programmes et aucune courbe quotidienne gratuite n'a été trouvée. Les dates de leurs décisions sont gardées dans l'application et mises à jour avec elle.
 
-Seule la Fed a des probabilités : aucune source gratuite qui l'autorise ne publie de contrats à terme de taux pour les autres banques. Les prévisions d'ING pour leurs taux sont dans Prévisions.
+**2 ans − taux**, dans le tableau des banques centrales, est le rendement d'État à 2 ans face au taux directeur : où le marché voit les taux, avec une prime de terme. C'est la seule lecture de marché pour la BoJ, la BNS et la BoC, car aucune source gratuite qui l'autorise ne publie de contrats à terme courts pour elles. Les prévisions d'ING sont dans Prévisions.
 
 ## Positionnement
 
@@ -63,11 +65,11 @@ Des zones de stops lues sur le seul prix : plus hauts et plus bas égaux en boug
 
 ## Notes
 
-Les titres d'ING Think, de la Fed, de la BCE, de la Banque d'Angleterre et des discours de banquiers centraux de la BRI, par éditeur et avec une recherche. Un clic ouvre la note dans le lecteur, avec ses boutons **Demander à l'IA** et **Traduire**. **Les notes et les prévisions de change des grandes banques sont réservées à leurs clients**, sans flux public : elles ne sont pas ici.
+Les titres d'ING Think, de la Fed, de la BCE, de la Banque d'Angleterre et des discours de banquiers centraux de la BRI, par éditeur et avec une recherche. Un clic ouvre la note dans le lecteur, avec ses boutons **Demander à l'IA** et **Traduire**. Les sites des banques centrales sont exemptés des listes du bloqueur de publicité, dont l'une rendait les pages de la Fed blanches. **Les notes et les prévisions de change des grandes banques sont réservées à leurs clients**, sans flux public : elles ne sont pas ici.
 
 ## Prévisions
 
-Les prévisions des autres, côte à côte. **ING Think** par trimestre, pour la croissance, l'inflation, les taux directeurs, les taux à trois mois, les obligations, le change et les matières premières, avec la date de sa dernière mise à jour ; dans l'onglet change, un clic sur une paire trace le chemin d'ING après un an de prix. Le **FMI** et l'**OCDE** par année pour la croissance, l'inflation et le chômage des huit grandes économies ; un clic sur une ligne trace ses chiffres passés et les prévisions. Les **projections de la Fed**, qui demandent la clé FRED gratuite dans [Sources](help:sources). TD, KBC, MUFG et RBC publient aussi des tableaux de change, mais leurs conditions n'autorisent pas ou n'indiquent pas de droit de reprendre leurs chiffres : ce sont des liens vers leurs sites.
+Les prévisions des autres, côte à côte. **ING Think** par trimestre, pour la croissance, l'inflation, les taux directeurs, les taux à trois mois, les obligations, le change et les matières premières, avec la date de sa dernière mise à jour ; dans l'onglet change, un clic sur une paire trace le chemin d'ING après un an de prix. Le **FMI** et l'**OCDE** par année pour la croissance, l'inflation et le chômage des huit grandes économies ; un clic sur une ligne trace ses chiffres passés et les prévisions. Les **projections de la Fed**, qui demandent la clé FRED gratuite dans [Sources](help:sources). **L'écart entre prévisionnistes** donne la réponse la plus basse, la médiane et la plus haute des dernières enquêtes de prévisionnistes professionnels, celles de la BCE et de la Fed de Philadelphie : des chiffres annuels. Aucune source gratuite ne publie cette fourchette pour une publication précise du calendrier. TD, KBC, MUFG et RBC publient aussi des tableaux de change, mais leurs conditions n'autorisent pas ou n'indiquent pas de droit de reprendre leurs chiffres : ce sont des liens vers leurs sites.
 
 ## Espaces
 

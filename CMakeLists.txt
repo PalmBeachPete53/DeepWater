@@ -252,6 +252,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/Voice.h
     src/DeskStrip.h src/DeskStrip.cpp
     src/Myfxbook.h src/Myfxbook.cpp
+    src/PageTranslator.h src/PageTranslator.cpp
     src/HelpWindow.h src/HelpWindow.cpp
     src/DeskWidgets.h src/DeskWidgets.cpp
     src/JournalData.h src/JournalData.cpp
@@ -339,6 +340,36 @@ set_target_properties(deepwater PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURR
 # App icon: resources/icon/deepwater.svg is the source; deepwater.icns is rendered from it.
 set_source_files_properties(resources/icon/deepwater.icns PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
 set_target_properties(deepwater PROPERTIES MACOSX_BUNDLE_ICON_FILE deepwater.icns)
+# deepwater-translate: the reader's on-device translation (Apple's Translation framework), a small Swift helper next to
+# deepwater in the bundle. It needs one architecture and swiftc; without them the reader falls back on the local model.
+if(APPLE)
+    find_program(SWIFTC swiftc)
+    list(LENGTH CMAKE_OSX_ARCHITECTURES _dw_arch_count)
+    if(SWIFTC AND _dw_arch_count LESS_EQUAL 1)
+        if(CMAKE_OSX_ARCHITECTURES)
+            set(_dw_swift_arch ${CMAKE_OSX_ARCHITECTURES})
+        else()
+            set(_dw_swift_arch ${CMAKE_HOST_SYSTEM_PROCESSOR})
+        endif()
+        if(CMAKE_OSX_DEPLOYMENT_TARGET)
+            set(_dw_swift_min ${CMAKE_OSX_DEPLOYMENT_TARGET})
+        else()
+            set(_dw_swift_min 14.4)
+        endif()
+        set(_dw_translate ${CMAKE_BINARY_DIR}/deepwater-translate)
+        add_custom_command(OUTPUT ${_dw_translate}
+            COMMAND ${SWIFTC} -O -target ${_dw_swift_arch}-apple-macos${_dw_swift_min} -o ${_dw_translate}
+                    ${CMAKE_CURRENT_SOURCE_DIR}/src/translate-helper.swift
+            DEPENDS src/translate-helper.swift
+            COMMENT "Building deepwater-translate")
+        add_custom_target(deepwater-translate DEPENDS ${_dw_translate})
+        add_dependencies(deepwater deepwater-translate)
+        add_custom_command(TARGET deepwater POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy ${_dw_translate} $<TARGET_FILE_DIR:deepwater>/deepwater-translate
+            COMMENT "Copying deepwater-translate into the bundle")
+    endif()
+endif()
+
 # The linker's ad-hoc signature names the binary ("deepwater"), and usernotificationsd refuses an app
 # whose signed identifier doesn't match its bundle identifier: sign the whole bundle (ad-hoc) again.
 if(APPLE)

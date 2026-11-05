@@ -103,6 +103,13 @@ public:
     int blockedCount() const override { return -1; }
     void newPage() override {}
 
+    void runScript(const QString &script, std::function<void(const QString &)> done) override
+    {
+        [m_web evaluateJavaScript:script.toNSString() completionHandler:^(id result, NSError *) {
+            done([result isKindOfClass:[NSString class]] ? QString::fromNSString((NSString *)result) : QString());
+        }];
+    }
+
     void snapshot(std::function<void(const QImage &)> done) override
     {
         if (!m_web) {
@@ -198,6 +205,11 @@ private:
             else
                 blocking.append(v);
         }
+        // Central banks carry no ads, and a generic hiding rule catches the whole of federalreserve.gov's page, leaving
+        // it white: the lists don't apply to the sites the Desk's notes open.
+        exceptions.append(QJsonObject {{"trigger", QJsonObject {{"url-filter", ".*"},
+                                                                {"if-domain", QJsonArray {"*federalreserve.gov", "*ecb.europa.eu", "*bankofengland.co.uk", "*bis.org"}}}},
+                                       {"action", QJsonObject {{"type", "ignore-previous-rules"}}}});
         const int perChunk = std::max(1000, std::min(ChunkRules, MaxRulesPerList - int(exceptions.size())));
         QVector<QByteArray> chunks;
         for (int start = 0; start < blocking.size(); start += perChunk) {
@@ -215,7 +227,7 @@ private:
             return;
         }
         WKContentRuleListStore *store = [WKContentRuleListStore defaultStore];
-        const QString prefix = "deepwater-" + id + "-";
+        const QString prefix = "deepwater-v2-" + id + "-";   // v2: with the central banks' exception
         QPointer<MacWebHost> self(this);
         for (int i = 0; i < chunks.size(); ++i) {
             NSString *identifier = (prefix + QString::number(i)).toNSString();

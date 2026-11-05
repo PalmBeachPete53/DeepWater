@@ -999,7 +999,7 @@ page embedded through Qt WebEngine, the title, site, date and ticker, a back but
 opens the browser directly. The star in a card's corner, or in the reader's header, keeps the article in the
 **Favorites** tab (as it was when starred: `news-favorites.json` in the app data folder, newest star first; the
 ticker filter applies to their badge and text). The web view is created the first time it is needed (WebEngine starts a helper process)
-and loads a blank page when the reader closes. Code: `src/NewsData.*` (providers, parsing, the symbol guess),
+and loads a blank page when the reader closes. **Translate** rewrites the page's paragraphs in place on the Mac (`src/PageTranslator.*`, macOS 26); without it, the local model translates the headline. Code: `src/NewsData.*` (providers, parsing, the symbol guess),
 `src/NewsPage.*` (sub-header, strip, cards and grid), `src/NewsReader.*` (the reader), `src/AdBlock.*` (its ad blocker).
 
 **Ad blocker.** The reader runs Brave's engine, [adblock-rust](https://github.com/brave/adblock-rust), through a
@@ -1292,6 +1292,10 @@ holds no figures, and the model reads the section through `read_page`.
   Japan (MoF CSV) and Canada (Valet). `fetchRange` pages through TradingView's cap of 2000 events per answer.
   The UK's implied rate comes from the BoE's OIS sheet (`parseBoeOisSheet`, an xlsx inside a zip, read with `unzipFile`). The BoE's terms
   allow display for personal, non-commercial use and the data is Bloomberg's: check before any commercial distribution.
+  The same `splitMove` as the Fed's gives its moves by meeting (`oisMeetingPath`). Euro area: CME's €STR futures on Yahoo
+  (`ESR<month><yy>.CME`), thin, by quarter. `2Y − rate` for the BoJ, SNB and BoC. Switzerland: SNB cube `rendeiduebd` (`rendoblim` stopped in 2025).
+  The RBA and RBNZ answer 403 to programs: `bundledMeetings` keeps their dates, to update by hand each year (RBNZ's after October 2027 weren't found);
+  Australia and New Zealand get the OECD's monthly 3M and 10Y (KEI). Polymarket isn't used: it serves an expired certificate here, likely a block in France.
 - **Positioning**: Binance's public long/short account ratio on twelve USDT perpetuals, and Myfxbook's community outlook on
   forex and CFDs through its official API (`src/Myfxbook.*`, `desk/Positioning`). That needs the user's free account: the password
   goes once to `login.json` and isn't kept, only the session (`desk/myfxbook/session`), which ends after a month or when the
@@ -1308,7 +1312,8 @@ holds no figures, and the model reads the section through `read_page`.
 - **Notes**: ING Think, Fed, ECB, BoE and BIS speeches, from their feeds, opened in the News reader. Banks' client research has no public feed.
 - **Forecasts**: ING Think by quarter (`parseIngForecasts`; ING's terms allow reuse with attribution), IMF WEO and OECD Economic
   Outlook (`DSD_EO@DF_EO`) by year, the Fed's projections through FRED. RBC and MUFG forbid extraction, TD and KBC state no right,
-  so they are links. A click on a pair draws ING's path on a year of prices, on an economy its past figures and forecasts.
+  so they are links. How far apart forecasters are: lowest, median and highest individual answers of the ECB's SPF (`parseEcbSpf`) and the
+  Philadelphia Fed's (`parsePhillyIndividual`, an xlsx); no free source gives this for a single calendar release. A click on a pair draws ING's path on a year of prices, on an economy its past figures and forecasts.
   Kalshi's public API is **not used**: its Developer Agreement limits the API to a member's own trading.
 - **Workspaces**: named sets of up to six live panels (`desk/workspaces`).
 
@@ -1699,6 +1704,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/desk/` | Market logic without UI (library `desk`): instruments, risk, journal parsing and statistics, strength, signals, liquidity, seasonality, appetite, sessions, fundamentals, headline tags, Fed path, TFF |
 | `src/Myfxbook.*` | Myfxbook's API with the user's free account: login, session, community outlook, cache |
 | `src/JournalPage.*`, `src/JournalData.*` | The Journal tab and its store |
+| `src/translate-helper.swift`, `src/PageTranslator.*` | The reader's Translate: `deepwater-translate` in the bundle, Apple's Translation on the Mac (installed languages only), JSON over stdin; `WebHost::runScript` reads and rewrites the page's paragraphs |
 | `src/Voice.h`, `src/VoiceMac.mm`, `src/VoiceStub.cpp` | Push-to-talk and spoken answers of the side panel: on-device recognition, system voices; `cmake/Info.plist.in` holds the permission texts |
 | `src/AiDock.*` | The AI side panel: a flap on the right edge, a panel to ask a model of the slots from any page with a context line |
 | `src/SideFlap.*` | The flap that opens a side panel (DEV, AI) and the panels' close button |

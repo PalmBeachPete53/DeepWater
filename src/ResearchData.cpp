@@ -114,6 +114,8 @@ QString hostGroup(const QUrl &url)
         return "binance";
     if (h.contains("investinglive"))
         return "investinglive";
+    if (h.contains("philadelphiafed.org"))
+        return "philly";
     if (h.contains("mof.go.jp"))
         return "mof";
     if (h.contains("think.ing.com"))
