@@ -1,6 +1,12 @@
 #include "DeskData.h"
 
 #include "ResearchData.h"
+#include "desk/CentralBanks.h"
+
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QUrl>
 
 #include <memory>
 
@@ -46,6 +52,42 @@ void loadFeed(const QString &group, const QString &url, qint64 maxAgeSecs, QObje
 {
     research::Client::instance()->raw(group + ":feed:" + url, QUrl(url), maxAgeSecs, false, ctx, [done](const QByteArray &body, const QString &error) {
         done(news::Wire::parseFeed(body, news::Category::General), error);
+    });
+}
+
+void loadMeetings(const QString &currency, QObject *ctx, std::function<void(const QVector<QDate> &)> done)
+{
+    if (currency == "AUD" || currency == "NZD") {
+        done(desk::bundledMeetings(currency));
+        return;
+    }
+    struct Page { const char *key, *url; QVector<QDate> (*parse)(const QString &); };
+    static const QHash<QString, Page> pages {
+        {"USD", {"fed:fomc", "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", desk::parseFomcCalendar}},
+        {"EUR", {"ecb:mgcgc", "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html", desk::parseEcbMeetings}},
+        {"GBP", {"boe:mpc-dates", "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates", desk::parseBoeMeetings}},
+        {"JPY", {"boj:mpm", "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm", desk::parseBojMeetings}},
+        {"CHF", {"snb:schedule", "https://www.snb.ch/en/services-events/digital-services/event-schedule", desk::parseSnbMeetings}},
+        {"CAD", {"boc:schedule", "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/", desk::parseBocMeetings}},
+    };
+    const auto it = pages.constFind(currency);
+    if (it == pages.constEnd()) {
+        done({});
+        return;
+    }
+    research::Client::instance()->raw(it->key, QUrl(it->url), 24 * 3600, false, ctx, [parse = it->parse, done](const QByteArray &body, const QString &) {
+        done(parse(QString::fromUtf8(body)));
+    });
+}
+
+void loadLongShare(const QString &pair, QObject *ctx, std::function<void(const QVector<double> &, const QString &error)> done)
+{
+    const QString url = QString("https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=%1&period=1d&limit=30").arg(pair);
+    research::Client::instance()->raw("binance:ratio:" + pair, QUrl(url), 3600, false, ctx, [done](const QByteArray &body, const QString &error) {
+        QVector<double> longs;
+        for (const QJsonValue &v : QJsonDocument::fromJson(body).array())
+            longs << v.toObject().value("longAccount").toString().toDouble() * 100.0;
+        done(longs, error);
     });
 }
 

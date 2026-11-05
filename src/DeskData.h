@@ -3,6 +3,7 @@
 #include "NewsData.h"
 #include "desk/Market.h"
 
+#include <QDate>
 #include <QHash>
 #include <QObject>
 #include <QStringList>
@@ -22,5 +23,12 @@ void loadCandles(const QStringList &symbols, const QString &range, const QString
 // A feed read as news items. `group` is the Sources group ("investinglive", "ing", "fed", "ecb", "boe", "bis").
 void loadFeed(const QString &group, const QString &url, qint64 maxAgeSecs, QObject *ctx,
               std::function<void(const QVector<news::Item> &, const QString &error)> done);
+
+// The dates of a central bank's decisions, by currency, sorted; nothing when its page changed. The RBA's and the RBNZ's
+// are kept in the app: their sites refuse programs.
+void loadMeetings(const QString &currency, QObject *ctx, std::function<void(const QVector<QDate> &)> done);
+
+// Binance's public share of accounts long on a USDT perpetual, in %, a point a day over 30 days, oldest first.
+void loadLongShare(const QString &pair, QObject *ctx, std::function<void(const QVector<double> &, const QString &error)> done);
 
 } // namespace deskdata

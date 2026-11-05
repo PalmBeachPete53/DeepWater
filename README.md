@@ -1280,7 +1280,7 @@ Market logic is in `src/desk/` (static library `desk`, Qt Core only, tested by `
 Public sources only, listed in **Sources › Desk**. Texts are fixed rules; an **Ask the AI** button sends a question that
 holds no figures, and the model reads the section through `read_page`.
 
-- **Markets**: the 109 instruments of `desk/Instruments` by class, with search, period and order; a row opens Technicals.
+- **Markets**: the 109 instruments of `desk/Instruments` by class, with search, period and order; a row opens the market's sheet over the page (`MarketSheet`): a year of prices with the crowd's average entries, signals, crowd, COT (`cotLinks`) and rates (`rateCurrencies`, `deskdata::loadMeetings`).
 - **Strength**: unweighted currency indices from the seven dollar pairs on 15m, 1h, 4h or daily bars, and the ranking.
 - **Sessions**: Sydney, Tokyo, London and New York on a timeline in local time (`desk/Sessions`, with daylight saving).
 - **Recap**: a session or week: moves from open to close, the largest drawn, releases and headlines of the window.

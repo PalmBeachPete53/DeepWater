@@ -201,14 +201,9 @@ private:
             m_meetings_.insert(currency, list);
             fillBanks();
         };
-        dates("AUD", desk::bundledMeetings("AUD"));
-        dates("NZD", desk::bundledMeetings("NZD"));
-        page("ecb:mgcgc", "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html", [dates](const QString &html) { dates("EUR", desk::parseEcbMeetings(html)); });
-        page("boj:mpm", "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm", [dates](const QString &html) { dates("JPY", desk::parseBojMeetings(html)); });
-        page("snb:schedule", "https://www.snb.ch/en/services-events/digital-services/event-schedule", [dates](const QString &html) { dates("CHF", desk::parseSnbMeetings(html)); });
-        page("boc:schedule", "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/", [dates](const QString &html) { dates("CAD", desk::parseBocMeetings(html)); });
-        page("boe:mpc-dates", "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates", [this, page, dates](const QString &html) {
-            const QVector<QDate> list = desk::parseBoeMeetings(html);
+        for (const char *currency : {"AUD", "NZD", "EUR", "JPY", "CHF", "CAD"})
+            deskdata::loadMeetings(currency, this, [dates, currency = QString(currency)](const QVector<QDate> &list) { dates(currency, list); });
+        deskdata::loadMeetings("GBP", this, [this, page, dates](const QVector<QDate> &list) {
             dates("GBP", list);
             fillOis();
             QDate last;
@@ -807,7 +802,7 @@ protected:
         auto first = std::make_shared<QString>();
         for (const QString &s : symbols) {
             const QString pair = s + "USDT";
-            request(pair, [this, s, pair, left, first](const QVector<double> &longs, const QString &error) {
+            deskdata::loadLongShare(pair, this, [this, s, pair, left, first](const QVector<double> &longs, const QString &error) {
                 if (!longs.isEmpty())
                     m_rows.push_back({s, pair, longs.last(), longs.size() > 1 ? longs.last() - longs[longs.size() - 2] : 0.0});
                 else if (first->isEmpty())
@@ -825,17 +820,6 @@ private:
         QString name, symbol;
         double longShare, change;
     };
-
-    void request(const QString &pair, std::function<void(const QVector<double> &, const QString &)> done)
-    {
-        const QString url = QString("https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol=%1&period=1d&limit=30").arg(pair);
-        research::Client::instance()->raw("binance:ratio:" + pair, QUrl(url), 3600, false, this, [done](const QByteArray &body, const QString &error) {
-            QVector<double> longs;
-            for (const QJsonValue &v : QJsonDocument::fromJson(body).array())
-                longs << v.toObject().value("longAccount").toString().toDouble() * 100.0;
-            done(longs, error);
-        });
-    }
 
     void fill()
     {
@@ -886,7 +870,7 @@ private:
 
     void showHistory(const QString &pair)
     {
-        request(pair, [this, pair](const QVector<double> &longs, const QString &) {
+        deskdata::loadLongShare(pair, this, [this, pair](const QVector<double> &longs, const QString &) {
             QVector<QDate> dates;
             const QDate today = QDate::currentDate();
             for (int i = 0; i < longs.size(); ++i)

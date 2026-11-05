@@ -9708,22 +9708,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location filename="../src/DeskViewsMarket.cpp" line="+37"/>
-        <location line="+460"/>
+        <location line="+458"/>
         <location line="+0"/>
         <location line="+0"/>
         <source>Forex</source>
         <translation>Forex</translation>
     </message>
     <message>
-        <location line="-459"/>
-        <location line="+457"/>
+        <location line="-457"/>
+        <location line="+455"/>
         <location line="+0"/>
         <location line="+0"/>
         <source>Indices</source>
         <translation>Indices</translation>
     </message>
     <message>
-        <location line="-456"/>
+        <location line="-454"/>
         <source>Commodities</source>
         <translation>Matières premières</translation>
     </message>
@@ -9734,7 +9734,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+457"/>
+        <location line="+455"/>
         <location line="+0"/>
         <source>Crypto</source>
         <translation>Crypto</translation>
@@ -14135,7 +14135,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::AppetiteView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+1372"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+1356"/>
         <source>Composite risk appetite</source>
         <translation>Appétit pour le risque composite</translation>
     </message>
@@ -14862,7 +14862,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::FxPositioningPanel</name>
     <message>
-        <location line="-1384"/>
+        <location line="-1373"/>
         <source>Connect your Myfxbook account</source>
         <translation>Connecter votre compte Myfxbook</translation>
     </message>
@@ -15088,7 +15088,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LiquidityView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+369"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+382"/>
         <source>Daily</source>
         <translation>Journalier</translation>
     </message>
@@ -15275,9 +15275,299 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>deskui::MarketSheet</name>
+    <message>
+        <location line="+374"/>
+        <source>Technicals</source>
+        <translation>Technique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rates</source>
+        <translation>Taux</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Close (Esc)</source>
+        <translation>Fermer (Échap)</translation>
+    </message>
+    <message>
+        <source>Price, one year</source>
+        <translation type="vanished">Prix, un an</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Signals</source>
+        <translation>Signaux</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Crowd</source>
+        <translation>Foule</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+152"/>
+        <source>Long</source>
+        <translation>Long</translation>
+    </message>
+    <message>
+        <location line="-152"/>
+        <location line="+154"/>
+        <source>Short</source>
+        <translation>Short</translation>
+    </message>
+    <message>
+        <location line="-146"/>
+        <source>Commitments of Traders</source>
+        <translation>Positions des opérateurs (COT)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Contract</source>
+        <translation>Contrat</translation>
+    </message>
+    <message>
+        <source>Speculators net</source>
+        <translation type="vanished">Net des spéculateurs</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Week</source>
+        <translation>Semaine</translation>
+    </message>
+    <message>
+        <source>52-week range</source>
+        <translation type="vanished">Plage 52 sem.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Policy rates</source>
+        <translation>Taux directeurs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Currency</source>
+        <translation>Devise</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rate</source>
+        <translation>Taux</translation>
+    </message>
+    <message>
+        <source>Next decision</source>
+        <translation type="vanished">Prochaine décision</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>In</source>
+        <translation>Dans</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Loading the prices…</source>
+        <translation>Chargement des prix…</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Prices unavailable: %1</source>
+        <translation>Prix indisponibles : %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>%1 · last %2 · %3 on the day, delayed</source>
+        <translation>%1 · dernier %2 · %3 sur la journée, différé</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indices</source>
+        <translation>Indices</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commodities</source>
+        <translation>Matières premières</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stocks</source>
+        <translation>Actions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Crypto</source>
+        <translation>Crypto</translation>
+    </message>
+    <message>
+        <source>Crowd&apos;s long entry</source>
+        <translation type="vanished">Entrée longue de la foule</translation>
+    </message>
+    <message>
+        <source>Crowd&apos;s short entry</source>
+        <translation type="vanished">Entrée courte de la foule</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>Price over a year, with the crowd&apos;s average entries</source>
+        <translation>Prix sur un an, avec les entrées moyennes de la foule</translation>
+    </message>
+    <message>
+        <location line="-148"/>
+        <source>Spec. net</source>
+        <translation>Net spéc.</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Range</source>
+        <translation>Plage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Range: where the speculators&apos; net stands in its last 52 weeks</source>
+        <translation>Plage : où se situe le net des spéculateurs sur ses 52 dernières semaines</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Decision</source>
+        <translation>Décision</translation>
+    </message>
+    <message>
+        <location line="+137"/>
+        <source>Price over a year</source>
+        <translation>Prix sur un an</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>Binance publishes no ratio for this market.</source>
+        <translation>Binance ne publie pas de ratio pour ce marché.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Accounts</source>
+        <translation>Comptes</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Binance&apos;s USDT perpetual: accounts, not money.</source>
+        <translation>Perpétuel USDT de Binance : des comptes, pas des montants.</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Myfxbook has no figure for this market.</source>
+        <translation>Myfxbook n&apos;a pas de chiffre pour ce marché.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Connect your Myfxbook account in Desk › Positioning to see the crowd here.</source>
+        <translation>Connectez votre compte Myfxbook dans Desk › Positionnement pour voir la foule ici.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Lots</source>
+        <translation>Lots</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Positions</source>
+        <translation>Positions</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Average entry</source>
+        <translation>Entrée moyenne</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Against the last price</source>
+        <translation>Face au dernier prix</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Only %1 positions on Myfxbook: too few to read, and left off the chart.</source>
+        <translation>Seulement %1 positions sur Myfxbook : trop peu pour conclure, donc absentes du graphique.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Myfxbook&apos;s community, accounts it follows, some on demo money. The last line sets the average entry against the price, before costs: an estimate, not their real result.</source>
+        <translation>La communauté Myfxbook, les comptes qu&apos;il suit, dont certains en démo. La dernière ligne compare l&apos;entrée moyenne au prix, hors frais : une estimation, pas leur résultat réel.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>The CFTC publishes no contract for this market.</source>
+        <translation>La CFTC ne publie pas de contrat pour ce marché.</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>%1 (inv.)</source>
+        <translation>%1 (inv.)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Inv.: speculators long that contract are short this pair&apos;s price. </source>
+        <translation>Inv. : les spéculateurs longs sur ce contrat sont courts sur le prix de la paire. </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Positions of %1, in contracts. Range: 0% is the year&apos;s lowest net, 100% the highest.</source>
+        <translation>Positions du %1, en contrats. Plage : 0 % est le net le plus bas de l'année, 100 % le plus haut.</translation>
+    </message>
+    <message>
+        <source>%1 (inverse)</source>
+        <translation type="vanished">%1 (inverse)</translation>
+    </message>
+    <message>
+        <source>%1 (the other way round)</source>
+        <translation type="vanished">%1 (sens inverse)</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>The CFTC&apos;s report isn&apos;t loaded yet.</source>
+        <translation>Le rapport de la CFTC n&apos;est pas encore chargé.</translation>
+    </message>
+    <message>
+        <source>Speculators long this contract are short this pair&apos;s price. </source>
+        <translation type="vanished">Les spéculateurs longs sur ce contrat sont courts sur le prix de cette paire. </translation>
+    </message>
+    <message>
+        <source>Positions of %1, in contracts. 0% is the year&apos;s lowest net, 100% the highest.</source>
+        <translation type="vanished">Positions du %1, en contrats. 0 % est le net le plus bas de l&apos;année, 100 % le plus haut.</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>%1 d</source>
+        <translation>%1 j</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>today</source>
+        <translation>aujourd&apos;hui</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>%1 − %2: %3 points. Policy rates from the BIS, dates from the banks. Rates has what the market prices.</source>
+        <translation>%1 − %2 : %3 points. Taux directeurs de la BRI, dates des banques. Taux montre ce que le marché anticipe.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The BIS publishes no policy rate for this market&apos;s currency.</source>
+        <translation>La BRI ne publie pas de taux directeur pour la devise de ce marché.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The rate of the currency this market is priced in, from the BIS; dates from the bank.</source>
+        <translation>Le taux de la devise de cotation de ce marché, d&apos;après la BRI ; dates de la banque.</translation>
+    </message>
+</context>
+<context>
     <name>deskui::MarketsView</name>
     <message>
-        <location filename="../src/DeskViewsMarket.cpp" line="-674"/>
+        <location filename="../src/DeskViewsMarket.cpp" line="-672"/>
         <source>Search %1 markets: EUR/USD, Gold, Nvidia, Bitcoin…</source>
         <translation>Chercher parmi %1 marchés : EUR/USD, Or, Nvidia, Bitcoin…</translation>
     </message>
@@ -15342,9 +15632,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Variation</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+15"/>
+        <source>Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market for its sheet.</source>
+        <translation>Cours de Yahoo Finance, différés d&apos;environ 15 minutes pour la plupart des marchés, actualisés chaque minute. Cliquez sur un marché pour ouvrir sa fiche.</translation>
+    </message>
+    <message>
         <source>Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market to read its signals.</source>
-        <translation>Cours Yahoo Finance, différés d&apos;environ 15 minutes pour la plupart des marchés, rafraîchis chaque minute. Cliquez sur un marché pour lire ses signaux.</translation>
+        <translation type="vanished">Cours Yahoo Finance, différés d&apos;environ 15 minutes pour la plupart des marchés, rafraîchis chaque minute. Cliquez sur un marché pour lire ses signaux.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -15375,7 +15669,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::NotesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+53"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-661"/>
         <source>All publishers</source>
         <translation>Tous les éditeurs</translation>
     </message>
@@ -15473,12 +15767,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+117"/>
+        <location line="+106"/>
         <source>Long</source>
         <translation>Long</translation>
     </message>
     <message>
-        <location line="-117"/>
+        <location line="-106"/>
         <source>Short</source>
         <translation>Short</translation>
     </message>
@@ -15517,7 +15811,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Les ratios de Binance sont indisponibles : %1</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+28"/>
         <source>BALANCED</source>
         <translation>ÉQUILIBRÉ</translation>
     </message>
@@ -15576,7 +15870,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::RatesView</name>
     <message>
-        <location line="-830"/>
+        <location line="-814"/>
         <source>Fed funds, implied today</source>
         <translation>Fed funds, implicite aujourd&apos;hui</translation>
     </message>
@@ -15645,12 +15939,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <location line="+36"/>
-        <location line="+190"/>
+        <location line="+185"/>
         <source>Hold</source>
         <translation>Statu quo</translation>
     </message>
     <message>
-        <location line="-224"/>
+        <location line="-219"/>
         <source>Read from CME 30-day fed funds futures, delayed, with the Fed&apos;s own calendar: each contract is 100 minus the month&apos;s average rate, so a meeting&apos;s move is what the month after it must be for the average to hold. Each move is spread on the two nearest quarter-point steps, the usual simplification. It reads what is priced, not what will happen.</source>
         <translation>Lu sur les contrats à terme CME sur fed funds à 30 jours, différés, avec le calendrier de la Fed : chaque contrat vaut 100 moins le taux moyen du mois, donc le mouvement d&apos;une réunion est ce que doit être le mois suivant pour que la moyenne tienne. Chaque mouvement est réparti entre les deux quarts de point les plus proches, la simplification habituelle. Cela lit ce qui est intégré dans les prix, pas ce qui arrivera.</translation>
     </message>
@@ -15722,7 +16016,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">La courbe OIS à terme quotidienne de la Banque d&apos;Angleterre (Bloomberg Finance L.P. et calculs de la Banque), affichée pour votre usage personnel. Le taux à terme autour d&apos;une réunion n&apos;en donne pas la probabilité : il mêle les réunions d&apos;avant et une petite prime.</translation>
     </message>
     <message>
-        <location line="+379"/>
+        <location line="+374"/>
         <source>United Kingdom</source>
         <translation>Royaume-Uni</translation>
     </message>
@@ -15741,7 +16035,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Taux directeurs de la BRI ; décisions d&apos;après le calendrier de la Fed et le calendrier économique, qui n&apos;en annonce que certaines à l&apos;avance. Aucune source gratuite ne publie de contrats à terme de taux pour les autres banques : seule la Fed a donc des probabilités ici.</translation>
     </message>
     <message>
-        <location line="-400"/>
+        <location line="-395"/>
         <source>Sovereign yield curves</source>
         <translation>Courbes des taux souveraines</translation>
     </message>
@@ -15750,7 +16044,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Rendements au pair du Trésor américain et courbe au comptant AAA de la zone euro de la BCE, dernière publication.</translation>
     </message>
     <message>
-        <location line="+161"/>
+        <location line="+156"/>
         <source>Loading the futures and the Fed&apos;s calendar…</source>
         <translation>Chargement des contrats à terme et du calendrier de la Fed…</translation>
     </message>
@@ -15801,15 +16095,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 j</translation>
     </message>
     <message>
-        <location line="-273"/>
+        <location line="-268"/>
         <location line="+10"/>
         <location line="+53"/>
-        <location line="+157"/>
+        <location line="+152"/>
         <source>Implied rate</source>
         <translation>Taux implicite</translation>
     </message>
     <message>
-        <location line="-246"/>
+        <location line="-241"/>
         <source>2Y − rate</source>
         <translation>2 ans − taux</translation>
     </message>
@@ -15885,7 +16179,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+56"/>
-        <location line="+167"/>
+        <location line="+162"/>
         <location line="+3"/>
         <location line="+26"/>
         <location line="+37"/>
@@ -16116,7 +16410,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::SeasonalityView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+1099"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+1088"/>
         <source>YEARS</source>
         <translation>ANNÉES</translation>
     </message>
@@ -16324,7 +16618,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::TechnicalView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-599"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-603"/>
         <location line="+16"/>
         <location line="+93"/>
         <source>Bullish</source>
@@ -16423,47 +16717,47 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+245"/>
+        <location line="+100"/>
         <source>Trend</source>
         <translation>Tendance</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+245"/>
+        <location line="-100"/>
+        <location line="+100"/>
         <source>Momentum</source>
         <translation>Momentum</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+245"/>
+        <location line="-100"/>
+        <location line="+100"/>
         <source>Volatility</source>
         <translation>Volatilité</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+245"/>
+        <location line="-100"/>
+        <location line="+100"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+245"/>
+        <location line="-100"/>
+        <location line="+100"/>
         <source>Structure</source>
         <translation>Structure</translation>
     </message>
     <message>
-        <location line="-245"/>
-        <location line="+245"/>
+        <location line="-100"/>
+        <location line="+100"/>
         <source>Liquidity</source>
         <translation>Liquidité</translation>
     </message>
     <message>
-        <location line="-239"/>
+        <location line="-94"/>
         <source>Signal file</source>
         <translation>Fiche de signaux</translation>
     </message>
     <message>
-        <location line="+242"/>
+        <location line="+244"/>
         <source>Shift+click another market to replace %1, or one of these two to take it out.</source>
         <translation>Maj+clic sur un autre marché pour remplacer %1, ou sur l&apos;un de ces deux pour le retirer.</translation>
     </message>
@@ -16481,7 +16775,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation type="vanished">Aucun autre marché</translation>
     </message>
     <message>
-        <location line="-226"/>
+        <location line="-228"/>
         <source>Computed here from Yahoo Finance&apos;s daily candles: EMA 20 against EMA 50, RSI 14, 20-day volatility against the year&apos;s, volume over 5 days against 60 (a listed fund stands in for markets without volume, or none), the last swings, the nearest stop pool. Plain readings, not signals to trade.</source>
         <translation>Calculé ici d&apos;après les bougies journalières de Yahoo Finance : EMA 20 contre EMA 50, RSI 14, volatilité sur 20 jours contre celle de l&apos;année, volume sur 5 jours contre 60 (un fonds coté remplace les marchés sans volume, ou aucun), les derniers swings, la zone de stops la plus proche. Des lectures simples, pas des signaux de trading.</translation>
     </message>
@@ -16566,7 +16860,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>Balayée</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+34"/>
         <source>%1% of %2</source>
         <translation>%1 % de %2</translation>
     </message>
@@ -16601,7 +16895,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>équilibré</translation>
     </message>
     <message>
-        <location line="+104"/>
+        <location line="+103"/>
         <source>%1 vs %2</source>
         <translation>%1 face à %2</translation>
     </message>
@@ -16614,7 +16908,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation type="vanished">Cliquez sur un autre marché de la liste pour le comparer à celui-ci.</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+13"/>
         <source>Trend: %1, EMA 20 at %2 from EMA 50.</source>
         <translation>Tendance : %1, EMA 20 à %2 de l&apos;EMA 50.</translation>
     </message>
@@ -16764,7 +17058,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::WorkspacesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+360"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+361"/>
         <source>WORKSPACE</source>
         <translation>ESPACE</translation>
     </message>

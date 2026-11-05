@@ -6,7 +6,7 @@ Les textes sont écrits par des règles fixes, pas par un modèle. Quand une sec
 
 ## Marchés
 
-109 marchés en cinq colonnes : forex, indices, matières premières, actions et crypto. Cherchez par nom, changez la période (1 jour, 1 semaine, 1 mois) et l'ordre. Les tuiles donnent la largeur du marché, le mouvement moyen, le meneur et le marché à la traîne. Un clic sur une ligne ouvre la fiche du marché dans Technique.
+109 marchés en cinq colonnes : forex, indices, matières premières, actions et crypto. Cherchez par nom, changez la période (1 jour, 1 semaine, 1 mois) et l'ordre. Les tuiles donnent la largeur du marché, le mouvement moyen, le meneur et le marché à la traîne. Un clic sur une ligne ouvre la fiche du marché : un an de prix avec les entrées moyennes de la foule, les signaux, la foule, le COT et les taux directeurs, avec des boutons vers Technique et Taux.
 
 ## Force
 

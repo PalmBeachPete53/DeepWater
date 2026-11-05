@@ -680,6 +680,30 @@ void testPositioning()
     eqs("Invalid email or password.", message, "says why");
 }
 
+void testMarketSheet()
+{
+    const auto links = [](const char *id) { return cotLinks(*findInstrument(id)); };
+    eqi(1, links("EURUSD").size(), "a dollar pair has one contract");
+    eqs("eur", links("EURUSD")[0].market, "the base's contract");
+    check(!links("EURUSD")[0].inverse, "with the pair");
+    eqs("jpy", links("USDJPY")[0].market, "the dollar has no contract in a pair: the yen's");
+    check(links("USDJPY")[0].inverse, "against the pair");
+    eqi(2, links("EURGBP").size(), "a cross has two");
+    check(!links("EURGBP")[0].inverse && links("EURGBP")[1].inverse, "the quote goes the other way");
+    eqs("gold", links("XAUUSD")[0].market, "gold");
+    eqs("sp500", links("US500")[0].market, "an index");
+    check(links("UKOIL").isEmpty(), "WTI's contract isn't Brent's");
+    check(links("AAPL").isEmpty(), "no contract for a stock");
+    eqi(2, rateCurrencies(*findInstrument("EURUSD")).size(), "both sides of a pair");
+    eqs("JPY", rateCurrencies(*findInstrument("JP225"))[0], "what an index is priced in");
+    OutlookRow row;
+    row.avgLongPrice = 100;
+    row.avgShortPrice = 110;
+    near(5, crowdLongGain(row, 105), 1e-9, "the longs gain when it rises");
+    near(100.0 * 5 / 110, crowdShortGain(row, 105), 1e-9, "the shorts when it falls");
+    near(0, crowdLongGain(OutlookRow {}, 105), 1e-9, "no entry, no figure");
+}
+
 void testCentralBanks()
 {
     CAT = "central banks";
@@ -825,6 +849,7 @@ int main(int argc, char **argv)
     testRates();
     testSweepsSince();
     testPositioning();
+    testMarketSheet();
     testCentralBanks();
     std::cout << checks << " checks, " << fails << " failed\n";
     return fails ? 1 : 0;

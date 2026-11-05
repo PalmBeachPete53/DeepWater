@@ -3,6 +3,12 @@
 #include "NewsReader.h"
 #include "quant/ui/Notifications.h"
 
+#include "Myfxbook.h"
+#include "QuantData.h"
+#include "MacroData.h"
+#include "DeskData.h"
+#include "desk/Positioning.h"
+#include "desk/Rates.h"
 #include <QTimer>
 
 #include <QButtonGroup>
@@ -16,6 +22,9 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLabel>
+#include <QToolButton>
+#include <QShortcut>
+#include <QFrame>
 #include <QLineEdit>
 #include <QLocale>
 #include <QMessageBox>
@@ -153,13 +162,13 @@ protected:
         }
     }
 
-private:
-    QString trendName(desk::Trend t) const { return t == desk::Trend::Bullish ? tr("Bullish") : t == desk::Trend::Bearish ? tr("Bearish") : tr("Neutral"); }
-    QString momentumName(desk::Momentum m) const { return m == desk::Momentum::Overbought ? tr("Overbought") : m == desk::Momentum::Oversold ? tr("Oversold") : tr("Neutral"); }
-    QString volName(desk::Volatility v) const { return v == desk::Volatility::High ? tr("High") : v == desk::Volatility::Low ? tr("Low") : tr("Normal"); }
-    QString volumeName(desk::VolumeState v) const { return v == desk::VolumeState::Above ? tr("Above avg") : v == desk::VolumeState::Below ? tr("Below avg") : v == desk::VolumeState::Average ? tr("Average") : QString("—"); }
-    QString structureName(desk::Structure s) const { return s == desk::Structure::Bullish ? tr("Higher highs") : s == desk::Structure::Bearish ? tr("Lower lows") : tr("Ranging"); }
-    QString liquidityName(const desk::Signals &s) const
+public:
+    static QString trendName(desk::Trend t) { return t == desk::Trend::Bullish ? tr("Bullish") : t == desk::Trend::Bearish ? tr("Bearish") : tr("Neutral"); }
+    static QString momentumName(desk::Momentum m) { return m == desk::Momentum::Overbought ? tr("Overbought") : m == desk::Momentum::Oversold ? tr("Oversold") : tr("Neutral"); }
+    static QString volName(desk::Volatility v) { return v == desk::Volatility::High ? tr("High") : v == desk::Volatility::Low ? tr("Low") : tr("Normal"); }
+    static QString volumeName(desk::VolumeState v) { return v == desk::VolumeState::Above ? tr("Above avg") : v == desk::VolumeState::Below ? tr("Below avg") : v == desk::VolumeState::Average ? tr("Average") : QString("—"); }
+    static QString structureName(desk::Structure s) { return s == desk::Structure::Bullish ? tr("Higher highs") : s == desk::Structure::Bearish ? tr("Lower lows") : tr("Ranging"); }
+    static QString liquidityName(const desk::Signals &s)
     {
         switch (s.liquidity) {
         case desk::LiquidityState::PoolAbove: return tr("Pool above %1").arg(pct(s.liquidityDistancePct, 1));
@@ -169,7 +178,10 @@ private:
         default: return QString("—");
         }
     }
+    static QStringList signalNames() { return {tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")}; }
+    static QVector<double> radarValues(const desk::Signals &v) { return {v.radar[0], v.radar[1], v.radar[2], v.radar[3], v.radar[4], v.radar[5]}; }
 
+private:
     void fill()
     {
         const Palette &pal = Theme::current();
@@ -312,17 +324,17 @@ private:
         const desk::Signals s = m_signals.value(i->id);
         const desk::Instrument *other = compared();
         const desk::Signals o = other ? m_signals.value(other->id) : desk::Signals {};
-        const auto radar = [](const desk::Signals &v) { return QVector<double> {v.radar[0], v.radar[1], v.radar[2], v.radar[3], v.radar[4], v.radar[5]}; };
         m_fileTitle->setText(other ? tr("%1 vs %2").arg(i->label, other->label).toUpper() : i->label.toUpper());
-        m_radar->setData({tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")}, radar(s));
-        m_radar->setOverlay(i->label, other ? other->label : QString(), other ? radar(o) : QVector<double> {});
+        m_radar->setData(signalNames(), radarValues(s));
+        m_radar->setOverlay(i->label, other ? other->label : QString(), other ? radarValues(o) : QVector<double> {});
         m_fileText->setText(other ? QString("%1\n%2\n\n%3\n%4").arg(i->label, fileLines(s), other->label, fileLines(o)) : fileLines(s));
         m_fileHint->setText(other ? tr("Shift+click another market to replace %1, or one of these two to take it out.").arg(other->label)
                                   : tr("Shift+click another market in the list to compare it with this one."));
         markRows();
     }
 
-    QString fileLines(const desk::Signals &s) const
+public:
+    static QString fileLines(const desk::Signals &s)
     {
         QStringList lines;
         lines << tr("Trend: %1, EMA 20 at %2 from EMA 50.").arg(trendName(s.trend), pct(s.trendGapPct));
@@ -338,6 +350,7 @@ private:
         return lines.join("\n");
     }
 
+private:
     QLabel *m_bullish, *m_bullishSub, *m_bearish, *m_bearishSub, *m_overbought, *m_overboughtSub, *m_oversold, *m_oversoldSub, *m_near, *m_nearSub, *m_lean, *m_leanSub;
     QLineEdit *m_search;
     QButtonGroup *m_class, *m_trend;
@@ -875,7 +888,402 @@ private:
     bool m_syncing = false;
 };
 
+// ------------------------------------------------------------------ One market's sheet
+
+class MarketSheet : public QWidget
+{
+    Q_OBJECT
+public:
+    MarketSheet(const Context &c, QWidget *parent)
+        : QWidget(parent)
+        , m_context(c)
+    {
+        setGeometry(parent->rect());
+        parent->installEventFilter(this);
+        m_panel = new QFrame(this);
+        m_panel->setObjectName("newsReader");
+        m_panel->setAttribute(Qt::WA_StyledBackground);
+        auto *outer = new QVBoxLayout(m_panel);
+        outer->setContentsMargins(16, 12, 16, 14);
+        outer->setSpacing(10);
+
+        auto *head = new QHBoxLayout;
+        auto *names = new QVBoxLayout;
+        names->setSpacing(1);
+        m_title = quant::label({}, "qtTitle");
+        m_sub = quant::label({}, "qtCardLabel");
+        names->addWidget(m_title);
+        names->addWidget(m_sub);
+        head->addLayout(names, 1);
+        auto *technicals = deskAction(tr("Technicals"));
+        auto *rates = deskAction(tr("Rates"));
+        head->addWidget(technicals);
+        head->addWidget(rates);
+        auto *close = new QToolButton;
+        close->setObjectName("newsReaderButton");
+        close->setText("✕");
+        close->setToolTip(tr("Close (Esc)"));
+        close->setCursor(Qt::PointingHandCursor);
+        head->addWidget(close);
+        outer->addLayout(head);
+
+        QVBoxLayout *body;
+        auto *top = new QHBoxLayout;
+        top->setSpacing(10);
+        auto *chartCard = quant::card(QStringLiteral("—"), &body);
+        m_chartTitle = chartCard->findChild<QLabel *>();
+        m_chart = new LevelsChart;
+        m_chart->setMinimumHeight(250);
+        body->addWidget(m_chart, 1);
+        top->addWidget(chartCard, 3);
+        auto *signalCard = quant::card(tr("Signals"), &body);
+        auto *signalRow = new QHBoxLayout;
+        m_radar = new RadarChart;
+        m_radar->setMinimumWidth(240);
+        signalRow->addWidget(m_radar, 3);
+        m_signals = quant::label({}, "qtCardLabel");
+        m_signals->setWordWrap(true);
+        signalRow->addWidget(m_signals, 2);
+        body->addLayout(signalRow, 1);
+        top->addWidget(signalCard, 3);
+        outer->addLayout(top, 1);
+
+        auto *bottom = new QHBoxLayout;
+        bottom->setSpacing(10);
+        auto *crowdCard = quant::card(tr("Crowd"), &body);
+        m_crowd = table({{}, tr("Long"), tr("Short")});
+        m_crowd->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+        body->addWidget(m_crowd);
+        m_crowdNote = quant::label({}, "qtNote");
+        m_crowdNote->setWordWrap(true);
+        body->addWidget(m_crowdNote);
+        body->addStretch(1);
+        bottom->addWidget(crowdCard, 4, Qt::AlignTop);
+        auto *cotCard = quant::card(tr("Commitments of Traders"), &body);
+        m_cot = table({tr("Contract"), tr("Spec. net"), tr("Week"), tr("Range")});
+        m_cot->setToolTip(tr("Range: where the speculators' net stands in its last 52 weeks"));
+        for (int col = 1; col < 4; ++col)
+            m_cot->horizontalHeader()->setSectionResizeMode(col, QHeaderView::ResizeToContents);
+        body->addWidget(m_cot);
+        m_cotNote = quant::label({}, "qtNote");
+        m_cotNote->setWordWrap(true);
+        body->addWidget(m_cotNote);
+        body->addStretch(1);
+        bottom->addWidget(cotCard, 5, Qt::AlignTop);
+        auto *ratesCard = quant::card(tr("Policy rates"), &body);
+        m_rates = table({tr("Currency"), tr("Rate"), tr("Decision"), tr("In")});
+        m_rates->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+        body->addWidget(m_rates);
+        m_ratesNote = quant::label({}, "qtNote");
+        m_ratesNote->setWordWrap(true);
+        body->addWidget(m_ratesNote);
+        body->addStretch(1);
+        bottom->addWidget(ratesCard, 4, Qt::AlignTop);
+        outer->addLayout(bottom);
+
+        connect(close, &QToolButton::clicked, this, &QWidget::hide);
+        connect(technicals, &QPushButton::clicked, this, [this] {
+            QSettings().setValue("desk/technical/selected", m_id);
+            hide();
+            if (m_context.page)
+                m_context.page->showSection(10);
+        });
+        connect(rates, &QPushButton::clicked, this, [this] {
+            hide();
+            if (m_context.page)
+                m_context.page->showSection(5);
+        });
+        auto *esc = new QShortcut(QKeySequence(Qt::Key_Escape), this);
+        esc->setContext(Qt::WidgetWithChildrenShortcut);
+        connect(esc, &QShortcut::activated, this, &QWidget::hide);
+        connect(Myfxbook::instance(), &Myfxbook::changed, this, [this] {
+            if (isVisible())
+                fillCrowd();
+        });
+        hide();
+    }
+
+    void open(const desk::Instrument &i)
+    {
+        m_id = i.id;
+        m_bars.clear();
+        m_last = 0;
+        const int serial = ++m_serial;
+        m_title->setText(i.label.toUpper());
+        m_sub->setText(tr("Loading the prices…"));
+        m_chart->setData({}, {}, {}, 2);
+        m_radar->setData({}, {});
+        m_signals->clear();
+        fillCrowd();
+        fillCot(i);
+        fillRates(i);
+        placePanel();
+        show();
+        raise();
+        setFocus();
+        Myfxbook::instance()->refreshIfStale();
+        deskdata::loadCandles({i.symbol, i.volumeProxy}, "2y", "1d", this, [this, serial, i](const deskdata::Candles &c, const QString &error) {
+            if (serial != m_serial)
+                return;
+            m_bars = c.value(i.symbol);
+            const desk::Signals s = desk::computeSignals(m_bars, c.value(i.volumeProxy));
+            if (!s.valid) {
+                m_sub->setText(tr("Prices unavailable: %1").arg(error));
+                return;
+            }
+            m_last = s.last;
+            m_sub->setText(tr("%1 · last %2 · %3 on the day, delayed").arg(className(i.cls), QLocale().toString(s.last, 'f', priceDecimals(s.last)), pct(s.changePct)));
+            m_radar->setData(TechnicalView::signalNames(), TechnicalView::radarValues(s));
+            m_signals->setText(TechnicalView::fileLines(s));
+            fillCrowd();
+        });
+    }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        QColor dim = Theme::current().Background;
+        dim.setAlpha(170);
+        p.fillRect(rect(), dim);
+    }
+    void mousePressEvent(QMouseEvent *e) override
+    {
+        if (!m_panel->geometry().contains(e->pos()))
+            hide();
+    }
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (watched == parent() && event->type() == QEvent::Resize) {
+            setGeometry(parentWidget()->rect());
+            placePanel();
+        }
+        return QWidget::eventFilter(watched, event);
+    }
+
+private:
+    static QString className(desk::AssetClass c)
+    {
+        switch (c) {
+        case desk::AssetClass::Fx: return tr("Forex");
+        case desk::AssetClass::Index: return tr("Indices");
+        case desk::AssetClass::Commodity: return tr("Commodities");
+        case desk::AssetClass::Stock: return tr("Stocks");
+        default: return tr("Crypto");
+        }
+    }
+
+    // A table with nothing to show leaves only its note.
+    static void fitTable(QTableWidget *t)
+    {
+        t->setVisible(t->rowCount() > 0);
+        fitHeight(t);
+    }
+
+    void placePanel()
+    {
+        const int w = std::min(1240, width() - 32), h = std::min(800, height() - 24);
+        m_panel->setGeometry((width() - w) / 2, (height() - h) / 2, std::max(320, w), std::max(240, h));
+    }
+
+    // The year of closes, with where the crowd entered when enough positions say so.
+    void drawChart(const desk::OutlookRow *row)
+    {
+        const Palette &pal = Theme::current();
+        // By date, not a count of bars: crypto trades every day.
+        const qint64 yearAgo = QDateTime::currentDateTimeUtc().addYears(-1).toSecsSinceEpoch();
+        QVector<qint64> times;
+        QVector<double> closes;
+        for (const desk::Candle &bar : m_bars) {
+            if (bar.time < yearAgo)
+                continue;
+            times << bar.time;
+            closes << bar.close;
+        }
+        QVector<LevelsChart::Level> levels;
+        if (row && row->positions() >= desk::OutlookMinPositions) {
+            if (row->avgLongPrice > 0)
+                levels.push_back({row->avgLongPrice, pal.Up, tr("Long"), true});
+            if (row->avgShortPrice > 0)
+                levels.push_back({row->avgShortPrice, pal.Down, tr("Short"), true});
+        }
+        m_chart->setData(times, closes, levels, priceDecimals(m_last));
+        m_chartTitle->setText((levels.isEmpty() ? tr("Price over a year") : tr("Price over a year, with the crowd's average entries")).toUpper());
+    }
+
+    void fillCrowd()
+    {
+        const desk::Instrument *i = desk::findInstrument(m_id);
+        if (!i)
+            return;
+        const Palette &pal = Theme::current();
+        m_crowd->setRowCount(0);
+        m_crowdNote->clear();
+        const auto addRow = [&](const QString &name, const QString &a, const QString &b, const QColor &ca = {}, const QColor &cb = {}) {
+            const int r = m_crowd->rowCount();
+            m_crowd->setRowCount(r + 1);
+            m_crowd->setItem(r, 0, cell(name, {}, Qt::AlignLeft));
+            m_crowd->setItem(r, 1, cell(a, ca));
+            m_crowd->setItem(r, 2, cell(b, cb));
+        };
+        const desk::OutlookRow *row = nullptr;
+        if (i->cls == desk::AssetClass::Crypto) {
+            const QString pair = i->id.left(i->id.size() - 3) + "USDT";
+            const int serial = m_serial;
+            drawChart(nullptr);
+            deskdata::loadLongShare(pair, this, [this, serial](const QVector<double> &longs, const QString &) {
+                if (serial != m_serial)
+                    return;
+                if (longs.isEmpty()) {
+                    m_crowdNote->setText(tr("Binance publishes no ratio for this market."));
+                } else {
+                    m_crowd->setRowCount(1);
+                    m_crowd->setItem(0, 0, cell(tr("Accounts"), {}, Qt::AlignLeft));
+                    m_crowd->setItem(0, 1, cell(QString("%1%").arg(amount(longs.last(), 0))));
+                    m_crowd->setItem(0, 2, cell(QString("%1%").arg(amount(100 - longs.last(), 0))));
+                    m_crowdNote->setText(tr("Binance's USDT perpetual: accounts, not money."));
+                }
+                fitTable(m_crowd);
+            });
+            fitTable(m_crowd);
+            return;
+        }
+        for (const desk::OutlookRow &candidate : Myfxbook::instance()->outlook().rows) {
+            const desk::Instrument *found = desk::findInstrument(candidate.symbol);
+            if (found && found->id == i->id) {
+                row = &candidate;
+                break;
+            }
+        }
+        drawChart(row);
+        if (!row) {
+            m_crowdNote->setText(Myfxbook::instance()->isConnected() ? tr("Myfxbook has no figure for this market.")
+                                                                     : tr("Connect your Myfxbook account in Desk › Positioning to see the crowd here."));
+            fitTable(m_crowd);
+            return;
+        }
+        addRow(tr("Lots"), QString("%1%").arg(amount(row->longPct, 0)), QString("%1%").arg(amount(row->shortPct, 0)));
+        addRow(tr("Positions"), QLocale().toString(row->longPositions), QLocale().toString(row->shortPositions));
+        const int d = priceDecimals(m_last > 0 ? m_last : row->avgLongPrice);
+        addRow(tr("Average entry"), row->avgLongPrice > 0 ? QLocale().toString(row->avgLongPrice, 'f', d) : QString("—"),
+               row->avgShortPrice > 0 ? QLocale().toString(row->avgShortPrice, 'f', d) : QString("—"));
+        if (m_last > 0) {
+            const double up = desk::crowdLongGain(*row, m_last), down = desk::crowdShortGain(*row, m_last);
+            addRow(tr("Against the last price"), row->avgLongPrice > 0 ? pct(up) : QString("—"), row->avgShortPrice > 0 ? pct(down) : QString("—"),
+                   up >= 0 ? pal.Up : pal.Down, down >= 0 ? pal.Up : pal.Down);
+        }
+        m_crowdNote->setText(row->positions() < desk::OutlookMinPositions
+                                 ? tr("Only %1 positions on Myfxbook: too few to read, and left off the chart.").arg(row->positions())
+                                 : tr("Myfxbook's community, accounts it follows, some on demo money. The last line sets the average entry against the price, before costs: an estimate, not their real result."));
+        fitTable(m_crowd);
+    }
+
+    void fillCot(const desk::Instrument &i)
+    {
+        const QVector<desk::CotLink> links = desk::cotLinks(i);
+        m_cot->setRowCount(0);
+        m_cotNote->clear();
+        if (links.isEmpty() || !m_context.cot) {
+            m_cotNote->setText(tr("The CFTC publishes no contract for this market."));
+            fitTable(m_cot);
+            return;
+        }
+        m_context.cot->waitCached();
+        const Palette &pal = Theme::current();
+        QDate reported;
+        bool inverse = false;
+        for (const desk::CotLink &link : links) {
+            const CotReport::Market *market = nullptr;
+            for (const CotReport::Market &m : m_context.cot->markets())
+                if (m.id == link.market)
+                    market = &m;
+            if (!market)
+                continue;
+            const QVector<CotReport::Week> &weeks = m_context.cot->series(link.market).weeks;
+            if (weeks.isEmpty())
+                continue;
+            QVector<double> nets;
+            for (const CotReport::Week &w : weeks)
+                nets << double(w.ncNet());
+            const double change = weeks.size() > 1 ? nets.last() - nets[nets.size() - 2] : 0;
+            const int r = m_cot->rowCount();
+            m_cot->setRowCount(r + 1);
+            m_cot->setItem(r, 0, cell(link.inverse ? tr("%1 (inv.)").arg(market->label) : market->label, {}, Qt::AlignLeft));
+            m_cot->setItem(r, 1, cell(signedAmount(nets.last(), 0), nets.last() >= 0 ? pal.Up : pal.Down));
+            m_cot->setItem(r, 2, cell(signedAmount(change, 0), change >= 0 ? pal.Up : pal.Down));
+            m_cot->setItem(r, 3, cell(QString("%1%").arg(amount(desk::rangePosition(nets), 0))));
+            reported = weeks.last().date;
+            inverse = inverse || link.inverse;
+        }
+        if (m_cot->rowCount() == 0)
+            m_cotNote->setText(tr("The CFTC's report isn't loaded yet."));
+        else
+            m_cotNote->setText((inverse ? tr("Inv.: speculators long that contract are short this pair's price. ") : QString())
+                               + tr("Positions of %1, in contracts. Range: 0% is the year's lowest net, 100% the highest.").arg(QLocale().toString(reported, QLocale::ShortFormat)));
+        fitTable(m_cot);
+    }
+
+    void fillRates(const desk::Instrument &i)
+    {
+        const int serial = m_serial;
+        const QStringList currencies = desk::rateCurrencies(i);
+        QStringList known;
+        for (const QString &c : currencies)
+            if (m_context.rates && m_context.rates->hasRate(c))
+                known << c;
+        m_rates->setRowCount(known.size());
+        const QDate today = QDate::currentDate();
+        for (int r = 0; r < known.size(); ++r) {
+            const QString currency = known[r];
+            m_rates->setItem(r, 0, cell(currency, {}, Qt::AlignLeft, true));
+            m_rates->setItem(r, 1, cell(QString("%1%").arg(amount(m_context.rates->current(currency)))));
+            m_rates->setItem(r, 2, cell("—"));
+            m_rates->setItem(r, 3, cell("—"));
+            deskdata::loadMeetings(currency, this, [this, serial, r, today](const QVector<QDate> &dates) {
+                if (serial != m_serial)
+                    return;
+                for (const QDate &d : dates) {
+                    if (d < today)
+                        continue;
+                    m_rates->setItem(r, 2, cell(QLocale().toString(d, "d MMM")));
+                    m_rates->setItem(r, 3, cell(d == today ? tr("today") : tr("%1 d").arg(today.daysTo(d))));
+                    break;
+                }
+            });
+        }
+        m_ratesNote->setText(known.size() == 2
+                                 ? tr("%1 − %2: %3 points. Policy rates from the BIS, dates from the banks. Rates has what the market prices.")
+                                       .arg(known[0], known[1], signedAmount(m_context.rates->current(known[0]) - m_context.rates->current(known[1])))
+                                 : known.isEmpty() ? tr("The BIS publishes no policy rate for this market's currency.")
+                                                   : tr("The rate of the currency this market is priced in, from the BIS; dates from the bank."));
+        fitTable(m_rates);
+    }
+
+    Context m_context;
+    QFrame *m_panel;
+    QLabel *m_title, *m_sub, *m_chartTitle, *m_signals, *m_crowdNote, *m_cotNote, *m_ratesNote;
+    LevelsChart *m_chart;
+    RadarChart *m_radar;
+    QTableWidget *m_crowd, *m_cot, *m_rates;
+    QString m_id;
+    QVector<desk::Candle> m_bars;
+    double m_last = 0;
+    int m_serial = 0;
+};
+
 } // namespace
+
+void openMarketSheet(const QString &id, const Context &c, QWidget *view)
+{
+    const desk::Instrument *i = desk::findInstrument(id);
+    if (!i)
+        return;
+    QWidget *host = c.page ? static_cast<QWidget *>(c.page) : view;
+    auto *sheet = host->findChild<MarketSheet *>(QString(), Qt::FindDirectChildrenOnly);
+    if (!sheet)
+        sheet = new MarketSheet(c, host);
+    sheet->open(*i);
+}
 
 QWidget *makeTechnical(const Context &) { return new TechnicalView; }
 QWidget *makeLiquidity(const Context &) { return new LiquidityView; }

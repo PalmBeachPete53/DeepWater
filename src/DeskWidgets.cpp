@@ -517,7 +517,7 @@ void GaugeDial::paintEvent(QPaintEvent *)
 LevelsChart::LevelsChart(QWidget *parent)
     : Chart(parent)
 {
-    m_margins = QMargins(10, 30, 110, 26);
+    m_margins = QMargins(58, 30, 110, 26);
     setMinimumHeight(380);
 }
 
@@ -557,11 +557,15 @@ void LevelsChart::paint(QPainter &p, const QRectF &plot)
             hi = std::max(hi, l.price);
         }
     const double pad = std::max(hi - lo, std::abs(hi) * 1e-6) * 0.05;
-    lo -= pad;
-    hi += pad;
+    const Axis axis = axisAround(lo - pad, hi + pad);
+    lo = axis.lo;
+    hi = axis.hi;
     const auto y = [&](double v) { return plot.bottom() - (v - lo) / (hi - lo) * plot.height(); };
     const int n = m_closes.size();
+    const int axisDecimals = hi >= 1000 ? 0 : m_decimals;   // "120 000,00" wouldn't fit
+    drawValueAxis(p, plot, axis, [axisDecimals](double v) { return QLocale().toString(v, 'f', axisDecimals); }, false, true);
     p.setPen(QPen(c.PanelLine, 1));
+    p.setBrush(Qt::NoBrush);
     p.drawRect(plot);
     p.setFont(quant::chartFont(9));
     double lastLabel = -100;

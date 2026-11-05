@@ -91,14 +91,12 @@ public:
             m_tables.insert(int(cls), t);
             connect(t, &QTableWidget::cellClicked, this, [this, t](int row, int) {
                 if (auto *item = t->item(row, 0))
-                    QSettings().setValue("desk/technical/selected", item->data(Qt::UserRole).toString());
-                if (m_context.page)
-                    m_context.page->showSection(10);
+                    openMarketSheet(item->data(Qt::UserRole).toString(), m_context, this);
             });
         }
         content()->addLayout(columns);
         content()->addStretch(1);
-        auto *note = quant::label(tr("Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market to read its signals."), "qtNote");
+        auto *note = quant::label(tr("Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market for its sheet."), "qtNote");
         content()->addWidget(note);
 
         connect(m_search, &QLineEdit::textChanged, this, &MarketsView::fill);

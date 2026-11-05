@@ -97,4 +97,14 @@ QString parseLogin(const QByteArray &json, QString *message)
     return session;
 }
 
+double crowdLongGain(const OutlookRow &row, double last)
+{
+    return row.avgLongPrice > 0 && last > 0 ? (last - row.avgLongPrice) / row.avgLongPrice * 100.0 : 0;
+}
+
+double crowdShortGain(const OutlookRow &row, double last)
+{
+    return row.avgShortPrice > 0 && last > 0 ? (row.avgShortPrice - last) / row.avgShortPrice * 100.0 : 0;
+}
+
 } // namespace desk

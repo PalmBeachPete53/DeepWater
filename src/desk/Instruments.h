@@ -25,6 +25,16 @@ const QVector<Instrument> &instruments();
 const Instrument *findInstrument(const QString &text);
 QString assetClassName(AssetClass c);   // "FX", "Indices", "Commodities", "Stocks", "Crypto": untranslated keys
 
+// The CFTC contracts behind a market, by CotReport's market ids. `inverse`: the contract moves against the market
+// (the yen's against USD/JPY). A pair of two majors has two; a market without a contract, none.
+struct CotLink {
+    QString market;
+    bool inverse = false;
+};
+QVector<CotLink> cotLinks(const Instrument &instrument);
+// The currencies whose policy rates bear on a market: both sides of a pair, otherwise the one it's priced in.
+QStringList rateCurrencies(const Instrument &instrument);
+
 // The eight currencies the page reads, strongest economies first.
 const QStringList &majorCurrencies();
 // The Yahoo pair quoting `currency` against the dollar ("EURUSD=X", "JPY=X"), and whether its price is

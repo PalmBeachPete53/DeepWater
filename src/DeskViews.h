@@ -45,6 +45,9 @@ inline QPushButton *askAiButton(const Context &c, const QString &text, const QSt
     return b;
 }
 
+// One market on a single sheet over the page: its year of prices, signals, crowd, COT and rates.
+void openMarketSheet(const QString &id, const Context &c, QWidget *view);
+
 // The price decimals a market is usually quoted with.
 inline int priceDecimals(double price)
 {

@@ -15,6 +15,9 @@ struct OutlookRow {
     double avgLongPrice = 0, avgShortPrice = 0;
     int positions() const { return longPositions + shortPositions; }
 };
+// Where the crowd stands against `last`, in %: its average long entry and average short entry. 0 without an entry.
+double crowdLongGain(const OutlookRow &row, double last);
+double crowdShortGain(const OutlookRow &row, double last);
 struct Outlook {
     bool ok = false;
     bool sessionInvalid = false;   // the session has expired or the address changed: log in again

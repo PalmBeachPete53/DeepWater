@@ -171,4 +171,32 @@ QString dollarPair(const QString &currency, bool *direct)
     return d ? currency + "USD=X" : currency + "=X";
 }
 
+QVector<CotLink> cotLinks(const Instrument &instrument)
+{
+    if (instrument.cls == AssetClass::Fx) {
+        static const QStringList contracts {"EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD"};
+        const QString base = instrument.id.left(3);
+        QVector<CotLink> links;
+        if (contracts.contains(base))
+            links.push_back({base.toLower(), false});
+        if (contracts.contains(instrument.quote))
+            links.push_back({instrument.quote.toLower(), true});
+        return links;
+    }
+    static const QHash<QString, QString> others {
+        {"US500", "sp500"}, {"USTEC", "nasdaq"}, {"US30", "dow"}, {"US2000", "russell"}, {"DXY", "dxy"}, {"BTCUSD", "bitcoin"},
+        {"XAUUSD", "gold"}, {"XAGUSD", "silver"}, {"USOIL", "wti"}, {"NATGAS", "natgas"}, {"COPPER", "copper"},
+        {"PLAT", "platinum"}, {"PALL", "palladium"}, {"CORN", "corn"}, {"WHEAT", "wheat"}, {"SOY", "soybeans"},
+    };
+    const auto it = others.constFind(instrument.id);
+    return it == others.constEnd() ? QVector<CotLink> {} : QVector<CotLink> {{*it, false}};
+}
+
+QStringList rateCurrencies(const Instrument &instrument)
+{
+    if (instrument.cls == AssetClass::Fx)
+        return {instrument.id.left(3), instrument.quote};
+    return {instrument.quote};
+}
+
 } // namespace desk

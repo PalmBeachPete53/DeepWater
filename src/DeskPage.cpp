@@ -33,11 +33,12 @@ QWidget *makeSection(int index, const Context &c)
 
 } // namespace deskui
 
-DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, QWidget *parent)
+DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, CotReport *cot, QWidget *parent)
     : QWidget(parent)
     , m_calendar(calendar)
     , m_rates(rates)
     , m_economy(economy)
+    , m_cot(cot)
 {
     setObjectName("quantPage");
     setAttribute(Qt::WA_StyledBackground);
@@ -85,7 +86,7 @@ void DeskPage::showSection(int index)
     m_tabs->button(index)->setChecked(true);
     QWidget *current = m_stack->widget(index);
     if (!current->layout()) {
-        const deskui::Context c {m_calendar, m_rates, this, m_economy};
+        const deskui::Context c {m_calendar, m_rates, this, m_economy, m_cot};
         auto *layout = new QVBoxLayout(current);
         layout->setContentsMargins(0, 0, 0, 0);
         layout->addWidget(index == deskui::sectionCount() ? deskui::makeWorkspaces(c) : deskui::makeSection(index, c));

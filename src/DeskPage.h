@@ -2,6 +2,7 @@
 
 #include <QWidget>
 
+class CotReport;
 class EconomicCalendar;
 class PolicyRates;
 class WorldEconomy;
@@ -15,7 +16,7 @@ class DeskPage : public QWidget
 {
     Q_OBJECT
 public:
-    DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, QWidget *parent = nullptr);
+    DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, CotReport *cot, QWidget *parent = nullptr);
 
     void showSection(int index);
 
@@ -28,6 +29,7 @@ private:
     EconomicCalendar *m_calendar;
     PolicyRates *m_rates;
     WorldEconomy *m_economy;
+    CotReport *m_cot;
     QButtonGroup *m_tabs;
     QStackedWidget *m_stack;
 };
@@ -40,6 +42,7 @@ struct Context {
     PolicyRates *rates = nullptr;
     DeskPage *page = nullptr;
     WorldEconomy *economy = nullptr;
+    CotReport *cot = nullptr;
 };
 QStringList sectionNames();
 // A new view of a section; `index` in sectionNames(), the workspaces section excluded.

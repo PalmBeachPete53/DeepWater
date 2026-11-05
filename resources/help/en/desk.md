@@ -6,7 +6,7 @@ The texts are written by fixed rules, not by a model. Where a section has an **A
 
 ## Markets
 
-109 markets in five columns: forex, indices, commodities, stocks and crypto. Search by name, change the period (1 day, 1 week, 1 month) and the order. The tiles give the breadth, the average move, the leader and the laggard. A click on a row opens that market's file in Technicals.
+109 markets in five columns: forex, indices, commodities, stocks and crypto. Search by name, change the period (1 day, 1 week, 1 month) and the order. The tiles give the breadth, the average move, the leader and the laggard. A click on a row opens the market's sheet: a year of prices with the crowd's average entries, the signals, the crowd, the COT and the policy rates, with buttons to Technicals and Rates.
 
 ## Strength
 
