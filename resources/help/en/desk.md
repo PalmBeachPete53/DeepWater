@@ -36,12 +36,16 @@ One list of three things, newest first: headlines from InvestingLive's public fe
 
 **2Y − rate**, in the central banks' table, is the 2-year government yield against the policy rate: where the market sees rates, with a term premium. It is the only market reading for the BoJ, the SNB and the BoC, since no free source that allows it publishes short rate futures for them. ING's forecasts are in Forecasts.
 
+The same note keeps, day after day, the move priced for the Fed's and the Bank of England's next meetings, drawn in **How the next meeting's pricing moved**.
+
 ## Positioning
 
 Two lists, for two crowds. For futures positions, see [Quant](help:quant) › COT.
 
 - **Forex and CFDs**: Myfxbook's community outlook, through its official API and your free account: the share of lots long and short, the number of positions and the average prices by symbol, the most traded first. The community includes demo accounts, and the share is shown above the list. Half the symbols have only a few dozen positions and read 0% or 100%: they stay in the list, dimmed, but the tiles only count symbols with 500 positions or more. Connect here with your email and password. The password goes once to Myfxbook, over HTTPS, to open a session, and isn't kept. The session ends after a month or when your internet address changes, and the section then asks again. Figures are asked at most every half hour, and there is no history. It is one community of retail traders, not the whole market.
 - **Crypto**: Binance's public ratio of accounts long and short on twelve USDT perpetuals, with the last 30 days: a measure of the crowd, not of money.
+
+Myfxbook gives only today's figures, so Deepwater notes the crowd's long share each weekday while it's open, on this computer, and draws it under the table: a click on a row chooses the symbol. The history starts the day you first run this version and can't be filled in afterwards.
 
 ## Risk appetite
 

@@ -3,6 +3,7 @@
 #include "JournalData.h"
 #include "Myfxbook.h"
 #include "MainWindow.h"
+#include "DeskHistory.h"
 #include "SettingsDialog.h"
 #include "MarketData.h"
 #include "NewsWebHost.h"
@@ -67,6 +68,9 @@ int main(int argc, char *argv[])
     // --journal-sample <file>: a statement in memory for this run; the journal's file isn't read or written.
     if (const int sampleArg = args.indexOf("--journal-sample"); sampleArg > 0 && sampleArg + 1 < args.size())
         JournalStore::instance()->loadSampleForThisRun(args.at(sampleArg + 1));
+    // --history-sample <file>: a Desk history in memory for this run: nothing noted, read or written.
+    if (const int sampleArg = args.indexOf("--history-sample"); sampleArg > 0 && sampleArg + 1 < args.size())
+        DeskHistory::instance()->loadSampleForThisRun(args.at(sampleArg + 1));
     // --myfxbook-sample <file>: an outlook in memory for this run, without a request or a saved session.
     if (const int sampleArg = args.indexOf("--myfxbook-sample"); sampleArg > 0 && sampleArg + 1 < args.size())
         Myfxbook::instance()->loadSampleForThisRun(args.at(sampleArg + 1));

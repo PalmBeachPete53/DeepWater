@@ -1,6 +1,8 @@
 // The Desk's macro sections: Rates, Positioning, Risk appetite, Seasonality, Fundamentals.
 #include "DeskViews.h"
 
+#include "DeskHistory.h"
+
 #include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
 #include "KeyedSources.h"
@@ -18,6 +20,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLabel>
+#include <QMap>
 #include <QLineEdit>
 #include <QLocale>
 #include <QMouseEvent>
@@ -114,6 +117,16 @@ public:
         body->addWidget(oisNote);
         ukRow->addWidget(oisMeetings, 3);
         content()->addLayout(ukRow);
+        auto *pricingCard = quant::card(tr("How the next meeting's pricing moved"), &body);
+        m_pricingHistory = new quant::MultiLineChart;
+        m_pricingHistory->setMinimumHeight(200);
+        m_pricingHistory->setZeroLine(true);
+        body->addWidget(m_pricingHistory);
+        m_pricingNote = quant::label({}, "qtNote");
+        m_pricingNote->setWordWrap(true);
+        body->addWidget(m_pricingNote);
+        content()->addWidget(pricingCard);
+        connect(DeskHistory::instance(), &DeskHistory::changed, this, &RatesView::fillPricingHistory);
         auto *estrRow = new QHBoxLayout;
         estrRow->setSpacing(10);
         auto *estrCard = quant::card(tr("Euro area: €STR futures, by quarter"), &body);
@@ -146,12 +159,11 @@ protected:
         fillBanks();
         fetchDecisions();
         fetchOfficial();
-        research::Client::instance()->raw("boe:ois", QUrl("https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/latest-yield-curve-data.zip"), 6 * 3600, false, this,
-                                          [this](const QByteArray &zip, const QString &) {
-            // A zip of workbooks, each a zip: the second sheet is "1. fwds, short end".
-            m_oisCurve = desk::parseBoeOisSheet(unzipFile(unzipFile(zip, "OIS daily"), "xl/worksheets/sheet2.xml"));
+        deskdata::loadBoeOis(this, [this](const desk::OisCurve &curve) {
+            m_oisCurve = curve;
             fillOis();
         });
+        fillPricingHistory();
     }
 
 private:
@@ -244,18 +256,7 @@ private:
     void fetchFed()
     {
         setStatus(tr("Loading the futures and the Fed's calendar…"));
-        const QDate today = QDate::currentDate();
-        QStringList symbols;
-        QHash<QString, QDate> months;
-        for (int i = 0; i < 15; ++i) {
-            const QDate m = QDate(today.year(), today.month(), 1).addMonths(i);
-            const QString symbol = desk::fedFutureSymbol(m);
-            symbols << symbol;
-            months.insert(symbol, m);
-        }
-        research::Client::instance()->raw("fed:fomc", QUrl("https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"), 24 * 3600, false, this,
-                                          [this, symbols, months](const QByteArray &body, const QString &error) {
-            const QVector<QDate> meetings = desk::parseFomcCalendar(QString::fromUtf8(body));
+        deskdata::loadFedPath(this, [this](const desk::FedPath &path, const QVector<QDate> &meetings, const QString &error) {
             if (meetings.isEmpty()) {
                 setStatus(tr("The Fed's calendar is unavailable: %1").arg(error));
                 return;
@@ -264,16 +265,40 @@ private:
                 if (m >= QDate::currentDate() && (!m_nextFomc.isValid() || m < m_nextFomc))
                     m_nextFomc = m;
             fillBanks();
-            research::Client::instance()->quotes(symbols, 15 * 60, this, [this, meetings, months](const QHash<QString, QJsonObject> &q, const QString &err) {
-                QVector<desk::FedContract> contracts;
-                for (auto it = months.begin(); it != months.end(); ++it) {
-                    const double price = research::raw(q.value(it.key()), "regularMarketPrice");
-                    if (research::ok(price) && price > 50)
-                        contracts.push_back({it.value(), price});
-                }
-                fillFed(desk::fedPath(contracts, meetings, QDate::currentDate()), err);
-            });
+            fillFed(path, error);
         });
+    }
+
+    // How the next meeting's pricing moved, from what this computer noted: no free source keeps it.
+    void fillPricingHistory()
+    {
+        const desk::History &history = DeskHistory::instance()->history();
+        const QDate today = QDate::currentDate();
+        QMap<QDate, bool> days;
+        const auto series = [&](const QString &currency) { return history.value(desk::nextMeetingKey(history, currency, today)); };
+        const QVector<desk::DayPoint> usd = series("USD"), gbp = series("GBP");
+        for (const desk::DayPoint &p : usd) days.insert(p.date, true);
+        for (const desk::DayPoint &p : gbp) days.insert(p.date, true);
+        const QVector<QDate> dates = days.keys().toVector();
+        const auto line = [&](const QVector<desk::DayPoint> &points) {
+            QVector<double> values(dates.size(), std::nan(""));
+            for (const desk::DayPoint &p : points)
+                values[dates.indexOf(p.date)] = p.value;
+            return values;
+        };
+        const auto meetingName = [&](const QString &name, const QString &currency) {
+            const QDate meeting = desk::meetingOfKey(desk::nextMeetingKey(history, currency, today));
+            return meeting.isValid() ? tr("%1, %2").arg(name, QLocale().toString(meeting, "d MMM")) : name;
+        };
+        QVector<quant::MultiLineChart::Line> lines;
+        if (!usd.isEmpty())
+            lines.push_back({meetingName(tr("Fed"), "USD"), quant::seriesColor(1), line(usd)});
+        if (!gbp.isEmpty())
+            lines.push_back({meetingName(tr("Bank of England"), "GBP"), quant::seriesColor(6), line(gbp)});
+        m_pricingHistory->setData(dates, lines, [](double v) { return tr("%1 bp").arg(signedAmount(v, 0)); });
+        m_pricingNote->setText(dates.size() < 2
+                                   ? tr("Noted on this computer each weekday while the app is open, since no free source keeps it. The line appears after a second day.")
+                                   : tr("Noted on this computer each weekday while the app is open, since %1. The move priced for each bank's next meeting; a day the app stayed shut is a gap.").arg(QLocale().toString(dates.first(), QLocale::ShortFormat)));
     }
 
     void fillFed(const desk::FedPath &path, const QString &error)
@@ -552,6 +577,8 @@ private:
     quant::MultiLineChart *m_ois;
     QTableWidget *m_oisTable;
     QDate m_nextFomc;
+    quant::MultiLineChart *m_pricingHistory;
+    QLabel *m_pricingNote;
     QLabel *m_current, *m_currentSub, *m_next, *m_nextSub, *m_priced, *m_pricedSub, *m_end, *m_endSub;
     quant::MultiLineChart *m_curve, *m_yields;
     BarsChart *m_points;
@@ -608,6 +635,16 @@ public:
         tiles->addWidget(tile(tr("Most short"), &m_mostShort, &m_mostShortSub), 1);
         tiles->addWidget(tile(tr("Crowd lean"), &m_lean, &m_leanSub), 1);
         bv->addLayout(tiles);
+        auto *historyCard = quant::card(tr("The crowd's long share, day after day"), &body);
+        m_historyTitle = historyCard->findChild<QLabel *>();
+        m_history = new quant::MultiLineChart;
+        m_history->setMinimumHeight(190);
+        m_history->setZeroLine(false);
+        body->addWidget(m_history);
+        m_historyNote = quant::label({}, "qtNote");
+        m_historyNote->setWordWrap(true);
+        body->addWidget(m_historyNote);
+        bv->addWidget(historyCard);
         QHBoxLayout *head;
         auto *card = quant::card(tr("Myfxbook community: positions long and short"), &body, &head);
         m_updated = quant::label({}, "qtNote");
@@ -618,6 +655,13 @@ public:
         useSplitBars(m_table, 1);
         m_table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
         body->addWidget(m_table);
+        m_table->setCursor(Qt::PointingHandCursor);
+        connect(m_table, &QTableWidget::cellClicked, this, [this](int row, int) {
+            if (auto *item = m_table->item(row, 0)) {
+                m_historySymbol = item->text();
+                fillHistory();
+            }
+        });
         bv->addWidget(card);
         v->addWidget(m_board);
         m_message = quant::label({}, "qtNote");
@@ -642,6 +686,7 @@ public:
         connect(m_password, &QLineEdit::returnPressed, this, submit);
         connect(disconnect, &QPushButton::clicked, m, &Myfxbook::logOut);
         connect(m, &Myfxbook::changed, this, &FxPositioningPanel::fill);
+        connect(DeskHistory::instance(), &DeskHistory::changed, this, &FxPositioningPanel::fillHistory);
         connect(m, &Myfxbook::loginFailed, this, [this](const QString &message) {
             m_connect->setEnabled(true);
             m_loginError->setText(message);
@@ -660,6 +705,24 @@ protected:
     void hideEvent(QHideEvent *) override { m_clock.stop(); }
 
 private:
+    // Myfxbook only gives today's figures: the history is what this computer noted. A click on a row chooses the symbol.
+    void fillHistory()
+    {
+        const QVector<desk::DayPoint> points = DeskHistory::instance()->history().value(desk::crowdKey(m_historySymbol));
+        m_historyTitle->setText(tr("%1: the crowd's long share, day after day").arg(m_historySymbol).toUpper());
+        QVector<QDate> dates;
+        QVector<double> values;
+        for (const desk::DayPoint &p : points) {
+            dates << p.date;
+            values << p.value;
+        }
+        m_history->setData(dates, {{tr("Long"), Theme::current().Up, values}}, [](double v) { return QString("%1%").arg(amount(v, 0)); });
+        m_historyNote->setText(points.size() < 2
+                                   ? tr("Noted on this computer each weekday while the app is open, since Myfxbook keeps no history. The line appears after a second day. A click on a row chooses the symbol.")
+                                   : tr("Noted on this computer each weekday while the app is open, since %1; a day the app stayed shut is a gap. Symbols with fewer than %2 positions aren't noted. A click on a row chooses the symbol.")
+                                         .arg(QLocale().toString(points.first().date, QLocale::ShortFormat)).arg(desk::OutlookMinPositions));
+    }
+
     void fill()
     {
         Myfxbook *m = Myfxbook::instance();
@@ -709,6 +772,9 @@ private:
             m_table->setItem(r, 9, cell(status, color, Qt::AlignCenter, !thin));
         }
         fitHeight(m_table);
+        if (m_historySymbol.isEmpty() && !rows.isEmpty())
+            m_historySymbol = rows.first().symbol;
+        fillHistory();
         const desk::OutlookSummary sum = desk::summarizeOutlook(rows);
         m_crowdedLong->setText(QString::number(sum.crowdedLong));
         m_crowdedLongSub->setText(tr("of %1 symbols with %2 positions or more, at 70% or more").arg(sum.counted).arg(desk::OutlookMinPositions));
@@ -725,7 +791,9 @@ private:
     QFrame *m_login;
     QLineEdit *m_email, *m_password;
     QPushButton *m_connect;
-    QLabel *m_loginError, *m_updated, *m_message;
+    QLabel *m_loginError, *m_updated, *m_message, *m_historyTitle, *m_historyNote;
+    quant::MultiLineChart *m_history;
+    QString m_historySymbol;
     QWidget *m_board;
     QLabel *m_crowdedLong, *m_crowdedLongSub, *m_crowdedShort, *m_crowdedShortSub, *m_mostLong, *m_mostLongSub, *m_mostShort, *m_mostShortSub, *m_lean, *m_leanSub;
     QTableWidget *m_table;

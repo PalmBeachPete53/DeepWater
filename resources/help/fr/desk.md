@@ -36,12 +36,16 @@ Une seule liste de trois choses, les plus récentes d'abord : les titres du flux
 
 **2 ans − taux**, dans le tableau des banques centrales, est le rendement d'État à 2 ans face au taux directeur : où le marché voit les taux, avec une prime de terme. C'est la seule lecture de marché pour la BoJ, la BNS et la BoC, car aucune source gratuite qui l'autorise ne publie de contrats à terme courts pour elles. Les prévisions d'ING sont dans Prévisions.
 
+Le même relevé garde, jour après jour, le mouvement anticipé pour les prochaines réunions de la Fed et de la Banque d'Angleterre, tracé dans **Comment l'anticipation de la prochaine réunion a bougé**.
+
 ## Positionnement
 
 Deux listes, pour deux foules. Pour les positions sur contrats à terme, voir [Quant](help:quant) › COT.
 
 - **Forex et CFD** : la Community Outlook de Myfxbook, par son API officielle et votre compte gratuit : la part de lots long et short, le nombre de positions et les prix moyens par symbole, les plus traités d'abord. La communauté inclut des comptes de démo, et leur part s'affiche au-dessus de la liste. La moitié des symboles n'ont que quelques dizaines de positions et affichent 0 % ou 100 % : ils restent dans la liste, atténués, mais les tuiles ne comptent que les symboles d'au moins 500 positions. Connectez-vous ici avec votre e-mail et votre mot de passe. Le mot de passe part une seule fois vers Myfxbook, en HTTPS, pour ouvrir une session, et n'est pas conservé. La session se termine après un mois ou quand votre adresse internet change, et la section redemande alors. Les chiffres sont demandés au plus toutes les demi-heures, sans historique. C'est une communauté de particuliers, pas tout le marché.
 - **Crypto** : le ratio public de Binance des comptes long et short sur douze perpétuels USDT, avec les 30 derniers jours : une mesure de la foule, pas de l'argent.
+
+Myfxbook ne donne que les chiffres du jour : Deepwater note donc la part de longs de la foule chaque jour de semaine tant qu'il est ouvert, sur cet ordinateur, et la trace sous le tableau ; un clic sur une ligne choisit le symbole. L'historique commence le jour où vous lancez cette version pour la première fois et ne peut pas être complété après coup.
 
 ## Appétit pour le risque
 

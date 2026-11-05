@@ -1,5 +1,6 @@
 #include "DeskData.h"
 
+#include "MacroData.h"
 #include "ResearchData.h"
 #include "desk/CentralBanks.h"
 
@@ -77,6 +78,45 @@ void loadMeetings(const QString &currency, QObject *ctx, std::function<void(cons
     }
     research::Client::instance()->raw(it->key, QUrl(it->url), 24 * 3600, false, ctx, [parse = it->parse, done](const QByteArray &body, const QString &) {
         done(parse(QString::fromUtf8(body)));
+    });
+}
+
+void loadFedPath(QObject *ctx, std::function<void(const desk::FedPath &, const QVector<QDate> &, const QString &)> done)
+{
+    const QDate today = QDate::currentDate();
+    QStringList symbols;
+    QHash<QString, QDate> months;
+    for (int i = 0; i < 15; ++i) {
+        const QDate m = QDate(today.year(), today.month(), 1).addMonths(i);
+        const QString symbol = desk::fedFutureSymbol(m);
+        symbols << symbol;
+        months.insert(symbol, m);
+    }
+    research::Client::instance()->raw("fed:fomc", QUrl("https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"), 24 * 3600, false, ctx,
+                                      [ctx, symbols, months, done](const QByteArray &body, const QString &error) {
+        const QVector<QDate> meetings = desk::parseFomcCalendar(QString::fromUtf8(body));
+        if (meetings.isEmpty()) {
+            done({}, {}, error);
+            return;
+        }
+        research::Client::instance()->quotes(symbols, 15 * 60, ctx, [meetings, months, done](const QHash<QString, QJsonObject> &q, const QString &err) {
+            QVector<desk::FedContract> contracts;
+            for (auto it = months.begin(); it != months.end(); ++it) {
+                const double price = research::raw(q.value(it.key()), "regularMarketPrice");
+                if (research::ok(price) && price > 50)
+                    contracts.push_back({it.value(), price});
+            }
+            done(desk::fedPath(contracts, meetings, QDate::currentDate()), meetings, err);
+        });
+    });
+}
+
+void loadBoeOis(QObject *ctx, std::function<void(const desk::OisCurve &)> done)
+{
+    research::Client::instance()->raw("boe:ois", QUrl("https://www.bankofengland.co.uk/-/media/boe/files/statistics/yield-curves/latest-yield-curve-data.zip"), 6 * 3600, false, ctx,
+                                      [done](const QByteArray &zip, const QString &) {
+        // A zip of workbooks, each a zip: the second sheet is "1. fwds, short end".
+        done(desk::parseBoeOisSheet(unzipFile(unzipFile(zip, "OIS daily"), "xl/worksheets/sheet2.xml")));
     });
 }
 

@@ -1,4 +1,5 @@
 // The Desk and Journal logic (src/desk) on made-up data. Plain checks, a count at the end, non-zero exit on any failure.
+#include "desk/History.h"
 #include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
 #include "desk/Instruments.h"
@@ -680,6 +681,32 @@ void testPositioning()
     eqs("Invalid email or password.", message, "says why");
 }
 
+void testHistory()
+{
+    History h;
+    const QDate d(2026, 11, 5);
+    addPoint(h, "crowd/EURUSD", d, 60);
+    addPoint(h, "crowd/EURUSD", d.addDays(-1), 55);
+    addPoint(h, "crowd/EURUSD", d, 62);
+    eqi(2, h["crowd/EURUSD"].size(), "a day holds one value");
+    check(h["crowd/EURUSD"][0].date == d.addDays(-1), "in date order");
+    near(62, h["crowd/EURUSD"][1].value, 1e-9, "the later value of a day wins");
+    addPoint(h, meetingKey("USD", QDate(2026, 12, 9)), d, -12.5);
+    addPoint(h, meetingKey("USD", QDate(2027, 1, 27)), d, -3);
+    addPoint(h, meetingKey("USD", QDate(2026, 11, 2)), d.addDays(-5), 0);
+    eqs("rate/USD/2026-12-09", nextMeetingKey(h, "USD", d), "the next meeting, not one gone by");
+    check(meetingOfKey("rate/USD/2026-12-09") == QDate(2026, 12, 9), "the meeting in a key");
+    check(nextMeetingKey(h, "GBP", d).isEmpty(), "nothing noted for that bank");
+    check(lastDate(h, "rate/USD/") == d, "the newest date of a family");
+    check(!lastDate(h, "rate/GBP/").isValid(), "none yet");
+    const History back = historyFromJson(historyToJson(h));
+    eqi(h.size(), back.size(), "saved and read back");
+    near(62, back.value("crowd/EURUSD").last().value, 1e-9, "the values too");
+    check(back.value("crowd/EURUSD").last().date == d, "and the dates");
+    check(historyFromJson("not json").isEmpty(), "a broken file reads as nothing");
+    check(historyFromJson(R"({"a":[["bad",1],["2026-11-05","x"],["2026-11-05",2]]})").value("a").size() == 1, "broken points are left out");
+}
+
 void testMarketSheet()
 {
     const auto links = [](const char *id) { return cotLinks(*findInstrument(id)); };
@@ -849,6 +876,7 @@ int main(int argc, char **argv)
     testRates();
     testSweepsSince();
     testPositioning();
+    testHistory();
     testMarketSheet();
     testCentralBanks();
     std::cout << checks << " checks, " << fails << " failed\n";

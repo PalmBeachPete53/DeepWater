@@ -47,6 +47,7 @@
 #include "MacroIndicators.h"
 #include "MacroPanel.h"
 #include "OverviewPage.h"
+#include "DeskHistory.h"
 #include "NewsPage.h"
 #include "NewsReader.h"
 #include "EconomyPage.h"
@@ -214,6 +215,7 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     m_policyRates->refreshIfStale();
     m_cot->refreshIfStale();
     m_cotReport->refreshIfStale();
+    DeskHistory::instance()->start(m_policyRates);
     QStringList portIds;
     for (const Chokepoint &z : m_chokepoints->chokepoints())
         portIds << QString::fromUtf8(z.portwatchId);

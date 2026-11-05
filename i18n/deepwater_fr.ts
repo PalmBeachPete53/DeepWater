@@ -7410,7 +7410,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1369"/>
+        <location filename="../src/MainWindow.cpp" line="+1371"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -14135,7 +14135,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::AppetiteView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+1356"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+1424"/>
         <source>Composite risk appetite</source>
         <translation>Appétit pour le risque composite</translation>
     </message>
@@ -14862,7 +14862,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::FxPositioningPanel</name>
     <message>
-        <location line="-1373"/>
+        <location line="-1414"/>
         <source>Connect your Myfxbook account</source>
         <translation>Connecter votre compte Myfxbook</translation>
     </message>
@@ -14912,7 +14912,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Penchant de la foule</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+13"/>
         <source>Myfxbook community: positions long and short</source>
         <translation>Communauté Myfxbook : positions long et short</translation>
     </message>
@@ -14933,11 +14933,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
+        <location line="+65"/>
         <source>Long</source>
         <translation>Long</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-65"/>
         <source>Short</source>
         <translation>Short</translation>
     </message>
@@ -14972,12 +14973,32 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Statut</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-16"/>
+        <source>The crowd&apos;s long share, day after day</source>
+        <translation>La part de longs de la foule, jour après jour</translation>
+    </message>
+    <message>
+        <location line="+32"/>
         <source>The share of lots long and short of the traders whose accounts are connected to Myfxbook, demo accounts included: one community of retail traders, not the whole market, and it says nothing of when a crowded trade turns. Symbols with few positions stay in the list, dimmed, but don&apos;t count in the tiles. Myfxbook&apos;s own figures, under its terms of use. COT positions are in Quant › COT.</source>
         <translation>La part de lots long et short des traders dont les comptes sont reliés à Myfxbook, comptes de démo inclus : une communauté de particuliers, pas tout le marché, et cela ne dit pas quand une position encombrée se retourne. Les symboles avec peu de positions restent dans la liste, atténués, mais ne comptent pas dans les tuiles. Chiffres de Myfxbook, selon ses conditions d&apos;utilisation. Les positions COT sont dans Quant › COT.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+42"/>
+        <source>%1: the crowd&apos;s long share, day after day</source>
+        <translation>%1 : la part de longs de la foule, jour après jour</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Noted on this computer each weekday while the app is open, since Myfxbook keeps no history. The line appears after a second day. A click on a row chooses the symbol.</source>
+        <translation>Noté sur cet ordinateur chaque jour de semaine tant que l&apos;application est ouverte, car Myfxbook ne garde pas d&apos;historique. La courbe apparaît à partir du deuxième jour. Un clic sur une ligne choisit le symbole.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Noted on this computer each weekday while the app is open, since %1; a day the app stayed shut is a gap. Symbols with fewer than %2 positions aren&apos;t noted. A click on a row chooses the symbol.</source>
+        <translation>Noté sur cet ordinateur chaque jour de semaine tant que l&apos;application est ouverte, depuis le %1 ; un jour où l&apos;application est restée fermée fait un trou. Les symboles de moins de %2 positions ne sont pas notés. Un clic sur une ligne choisit le symbole.</translation>
+    </message>
+    <message>
+        <location line="+58"/>
         <source>of %1 symbols with %2 positions or more, at 70% or more</source>
         <translation>sur %1 symboles d&apos;au moins %2 positions, à 70 % ou plus</translation>
     </message>
@@ -14996,12 +15017,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">La part de positions des traders dont les comptes sont reliés à Myfxbook : une communauté de particuliers, pas tout le marché, et cela ne dit pas quand une position encombrée se retourne. Chiffres de Myfxbook, selon ses conditions d&apos;utilisation. Les positions COT sont dans Quant › COT.</translation>
     </message>
     <message>
-        <location line="-85"/>
+        <location line="-107"/>
         <source>Connecting…</source>
         <translation>Connexion…</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+60"/>
         <source>Loading Myfxbook&apos;s figures…</source>
         <translation>Chargement des chiffres de Myfxbook…</translation>
     </message>
@@ -15054,7 +15075,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">sur %1, à 30 % ou moins</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+25"/>
         <location line="+3"/>
         <source>%1% long</source>
         <translation>%1 % long</translation>
@@ -15515,7 +15536,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+1"/>
         <source>Positions of %1, in contracts. Range: 0% is the year&apos;s lowest net, 100% the highest.</source>
-        <translation>Positions du %1, en contrats. Plage : 0 % est le net le plus bas de l'année, 100 % le plus haut.</translation>
+        <translation>Positions du %1, en contrats. Plage : 0 % est le net le plus bas de l&apos;année, 100 % le plus haut.</translation>
     </message>
     <message>
         <source>%1 (inverse)</source>
@@ -15716,7 +15737,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::PositioningView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+25"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+27"/>
         <source>Forex and CFDs · Myfxbook</source>
         <translation>Forex et CFD · Myfxbook</translation>
     </message>
@@ -15870,7 +15891,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::RatesView</name>
     <message>
-        <location line="-814"/>
+        <location line="-879"/>
         <source>Fed funds, implied today</source>
         <translation>Fed funds, implicite aujourd&apos;hui</translation>
     </message>
@@ -15939,12 +15960,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <location line="+36"/>
-        <location line="+185"/>
+        <location line="+207"/>
         <source>Hold</source>
         <translation>Statu quo</translation>
     </message>
     <message>
-        <location line="-219"/>
+        <location line="-241"/>
         <source>Read from CME 30-day fed funds futures, delayed, with the Fed&apos;s own calendar: each contract is 100 minus the month&apos;s average rate, so a meeting&apos;s move is what the month after it must be for the average to hold. Each move is spread on the two nearest quarter-point steps, the usual simplification. It reads what is priced, not what will happen.</source>
         <translation>Lu sur les contrats à terme CME sur fed funds à 30 jours, différés, avec le calendrier de la Fed : chaque contrat vaut 100 moins le taux moyen du mois, donc le mouvement d&apos;une réunion est ce que doit être le mois suivant pour que la moyenne tienne. Chaque mouvement est réparti entre les deux quarts de point les plus proches, la simplification habituelle. Cela lit ce qui est intégré dans les prix, pas ce qui arrivera.</translation>
     </message>
@@ -16016,7 +16037,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">La courbe OIS à terme quotidienne de la Banque d&apos;Angleterre (Bloomberg Finance L.P. et calculs de la Banque), affichée pour votre usage personnel. Le taux à terme autour d&apos;une réunion n&apos;en donne pas la probabilité : il mêle les réunions d&apos;avant et une petite prime.</translation>
     </message>
     <message>
-        <location line="+374"/>
+        <location line="+396"/>
         <source>United Kingdom</source>
         <translation>Royaume-Uni</translation>
     </message>
@@ -16035,7 +16056,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Taux directeurs de la BRI ; décisions d&apos;après le calendrier de la Fed et le calendrier économique, qui n&apos;en annonce que certaines à l&apos;avance. Aucune source gratuite ne publie de contrats à terme de taux pour les autres banques : seule la Fed a donc des probabilités ici.</translation>
     </message>
     <message>
-        <location line="-395"/>
+        <location line="-417"/>
         <source>Sovereign yield curves</source>
         <translation>Courbes des taux souveraines</translation>
     </message>
@@ -16044,17 +16065,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Rendements au pair du Trésor américain et courbe au comptant AAA de la zone euro de la BCE, dernière publication.</translation>
     </message>
     <message>
-        <location line="+156"/>
+        <location line="+165"/>
         <source>Loading the futures and the Fed&apos;s calendar…</source>
         <translation>Chargement des contrats à terme et du calendrier de la Fed…</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+3"/>
         <source>The Fed&apos;s calendar is unavailable: %1</source>
         <translation>Le calendrier de la Fed est indisponible : %1</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+47"/>
         <source>The fed funds futures are unavailable: %1</source>
         <translation>Les contrats à terme sur fed funds sont indisponibles : %1</translation>
     </message>
@@ -16095,15 +16116,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 j</translation>
     </message>
     <message>
-        <location line="-268"/>
-        <location line="+10"/>
-        <location line="+53"/>
-        <location line="+152"/>
+        <location line="-290"/>
+        <location line="+20"/>
+        <location line="+52"/>
+        <location line="+165"/>
         <source>Implied rate</source>
         <translation>Taux implicite</translation>
     </message>
     <message>
-        <location line="-241"/>
+        <location line="-263"/>
         <source>2Y − rate</source>
         <translation>2 ans − taux</translation>
     </message>
@@ -16123,7 +16144,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>La courbe OIS à terme quotidienne de la Banque d&apos;Angleterre (Bloomberg Finance L.P. et calculs de la Banque), affichée pour votre usage personnel. Le mouvement d&apos;une réunion est le taux à terme une semaine après, face au précédent, réparti sur les deux quarts de point les plus proches comme pour la Fed : une simplification avec une petite prime, pas une enquête de probabilités.</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>How the next meeting&apos;s pricing moved</source>
+        <translation>Comment l&apos;anticipation de la prochaine réunion a bougé</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Euro area: €STR futures, by quarter</source>
         <translation>Zone euro : contrats à terme sur l&apos;€STR, par trimestre</translation>
     </message>
@@ -16178,8 +16204,9 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Les taux mensuels interbancaires et à long terme de l&apos;OCDE : leurs banques centrales refusent les programmes et aucune courbe quotidienne gratuite n&apos;a été trouvée, d&apos;où ces deux seuls points, vieux de quelques semaines.</translation>
     </message>
     <message>
-        <location line="+56"/>
-        <location line="+162"/>
+        <location line="+55"/>
+        <location line="+101"/>
+        <location line="+74"/>
         <location line="+3"/>
         <location line="+26"/>
         <location line="+37"/>
@@ -16188,7 +16215,32 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 pb</translation>
     </message>
     <message>
-        <location line="-87"/>
+        <location line="-186"/>
+        <source>%1, %2</source>
+        <translation>%1, %2</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Fed</source>
+        <translation>Fed</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Bank of England</source>
+        <translation>Banque d&apos;Angleterre</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Noted on this computer each weekday while the app is open, since no free source keeps it. The line appears after a second day.</source>
+        <translation>Noté sur cet ordinateur chaque jour de semaine tant que l&apos;application est ouverte, car aucune source gratuite ne le conserve. La courbe apparaît à partir du deuxième jour.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Noted on this computer each weekday while the app is open, since %1. The move priced for each bank&apos;s next meeting; a day the app stayed shut is a gap.</source>
+        <translation>Noté sur cet ordinateur chaque jour de semaine tant que l&apos;application est ouverte, depuis le %1. Le mouvement anticipé pour la prochaine réunion de chaque banque ; un jour où l&apos;application est restée fermée fait un trou.</translation>
+    </message>
+    <message>
+        <location line="+89"/>
         <source>Unanimous</source>
         <translation>Unanime</translation>
     </message>
@@ -16410,7 +16462,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::SeasonalityView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+1088"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+1131"/>
         <source>YEARS</source>
         <translation>ANNÉES</translation>
     </message>
