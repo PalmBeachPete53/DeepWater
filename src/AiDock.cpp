@@ -4,7 +4,9 @@
 #include "LocalChat.h"
 #include "LocalEngine.h"
 #include "SideFlap.h"
+#include "Voice.h"
 
+#include <QCheckBox>
 #include <QComboBox>
 #include <QEvent>
 #include <QRegion>
@@ -13,6 +15,8 @@
 #include <QLabel>
 #include <QPlainTextEdit>
 #include <QPushButton>
+#include <QRegularExpression>
+#include <QSettings>
 #include <QShortcut>
 #include <QStyle>
 #include <QToolButton>
@@ -126,6 +130,8 @@ void AiDock::build()
     buttons->addStretch(1);
     buttons->addWidget(m_clear);
     v->addLayout(buttons);
+    if (Voice::available())
+        buildVoice(v);
     m_status = new QLabel;
     m_status->setObjectName("dim");
     m_status->setWordWrap(true);
@@ -202,6 +208,90 @@ void AiDock::refreshContext()
     if (!m_contextLine) return;
     const QString context = m_context ? m_context() : QString();
     m_contextLine->setText(context.isEmpty() ? QString() : tr("Context: %1").arg(context));
+}
+
+// Push-to-talk: nothing listens unless the button is held; recognition and voices stay on this Mac (Voice).
+void AiDock::buildVoice(QVBoxLayout *layout)
+{
+    auto *row = new QHBoxLayout;
+    row->setSpacing(6);
+    m_talk = new QPushButton(tr("Hold to talk"));
+    m_talk->setObjectName("segButton");
+    m_talk->setCursor(Qt::PointingHandCursor);
+    m_talk->setToolTip(tr("Listens only while held. Recognition runs on this Mac: no sound or text leaves it."));
+    row->addWidget(m_talk);
+    m_speak = new QCheckBox(tr("Read the answers aloud"));
+    m_speak->setObjectName("qtCheck");
+    m_speak->setChecked(QSettings().value("ai/speakAnswers", false).toBool());
+    row->addWidget(m_speak);
+    row->addStretch(1);
+    layout->addLayout(row);
+    m_voiceNote = new QLabel;
+    m_voiceNote->setObjectName("dim");
+    m_voiceNote->setWordWrap(true);
+    m_voiceNote->hide();
+    layout->addWidget(m_voiceNote);
+
+    Voice *voice = Voice::instance();
+    connect(m_talk, &QPushButton::pressed, this, [this, voice] {
+        m_voiceNote->hide();
+        voice->stopSpeaking();
+        voice->startListening();
+    });
+    connect(m_talk, &QPushButton::released, voice, &Voice::stopListening);
+    connect(voice, &Voice::listeningChanged, this, [this](bool on) { m_talk->setText(on ? tr("Listening…") : tr("Hold to talk")); });
+    connect(voice, &Voice::partial, this, [this](const QString &text) { m_input->setPlainText(text); });
+    connect(voice, &Voice::heard, this, [this](const QString &text) {
+        if (text.trimmed().isEmpty()) {
+            m_voiceNote->setText(tr("Nothing was understood."));
+            m_voiceNote->show();
+            return;
+        }
+        m_input->setPlainText(text);
+        send();   // the text stays in the box when the model isn't ready
+    });
+    connect(voice, &Voice::failed, this, [this](Voice::Failure why, const QString &detail) {
+        QString text;
+        switch (why) {
+        case Voice::Failure::Denied:
+            text = tr("Deepwater may not use the microphone or speech recognition: allow them in System Settings › Privacy & Security.");
+            break;
+        case Voice::Failure::NotOnDevice:
+            text = tr("This Mac has no on-device recognition for %1 yet: turn on Dictation for that language in System Settings › Keyboard. Nothing is sent to a server instead.").arg(detail);
+            break;
+        case Voice::Failure::NoMicrophone:
+            text = tr("No microphone is available. %1").arg(detail);
+            break;
+        case Voice::Failure::Other:
+            text = tr("Recognition failed: %1").arg(detail);
+            break;
+        }
+        m_voiceNote->setText(text);
+        m_voiceNote->show();
+    });
+    connect(m_speak, &QCheckBox::toggled, this, [voice](bool on) {
+        QSettings().setValue("ai/speakAnswers", on);
+        if (!on)
+            voice->stopSpeaking();
+    });
+    connect(m_chat, &LocalChat::stateChanged, this, [this] {
+        const bool busy = m_chat->state() == LocalEngine::State::Busy;
+        if (m_wasBusy && !busy && m_speak->isChecked())
+            speakLastAnswer();
+        m_wasBusy = busy;
+    });
+}
+
+void AiDock::speakLastAnswer()
+{
+    // The stretches of the last answer, tool calls taken out, without the markdown a voice would read out.
+    QStringList parts;
+    const auto &entries = m_chat->entries();
+    for (int i = entries.size() - 1; i >= 0 && entries[i].kind != LocalChat::Entry::User; --i)
+        if (entries[i].kind == LocalChat::Entry::Answer && !entries[i].error)
+            parts.prepend(entries[i].text);
+    static const QRegularExpression marks("[*_`#>|]+");
+    Voice::instance()->speak(parts.join(' ').replace(marks, " "));
 }
 
 void AiDock::send()

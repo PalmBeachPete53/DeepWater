@@ -249,6 +249,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/NewsReader.h src/NewsReader.cpp
     src/AdBlock.h src/AdBlock.cpp
     src/NewsWebHost.h src/NewsWebHost.cpp src/NewsWebHostQt.cpp
+    src/Voice.h
     src/HelpWindow.h src/HelpWindow.cpp
     src/DeskWidgets.h src/DeskWidgets.cpp
     src/JournalData.h src/JournalData.cpp
@@ -267,9 +268,11 @@ endif()
 
 # On macOS the article reader renders with the system's WebKit (WKWebView), the engine of Safari.
 if(APPLE)
-    target_sources(deepwater PRIVATE src/NewsWebHostMac.mm)
-    set_source_files_properties(src/NewsWebHostMac.mm PROPERTIES COMPILE_OPTIONS -fobjc-arc)
-    target_link_libraries(deepwater PRIVATE "-framework WebKit")
+    target_sources(deepwater PRIVATE src/NewsWebHostMac.mm src/VoiceMac.mm)
+    set_source_files_properties(src/NewsWebHostMac.mm src/VoiceMac.mm PROPERTIES COMPILE_OPTIONS -fobjc-arc)
+    target_link_libraries(deepwater PRIVATE "-framework WebKit" "-framework Speech" "-framework AVFoundation")
+else()
+    target_sources(deepwater PRIVATE src/VoiceStub.cpp)
 endif()
 
 # The article reader's ad blocker: Brave's adblock-rust, behind a small C ABI (third_party/adblock-ffi), built by
@@ -328,6 +331,8 @@ endif()
 # A bundle identifier is needed for desktop notifications (UserNotifications); it matches the
 # QSettings domain.
 set_target_properties(deepwater PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER com.deepwater.Deepwater)
+# Qt's Info.plist, plus why the AI panel's push-to-talk asks for the microphone and speech recognition.
+set_target_properties(deepwater PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Info.plist.in)
 
 # App icon: resources/icon/deepwater.svg is the source; deepwater.icns is rendered from it.
 set_source_files_properties(resources/icon/deepwater.icns PROPERTIES MACOSX_PACKAGE_LOCATION Resources)

@@ -19,6 +19,9 @@ class SideFlap;
 // conversation (LocalChat: one model in memory, one conversation, one journal): the model among those the bound slots
 // offer, a prompt with the answers under it. Each question goes with a line saying where the user is (the page and
 // what it shows), so "this chart" or "this country" mean something to the model.
+class QCheckBox;
+class QVBoxLayout;
+
 class AiDock : public QWidget
 {
     Q_OBJECT
@@ -48,6 +51,8 @@ private:
     void refreshModels();
     void updateState();
     void send();
+    void buildVoice(QVBoxLayout *layout);
+    void speakLastAnswer();
 
     QWidget *m_host;
     int m_topOffset;
@@ -64,6 +69,10 @@ private:
     QPushButton *m_send = nullptr;
     QPushButton *m_stop = nullptr;
     QPushButton *m_clear = nullptr;
+    QPushButton *m_talk = nullptr;       // push-to-talk, while held
+    QCheckBox *m_speak = nullptr;        // read the answers aloud
+    QLabel *m_voiceNote = nullptr;
+    bool m_wasBusy = false;
     QLabel *m_status = nullptr;
     ChatTranscript *m_transcript = nullptr;
     QVariantAnimation *m_anim;
