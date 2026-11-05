@@ -72,7 +72,7 @@ UpdateDialog::UpdateDialog(Updater *updater, QWidget *parent)
     m_progress->setFixedHeight(6);
     layout->addWidget(m_progress);
 
-    m_auto = new QCheckBox(tr("Check every 15 minutes"));
+    m_auto = new QCheckBox(tr("Listen for new versions"));
     m_auto->setObjectName("calCheck");
     m_auto->setChecked(m_updater->autoCheck());
     connect(m_auto, &QCheckBox::toggled, m_updater, &Updater::setAutoCheck);
@@ -81,12 +81,18 @@ UpdateDialog::UpdateDialog(Updater *updater, QWidget *parent)
     auto *buttons = new QHBoxLayout;
     m_check = new QPushButton(tr("Check now"));
     m_check->setObjectName("siteButton");
+    // Mouse only: this window takes the focus while the user may be typing elsewhere, and a key must never start an
+    // update. Enter would go to a default button, and space to whichever has the focus.
+    m_check->setAutoDefault(false);
+    m_check->setFocusPolicy(Qt::NoFocus);
     m_check->setCursor(Qt::PointingHandCursor);
     connect(m_check, &QPushButton::clicked, m_updater, &Updater::check);
     buttons->addWidget(m_check);
     buttons->addStretch();
     m_action = new QPushButton;
     m_action->setObjectName("primaryButton");
+    m_action->setAutoDefault(false);
+    m_action->setFocusPolicy(Qt::NoFocus);
     m_action->setCursor(Qt::PointingHandCursor);
     connect(m_action, &QPushButton::clicked, this, &UpdateDialog::onAction);
     buttons->addWidget(m_action);

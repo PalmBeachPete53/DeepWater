@@ -32,7 +32,7 @@ Le crayon après les onglets active le mode édition : glissez un onglet pour le
 
 Quand une nouvelle version sort, la flèche du bandeau passe au violet avec un point, et un bandeau et une notification de bureau le signalent. Cliquez sur la flèche pour voir les nouveautés, puis sur **Mettre à jour** : Deepwater télécharge la nouvelle version et la vérifie ; **Redémarrer et installer** ferme l'application et lance la nouvelle. Vos données et réglages ne sont pas touchés, et l'ancienne version reste dans le dossier de données de l'application (`update/previous.app`).
 
-L'application vérifie toutes les 15 minutes, ce que vous pouvez désactiver dans cette fenêtre. Tant que le dépôt est privé, il lui faut un accès à GitHub : un jeton enregistré dans [Sources](help:sources) › Mises à jour, ou la CLI GitHub connectée sur cet ordinateur.
+L'application reste connectée et apprend qu'une nouvelle version existe dès sa publication, ce que vous pouvez désactiver dans cette fenêtre. Tant que le dépôt est privé, il lui faut un accès à GitHub : un jeton enregistré dans [Sources](help:sources) › Mises à jour, ou la CLI GitHub connectée sur cet ordinateur.
 
 ## Paramètres
 

@@ -16,8 +16,13 @@
 namespace {
 
 const char *const Repository = "https://api.github.com/repos/PalmBeachPete53/DeepWater";
-const int CheckEveryMs = 15 * 60 * 1000;
+// The channel the CI posts to (.github/workflows/build.yml). Its name is no secret worth keeping: see isBuildSignal().
+const char *const Relay = "wss://ntfy.sh/deepwater-updates-08dccc156782ea69cc5eb407/ws";
 const int FirstCheckMs = 20 * 1000;
+const int WatchSocketMs = 30 * 1000;
+const int SilenceMs = 150 * 1000;       // more than three keepalives: the connection is dead (a Mac that slept)
+const int SignalsApartMs = 20 * 1000;   // a noisy channel causes no more than this
+const int CheckAgainMs = 60 * 1000;     // GitHub's API may lag a moment behind the release just made
 
 QString apiBase()
 {
@@ -39,14 +44,50 @@ Updater::Updater(QObject *parent)
 {
     const QString bundle = runningBundle();
     m_target = update::installTarget(bundle, QFileInfo::exists(QFileInfo(bundle).absolutePath() + "/CMakeCache.txt"));
-    m_timer.setInterval(CheckEveryMs);
-    connect(&m_timer, &QTimer::timeout, this, [this] {
-        if (autoCheck() && !turnedOff()) check();
+    connect(&m_socket, &QWebSocket::connected, this, [this] {
+        m_lastHeard.start();
+        if (m_listenedBefore)   // what was published while the connection was down
+            check();
+        m_listenedBefore = true;
     });
+    connect(&m_socket, &QWebSocket::textMessageReceived, this, &Updater::onSocketMessage);
+    m_timer.setInterval(WatchSocketMs);
+    connect(&m_timer, &QTimer::timeout, this, &Updater::keepListening);
     m_timer.start();
+    keepListening();
     QTimer::singleShot(FirstCheckMs, this, [this] {
         if (autoCheck() && !turnedOff()) check();
     });
+}
+
+// Every 30 s: connected if it should be, and only then. A socket that closed is opened again here, so a relay that is
+// down costs one attempt each time.
+void Updater::keepListening()
+{
+    const bool wanted = autoCheck() && !turnedOff();
+    const QAbstractSocket::SocketState state = m_socket.state();
+    if (!wanted) {
+        if (state != QAbstractSocket::UnconnectedState)
+            m_socket.close();
+    } else if (state == QAbstractSocket::UnconnectedState) {
+        const QByteArray custom = qgetenv("DEEPWATER_UPDATE_SOCKET");
+        m_socket.open(QUrl(custom.isEmpty() ? QString::fromLatin1(Relay) : QString::fromUtf8(custom)));
+    } else if (state == QAbstractSocket::ConnectedState && m_lastHeard.elapsed() > SilenceMs) {
+        m_socket.abort();
+        keepListening();   // reopen at once: this is the Mac waking up
+    }
+}
+
+void Updater::onSocketMessage(const QString &message)
+{
+    m_lastHeard.start();
+    if (!update::isBuildSignal(message.toUtf8()))
+        return;
+    if (m_lastSignal.isValid() && m_lastSignal.elapsed() < SignalsApartMs)
+        return;
+    m_lastSignal.start();
+    check();
+    QTimer::singleShot(CheckAgainMs, this, &Updater::check);
 }
 
 QString Updater::currentCommit()
@@ -96,6 +137,7 @@ bool Updater::autoCheck() const
 void Updater::setAutoCheck(bool on)
 {
     QSettings().setValue("updates/auto", on);
+    keepListening();
 }
 
 QString Updater::workDir() const

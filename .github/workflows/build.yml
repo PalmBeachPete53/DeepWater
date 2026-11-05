@@ -92,6 +92,10 @@ jobs:
           notes="$(printf 'Latest build of main, for the update system.\n\ncommit: %s\ntime: %s\n' "$GITHUB_SHA" "$(git log -1 --format=%ct)")"
           gh release create latest-main artifact/*.dmg --prerelease --target "$GITHUB_SHA" \
             --title "Latest build of main" --notes "$notes"
+      # Tells the running apps, which hold a WebSocket on this channel (src/Updater.cpp). It says nothing and isn't trusted:
+      # they then ask GitHub. A failure here only means they learn of the build at their next start.
+      - name: Tell the apps
+        run: curl -fsS -m 20 -d 'new build' https://ntfy.sh/deepwater-updates-08dccc156782ea69cc5eb407 -o /dev/null || echo "::warning::ntfy.sh didn't take the signal"
 
   release:
     name: GitHub Release

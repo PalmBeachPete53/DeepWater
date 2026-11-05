@@ -78,6 +78,14 @@ void testCompare()
     check(shortCommit(HashA).size() == 7, "a short hash");
 }
 
+void testSignal()
+{
+    check(isBuildSignal(R"({"id":"a","time":1,"event":"message","topic":"t","message":"new build"})"), "a published message is a signal");
+    check(!isBuildSignal(R"({"id":"a","time":1,"event":"open","topic":"t"})"), "the connection opening isn't");
+    check(!isBuildSignal(R"({"id":"a","time":1,"event":"keepalive","topic":"t"})"), "a keepalive isn't");
+    check(!isBuildSignal("not json"), "nor is anything else");
+}
+
 void testInstallTarget()
 {
     check(installTarget("/Applications/deepwater.app", false) == "/Applications/deepwater.app", "installed: itself");
@@ -96,6 +104,7 @@ int main(int argc, char **argv)
     testParseRelease();
     testIsNewer();
     testCompare();
+    testSignal();
     testInstallTarget();
     std::cout << checks << " checks, " << fails << " failed\n";
     return fails ? 1 : 0;

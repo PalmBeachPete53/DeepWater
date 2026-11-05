@@ -1641,11 +1641,16 @@ of small images (turned text is drawn glyph by glyph as paths): about 6 ms a fra
 
 ## Updates
 
-The arrow icon left of `</>` in the header says whether a newer build exists, and installs it. A desktop app can't receive
-GitHub's events, so it asks. The CI publishes each successful build of `main` as the one release `latest-main`, with a
-body naming its commit and time (`.github/workflows/build.yml`, job `update-release`). The app reads that release 20 s
-after starting and then every 15 minutes (`src/Updater.*`, with an ETag: an unchanged answer doesn't count against
-GitHub's limit), and compares it with the commit it was built from, compiled in by `cmake/BuildInfo.cmake`. Only a later
+The arrow icon left of `</>` in the header says whether a newer build exists, and installs it. The CI publishes each
+successful build of `main` as the one release `latest-main`, with a body naming its commit and time
+(`.github/workflows/build.yml`, job `update-release`), then tells the apps. GitHub has no WebSocket to listen to and its
+webhooks need a public address, so the news goes through a relay: the CI posts to a channel on ntfy.sh (free, no account)
+and the app holds a WebSocket on it (`src/Updater.*`), so a build is announced within about a second of being published,
+which is some minutes after the push. The post says nothing and isn't trusted: it only makes the app read the release,
+so anyone able to post can do no more than cause a check, at most one each 20 s. The app also reads the release 20 s after
+starting and on each reconnection, for what it missed, and doesn't poll. The relay sends a keepalive every 45 s; after 150 s
+of silence (a Mac that slept) the socket is reopened at once, and if the relay was down it is tried again every 30 s. The release is read
+with an ETag, so an unchanged answer doesn't count against GitHub's limit, and compared with the commit the app was built from, compiled in by `cmake/BuildInfo.cmake`. Only a later
 commit counts, so a build from a checkout ahead of the release isn't told to go back; and since only a successful
 build is published, a commit that doesn't compile is never offered.
 
@@ -1662,9 +1667,10 @@ from a temporary copy, is asked to move to Applications first.
 
 The repository is private, so reading it takes a token: the key saved in Sources › Updates (`keys/github`, read access to
 the repository's contents), or else `gh auth token` when the GitHub CLI is signed in, kept in memory only. Without
-either, the dialog says so. The row's switch stops the requests; the dialog's check box stops the periodic ones only.
+either, the dialog says so. The row's switch stops the requests and closes the socket; the dialog's check box closes the socket and the check at start.
 `src/UpdateRelease.*` holds the parsing and decisions, tested by `qtm_test_update`. `--update-dialog` opens the dialog
 and checks. For tests against a local server, `DEEPWATER_UPDATE_API` replaces the repository's API address,
+`DEEPWATER_UPDATE_SOCKET` the relay's channel,
 `DEEPWATER_UPDATE_PRETEND` ("<commit> <time>") plays an older build, and `--update-auto` installs without a click.
 
 ## Help

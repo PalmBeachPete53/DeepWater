@@ -27,10 +27,13 @@ The app's own updates: the release `latest-main` of its private repository, whic
 ## What the app reads
 Row `github` (`src/SourcesPage.cpp`). All of the above, in `src/Updater.cpp`; parsing in `src/UpdateRelease.cpp`. See README › Updates.
 
+The news of a build comes through a relay, since GitHub has no WebSocket: `wss://ntfy.sh/<channel>/ws` (free, no account), events `open`, `keepalive` every 45 s, `message`. The CI posts `new build` to `https://ntfy.sh/<channel>`. Not trusted: it only causes a read of the release.
+
 ## Not read yet
 Nothing it needs.
 
 ## Calls made
+- `GET https://ntfy.sh/<test channel>/json` for 60 s with a `POST` to it → `open`, `message` (publish 200 in 0.3 s), `keepalive` after 45 s; `/ws` → 101.
 - `GET .../releases/tags/latest-main` from the app with the GitHub CLI's token → 404: no release published on 5 Nov 2026.
 - `GET /repos/PalmBeachPete53/DeepWater` from the app → 200.
 - The rest was exercised against a local server of the same shape, not GitHub: the first published build is its real test.

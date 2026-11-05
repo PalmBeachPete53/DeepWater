@@ -6,24 +6,29 @@
 #include <QNetworkAccessManager>
 #include <QObject>
 #include <QStringList>
+#include <QElapsedTimer>
 #include <QTimer>
+#include <QWebSocket>
 
 #include <functional>
 
 class QNetworkReply;
 class QProcess;
 
-// Keeps the app up to date from GitHub. A desktop app can't receive GitHub's events, so it asks: every 15 minutes it
-// reads the release `latest-main`, which the CI replaces after each successful build of main, with an ETag so that an
-// unchanged answer costs nothing against GitHub's rate limit. A later build sets state Available and emits
-// updateFound() once per commit. download() fetches the .dmg, checks its size and SHA-256, copies the app out of it and
+// Keeps the app up to date from GitHub. GitHub has no WebSocket to listen to and its webhooks need a public address, so
+// the news goes through a relay: the CI replaces the release `latest-main` after each successful build of main, then
+// posts to a channel on ntfy.sh, and the app holds a WebSocket open on that channel. The post carries no information and
+// isn't trusted: it only makes the app read the release, with an ETag so that an unchanged answer costs nothing against
+// GitHub's rate limit. The app also reads it on starting and on each reconnection, for what it missed; it never polls.
+// A later build sets state Available and emits updateFound() once per commit. download() fetches the .dmg, checks its size and SHA-256, copies the app out of it and
 // runs the copy with --version: it must say the release's commit. install() then quits, and a small script, once this
 // process is gone, puts the new bundle in place, keeps the old one in <app data>/update/previous.app and starts the app.
 //
 // The repository is private, so reading it takes a token: the key saved in Sources › Updates, or else `gh auth token`
 // when the GitHub CLI is signed in. The latter is asked for when needed and never stored.
 //
-// For tests with a local server: DEEPWATER_UPDATE_API replaces https://api.github.com/repos/<owner>/<repo>, and
+// For tests with a local server: DEEPWATER_UPDATE_API replaces https://api.github.com/repos/<owner>/<repo>,
+// DEEPWATER_UPDATE_SOCKET the relay's channel, and
 // DEEPWATER_UPDATE_PRETEND ("<commit> <time>") stands for the build's own commit, to play an older version.
 class Updater : public QObject
 {
@@ -76,6 +81,8 @@ signals:
 
 private:
     void setState(State state, const QString &error = QString());
+    void keepListening();
+    void onSocketMessage(const QString &message);
     bool turnedOff() const;
     QNetworkRequest apiRequest(const QUrl &url) const;
     void askGitHubCli();
@@ -91,7 +98,11 @@ private:
     QString workDir() const;
 
     QNetworkAccessManager m_net;
-    QTimer m_timer;
+    QWebSocket m_socket;
+    QTimer m_timer;            // looks after the socket
+    QElapsedTimer m_lastHeard;   // anything from the relay, which sends a keepalive every 45 s
+    QElapsedTimer m_lastSignal;
+    bool m_listenedBefore = false;
     State m_state = State::Idle;
     QString m_error;
     update::Release m_release;

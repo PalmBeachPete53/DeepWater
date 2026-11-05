@@ -825,7 +825,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
 
     section(tr("Updates"));
     add(buildRow({"github", Kind::Key, "GitHub", tr("Token with read access to the repository's contents (optional with the GitHub CLI)"),
-                  "api.github.com", tr("The app's updates: the latest build of main")}));
+                  "api.github.com · ntfy.sh", tr("The app's updates: the latest build of main")}));
     l->addSpacing(12);
 
     section(tr("Charts · market data"));

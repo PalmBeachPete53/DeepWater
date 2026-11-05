@@ -58,6 +58,11 @@ QStringList parseCompareSubjects(const QByteArray &json, int limit)
     return out;
 }
 
+bool isBuildSignal(const QByteArray &json)
+{
+    return QJsonDocument::fromJson(json).object().value("event").toString() == QLatin1String("message");
+}
+
 QString shortCommit(const QString &commit)
 {
     return commit.left(7);

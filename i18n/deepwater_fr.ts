@@ -13982,9 +13982,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Nouveautés</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Check every 15 minutes</source>
-        <translation>Vérifier toutes les 15 minutes</translation>
+        <translation type="vanished">Vérifier toutes les 15 minutes</translation>
+    </message>
+    <message>
+        <location line="+21"/>
+        <source>Listen for new versions</source>
+        <translation>Écouter les nouvelles versions</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -13992,7 +13996,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Vérifier maintenant</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+25"/>
         <source>Downloading: %1 of %2 MB.</source>
         <translation>Téléchargement : %1 sur %2 Mo.</translation>
     </message>
@@ -14080,7 +14084,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>Updater</name>
     <message>
-        <location filename="../src/Updater.cpp" line="+74"/>
+        <location filename="../src/Updater.cpp" line="+115"/>
         <source>Updates install on macOS only for now.</source>
         <translation>Pour l’instant, les mises à jour ne s’installent que sur macOS.</translation>
     </message>
@@ -14095,7 +14099,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Deepwater ne peut pas écrire dans %1.</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+58"/>
         <source>GitHub is turned off in Sources.</source>
         <translation>GitHub est désactivé dans Sources.</translation>
     </message>

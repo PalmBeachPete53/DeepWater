@@ -33,6 +33,10 @@ bool isNewer(const QString &currentCommit, qint64 currentTime, const Release &re
 // The subject lines of a compare answer, newest first, at most `limit`.
 QStringList parseCompareSubjects(const QByteArray &json, int limit = 30);
 
+// True for a line of the relay's WebSocket that announces a build. The others are its "open" and "keepalive" events.
+// It only ever means "go and ask GitHub", so anyone able to post to the channel can do no more than cause a check.
+bool isBuildSignal(const QByteArray &json);
+
 // The first 7 characters of a hash, as git shows it.
 QString shortCommit(const QString &commit);
 
