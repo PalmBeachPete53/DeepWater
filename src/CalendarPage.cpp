@@ -158,6 +158,21 @@ int decimalsOf(double v)
     return dot < 0 || dot == s.size() - 1 ? 0 : int(s.size()) - dot - 1;
 }
 
+// Time left before a release; nothing once it is published.
+QString countdownText(const QDateTime &when, bool published)
+{
+    const qint64 left = QDateTime::currentDateTimeUtc().secsTo(when);
+    if (published || left < -3600)
+        return QStringLiteral("—");
+    if (left <= 0)
+        return EconomicView::tr("due");
+    if (left < 3600)
+        return EconomicView::tr("%1 min").arg(std::max<qint64>(1, left / 60));
+    if (left < 86400)
+        return EconomicView::tr("%1 h %2").arg(left / 3600).arg((left % 3600) / 60, 2, 10, QLatin1Char('0'));
+    return EconomicView::tr("%1 d %2 h").arg(left / 86400).arg((left % 86400) / 3600);
+}
+
 QString formatValue(double v, int decimals, const QString &unit, const QString &scale)
 {
     if (std::isnan(v))
@@ -341,12 +356,12 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
     body->addWidget(filters);
 
     m_table = makeTable({tr("Date"), tr("Time"), tr("Country"), tr("Event"), tr("Impact"), tr("Actual"),
-                         tr("Forecast"), tr("Previous")},
+                         tr("Forecast"), tr("Previous"), tr("Surprise"), tr("In")},
                         34, "calTableLarge");
     m_table->setItemDelegateForColumn(4, new ImpactDelegate(m_table));
     QHeaderView *h = m_table->horizontalHeader();
-    const int widths[] = {90, 80, 200, 0, 110, 130, 130, 130};
-    for (int i = 0; i < 8; ++i) {
+    const int widths[] = {90, 80, 200, 0, 110, 120, 120, 120, 110, 90};
+    for (int i = 0; i < 10; ++i) {
         if (i == 3) {
             h->setSectionResizeMode(i, QHeaderView::Stretch);
         } else {
@@ -357,6 +372,15 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
             m_table->model()->setHeaderData(i, Qt::Horizontal, int(Qt::AlignCenter), Qt::TextAlignmentRole);
     }
     body->addWidget(m_table, 1);
+    auto *clock = new QTimer(this);
+    connect(clock, &QTimer::timeout, this, [this] {
+        if (!isVisible())
+            return;
+        for (int r = 0; r < m_table->rowCount(); ++r)
+            if (QTableWidgetItem *it = m_table->item(r, 9))
+                it->setText(countdownText(it->data(Qt::UserRole).toDateTime(), it->data(Qt::UserRole + 1).toBool()));
+    });
+    clock->start(30 * 1000);
     m_empty = new QLabel;
     m_empty->setObjectName("calEmpty");
     m_empty->setAlignment(Qt::AlignCenter);
@@ -474,6 +498,15 @@ void EconomicView::rebuild()
                                            std::isnan(e.forecast) ? ui.TextFaint : ui.Text, Qt::AlignHCenter));
             m_table->setItem(rows, 7, cell(formatValue(e.previous, decimals, e.unit, e.scale),
                                            std::isnan(e.previous) ? ui.TextFaint : ui.Text, Qt::AlignHCenter));
+            // What the market didn't expect: the figure against the forecast.
+            const double surprise = e.actual - e.forecast;
+            const QString surpriseText = formatValue(surprise, decimals, e.unit, e.scale);
+            m_table->setItem(rows, 8, cell(std::isnan(surprise) ? surpriseText : surprise > 0 ? "+" + surpriseText : surpriseText,
+                                           std::isnan(surprise) ? ui.TextFaint : surprise == 0 ? ui.TextDim : surprise > 0 ? ui.Up : ui.Down, Qt::AlignHCenter));
+            auto *countdown = cell(countdownText(e.time, !std::isnan(e.actual)), ui.TextDim, Qt::AlignHCenter);
+            countdown->setData(Qt::UserRole, e.time);
+            countdown->setData(Qt::UserRole + 1, !std::isnan(e.actual));
+            m_table->setItem(rows, 9, countdown);
             ++rows;
         }
     }
