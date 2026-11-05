@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AiRead.h"
+
 #include "EconomyData.h"
 
 #include <QPixmap>
@@ -7,6 +9,7 @@
 #include <QWidget>
 
 class CountriesView;
+class IndicatorsView;
 class QButtonGroup;
 class QLabel;
 class QPushButton;
@@ -17,10 +20,11 @@ namespace economy {
 // One indicator over time: an area under the line (or against zero), the last value and its change in the top
 // right corner, the date of the last observation and the source under the axis, a crosshair and a tooltip on
 // hover. 0…100 indexes can show their zones behind the line, the line then coloured by zone.
-class ChartView : public QWidget
+class ChartView : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit ChartView(const Indicator &indicator, QWidget *parent = nullptr);
     void setSeries(const Series &series);
     void setRange(const QString &range);
@@ -82,8 +86,8 @@ QString formatValue(const Indicator &indicator, double value, double step = 0);
 } // namespace economy
 
 // The Economy page: a sub-header with its sections (Sentiment, Crypto, Growth, Inflation, Employment, Rates,
-// Housing, Consumer, Liquidity, Global; then Countries, a CountriesView), each a grid of panels with one indicator
-// each, and "Updating…" while
+// Housing, Consumer, Liquidity, Global; then Countries, a CountriesView, and Indicators, an IndicatorsView), each
+// a grid of panels with one indicator each, and "Updating…" while
 // downloads are under way. A section is built and loaded the first time it is shown; the section is remembered.
 class EconomyPage : public QWidget
 {
@@ -93,6 +97,10 @@ public:
     void showSection(int index);
     // --economy-country: the Countries section on one country's page (tab -1: the last one shown).
     void openCountry(const QString &iso3, int tab = -1);
+    // --economy-indicator: the Indicators section on one indicator's table (its English name).
+    void openIndicator(const QString &name);
+    // The AI side panel's context: the section, and the country or indicator open in it.
+    Q_INVOKABLE QString aiContext() const;
 
 protected:
     void showEvent(QShowEvent *) override;
@@ -101,6 +109,7 @@ protected:
 private:
     QWidget *buildSection(int index);
     int countriesSection() const { return int(economy::sections().size()); }
+    int indicatorsSection() const { return countriesSection() + 1; }
     QWidget *buildCell(int section, const economy::Cell &cell);
     void reload(bool force);
     void started();
@@ -118,4 +127,5 @@ private:
     QString m_lastError;
     QTimer m_timer;
     CountriesView *m_countries = nullptr;
+    IndicatorsView *m_indicators = nullptr;
 };

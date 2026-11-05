@@ -67,8 +67,9 @@ ResearchPage::ResearchPage(QWidget *parent)
     sh->setContentsMargins(6, 0, 12, 0);
     sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
-    const QStringList names {tr("Key Metrics"), tr("Financials"), tr("Financial Charts"), tr("Ownership"), tr("Ratings"),
-                             tr("Compare"), tr("Compare Charts"), tr("Sectors"), "ICS", "SPLC"};
+    m_sectionNames = {tr("Key Metrics"), tr("Financials"), tr("Financial Charts"), tr("Ownership"), tr("Ratings"),
+                      tr("Compare"), tr("Compare Charts"), tr("Sectors"), "ICS", "SPLC"};
+    const QStringList &names = m_sectionNames;
     for (int i = 0; i < names.size(); ++i) {
         auto *b = new QToolButton;
         b->setObjectName("resSubTab");
@@ -225,4 +226,11 @@ void ResearchPage::refreshQuote()
                                   (state == "REGULAR" ? tr("market open") : tr("at close")) + " · " +
                                       o.value("fullExchangeName").toString().toHtmlEscaped()));
     });
+}
+
+QString ResearchPage::aiContext() const
+{
+    const QString section = m_sectionNames.value(m_tabs->checkedId());
+    if (m_symbol.isEmpty()) return section;
+    return section.isEmpty() ? m_symbol : m_symbol + ", " + section;
 }

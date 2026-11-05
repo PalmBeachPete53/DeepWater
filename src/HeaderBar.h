@@ -33,6 +33,7 @@ signals:
     void navOrderChanged(const QStringList &ids);
     void navHiddenChanged(const QStringList &ids);
     void settingsRequested();
+    void helpRequested();          // the ? icon: the documentation window
     void devToolsToggled(bool on);
 
 protected:

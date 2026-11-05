@@ -98,3 +98,8 @@ void Sparkline::paintEvent(QPaintEvent *)
     p.setBrush(m_color);
     p.drawEllipse(pt(m_values.size() - 1), m_detailed ? 3.5 : 2.0, m_detailed ? 3.5 : 2.0);
 }
+
+QString Sparkline::aiRead() const
+{
+    return aiSeries(QStringLiteral("Trend"), {}, m_values, 6);
+}

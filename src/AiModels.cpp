@@ -4,6 +4,7 @@
 
 #include <QDir>
 #include <QDirIterator>
+#include <QFileInfo>
 #include <QDateTime>
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -317,6 +318,52 @@ bool LocalModels::remove(const QString &id)
     const bool ok = dir.removeRecursively();
     QDir(HuggingFaceHub::modelsRoot()).rmdir(id.section('/', 0, 0));   // the organisation folder, when empty
     return ok;
+}
+
+LocalModels::FileKind LocalModels::fileKind(const QString &file)
+{
+    static const QStringList weights {"gguf", "safetensors", "onnx"};
+    static const QStringList code {"bin", "pt", "pth", "ckpt", "pkl", "pickle", "joblib", "h5", "keras", "py", "pyc", "so", "dylib"};
+    const QString suffix = QFileInfo(file).suffix().toLower();
+    if (weights.contains(suffix)) return FileKind::Weights;
+    if (code.contains(suffix)) return FileKind::Code;
+    return FileKind::Other;
+}
+
+bool LocalModels::runnable(const QStringList &files)
+{
+    for (const QString &f : files)
+        if (QFileInfo(f).suffix().compare("gguf", Qt::CaseInsensitive) == 0) return true;
+    return false;
+}
+
+QHash<QString, LocalModels::Fingerprint> LocalModels::stat(const QString &id)
+{
+    QHash<QString, Fingerprint> out;
+    const QString root = HuggingFaceHub::modelsRoot() + '/' + id;
+    QDirIterator it(root, QDir::Files, QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        const QFileInfo f(it.next());
+        if (f.suffix() == "part") continue;
+        Fingerprint p;
+        p.size = f.size();
+        p.modified = f.lastModified().toMSecsSinceEpoch();
+        out.insert(QDir(root).relativeFilePath(f.filePath()), p);
+    }
+    return out;
+}
+
+QHash<QString, LocalModels::Fingerprint> LocalModels::fingerprint(const QString &id)
+{
+    QHash<QString, Fingerprint> out = stat(id);
+    const QString root = HuggingFaceHub::modelsRoot() + '/' + id;
+    for (auto it = out.begin(); it != out.end(); ++it) {
+        QFile f(root + '/' + it.key());
+        QCryptographicHash hash(QCryptographicHash::Sha256);
+        if (f.open(QIODevice::ReadOnly) && hash.addData(&f))
+            it->sha256 = QString::fromLatin1(hash.result().toHex());
+    }
+    return out;
 }
 
 bool LocalModels::removeFile(const QString &id, const QString &file)

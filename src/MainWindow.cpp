@@ -1,6 +1,12 @@
+#include <QPointer>
+#include <QAbstractButton>
 #include "MainWindow.h"
+#include "IndicatorData.h"
+#include "IndicatorsView.h"
+#include "CountriesView.h"
 
 #include "AiPage.h"
+#include "AiRead.h"
 #include "MlData.h"
 #include "AisStream.h"
 #include "CalendarData.h"
@@ -30,6 +36,11 @@
 #include "ResearchPage.h"
 #include "DetailPanel.h"
 #include "DevTools.h"
+#include "AiDock.h"
+#include "SideFlap.h"
+#include "LocalChat.h"
+#include "LocalTools.h"
+#include "McpServer.h"
 #include "MacroIndicators.h"
 #include "MacroPanel.h"
 #include "OverviewPage.h"
@@ -37,6 +48,7 @@
 #include "EconomyPage.h"
 #include "CountryData.h"
 #include "SettingsDialog.h"
+#include "HelpWindow.h"
 #include "SourcesPage.h"
 #include "Theme.h"
 #include "VesselStore.h"
@@ -231,6 +243,8 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     const QString envKey = qEnvironmentVariable("AISSTREAM_API_KEY");
     m_aisKeyFromEnv = !envKey.isEmpty();
     m_ais->setApiKey(m_aisKeyFromEnv ? envKey : settings.value("aisApiKey").toString());
+    // Deepwater's tools served to opencode over MCP, from launch when turned on (AI › Models › Integration).
+    new McpServer(mlSources(), this);
     buildUi();
     // The regimes and volatility forecasts of the Quant › Markov models are re-estimated in the background when
     // they are older than the last trading day.
@@ -240,6 +254,11 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     connect(esc, &QShortcut::activated, this, [this] { clearSelection(); });
     auto *space = new QShortcut(QKeySequence(Qt::Key_Space), this);
     connect(space, &QShortcut::activated, this, [this] { m_globe->toggleAutoSpin(); });
+    // The help, on the chapter of the page shown: F1, and the platform's own (Cmd+? on macOS).
+    for (const QKeySequence &key : {QKeySequence(Qt::Key_F1), QKeySequence(QKeySequence::HelpContents)}) {
+        auto *help = new QShortcut(key, this);
+        connect(help, &QShortcut::activated, this, [this] { openHelp(); });
+    }
 }
 
 MainWindow::~MainWindow()
@@ -290,6 +309,7 @@ void MainWindow::buildUi()
     setCentralWidget(central);
     connect(m_header, &HeaderBar::navigationRequested, this, &MainWindow::showPage);
     connect(m_header, &HeaderBar::settingsRequested, this, &MainWindow::openSettings);
+    connect(m_header, &HeaderBar::helpRequested, this, [this] { openHelp(); });
 
     // The map is built at once, the other pages the first time they are shown. The Charts page is built at
     // once too: it is cheap, and it is what plays an alert's sound and desktop notification.
@@ -313,20 +333,7 @@ void MainWindow::buildUi()
     addPage("news", tr("News"), [] { return new NewsPage; });
     addPage("research", tr("Research"), [] { return new ResearchPage; });
     addPage("quant", tr("Quant"), [this] { return new QuantPage(m_cotReport); });
-    addPage("ai", tr("AI"), [this] {
-        MlDataExporter::Sources ml;
-        ml.key = m_keyIndicators;
-        ml.economy = m_economy;
-        ml.rates = m_worldRates;
-        ml.fx = m_fx;
-        ml.cot = m_cotReport;
-        ml.property = m_propertyCredit;
-        ml.housePrices = m_housePrices;
-        ml.globalDebt = m_globalDebt;
-        ml.bankCredit = m_bankCredit;
-        ml.sectors = m_sectors;
-        return new AiPage(ml);
-    });
+    addPage("ai", tr("AI"), [this] { return new AiPage(mlSources()); });
     addPage("sources", tr("Sources"), [this] {
         auto *sourcesPage = new SourcesPage(sourceTargets());
         connect(sourcesPage, &SourcesPage::aisKeyChanged, this, &MainWindow::setAisKey);
@@ -348,6 +355,22 @@ void MainWindow::buildUi()
     connect(m_header, &HeaderBar::devToolsToggled, this, &MainWindow::setDevToolsEnabled);
     connect(m_devTools, &DevToolsDock::openChanged, this,
             [](bool open) { QSettings().setValue("devtools/open", open); });
+
+    // The AI side panel, under the developer tools' flap: AI › Local's conversation, from any page.
+    m_aiDock = new AiDock(
+        central, m_header->height(),
+        [this]() -> LocalChat * {
+            auto *ai = qobject_cast<AiPage *>(ensurePage("ai"));
+            return ai ? ai->chat() : nullptr;
+        },
+        [this] { return pageContext(); });
+    // The read_page and open_page tools of the read_data skill.
+    LocalTools::setPageAccess(
+        [this](const AiPageRequest &request, std::function<void(const AiPageRead &)> done) { aiReadPage(request, std::move(done)); },
+        [this](const AiPageRequest &request, QString *error) { return aiOpenPage(request, error); });
+    m_aiDock->setRightInset(devEnabled ? SideFlap::Width : 0);
+    m_aiDock->setOpen(QSettings().value("ai/dockOpen", false).toBool(), false);
+    connect(m_aiDock, &AiDock::openChanged, this, [](bool open) { QSettings().setValue("ai/dockOpen", open); });
 
     connect(m_globe, &GlobeWidget::selectionChanged, this, [this](const QVector<int> &sites) {
         if (sites.isEmpty()) {
@@ -410,6 +433,20 @@ void MainWindow::searchSources(const QString &text)
         page->setSearch(text);
 }
 
+void MainWindow::showSourcesTab(int index)
+{
+    showPage("sources");
+    if (auto *page = qobject_cast<SourcesPage *>(m_pages->currentWidget()))
+        page->showTab(index);
+}
+
+void MainWindow::showSourcesDisc(const QString &pin)
+{
+    showPage("sources");
+    if (auto *page = qobject_cast<SourcesPage *>(m_pages->currentWidget()))
+        page->showDisc(pin);
+}
+
 void MainWindow::searchModels(const QString &text)
 {
     showPage("ai");
@@ -422,6 +459,13 @@ void MainWindow::openEconomyCountry(const QString &iso3, int tab)
     showPage("economy");
     if (auto *page = qobject_cast<EconomyPage *>(m_pages->currentWidget()))
         page->openCountry(iso3, tab);
+}
+
+void MainWindow::openEconomyIndicator(const QString &name)
+{
+    showPage("economy");
+    if (auto *page = qobject_cast<EconomyPage *>(m_pages->currentWidget()))
+        page->openIndicator(name);
 }
 
 void MainWindow::filterNews(const QString &ticker)
@@ -466,6 +510,13 @@ void MainWindow::trainMl(const QString &file, const QString &target)
         page->trainMl(file, target);
 }
 
+void MainWindow::runLocalPrompt(const QString &prompt)
+{
+    showPage("ai");
+    if (auto *page = qobject_cast<AiPage *>(m_pages->currentWidget()))
+        page->runLocalPrompt(prompt);
+}
+
 void MainWindow::downloadModelFile(const QString &modelId, const QString &file)
 {
     showPage("ai");
@@ -482,6 +533,22 @@ void MainWindow::scrollDetailToEnd(double fraction)
         for (QScrollArea *area : page->findChildren<QScrollArea *>())
             if (area->isVisible() && area->verticalScrollBar())
                 area->verticalScrollBar()->setValue(int(area->verticalScrollBar()->maximum() * fraction));
+}
+
+MlDataExporter::Sources MainWindow::mlSources() const
+{
+    MlDataExporter::Sources ml;
+    ml.key = m_keyIndicators;
+    ml.economy = m_economy;
+    ml.rates = m_worldRates;
+    ml.fx = m_fx;
+    ml.cot = m_cotReport;
+    ml.property = m_propertyCredit;
+    ml.housePrices = m_housePrices;
+    ml.globalDebt = m_globalDebt;
+    ml.bankCredit = m_bankCredit;
+    ml.sectors = m_sectors;
+    return ml;
 }
 
 SourcesPage::Targets MainWindow::sourceTargets() const
@@ -533,7 +600,8 @@ SourcesPage::Targets MainWindow::sourceTargets() const
 void MainWindow::rebuildUi()
 {
     const GlobeWidget::ViewState view = m_globe->viewState();
-    const bool chartsShown = m_pages->currentWidget() == m_quantPage;
+    // The page shown comes back after the rebuild (a theme or language change), whichever it was.
+    const QString shown = m_pageById.key(m_pages->currentWidget());
     if (m_quantPage)
         m_quantPage->setParent(nullptr);   // survives the rebuild
     QWidget *old = takeCentralWidget();
@@ -541,8 +609,8 @@ void MainWindow::rebuildUi()
     old->deleteLater();
     buildUi();
     m_globe->setViewState(view);
-    if (chartsShown)
-        showPage("charts");
+    if (!shown.isEmpty())
+        showPage(shown);
 }
 
 void MainWindow::setLanguage(const QString &code)
@@ -554,6 +622,8 @@ void MainWindow::setLanguage(const QString &code)
     rebuildUi();
     if (m_settings)
         m_settings->setCurrent(m_language, Theme::current().id);
+    if (m_help)
+        m_help->setLanguage(m_language);
 }
 
 void MainWindow::setTheme(const QString &id)
@@ -565,6 +635,8 @@ void MainWindow::setTheme(const QString &id)
     rebuildUi();
     if (m_settings)
         m_settings->setCurrent(m_language, Theme::current().id);
+    if (m_help)
+        m_help->retheme();
 }
 
 void MainWindow::setAisKey(const QString &key)
@@ -638,6 +710,21 @@ QWidget *MainWindow::settingsWindow() const
     return m_settings;
 }
 
+void MainWindow::openHelp(const QString &chapter)
+{
+    if (!m_help) {
+        m_help = new HelpWindow(m_language, this);
+        // Float it under the ? icon, top-right of the window, inside the screen on a narrow window.
+        m_help->move(mapToGlobal(QPoint(qMax(0, width() - m_help->width() - 24), 64)));
+    }
+    m_help->showChapter(chapter.isEmpty() ? m_pageById.key(m_pages->currentWidget()) : chapter);
+}
+
+QWidget *MainWindow::helpWindow() const
+{
+    return m_help;
+}
+
 void MainWindow::setDevToolsEnabled(bool on)
 {
     QSettings().setValue("devtools/enabled", on);
@@ -645,6 +732,8 @@ void MainWindow::setDevToolsEnabled(bool on)
     m_devTools->setVisible(on);
     if (!on)
         m_devTools->setOpen(false, false);
+    if (m_aiDock)
+        m_aiDock->setRightInset(on ? SideFlap::Width : 0);
 }
 
 void MainWindow::setDevToolsOpen(bool open)
@@ -656,6 +745,7 @@ void MainWindow::setDevToolsOpen(bool open)
 
 void MainWindow::addPage(const QString &id, const QString &label, QWidget *page)
 {
+    m_pageLabels.insert(id, label);
     m_pages->addWidget(page);
     m_pageById.insert(id, page);
     m_header->addNavItem(id, label);
@@ -663,21 +753,247 @@ void MainWindow::addPage(const QString &id, const QString &label, QWidget *page)
 
 void MainWindow::addPage(const QString &id, const QString &label, std::function<QWidget *()> factory)
 {
+    m_pageLabels.insert(id, label);
     m_pageFactories.insert(id, std::move(factory));
     m_header->addNavItem(id, label);
 }
 
-void MainWindow::showPage(const QString &id)
+QWidget *MainWindow::ensurePage(const QString &id)
 {
     if (const auto factory = m_pageFactories.take(id)) {
         QWidget *page = factory();
         m_pages->addWidget(page);
         m_pageById.insert(id, page);
     }
-    if (QWidget *page = m_pageById.value(id)) {
+    return m_pageById.value(id);
+}
+
+void MainWindow::showPage(const QString &id)
+{
+    if (QWidget *page = ensurePage(id)) {
         m_pages->setCurrentWidget(page);
         m_header->setCurrent(id);
     }
+    if (m_aiDock)
+        m_aiDock->refreshContext();
+}
+
+namespace {
+
+constexpr char AiPages[] = "map, overview, economy, forex, charts, calendar, news, research or quant";
+constexpr int AiReadTick = 1500;
+constexpr int AiReadTicks = 8;
+
+// Still waiting for its data: cells that are placeholders.
+bool looksLoading(const QString &text)
+{
+    return text.contains(QString::fromUtf8("…\n")) || text.endsWith(QString::fromUtf8("…")) || text.count(QString::fromUtf8("—")) > 3
+           || text.isEmpty();
+}
+
+int countryTabIndex(const QString &name)
+{
+    const QVector<countries::TabDef> &tabs = countries::catalogue().tabs;
+    for (int i = 0; i < tabs.size(); ++i)
+        if (name.compare(QString::fromUtf8(tabs[i].name.toUtf8()), Qt::CaseInsensitive) == 0
+            || name.compare(countries::text(tabs[i].name), Qt::CaseInsensitive) == 0)
+            return i;
+    return -1;
+}
+
+} // namespace
+
+// Reads again until the data has arrived or a few seconds have gone; `read` must leave everything as it found it.
+void MainWindow::aiPoll(std::function<AiPageRead()> read, std::function<void()> finished, std::function<void(const AiPageRead &)> done,
+                        int tick, qsizetype previous)
+{
+    AiPageRead result = read();
+    if (!result.error.isEmpty()) {
+        finished();
+        done(result);
+        return;
+    }
+    const qsizetype size = result.text.size();
+    const bool stable = tick > 0 && std::abs(size - previous) <= size / 50;
+    if ((stable && !looksLoading(result.text)) || tick >= AiReadTicks) {
+        result.stillLoading = looksLoading(result.text);
+        finished();
+        done(result);
+        return;
+    }
+    QTimer::singleShot(AiReadTick, this, [this, read, finished, done, tick, size] { aiPoll(read, finished, done, tick + 1, size); });
+}
+
+void MainWindow::aiReadPage(const AiPageRequest &request, std::function<void(const AiPageRead &)> done)
+{
+    // A country's or an indicator's sheet: one of its own, shown nowhere, so that the one the user has open stays.
+    if (!request.country.isEmpty() || !request.indicator.isEmpty()) {
+        const QVariant savedTab = QSettings().value("economy/countryTab");
+        QWidget *sheet = nullptr;
+        QString name;
+        if (!request.country.isEmpty()) {
+            const int tab = request.tab.isEmpty() ? 0 : countryTabIndex(request.tab);
+            if (tab < 0) {
+                AiPageRead read;
+                read.error = "unknown tab \"" + request.tab + "\"";
+                for (const countries::TabDef &t : countries::catalogue().tabs) read.sections << t.name;
+                done(read);
+                return;
+            }
+            auto *page = new CountryPage(request.country);
+            page->showTab(tab);
+            name = page->aiContext();
+            sheet = page;
+        } else {
+            const countries::ListItem *item = countries::findListItem(request.indicator);
+            if (!item || item->ids.isEmpty()) {
+                AiPageRead read;
+                read.error = "unknown indicator \"" + request.indicator + "\": see list_data, or the English name shown in Economy › Indicators";
+                done(read);
+                return;
+            }
+            auto *page = new IndicatorPage(*item);
+            name = page->name();
+            sheet = page;
+        }
+        sheet->setAttribute(Qt::WA_DontShowOnScreen);
+        sheet->resize(m_pages->size());
+        sheet->show();
+        const QPointer<QWidget> guard(sheet);
+        aiPoll([guard, name] {
+                   AiPageRead read;
+                   read.page = name;
+                   read.onScreen = false;
+                   if (guard) read.text = ::aiReadPage(guard);
+                   return read;
+               },
+               [guard, savedTab] {
+                   delete guard.data();
+                   if (savedTab.isValid()) QSettings().setValue("economy/countryTab", savedTab);
+                   else QSettings().remove("economy/countryTab");
+               },
+               std::move(done), 0, 0);
+        return;
+    }
+
+    const QString id = request.page.isEmpty() ? m_pageById.key(m_pages->currentWidget()) : request.page;
+    AiPageRead refused;
+    refused.page = m_pageLabels.value(id);
+    if (id == "sources" || id == "ai") {
+        refused.error = "not allowed: the " + id + " page can't be read";
+        done(refused);
+        return;
+    }
+    if (!m_pageLabels.contains(id) || !ensurePage(id)) {
+        refused.error = "unknown page \"" + request.page + "\": " + AiPages;
+        done(refused);
+        return;
+    }
+    const QString section = request.section;
+    auto once = [this, id, section] {
+        AiPageRead read;
+        QWidget *page = ensurePage(id);
+        read.onScreen = page == m_pages->currentWidget();
+        read.page = read.onScreen ? pageContext() : m_pageLabels.value(id);
+        // A page not on screen is really shown, past the edge of its parent, for the time of the read: its views load and
+        // draw as usual, and nothing reaches the screen. The map and the charts are always loaded, and the globe is heavy.
+        const bool place = !read.onScreen && id != "map" && id != "charts";
+        if (place) {
+            page->setGeometry(QRect(QPoint(m_pages->width() + 100, 0), m_pages->size()));
+            page->show();
+        } else if (!read.onScreen) {
+            page->resize(m_pages->size());
+        }
+        if (page->layout()) page->layout()->activate();
+        const QVector<QAbstractButton *> buttons = aiSectionButtons(page);
+        QAbstractButton *open = nullptr;
+        for (QAbstractButton *b : buttons) {
+            read.sections << aiSectionName(b);
+            if (b->isChecked() && !open) open = b;
+        }
+        QAbstractButton *wanted = section.isEmpty() ? open : aiFindSection(buttons, section);
+        if (!section.isEmpty() && !wanted) {
+            read.error = "no section \"" + section + "\" on " + id;
+        } else {
+            if (wanted && wanted != open) wanted->click();
+            if (wanted) read.section = aiSectionName(wanted);
+            if (page->layout()) page->layout()->activate();
+            read.text = ::aiReadPage(page);
+            if (wanted && open && wanted != open) open->click();   // in the same tick: nothing was painted
+        }
+        if (place) {
+            page->hide();
+            page->setGeometry(m_pages->rect());
+        }
+        return read;
+    };
+    // What is on screen is already there.
+    if (id == m_pageById.key(m_pages->currentWidget()) && section.isEmpty()) {
+        done(once());
+        return;
+    }
+    aiPoll(once, [] {}, std::move(done), 0, 0);
+}
+
+QString MainWindow::aiOpenPage(const AiPageRequest &request, QString *error)
+{
+    if (!request.country.isEmpty()) {
+        const int tab = request.tab.isEmpty() ? -1 : countryTabIndex(request.tab);
+        if (!request.tab.isEmpty() && tab < 0) {
+            *error = "unknown tab \"" + request.tab + "\"";
+            return {};
+        }
+        openEconomyCountry(request.country, tab);
+        return pageContext();
+    }
+    if (!request.indicator.isEmpty()) {
+        if (!countries::findListItem(request.indicator)) {
+            *error = "unknown indicator \"" + request.indicator + "\"";
+            return {};
+        }
+        openEconomyIndicator(request.indicator);
+        return pageContext();
+    }
+    const QString id = request.page.isEmpty() ? m_pageById.key(m_pages->currentWidget()) : request.page;
+    if (!m_pageLabels.contains(id) || !ensurePage(id)) {
+        *error = "unknown page \"" + request.page + "\": " + QString(AiPages) + ", sources or ai";
+        return {};
+    }
+    // Checked first: a section that doesn't exist doesn't move the user.
+    QAbstractButton *wanted = nullptr;
+    if (!request.section.isEmpty()) {
+        const QVector<QAbstractButton *> buttons = aiSectionButtons(ensurePage(id));
+        wanted = aiFindSection(buttons, request.section);
+        if (!wanted) {
+            QStringList names;
+            for (const QAbstractButton *b : buttons) names << aiSectionName(b);
+            *error = "no section \"" + request.section + "\" on " + id + ": " + names.join(", ");
+            return {};
+        }
+    }
+    showPage(id);
+    if (wanted) wanted->click();
+    return pageContext();
+}
+
+QString MainWindow::pageContext() const
+{
+    QWidget *page = m_pages->currentWidget();
+    const QString id = m_pageById.key(page);
+    QString detail;
+    if (id == "map" && !m_selectedCountry.isEmpty())
+        detail = QStringLiteral("%1 (%2)").arg(countries::countryName(m_selectedCountry), m_selectedCountry);
+    else if (page && page->metaObject()->indexOfMethod("aiContext()") >= 0)
+        QMetaObject::invokeMethod(page, "aiContext", Qt::DirectConnection, Q_RETURN_ARG(QString, detail));
+    const QString label = m_pageLabels.value(id);
+    return detail.isEmpty() ? label : label + QString::fromUtf8(" › ") + detail;
+}
+
+void MainWindow::askAiDock(const QString &prompt)
+{
+    if (!m_aiDock) return;
+    if (prompt.isEmpty()) m_aiDock->setOpen(true, false);
+    else m_aiDock->ask(prompt);
 }
 
 void MainWindow::selectVessel(qint64 mmsi, bool fly)

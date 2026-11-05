@@ -27,6 +27,8 @@ class CountryPage : public QWidget
 public:
     explicit CountryPage(const QString &iso3, QWidget *parent = nullptr);
     void showTab(int index);
+    // "France (FRA), Prices": the AI side panel's context.
+    QString aiContext() const;
 
 signals:
     void back();
@@ -66,6 +68,7 @@ public:
     explicit CountriesView(QWidget *parent = nullptr);
     void openCountry(const QString &iso3, int tab = -1);
     void showList();
+    QString aiContext() const;   // the country open, if any
 
 private:
     void filter(const QString &text);

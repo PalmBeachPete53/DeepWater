@@ -167,6 +167,9 @@ struct Panels::Private
     void runTester();
     void showResult(const panels::TesterResult &r);
     void applyStrategy(const QJsonObject &s, const QString &name);
+    // Told when the run started last ends: "" once its result is shown, else the error (Panels::agentBacktest).
+    QVector<std::function<void(const QString &error)>> testerWaiters;
+    void testerFinished(const QString &error);
 
     // ---- screener / heatmap (PanelsMarket.cpp) ----
     struct Screener {
@@ -206,6 +209,10 @@ struct Panels::Private
     QStringList paperSymbols() const;
     void fill(const QString &sym, const QString &side, double qty, double px, const QString &note = QString(),
               bool liveAccount = false);
+    // The order ticket's Buy / Sell: at `cur` for a market order, else a working order at `entry`; the stop loss and
+    // take profit (%, 0 = none) as a bracket. "" when placed, else why not.
+    QString placePaperOrder(const QString &sym, const QString &side, const QString &type, double amount, double entry,
+                            double slPct, double tpPct, double cur, const QString &note = QString());
     void checkOrders(const QString &sym, double px);
     double equity();
     void drawPaperNumbers();

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AiRead.h"
+
 #include <QColor>
 #include <QFrame>
 #include <QVector>
@@ -103,10 +105,11 @@ private:
 // The cumulative change of a few series over one time axis (each series as % from its base), the area between
 // zero and the highest series filled green, between zero and the lowest filled red, each line named at its end,
 // a crosshair with every series' value under the mouse.
-class PerfChart : public QWidget
+class PerfChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Series {
         QString name;
         QColor color;

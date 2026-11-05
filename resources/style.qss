@@ -83,6 +83,13 @@ QListWidget#settingsNav::item { color: @TextDim; padding: 8px 10px; border-radiu
 QListWidget#settingsNav::item:hover { background: @Hover; color: @Text; }
 QListWidget#settingsNav::item:selected { background: @Active; color: @Text; }
 QLabel#pageTitle { font-size: 20px; font-weight: 600; }
+
+/* Help window (the header's ? icon); its sidebar wears the settings window's names */
+QDialog#helpWindow { background: @Background; }
+QTextBrowser#helpText {
+    background: @Background; color: @Text; border: none; padding: 0;
+    selection-background-color: @Accent; selection-color: @Background;
+}
 QPushButton#optionCard {
     text-align: left; padding: 12px 14px; border: 1px solid @ControlBorder; border-radius: 10px;
     background: @Panel; color: @Text;
@@ -105,6 +112,18 @@ QPushButton#primaryButton:disabled { background: @ControlBorder; color: @TextFai
 
 /* Sources page */
 QFrame#sourceCard { background: @Panel; border: 1px solid @ControlBorder; border-radius: 10px; }
+QFrame#modelSlot { background: @Panel; border: 1px solid @ControlBorder; border-radius: 10px; }
+QFrame#modelSlot[drop="true"] { border-color: @Accent; background: @Active; }
+QFrame#slotWell { border: 1px dashed @ControlBorderHover; border-radius: 6px; background: @Background; }
+QFrame#slotWell[filled="true"] { border: 1px solid @Accent; }
+QFrame#slotWell[missing="true"] { border: 1px dashed @Down; }
+QLabel#slotModel { font-weight: 600; }
+QLabel#slotState { color: @TextDim; font-size: 11px; }
+QLabel#slotState[tone="good"] { color: @Up; }
+QLabel#slotState[tone="bad"] { color: @Down; }
+QLabel#slotModel[empty="true"] { color: @TextFaint; font-weight: 400; }
+QToolButton#slotClear { background: transparent; border: none; color: @TextFaint; font-size: 12px; padding: 0 2px; }
+QToolButton#slotClear:hover { color: @Text; }
 QPushButton#catalogueHeader {
     background: transparent; border: none; color: @TextSection; font-size: 10px; font-weight: 600; letter-spacing: 1.5px;
     padding: 10px 8px 4px 0; text-align: left;
@@ -361,6 +380,7 @@ QPushButton#ctryItem {
     font-size: 11px; text-align: left; padding: 6px 10px;
 }
 QPushButton#ctryItem:hover { color: @Text; background: @Hover; }
+QPushButton#ctryItem:disabled { color: @TextFaint; }
 #ctryBar { background: @Panel; border-bottom: 1px solid @PanelLine; }
 QToolButton#ctryBack { background: transparent; border: none; color: @TextDim; font-size: 11px; font-weight: 700; padding: 2px 6px; }
 QToolButton#ctryBack:hover { color: @Text; }
@@ -508,3 +528,8 @@ QListWidget#devResults::item:hover { background: @Hover; }
 QListWidget#devLegend { background: @Panel; border: none; }
 QCheckBox#devSelectAll { color: @TextDim; font-size: 12px; spacing: 6px; }
 QLabel#devSideStats { color: @TextFaint; font-size: 11px; padding: 10px 14px; background: @Panel; border-top: 1px solid @PanelLine; }
+/* AI › Models: Local models | Integration */
+#aiModelsSection { background: @Panel; }
+#aiModelsNav { background: transparent; border-bottom: 1px solid @PanelLine; }
+/* The AI side panel (AiDock) */
+#aiDockPanel { background: @Panel; border-left: 1px solid @PanelLine; }

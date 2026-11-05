@@ -3,7 +3,7 @@
 // The liquidity heatmap's data (a Deepwater addition to the Charts tab, not in Quant Terminal): the order book
 // (OrderBook.h) sampled at a fixed interval into columns, each column the resting quantity per price row at that
 // instant, kept in a ring of columns with a bounded memory. Pure code: no network, no painting. The feed
-// (ui/DepthFeed) runs the book and the sampler, the chart layer (ui/HeatmapLayer) reads the store.
+// (server/DepthStream) runs the book and the sampler, the chart layer (ui/HeatmapLayer) reads the store.
 //
 //   updates → OrderBook → Sampler (every 250 ms: the book's state then, summed into rows) → Column → ColumnStore
 //

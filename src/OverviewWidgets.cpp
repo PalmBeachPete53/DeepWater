@@ -592,4 +592,15 @@ void StatsView::paintEvent(QPaintEvent *)
     }
 }
 
+QString PerfChart::aiRead() const
+{
+    QStringList labels;
+    for (qint64 t : m_times) labels << QDateTime::fromSecsSinceEpoch(t).toString(Qt::ISODate).left(16);
+    QStringList out;
+    for (const Series &s : m_series)
+        if (s.visible)
+            if (const QString line = aiSeries(s.name + " (% change)", labels, s.values, 12); !line.isEmpty()) out << line;
+    return out.join('\n');
+}
+
 } // namespace overview

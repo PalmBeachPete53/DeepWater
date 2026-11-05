@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../../AiRead.h"
+
 // Port of quant-terminal/public/js/chart.js (ChartPane). This header is the contract the panels
 // rely on; the implementer adds whatever else chart.js needs (drawings, volume profiles, live
 // socket/polling, legend ...) as further members.
@@ -15,7 +17,6 @@ namespace lw { class Chart; class Series; struct MouseEventParams; struct Series
 
 class QLabel;
 class QTimer;
-class QWebSocket;
 
 namespace qtm {
 
@@ -23,6 +24,7 @@ class DrawingLayer;
 struct Drawing;
 class VolumeProfile;
 class TradeFeed;
+class KlineSubscription;
 class FootprintLayer;
 class BigTradesModel;
 class BigTradesLayer;
@@ -43,10 +45,11 @@ QString newUid();   // JS newUid(): "i" + base36 time + base36 sequence
 // The legend's short name of an indicator: "Relative Strength Index (RSI)" -> "RSI".
 QString shortIndicatorName(const QString &name);
 
-class ChartPane : public QWidget
+class ChartPane : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;   // read_page: its symbol, its latest bars, compared symbols and indicators
     ChartPane(App *app, const PaneConfig &cfg, QWidget *parent = nullptr);
     ~ChartPane() override;
 
@@ -119,6 +122,8 @@ public:
     const std::vector<std::unique_ptr<BigTradesLayer>> &bigTradesLayers() const { return btLayers; }
     // The pane is being thrown away (layout change): stop timers and sockets.
     bool destroyed = false;
+    // Which load() is the latest: a caller that started one knows its own (App::paneLoadedListeners).
+    int currentLoad() const { return loadToken; }
 
 protected:
     void resizeEvent(QResizeEvent *e) override;
@@ -142,7 +147,6 @@ private:
     IndicatorResult computeIndicator(const IndicatorInstance &ind, const Bars &bars);
     void loadMtf(const QString &tf);
     std::optional<std::pair<double, double>> pointAt(const lw::MouseEventParams &p) const;   // time, price
-    void openSocket(const QString &sym, const QString &interval, int hostIdx);
     void poll();
     void catchUp(const Bars &recent);
     void layoutOverlays();
@@ -191,7 +195,7 @@ private:
     QHash<QString, Mtf> mtf;
     QSet<QString> mtfLoading;
     int loadToken = 0;
-    QWebSocket *ws = nullptr;
+    std::unique_ptr<KlineSubscription> klineSub;   // the live candle, from the backend (Binance pairs)
     QTimer *liveTimer = nullptr;
     QTimer *replayTimer = nullptr;
     bool livePaused = false;

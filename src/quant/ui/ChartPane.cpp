@@ -19,6 +19,8 @@
 #include "../core/Error.h"
 #include "../core/JsCompat.h"
 #include "../core/Series.h"
+#include "../server/KlineStream.h"
+#include "../server/Server.h"
 
 #include <QCheckBox>
 #include <QDateTime>
@@ -38,7 +40,6 @@
 #include <QStyleOptionButton>
 #include <QTimeZone>
 #include <QTimer>
-#include <QWebSocket>
 
 #include <algorithm>
 #include <cmath>
@@ -68,11 +69,6 @@ namespace {
 
 // Chart types built from price alone, with no meaningful volume per bar.
 const QStringList PRICE_ONLY = {"renko", "linebreak", "kagi", "pnf"};
-const QHash<QString, QString> BINANCE_WS_TF = {
-    {"1s", "1s"}, {"1m", "1m"}, {"3m", "3m"}, {"5m", "5m"}, {"15m", "15m"}, {"30m", "30m"},
-    {"1h", "1h"}, {"2h", "2h"}, {"4h", "4h"}, {"6h", "6h"}, {"8h", "8h"}, {"12h", "12h"},
-    {"1D", "1d"}, {"3D", "3d"}, {"1W", "1w"}, {"1M", "1M"},
-};
 
 QColor css(const QString &name) { return theme::color(name); }
 // A CSS colour, or a theme variable ("--up") so marker colours follow theme changes.
@@ -625,6 +621,7 @@ void ChartPane::load(bool keepView)
                 } catch (const Error &e) {
                     bars.clear();
                     showMsg(QString("Couldn't load %1 on %2.\n%3").arg(theme::esc(cfg.symbol), theme::esc(cfg.tf), theme::esc(e.message())));
+                    app->paneLoadFinished(this, e.message());
                     return;
                 }
                 startLive();
@@ -653,6 +650,7 @@ void ChartPane::load(bool keepView)
             bars.clear();
             render(true);
             showMsg(QString("Couldn't load %1 on %2.\n%3").arg(theme::esc(cfg.symbol), theme::esc(cfg.tf), theme::esc(message)));
+            app->paneLoadFinished(this, message);
         });
 }
 
@@ -1489,9 +1487,12 @@ void ChartPane::syncTradeFeed()
     const QString key = cfg.symbol + "|" + cfg.tf + "|" + QString::number(budget);
     if (!tradeFeed || feedKey != key) {
         if (fpLayer) fpLayer->setFeed(nullptr);
-        delete tradeFeed;
+        // The new feed first: on the same pair (another timeframe, budget) it keeps the backend's stream and its
+        // history, which the old one's going would close.
+        TradeFeed *old = tradeFeed;
         feedKey = key;
         tradeFeed = new TradeFeed(theme::ticker(cfg.symbol), double(parseTf(cfg.tf).seconds), bars.first().time, budget, this);
+        delete old;
         connect(tradeFeed, &TradeFeed::changed, this, [this] {
             if (fpLayer) fpLayer->scheduleUpdate();
             syncBigTrades();
@@ -1533,7 +1534,8 @@ void ChartPane::syncDepthFeed()
     const QString key = cfg.symbol + "|" + QString::number(s.intervalMs);
     if (!depthFeed || depthKey != key) {
         for (auto &l : hmLayers) l->setFeed(nullptr);
-        delete depthFeed;
+        // The new feed before the old one goes: on the same pair (another interval) it keeps the backend's stream.
+        DepthFeed *old = depthFeed;
         depthKey = key;
         DepthFeed::Params p;
         p.intervalMs = s.intervalMs;
@@ -1543,6 +1545,7 @@ void ChartPane::syncDepthFeed()
         p.record = s.record;
         p.keepDays = s.keepDays;
         depthFeed = new DepthFeed(theme::ticker(cfg.symbol), p, this);
+        delete old;
         connect(depthFeed, &DepthFeed::changed, this, [this] {
             if (hmEvents) {
                 hmEvents->sync(depthFeed, tradeFeed, hmLayers.empty() ? heatmap::EventParams{} : hmLayers.front()->settings().eventParams);
@@ -1700,64 +1703,21 @@ void ChartPane::startLive()
         livePaused = true;
         return;
     }
-    const QString ex = theme::exchange(cfg.symbol);
-    const QString wsTf = BINANCE_WS_TF.value(cfg.tf);
-    if (ex == "BINANCE" && provider == "Binance" && !wsTf.isEmpty())
-        openSocket(theme::ticker(cfg.symbol).toLower(), wsTf, 0);
-    else
-        poll();
-}
-
-void ChartPane::openSocket(const QString &sym, const QString &interval, int hostIdx)
-{
-    static const QStringList hosts = {"wss://stream.binance.com:9443/ws/", "wss://data-stream.binance.vision/ws/"};
-    if (hostIdx >= hosts.size()) {
-        poll();
+    // Binance pairs: the backend's candle stream for the pair and timeframe, shared with the other panes on them.
+    const QString interval = KlineStreams::interval(cfg.tf);
+    Backend *backend = Backend::instance();
+    if (theme::exchange(cfg.symbol) == "BINANCE" && provider == "Binance" && !interval.isEmpty() && backend) {
+        klineSub = backend->klineStreams()->subscribe(theme::ticker(cfg.symbol), interval);
+        connect(klineSub.get(), &KlineSubscription::bar, this, [this](const Bar &b) { merge({b}); });
+        connect(klineSub.get(), &KlineSubscription::opened, this, [this] { app->setStatus("ok"); });
+        connect(klineSub.get(), &KlineSubscription::failed, this, [this] {
+            klineSub.release()->deleteLater();   // from inside its own signal
+            poll();                              // no stream host answers: the REST API, as for other exchanges
+        });
+        if (klineSub->connected()) app->setStatus("ok");
         return;
     }
-    auto *sock = new QWebSocket(QString(), QWebSocketProtocol::VersionLatest, this);
-    ws = sock;
-    auto opened = std::make_shared<bool>(false);
-    auto closed = std::make_shared<bool>(false);
-    connect(sock, &QWebSocket::connected, this, [this, opened] {
-        *opened = true;
-        app->setStatus("ok");
-    });
-    connect(sock, &QWebSocket::textMessageReceived, this, [this](const QString &m) {
-        const QJsonObject k = QJsonDocument::fromJson(m.toUtf8()).object().value("k").toObject();
-        if (k.isEmpty()) return;
-        auto num = [&](const char *key) {
-            const QJsonValue v = k.value(key);
-            return v.isString() ? v.toString().toDouble() : v.toDouble();
-        };
-        Bar b;
-        b.time = k.value("t").toDouble() / 1000;
-        b.open = num("o");
-        b.high = num("h");
-        b.low = num("l");
-        b.close = num("c");
-        b.volume = num("v");
-        merge({b});
-    });
-    auto onClose = [this, sock, opened, closed, sym, interval, hostIdx] {
-        if (*closed) return;
-        *closed = true;
-        sock->deleteLater();
-        if (ws != sock) return;
-        ws = nullptr;
-        if (destroyed) return;
-        if (!*opened) openSocket(sym, interval, hostIdx + 1);
-        else {
-            liveTimer->disconnect();
-            connect(liveTimer, &QTimer::timeout, this, [this] { startLive(); });
-            liveTimer->start(3000);
-        }
-    };
-    connect(sock, &QWebSocket::disconnected, this, onClose);
-    connect(sock, &QWebSocket::errorOccurred, this, [sock, onClose](QAbstractSocket::SocketError) {
-        if (sock->state() == QAbstractSocket::UnconnectedState) onClose();
-    });
-    sock->open(QUrl(hosts[hostIdx] + sym + "@kline_" + interval));
+    poll();
 }
 
 void ChartPane::poll()
@@ -1771,11 +1731,11 @@ void ChartPane::poll()
             [this, kind, token](const CandleSet &r) {
                 if (destroyed || token != loadToken) return;
                 merge(r.candles);
-                if (!ws && !replay) liveTimer->start(kind);
+                if (!klineSub && !replay) liveTimer->start(kind);
             },
             [this, kind, token](const QString &) {   // keep trying
                 if (destroyed || token != loadToken) return;
-                if (!ws && !replay) liveTimer->start(kind);
+                if (!klineSub && !replay) liveTimer->start(kind);
             });
     });
     liveTimer->start(kind);
@@ -1785,11 +1745,7 @@ void ChartPane::stopLive()
 {
     liveTimer->stop();
     liveTimer->disconnect();
-    if (ws) {
-        QWebSocket *s = ws;
-        ws = nullptr;
-        s->close();
-    }
+    klineSub.reset();
 }
 
 void ChartPane::pauseLive()
@@ -2339,6 +2295,38 @@ void ChartPane::layoutOverlays()
         replayBar->setGeometry((r.width() - s.width()) / 2, r.height() - navH - 36 - s.height(), s.width(), s.height());
         replayBar->raise();
     }
+}
+
+QString ChartPane::aiRead() const
+{
+    const auto when = [](double time) { return QDateTime::fromSecsSinceEpoch(qint64(time), QTimeZone::UTC).toString("yyyy-MM-dd HH:mm"); };
+    QStringList out {cfg.symbol + ", " + cfg.tf};
+    if (main) {
+        const QVector<lw::DataItem> bars = main->data();
+        QStringList rows;
+        for (qsizetype i = std::max<qsizetype>(0, bars.size() - 20); i < bars.size(); ++i) {
+            const lw::DataItem &b = bars[i];
+            rows << when(b.time) + " open " + aiNumber(b.open) + " high " + aiNumber(b.high) + " low " + aiNumber(b.low) + " close " + aiNumber(std::isfinite(b.close) ? b.close : b.value);
+        }
+        out << QString("%1 bars loaded, the latest:").arg(bars.size()) << rows;
+    }
+    const auto latest = [](lw::Series *series) {
+        const QVector<lw::DataItem> items = series->data();
+        for (qsizetype i = items.size() - 1; i >= 0; --i) {
+            const double v = std::isfinite(items[i].value) ? items[i].value : items[i].close;
+            if (std::isfinite(v)) return aiNumber(v);
+        }
+        return QStringLiteral("-");
+    };
+    for (const auto &c : compareSeries)
+        if (c.second) out << "Compared with " + c.first + ", latest " + latest(c.second);
+    for (auto it = indSeries.begin(); it != indSeries.end(); ++it) {
+        QStringList values;
+        for (lw::Series *s : it.value())
+            if (s) values << latest(s);
+        out << "Indicator " + it.key() + ", latest " + values.join(" / ");
+    }
+    return out.join('\n');
 }
 
 } // namespace qtm

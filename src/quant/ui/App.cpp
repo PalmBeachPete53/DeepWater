@@ -17,6 +17,7 @@
 #include "../core/Series.h"
 #include "../server/Server.h"
 
+#include <utility>
 #include <QApplication>
 #include <QAudioFormat>
 #include <QAudioSink>
@@ -486,8 +487,18 @@ struct App::Ui {
     bool syncing = false;
 };
 
+namespace {
+App *g_current = nullptr;
+}
+
+App *App::current()
+{
+    return g_current;
+}
+
 App::App(QWidget *parent) : QWidget(parent), ui(new Ui)
 {
+    g_current = this;
     setObjectName("qtmRoot");
     setAttribute(Qt::WA_StyledBackground);
     setFocusPolicy(Qt::ClickFocus);
@@ -513,6 +524,7 @@ App::App(QWidget *parent) : QWidget(parent), ui(new Ui)
 
 App::~App()
 {
+    if (g_current == this) g_current = nullptr;
     qApp->removeEventFilter(this);
     for (auto *p : panes) p->destroy();
     // The panels go first, while the widgets they placed in our layout still exist.
@@ -880,8 +892,16 @@ void App::setActive(ChartPane *pane)
     if (panels) panels->onActiveChange();
 }
 
+void App::paneLoadFinished(ChartPane *pane, const QString &error)
+{
+    const auto listeners = std::exchange(paneLoadedListeners, {});
+    for (const auto &listener : listeners)
+        if (!listener(pane, error)) paneLoadedListeners << listener;
+}
+
 void App::onPaneLoaded(ChartPane *pane)
 {
+    paneLoadFinished(pane, QString());
     if (pane == active) {
         syncToolbar();
         if (panels) panels->onActiveChange();
@@ -2343,3 +2363,11 @@ void App::hideEvent(QHideEvent *e)
 }
 
 } // namespace qtm
+
+QString qtm::App::aiContext() const
+{
+    if (!active) return {};
+    QString s = active->cfg.symbol + ", " + active->cfg.tf;
+    if (active->replay) s += ", " + tr("bar replay");
+    return s;
+}

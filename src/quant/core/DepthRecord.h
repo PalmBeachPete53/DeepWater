@@ -2,7 +2,7 @@
 
 // Recordings of the liquidity heatmap's order book (a Deepwater addition to the Charts tab, not in Quant Terminal):
 // what Binance sent, so the heatmap can be rebuilt later exactly as it was drawn live. Pure code (no files): the depth
-// feed (ui/DepthFeed) writes the bytes to disk and reads them back.
+// stream (server/DepthStream) writes the bytes to disk and reads them back.
 //
 // A recording is a header and blocks. Header: "DWDEPTH1", a format version (u16), the pair (u8 length + UTF-8), the
 // tick size (f64) and the exchange (u8: 1 = binance.us). A block: its length (u32, big-endian) and qCompress()ed

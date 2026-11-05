@@ -63,7 +63,7 @@ bool BigTradesModel::sync(const TradeFeed *feed, double now)
 {
     const size_t before = m_trades.size();
     if (!feed || !feed->ready()) return false;
-    const auto &tape = feed->tape();
+    const TradeFeed::Tape tape = feed->tape();
     // The history arrives newest first and the detection reads trades in time order: while it loads, everything is run
     // again every 2 s over what has come in (bubbles appear from the newest back), and once more when it's complete.
     const bool loading = feed->loadingHistory();
@@ -88,7 +88,8 @@ BigTradesModel::~BigTradesModel() = default;   // a rebuild still running finish
 void BigTradesModel::startRebuild(const TradeFeed *feed)
 {
     // A copy of the tape (12 MB for 300,000 trades, a few ms): the feed keeps changing meanwhile.
-    std::vector<TradeFeed::TapeTrade> tape(feed->tape().begin(), feed->tape().end());
+    const TradeFeed::Tape view = feed->tape();
+    std::vector<TradeFeed::TapeTrade> tape(view.begin(), view.end());
     const Params p = m_p;
     const quint64 gen = feed->tapeGeneration();
     const bool complete = !feed->loadingHistory();

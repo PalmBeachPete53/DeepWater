@@ -12,7 +12,8 @@ Rules:
 ## Deepwater
 
 Qt 6 (with WebEngine) / C++20 desktop app (CMake); `cargo` builds `third_party/adblock-ffi` (the reader's ad blocker)
-when present; on macOS the News reader renders with the system's WebKit (`src/NewsWebHostMac.mm`, Objective-C++). `README.md` documents every tab, data source and the layout of `src/`; read its
+when present; `third_party/llama.cpp` (vendored, Metal) builds `deepwater-llm`, the sandboxed local-model helper in the
+bundle (AI › Local, one-architecture builds only); on macOS the News reader renders with the system's WebKit (`src/NewsWebHostMac.mm`, Objective-C++). `README.md` documents every tab, data source and the layout of `src/`; read its
 section for the tab you touch before changing it, and keep it current when you add something.
 
 Build and tests:
@@ -21,14 +22,18 @@ Build and tests:
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt
 cmake --build build -j 10 --target deepwater
 ./build/tests-quant/markov/qtm_test_markov [hmm|garch|execution]   # the Markov engine (src/markov)
+./build/tests-quant/fusion/qtm_test_fusion                          # data fusion: golden records from several sources (src/fusion)
 ./build/tests-quant/core/qtm_test_core                              # the Charts port, against the JS references
 ./build/tests-quant/footprint/qtm_test_footprint                    # the footprint chart's aggregation (src/quant/core/Footprint.*)
 ./build/tests-quant/bigtrades/qtm_test_bigtrades                    # Big Trades: aggregation, thresholds, bubbles (src/quant/core/BigTrades.*)
+./build/tests-quant/tradestream/qtm_test_tradestream                # the Binance trades shared by the chart panes (server/TradeStream, ui/TradeFeed), fake source
+./build/tests-quant/depthstream/qtm_test_depthstream                # the order book depth shared by the chart panes (server/DepthStream, ui/DepthFeed), fake source, ~9 s
+./build/tests-quant/klinestream/qtm_test_klinestream                # the live candles shared by the chart panes (server/KlineStream), fake source
 ./build/tests-quant/navigator/qtm_test_navigator                    # the range slider under the charts (core/RangeSlider + ChartNavigator on a real chart, offscreen)
 ./build/tests-quant/heatmap/qtm_test_heatmap [load]                 # liquidity heatmap: book, sampling, store, pyramid, filters, events, recordings (src/quant/core/OrderBook.*, Heatmap*.*, DepthRecord.*)
 ./build/tests-quant/pinets/qtm_test_pinets                          # Pine Script via PineTS on Node.js (src/quant/core/PineScript.cpp); SKIPPED without Node
 deepwater --pine-js file.pine                                      # print the JavaScript PineTS runs for a Pine Script and exit
-deepwater [--theme <id>] --page <id> [--devtools] [--country FRA] [--indicator <n>] [--search <text>] [--ai-search <text>] [--news-ticker <sym>] [--news-article <n>] [--news-favorite <n>] [--news-url <url>] [--settings [0|1]] [--ml-train <csv> <target>] [--scroll <0..1>|--scroll-end] --delay <ms> --screenshot out.png   # render a page (a country sheet, a heatmap, the Sources page) and exit
+deepwater [--theme <id>] --page <id> [--devtools] [--country FRA] [--indicator <n>] [--search <text>] [--ai-search <text>] [--ai-local <prompt>] [--ai-dock [prompt]] [--news-ticker <sym>] [--news-article <n>] [--news-favorite <n>] [--news-url <url>] [--settings [0|1]] [--sources-tab 0|1] [--sources-disc [floor:1|ai:0|access:2|open:source:3]] [--help-page [chapter]] [--ml-train <csv> <target>] [--scroll <0..1>|--scroll-end] --delay <ms> --screenshot out.png   # render a page (a country sheet, a heatmap, the Sources page) and exit
 ```
 
 Working rules:
@@ -42,7 +47,8 @@ Working rules:
   queries; free-text `graphify query` is keyword-based and noisy. Method calls through a pointer
   (`MarketState::instance()->publishRegime(...)`) and Qt `connect()` links are not call edges: grep for those.
 - UI checks run the real app, which writes the user's own QSettings: export `com.deepwater.Deepwater` with
-  `defaults export` before a test launch and import it back after; never leave a launch without a timeout.
+  `defaults export` before a test launch and import it back after, then `defaults delete` the keys the launch added
+  (`defaults import` keeps them); never leave a launch without a timeout.
 - The whole UI is translated (`i18n/deepwater_fr.ts`, refreshed with `cmake --build build --target deepwater_lupdate`;
   keep it at 0 unfinished). Strings saved on disk (regime names, model names) are stored in English and translated
   when shown; see README › Translations.

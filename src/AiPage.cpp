@@ -1,5 +1,9 @@
 #include "AiPage.h"
+#include "ModelSlots.h"
 
+#include "AiLocalView.h"
+#include "AiOpencodeView.h"
+#include "LocalChat.h"
 #include "AiMlView.h"
 
 #include "KeyedSources.h"
@@ -15,17 +19,14 @@
 #include <QLineEdit>
 #include <QLocale>
 #include <QMessageBox>
-#include <QPlainTextEdit>
 #include <QProgressBar>
 #include <QPushButton>
-#include <QScrollBar>
-#include <QShortcut>
 #include <QSettings>
+#include <QScrollArea>
 #include <QSplitter>
 #include <QStackedWidget>
 #include <QStorageInfo>
 #include <QTableWidget>
-#include <QTextEdit>
 #include <QToolButton>
 #include <QUrl>
 #include <QVBoxLayout>
@@ -91,17 +92,19 @@ AiModelsView::AiModelsView(QWidget *parent)
     , m_local(new LocalModels(this))
 {
     auto *v = new QVBoxLayout(this);
-    v->setContentsMargins(32, 22, 32, 24);
+    v->setContentsMargins(0, 0, 0, 0);
     v->setSpacing(8);
 
-    auto *title = new QLabel(tr("Models"));
-    title->setObjectName("title");
-    v->addWidget(title);
-    v->addWidget(dimLabel(tr("The models kept on this computer, and the Hugging Face Hub to get more: search a model, pick its "
-                             "files (a GGUF quantisation, the safetensors weights…) and download them into the app's models "
-                             "folder; downloads resume where they stopped. A Hub token (Sources › AI) opens gated repositories.")));
+    // The description and the token state go in the page's header, above its navigation bar (AiPage).
+    m_header = new QWidget;
+    auto *hv = new QVBoxLayout(m_header);
+    hv->setContentsMargins(0, 0, 0, 0);
+    hv->setSpacing(8);
+    hv->addWidget(dimLabel(tr("The models kept on this computer, and the Hugging Face Hub to get more: search a model, pick its "
+                              "files (a GGUF quantisation, the safetensors weights…) and download them into the app's models "
+                              "folder; downloads resume where they stopped. A Hub token (Sources › AI) opens gated repositories.")));
     m_tokenState = dimLabel();
-    v->addWidget(m_tokenState);
+    hv->addWidget(m_tokenState);
 
     // Search
     auto *searchRow = new QHBoxLayout;
@@ -127,6 +130,7 @@ AiModelsView::AiModelsView(QWidget *parent)
     m_results->setColumnWidth(2, 100);
     m_results->setColumnWidth(3, 70);
     m_results->setColumnWidth(4, 100);
+    m_results->setMinimumHeight(240);
     lv->addWidget(m_results, 1);
     split->addWidget(left);
 
@@ -139,6 +143,7 @@ AiModelsView::AiModelsView(QWidget *parent)
     m_files = table({tr("File"), tr("Size")});
     m_files->setColumnWidth(1, 90);
     m_files->setSelectionMode(QAbstractItemView::NoSelection);
+    m_files->setMinimumHeight(240);
     rv->addWidget(m_files, 1);
     auto *fileButtons = new QHBoxLayout;
     m_downloadButton = segButton(tr("Download the ticked files"));
@@ -174,6 +179,7 @@ AiModelsView::AiModelsView(QWidget *parent)
     m_installed->setColumnWidth(1, 70);
     m_installed->setColumnWidth(2, 90);
     m_installed->setColumnWidth(3, 130);
+    m_installed->setMinimumHeight(130);
     v->addWidget(m_installed, 2);
     auto *installedButtons = new QHBoxLayout;
     m_openFolder = segButton(tr("Open the folder"));
@@ -182,6 +188,11 @@ AiModelsView::AiModelsView(QWidget *parent)
     installedButtons->addWidget(m_remove);
     installedButtons->addStretch(1);
     v->addLayout(installedButtons);
+    // Slots: a model dragged from the list above gets the skills of its slot, and nothing else.
+    m_installed->setDragEnabled(true);
+    m_installed->setDragDropMode(QAbstractItemView::DragOnly);
+    m_installed->setToolTip(tr("Drag a model into a slot below to give it skills"));
+    m_slots = new ModelSlotsView;   // placed by AiPage, under both parts of Models
 
     connect(go, &QPushButton::clicked, this, &AiModelsView::search);
     connect(m_search, &QLineEdit::returnPressed, this, &AiModelsView::search);
@@ -305,11 +316,21 @@ void AiModelsView::showFiles(const QString &modelId, const QVector<HuggingFaceHu
     qint64 total = 0;
     for (int i = 0; i < files.size(); ++i) {
         const HuggingFaceHub::File &f = files[i];
-        auto *name = new QTableWidgetItem(f.name + (have.contains(f.name) ? tr(" · on this computer") : QString()));
+        const LocalModels::FileKind kind = LocalModels::fileKind(f.name);
+        const bool code = kind == LocalModels::FileKind::Code;
+        auto *name = new QTableWidgetItem(f.name + (have.contains(f.name) ? tr(" · on this computer") : QString())
+                                          + (code ? tr(" · can run code") : QString()));
         name->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable);
-        // The weights are ticked, the small files (README, config) too since they're cheap; already-there files aren't.
-        const bool weight = f.name.endsWith(".gguf") || f.name.endsWith(".safetensors") || f.name.endsWith(".bin") || f.name.endsWith(".onnx");
-        name->setCheckState(have.contains(f.name) ? Qt::Unchecked : weight || f.size < 5 * 1024 * 1024 ? Qt::Checked : Qt::Unchecked);
+        // The weights in data-only formats are ticked, the small files (README, config) too since they're cheap;
+        // already-there files aren't, nor those that can run code when loaded (pickle, Python), which are marked.
+        const bool weight = kind == LocalModels::FileKind::Weights;
+        name->setCheckState(have.contains(f.name) || code ? Qt::Unchecked
+                            : weight || f.size < 5 * 1024 * 1024 ? Qt::Checked : Qt::Unchecked);
+        if (code) {
+            name->setForeground(Theme::current().Down);
+            name->setToolTip(tr("This format can run code when it is loaded (a pickle file or Python code). Deepwater "
+                                "never loads it, and the local engine reads GGUF files only."));
+        }
         m_files->setItem(i, 0, name);
         auto *size = new QTableWidgetItem(f.size >= 0 ? LocalModels::formatBytes(f.size) : QString::fromUtf8("—"));
         size->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
@@ -366,6 +387,17 @@ void AiModelsView::updateSelectionSize()
 
 void AiModelsView::downloadSelected()
 {
+    QStringList code;
+    for (int i = 0; i < m_files->rowCount() && i < m_currentFiles.size(); ++i)
+        if (m_files->item(i, 0)->checkState() == Qt::Checked
+            && LocalModels::fileKind(m_currentFiles[i].name) == LocalModels::FileKind::Code)
+            code << m_currentFiles[i].name;
+    if (!code.isEmpty()
+        && QMessageBox::question(this, tr("Files that can run code"),
+                                 tr("%1 can run code when loaded. Deepwater never loads them, but another program "
+                                    "opening them could. Download them anyway?").arg(code.join(", ")),
+                                 QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes)
+        return;
     for (int i = 0; i < m_files->rowCount() && i < m_currentFiles.size(); ++i)
         if (m_files->item(i, 0)->checkState() == Qt::Checked)
             m_hub->download(m_currentModel, m_currentFiles[i].name, m_currentFiles[i].size, m_currentFiles[i].sha256);
@@ -453,6 +485,7 @@ void AiModelsView::refreshInstalled()
         item(2, LocalModels::formatBytes(e.bytes), Qt::AlignRight);
         item(3, loc.toString(e.modified, QLocale::ShortFormat));
     }
+    m_slots->setInstalled(list);
     m_installedNote->setText(list.isEmpty()
                                  ? tr("No model yet. They go to %1.").arg(HuggingFaceHub::modelsRoot())
                                  : tr("%n model(s), %1, in %2.", nullptr, list.size()).arg(LocalModels::formatBytes(total), HuggingFaceHub::modelsRoot()));
@@ -474,19 +507,26 @@ void AiModelsView::removeInstalled()
 
 // ---------------------------------------------------------------- AiClaudeView
 
-AiClaudeView::AiClaudeView(QWidget *parent)
+AiClaudeView::AiClaudeView(ModelSlotsView *slotsView, QWidget *parent)
     : QWidget(parent)
     , m_claude(new ClaudeClient(this))
 {
     auto *v = new QVBoxLayout(this);
-    v->setContentsMargins(32, 22, 32, 24);
+    v->setContentsMargins(0, 0, 0, 0);
     v->setSpacing(8);
-    auto *title = new QLabel(tr("Claude"));
-    title->setObjectName("title");
-    v->addWidget(title);
-    v->addWidget(dimLabel(tr("A conversation with Claude through the Anthropic API, streamed as it is written. The model "
-                             "thinks adaptively; Effort sets how deep. On the models that support it, a safety refusal is "
-                             "re-run by the server on a fallback model inside the same call. The key is entered in Sources › AI.")));
+    // The description goes in the page's header, above its navigation bar (AiPage); Claude, then opencode, below it.
+    m_header = new QWidget;
+    auto *hv = new QVBoxLayout(m_header);
+    hv->setContentsMargins(0, 0, 0, 0);
+    hv->setSpacing(8);
+    hv->addWidget(dimLabel(tr("Models and agents outside the app: Claude, which the app calls through the Anthropic API, and "
+                              "opencode, which reads Deepwater's data through MCP. Drag one into a slot below to give it skills.")));
+
+    v->addWidget(sectionLabel(tr("Claude")));
+    v->addWidget(modelslots::integrationChip(modelslots::ClaudeId, slotsView));
+    v->addWidget(dimLabel(tr("Claude through the Anthropic API: the model the app calls and how deep it thinks (Effort; the "
+                             "model thinks adaptively). The models list comes from the API once a key is saved. The key is "
+                             "entered in Sources › AI.")));
     m_keyState = dimLabel();
     v->addWidget(m_keyState);
 
@@ -507,98 +547,22 @@ AiClaudeView::AiClaudeView(QWidget *parent)
     controls->addWidget(refreshModels);
     controls->addStretch(1);
     v->addLayout(controls);
-
-    m_system = new QLineEdit;
-    m_system->setObjectName("keyEdit");
-    m_system->setPlaceholderText(tr("System prompt (optional): who Claude is for this conversation"));
-    m_system->setClearButtonEnabled(true);
-    v->addWidget(m_system);
-
-    m_transcript = new QTextEdit;
-    m_transcript->setObjectName("aiTranscript");
-    m_transcript->setReadOnly(true);
-    v->addWidget(m_transcript, 1);
-
-    auto *inputRow = new QHBoxLayout;
-    inputRow->setSpacing(8);
-    m_input = new QPlainTextEdit;
-    m_input->setObjectName("aiInput");
-    m_input->setPlaceholderText(tr("Your message · Cmd+Enter sends"));
-    m_input->setFixedHeight(84);
-    inputRow->addWidget(m_input, 1);
-    auto *buttons = new QVBoxLayout;
-    m_send = new QPushButton(tr("Send"));
-    m_send->setObjectName("primaryButton");
-    m_send->setCursor(Qt::PointingHandCursor);
-    m_stop = segButton(tr("Stop"));
-    m_stop->setEnabled(false);
-    m_clear = segButton(tr("New conversation"));
-    buttons->addWidget(m_send);
-    buttons->addWidget(m_stop);
-    buttons->addWidget(m_clear);
-    inputRow->addLayout(buttons);
-    v->addLayout(inputRow);
     m_status = dimLabel();
     v->addWidget(m_status);
+    v->addSpacing(14);
+    v->addWidget(sectionLabel(tr("opencode")));
+    v->addWidget(new AiOpencodeView(slotsView));
 
-    QSettings settings;
-    m_system->setText(settings.value("ai/system").toString());
-    const QString effort = settings.value("ai/effort", "medium").toString();
+    const QString effort = QSettings().value("ai/effort", "medium").toString();
     if (const int i = m_effort->findData(effort); i >= 0)
         m_effort->setCurrentIndex(i);
     setModels(ClaudeClient::knownModels(), QString());
 
-    connect(m_send, &QPushButton::clicked, this, &AiClaudeView::sendMessage);
-    auto *shortcut = new QShortcut(QKeySequence("Ctrl+Return"), m_input);
-    connect(shortcut, &QShortcut::activated, this, &AiClaudeView::sendMessage);
-    connect(m_stop, &QPushButton::clicked, m_claude, &ClaudeClient::abort);
-    connect(m_clear, &QPushButton::clicked, this, [this] {
-        m_messages = QJsonArray();
-        m_transcript->clear();
-        m_status->clear();
-    });
     connect(refreshModels, &QPushButton::clicked, m_claude, &ClaudeClient::listModels);
     connect(m_claude, &ClaudeClient::modelsListed, this, &AiClaudeView::setModels);
-    connect(m_system, &QLineEdit::editingFinished, this, [this] { QSettings().setValue("ai/system", m_system->text()); });
     connect(m_effort, &QComboBox::currentIndexChanged, this, [this] { QSettings().setValue("ai/effort", m_effort->currentData().toString()); });
     connect(m_model, &QComboBox::currentIndexChanged, this, [this] {
         if (m_model->currentIndex() >= 0) QSettings().setValue("ai/model", m_model->currentData().toString());
-    });
-    connect(m_claude, &ClaudeClient::textDelta, this, [this](const QString &text) {
-        m_pending += text;
-        // Rewrite the last bubble as the text grows.
-        QTextCursor c = m_transcript->textCursor();
-        c.movePosition(QTextCursor::End);
-        m_transcript->setTextCursor(c);
-        m_transcript->insertPlainText(text);
-        m_transcript->verticalScrollBar()->setValue(m_transcript->verticalScrollBar()->maximum());
-    });
-    connect(m_claude, &ClaudeClient::thinkingDelta, this, [this](const QString &text) { m_pendingThinking += text; });
-    connect(m_claude, &ClaudeClient::finished, this, [this](const QString &stop, const QString &model, const ClaudeClient::Usage &u, qint64 ms) {
-        m_messages.append(QJsonObject {{"role", "assistant"}, {"content", m_pending}});
-        m_transcript->append(QString());
-        m_send->setEnabled(true);
-        m_stop->setEnabled(false);
-        QString note = tr("%1 · %2 tokens in, %3 out · %4 s").arg(model).arg(u.inputTokens).arg(u.outputTokens).arg(QLocale().toString(ms / 1000.0, 'f', 1));
-        if (u.cacheRead) note += " · " + tr("%1 from cache").arg(u.cacheRead);
-        if (stop == "refusal") note += " · " + tr("the model declined (safety)");
-        else if (stop == "max_tokens") note += " · " + tr("cut at the token limit");
-        if (!m_pendingThinking.isEmpty()) note += " · " + tr("thinking summary available on hover");
-        m_status->setText(note);
-        m_status->setToolTip(m_pendingThinking.left(4000));
-        m_pending.clear();
-        m_pendingThinking.clear();
-    });
-    connect(m_claude, &ClaudeClient::failed, this, [this](const QString &error) {
-        // Keep the question so it can be sent again; drop the half answer.
-        if (!m_messages.isEmpty() && m_messages.last().toObject().value("role").toString() == "user")
-            m_messages.removeLast();
-        m_transcript->append(QString("<span style='color:%1'>%2</span>").arg(Theme::current().Down.name(), error.toHtmlEscaped()));
-        m_send->setEnabled(true);
-        m_stop->setEnabled(false);
-        m_status->setText(error);
-        m_pending.clear();
-        m_pendingThinking.clear();
     });
     updateKeyState();
 }
@@ -613,9 +577,8 @@ void AiClaudeView::showEvent(QShowEvent *e)
 
 void AiClaudeView::updateKeyState()
 {
-    const bool has = m_claude->hasKey();
-    m_keyState->setText(has ? tr("API key saved (Sources › AI).") : tr("No API key: enter one in Sources › AI to talk to Claude."));
-    m_send->setEnabled(has && !m_claude->isBusy());
+    m_keyState->setText(m_claude->hasKey() ? tr("API key saved (Sources › AI).")
+                                           : tr("No API key: enter one in Sources › AI to use Claude."));
 }
 
 void AiClaudeView::setModels(const QVector<ClaudeClient::ModelInfo> &models, const QString &error)
@@ -631,34 +594,8 @@ void AiClaudeView::setModels(const QVector<ClaudeClient::ModelInfo> &models, con
     m_model->setCurrentIndex(std::max(0, index));
     m_model->blockSignals(false);
     m_modelsFromApi = error.isEmpty() && m_claude->hasKey();
-    if (!error.isEmpty())
-        m_status->setText(tr("Couldn't list the models: %1").arg(error));
-}
-
-void AiClaudeView::appendBubble(const QString &role, const QString &text)
-{
-    const Palette &pal = Theme::current();
-    const QString who = role == "user" ? tr("You") : "Claude";
-    m_transcript->append(QString("<div style='color:%1; font-size:10px; letter-spacing:1px'>%2</div>").arg(role == "user" ? pal.Accent.name() : pal.TextDim.name(), who.toUpper()));
-    if (!text.isEmpty())
-        m_transcript->append(text.toHtmlEscaped().replace('\n', "<br>"));
-}
-
-void AiClaudeView::sendMessage()
-{
-    const QString text = m_input->toPlainText().trimmed();
-    if (text.isEmpty() || m_claude->isBusy() || !m_claude->hasKey())
-        return;
-    m_input->clear();
-    m_messages.append(QJsonObject {{"role", "user"}, {"content", text}});
-    appendBubble("user", text);
-    appendBubble("assistant", QString());
-    m_pending.clear();
-    m_pendingThinking.clear();
-    m_send->setEnabled(false);
-    m_stop->setEnabled(true);
-    m_status->setText(tr("Waiting for %1…").arg(m_model->currentText()));
-    m_claude->send(m_model->currentData().toString(), m_system->text(), m_messages, m_effort->currentData().toString(), 16000);
+    m_status->setText(error.isEmpty() ? QString() : tr("Couldn't list the models: %1").arg(error));
+    m_status->setVisible(!error.isEmpty());   // no empty line between Claude and opencode
 }
 
 // ---------------------------------------------------------------- AiPage
@@ -679,7 +616,7 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
     sh->setContentsMargins(6, 0, 12, 0);
     sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
-    const QStringList names {tr("Models"), "Claude", tr("Machine learning")};
+    const QStringList names {tr("Models"), tr("Local"), tr("Machine learning")};
     for (int i = 0; i < names.size(); ++i) {
         auto *b = new QToolButton;
         b->setObjectName("qtSubTab");
@@ -694,8 +631,62 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
     v->addWidget(sub);
     m_stack = new QStackedWidget;
     m_models = new AiModelsView;
-    m_stack->addWidget(m_models);
-    m_stack->addWidget(new AiClaudeView);
+    m_claude = new AiClaudeView(m_models->slotsView());
+    {
+        // Models: the header (title, the description of the part shown, its navigation bar), then the models of this
+        // computer and the Hub (Local models) or the Claude settings (Integration), and the slots under both. Scrolls
+        // when the window is too short for the Hub's tables, the models here and the slots together.
+        auto *scroll = new QScrollArea;
+        scroll->setWidgetResizable(true);
+        scroll->setFrameShape(QFrame::NoFrame);
+        auto *section = new QWidget;
+        section->setObjectName("aiModelsSection");
+        section->setAttribute(Qt::WA_StyledBackground);
+        auto *sv = new QVBoxLayout(section);
+        sv->setContentsMargins(32, 22, 32, 24);
+        sv->setSpacing(8);
+        auto *title = new QLabel(tr("Models"));
+        title->setObjectName("title");
+        sv->addWidget(title);
+        sv->addWidget(m_models->header());
+        sv->addWidget(m_claude->header());
+        auto *nav = new QWidget;
+        nav->setObjectName("aiModelsNav");
+        nav->setAttribute(Qt::WA_StyledBackground);
+        nav->setFixedHeight(34);
+        auto *nh = new QHBoxLayout(nav);
+        nh->setContentsMargins(0, 0, 0, 0);
+        nh->setSpacing(4);
+        m_modelsTabs = new QButtonGroup(this);
+        const QStringList parts {tr("Local models"), tr("Integration")};
+        for (int i = 0; i < parts.size(); ++i) {
+            auto *b = new QToolButton;
+            b->setObjectName("calSubTab");
+            b->setText(parts[i].toUpper());
+            b->setCheckable(true);
+            b->setCursor(Qt::PointingHandCursor);
+            b->setFixedHeight(34);
+            m_modelsTabs->addButton(b, i);
+            nh->addWidget(b);
+        }
+        nh->addStretch(1);
+        sv->addSpacing(4);
+        sv->addWidget(nav);
+        sv->addSpacing(8);
+        // The part not shown is hidden (not stacked), so Integration doesn't keep the Hub's height above the slots.
+        sv->addWidget(m_models, 1);
+        sv->addWidget(m_claude);
+        sv->addSpacing(14);
+        sv->addWidget(m_models->slotsView());
+        sv->addStretch(0);
+        scroll->setWidget(section);
+        m_stack->addWidget(scroll);
+        connect(m_modelsTabs, &QButtonGroup::idClicked, this, &AiPage::showModelsPart);
+        showModelsPart(std::clamp(QSettings().value("ai/modelsPart", 0).toInt(), 0, 1));
+    }
+    m_chat = new LocalChat(m_models->slotsView(), mlSources, this);
+    m_localView = new AiLocalView(m_chat);
+    m_stack->addWidget(m_localView);
     m_ml = new AiMlView(mlSources);
     m_stack->addWidget(m_ml);
     v->addWidget(m_stack, 1);
@@ -703,9 +694,20 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
     showSection(std::clamp(QSettings().value("ai/section", 0).toInt(), 0, m_stack->count() - 1));
 }
 
+void AiPage::showModelsPart(int index)
+{
+    m_modelsTabs->button(index)->setChecked(true);
+    m_models->setVisible(index == 0);
+    m_claude->setVisible(index == 1);
+    m_models->header()->setVisible(index == 0);
+    m_claude->header()->setVisible(index == 1);
+    QSettings().setValue("ai/modelsPart", index);
+}
+
 void AiPage::searchFor(const QString &query)
 {
     showSection(0);
+    showModelsPart(0);
     m_models->searchFor(query);
 }
 
@@ -724,6 +726,7 @@ void AiPage::trainMl(const QString &file, const QString &target)
 void AiPage::downloadFile(const QString &modelId, const QString &file)
 {
     showSection(0);
+    showModelsPart(0);
     m_models->downloadFile(modelId, file);
 }
 
@@ -734,4 +737,10 @@ void AiPage::showSection(int index)
     m_tabs->button(index)->setChecked(true);
     m_stack->setCurrentIndex(index);
     QSettings().setValue("ai/section", index);
+}
+
+void AiPage::runLocalPrompt(const QString &prompt)
+{
+    showSection(1);
+    m_chat->runPrompt(prompt);
 }

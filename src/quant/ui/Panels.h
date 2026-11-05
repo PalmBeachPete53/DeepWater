@@ -12,6 +12,7 @@
 #include <QJsonValue>
 #include <QObject>
 
+#include <functional>
 #include <memory>
 
 class QWidget;
@@ -50,6 +51,27 @@ public:
     // Watchlist quotes are polled every 5 s, except while paused (App::livePaused); resuming
     // refreshes them at once.
     void setQuotesPaused(bool paused);
+
+    // ---- the local models' Trade skill (Deepwater: LocalTools, PanelsAgent.cpp) ----
+    // Done with a JSON result, or {"error": …}. Everything goes through the panels as a click would: the tester
+    // shows the run and marks the chart, the paper panel shows the orders.
+    using AgentDone = std::function<void(const QJsonObject &)>;
+    // The strategy format, the operators, the price fields, the indicators (id, inputs, outputs), the examples and
+    // the saved strategies.
+    QJsonObject agentStrategyHelp() const;
+    // Runs a strategy (JSON, or the name of an example or a saved strategy) in the tester, on the active chart switched
+    // to `symbol` / `tf` when given; the result: what it ran on, the stats, the last trades.
+    void agentBacktest(const QString &symbol, const QString &tf, const QJsonValue &strategy, AgentDone done);
+    // The last run's trades as the tester's CSV export, written to `path` too (when not empty).
+    QJsonObject agentTradesCsv(const QString &path) const;
+    // The live paper account: cash, equity, positions with their P&L, working orders, latest fills.
+    QJsonObject agentPaperAccount();
+    // A live paper order, as the order ticket places it: side buy|sell, type market|limit|stop, amount in the account's
+    // currency, price for limit/stop, optional stop loss / take profit in %. Refused while the active chart is in bar
+    // replay (the ticket would use the practice account), and above the account's equity.
+    void agentPaperOrder(const QJsonObject &order, AgentDone done);
+    QJsonObject agentPaperClose(const QString &symbol);
+    QJsonObject agentPaperCancel(const QString &orderId);
 
     struct Private;
 

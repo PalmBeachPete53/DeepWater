@@ -6,6 +6,7 @@
 #include <QDateTime>
 #include <QHash>
 #include <QJsonObject>
+#include <QSet>
 #include <QNetworkAccessManager>
 #include <QTimer>
 #include <QUrl>
@@ -52,8 +53,12 @@ class TradeFlows;
 class VesselStore;
 class WorldEconomy;
 class WorldPolicyRates;
+class QButtonGroup;
 class QComboBox;
 class QLabel;
+class QScrollArea;
+class QStackedWidget;
+class SourceFlowView;
 class QLineEdit;
 class QPushButton;
 class QVBoxLayout;
@@ -151,6 +156,9 @@ public:
     static bool isEnabled(const QString &id);
     // Dev flag --search: fills the search box (screenshots).
     void setSearch(const QString &text);
+    // The sub-tabs: 0 the list of sources, 1 the diagram of the data (Data). Kept in "sources/tab".
+    void showTab(int index);
+    void showDisc(const QString &pin);   // dev flag --sources-disc: the diagram's disc view
     // Turns off every source the settings say is off (call once the targets exist).
     static void applySaved(const Targets &targets);
 
@@ -186,12 +194,14 @@ private:
         QWidget *card = nullptr;
         QString publisher;   // Kind::Publisher: the survey publisher's id
         QString search;      // name, provider, host and feeds, lower case: what the search box matches
+        QString name, provider, section, host;   // as shown, for the Data diagram
         int catalogue = -1;  // index in OfficialSources for a catalogue source
     };
     // A section of the page: its heading and the ids of its rows (hidden together when a search leaves none).
     struct Section {
         QLabel *label = nullptr;
         QStringList rowIds;
+        QString title;
     };
     // A section of the catalogue (one kind of body): collapsed until opened, its cards built on demand for the
     // sources the filters keep.
@@ -226,6 +236,11 @@ private:
     void updateRow(Row &row);
     void updateRow(Row &row, const QStringList &disabled);   // with the disabled sources, read once per refresh
     void updateSummary();
+    void updateFlow();
+    // "Show in the list" from the diagram: the list keeps only these rows until the chip is closed.
+    void showOnly(const QString &title, const QStringList &ids);
+    // "Show in the list" on a group of the catalogue: the List with that section open, every access.
+    void showCatalogueKind(int kind);
     QString age(const QDateTime &t) const;
     QString every(qint64 secs) const;
 
@@ -242,6 +257,13 @@ private:
     int m_imports = -1;            // CSV files imported in the Charts page
     QJsonObject m_feedConfig;      // feeds.json
     QLabel *m_summary = nullptr;
+    QButtonGroup *m_tabs = nullptr;
+    QStackedWidget *m_stack = nullptr;
+    QScrollArea *m_listScroll = nullptr;
+    SourceFlowView *m_flow = nullptr;
+    QSet<QString> m_only;          // the rows the diagram sent to the list; empty: every row
+    QPushButton *m_onlyChip = nullptr;
+    QVector<QWidget *> m_catalogueIntro;   // the catalogue's heading and hint, hidden with m_only
     QNetworkAccessManager m_net;
     QTimer m_tick;                 // the shown states, once a second while the page is visible
     int m_ticks = 0;

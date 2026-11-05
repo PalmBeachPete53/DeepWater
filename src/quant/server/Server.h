@@ -24,6 +24,10 @@
 
 namespace qtm {
 
+class TradeStreams;
+class DepthStreams;
+class KlineStreams;
+
 struct Response {
     int status = 200;
     QJsonValue json;           // the JSON body (send(res, status, obj))
@@ -59,6 +63,12 @@ public:
     QJsonArray binanceAggTrades(const QString &ticker, qint64 fromId, int limit, bool *us = nullptr);
     // The liquidity heatmap's order book snapshot (Providers::binanceDepth). Blocking: off the UI thread.
     QJsonObject binanceDepth(const QString &ticker, int limit, bool *us = nullptr);
+    // The Binance trade streams the chart panes share, one per pair (TradeStream.h). Used on the UI thread.
+    TradeStreams *tradeStreams();
+    // The Binance order book streams of the liquidity heatmaps, one per pair (DepthStream.h). Used on the UI thread.
+    DepthStreams *depthStreams();
+    // The live candles of Binance charts, one stream per pair and timeframe (KlineStream.h). Used on the UI thread.
+    KlineStreams *klineStreams();
 
     QString dataDir() const;
     QString customDir() const;

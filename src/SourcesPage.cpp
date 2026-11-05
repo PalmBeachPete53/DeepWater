@@ -1,4 +1,5 @@
 #include "SourcesPage.h"
+#include "SourceFlow.h"
 
 #include "KeyIndicators.h"
 #include "KeyedSources.h"
@@ -39,7 +40,11 @@
 #include <QPushButton>
 #include <QSet>
 #include <QScrollArea>
+#include <QScrollBar>
 #include <QSettings>
+#include <QStackedWidget>
+#include <QToolButton>
+#include <QButtonGroup>
 #include <QVBoxLayout>
 
 #include "AdBlock.h"
@@ -190,7 +195,35 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
 
     auto *outer = new QVBoxLayout(this);
     outer->setContentsMargins(0, 0, 0, 0);
+    outer->setSpacing(0);
+
+    // Sub-header: the list of sources, and the diagram of where their data goes.
+    auto *bar = new QWidget;
+    bar->setObjectName("calSubBar");
+    bar->setAttribute(Qt::WA_StyledBackground);
+    bar->setFixedHeight(36);
+    auto *barLayout = new QHBoxLayout(bar);
+    barLayout->setContentsMargins(12, 0, 12, 0);
+    barLayout->setSpacing(4);
+    m_tabs = new QButtonGroup(this);
+    const QStringList tabNames {tr("List"), tr("Data")};
+    for (int i = 0; i < tabNames.size(); ++i) {
+        auto *b = new QToolButton;
+        b->setObjectName("calSubTab");
+        b->setText(tabNames[i].toUpper());
+        b->setCheckable(true);
+        b->setCursor(Qt::PointingHandCursor);
+        b->setFixedHeight(36);
+        m_tabs->addButton(b, i);
+        barLayout->addWidget(b);
+    }
+    barLayout->addStretch(1);
+    outer->addWidget(bar);
+    m_stack = new QStackedWidget;
+    outer->addWidget(m_stack, 1);
+
     auto *scroll = new QScrollArea;
+    m_listScroll = scroll;
     scroll->setWidgetResizable(true);
     scroll->setFrameShape(QFrame::NoFrame);
     auto *content = new QWidget;
@@ -261,6 +294,14 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     m_access->addItem(tr("Every access"), -1);
     filters->addWidget(m_access, 1);
     l->addLayout(filters);
+    m_onlyChip = new QPushButton;
+    m_onlyChip->setObjectName("segButton");
+    m_onlyChip->setCursor(Qt::PointingHandCursor);
+    m_onlyChip->setToolTip(tr("Show every source again"));
+    m_onlyChip->hide();
+    connect(m_onlyChip, &QPushButton::clicked, this, [this] { showOnly({}, {}); });
+    l->addSpacing(4);
+    l->addWidget(m_onlyChip, 0, Qt::AlignLeft);
     l->addSpacing(10);
 
     using D = Dataset;
@@ -276,12 +317,15 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     };
     auto add = [&](QWidget *w) {
         l->addWidget(w);
-        if (!m_sections.isEmpty() && !m_rows.isEmpty()) m_sections.last().rowIds << m_rows.last().id;
+        if (!m_sections.isEmpty() && !m_rows.isEmpty()) {
+            m_sections.last().rowIds << m_rows.last().id;
+            m_rows.last().section = m_sections.last().title;
+        }
     };
     auto section = [&](const QString &title) {
         QLabel *label = sectionLabel(title);
         l->addWidget(label);
-        m_sections.push_back({label, {}});
+        m_sections.push_back({label, {}, title});
     };
 
     section(tr("Map · shipping"));
@@ -772,7 +816,12 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     l->addStretch(1);
 
     scroll->setWidget(content);
-    outer->addWidget(scroll);
+    m_stack->addWidget(scroll);
+    m_flow = new SourceFlowView;
+    m_stack->addWidget(m_flow);
+    connect(m_flow, &SourceFlowView::showRows, this, &SourcesPage::showOnly);
+    connect(m_flow, &SourceFlowView::showCatalogue, this, &SourcesPage::showCatalogueKind);
+    connect(m_tabs, &QButtonGroup::idClicked, this, &SourcesPage::showTab);
 
     // Data sets and the AIS feed say when they change; the rest is read on the tick.
     auto changed = [this] { if (isVisible()) refresh(); };
@@ -803,6 +852,72 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     connect(m_country, &QComboBox::currentIndexChanged, this, &SourcesPage::applyFilter);
     connect(m_access, &QComboBox::currentIndexChanged, this, &SourcesPage::applyFilter);
     applyFilter();
+    showTab(std::clamp(QSettings().value("sources/tab", 0).toInt(), 0, 1));
+}
+
+void SourcesPage::showTab(int index)
+{
+    m_tabs->button(index)->setChecked(true);
+    m_stack->setCurrentIndex(index);
+    QSettings().setValue("sources/tab", index);
+    if (index == 1) updateFlow();
+}
+
+void SourcesPage::showDisc(const QString &pin)
+{
+    showTab(1);
+    m_flow->showDisc(pin);
+}
+
+void SourcesPage::updateFlow()
+{
+    // The list's own sources (not the catalogue of official bodies, nor the survey publishers' switches).
+    QVector<sourceflow::Row> rows;
+    for (const Row &r : std::as_const(m_rows)) {
+        if (r.kind == Kind::Catalogue || r.kind == Kind::Publisher) continue;
+        sourceflow::Row f;
+        f.id = r.id;
+        f.name = r.name;
+        f.provider = r.provider;
+        f.section = r.section;
+        f.host = r.host;
+        f.state = r.state == Row::Good ? sourceflow::Row::Good : r.state == Row::Bad ? sourceflow::Row::Bad
+                  : r.state == Row::Off ? sourceflow::Row::Off : sourceflow::Row::Neutral;
+        rows << f;
+    }
+    m_flow->setRows(rows);
+}
+
+void SourcesPage::showOnly(const QString &title, const QStringList &ids)
+{
+    m_only = QSet<QString>(ids.begin(), ids.end());
+    m_onlyChip->setText(tr("Only %1 · %n data set(s)  ✕", nullptr, int(ids.size())).arg(title));
+    m_onlyChip->setVisible(!m_only.isEmpty());
+    if (!m_only.isEmpty()) {
+        m_search->clear();
+        showTab(0);
+        m_listScroll->verticalScrollBar()->setValue(0);
+    }
+    applyFilter();
+}
+
+void SourcesPage::showCatalogueKind(int kind)
+{
+    m_only.clear();
+    m_onlyChip->hide();
+    m_search->clear();
+    m_country->setCurrentIndex(0);
+    m_access->setCurrentIndex(m_access->findData(-1));   // the diagram counts every access
+    applyFilter();
+    showTab(0);
+    for (CatalogueSection &s : m_catalogue)
+        if (s.kind == kind) {
+            if (!s.header->isChecked()) s.header->setChecked(true);
+            QPointer<QPushButton> header = s.header;
+            QTimer::singleShot(0, this, [this, header] {
+                if (header) m_listScroll->verticalScrollBar()->setValue(header->mapTo(m_listScroll->widget(), QPoint(0, 0)).y() - 12);
+            });
+        }
 }
 
 void SourcesPage::setSearch(const QString &text)
@@ -854,13 +969,15 @@ void SourcesPage::buildCatalogueSections(QVBoxLayout *l)
     const OfficialSources::Kind kinds[] = {OfficialSources::Kind::Statistics, OfficialSources::Kind::CentralBank,
                                            OfficialSources::Kind::Government, OfficialSources::Kind::International,
                                            OfficialSources::Kind::Private};
-    l->addWidget(sectionLabel(tr("Official statistics · every source")));
+    m_catalogueIntro << sectionLabel(tr("Official statistics · every source"));
+    l->addWidget(m_catalogueIntro.last());
     auto *hint = dimLabel(tr("The bodies behind each country's figures, from the statistical offices and central banks to "
                              "the private institutes: what each one publishes, whether its data is free and how a program "
                              "reads it, and whether its site answered the last check. Open a group, or search above. The "
                              "compilations above (OECD, Eurostat, IMF, BLS, World Bank, BIS) read these bodies for the map."));
     hint->setWordWrap(true);
     l->addWidget(hint);
+    m_catalogueIntro << hint;
     for (OfficialSources::Kind kind : kinds) {
         CatalogueSection section;
         section.kind = int(kind);
@@ -939,7 +1056,7 @@ void SourcesPage::applyFilter()
         bool any = false;
         for (const QString &id : s.rowIds) {
             Row &r = m_rows[m_index.value(id)];
-            const bool shown = matches(r.search);
+            const bool shown = matches(r.search) && (m_only.isEmpty() || m_only.contains(r.id));
             if (r.card) r.card->setVisible(shown);
             any = any || shown;
         }
@@ -949,7 +1066,13 @@ void SourcesPage::applyFilter()
     const OfficialSources &catalogue = OfficialSources::instance();
     const QVector<OfficialSources::Source> &sources = catalogue.sources();
     const bool filtering = !words.isEmpty() || !country.isEmpty();
+    for (QWidget *w : std::as_const(m_catalogueIntro)) w->setVisible(m_only.isEmpty());
     for (CatalogueSection &s : m_catalogue) {
+        if (!m_only.isEmpty()) {   // the diagram's data sets only
+            s.header->hide();
+            s.body->hide();
+            continue;
+        }
         s.matches.clear();
         int reachable = 0;
         for (int i = 0; i < sources.size(); ++i) {
@@ -993,6 +1116,9 @@ QWidget *SourcesPage::buildRow(const Info &info, const Dataset &dataset)
     row.kind = info.kind;
     row.dataset = dataset;
     row.search = (info.name + ' ' + info.provider + ' ' + info.host + ' ' + info.feeds).toLower();
+    row.name = info.name;
+    row.provider = info.provider;
+    row.host = info.host;
 
     auto *card = new QFrame;
     card->setObjectName("sourceCard");
@@ -1016,6 +1142,7 @@ QWidget *SourcesPage::buildRow(const Info &info, const Dataset &dataset)
     auto *meta = dimLabel(QString("%1  ·  %2").arg(info.provider, info.host));
     meta->setObjectName("sourceMeta");
     meta->setTextInteractionFlags(Qt::TextSelectableByMouse);
+    meta->setWordWrap(true);   // the news feeds' and the ad block lists' lines would widen the whole page
     about->addWidget(meta);
     auto *feeds = new QLabel(QString::fromUtf8("→  ") + info.feeds);
     feeds->setObjectName("sourceFeeds");
@@ -1403,6 +1530,7 @@ void SourcesPage::refresh()
         if (r.kind != Kind::Catalogue)   // those only change when tested, and there can be a thousand of them
             updateRow(r, disabled);
     updateSummary();
+    if (m_flow && m_stack->currentIndex() == 1) updateFlow();
 }
 
 void SourcesPage::updateRow(Row &r)

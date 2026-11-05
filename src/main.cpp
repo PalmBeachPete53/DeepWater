@@ -14,6 +14,8 @@
 #include <QTextStream>
 #include <QTimer>
 
+#include <algorithm>
+
 int main(int argc, char *argv[])
 {
     // The News reader embeds web pages (Qt WebEngine), which wants shared GL contexts set before the application.
@@ -50,7 +52,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Dev helpers: `deepwater [--theme id] [--page charts] [--devtools] [--country FRA] [--indicator n] [--supply [port:id|oil:id|event:id]] [--news-ticker NVDA] [--economy-country USA [--economy-tab 2]] [--news-article 0] [--news-favorite 0] [--news-url https://…] [--scroll-end]
+    // Dev helpers: `deepwater [--theme id] [--page charts] [--devtools] [--country FRA] [--indicator n] [--supply [port:id|oil:id|event:id]] [--news-ticker NVDA] [--economy-country USA [--economy-tab 2]] [--economy-indicator "Inflation Rate"] [--sources-tab 1] [--sources-disc [floor:1|ai:0|access:2]] [--news-article 0] [--news-favorite 0] [--news-url https://…] [--settings [0|1]] [--help-page [chapter]] [--scroll-end]
     // [--delay ms] --screenshot out.png` uses a theme for this run only (not saved), opens a page (and the developer panel), a
     // country's economy sheet or an indicator heatmap, renders the window after the delay (2.5 s by default) and exits.
     const QStringList args = app.arguments();
@@ -69,6 +71,12 @@ int main(int argc, char *argv[])
     const int countryArg = args.indexOf("--country");
     if (countryArg > 0 && countryArg + 1 < args.size())
         w.showCountry(args.at(countryArg + 1));
+    const int sourcesTabArg = args.indexOf("--sources-tab");
+    if (sourcesTabArg > 0 && sourcesTabArg + 1 < args.size())
+        w.showSourcesTab(std::clamp(args.at(sourcesTabArg + 1).toInt(), 0, 1));
+    const int sourcesDiscArg = args.indexOf("--sources-disc");
+    if (sourcesDiscArg > 0)
+        w.showSourcesDisc(sourcesDiscArg + 1 < args.size() && !args.at(sourcesDiscArg + 1).startsWith("--") ? args.at(sourcesDiscArg + 1) : QString());
     const int searchArg = args.indexOf("--search");
     if (searchArg > 0 && searchArg + 1 < args.size())
         w.searchSources(args.at(searchArg + 1));
@@ -81,6 +89,9 @@ int main(int argc, char *argv[])
         w.openEconomyCountry(args.at(economyCountryArg + 1),
                              tabArg > 0 && tabArg + 1 < args.size() ? args.at(tabArg + 1).toInt() : -1);
     }
+    const int economyIndicatorArg = args.indexOf("--economy-indicator");
+    if (economyIndicatorArg > 0 && economyIndicatorArg + 1 < args.size())
+        w.openEconomyIndicator(args.at(economyIndicatorArg + 1));
     const int articleArg = args.indexOf("--news-article");
     if (articleArg > 0 && articleArg + 1 < args.size())
         w.openNewsArticle(args.at(articleArg + 1).toInt());
@@ -96,6 +107,11 @@ int main(int argc, char *argv[])
     const int downloadArg = args.indexOf("--ai-download");
     if (downloadArg > 0 && downloadArg + 2 < args.size())
         w.downloadModelFile(args.at(downloadArg + 1), args.at(downloadArg + 2));
+    const int localArg = args.indexOf("--ai-local");
+    if (localArg > 0 && localArg + 1 < args.size())
+        w.runLocalPrompt(args.at(localArg + 1));
+    if (const int dockArg = args.indexOf("--ai-dock"); dockArg > 0)
+        w.askAiDock(dockArg + 1 < args.size() && !args.at(dockArg + 1).startsWith("--") ? args.at(dockArg + 1) : QString());
     if (args.contains("--ml-export"))
         w.exportMlData();
     const int trainArg = args.indexOf("--ml-train");
@@ -110,6 +126,8 @@ int main(int argc, char *argv[])
         if (settingsArg + 1 < args.size())
             static_cast<SettingsDialog *>(w.settingsWindow())->showPage(args.at(settingsArg + 1).toInt());
     }
+    if (const int helpArg = args.indexOf("--help-page"); helpArg > 0)
+        w.openHelp(helpArg + 1 < args.size() && !args.at(helpArg + 1).startsWith("--") ? args.at(helpArg + 1) : QString());
     const int delayArg = args.indexOf("--delay");
     const int delay = delayArg > 0 && delayArg + 1 < args.size() ? args.at(delayArg + 1).toInt() : 2500;
     const int shotArg = args.indexOf("--screenshot");
@@ -118,15 +136,17 @@ int main(int argc, char *argv[])
         const int scrollArg = args.indexOf("--scroll");
         const double scroll = args.contains("--scroll-end") ? 1.0
                               : scrollArg > 0 && scrollArg + 1 < args.size() ? args.at(scrollArg + 1).toDouble() : -1;
-        const bool settings = args.contains("--settings");
-        QTimer::singleShot(delay, &app, [&w, path, scroll, settings] {
+        // --settings and --help-page shoot their floating window instead of the main one.
+        QWidget *floating = args.contains("--settings") ? w.settingsWindow()
+                            : args.contains("--help-page") ? w.helpWindow() : nullptr;
+        QTimer::singleShot(delay, &app, [&w, path, scroll, floating] {
             if (scroll >= 0) {
                 w.scrollDetailToEnd(scroll);
                 QApplication::processEvents();
             }
-            QPixmap shot = settings && w.settingsWindow() ? w.settingsWindow()->grab() : w.grab();
+            QPixmap shot = floating ? floating->grab() : w.grab();
             // The reader's web view is a native view on macOS: its own snapshot is composited in.
-            newsui::WebHost *host = settings ? nullptr : newsui::WebHost::visibleHost();
+            newsui::WebHost *host = floating ? nullptr : newsui::WebHost::visibleHost();
             if (!host) {
                 shot.save(path);
                 QApplication::quit();

@@ -1,6 +1,7 @@
 #include "EconomyPage.h"
 
 #include "CountriesView.h"
+#include "IndicatorsView.h"
 
 #include "OverviewWidgets.h"
 #include "QuantCharts.h"
@@ -593,6 +594,17 @@ void GaugeView::paintEvent(QPaintEvent *)
     }
 }
 
+QString ChartView::aiRead() const
+{
+    QStringList labels;
+    QVector<double> values;
+    for (int i = m_first; i < m_all.size(); ++i) {
+        labels << m_all[i].date.toString(Qt::ISODate);
+        values << m_all[i].value;
+    }
+    return aiSeries(text(m_ind.title), labels, values);
+}
+
 } // namespace economy
 
 // ---------------------------------------------------------------- EconomyPage
@@ -628,16 +640,17 @@ EconomyPage::EconomyPage(QWidget *parent)
         m_tabs->addButton(b, i);
         sh->addWidget(b);
     }
-    // Countries: a list of countries and each one's indicators in tables (CountriesView), after the US board.
-    const int sectionCount = int(all.size()) + 1;
-    {
+    // Countries: a list of countries and each one's indicators in tables (CountriesView), after the US board;
+    // Indicators: a list of indicators and each one's table of countries (IndicatorsView).
+    const int sectionCount = int(all.size()) + 2;
+    for (const auto &[id, name] : {std::pair {countriesSection(), tr("Countries")}, std::pair {indicatorsSection(), tr("Indicators")}}) {
         auto *b = new QToolButton;
         b->setObjectName("qtSubTab");
-        b->setText(tr("Countries").toUpper());
+        b->setText(name.toUpper());
         b->setCheckable(true);
         b->setCursor(Qt::PointingHandCursor);
         b->setFixedHeight(36);
-        m_tabs->addButton(b, countriesSection());
+        m_tabs->addButton(b, id);
         sh->addWidget(b);
     }
     sh->addStretch(1);
@@ -688,9 +701,10 @@ void EconomyPage::showSection(int index)
             load();
     }
     m_stack->setCurrentIndex(index);
-    // A country's page has its own state and refresh.
-    m_status->setVisible(index != countriesSection());
-    m_refresh->setVisible(index != countriesSection());
+    // A country's page and an indicator's have their own state and refresh.
+    const bool own = index == countriesSection() || index == indicatorsSection();
+    m_status->setVisible(!own);
+    m_refresh->setVisible(!own);
 }
 
 void EconomyPage::openCountry(const QString &iso3, int tab)
@@ -700,11 +714,22 @@ void EconomyPage::openCountry(const QString &iso3, int tab)
         m_countries->openCountry(iso3, tab);
 }
 
+void EconomyPage::openIndicator(const QString &name)
+{
+    showSection(indicatorsSection());
+    if (m_indicators)
+        m_indicators->openIndicator(name);
+}
+
 QWidget *EconomyPage::buildSection(int index)
 {
     if (index == countriesSection()) {
         m_countries = new CountriesView;
         return m_countries;
+    }
+    if (index == indicatorsSection()) {
+        m_indicators = new IndicatorsView;
+        return m_indicators;
     }
     auto *scroll = new QScrollArea;
     scroll->setObjectName("ecoScroll");
@@ -855,4 +880,19 @@ void EconomyPage::showEvent(QShowEvent *)
 void EconomyPage::hideEvent(QHideEvent *)
 {
     m_timer.stop();
+}
+
+QString EconomyPage::aiContext() const
+{
+    const int index = m_stack->currentIndex();
+    const QVector<economy::Section> &all = economy::sections();
+    const QString section = index == countriesSection() ? tr("Countries")
+                            : index == indicatorsSection() ? tr("Indicators")
+                            : index >= 0 && index < all.size() ? economy::text(all[index].name) : QString();
+    QString detail;
+    if (index == countriesSection())
+        if (auto *view = qobject_cast<CountriesView *>(m_built.value(index))) detail = view->aiContext();
+    if (index == indicatorsSection())
+        if (auto *view = qobject_cast<IndicatorsView *>(m_built.value(index))) detail = view->aiContext();
+    return detail.isEmpty() ? section : section + QString::fromUtf8(" › ") + detail;
 }

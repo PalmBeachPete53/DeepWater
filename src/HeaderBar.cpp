@@ -50,6 +50,28 @@ QPixmap gearPixmap(const QColor &color)
 }
 
 // Code brackets "</>" for the developer tools, 18 px.
+// A question mark in a ring, the help icon.
+QPixmap helpPixmap(const QColor &color)
+{
+    const int size = 18;
+    QPixmap pm(size * 2, size * 2);
+    pm.setDevicePixelRatio(2);
+    pm.fill(Qt::transparent);
+    QPainter p(&pm);
+    p.setRenderHint(QPainter::Antialiasing);
+    p.translate(size / 2.0, size / 2.0);
+    p.setPen(QPen(color, 1.6));
+    p.setBrush(Qt::NoBrush);
+    p.drawEllipse(QPointF(0, 0), 7.6, 7.6);
+    QFont f = QApplication::font();
+    f.setBold(true);
+    f.setPointSizeF(11);
+    p.setFont(f);
+    p.setPen(color);
+    p.drawText(QRectF(-9, -9.5, 18, 18), Qt::AlignCenter, QStringLiteral("?"));
+    return pm;
+}
+
 QPixmap devPixmap(const QColor &color)
 {
     const int size = 18;
@@ -207,6 +229,21 @@ HeaderBar::HeaderBar(QWidget *parent)
     m_devButton->setIconSize(QSize(18, 18));
     connect(m_devButton, &QToolButton::toggled, this, &HeaderBar::devToolsToggled);
     layout->addWidget(m_devButton);
+    layout->addSpacing(2);
+
+    auto *help = new QToolButton;
+    help->setObjectName("headerIconButton");
+    help->setToolTip(tr("Help"));
+    help->setCursor(Qt::PointingHandCursor);
+    help->setFocusPolicy(Qt::NoFocus);
+    help->setFixedSize(34, 34);
+    QIcon question;
+    question.addPixmap(helpPixmap(Theme::current().TextDim), QIcon::Normal);
+    question.addPixmap(helpPixmap(Theme::current().Text), QIcon::Active);
+    help->setIcon(question);
+    help->setIconSize(QSize(18, 18));
+    connect(help, &QToolButton::clicked, this, &HeaderBar::helpRequested);
+    layout->addWidget(help);
     layout->addSpacing(2);
 
     auto *settings = new QToolButton;

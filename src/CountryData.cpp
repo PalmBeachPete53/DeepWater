@@ -3,15 +3,20 @@
 #include "KeyIndicators.h"
 #include "KeyedSources.h"
 #include "SurveyHeadlines.h"
+#include "fusion/Fusion.h"
+#include "fusion/Store.h"
 
 #include <QCoreApplication>
+#include <QDateTime>
 #include <QFile>
+#include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLocale>
 #include <QPointer>
 #include <QRegularExpression>
+#include <QStandardPaths>
 #include <QTimeZone>
 #include <QTimer>
 #include <QUrlQuery>
@@ -151,8 +156,8 @@ QList<QByteArray> splitCsv(const QByteArray &line)
     return out;
 }
 
-// An SDMX CSV (OECD, BIS): the series keyed by the dimensions between the first column and TIME_PERIOD (OECD's
-// "csvfile" starts with DATAFLOW, BIS's "dataonly" with the first dimension).
+// An SDMX CSV (OECD, BIS, ECB): the series keyed by the dimensions before TIME_PERIOD (OECD's "csvfile" starts
+// with DATAFLOW and the ECB's "csvdata" with KEY, both left out; BIS's "dataonly" with the first dimension).
 QHash<QString, Series> parseSdmxCsv(const QByteArray &body)
 {
     QHash<QString, Series> out;
@@ -163,7 +168,7 @@ QHash<QString, Series> parseSdmxCsv(const QByteArray &body)
     const int time = head.indexOf("TIME_PERIOD"), value = head.indexOf("OBS_VALUE");
     if (time < 0 || value < 0)
         return out;
-    const int first = head.value(0) == "DATAFLOW" ? 1 : 0;
+    const int first = head.value(0) == "DATAFLOW" || head.value(0) == "KEY" ? 1 : 0;   // ECB's csvdata: KEY
     for (int i = 1; i < lines.size(); ++i) {
         const QList<QByteArray> cells = splitCsv(lines[i].trimmed());
         if (cells.size() <= std::max(time, value))
@@ -183,8 +188,8 @@ QHash<QString, Series> parseSdmxCsv(const QByteArray &body)
     return out;
 }
 
-// An SDMX-JSON message (IMF): the series keyed by their dimensions after the first (the country).
-QHash<QString, Series> parseSdmxJson(const QByteArray &body)
+// An SDMX-JSON message (IMF): the series keyed by their dimensions after the first (the country), or all of them.
+QHash<QString, Series> parseSdmxJson(const QByteArray &body, bool withCountry = false)
 {
     QHash<QString, Series> out;
     const QJsonObject data = QJsonDocument::fromJson(body).object().value("data").toObject();
@@ -204,7 +209,7 @@ QHash<QString, Series> parseSdmxJson(const QByteArray &body)
     for (auto it = series.begin(); it != series.end(); ++it) {
         const QStringList idx = it.key().split(':');
         QStringList key;
-        for (int i = 1; i < idx.size() && i < values.size(); ++i)
+        for (int i = withCountry ? 0 : 1; i < idx.size() && i < values.size(); ++i)
             key << values[i].value(idx[i].toInt());
         Series s;
         const QJsonObject obs = it.value().toObject().value("observations").toObject();
@@ -283,6 +288,58 @@ Series parseJsonStat(const QByteArray &body)
     }
     sortSeries(s);
     return s;
+}
+
+// A JSON-stat data set (Eurostat) of every country: the series by the categories of dimension `by` ("geo"), the
+// first category of any other dimension left with several, as parseJsonStat.
+QHash<QString, Series> parseJsonStatBy(const QByteArray &body, const QString &by)
+{
+    QHash<QString, Series> out;
+    const QJsonObject doc = QJsonDocument::fromJson(body).object();
+    const QJsonArray ids = doc.value("id").toArray();
+    const QJsonArray sizes = doc.value("size").toArray();
+    int timeDim = -1, byDim = -1;
+    for (int i = 0; i < ids.size(); ++i) {
+        if (ids[i].toString() == "time")
+            timeDim = i;
+        if (ids[i].toString() == by)
+            byDim = i;
+    }
+    if (timeDim < 0 || byDim < 0 || sizes.size() != ids.size())
+        return out;
+    auto categories = [&](int dim) {
+        QStringList names(sizes[dim].toInt());
+        const QJsonObject o = doc.value("dimension").toObject().value(ids[dim].toString()).toObject().value("category")
+                                  .toObject().value("index").toObject();
+        for (auto it = o.begin(); it != o.end(); ++it)
+            if (const int pos = it.value().toInt(); pos >= 0 && pos < names.size())
+                names[pos] = it.key();
+        return names;
+    };
+    const QStringList times = categories(timeDim), keys = categories(byDim);
+    QVector<qint64> stride(ids.size(), 1);
+    for (int i = ids.size() - 2; i >= 0; --i)
+        stride[i] = stride[i + 1] * sizes[i + 1].toInt();
+    const QJsonObject values = doc.value("value").toObject();
+    for (auto it = values.begin(); it != values.end(); ++it) {
+        bool ok = false;
+        const qint64 n = it.key().toLongLong(&ok);
+        if (!ok || !it.value().isDouble())
+            continue;
+        bool firstElsewhere = true;
+        for (int d = 0; d < ids.size(); ++d)
+            if (d != timeDim && d != byDim && (n / stride[d]) % sizes[d].toInt() != 0)
+                firstElsewhere = false;
+        if (!firstElsewhere)
+            continue;
+        const QDate date = periodStart(times.value(int((n / stride[timeDim]) % sizes[timeDim].toInt())));
+        const QString key = keys.value(int((n / stride[byDim]) % sizes[byDim].toInt()));
+        if (date.isValid() && !key.isEmpty())
+            out[key].push_back({date, it.value().toDouble()});
+    }
+    for (Series &x : out)
+        sortSeries(x);
+    return out;
 }
 
 Freq detectFreq(const Series &s)
@@ -383,6 +440,70 @@ Series scaled(Series s, double k)
     return s;
 }
 
+// The labels of the providers, in English (translated when shown, in the "countries::CountryLoader" context).
+const QHash<QString, const char *> &providerLabels()
+{
+    static const QHash<QString, const char *> labels {
+        {"fred", "FRED"}, {"wb", QT_TRANSLATE_NOOP("countries::CountryLoader", "World Bank")},
+        {"weo", QT_TRANSLATE_NOOP("countries::CountryLoader", "IMF WEO")},
+        {"imf", QT_TRANSLATE_NOOP("countries::CountryLoader", "IMF")}, {"oecd", QT_TRANSLATE_NOOP("countries::CountryLoader", "OECD")},
+        {"eurostat", "Eurostat"}, {"bis", QT_TRANSLATE_NOOP("countries::CountryLoader", "BIS")},
+        {"yahoo", "Yahoo Finance"}, {"eia", "EIA"}, {"ilo", QT_TRANSLATE_NOOP("countries::CountryLoader", "ILO")},
+        {"ecb", QT_TRANSLATE_NOOP("countries::CountryLoader", "ECB")}, {"ons", "ONS"}, {"boe", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of England")},
+        {"bcb", QT_TRANSLATE_NOOP("countries::CountryLoader", "Central Bank of Brazil")}, {"statcan", "Statistics Canada"},
+        {"boc", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of Canada")},
+        {"boj", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of Japan")},
+        {"snb", QT_TRANSLATE_NOOP("countries::CountryLoader", "Swiss National Bank")}, {"abs", "ABS"},
+        {"bbk", "Bundesbank"}, {"insee", "INSEE"}, {"ine", "INE"}, {"pxweb", ""},
+        {"ecos", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of Korea")}, {"banxico", "Banxico"}, {"inegi", "INEGI"},
+        {"evds", QT_TRANSLATE_NOOP("countries::CountryLoader", "Central Bank of Türkiye")}, {"bps", "BPS"}, {"estat", "e-Stat"}};
+    return labels;
+}
+
+// A source's provider in English ("World Bank", "Statistics Norway").
+QString sourceLabel(const SourceSpec &s)
+{
+    if (s.provider == "pxweb")
+        return s.flow == "scb" ? QStringLiteral("Statistics Sweden") : QStringLiteral("Statistics Norway");
+    const QString label = QString::fromUtf8(providerLabels().value(s.provider, ""));
+    return label.isEmpty() ? s.provider : label;
+}
+
+// A source's series as a row shows it: scaled, cut at `since`, transformed.
+Series prepared(const Series &raw, const SourceSpec &s, Freq *freq = nullptr)
+{
+    Series series = scaled(raw, s.scale);
+    if (s.since.isValid())
+        series.erase(std::remove_if(series.begin(), series.end(), [&](const Point &p) { return p.date < s.since; }),
+                     series.end());
+    const Freq f = detectFreq(series);
+    series = transformed(series, s.transform, f);
+    if (freq)
+        *freq = series.isEmpty() ? f : detectFreq(series);
+    return series;
+}
+
+// The currency a country's {CUR} units stand for ("LCU" when unknown, "USD" for the dollar index).
+QString unitCurrency(const QString &iso3)
+{
+    const QString cur = catalogue().currencies.value(iso3);
+    return cur.isEmpty() ? QStringLiteral("LCU") : cur == "DXY" ? QStringLiteral("USD") : cur;
+}
+
+// A source's unit, in English, as shown ({CUR} kept: the row fills it in when shown).
+QString sourceUnit(const SourceSpec &s, const IndicatorDef &def, const QString &iso3)
+{
+    QString unit = s.unit.isEmpty() ? def.unit : s.unit;
+    if (s.provider == "yahoo" && s.kind == "currency") {
+        const QString cur = catalogue().currencies.value(iso3);
+        if (cur == "DXY")
+            unit = "DXY";
+        else if (!cur.isEmpty())
+            unit = (cur == "EUR" || cur == "GBP" || cur == "AUD" || cur == "NZD") ? cur + "/USD" : "USD/" + cur;
+    }
+    return unit;
+}
+
 QString imfCountry(const QString &iso3)
 {
     return iso3 == "XKX" ? QStringLiteral("KOS") : iso3;
@@ -397,6 +518,19 @@ QString eurostatGeo(const QString &iso3)
     return iso2Of(iso3);
 }
 
+// A series key's placeholders for a country: {ISO3} (EA20 for the euro area), {ISO2}, {BIS} (XM for the euro area
+// and its members), {ECB} (U2 for the euro area).
+QString placeholderKey(QString key, const QString &iso3, bool euroMember)
+{
+    const bool euro = iso3 == "EMU" || euroMember;
+    const QString iso2 = iso3 == "EMU" ? QStringLiteral("XM") : iso2Of(iso3);
+    key.replace("{ISO3}", iso3 == "EMU" ? QStringLiteral("EA20") : iso3);
+    key.replace("{ISO2}", iso2);
+    key.replace("{BIS}", euro ? QStringLiteral("XM") : iso2);
+    key.replace("{ECB}", iso3 == "EMU" ? QStringLiteral("U2") : iso2);
+    return key;
+}
+
 } // namespace
 
 // ---------------------------------------------------------------- catalogue
@@ -406,6 +540,8 @@ bool Catalogue::covers(const SourceSpec &s, const QString &iso3) const
     if (!s.only.isEmpty() && !s.only.contains(iso3))
         return false;
     const QString &p = s.provider;
+    if (p == "eia" && s.id.contains("{ISO3}"))   // international series: every country
+        return iso3 != "EMU";
     if (p == "fred" || p == "eia")
         return iso3 == "USA";
     if (p == "ons" || p == "boe")
@@ -512,7 +648,7 @@ const Catalogue &catalogue()
                 if (s.provider == "wb") addTo(c.wbIds[s.source], s.id);
                 if (s.provider == "weo") addTo(c.weoIds, s.id);
                 if (s.provider == "imf") { addTo(c.imfKeys[s.flow], s.key); addTo(c.imfKeys[s.flow], s.minus); addTo(c.imfKeys[s.flow], s.plus); }
-                if (s.provider == "oecd") { addTo(c.oecdKeys[s.flow], s.key); addTo(c.oecdKeys[s.flow], s.minus); }
+                if (s.provider == "oecd") { addTo(c.oecdKeys[s.flow], s.key); addTo(c.oecdKeys[s.flow], s.minus); addTo(c.oecdKeys[s.flow], s.plus); }
             }
             c.indicators.insert(def.id, def);
         }
@@ -538,6 +674,21 @@ QString countryName(const QString &iso3)
         return QCoreApplication::translate("Country", english.toUtf8().constData());
     const QString extra = catalogue().extraNames.value(iso3);
     return extra.isEmpty() ? iso3 : text(extra);
+}
+
+QString iso2(const QString &iso3)
+{
+    return iso3 == "EMU" ? QStringLiteral("EU") : iso2Of(iso3);
+}
+
+QStringList allCountries()
+{
+    QStringList out;
+    for (const Group &g : catalogue().groups)
+        for (const QString &c : g.countries)
+            if (!out.contains(c))
+                out << c;
+    return out;
 }
 
 void setKeyIndicators(KeyIndicators *indicators)
@@ -600,17 +751,39 @@ void CountryLoader::loadTab(int tab)
     emit busyChanged();
 }
 
-void CountryLoader::refresh()
+void CountryLoader::forgetCached()
 {
     for (const char *group : {"fred", "worldbank", "imf", "oecd", "eurostat", "bis", "eia", "yahoo", "ilo", "ecb", "ons", "boe", "bcb", "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "ecos", "banxico", "inegi", "evds", "bps", "estat"})
         research::Client::instance()->forget(group);
+}
+
+void CountryLoader::loadIndicator(const QString &id)
+{
+    m_single.insert(id);
+    if (m_rows.contains(id) || !catalogue().indicators.contains(id))
+        return;
+    m_rows.insert(id, Row());
+    ++m_pending;
+    resolve(id, 0);
+    emit busyChanged();
+}
+
+void CountryLoader::refresh(bool forget)
+{
+    if (forget)
+        forgetCached();
     ++m_generation;
+    m_gathered.clear();
+    m_background.clear();
+    m_running = 0;
+    m_refreshed = true;
     m_bulk.clear();
     m_bulkErrors.clear();
     m_bulkWaiting.clear();
     m_stale.clear();
     m_waitedSurveys.clear();
     const QSet<int> tabs = m_loadedTabs;
+    const QSet<QString> single = m_single;
     const QStringList ids = m_rows.keys();
     m_rows.clear();
     m_loadedTabs.clear();
@@ -619,14 +792,20 @@ void CountryLoader::refresh()
         emit rowChanged(id);
     for (int t : tabs)
         loadTab(t);
+    for (const QString &id : single)
+        loadIndicator(id);
 }
 
-void CountryLoader::settle(const QString &id, const Row &row)
+void CountryLoader::settle(const QString &id, const Row &found)
 {
+    Row row = found;
+    applyGolden(id, row);
     m_rows[id] = row;
     m_pending = std::max(0, m_pending - 1);
     emit rowChanged(id);
     emit busyChanged();
+    if (row.state != Row::Pending && !row.latestOnly)
+        gather(id);
 }
 
 void CountryLoader::resolve(const QString &id, int from)
@@ -698,12 +877,7 @@ void CountryLoader::resolve(const QString &id, int from)
     fetch(s, [self, generation, id, i, s, def](const Series &raw, const QString &error) {
         if (!self || self->m_generation != generation)
             return;
-        Series series = scaled(raw, s.scale);
-        if (s.since.isValid())
-            series.erase(std::remove_if(series.begin(), series.end(), [&](const Point &p) { return p.date < s.since; }),
-                         series.end());
-        const Freq f = detectFreq(series);
-        series = transformed(series, s.transform, f);
+        const Series series = prepared(raw, s);
         if (series.isEmpty()) {
             // Keep the reason of the first failure worth telling (a missing key), then try the next source.
             Row &r = self->m_rows[id];
@@ -736,37 +910,16 @@ void CountryLoader::resolve(const QString &id, int from)
                     *v = std::round(*v * 10) / 10;
         r.date = series.back().date;
         r.freq = detectFreq(series);
-        r.unit = s.unit.isEmpty() ? def.unit : s.unit;
+        r.unit = sourceUnit(s, def, self->m_iso3);
         r.currency = catalogue().currencies.value(self->m_iso3);
         if (r.currency == "DXY" || r.currency.isEmpty())
             r.currency = r.currency.isEmpty() ? QStringLiteral("LCU") : QStringLiteral("USD");
         r.note = s.note;
-        static const QHash<QString, const char *> labels {
-            {"fred", "FRED"}, {"wb", QT_TRANSLATE_NOOP("countries::CountryLoader", "World Bank")},
-            {"weo", QT_TRANSLATE_NOOP("countries::CountryLoader", "IMF WEO")},
-            {"imf", QT_TRANSLATE_NOOP("countries::CountryLoader", "IMF")}, {"oecd", QT_TRANSLATE_NOOP("countries::CountryLoader", "OECD")},
-            {"eurostat", "Eurostat"}, {"bis", QT_TRANSLATE_NOOP("countries::CountryLoader", "BIS")},
-            {"yahoo", "Yahoo Finance"}, {"eia", "EIA"}, {"ilo", QT_TRANSLATE_NOOP("countries::CountryLoader", "ILO")},
-            {"ecb", QT_TRANSLATE_NOOP("countries::CountryLoader", "ECB")}, {"ons", "ONS"}, {"boe", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of England")},
-            {"bcb", QT_TRANSLATE_NOOP("countries::CountryLoader", "Central Bank of Brazil")}, {"statcan", "Statistics Canada"},
-            {"boc", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of Canada")},
-            {"boj", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of Japan")},
-            {"snb", QT_TRANSLATE_NOOP("countries::CountryLoader", "Swiss National Bank")}, {"abs", "ABS"},
-            {"bbk", "Bundesbank"}, {"insee", "INSEE"}, {"ine", "INE"}, {"pxweb", ""},
-            {"ecos", QT_TRANSLATE_NOOP("countries::CountryLoader", "Bank of Korea")}, {"banxico", "Banxico"}, {"inegi", "INEGI"},
-            {"evds", QT_TRANSLATE_NOOP("countries::CountryLoader", "Central Bank of Türkiye")}, {"bps", "BPS"}, {"estat", "e-Stat"}};
-        r.source = s.provider == "pxweb" ? (s.flow == "scb" ? QStringLiteral("Statistics Sweden") : QStringLiteral("Statistics Norway"))
-                                         : tr(labels.value(s.provider, ""));
+        r.source = s.provider == "pxweb" ? sourceLabel(s) : tr(providerLabels().value(s.provider, ""));
         if (r.source.isEmpty())
             r.source = s.provider;
-        r.code = !s.id.isEmpty() ? s.id : !s.key.isEmpty() ? self->placeholders(s.key) : s.ds;
-        if (s.provider == "yahoo") {
-            const QString cur = catalogue().currencies.value(self->m_iso3);
-            if (s.kind == "currency" && cur != "DXY")
-                r.unit = (cur == "EUR" || cur == "GBP" || cur == "AUD" || cur == "NZD") ? cur + "/USD" : "USD/" + cur;
-            if (s.kind == "currency" && cur == "DXY")
-                r.unit = "DXY";
-        }
+        r.code = self->sourceCode(s);
+        r.sourceId = s.provider + ':' + r.code;
         // A series that stopped more than a year ago gives way to a later source that goes on (a compilation
         // that lags, an office that stopped reporting to it): kept aside while the next sources are tried.
         if (periodEnd(r.date, r.freq) < QDate::currentDate().addDays(-400)) {
@@ -783,13 +936,230 @@ void CountryLoader::resolve(const QString &id, int from)
 
 QString CountryLoader::placeholders(QString key) const
 {
-    const bool euro = m_iso3 == "EMU" || catalogue().euroMembers.contains(m_iso3);
-    const QString iso2 = m_iso3 == "EMU" ? QStringLiteral("XM") : iso2Of(m_iso3);
-    key.replace("{ISO3}", m_iso3 == "EMU" ? QStringLiteral("EA20") : m_iso3);
-    key.replace("{ISO2}", iso2);
-    key.replace("{BIS}", euro ? QStringLiteral("XM") : iso2);
-    key.replace("{ECB}", m_iso3 == "EMU" ? QStringLiteral("U2") : iso2);
-    return key;
+    return placeholderKey(key, m_iso3, catalogue().euroMembers.contains(m_iso3));
+}
+
+QString CountryLoader::sourceCode(const SourceSpec &s) const
+{
+    return !s.id.isEmpty() ? s.id : !s.key.isEmpty() ? placeholders(s.key) : s.ds;
+}
+
+QString fusionDir()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/fusion";
+}
+
+namespace {
+constexpr int FusionMaxAgeSecs = 12 * 3600;   // saved records younger than this aren't fused again (but on a refresh)
+constexpr int FusionParallel = 3;             // fusion's requests under way at once, per country
+}
+
+void CountryLoader::gather(const QString &id)
+{
+    if (m_single.contains(id) || m_gathered.contains(id))
+        return;
+    m_gathered.insert(id);
+    const Catalogue &cat = catalogue();
+    const IndicatorDef def = cat.indicators.value(id);
+    QVector<int> covering;
+    for (int i = 0; i < def.sources.size(); ++i)
+        if (def.sources[i].provider != "survey" && cat.covers(def.sources[i], m_iso3))
+            covering << i;
+    if (covering.size() < 2)
+        return;   // a single source: nothing to fuse
+    const QString dir = fusionDir();
+    const QFileInfo saved(fusion::recordPath(dir, m_iso3, id));
+    if (!m_refreshed && saved.exists() && saved.lastModified().secsTo(QDateTime::currentDateTime()) < FusionMaxAgeSecs)
+        return;
+
+    struct Gathering {
+        int waiting = 0;
+        QVector<fusion::Input> inputs;
+    };
+    auto state = std::make_shared<Gathering>();
+    state->waiting = int(covering.size());
+    const int generation = m_generation;
+    QPointer<CountryLoader> self(this);
+    for (int i : covering) {
+        const SourceSpec s = def.sources[i];
+        runBackground([self, generation, id, i, s, def, state] {
+            self->fetch(s, [self, generation, id, i, s, def, state](const Series &raw, const QString &) {
+                if (!self || self->m_generation != generation)
+                    return;
+                --self->m_running;
+                QTimer::singleShot(0, self, [self] { if (self) self->pumpBackground(); });
+                Series series = prepared(raw, s);
+                if (s.transform == "yoy" || s.transform == "pop")   // one decimal, as the row shows them
+                    for (Point &p : series)
+                        p.value = std::round(p.value * 10) / 10;
+                if (!series.isEmpty()) {
+                    fusion::Input in;
+                    in.id = s.provider + ':' + self->sourceCode(s);
+                    in.label = sourceLabel(s);
+                    in.priority = i;
+                    in.unit = sourceUnit(s, def, self->m_iso3).replace("{CUR}", unitCurrency(self->m_iso3));
+                    in.fetched = QDateTime::currentDateTimeUtc();
+                    in.points.reserve(series.size());
+                    for (const Point &p : std::as_const(series))
+                        in.points.push_back({p.date, p.value});
+                    state->inputs.push_back(std::move(in));
+                }
+                if (--state->waiting > 0 || state->inputs.isEmpty())
+                    return;
+                std::sort(state->inputs.begin(), state->inputs.end(),
+                          [](const fusion::Input &a, const fusion::Input &b) { return a.priority < b.priority; });
+                fusion::Record record;
+                record.country = self->m_iso3;
+                record.indicator = id;
+                record.fused = QDateTime::currentDateTimeUtc();
+                record.golden = fusion::fuse(state->inputs);
+                record.inputs = std::move(state->inputs);
+                QString error;
+                if (!fusion::save(fusionDir(), record, &error))
+                    qWarning("fusion: %s/%s not saved: %s", qPrintable(self->m_iso3), qPrintable(id), qPrintable(error));
+                // The row takes the new record.
+                if (self->m_rows.contains(id)) {
+                    Row r = self->m_rows.value(id);
+                    if (self->applyGolden(id, r)) {
+                        self->m_rows[id] = r;
+                        emit self->rowChanged(id);
+                    }
+                }
+                emit self->fused(id);
+            });
+        });
+    }
+}
+
+namespace {
+constexpr int GoldenMaxAgeDays = 7;   // older records aren't shown (the next fusion replaces them)
+}
+
+bool CountryLoader::applyGolden(const QString &id, Row &r) const
+{
+    if (r.state != Row::Found || r.latestOnly || r.sourceId.isEmpty())
+        return false;
+    const std::optional<fusion::Record> record = fusion::load(fusionDir(), m_iso3, id);
+    if (!record || record->fused.daysTo(QDateTime::currentDateTimeUtc()) > GoldenMaxAgeDays)
+        return false;
+    for (const fusion::Golden &g : record->golden) {
+        if (g.points.isEmpty() || g.sources.size() < 2)
+            continue;   // a source alone at its frequency: nothing was fused
+        const auto member = std::find_if(g.sources.cbegin(), g.sources.cend(),
+                                         [&](const fusion::SourceUse &u) { return u.id == r.sourceId; });
+        if (member == g.sources.cend())
+            continue;
+        const fusion::Relation rel = member->comparison.relation;
+        // The row's source must be in the record, in the record's units (its values are the anchor's).
+        if (rel == fusion::Relation::Distinct || rel == fusion::Relation::Incompatible || member->comparison.unitFactor != 1)
+            return false;
+        r.last = g.points.back().value;
+        r.previous = g.points.size() > 1 ? g.points[g.points.size() - 2].value : research::NaN;
+        r.highest = r.lowest = g.points.front().value;
+        for (const fusion::GoldenPoint &p : g.points) {
+            r.highest = std::max(r.highest, p.value);
+            r.lowest = std::min(r.lowest, p.value);
+        }
+        r.date = g.points.back().date;
+        r.freq = Freq(int(g.freq));
+        const int latest = g.points.back().source;
+        int others = 0;
+        for (int k = 0; k < g.sources.size(); ++k)
+            others += k != latest && g.sources[k].used > 0;
+        const QString label = latest >= 0 && latest < g.sources.size() ? g.sources[latest].label : QString();
+        r.source = QCoreApplication::translate("countries::CountryLoader", label.toUtf8().constData());
+        if (others > 0)
+            r.source += QStringLiteral(" +%1").arg(others);
+        r.golden = QSharedPointer<const fusion::Golden>::create(g);
+        return true;
+    }
+    return false;
+}
+
+QString CountryLoader::fusionTip(const Row &row)
+{
+    if (!row.golden)
+        return {};
+    const fusion::Golden &g = *row.golden;
+    const QLocale loc;
+    const Freq f = Freq(int(g.freq));
+    auto label = [](const QString &english) {
+        return QCoreApplication::translate("countries::CountryLoader", english.toUtf8().constData());
+    };
+    // The first and last periods each source gave the record.
+    QVector<QDate> first(g.sources.size()), last(g.sources.size());
+    for (const fusion::GoldenPoint &p : g.points)
+        if (p.source >= 0 && p.source < g.sources.size()) {
+            if (!first[p.source].isValid()) first[p.source] = p.date;
+            last[p.source] = p.date;
+        }
+    int used = 0;
+    for (const fusion::SourceUse &u : g.sources)
+        used += u.used > 0;
+    QStringList lines;
+    lines << tr("Fused from %1 of %2 sources: %3 – %4, %n periods", "", int(g.points.size()))
+                 .arg(used).arg(g.sources.size()).arg(periodLabel(g.points.front().date, f), periodLabel(g.points.back().date, f));
+    for (int k = 0; k < g.sources.size(); ++k) {
+        const fusion::SourceUse &u = g.sources[k];
+        const fusion::Comparison &c = u.comparison;
+        const QString span = first[k].isValid() ? QStringLiteral("%1 – %2").arg(periodLabel(first[k], f), periodLabel(last[k], f)) : QString();
+        QString what;
+        switch (c.relation) {
+        case fusion::Relation::Anchor:
+            what = tr("the most trusted: %n periods, %1", "", u.used).arg(span);
+            break;
+        case fusion::Relation::Same:
+            what = u.used ? tr("the same series: %n periods taken, %1", "", u.used).arg(span)
+                          : tr("the same series, nothing to add");
+            break;
+        case fusion::Relation::Rebased:
+            what = u.used ? tr("the same series on another base (× %1): %n periods taken, %2", "", u.used)
+                                .arg(loc.toString(c.factor, 'g', 4), span)
+                          : tr("the same series on another base (× %1), nothing to add").arg(loc.toString(c.factor, 'g', 4));
+            break;
+        case fusion::Relation::Unverified:
+            what = u.used ? tr("no common period to check it: %n periods taken, %1", "", u.used).arg(span)
+                          : tr("no common period to check it");
+            break;
+        case fusion::Relation::Distinct:
+            what = std::isfinite(c.agreement) && c.agreement >= 0.5
+                       ? tr("left out: agrees on %1 % of %2 common periods only").arg(qRound(c.agreement * 100)).arg(c.overlap)
+                       : tr("left out: another definition (%n common periods compared)", "", c.overlap);
+            break;
+        case fusion::Relation::Incompatible:
+            what = tr("left out: another unit");
+            break;
+        }
+        lines << QStringLiteral("· %1 — %2").arg(label(u.label), what);
+    }
+    if (g.spliced)
+        lines << tr("%n periods rebased onto the most trusted source's base", "", g.spliced);
+    if (g.unverified)
+        lines << tr("%n periods from a source no common period could check", "", g.unverified);
+    if (!g.conflicts.isEmpty()) {
+        const fusion::Conflict &c = g.conflicts.back();
+        const QString kept = c.kept >= 0 && c.kept < g.sources.size() ? label(g.sources[c.kept].label) : QString();
+        const QString other = c.other >= 0 && c.other < g.sources.size() ? label(g.sources[c.other].label) : QString();
+        lines << tr("%n disagreements between sources (the more trusted value kept); the latest: %1, %2 %3 against %4 %5",
+                    "", int(g.conflicts.size()))
+                     .arg(periodLabel(c.date, f), kept, formatValue(c.keptValue), other, formatValue(c.otherValue));
+    }
+    return lines.join('\n');
+}
+
+void CountryLoader::runBackground(std::function<void()> task)
+{
+    m_background.push_back(std::move(task));
+    pumpBackground();
+}
+
+void CountryLoader::pumpBackground()
+{
+    while (m_running < FusionParallel && !m_background.isEmpty()) {
+        const std::function<void()> task = m_background.takeFirst();
+        ++m_running;
+        task();
+    }
 }
 
 void CountryLoader::bulk(const QString &key, const QUrl &url, qint64 maxAge, bool json,
@@ -823,13 +1193,16 @@ void CountryLoader::bulk(const QString &key, const QUrl &url, qint64 maxAge, boo
 
 void CountryLoader::fetch(const SourceSpec &s, SeriesDone done)
 {
+    if (m_shared && CrossCountry::serves(s)) {
+        m_shared->series(s, m_iso3, done);
+        return;
+    }
     const Catalogue &cat = catalogue();
     research::Client *client = research::Client::instance();
     const QString year = QString::number(QDate::currentDate().year());
 
     // Picks `key` (and `minus` / `div`) out of a bulk answer.
-    auto pick = [s, done](const QString &key, const QString &minus, const QString &div) {
-        const QString plus = s.plus;
+    auto pick = [done, plus = placeholders(s.plus)](const QString &key, const QString &minus, const QString &div) {
         return [key, minus, plus, div, done](const Bulk &b, const QString &err) {
             Series a = b.value(key);
             if (!a.isEmpty() && !minus.isEmpty())
@@ -910,7 +1283,8 @@ void CountryLoader::fetch(const SourceSpec &s, SeriesDone done)
             addKeyParts(parts, k);
         const QUrl url(QString("https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/%1/+/%2.%3?attributes=none&measures=all")
                            .arg(s.flow, imfCountry(m_iso3), joinKeyParts(parts)));
-        bulk("imf:" + s.flow + ":" + m_iso3, url, 12 * Hour, true, parseSdmxJson, pick(s.key, s.minus, s.div));
+        bulk("imf:" + s.flow + ":" + m_iso3, url, 12 * Hour, true, [](const QByteArray &body) { return parseSdmxJson(body); },
+             pick(s.key, s.minus, s.div));
         return;
     }
 
@@ -1525,9 +1899,10 @@ void CountryLoader::fetch(const SourceSpec &s, SeriesDone done)
             done({}, tr("A free EIA key is needed (Sources)"));
             return;
         }
-        QUrl url("https://api.eia.gov/v2/seriesid/" + s.id);
+        const QString id = placeholders(s.id);   // INTL.57-1-{ISO3}-TBPD.M: a country's international series
+        QUrl url("https://api.eia.gov/v2/seriesid/" + id);
         url.setQuery("api_key=" + key);
-        client->raw("eia:" + s.id, url, 6 * Hour, false, this, [done](const QByteArray &body, const QString &err) {
+        client->raw("eia:" + id, url, 6 * Hour, false, this, [done](const QByteArray &body, const QString &err) {
             Series x;
             for (const QJsonValue &v : QJsonDocument::fromJson(body).object().value("response").toObject().value("data").toArray()) {
                 const QJsonObject o = v.toObject();
@@ -1545,6 +1920,303 @@ void CountryLoader::fetch(const SourceSpec &s, SeriesDone done)
     }
 
     done({}, tr("Unknown source"));
+}
+
+// ---------------------------------------------------------------- cross-country
+
+bool CrossCountry::serves(const SourceSpec &s)
+{
+    static const QSet<QString> providers {"wb", "weo", "imf", "oecd", "eurostat", "ilo", "bis", "ecb", "yahoo"};
+    return providers.contains(s.provider) || (s.provider == "eia" && s.id.startsWith("INTL.") && s.id.contains("{ISO3}"));
+}
+
+void CrossCountry::clear()
+{
+    ++m_generation;
+    m_bulk.clear();
+    m_errors.clear();
+    m_waiting.clear();
+}
+
+void CrossCountry::bulk(const QString &key, const QUrl &url, bool json, std::function<Bulk(const QByteArray &)> parse,
+                        std::function<void(const Bulk &, const QString &)> done)
+{
+    if (m_bulk.contains(key) || m_errors.contains(key)) {
+        done(m_bulk.value(key), m_errors.value(key));
+        return;
+    }
+    const bool already = m_waiting.contains(key);
+    m_waiting[key].push_back(done);
+    if (already)
+        return;
+    const int generation = m_generation;
+    QPointer<CrossCountry> self(this);
+    const qint64 maxAge = (key.startsWith("worldbank:") ? 24 : 12) * Hour;
+    research::Client::instance()->raw(key, url, maxAge, json, this,
+        [self, generation, key, parse](const QByteArray &body, const QString &err) {
+            if (!self || self->m_generation != generation)
+                return;
+            const Bulk parsed = body.isEmpty() ? Bulk() : parse(body);
+            const QString error = parsed.isEmpty() ? (err.isEmpty() ? CountryLoader::tr("No data") : err) : QString();
+            if (parsed.isEmpty())
+                self->m_errors.insert(key, error);
+            else
+                self->m_bulk.insert(key, parsed);
+            const auto waiting = self->m_waiting.take(key);
+            for (const auto &w : waiting)
+                w(parsed, error);
+        });
+}
+
+void CrossCountry::series(const SourceSpec &s, const QString &iso3, Done done)
+{
+    const Catalogue &cat = catalogue();
+    const int year = QDate::currentDate().year();
+    const QString from = QString::number(year - 10);
+    const bool euroMember = cat.euroMembers.contains(iso3);
+    auto keyFor = [&](const QString &k) { return k.isEmpty() ? k : placeholderKey(k, iso3, euroMember); };
+
+    // A country's series out of an answer (keyed as `key`), less, plus or divided by a second one.
+    auto pick = [done](const QString &key, const QString &minus, const QString &plus, const QString &div) {
+        return [key, minus, plus, div, done](const Bulk &b, const QString &err) {
+            Series a = b.value(key);
+            if (!a.isEmpty() && !minus.isEmpty())
+                a = combine(a, b.value(minus), Op::Minus);
+            if (!a.isEmpty() && !plus.isEmpty())
+                a = combine(a, b.value(plus), Op::Plus);
+            if (!a.isEmpty() && !div.isEmpty())
+                a = combine(a, b.value(div), Op::Divide);
+            done(a, a.isEmpty() ? (err.isEmpty() || !b.isEmpty() ? CountryLoader::tr("Not published") : err) : QString());
+        };
+    };
+    // The key of every country: the placeholders left empty (any value, SDMX 2.1) or `any` ("*", SDMX 3.0).
+    auto wildcard = [](QString k, const QString &any) {
+        for (const char *ph : {"{ISO3}", "{ISO2}", "{BIS}", "{ECB}"})
+            k.replace(ph, any);
+        return k;
+    };
+
+    if (s.provider == "wb") {
+        const bool monthly = s.source == "15";
+        QUrl url("https://api.worldbank.org/v2/country/all/indicator/" + s.id);
+        url.setQuery(monthly ? QString("source=15&format=json&per_page=20000&frequency=M&date=%1M01:%2M12").arg(year - 4).arg(year)
+                             : QString("source=%1&format=json&per_page=20000&date=%2:%3").arg(s.source).arg(year - 25).arg(year));
+        bulk("worldbank:all:" + s.source + ":" + s.id, url, false, [](const QByteArray &body) {
+            Bulk out;
+            for (const QJsonValue &v : QJsonDocument::fromJson(body).array().at(1).toArray()) {
+                const QJsonObject o = v.toObject();
+                if (!o.value("value").isDouble())
+                    continue;
+                QString country = o.value("countryiso3code").toString();
+                if (country.isEmpty())
+                    country = o.value("country").toObject().value("id").toString();
+                out[country].push_back({periodStart(o.value("date").toString()), o.value("value").toDouble()});
+            }
+            for (Series &x : out)
+                sortSeries(x);
+            return out;
+        }, pick(iso3, {}, {}, {}));
+        return;
+    }
+
+    if (s.provider == "weo") {
+        const QUrl url(QString("https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.RES/WEO/+/*.%1.A?attributes=none&measures=all").arg(s.id));
+        bulk("imf:weo:all:" + s.id, url, true, [year](const QByteArray &body) {
+            // Reported years only (the current one is an estimate), keyed by the country.
+            const Bulk all = parseSdmxJson(body, true);
+            Bulk out;
+            for (auto it = all.begin(); it != all.end(); ++it) {
+                Series kept;
+                for (const Point &p : it.value())
+                    if (p.date.year() < year)
+                        kept.push_back(p);
+                if (!kept.isEmpty())
+                    out.insert(it.key().section('.', 0, 0), kept);
+            }
+            return out;
+        }, pick(imfCountry(iso3), {}, {}, {}));
+        return;
+    }
+
+    if (s.provider == "imf") {
+        QVector<QStringList> parts;
+        for (const QString &k : {s.key, s.minus, s.plus, s.div})
+            if (!k.isEmpty())
+                addKeyParts(parts, k);
+        const QString keys = joinKeyParts(parts);
+        const QUrl url(QString("https://api.imf.org/external/sdmx/3.0/data/dataflow/IMF.STA/%1/+/*.%2?attributes=none&measures=all")
+                           .arg(s.flow, keys));
+        const QString c = imfCountry(iso3) + ".";
+        bulk("imf:all:" + s.flow + ":" + keys, url, true, [](const QByteArray &body) { return parseSdmxJson(body, true); },
+             pick(c + s.key, s.minus.isEmpty() ? QString() : c + s.minus, s.plus.isEmpty() ? QString() : c + s.plus,
+                  s.div.isEmpty() ? QString() : c + s.div));
+        return;
+    }
+
+    if (s.provider == "oecd" || s.provider == "bis" || s.provider == "ecb") {
+        QVector<QStringList> parts;
+        const QString any = s.provider == "bis" ? QStringLiteral("*") : QString();
+        for (const QString &k : {s.key, s.minus, s.plus})
+            if (!k.isEmpty())
+                addKeyParts(parts, wildcard(k, any));
+        const QString keys = joinKeyParts(parts);
+        QUrl url;
+        if (s.provider == "oecd") {
+            url = QUrl("https://sdmx.oecd.org/public/rest/data/" + s.flow + "/" + keys);
+            url.setQuery("dimensionAtObservation=AllDimensions&format=csvfile&startPeriod=" + from);
+        } else if (s.provider == "bis") {
+            url = QUrl("https://stats.bis.org/api/v2/data/dataflow/BIS/" + s.flow + "/" + keys);
+            url.setQuery("format=csv&detail=dataonly&startPeriod=" + from);
+        } else {
+            url = QUrl("https://data-api.ecb.europa.eu/service/data/" + s.flow + "/" + keys);
+            url.setQuery("format=csvdata&detail=dataonly&startPeriod=" + from);
+        }
+        bulk(s.provider + ":all:" + s.flow + ":" + keys, url, false, parseSdmxCsv, pick(keyFor(s.key), keyFor(s.minus), keyFor(s.plus), {}));
+        return;
+    }
+
+    if (s.provider == "eurostat") {
+        if (!cat.eurostatGeos.contains(iso3)) {
+            done({}, CountryLoader::tr("Not published"));
+            return;
+        }
+        QUrl url("https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/" + s.ds);
+        url.setQuery(s.query + "&sinceTimePeriod=" + from + "&format=JSON&lang=EN");
+        bulk("eurostat:all:" + s.ds + "?" + s.query, url, false, [](const QByteArray &body) { return parseJsonStatBy(body, "geo"); },
+             pick(eurostatGeo(iso3), {}, {}, {}));
+        return;
+    }
+
+    if (s.provider == "ilo") {
+        // Both sexes and the breakdown wanted (aged 15 and over unless `classif` says otherwise), asked of the server:
+        // the whole indicator would weigh tens of megabytes.
+        const QString classif = s.classif.isEmpty() ? QStringLiteral("AGE_YTHADULT_YGE15") : s.classif;
+        // Twenty-five years: surveys with gaps still have a previous value.
+        QString query = QString("id=%1&format=.csv&type=code&timefrom=%2").arg(s.id).arg(year - 25);
+        if (s.id.contains("_SEX_"))
+            query += "&sex=SEX_T";
+        if (classif != "-")
+            query += "&classif1=" + classif;
+        QUrl url("https://rplumber.ilo.org/data/indicator/");
+        url.setQuery(query);
+        bulk("ilo:all:" + s.id + ":" + classif, url, false, [classif](const QByteArray &raw) {
+            QByteArray body = raw;
+            if (body.startsWith("\xEF\xBB\xBF"))
+                body.remove(0, 3);
+            Bulk out;
+            const QList<QByteArray> lines = body.split('\n');
+            const QList<QByteArray> head = splitCsv(lines.value(0).trimmed());
+            const int area = head.indexOf("ref_area"), sex = head.indexOf("sex"), cls = head.indexOf("classif1"),
+                      time = head.indexOf("time"), value = head.indexOf("obs_value");
+            for (int i = 1; i < lines.size() && area >= 0 && time >= 0 && value >= 0; ++i) {
+                const QList<QByteArray> c = splitCsv(lines[i].trimmed());
+                if (c.size() <= std::max({area, time, value}))
+                    continue;
+                if (sex >= 0 && !c.value(sex).isEmpty() && c.value(sex) != "SEX_T")
+                    continue;
+                if (classif != "-" && cls >= 0 && !c.value(cls).isEmpty() && c.value(cls) != classif.toLatin1())
+                    continue;
+                bool ok = false;
+                const double v = c[value].toDouble(&ok);
+                const QDate d = periodStart(QString::fromLatin1(c[time]));
+                if (ok && d.isValid())
+                    out[QString::fromLatin1(c[area])].push_back({d, v});
+            }
+            for (Series &x : out)
+                sortSeries(x);
+            return out;
+        }, pick(iso3 == "XKX" ? QStringLiteral("KOS") : iso3, {}, {}, {}));
+        return;
+    }
+
+    if (s.provider == "eia") {
+        // EIA's international data, every country at once: INTL.{product}-{activity}-{ISO3}-{unit}.{M|A}, the last
+        // fifteen months (5000 rows at most a request, ~250 areas).
+        const QString key = sourceKey("eia");
+        if (key.isEmpty()) {
+            done({}, CountryLoader::tr("A free EIA key is needed (Sources)"));
+            return;
+        }
+        const QStringList parts = s.id.mid(5).section('.', 0, 0).split('-');   // product, activity, {ISO3}, unit
+        const bool monthly = s.id.endsWith(".M");
+        const QDate since = QDate::currentDate().addMonths(monthly ? -15 : -15 * 12);
+        QUrl url("https://api.eia.gov/v2/international/data/");
+        url.setQuery(QString("api_key=%1&frequency=%2&data[0]=value&facets[productId][]=%3&facets[activityId][]=%4"
+                             "&facets[unit][]=%5&start=%6&length=5000")
+                         .arg(key, monthly ? "monthly" : "annual", parts.value(0), parts.value(1), parts.value(3),
+                              monthly ? since.toString("yyyy-MM") : QString::number(since.year())));
+        bulk("eia:all:" + s.id, url, false, [](const QByteArray &body) {
+            Bulk out;
+            for (const QJsonValue &v : QJsonDocument::fromJson(body).object().value("response").toObject().value("data").toArray()) {
+                const QJsonObject o = v.toObject();
+                bool ok = false;
+                const double value = o.value("value").toString().toDouble(&ok);
+                const QDate d = periodStart(o.value("period").toString());
+                if (ok && d.isValid())
+                    out[o.value("countryRegionId").toString()].push_back({d, value});
+            }
+            // Countries that produce nothing (rows of zeros) are left out.
+            for (auto it = out.begin(); it != out.end();) {
+                sortSeries(*it);
+                if (std::all_of(it->begin(), it->end(), [](const Point &p) { return p.value == 0; }))
+                    it = out.erase(it);
+                else
+                    ++it;
+            }
+            return out;
+        }, pick(iso3, {}, {}, {}));
+        return;
+    }
+
+    if (s.provider == "yahoo") {
+        // The last month's daily closes of every country's symbol, 20 a request.
+        auto symbolOf = [&cat, &s](const QString &c) -> QString {
+            if (s.kind == "stock")
+                return cat.stockIndexes.value(c);
+            const QString cur = cat.currencies.value(c);
+            if (cur.isEmpty()) return QString();
+            if (cur == "DXY") return QStringLiteral("DX-Y.NYB");
+            if (cur == "EUR" || cur == "GBP" || cur == "AUD" || cur == "NZD") return cur + "USD=X";
+            return cur + "=X";
+        };
+        const QString symbol = symbolOf(iso3);
+        const QString key = "yahoo:all:" + s.kind;
+        if (m_bulk.contains(key) || m_errors.contains(key)) {
+            pick(symbol, {}, {}, {})(m_bulk.value(key), m_errors.value(key));
+            return;
+        }
+        const bool already = m_waiting.contains(key);
+        m_waiting[key].push_back(pick(symbol, {}, {}, {}));
+        if (already)
+            return;
+        QStringList symbols;
+        for (const QString &c : allCountries())
+            if (const QString sym = symbolOf(c); !sym.isEmpty() && !symbols.contains(sym))
+                symbols << sym;
+        const int generation = m_generation;
+        QPointer<CrossCountry> self(this);
+        research::Client::instance()->spark(symbols, "1mo", this, [self, generation, key](const QHash<QString, Series> &all, const QString &err) {
+            if (!self || self->m_generation != generation)
+                return;
+            Bulk parsed;
+            for (auto it = all.begin(); it != all.end(); ++it) {
+                Series x = it.value();
+                sortSeries(x);
+                if (!x.isEmpty())
+                    parsed.insert(it.key(), x);
+            }
+            if (parsed.isEmpty())
+                self->m_errors.insert(key, err.isEmpty() ? CountryLoader::tr("No data") : err);
+            else
+                self->m_bulk.insert(key, parsed);
+            const auto waiting = self->m_waiting.take(key);
+            for (const auto &w : waiting)
+                w(parsed, self->m_errors.value(key));
+        });
+        return;
+    }
+
+    done({}, CountryLoader::tr("Unknown source"));
 }
 
 } // namespace countries

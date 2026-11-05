@@ -37,6 +37,16 @@ public:
         BankCredit *bankCredit = nullptr;
         EconomySectors *sectors = nullptr;
     };
+    // The country series sets and their series' names, in the order of their indices (shared with the local
+    // models' tools, LocalTools); sets not given are left out.
+    struct CountrySet {
+        const class CountrySeriesSet *set = nullptr;
+        QString source;        // "oecd", "eurostat", "bis_property"…
+        QStringList series;    // "cpi_yoy", "unemployment"…
+    };
+    static QVector<CountrySet> countrySets(const Sources &s);
+    // The names of the IMF World Economic Outlook indicators, in WorldEconomy::Indicator order.
+    static QStringList weoIndicators();
     struct File {
         QString name;
         qint64 bytes = 0;
@@ -68,6 +78,7 @@ private:
     int writeRates();
     int writeFx();
     int writeCot();
+    int writeGolden();
     void nextSymbol();
 
     Sources m_s;

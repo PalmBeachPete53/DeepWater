@@ -12,16 +12,15 @@ class QButtonGroup;
 class QComboBox;
 class QLabel;
 class QLineEdit;
-class QPlainTextEdit;
 class QProgressBar;
 class QPushButton;
 class QStackedWidget;
 class QTableWidget;
-class QTextEdit;
 class QVBoxLayout;
 
-// The AI page: the models on this computer and the Hugging Face Hub to get more (Models), and a conversation
-// with Claude through the Anthropic API (Claude). Keys and tokens are entered in Sources › AI.
+// The AI page: the models on this computer and the Hugging Face Hub to get more (Models › Local models), the
+// Claude settings and opencode (Models › Integration), with the slots under both; a conversation with a model run here (Local,
+// AiLocalView, over LocalChat), and machine learning on the app's data (AiMlView). Keys and tokens are entered in Sources › AI.
 
 class AiModelsView : public QWidget
 {
@@ -31,6 +30,9 @@ public:
     // Dev flags --ai-search / --ai-download: run a search and open its first result, download one file (screenshots).
     void searchFor(const QString &query);
     void downloadFile(const QString &modelId, const QString &file);
+    class ModelSlotsView *slotsView() const { return m_slots; }
+    // The description and the Hub token state, shown by AiPage above the Models navigation bar.
+    QWidget *header() const { return m_header; }
 
 protected:
     void showEvent(QShowEvent *) override;
@@ -46,6 +48,7 @@ private:
     void removeInstalled();
     void updateTokenState();
 
+    QWidget *m_header;
     HuggingFaceHub *m_hub;
     LocalModels *m_local;
     QLineEdit *m_search;
@@ -67,6 +70,7 @@ private:
     };
     QHash<QString, DownloadRow> m_downloadRows;
     QTableWidget *m_installed;
+    class ModelSlotsView *m_slots;
     QLabel *m_installedNote;
     QPushButton *m_openFolder;
     QPushButton *m_remove;
@@ -77,35 +81,29 @@ private:
     QString m_devDownload;   // --ai-download: the file to download once the repository's files (and SHA) are known
 };
 
+// AI › Models › Integration: the Claude model the app calls and its effort (ai/model, ai/effort), and the key state;
+// then opencode, which reads Deepwater's data through MCP (AiOpencodeView, McpServer). Each can be dragged into a slot.
 class AiClaudeView : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AiClaudeView(QWidget *parent = nullptr);
+    explicit AiClaudeView(class ModelSlotsView *slotsView, QWidget *parent = nullptr);
+    // The description and the key state, shown by AiPage above the Models navigation bar.
+    QWidget *header() const { return m_header; }
 
 protected:
     void showEvent(QShowEvent *) override;
 
 private:
-    void sendMessage();
-    void appendBubble(const QString &role, const QString &text);
     void updateKeyState();
     void setModels(const QVector<ClaudeClient::ModelInfo> &models, const QString &error);
 
+    QWidget *m_header;
     ClaudeClient *m_claude;
     QComboBox *m_model;
     QComboBox *m_effort;
-    QLineEdit *m_system;
     QLabel *m_keyState;
-    QTextEdit *m_transcript;
-    QPlainTextEdit *m_input;
-    QPushButton *m_send;
-    QPushButton *m_stop;
-    QPushButton *m_clear;
     QLabel *m_status;
-    QJsonArray m_messages;   // the conversation, as the API takes it
-    QString m_pending;       // the answer being streamed
-    QString m_pendingThinking;
     bool m_modelsFromApi = false;
 };
 
@@ -119,10 +117,20 @@ public:
     void downloadFile(const QString &modelId, const QString &file);
     void exportMlData();
     void trainMl(const QString &file, const QString &target);
+    void runLocalPrompt(const QString &prompt);
+    // The conversation with the local model, shared by AI › Local and the side panel (AiDock).
+    class LocalChat *chat() const { return m_chat; }
 
 private:
+    // Models › Local models (0) or Integration (1, Claude).
+    void showModelsPart(int index);
+
     QButtonGroup *m_tabs;
     QStackedWidget *m_stack;
+    QButtonGroup *m_modelsTabs;
     AiModelsView *m_models;
+    AiClaudeView *m_claude;
+    class AiLocalView *m_localView;
+    class LocalChat *m_chat;
     class AiMlView *m_ml;
 };

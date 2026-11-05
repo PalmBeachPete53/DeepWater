@@ -815,3 +815,54 @@ void TimeSeriesChart::leaveEvent(QEvent *)
     update();
     QToolTip::hideText();
 }
+
+QString AnnualChart::aiRead() const
+{
+    QStringList labels;
+    QVector<double> values;
+    for (auto it = m_values.begin(); it != m_values.end(); ++it) {
+        labels << QString::number(it.key());
+        values << it.value();
+    }
+    QString out = aiSeries(QStringLiteral("Annual"), labels, values);
+    if (m_firstProjected > 0 && !out.isEmpty()) out += QString(" (from %1: projections)").arg(m_firstProjected);
+    return out;
+}
+
+QString SectorChart::aiRead() const
+{
+    QStringList out;
+    for (const Bar &b : m_bars)
+        out << QString("%1: primary %2 %, secondary %3 %, tertiary %4 %").arg(b.label, aiNumber(b.shares[0]), aiNumber(b.shares[1]), aiNumber(b.shares[2]));
+    return out.join('\n');
+}
+
+QString SectorHistoryChart::aiRead() const
+{
+    QStringList out;
+    for (int k = 0; k < 3 && k < m_names.size(); ++k) {
+        QStringList labels;
+        QVector<double> values;
+        for (auto it = m_shares[k].begin(); it != m_shares[k].end(); ++it) {
+            labels << QString::number(it.key());
+            values << it.value();
+        }
+        if (const QString line = aiSeries(m_names[k] + " (%)", labels, values, 10); !line.isEmpty()) out << line;
+    }
+    return out.join('\n');
+}
+
+QString TimeSeriesChart::aiRead() const
+{
+    QStringList out;
+    for (const Line &l : m_lines) {
+        QStringList labels;
+        QVector<double> values;
+        for (auto it = l.values.begin(); it != l.values.end(); ++it) {
+            labels << QString::number(it.key(), 'f', 2);
+            values << it.value();
+        }
+        if (const QString line = aiSeries(l.name, labels, values); !line.isEmpty()) out << line;
+    }
+    return out.join('\n');
+}

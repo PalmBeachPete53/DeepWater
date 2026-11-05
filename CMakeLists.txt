@@ -1,8 +1,16 @@
 cmake_minimum_required(VERSION 3.21)
+# macOS: the oldest system the app runs on. Unset, it is the build machine's own macOS, which no Intel Mac has past
+# macOS 26. A build that names its architectures (CMAKE_OSX_ARCHITECTURES: the CI, a universal binary) is one to
+# distribute, against Qt's online installer: it gets 14.4, Qt 6.12's minimum. A plain build for this Mac keeps the
+# host's version, since Homebrew's Qt is itself built for it. Must be set before project().
+if(CMAKE_OSX_ARCHITECTURES AND NOT CMAKE_OSX_DEPLOYMENT_TARGET)
+    set(CMAKE_OSX_DEPLOYMENT_TARGET 14.4 CACHE STRING "Minimum macOS version" FORCE)
+endif()
 project(Deepwater VERSION 0.1 LANGUAGES C CXX)
-# Objective-C++ only on macOS: the article reader's WebKit host and the native notifications.
+# Objective-C++ on macOS: the article reader's WebKit host and the native notifications; Objective-C for ggml's Metal
+# backend (the local engine), whose .m files would otherwise be compiled as Objective-C++.
 if(APPLE)
-    enable_language(OBJCXX)
+    enable_language(OBJC OBJCXX)
 endif()
 
 set(CMAKE_CXX_STANDARD 20)
@@ -38,6 +46,62 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "Build type" FORCE)
 endif()
 
+# Optimised builds (every configuration but Debug, which stays as CMake makes it). README › Build options.
+set(_dw_opt "$<NOT:$<CONFIG:Debug>>")
+if(APPLE)
+    # The architectures built: CMAKE_OSX_ARCHITECTURES ("arm64;x86_64" for a universal binary), else the host's.
+    set(DEEPWATER_ARCHS ${CMAKE_OSX_ARCHITECTURES})
+    if(NOT DEEPWATER_ARCHS)
+        set(DEEPWATER_ARCHS ${CMAKE_HOST_SYSTEM_PROCESSOR})
+    endif()
+    # The CPU each slice is tuned for. arm64: the M1, which every Apple silicon Mac can run. x86_64: v3 (AVX2, FMA,
+    # BMI2), which every Intel Mac that runs macOS 14 has (2018 and later); v2 for older x86 or a stricter baseline.
+    set(DEEPWATER_X86_LEVEL v3 CACHE STRING "x86-64 micro-architecture level of the x86_64 slice (v2 or v3)")
+    set_property(CACHE DEEPWATER_X86_LEVEL PROPERTY STRINGS v2 v3)
+    set(_dw_cpu_arm64 -mcpu=apple-m1)
+    set(_dw_cpu_x86_64 -march=x86-64-${DEEPWATER_X86_LEVEL})
+    foreach(_a IN LISTS DEEPWATER_ARCHS)
+        # -Xarch_<arch>: the flag goes to that slice's compilation only, in a universal build as in a single one.
+        add_compile_options("$<${_dw_opt}:SHELL:-Xarch_${_a} ${_dw_cpu_${_a}}>")
+    endforeach()
+endif()
+
+# Link-time optimisation across the whole program (the app, qtm_*, markov, vterm): ThinLTO with Clang.
+option(DEEPWATER_LTO "Link-time optimisation (ThinLTO with Clang) in optimised builds" ON)
+if(DEEPWATER_LTO)
+    include(CheckIPOSupported)
+    check_ipo_supported(RESULT _dw_ipo OUTPUT _dw_ipo_error LANGUAGES C CXX)
+    if(_dw_ipo)
+        foreach(_c RELEASE RELWITHDEBINFO MINSIZEREL)
+            set(CMAKE_INTERPROCEDURAL_OPTIMIZATION_${_c} ON)
+        endforeach()
+        if(APPLE)   # ThinLTO's cache: a rebuild re-optimises only the modules that changed
+            add_link_options("$<${_dw_opt}:LINKER:-cache_path_lto,${CMAKE_BINARY_DIR}/lto-cache>")
+        endif()
+    else()
+        message(STATUS "LTO not supported, built without it: ${_dw_ipo_error}")
+    endif()
+endif()
+
+# Profile-guided optimisation, off by default: GENERATE builds an instrumented binary, cmake/pgo-train.sh runs it on
+# the benchmarks and merges <arch>.profdata files into DEEPWATER_PGO_DIR, USE builds with them (one profile per slice).
+set(DEEPWATER_PGO OFF CACHE STRING "Profile-guided optimisation: OFF, GENERATE or USE")
+set_property(CACHE DEEPWATER_PGO PROPERTY STRINGS OFF GENERATE USE)
+set(DEEPWATER_PGO_DIR ${CMAKE_SOURCE_DIR}/build-pgo-profiles CACHE PATH "Folder of the <arch>.profdata files")
+if(DEEPWATER_PGO STREQUAL "GENERATE")
+    add_compile_options("$<${_dw_opt}:-fprofile-instr-generate>")
+    add_link_options("$<${_dw_opt}:-fprofile-instr-generate>")
+elseif(DEEPWATER_PGO STREQUAL "USE")
+    foreach(_a IN LISTS DEEPWATER_ARCHS)
+        if(NOT EXISTS ${DEEPWATER_PGO_DIR}/${_a}.profdata)
+            message(FATAL_ERROR "DEEPWATER_PGO=USE: ${DEEPWATER_PGO_DIR}/${_a}.profdata is missing (cmake/pgo-train.sh)")
+        endif()
+        add_compile_options("$<${_dw_opt}:SHELL:-Xarch_${_a} -fprofile-instr-use=${DEEPWATER_PGO_DIR}/${_a}.profdata>")
+    endforeach()
+    # Code the training didn't run, or that changed since, is optimised without a profile: no warning for each.
+    add_compile_options("$<${_dw_opt}:-Wno-profile-instr-unprofiled;-Wno-profile-instr-out-of-date>")
+endif()
+
 # libvterm 0.3.3 (MIT, third_party/libvterm): the terminal emulator behind the Charts page's
 # Terminal tab. Vendored unchanged from https://www.leonerd.org.uk/code/libvterm/.
 file(GLOB VTERM_SOURCES CONFIGURE_DEPENDS third_party/libvterm/src/*.c)
@@ -55,6 +119,44 @@ add_library(markov STATIC ${MARKOV_SOURCES})
 target_compile_features(markov PUBLIC cxx_std_20)
 target_link_libraries(markov PUBLIC Qt6::Core)
 target_include_directories(markov PUBLIC src)
+
+# Data fusion (src/fusion): several sources of an indicator made into one golden record. Qt Core only, tested by
+# tests/quant/fusion.
+file(GLOB FUSION_SOURCES CONFIGURE_DEPENDS src/fusion/*.h src/fusion/*.cpp)
+add_library(fusion STATIC ${FUSION_SOURCES})
+target_compile_features(fusion PUBLIC cxx_std_20)
+target_link_libraries(fusion PUBLIC Qt6::Core)
+target_include_directories(fusion PUBLIC src)
+
+# Local models (AI › Local): llama.cpp b12070 (MIT, third_party/llama.cpp: only what libllama needs, unchanged), built
+# static with Metal, behind deepwater-llm (src/llm), a helper process the app starts in a Seatbelt sandbox
+# (src/LocalEngine.cpp). macOS only, one architecture per build (ggml picks its CPU code by the target architecture):
+# a universal build goes without it, and the app then says the local engine isn't part of this build.
+set(DEEPWATER_LLM OFF)
+if(APPLE)
+    list(LENGTH DEEPWATER_ARCHS _dw_narch)
+    if(_dw_narch EQUAL 1)
+        set(DEEPWATER_LLM ON)
+    else()
+        message(STATUS "Universal build: the local engine (deepwater-llm) is left out")
+    endif()
+endif()
+if(DEEPWATER_LLM)
+    set(BUILD_SHARED_LIBS OFF)
+    foreach(_o LLAMA_BUILD_COMMON LLAMA_BUILD_TESTS LLAMA_BUILD_TOOLS LLAMA_BUILD_EXAMPLES LLAMA_BUILD_SERVER
+               LLAMA_BUILD_APP LLAMA_ALL_WARNINGS LLAMA_OPENSSL
+               GGML_NATIVE GGML_OPENMP GGML_BUILD_TESTS GGML_BUILD_EXAMPLES)
+        set(${_o} OFF CACHE BOOL "" FORCE)
+    endforeach()
+    set(GGML_METAL ON CACHE BOOL "" FORCE)
+    set(GGML_METAL_EMBED_LIBRARY ON CACHE BOOL "" FORCE)
+    add_subdirectory(third_party/llama.cpp EXCLUDE_FROM_ALL SYSTEM)
+    add_executable(deepwater-llm src/llm/deepwater-llm.cpp)
+    target_link_libraries(deepwater-llm PRIVATE llama vendor::nlohmann)
+    # Inside the bundle, next to deepwater (Contents/MacOS): the app finds it there, and it is installed with it.
+    set_target_properties(deepwater-llm PROPERTIES AUTOMOC OFF AUTORCC OFF
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/deepwater.app/Contents/MacOS)
+endif()
 
 qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/main.cpp
@@ -93,11 +195,24 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/MacroPanel.h src/MacroPanel.cpp
     src/HeaderBar.h src/HeaderBar.cpp
     src/DevTools.h src/DevTools.cpp
+    src/SideFlap.h src/SideFlap.cpp
     src/CodeGraphView.h src/CodeGraphView.cpp
     src/MainWindow.h src/MainWindow.cpp
     src/Theme.h src/Theme.cpp
     src/SettingsDialog.h src/SettingsDialog.cpp
     src/SourcesPage.h src/SourcesPage.cpp
+    src/SourceFlow.h src/SourceFlow.cpp
+    src/ModelSlots.h src/ModelSlots.cpp
+    src/LocalEngine.h src/LocalEngine.cpp
+    src/AiLocalView.h src/AiLocalView.cpp
+    src/LocalChat.h src/LocalChat.cpp
+    src/OpencodeRun.h src/OpencodeRun.cpp
+    src/AiRead.h src/AiRead.cpp
+    src/AiDock.h src/AiDock.cpp
+    src/LocalTools.h src/LocalTools.cpp
+    src/ToolJournal.h src/ToolJournal.cpp
+    src/McpServer.h src/McpServer.cpp
+    src/AiOpencodeView.h src/AiOpencodeView.cpp
     src/CalendarData.h src/CalendarData.cpp
     src/CalendarPage.h src/CalendarPage.cpp
     src/ResearchData.h src/ResearchData.cpp
@@ -119,16 +234,22 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/EconomyPage.h src/EconomyPage.cpp
     src/CountryData.h src/CountryData.cpp
     src/CountriesView.h src/CountriesView.cpp
+    src/IndicatorData.h src/IndicatorData.cpp
+    src/IndicatorsView.h src/IndicatorsView.cpp
     src/NewsData.h src/NewsData.cpp
     src/NewsPage.h src/NewsPage.cpp
     src/NewsReader.h src/NewsReader.cpp
     src/AdBlock.h src/AdBlock.cpp
     src/NewsWebHost.h src/NewsWebHost.cpp src/NewsWebHostQt.cpp
+    src/HelpWindow.h src/HelpWindow.cpp
     resources/resources.qrc
     resources/icon/deepwater.icns
 )
 
-target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov ZLIB::ZLIB)
+target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov fusion ZLIB::ZLIB)
+if(DEEPWATER_LLM)   # built before the app, so that the bundle is signed with it inside
+    add_dependencies(deepwater deepwater-llm)
+endif()
 
 # On macOS the article reader renders with the system's WebKit (WKWebView), the engine of Safari.
 if(APPLE)
@@ -143,10 +264,41 @@ find_program(CARGO cargo HINTS $ENV{HOME}/.cargo/bin $ENV{USERPROFILE}/.cargo/bi
 if(CARGO)
     set(ADBLOCK_DIR ${CMAKE_SOURCE_DIR}/third_party/adblock-ffi)
     set(ADBLOCK_LIB ${CMAKE_BINARY_DIR}/adblock-ffi/release/${CMAKE_STATIC_LIBRARY_PREFIX}adblock_ffi${CMAKE_STATIC_LIBRARY_SUFFIX})
-    add_custom_command(OUTPUT ${ADBLOCK_LIB}
-        COMMAND ${CARGO} build --release --quiet --manifest-path ${ADBLOCK_DIR}/Cargo.toml --target-dir ${CMAKE_BINARY_DIR}/adblock-ffi
-        DEPENDS ${ADBLOCK_DIR}/Cargo.toml ${ADBLOCK_DIR}/src/lib.rs
-        COMMENT "Building adblock-rust (the reader's ad blocker)")
+    if(APPLE)
+        # One cargo build per architecture, for the same CPU and macOS as the C++ code, then one universal library.
+        set(_dw_rust_arm64 aarch64-apple-darwin)
+        set(_dw_rust_x86_64 x86_64-apple-darwin)
+        set(_dw_rust_cpu_arm64 apple-m1)
+        set(_dw_rust_cpu_x86_64 x86-64-${DEEPWATER_X86_LEVEL})
+        set(_dw_rust_cmds)
+        set(_dw_rust_libs)
+        set(_dw_rust_env)
+        if(CMAKE_OSX_DEPLOYMENT_TARGET)
+            set(_dw_rust_env MACOSX_DEPLOYMENT_TARGET=${CMAKE_OSX_DEPLOYMENT_TARGET})
+        endif()
+        foreach(_a IN LISTS DEEPWATER_ARCHS)
+            set(_t ${_dw_rust_${_a}})
+            string(TOUPPER ${_t} _T)
+            string(REPLACE "-" "_" _T ${_T})
+            # /usr/bin/env rather than cmake -E env, which doesn't pass make's jobserver on to cargo
+            list(APPEND _dw_rust_cmds COMMAND env ${_dw_rust_env}
+                "$<${_dw_opt}:CARGO_TARGET_${_T}_RUSTFLAGS=-Ctarget-cpu=${_dw_rust_cpu_${_a}}>"
+                ${CARGO} build --release --quiet --target ${_t} --manifest-path ${ADBLOCK_DIR}/Cargo.toml
+                --target-dir ${CMAKE_BINARY_DIR}/adblock-ffi)
+            list(APPEND _dw_rust_libs ${CMAKE_BINARY_DIR}/adblock-ffi/${_t}/release/libadblock_ffi.a)
+        endforeach()
+        add_custom_command(OUTPUT ${ADBLOCK_LIB}
+            ${_dw_rust_cmds}
+            COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/adblock-ffi/release
+            COMMAND lipo -create ${_dw_rust_libs} -output ${ADBLOCK_LIB}
+            DEPENDS ${ADBLOCK_DIR}/Cargo.toml ${ADBLOCK_DIR}/src/lib.rs
+            COMMENT "Building adblock-rust (the reader's ad blocker) for ${DEEPWATER_ARCHS}")
+    else()
+        add_custom_command(OUTPUT ${ADBLOCK_LIB}
+            COMMAND ${CARGO} build --release --quiet --manifest-path ${ADBLOCK_DIR}/Cargo.toml --target-dir ${CMAKE_BINARY_DIR}/adblock-ffi
+            DEPENDS ${ADBLOCK_DIR}/Cargo.toml ${ADBLOCK_DIR}/src/lib.rs
+            COMMENT "Building adblock-rust (the reader's ad blocker)")
+    endif()
     add_custom_target(adblock_ffi DEPENDS ${ADBLOCK_LIB})
     add_dependencies(deepwater adblock_ffi)
     target_include_directories(deepwater PRIVATE ${ADBLOCK_DIR}/include)
@@ -206,14 +358,9 @@ install(SCRIPT ${deepwater_deploy})
 if(APPLE)
     # Library paths macdeployqt leaves pointing at Homebrew, then the ad-hoc signature again: macdeployqt rewrites
     # load paths, which voids signatures, and an Apple silicon Mac refuses to load an unsigned binary.
-    if(CMAKE_OSX_ARCHITECTURES)
-        set(_arch ${CMAKE_OSX_ARCHITECTURES})
-    else()
-        set(_arch ${CMAKE_HOST_SYSTEM_PROCESSOR})
-    endif()
-    list(LENGTH _arch _narch)
+    list(LENGTH DEEPWATER_ARCHS _narch)
     if(_narch EQUAL 1)   # a universal build (arm64;x86_64) keeps both halves
-        install(CODE "set(DEEPWATER_ARCH ${_arch})")
+        install(CODE "set(DEEPWATER_ARCH ${DEEPWATER_ARCHS})")
     endif()
     install(SCRIPT cmake/MacBundleFix.cmake)
 endif()
@@ -231,7 +378,11 @@ if(APPLE)
     set(CPACK_GENERATOR DragNDrop)          # deepwater.app and a link to /Applications
     set(CPACK_DMG_VOLUME_NAME Deepwater)
     set(CPACK_DMG_FORMAT UDBZ)
-    set(CPACK_PACKAGE_FILE_NAME "Deepwater-${DEEPWATER_PACKAGE_VERSION}-macOS-${CMAKE_SYSTEM_PROCESSOR}")
+    if(_narch GREATER 1)
+        set(CPACK_PACKAGE_FILE_NAME "Deepwater-${DEEPWATER_PACKAGE_VERSION}-macOS-universal")
+    else()
+        set(CPACK_PACKAGE_FILE_NAME "Deepwater-${DEEPWATER_PACKAGE_VERSION}-macOS-${DEEPWATER_ARCHS}")
+    endif()
 elseif(WIN32)
     set(CPACK_GENERATOR NSIS ZIP)
     set(CPACK_PACKAGE_FILE_NAME "Deepwater-${DEEPWATER_PACKAGE_VERSION}-windows-x64")
@@ -259,6 +410,9 @@ add_custom_target(dist
 
 # The Charts page (Quant Terminal port) seeds its custom indicator folder from here on first run.
 qt_add_resources(deepwater quant PREFIX /quant BASE resources/quant FILES resources/quant/ema-ribbon-squeeze.js)
+# The documentation (the header's ? icon): one Markdown file per chapter and language, resources/help/<lang>/<id>.md.
+file(GLOB help_files CONFIGURE_DEPENDS resources/help/*/*.md)
+qt_add_resources(deepwater help PREFIX /help BASE resources/help FILES ${help_files})
 # The machine-learning scripts the AI tab copies into the app's Python environment.
 qt_add_resources(deepwater ml PREFIX /ml BASE resources/ml FILES resources/ml/train.py resources/ml/check_env.py)
 

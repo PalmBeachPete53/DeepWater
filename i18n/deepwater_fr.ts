@@ -4,14 +4,27 @@
 <context>
     <name>AiClaudeView</name>
     <message>
-        <location filename="../src/AiPage.cpp" line="+484"/>
+        <location filename="../src/AiPage.cpp" line="+525"/>
         <source>Claude</source>
         <translation>Claude</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>A conversation with Claude through the Anthropic API, streamed as it is written. The model thinks adaptively; Effort sets how deep. On the models that support it, a safety refusal is re-run by the server on a fallback model inside the same call. The key is entered in Sources › AI.</source>
-        <translation>Une conversation avec Claude par l&apos;API Anthropic, affichée au fil de l&apos;écriture. Le modèle réfléchit de façon adaptative ; Effort règle la profondeur. Sur les modèles qui le permettent, un refus de sécurité est rejoué par le serveur sur un modèle de repli dans le même appel. La clé se saisit dans Sources › IA.</translation>
+        <translation type="vanished">Une conversation avec Claude par l&apos;API Anthropic, affichée au fil de l&apos;écriture. Le modèle réfléchit de façon adaptative ; Effort règle la profondeur. Sur les modèles qui le permettent, un refus de sécurité est rejoué par le serveur sur un modèle de repli dans le même appel. La clé se saisit dans Sources › IA.</translation>
+    </message>
+    <message>
+        <source>Models and agents outside the app: Claude, which the app calls through the Anthropic API, and opencode, which reads Deepwater&apos;s data through MCP.</source>
+        <translation type="vanished">Modèles et agents hors de l&apos;application : Claude, que l&apos;application appelle par l&apos;API Anthropic, et opencode, qui lit les données de Deepwater par MCP.</translation>
+    </message>
+    <message>
+        <location line="-3"/>
+        <source>Models and agents outside the app: Claude, which the app calls through the Anthropic API, and opencode, which reads Deepwater&apos;s data through MCP. Drag one into a slot below to give it skills.</source>
+        <translation>Les modèles et agents hors de l&apos;application : Claude, que l&apos;application appelle par l&apos;API Anthropic, et opencode, qui lit les données de Deepwater par MCP. Glissez-en un dans un emplacement ci-dessous pour lui donner des compétences.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Claude through the Anthropic API: the model the app calls and how deep it thinks (Effort; the model thinks adaptively). The models list comes from the API once a key is saved. The key is entered in Sources › AI.</source>
+        <translation>Claude par l&apos;API Anthropic : le modèle que l&apos;application appelle et la profondeur de sa réflexion (Effort ; le modèle réfléchit de façon adaptative). La liste des modèles vient de l&apos;API une fois une clé enregistrée. La clé se saisit dans Sources › IA.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -30,11 +43,184 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>System prompt (optional): who Claude is for this conversation</source>
-        <translation>Prompt système (facultatif) : qui est Claude pour cette conversation</translation>
+        <source>opencode</source>
+        <translation>opencode</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+28"/>
+        <source>No API key: enter one in Sources › AI to use Claude.</source>
+        <translation>Pas de clé API : saisissez-en une dans Sources › IA pour utiliser Claude.</translation>
+    </message>
+    <message>
+        <source>System prompt (optional): who Claude is for this conversation</source>
+        <translation type="vanished">Prompt système (facultatif) : qui est Claude pour cette conversation</translation>
+    </message>
+    <message>
+        <source>Your message · Cmd+Enter sends</source>
+        <translation type="vanished">Votre message · Cmd+Entrée envoie</translation>
+    </message>
+    <message>
+        <source>Send</source>
+        <translation type="vanished">Envoyer</translation>
+    </message>
+    <message>
+        <source>Stop</source>
+        <translation type="vanished">Arrêter</translation>
+    </message>
+    <message>
+        <source>New conversation</source>
+        <translation type="vanished">Nouvelle conversation</translation>
+    </message>
+    <message>
+        <source>%1 · %2 tokens in, %3 out · %4 s</source>
+        <translation type="vanished">%1 · %2 jetons en entrée, %3 en sortie · %4 s</translation>
+    </message>
+    <message>
+        <source>%1 from cache</source>
+        <translation type="vanished">%1 depuis le cache</translation>
+    </message>
+    <message>
+        <source>the model declined (safety)</source>
+        <translation type="vanished">le modèle a refusé (sécurité)</translation>
+    </message>
+    <message>
+        <source>cut at the token limit</source>
+        <translation type="vanished">coupé à la limite de jetons</translation>
+    </message>
+    <message>
+        <source>thinking summary available on hover</source>
+        <translation type="vanished">résumé de la réflexion au survol</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>API key saved (Sources › AI).</source>
+        <translation>Clé API enregistrée (Sources › IA).</translation>
+    </message>
+    <message>
+        <source>No API key: enter one in Sources › AI to talk to Claude.</source>
+        <translation type="vanished">Pas de clé API : saisissez-en une dans Sources › IA pour parler à Claude.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Couldn&apos;t list the models: %1</source>
+        <translation>Impossible de lister les modèles : %1</translation>
+    </message>
+    <message>
+        <source>You</source>
+        <translation type="vanished">Vous</translation>
+    </message>
+    <message>
+        <source>Waiting for %1…</source>
+        <translation type="vanished">En attente de %1…</translation>
+    </message>
+</context>
+<context>
+    <name>AiDock</name>
+    <message>
+        <location filename="../src/AiDock.cpp" line="+35"/>
+        <source>AI</source>
+        <translation>IA</translation>
+    </message>
+    <message>
+        <source>Ask the local model</source>
+        <translation type="vanished">Demander au modèle local</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Ask the AI</source>
+        <translation>Interroger l&apos;IA</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Close</source>
+        <translation>Fermer</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+89"/>
+        <source>Load</source>
+        <translation>Charger</translation>
+    </message>
+    <message>
+        <location line="-76"/>
+        <source>Ask from anywhere in the app · Cmd+Enter sends</source>
+        <translation>Demandez depuis n&apos;importe où dans l&apos;app · Cmd+Entrée envoie</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Sent with the question, so the model knows what &quot;this&quot; is</source>
+        <translation>Envoyé avec la question, pour que le modèle sache de quoi « ceci » parle</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Send</source>
+        <translation>Envoyer</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Stop</source>
+        <translation>Arrêter</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>New conversation</source>
+        <translation>Nouvelle conversation</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Unload</source>
+        <translation>Décharger</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>Context: %1</source>
+        <translation>Contexte : %1</translation>
+    </message>
+</context>
+<context>
+    <name>AiLocalView</name>
+    <message>
+        <location filename="../src/AiLocalView.cpp" line="+56"/>
+        <source>Local models</source>
+        <translation>Modèles locaux</translation>
+    </message>
+    <message>
+        <source>A conversation with a model of this computer, run by llama.cpp on its GPU. Only the models in a bound slot (Models › Slots) can run. The engine runs in a sandbox: it reads its own model file and nothing else of yours, has no network, writes nowhere and starts no other program.</source>
+        <translation type="vanished">Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp sur sa carte graphique. Seuls les modèles d’un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d’autre de vos fichiers, n’a pas de réseau, n’écrit nulle part et ne lance aucun autre programme.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A conversation with a model of this computer, run by llama.cpp on its GPU. Only the models in a bound slot (Models › Slots) can run. The engine runs in a sandbox: it reads its own model file and nothing else of yours, has no network, writes nowhere and starts no other program. opencode, when a slot holds it, can be chosen too: it runs outside the sandbox, with its own tools turned off.</source>
+        <translation>Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp sur son GPU. Seuls les modèles d&apos;un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d&apos;autre de vos fichiers, n&apos;a pas de réseau, n&apos;écrit nulle part et ne lance aucun autre programme. opencode, quand un emplacement le tient, peut aussi être choisi : il tourne hors du bac à sable, avec ses propres outils désactivés.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>%1 tokens</source>
+        <translation>%1 jetons</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+184"/>
+        <source>Load</source>
+        <translation>Charger</translation>
+    </message>
+    <message>
+        <location line="-181"/>
+        <source>Model</source>
+        <translation>Modèle</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Context</source>
+        <translation>Contexte</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>System prompt (optional): who the model is for this conversation</source>
+        <translation>Consigne système (facultative) : qui est le modèle pour cette conversation</translation>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Your message · Cmd+Enter sends</source>
         <translation>Votre message · Cmd+Entrée envoie</translation>
     </message>
@@ -49,59 +235,231 @@
         <translation>Arrêter</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+1"/>
         <source>New conversation</source>
         <translation>Nouvelle conversation</translation>
     </message>
     <message>
-        <location line="+47"/>
-        <source>%1 · %2 tokens in, %3 out · %4 s</source>
-        <translation>%1 · %2 jetons en entrée, %3 en sortie · %4 s</translation>
+        <location line="+11"/>
+        <source>Tool calls · journal</source>
+        <translation>Appels d’outils · journal</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>%1 from cache</source>
-        <translation>%1 depuis le cache</translation>
+        <location line="+4"/>
+        <source>Show the file</source>
+        <translation>Afficher le fichier</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>the model declined (safety)</source>
-        <translation>le modèle a refusé (sécurité)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>cut at the token limit</source>
-        <translation>coupé à la limite de jetons</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>thinking summary available on hover</source>
-        <translation>résumé de la réflexion au survol</translation>
-    </message>
-    <message>
-        <location line="+31"/>
-        <source>API key saved (Sources › AI).</source>
-        <translation>Clé API enregistrée (Sources › IA).</translation>
+        <location line="+5"/>
+        <source>Time</source>
+        <translation>Heure</translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>No API key: enter one in Sources › AI to talk to Claude.</source>
-        <translation>Pas de clé API : saisissez-en une dans Sources › IA pour parler à Claude.</translation>
+        <source>Slot</source>
+        <translation>Emplacement</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>Couldn&apos;t list the models: %1</source>
-        <translation>Impossible de lister les modèles : %1</translation>
+        <location line="+0"/>
+        <source>Tool</source>
+        <translation>Outil</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+0"/>
+        <source>Arguments</source>
+        <translation>Arguments</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Outcome</source>
+        <translation>Issue</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Result</source>
+        <translation>Résultat</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <source>opencode isn&apos;t on this computer (opencode.ai to install it).</source>
+        <translation>opencode n&apos;est pas sur cet ordinateur (opencode.ai pour l&apos;installer).</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>opencode answers with the model chosen here, usually at a provider, which gets your questions and what the tools read. Its own tools (shell, files, web) are off here.</source>
+        <translation>opencode répond avec le modèle choisi ici, généralement chez un fournisseur, qui reçoit vos questions et ce que lisent les outils. Ses propres outils (shell, fichiers, web) sont désactivés ici.</translation>
+    </message>
+    <message>
+        <source>opencode answers with the model it is set to use, usually at a provider, which gets your questions and what the tools read. Its own tools (shell, files, web) are off here.</source>
+        <translation type="vanished">opencode répond avec le modèle qu&apos;il est réglé pour utiliser, généralement chez un fournisseur, qui reçoit vos questions et ce que lisent les outils. Ses propres outils (shell, fichiers, web) sont désactivés ici.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>No model can run: drag a GGUF model or opencode into a slot (Models › Slots); it shows here once the slot has it.</source>
+        <translation>Aucun modèle ne peut tourner : glissez un modèle GGUF ou opencode dans un emplacement (Modèles › Emplacements) ; il apparaît ici une fois dans l&apos;emplacement.</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n token(s)</source>
+        <translation type="vanished">
+            <numerusform>%n jeton</numerusform>
+            <numerusform>%n jetons</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>%1 tokens/s</source>
+        <translation type="vanished">%1 jetons/s</translation>
+    </message>
+    <message>
+        <source>prompt %1 tokens, %2 already evaluated</source>
+        <translation type="vanished">invite de %1 jetons, dont %2 déjà évalués</translation>
+    </message>
+    <message>
+        <source>cut at the token limit</source>
+        <translation type="vanished">coupé à la limite de jetons</translation>
+    </message>
+    <message>
+        <source>stopped</source>
+        <translation type="vanished">arrêté</translation>
+    </message>
+    <message>
+        <source>the context is full: start a new conversation</source>
+        <translation type="vanished">le contexte est plein : commencez une nouvelle conversation</translation>
+    </message>
+    <message>
+        <source>stopped: the tool calls kept failing</source>
+        <translation type="vanished">arrêté : les appels d’outils échouaient à chaque fois</translation>
+    </message>
+    <message>
+        <location line="+50"/>
+        <source>Skills of slot %1: %2. Its tools: %3. Each call is checked against the slot and written to the journal below.</source>
+        <translation>Compétences de l’emplacement %1 : %2. Ses outils : %3. Chaque appel est vérifié auprès de l’emplacement et inscrit au journal ci-dessous.</translation>
+    </message>
+    <message>
+        <source>Unloaded: slot %1 no longer holds the model with the files it was bound to.</source>
+        <translation type="vanished">Déchargé : l’emplacement %1 ne tient plus le modèle avec les fichiers auxquels il était lié.</translation>
+    </message>
+    <message>
+        <source>Slot %1 · %2 · %3</source>
+        <translation type="vanished">Emplacement %1 · %2 · %3</translation>
+    </message>
+    <message>
+        <source>Slot %1 no longer holds this model with the files it was bound to: see Models › Slots.</source>
+        <translation type="vanished">L’emplacement %1 ne tient plus ce modèle avec les fichiers auxquels il était lié : voir Modèles › Emplacements.</translation>
+    </message>
+    <message>
+        <source>This model needs about %1 of memory and this Mac has %2: it would not fit.</source>
+        <translation type="vanished">Ce modèle demande environ %1 de mémoire et ce Mac en a %2 : il ne tiendrait pas.</translation>
+    </message>
+    <message>
         <source>You</source>
-        <translation>Vous</translation>
+        <translation type="vanished">Vous</translation>
     </message>
     <message>
-        <location line="+19"/>
-        <source>Waiting for %1…</source>
-        <translation>En attente de %1…</translation>
+        <source>Writing…</source>
+        <translation type="vanished">Rédaction…</translation>
+    </message>
+    <message numerus="yes">
+        <source>stopped after %n round(s) of tool calls</source>
+        <translation type="vanished">
+            <numerusform>arrêté après %n tour d’appels d’outils</numerusform>
+            <numerusform>arrêté après %n tours d’appels d’outils</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Calling %n tool(s)…</source>
+        <translation type="vanished">
+            <numerusform>Appel de %n outil…</numerusform>
+            <numerusform>Appel de %n outils…</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n character(s) of data</source>
+        <translation type="vanished">
+            <numerusform>%n caractère de données</numerusform>
+            <numerusform>%n caractères de données</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>%n tool call(s)</source>
+        <translation type="vanished">
+            <numerusform>%n appel d’outil</numerusform>
+            <numerusform>%n appels d’outils</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-83"/>
+        <source>run</source>
+        <translation>exécuté</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>refused</source>
+        <translation>refusé</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>error</source>
+        <translation>erreur</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n character(s)</source>
+        <translation>
+            <numerusform>%n caractère</numerusform>
+            <numerusform>%n caractères</numerusform>
+        </translation>
+    </message>
+    <message>
+        <source>calling a tool…</source>
+        <translation type="vanished">appel d’un outil…</translation>
+    </message>
+    <message>
+        <location line="+52"/>
+        <source>Unload</source>
+        <translation>Décharger</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>The local engine isn&apos;t part of this build (a universal build leaves it out).</source>
+        <translation>Le moteur local ne fait pas partie de cette version (une version universelle s’en passe).</translation>
+    </message>
+    <message>
+        <source>No model can run: drag a GGUF model into a slot (Models › Slots); it shows here once the slot has bound it.</source>
+        <translation type="vanished">Aucun modèle ne peut tourner : glissez un modèle GGUF dans un emplacement (Modèles › Emplacements) ; il apparaît ici une fois que l’emplacement l’a lié.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Not loaded.</source>
+        <translation>Non chargé.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Loading %1 in the sandbox…</source>
+        <translation>Chargement de %1 dans le bac à sable…</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 · %2 billion parameters · %3 · context %4 tokens · loaded in %5 s</source>
+        <translation>%1 · %2 milliards de paramètres · %3 · contexte de %4 jetons · chargé en %5 s</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Metal GPU</source>
+        <translation>GPU Metal</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>CPU</source>
+        <translation>Processeur</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Slot %1 grants no skill: the model sees this conversation and nothing else.</source>
+        <translation>L’emplacement %1 n’accorde aucune compétence : le modèle voit cette conversation et rien d’autre.</translation>
+    </message>
+    <message>
+        <source>Skills of slot %1: %2. None is wired to the engine yet: for now the model sees this conversation and nothing else.</source>
+        <translation type="vanished">Compétences de l’emplacement %1 : %2. Aucune n’est encore reliée au moteur : pour l’instant le modèle voit cette conversation et rien d’autre.</translation>
     </message>
 </context>
 <context>
@@ -443,12 +801,11 @@
 <context>
     <name>AiModelsView</name>
     <message>
-        <location filename="../src/AiPage.cpp" line="-563"/>
         <source>Models</source>
-        <translation>Modèles</translation>
+        <translation type="vanished">Modèles</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../src/AiPage.cpp" line="-494"/>
         <source>The models kept on this computer, and the Hugging Face Hub to get more: search a model, pick its files (a GGUF quantisation, the safetensors weights…) and download them into the app&apos;s models folder; downloads resume where they stopped. A Hub token (Sources › AI) opens gated repositories.</source>
         <translation>Les modèles conservés sur cet ordinateur, et le Hub Hugging Face pour en obtenir d&apos;autres : cherchez un modèle, choisissez ses fichiers (une quantification GGUF, les poids safetensors…) et téléchargez-les dans le dossier des modèles de l&apos;application ; les téléchargements reprennent là où ils se sont arrêtés. Un jeton Hub (Sources › IA) ouvre les dépôts à accès restreint.</translation>
     </message>
@@ -469,46 +826,46 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>Model</source>
         <translation>Modèle</translation>
     </message>
     <message>
-        <location line="-48"/>
+        <location line="-50"/>
         <source>Task</source>
         <translation>Tâche</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+37"/>
+        <location line="+39"/>
         <source>Downloads</source>
         <translation>Téléchargements</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-39"/>
         <source>Likes</source>
         <translation>J&apos;aime</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>Updated</source>
         <translation>Mis à jour</translation>
     </message>
     <message>
-        <location line="-36"/>
-        <location line="+36"/>
+        <location line="-37"/>
+        <location line="+37"/>
         <source>Files</source>
         <translation>Fichiers</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="-35"/>
         <source>File</source>
         <translation>Fichier</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Size</source>
         <translation>Taille</translation>
     </message>
@@ -528,7 +885,7 @@
         <translation>Sur cet ordinateur</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Open the folder</source>
         <translation>Ouvrir le dossier</translation>
     </message>
@@ -538,7 +895,12 @@
         <translation>Supprimer</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+8"/>
+        <source>Drag a model into a slot below to give it skills</source>
+        <translation>Glissez un modèle dans un emplacement ci-dessous pour lui donner des compétences</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Files · %1</source>
         <translation>Fichiers · %1</translation>
     </message>
@@ -576,12 +938,22 @@
         <translation> (accès restreint)</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+33"/>
         <source> · on this computer</source>
         <translation> · sur cet ordinateur</translation>
     </message>
+    <message>
+        <location line="+1"/>
+        <source> · can run code</source>
+        <translation> · peut exécuter du code</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>This format can run code when it is loaded (a pickle file or Python code). Deepwater never loads it, and the local engine reads GGUF files only.</source>
+        <translation>Ce format peut exécuter du code quand il est chargé (un fichier pickle ou du code Python). Deepwater ne le charge jamais, et le moteur local ne lit que les fichiers GGUF.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+12"/>
+        <location line="+10"/>
         <source>%1: %n file(s), %2 in all. Tick what to download.</source>
         <translation>
             <numerusform>%1 : %n fichier, %2 en tout. Cochez ce qu&apos;il faut télécharger.</numerusform>
@@ -620,7 +992,17 @@
         <translation>place insuffisante</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+16"/>
+        <source>Files that can run code</source>
+        <translation>Fichiers qui peuvent exécuter du code</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 can run code when loaded. Deepwater never loads them, but another program opening them could. Download them anyway?</source>
+        <translation>%1 peuvent exécuter du code quand ils sont chargés. Deepwater ne les charge jamais, mais un autre programme qui les ouvrirait le pourrait. Les télécharger quand même ?</translation>
+    </message>
+    <message>
+        <location line="+29"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
@@ -655,7 +1037,7 @@
         <translation>%1 · %2/s</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>No model yet. They go to %1.</source>
         <translation>Aucun modèle pour l&apos;instant. Ils iront dans %1.</translation>
     </message>
@@ -679,16 +1061,182 @@
     </message>
 </context>
 <context>
+    <name>AiOpencodeView</name>
+    <message>
+        <source>opencode, an AI agent that runs in the terminal (opencode.ai), can read Deepwater&apos;s data while the app is open: Deepwater serves it the tools of the skills ticked below over MCP, on this computer only (127.0.0.1), behind a token. opencode hands what the tools return to the model it uses, which usually runs at a provider, not on this computer. Every call is in the tool journal (AI › Local).</source>
+        <translation type="vanished">opencode, un agent IA qui tourne dans le terminal (opencode.ai), peut lire les données de Deepwater tant que l&apos;application est ouverte : Deepwater lui sert par MCP les outils des compétences cochées ci-dessous, sur cet ordinateur seulement (127.0.0.1), derrière un jeton. opencode transmet ce que renvoient les outils au modèle qu&apos;il utilise, qui tourne en général chez un fournisseur, pas sur cet ordinateur. Chaque appel est inscrit au journal des outils (IA › Local).</translation>
+    </message>
+    <message>
+        <location filename="../src/AiOpencodeView.cpp" line="+85"/>
+        <source>Serve Deepwater&apos;s tools to opencode</source>
+        <translation>Servir les outils de Deepwater à opencode</translation>
+    </message>
+    <message>
+        <source>Skills</source>
+        <translation type="vanished">Compétences</translation>
+    </message>
+    <message>
+        <source>A skill ticked or unticked counts at the next call; opencode lists the tools of a newly ticked skill when it connects again (a new opencode, or opencode reload).</source>
+        <translation type="vanished">Une compétence cochée ou décochée compte dès l&apos;appel suivant ; opencode voit les outils d&apos;une compétence nouvellement cochée quand il se reconnecte (un nouvel opencode, ou opencode reload).</translation>
+    </message>
+    <message>
+        <location line="-10"/>
+        <source>opencode, an AI agent that runs in the terminal (opencode.ai), can read Deepwater&apos;s data while the app is open: Deepwater serves it the tools of the skills of its slot over MCP, on this computer only (127.0.0.1), behind a token. opencode hands what the tools return to the model it uses, which usually runs at a provider, not on this computer. Every call is in the tool journal (AI › Local).</source>
+        <translation>opencode, un agent d&apos;IA qui tourne dans le terminal (opencode.ai), peut lire les données de Deepwater tant que l&apos;application est ouverte : Deepwater lui sert par MCP les outils des compétences de son emplacement, sur cet ordinateur uniquement (127.0.0.1), derrière un jeton. opencode transmet ce que renvoient les outils au modèle qu&apos;il utilise, qui tourne généralement chez un fournisseur, pas sur cet ordinateur. Chaque appel figure dans le journal des outils (IA › Local).</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>A skill of its slot ticked or unticked counts at the next call; opencode lists the tools of a newly ticked skill when it connects again (a new opencode, or opencode reload).</source>
+        <translation>Une compétence de son emplacement cochée ou décochée compte dès l&apos;appel suivant ; opencode liste les outils d&apos;une compétence nouvellement cochée à sa prochaine connexion (un nouvel opencode, ou opencode reload).</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+164"/>
+        <source>Add to opencode</source>
+        <translation>Ajouter à opencode</translation>
+    </message>
+    <message>
+        <location line="-163"/>
+        <source>Runs opencode mcp add deepwater --global with this address and token.</source>
+        <translation>Lance opencode mcp add deepwater --global avec cette adresse et ce jeton.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy the configuration</source>
+        <translation>Copier la configuration</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The JSON to put in opencode.json by hand, token included.</source>
+        <translation>Le JSON à mettre à la main dans opencode.json, jeton compris.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+21"/>
+        <source>New token</source>
+        <translation>Nouveau jeton</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Refuses the current token from now on; opencode must then be updated.</source>
+        <translation>Refuse désormais le jeton actuel ; opencode doit alors être mis à jour.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>The MCP server isn&apos;t available in this build.</source>
+        <translation>Le serveur MCP n&apos;est pas disponible dans cette version.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>opencode won&apos;t reach Deepwater with its current token any more, until it&apos;s updated (Update opencode). Make a new token?</source>
+        <translation>opencode ne joindra plus Deepwater avec son jeton actuel tant qu&apos;il n&apos;est pas mis à jour (Mettre à jour opencode). Créer un nouveau jeton ?</translation>
+    </message>
+    <message>
+        <location line="+94"/>
+        <source>opencode isn&apos;t on this computer (opencode.ai to install it); the address can still be added to its configuration by hand (Copy the configuration).</source>
+        <translation>opencode n&apos;est pas sur cet ordinateur (opencode.ai pour l&apos;installer) ; l&apos;adresse peut quand même être ajoutée à sa configuration à la main (Copier la configuration).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>opencode found: %1.</source>
+        <translation>opencode trouvé : %1.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>opencode %1 found: %2.</source>
+        <translation>opencode %1 trouvé : %2.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Off: opencode can&apos;t reach Deepwater.</source>
+        <translation>Arrêté : opencode ne peut pas joindre Deepwater.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Serving at %1</source>
+        <translation>Servi à %1</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Couldn&apos;t listen on port %1: %2</source>
+        <translation>Impossible d&apos;écouter sur le port %1 : %2</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>In opencode&apos;s configuration (%1).</source>
+        <translation>Dans la configuration d&apos;opencode (%1).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>opencode&apos;s configuration (%1) has Deepwater with another address or token, or turned off: update it.</source>
+        <translation>La configuration d&apos;opencode (%1) contient Deepwater avec une autre adresse ou un autre jeton, ou désactivé : mettez-la à jour.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Couldn&apos;t read opencode&apos;s configuration (%1).</source>
+        <translation>Impossible de lire la configuration d&apos;opencode (%1).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Not in opencode&apos;s configuration yet (%1).</source>
+        <translation>Pas encore dans la configuration d&apos;opencode (%1).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Update opencode</source>
+        <translation>Mettre à jour opencode</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>%n call(s) from opencode since Deepwater started.</source>
+        <translation>
+            <numerusform>%n appel d&apos;opencode depuis le démarrage de Deepwater.</numerusform>
+            <numerusform>%n appels d&apos;opencode depuis le démarrage de Deepwater.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Adding Deepwater to opencode…</source>
+        <translation>Ajout de Deepwater à opencode…</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>opencode refused: %1</source>
+        <translation>opencode a refusé : %1</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Copied, token included: paste it only into opencode&apos;s configuration.</source>
+        <translation>Copié, jeton compris : ne le collez que dans la configuration d&apos;opencode.</translation>
+    </message>
+</context>
+<context>
     <name>AiPage</name>
     <message>
-        <location line="+214"/>
+        <location filename="../src/AiPage.cpp" line="+118"/>
+        <location line="+29"/>
         <source>Models</source>
         <translation>Modèles</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-29"/>
         <source>Machine learning</source>
         <translation>Apprentissage automatique</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Local</source>
+        <translation>Local</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Local models</source>
+        <translation>Modèles locaux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Integration</source>
+        <translation>Intégration</translation>
     </message>
 </context>
 <context>
@@ -1469,7 +2017,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CountriesView</name>
     <message>
-        <location filename="../src/CountriesView.cpp" line="+361"/>
+        <location filename="../src/CountriesView.cpp" line="+363"/>
         <source>Search countries…</source>
         <translation>Rechercher un pays…</translation>
     </message>
@@ -1477,7 +2025,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CountryPage</name>
     <message>
-        <location line="-289"/>
+        <location line="-291"/>
         <source>Countries</source>
         <translation>Pays</translation>
     </message>
@@ -1488,12 +2036,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+238"/>
+        <location line="+240"/>
         <source>Export CSV</source>
         <translation>Exporter en CSV</translation>
     </message>
     <message>
-        <location line="-235"/>
+        <location line="-237"/>
         <source>Save the table of this tab as a CSV file</source>
         <translation>Enregistrer le tableau de cet onglet en fichier CSV</translation>
     </message>
@@ -1543,7 +2091,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Source</translation>
     </message>
     <message>
-        <location line="+84"/>
+        <location line="+86"/>
         <source>This source gives the latest and previous values only: no history for the highest and lowest.</source>
         <translation>Cette source ne donne que la dernière valeur et la précédente : pas d’historique pour le plus haut et le plus bas.</translation>
     </message>
@@ -3294,12 +3842,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>DevToolsDock</name>
     <message>
-        <location filename="../src/DevTools.cpp" line="+119"/>
+        <location filename="../src/DevTools.cpp" line="+40"/>
         <source>CODEBASE</source>
         <translation>CODE</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
@@ -4114,7 +4662,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+42"/>
-        <location filename="../src/EconomyPage.cpp" line="+274"/>
+        <location filename="../src/EconomyPage.cpp" line="+275"/>
         <source>Altcoin season</source>
         <translation>Saison des altcoins</translation>
     </message>
@@ -4234,12 +4782,19 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>EconomyPage</name>
     <message>
-        <location line="+61"/>
+        <location line="+70"/>
+        <location line="+243"/>
         <source>Countries</source>
         <translation>Pays</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="-243"/>
+        <location line="+244"/>
+        <source>Indicators</source>
+        <translation>Indicateurs</translation>
+    </message>
+    <message>
+        <location line="-229"/>
         <source>Refresh</source>
         <translation>Actualiser</translation>
     </message>
@@ -4249,7 +4804,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Télécharger à nouveau tous les indicateurs de cette section</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+112"/>
         <source>ESTIMATE</source>
         <translation>ESTIMATION</translation>
     </message>
@@ -4511,23 +5066,28 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>HeaderBar</name>
     <message>
-        <location filename="../src/HeaderBar.cpp" line="+157"/>
+        <location filename="../src/HeaderBar.cpp" line="+179"/>
         <source>Show a hidden tab</source>
         <translation>Afficher un onglet masqué</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location line="+184"/>
+        <location line="+199"/>
         <source>Edit tabs</source>
         <translation>Modifier les onglets</translation>
     </message>
     <message>
-        <location line="-158"/>
+        <location line="-173"/>
         <source>Developer tools</source>
         <translation>Outils de développement</translation>
     </message>
     <message>
         <location line="+18"/>
+        <source>Help</source>
+        <translation>Aide</translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
@@ -4540,6 +5100,24 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+98"/>
         <source>Done</source>
         <translation>Terminé</translation>
+    </message>
+</context>
+<context>
+    <name>HelpWindow</name>
+    <message>
+        <location filename="../src/HelpWindow.cpp" line="+163"/>
+        <source>Help</source>
+        <translation>Aide</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>HELP</source>
+        <translation>AIDE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Search the help</source>
+        <translation>Chercher dans l'aide</translation>
     </message>
 </context>
 <context>
@@ -4558,7 +5136,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>HuggingFaceHub</name>
     <message>
-        <location filename="../src/AiModels.cpp" line="+90"/>
+        <location filename="../src/AiModels.cpp" line="+91"/>
         <source>Gated repository: a Hub token that accepted its terms is needed (Sources › AI)</source>
         <translation>Dépôt à accès restreint : il faut un jeton Hub ayant accepté ses conditions (Sources › IA)</translation>
     </message>
@@ -4602,9 +5180,101 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>IndicatorPage</name>
+    <message>
+        <location filename="../src/IndicatorsView.cpp" line="+109"/>
+        <source>Indicators</source>
+        <translation>Indicateurs</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+228"/>
+        <source>Export CSV</source>
+        <translation>Exporter CSV</translation>
+    </message>
+    <message>
+        <location line="-225"/>
+        <source>Save the table as a CSV file</source>
+        <translation>Enregistrer le tableau dans un fichier CSV</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Refresh</source>
+        <translation>Actualiser</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Download this indicator again for every country</source>
+        <translation>Télécharger à nouveau cet indicateur pour chaque pays</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>All</source>
+        <translation>Tous</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Country</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Last</source>
+        <translation>Dernier</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Previous</source>
+        <translation>Précédent</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Reference</source>
+        <translation>Référence</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unit</source>
+        <translation>Unité</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Next release</source>
+        <translation>Prochaine publication</translation>
+    </message>
+    <message>
+        <location line="+128"/>
+        <source>The figure for %1</source>
+        <translation>Le chiffre de %1</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+18"/>
+        <source>Updating… %n country(ies) left</source>
+        <translation>
+            <numerusform>Mise à jour… %n pays restant</numerusform>
+            <numerusform>Mise à jour… %n pays restants</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <source>%1 of %2 countries: the others have no free source for this indicator.</source>
+        <translation>%1 pays sur %2 : les autres n’ont pas de source gratuite pour cet indicateur.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>A free API key, saved in Sources, would add: %1.</source>
+        <translation>Une clé d’API gratuite, enregistrée dans Sources, ajouterait : %1.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>CSV files (*.csv)</source>
+        <translation>Fichiers CSV (*.csv)</translation>
+    </message>
+</context>
+<context>
     <name>IndicatorPanel</name>
     <message>
-        <location line="-135"/>
+        <location filename="../src/MacroPanel.cpp" line="-135"/>
         <source>Macro</source>
         <translation>Macro</translation>
     </message>
@@ -4652,6 +5322,14 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+2"/>
         <source>IMF World Economic Outlook and balance of payments · BIS policy rates</source>
         <translation>Perspectives de l’économie mondiale et balance des paiements (FMI) · taux directeurs (BRI)</translation>
+    </message>
+</context>
+<context>
+    <name>IndicatorsView</name>
+    <message>
+        <location filename="../src/IndicatorsView.cpp" line="+44"/>
+        <source>Search indicators…</source>
+        <translation>Rechercher un indicateur…</translation>
     </message>
 </context>
 <context>
@@ -4971,6 +5649,158 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+48"/>
         <source>Real prices: delayed futures, IMF monthly averages · sample sites</source>
         <translation>Cours réels : contrats à terme différés, moyennes mensuelles du FMI · sites : échantillon</translation>
+    </message>
+</context>
+<context>
+    <name>LocalChat</name>
+    <message>
+        <location filename="../src/LocalChat.cpp" line="+103"/>
+        <source>Unloaded: slot %1 no longer holds the model with the files it was bound to.</source>
+        <translation>Déchargé : l’emplacement %1 ne tient plus le modèle avec les fichiers auxquels il était lié.</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>Slot %1 · %2 · %3</source>
+        <translation>Emplacement %1 · %2 · %3</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Slot %1 · %2</source>
+        <translation>Emplacement %1 · %2</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Slot %1 no longer holds this model with the files it was bound to: see Models › Slots.</source>
+        <translation>L’emplacement %1 ne tient plus ce modèle avec les fichiers auxquels il était lié : voir Modèles › Emplacements.</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>This model needs about %1 of memory and this Mac has %2: it would not fit.</source>
+        <translation>Ce modèle demande environ %1 de mémoire et ce Mac en a %2 : il ne tiendrait pas.</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>You</source>
+        <translation>Vous</translation>
+    </message>
+    <message>
+        <source>its table was sent</source>
+        <translation type="vanished">son tableau a été envoyé</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+119"/>
+        <source>Writing…</source>
+        <translation>Rédaction…</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-48"/>
+        <source>%n token(s)</source>
+        <translation>
+            <numerusform>%n jeton</numerusform>
+            <numerusform>%n jetons</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 tokens/s</source>
+        <translation>%1 jetons/s</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>prompt %1 tokens, %2 already evaluated</source>
+        <translation>invite de %1 jetons, dont %2 déjà évalués</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>cut at the token limit</source>
+        <translation>coupé à la limite de jetons</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+22"/>
+        <source>stopped</source>
+        <translation>arrêté</translation>
+    </message>
+    <message>
+        <location line="-21"/>
+        <source>the context is full: start a new conversation</source>
+        <translation>le contexte est plein : commencez une nouvelle conversation</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+7"/>
+        <source>stopped after %n round(s) of tool calls</source>
+        <translation>
+            <numerusform>arrêté après %n tour d’appels d’outils</numerusform>
+            <numerusform>arrêté après %n tours d’appels d’outils</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>Calling %n tool(s)…</source>
+        <translation>
+            <numerusform>Appel de %n outil…</numerusform>
+            <numerusform>Appel de %n outils…</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>stopped: the tool calls kept failing</source>
+        <translation>arrêté : les appels d’outils échouaient à chaque fois</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+48"/>
+        <source>%n character(s) of data</source>
+        <translation>
+            <numerusform>%n caractère de données</numerusform>
+            <numerusform>%n caractères de données</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+14"/>
+        <source>%n tool call(s)</source>
+        <translation>
+            <numerusform>%n appel d’outil</numerusform>
+            <numerusform>%n appels d’outils</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>calling a tool…</source>
+        <translation>appel d’un outil…</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>The model opencode answers with; a free one may not be available in your country</source>
+        <translation>Le modèle avec lequel opencode répond ; un modèle gratuit peut ne pas être disponible dans votre pays</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>opencode&apos;s default model</source>
+        <translation>Modèle par défaut d&apos;opencode</translation>
+    </message>
+</context>
+<context>
+    <name>LocalEngine</name>
+    <message>
+        <location filename="../src/LocalEngine.cpp" line="+81"/>
+        <source>The local engine isn&apos;t part of this build.</source>
+        <translation>Le moteur local ne fait pas partie de cette version.</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <source>the engine couldn&apos;t start (%1)</source>
+        <translation>le moteur n’a pas pu démarrer (%1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>the engine stopped unexpectedly</source>
+        <translation>le moteur s’est arrêté de façon inattendue</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>the engine quit (code %1)</source>
+        <translation>le moteur s’est arrêté (code %1)</translation>
     </message>
 </context>
 <context>
@@ -5650,7 +6480,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1008"/>
+        <location filename="../src/MainWindow.cpp" line="+1324"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -5658,12 +6488,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-751"/>
+        <location filename="../src/MainWindow.cpp" line="-1048"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Map</source>
         <translation>Carte</translation>
     </message>
@@ -5713,12 +6543,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>IA</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+1"/>
         <source>Sources</source>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+550"/>
+        <location line="+859"/>
         <source>Trade in goods</source>
         <translation>Commerce de biens</translation>
     </message>
@@ -6091,7 +6921,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MlDataExporter</name>
     <message>
-        <location filename="../src/MlData.cpp" line="+226"/>
+        <location filename="../src/MlData.cpp" line="+267"/>
         <source>Writing to %1</source>
         <translation>Écriture dans %1</translation>
     </message>
@@ -6173,6 +7003,201 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+54"/>
         <source>Stopped</source>
         <translation>Arrêté</translation>
+    </message>
+</context>
+<context>
+    <name>ModelSlotsView</name>
+    <message>
+        <location filename="../src/ModelSlots.cpp" line="+84"/>
+        <source>Read Deepwater&apos;s data</source>
+        <translation>Lire les données de Deepwater</translation>
+    </message>
+    <message>
+        <source>Read only: the series of the countries and indicators, the map&apos;s data sets, prices and calendars, through the app; no file, no network, no writing.</source>
+        <translation type="vanished">Lecture seule : les séries des pays et des indicateurs, les jeux de données de la carte, les prix et les calendriers, par l’intermédiaire de l’application ; aucun fichier, aucun réseau, aucune écriture.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Trade</source>
+        <translation>Trading</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs strategies in the Charts tab&apos;s tester (which can switch the active chart), reads their trades as the CSV export, and buys and sells on the live paper account: simulated money only, at most 5 orders per question, none above the account&apos;s equity.</source>
+        <translation>Lance des stratégies dans le testeur de l’onglet Graphiques (qui peut changer le graphique actif), lit leurs trades dans l’export CSV, et achète et vend sur le compte paper trading en direct : de l’argent simulé uniquement, 5 ordres au plus par question, aucun au-delà de l’équité du compte.</translation>
+    </message>
+    <message>
+        <location line="+64"/>
+        <source>Slot %1</source>
+        <translation>Emplacement %1</translation>
+    </message>
+    <message>
+        <source>Take the model out of this slot</source>
+        <translation type="vanished">Retirer le modèle de cet emplacement</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Skills</source>
+        <translation>Compétences</translation>
+    </message>
+    <message>
+        <source>Drag a model here</source>
+        <translation type="vanished">Glissez un modèle ici</translation>
+    </message>
+    <message>
+        <source>from On this computer</source>
+        <translation type="vanished">depuis Sur cet ordinateur</translation>
+    </message>
+    <message>
+        <source>Read only: the series of the countries and indicators, the table on screen, the map&apos;s data sets, prices and calendars, through the app; no file, no network, no writing.</source>
+        <translation type="vanished">Lecture seule : les séries des pays et des indicateurs, le tableau à l&apos;écran, les jeux de données de la carte, les cours et les calendriers, par l&apos;application ; aucun fichier, aucun réseau, aucune écriture.</translation>
+    </message>
+    <message>
+        <source>Read only: the tables and charts of every page but Sources and AI, the series of the countries and indicators, the map&apos;s data sets, prices and calendars, through the app; no file, no network, no writing.</source>
+        <translation type="vanished">Lecture seule : les tableaux et graphiques de toutes les pages sauf Sources et IA, les séries des pays et des indicateurs, les jeux de données de la carte, les cours et les calendriers, par l&apos;application ; aucun fichier, aucun réseau, aucune écriture.</translation>
+    </message>
+    <message>
+        <location line="-105"/>
+        <source>Read only: the tables and charts of every page but Sources and AI, open or not (and taking you to a page when you ask), the series of the countries and indicators, the map&apos;s data sets, prices and calendars, through the app; no file, no network, no writing.</source>
+        <translation>Lecture seule : les tableaux et graphiques de toutes les pages sauf Sources et IA, ouvertes ou non (et vous emmener sur une page quand vous le demandez), les séries des pays et des indicateurs, les jeux de données de la carte, les cours et les calendriers, par l&apos;application ; aucun fichier, aucun réseau, aucune écriture.</translation>
+    </message>
+    <message>
+        <location line="+75"/>
+        <source>Take it out of this slot</source>
+        <translation>Le retirer de cet emplacement</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Drag a model or an integration here</source>
+        <translation>Glissez un modèle ou une intégration ici</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>from On this computer or Integration</source>
+        <translation>depuis Sur cet ordinateur ou Intégration</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Anthropic API</source>
+        <translation>API Anthropic</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>agent, over MCP</source>
+        <translation>agent, par MCP</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>no longer on this computer</source>
+        <translation>n’est plus sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Drag it to another slot to move it</source>
+        <translation>Glissez-le vers un autre emplacement pour le déplacer</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Skills suspended: the model was deleted.</source>
+        <translation>Compétences suspendues : le modèle a été supprimé.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Skills suspended: no GGUF file, and the local engine reads GGUF only.</source>
+        <translation>Compétences suspendues : aucun fichier GGUF, et le moteur local ne lit que le GGUF.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Taking the fingerprints of its files…</source>
+        <translation>Prise des empreintes de ses fichiers…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>A file changed size or date: checking its fingerprint…</source>
+        <translation>Un fichier a changé de taille ou de date : vérification de son empreinte…</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Skills suspended: its files changed since the slot took it. Drag it in again to accept the new files.</source>
+        <translation>Compétences suspendues : ses fichiers ont changé depuis que l’emplacement l’a pris. Glissez-le à nouveau pour accepter les nouveaux fichiers.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n file(s) bound by their SHA-256</source>
+        <translation>
+            <numerusform>%n fichier lié par son empreinte SHA-256</numerusform>
+            <numerusform>%n fichiers liés par leur empreinte SHA-256</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Nothing in the app calls Claude yet: these skills stay unused.</source>
+        <translation>Rien dans l&apos;application n&apos;appelle encore Claude : ces compétences restent inutilisées.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>opencode gets the tools of these skills while serving is on.</source>
+        <translation>opencode reçoit les outils de ces compétences tant que le service est activé.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n file(s) that can run code (pickle, Python): never loaded.</source>
+        <translation>
+            <numerusform>%n fichier peut exécuter du code (pickle, Python) : jamais chargé.</numerusform>
+            <numerusform>%n fichiers peuvent exécuter du code (pickle, Python) : jamais chargés.</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Drag it into a slot to give it the slot&apos;s skills</source>
+        <translation>Glissez-le dans un emplacement pour lui donner les compétences de celui-ci</translation>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>In no slot: it gets none of Deepwater&apos;s tools. Drag it into a slot below.</source>
+        <translation>Dans aucun emplacement : il n&apos;a accès à aucun outil de Deepwater. Glissez-le dans un emplacement ci-dessous.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>In slot %1, which grants no skill: tick one to give it tools.</source>
+        <translation>Dans l&apos;emplacement %1, qui n&apos;accorde aucune compétence : cochez-en une pour lui donner des outils.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>In slot %1, which grants: %2.</source>
+        <translation>Dans l&apos;emplacement %1, qui accorde : %2.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Nothing in the app calls Claude yet, so it reads nothing for now.</source>
+        <translation>Rien dans l&apos;application n&apos;appelle encore Claude : il ne lit donc rien pour l&apos;instant.</translation>
+    </message>
+    <message>
+        <location line="+25"/>
+        <source>Slots</source>
+        <translation>Emplacements</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Drag a model of this computer or an integration (Claude, opencode) into a slot and tick the skills the slot gives it: it can do nothing else. A slot takes GGUF models only, and is bound to their files: if one changes, its skills are suspended. Only a model in a bound slot can run (AI › Local), and its skills are all it can reach: each call is checked and written to the journal.</source>
+        <translation>Glissez un modèle de cet ordinateur ou une intégration (Claude, opencode) dans un emplacement et cochez les compétences que l&apos;emplacement lui donne : il ne peut rien faire d&apos;autre. Un emplacement ne prend que les modèles GGUF, et il est lié à leurs fichiers : si l&apos;un change, ses compétences sont suspendues. Seul un modèle dans un emplacement lié peut tourner (IA › Local), et ses compétences sont tout ce qu&apos;il peut atteindre : chaque appel est vérifié et inscrit au journal.</translation>
+    </message>
+    <message>
+        <source>Drag a model of this computer into a slot and tick the skills the slot gives it: a model can do nothing else. A slot takes GGUF models only, and is bound to their files: if one changes, its skills are suspended. Only a model in a bound slot can run (AI › Local), and its skills are all it can reach: each call is checked and written to the journal.</source>
+        <translation type="vanished">Glissez un modèle de cet ordinateur dans un emplacement et cochez les compétences que l’emplacement lui donne : un modèle ne peut rien faire d’autre. Un emplacement ne prend que des modèles GGUF et reste lié à leurs fichiers : si l’un change, ses compétences sont suspendues. Seul un modèle d’un emplacement lié peut tourner (IA › Local), et ses compétences sont tout ce à quoi il a accès : chaque appel est vérifié et inscrit au journal.</translation>
+    </message>
+    <message>
+        <source>Drag a model of this computer into a slot and tick the skills the slot gives it: a model can do nothing else. A slot takes GGUF models only, and is bound to their files: if one changes, its skills are suspended. Only a model in a bound slot can run (AI › Local), and its skills will be all it can reach: none is wired to the engine yet.</source>
+        <translation type="vanished">Glissez un modèle de cet ordinateur dans un emplacement et cochez les compétences que l’emplacement lui donne : un modèle ne peut rien faire d’autre. Un emplacement ne prend que des modèles GGUF et reste lié à leurs fichiers : si l’un change, ses compétences sont suspendues. Seul un modèle d’un emplacement lié peut tourner (IA › Local), et ses compétences seront tout ce à quoi il aura accès : aucune n’est encore reliée au moteur.</translation>
+    </message>
+    <message>
+        <source>Drag a model of this computer into a slot and tick the skills the slot gives it: a model can do nothing else. A slot takes GGUF models only, and is bound to their files: if one changes, its skills are suspended. Nothing runs the models yet: the skills are kept for when one runs, and will be all it can reach.</source>
+        <translation type="vanished">Glissez un modèle de cet ordinateur dans un emplacement et cochez les compétences que l’emplacement lui donne : un modèle ne peut rien faire d’autre. Un emplacement ne prend que des modèles GGUF et reste lié à leurs fichiers : si l’un change, ses compétences sont suspendues. Aucun modèle ne tourne encore : les compétences sont gardées pour le jour où l’un tournera, et seront tout ce à quoi il aura accès.</translation>
+    </message>
+    <message>
+        <location line="+151"/>
+        <source>%1 has no GGUF file, and the local engine reads GGUF only: a slot can&apos;t take it. A GGUF version is often on the Hub as &quot;%2-GGUF&quot;.</source>
+        <translation>%1 n’a aucun fichier GGUF, et le moteur local ne lit que le GGUF : un emplacement ne peut pas le prendre. Une version GGUF existe souvent sur le Hub sous le nom « %2-GGUF ».</translation>
     </message>
 </context>
 <context>
@@ -6328,6 +7353,30 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+1"/>
         <source>proprietary</source>
         <translation>propriétaire</translation>
+    </message>
+</context>
+<context>
+    <name>OpencodeRun</name>
+    <message>
+        <location filename="../src/OpencodeRun.cpp" line="+72"/>
+        <source>opencode isn&apos;t on this computer (opencode.ai to install it).</source>
+        <translation>opencode n&apos;est pas sur cet ordinateur (opencode.ai pour l&apos;installer).</translation>
+    </message>
+    <message>
+        <location line="+71"/>
+        <source>Stopped: opencode ran its own tool &quot;%1&quot;, which Deepwater denies it here.</source>
+        <translation>Arrêté : opencode a exécuté son propre outil « %1 », que Deepwater lui interdit ici.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <location line="+2"/>
+        <source>opencode: %1</source>
+        <translation>opencode : %1</translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <source>opencode stopped (exit code %1).</source>
+        <translation>opencode s&apos;est arrêté (code de sortie %1).</translation>
     </message>
 </context>
 <context>
@@ -6621,7 +7670,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../src/ResearchData.cpp" line="+629"/>
+        <location filename="../src/ResearchData.cpp" line="+634"/>
         <source>Revenue</source>
         <translation>Chiffre d&apos;affaires</translation>
     </message>
@@ -7569,7 +8618,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Communauté %1</translation>
     </message>
     <message>
-        <location filename="../src/AiModels.cpp" line="+78"/>
+        <location filename="../src/AiModels.cpp" line="+124"/>
         <source>%1 GB</source>
         <translation>%1 Go</translation>
     </message>
@@ -7680,7 +8729,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Secteurs</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
         <source>Industrial Classification System</source>
         <translation>Classification industrielle</translation>
     </message>
@@ -7799,9 +8848,1172 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
 </context>
 <context>
+    <name>SourceFlowView</name>
+    <message>
+        <location filename="../src/SourceFlow.cpp" line="+47"/>
+        <source>International bodies</source>
+        <translation>Organismes internationaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>United States</source>
+        <translation>États-Unis</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>National offices and central banks</source>
+        <translation>Instituts nationaux et banques centrales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Markets and data companies</source>
+        <translation>Marchés et fournisseurs de données</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Web, news and AI</source>
+        <translation>Web, actualités et IA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>On this computer</source>
+        <translation>Sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Other sources</source>
+        <translation>Autres sources</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>International Monetary Fund</source>
+        <translation>Fonds monétaire international</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>World Bank</source>
+        <translation>Banque mondiale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>OECD</source>
+        <translation>OCDE</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank for International Settlements</source>
+        <translation>Banque des règlements internationaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>European Central Bank</source>
+        <translation>Banque centrale européenne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Eurostat</source>
+        <translation>Eurostat</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>International Labour Organization</source>
+        <translation>Organisation internationale du travail</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>United Nations (Comtrade)</source>
+        <translation>Nations unies (Comtrade)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>JODI-Oil</source>
+        <translation>JODI-Oil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Federal Reserve Bank of St. Louis (FRED)</source>
+        <translation>Réserve fédérale de St. Louis (FRED)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Federal Reserve Bank of New York</source>
+        <translation>Réserve fédérale de New York</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Energy Information Administration</source>
+        <translation>Energy Information Administration (EIA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bureau of Labor Statistics</source>
+        <translation>Bureau of Labor Statistics (BLS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bureau of Economic Analysis</source>
+        <translation>Bureau of Economic Analysis (BEA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Department of the Treasury</source>
+        <translation>Département du Trésor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Department of Agriculture</source>
+        <translation>Département de l’Agriculture (USDA)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CFTC</source>
+        <translation>CFTC</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>SEC EDGAR</source>
+        <translation>SEC EDGAR</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Office for National Statistics (UK)</source>
+        <translation>Office for National Statistics (Royaume-Uni)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank of England</source>
+        <translation>Banque d’Angleterre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deutsche Bundesbank</source>
+        <translation>Deutsche Bundesbank</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>INSEE (France)</source>
+        <translation>INSEE (France)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>INE (Spain)</source>
+        <translation>INE (Espagne)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Swiss National Bank</source>
+        <translation>Banque nationale suisse</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Statistics Norway</source>
+        <translation>Statistiques Norvège</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Statistics Sweden</source>
+        <translation>Statistiques Suède</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central Bank of Türkiye</source>
+        <translation>Banque centrale de Turquie</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Statistics Canada</source>
+        <translation>Statistique Canada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank of Canada</source>
+        <translation>Banque du Canada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Banco de México</source>
+        <translation>Banque du Mexique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>INEGI (Mexico)</source>
+        <translation>INEGI (Mexique)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central Bank of Brazil</source>
+        <translation>Banque centrale du Brésil</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>IBGE (Brazil)</source>
+        <translation>IBGE (Brésil)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>INDEC (Argentina)</source>
+        <translation>INDEC (Argentine)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>South African Reserve Bank</source>
+        <translation>Banque de réserve sud-africaine</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank of Japan</source>
+        <translation>Banque du Japon</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>e-Stat (Japan)</source>
+        <translation>e-Stat (Japon)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bank of Korea</source>
+        <translation>Banque de Corée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Statistics Indonesia (BPS)</source>
+        <translation>Statistiques Indonésie (BPS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Singapore Department of Statistics</source>
+        <translation>Département des statistiques de Singapour</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Australian Bureau of Statistics</source>
+        <translation>Bureau australien des statistiques (ABS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>aisstream.io</source>
+        <translation>aisstream.io</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Yahoo Finance</source>
+        <translation>Yahoo Finance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Nasdaq</source>
+        <translation>Nasdaq</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>TradingView</source>
+        <translation>TradingView</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Forex Factory</source>
+        <translation>Forex Factory</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>CoinMarketCap</source>
+        <translation>CoinMarketCap</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alternative.me</source>
+        <translation>Alternative.me</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Binance</source>
+        <translation>Binance</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Coinbase</source>
+        <translation>Coinbase</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Kraken</source>
+        <translation>Kraken</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alpaca</source>
+        <translation>Alpaca</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Polygon (Massive)</source>
+        <translation>Polygon (Massive)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wikipedia</source>
+        <translation>Wikipédia</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Wikidata</source>
+        <translation>Wikidata</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>News sites (RSS feeds)</source>
+        <translation>Sites d’actualités (flux RSS)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cointelegraph · Decrypt</source>
+        <translation>Cointelegraph · Decrypt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Financial Modeling Prep</source>
+        <translation>Financial Modeling Prep</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ad blocking lists</source>
+        <translation>Listes de blocage des publicités</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Anthropic (Claude)</source>
+        <translation>Anthropic (Claude)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hugging Face</source>
+        <translation>Hugging Face</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deepwater&apos;s own models</source>
+        <translation>Modèles de Deepwater</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Bundled with the app</source>
+        <translation>Fournis avec l’application</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Your CSV imports</source>
+        <translation>Vos imports CSV</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Map</source>
+        <translation>Carte</translation>
+    </message>
+    <message>
+        <location line="-4"/>
+        <source>Ships and chokepoints</source>
+        <translation>Navires et points de passage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Supply chains</source>
+        <translation>Chaînes d’approvisionnement</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Commodities</source>
+        <translation>Matières premières</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Heatmaps and country sheets</source>
+        <translation>Cartes de chaleur et fiches pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trade flows</source>
+        <translation>Flux commerciaux</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Overview</source>
+        <translation>Overview</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Forex</source>
+        <translation>Forex</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Calendar</source>
+        <translation>Calendrier</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Economic</source>
+        <translation>Économique</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Corporate</source>
+        <translation>Entreprises</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Market hours</source>
+        <translation>Horaires des marchés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Economy</source>
+        <translation>Economy</translation>
+    </message>
+    <message>
+        <location line="-2"/>
+        <source>Dashboards</source>
+        <translation>Tableaux de bord</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Countries</source>
+        <translation>Pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Indicators</source>
+        <translation>Indicateurs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Research</source>
+        <translation>Research</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Quant</source>
+        <translation>Quant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Charts</source>
+        <translation>Graphiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>News</source>
+        <translation>News</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>AI</source>
+        <translation>IA</translation>
+    </message>
+    <message>
+        <location line="+119"/>
+        <source>Country series</source>
+        <translation>Séries par pays</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The statistical series of the countries, source by source: official statistics, central banks, BIS, IMF, World Bank.</source>
+        <translation>Les séries statistiques des pays, source par source : statistiques officielles, banques centrales, BRI, FMI, Banque mondiale.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Golden records</source>
+        <translation>Golden records</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The richest series of a country&apos;s indicator, fused from its official sources, every point saying its source.</source>
+        <translation>La série la plus riche de l’indicateur d’un pays, fusionnée à partir de ses sources officielles, chaque point indiquant sa source.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>IMF WEO</source>
+        <translation>FMI WEO</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The IMF&apos;s World Economic Outlook, yearly, with its projections.</source>
+        <translation>Les Perspectives de l’économie mondiale du FMI, annuelles, avec ses projections.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Policy rates</source>
+        <translation>Taux directeurs</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The central banks&apos; policy rates of every country, monthly.</source>
+        <translation>Les taux directeurs des banques centrales de chaque pays, mensuels.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Exchange rates</source>
+        <translation>Taux de change</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The European Central Bank&apos;s daily reference rates.</source>
+        <translation>Les taux de référence quotidiens de la Banque centrale européenne.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>COT positions</source>
+        <translation>Positions COT</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The CFTC&apos;s weekly Commitments of Traders in the futures markets.</source>
+        <translation>Les Commitments of Traders hebdomadaires de la CFTC sur les marchés à terme.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Prices</source>
+        <translation>Cours</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The bars of any stock, ETF, index, currency or crypto on Yahoo Finance, fetched by the app.</source>
+        <translation>Les barres de toute action, ETF, indice, devise ou crypto sur Yahoo Finance, récupérées par l’application.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Strategy tester</source>
+        <translation>Testeur de stratégies</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs strategies in the Charts tab&apos;s tester, which can switch the active chart, and reads their trades.</source>
+        <translation>Lance des stratégies dans le testeur de l’onglet Graphiques, qui peut changer le graphique actif, et lit leurs trades.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Paper account</source>
+        <translation>Compte paper</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reads the Charts tab&apos;s live paper account and places, closes and cancels its orders: simulated money.</source>
+        <translation>Lit le compte paper en direct de l’onglet Graphiques, place, clôture et annule ses ordres : de l’argent simulé.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Tables and charts</source>
+        <translation>Tableaux et graphiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>What a page shows, as data: its tables, figures and the values of its charts, open or not, through the read_page tool. Every page but Sources and AI. The open_page tool takes you to a page when you ask.</source>
+        <translation>Ce que montre une page, sous forme de données : ses tableaux, ses chiffres et les valeurs de ses graphiques, ouverte ou non, par l&apos;outil read_page. Toutes les pages sauf Sources et IA. L&apos;outil open_page vous emmène sur une page quand vous le demandez.</translation>
+    </message>
+    <message>
+        <location line="+2038"/>
+        <source>%1 listed</source>
+        <translation>%1 répertoriés</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>What it feeds</source>
+        <translation>Ce que ça alimente</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Its data sets</source>
+        <translation>Ses jeux de données</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>What it reaches</source>
+        <translation>Ce qu&apos;il atteint</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Listed in the catalogue, not read by the app: nothing is linked to it.</source>
+        <translation>Répertoriés au catalogue, non lus par l&apos;application : rien n&apos;y est lié.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Nothing is linked to it.</source>
+        <translation>Rien n&apos;y est lié.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>and %1 more</source>
+        <translation>et %1 de plus</translation>
+    </message>
+    <message>
+        <location line="+309"/>
+        <source>The whole diagram at once, tilted on a plane; under it, the underground floor: the AIs and what they can reach of the data. The up and down arrows change floor; a click on an item looks at it closely.</source>
+        <translation>Tout le diagramme d&apos;un coup, incliné sur un plan ; dessous, le sous-sol : les IA et ce qu&apos;elles peuvent atteindre des données. Les flèches haut et bas changent d&apos;étage ; un clic sur un élément le montre de près.</translation>
+    </message>
+    <message>
+        <source>What a page shows, as data: its tables, figures and the values of its charts, through the read_page tool. Every page but Sources and AI.</source>
+        <translation type="vanished">Ce que montre une page, sous forme de données : ses tableaux, ses chiffres et les valeurs de ses graphiques, par l&apos;outil read_page. Toutes les pages sauf Sources et IA.</translation>
+    </message>
+    <message>
+        <source>The table on screen</source>
+        <translation type="vanished">Le tableau à l&apos;écran</translation>
+    </message>
+    <message>
+        <source>The table of the country or indicator open in Economy, as shown, through the page_table tool.</source>
+        <translation type="vanished">Le tableau du pays ou de l&apos;indicateur ouvert dans Economy, tel qu&apos;il s&apos;affiche, par l&apos;outil page_table.</translation>
+    </message>
+    <message>
+        <location line="-2473"/>
+        <source>The page in view</source>
+        <translation>La page affichée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>A question asked from the AI side panel goes with a line naming the page and what it shows (a country, a symbol). No skill needed, no figures in it: a table is read through its tool. Models in a slot and opencode.</source>
+        <translation>Une question posée depuis le volet IA part avec une ligne qui nomme la page et ce qu&apos;elle montre (un pays, un symbole). Aucune compétence requise, aucun chiffre dedans : un tableau se lit par son outil. Modèles d&apos;un emplacement et opencode.</translation>
+    </message>
+    <message>
+        <source>A question asked from the AI side panel goes with a line naming the page and what it shows (a country, a symbol), and with the table of a country or an indicator when the slot grants reading the data. The line needs no skill. Models in a slot and opencode.</source>
+        <translation type="vanished">Une question posée depuis le volet IA part avec une ligne qui nomme la page et ce qu&apos;elle montre (un pays, un symbole), et avec le tableau d&apos;un pays ou d&apos;un indicateur quand l&apos;emplacement accorde la lecture des données. La ligne ne demande aucune compétence. Modèles d&apos;un emplacement et opencode.</translation>
+    </message>
+    <message>
+        <source>A question asked from the AI side panel goes with a line naming the page and what it shows (a country, a symbol). No skill needed, no figures in it.</source>
+        <translation type="vanished">Une question posée depuis le panneau IA part avec une ligne qui nomme la page et ce qu’elle montre (un pays, un symbole). Aucune compétence requise, aucun chiffre dedans.</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Statistical offices</source>
+        <translation>Instituts statistiques</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Central banks</source>
+        <translation>Banques centrales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ministries and agencies</source>
+        <translation>Ministères et agences</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>International organisations</source>
+        <translation>Organisations internationales</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Private institutes</source>
+        <translation>Instituts privés</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Exchanges</source>
+        <translation>Bourses</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trading Economics</source>
+        <translation>Trading Economics</translation>
+    </message>
+    <message>
+        <location line="+102"/>
+        <location line="+22"/>
+        <source>Slot %1 · %2</source>
+        <translation>Slot %1 · %2</translation>
+    </message>
+    <message>
+        <location line="-7"/>
+        <source>Local models</source>
+        <translation>Modèles locaux</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>opencode (MCP)</source>
+        <translation>opencode (MCP)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Claude (Anthropic API)</source>
+        <translation>Claude (API Anthropic)</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Machine learning</source>
+        <translation>Apprentissage automatique</translation>
+    </message>
+    <message>
+        <location line="+725"/>
+        <source>Listed, not read by the app</source>
+        <translation>Répertoriées, non lues par l’application</translation>
+    </message>
+    <message>
+        <location line="+293"/>
+        <source>Sources</source>
+        <translation>Sources</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+413"/>
+        <source>Fusion</source>
+        <translation>Fusion</translation>
+    </message>
+    <message>
+        <location line="-410"/>
+        <source>The app</source>
+        <translation>L&apos;application</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+416"/>
+        <location line="+1280"/>
+        <source>%n golden record(s)</source>
+        <translation>
+            <numerusform>%n golden record</numerusform>
+            <numerusform>%n golden records</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-1104"/>
+        <source>Underground: the AIs and what they reach</source>
+        <translation>Sous-sol : les IA et ce qu’elles atteignent</translation>
+    </message>
+    <message>
+        <location line="+136"/>
+        <source>Underground · AIs</source>
+        <translation>Sous-sol · IA</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ground floor · Data</source>
+        <translation>Rez-de-chaussée · Données</translation>
+    </message>
+    <message>
+        <location line="+516"/>
+        <source>← → previous or next · a row goes to it · Esc or a click beside: back to the disc</source>
+        <translation>← → précédent ou suivant · une ligne y mène · Échap ou un clic à côté : retour au disque</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Data</source>
+        <translation>Données</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Where Deepwater&apos;s data comes from and which parts of the app it feeds: a link for each data set, as thick as the data sets it carries, coloured by their state in the list. Hover a source, a part of the app or a link to follow its data; click to keep it.</source>
+        <translation>D’où viennent les données de Deepwater et quelles parties de l’application elles alimentent : un lien par jeu de données, d’autant plus épais qu’il en porte, coloré selon leur état dans la liste. Survolez une source, une partie de l’application ou un lien pour suivre ses données ; cliquez pour le garder.</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <location line="+65"/>
+        <source>Zoom out: disc</source>
+        <translation>Dézoomer · disque</translation>
+    </message>
+    <message>
+        <source>The whole diagram at once, tilted on a plane; under it, the underground floor: the AIs and what they can reach of the data. The up and down arrows change floor.</source>
+        <translation type="vanished">Tout le diagramme d’un coup, incliné sur un plan ; en dessous, le sous-sol : les IA et ce qu’elles peuvent atteindre des données. Les flèches haut et bas changent d’étage.</translation>
+    </message>
+    <message>
+        <location line="+276"/>
+        <source>Where it comes from</source>
+        <translation>D’où ça vient</translation>
+    </message>
+    <message>
+        <location line="+126"/>
+        <source>On the left, the bodies and companies Deepwater reads, by kind; on the right, the pages of the app and their sections. The dots and links take the states of the Sources list: green working, red failing, grey not checked yet; a dashed link is turned off. The disc view has an underground floor, the down arrow goes there: the AIs and what they can reach of this data.</source>
+        <translation>À gauche, les organismes et les entreprises que lit Deepwater, par type ; à droite, les pages de l’application et leurs sections. Les points et les liens prennent les états de la liste des sources : vert, fonctionne ; rouge, en échec ; gris, pas encore vérifiée ; un lien en pointillés est désactivé. La vue en disque a un sous-sol, la flèche bas y mène : les IA et ce qu’elles peuvent atteindre de ces données.</translation>
+    </message>
+    <message>
+        <source>The whole diagram at once, tilted on a plane; under it, the underground floor: the AIs and what they can reach of the data</source>
+        <translation type="vanished">Tout le diagramme d’un coup, incliné sur un plan ; en dessous, le sous-sol : les IA et ce qu’elles peuvent atteindre des données</translation>
+    </message>
+    <message>
+        <source>On the left, the bodies and companies Deepwater reads, by kind; on the right, the pages of the app and their sections. The dots and links take the states of the Sources list: green working, red failing, grey not checked yet; a dashed link is turned off. The disc view has an underground floor: the AIs and what they can reach of this data.</source>
+        <translation type="vanished">À gauche, les organismes et les entreprises que lit Deepwater, par type ; à droite, les pages de l’application et leurs sections. Les points et les liens prennent les états de la liste des sources : vert, fonctionne ; rouge, en échec ; gris, pas encore vérifiée ; un lien en pointillés est désactivé. La vue en disque a un sous-sol : les IA et ce qu’elles peuvent atteindre de ces données.</translation>
+    </message>
+    <message>
+        <source>Zoom out</source>
+        <translation type="vanished">Dézoomer</translation>
+    </message>
+    <message>
+        <source>The whole diagram at once, tilted on a plane</source>
+        <translation type="vanished">Tout le diagramme d&apos;un coup, posé à plat et vu en perspective isométrique</translation>
+    </message>
+    <message>
+        <location line="-460"/>
+        <location line="+59"/>
+        <source>Zoom out: plates</source>
+        <translation>Dézoomer · plaques</translation>
+    </message>
+    <message>
+        <location line="-55"/>
+        <source>The whole diagram at once on plates standing one behind the other: the sources, the fusion, the parts of the app, the links going through them</source>
+        <translation>Tout le diagramme d&apos;un coup sur des plaques debout l&apos;une derrière l&apos;autre : les sources, la fusion, les parties de l&apos;application, traversées par les liens</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <source>Show in the list</source>
+        <translation>Voir dans la liste</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location line="+1"/>
+        <source>Zoom in</source>
+        <translation>Zoomer</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <location line="+229"/>
+        <location line="+78"/>
+        <source>Data fusion</source>
+        <translation>Fusion des données</translation>
+    </message>
+    <message>
+        <location line="-266"/>
+        <source>%1 sources feed %2 parts of the app through %3 data sets</source>
+        <translation>%1 sources alimentent %2 parties de l’application par %3 jeux de données</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 working</source>
+        <translation>%1 fonctionnent</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 failing</source>
+        <translation>%1 en échec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 off</source>
+        <translation>%1 désactivées</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1 not checked yet</source>
+        <translation>%1 pas encore vérifiées</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>%1 more listed in the catalogue, not read by the app</source>
+        <translation>%1 autres répertoriées dans le catalogue, non lues par l’application</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>%n golden record(s) from data fusion</source>
+        <translation>
+            <numerusform>%n golden record issu de la fusion des données</numerusform>
+            <numerusform>%n golden records issus de la fusion des données</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+66"/>
+        <source>failing</source>
+        <translation>en échec</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+27"/>
+        <source>off</source>
+        <translation>désactivée</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Reached by the AIs</source>
+        <translation>Atteint par les IA</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Tools</source>
+        <translation>Outils</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Reached by</source>
+        <translation>Atteint par</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>no AI today</source>
+        <translation>aucune IA aujourd’hui</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Data sets</source>
+        <translation>Jeux de données</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Local model</source>
+        <translation>Modèle local</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>No slot holds a model: a model has no access outside a slot (AI › Models).</source>
+        <translation>Aucun slot ne contient de modèle : un modèle n’a aucun accès hors d’un slot (IA › Modèles).</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Runs on this computer in a sandbox with no network and no files: it reaches only the tools of the skills its slot grants, through the app, checked again at each call and written to the journal.</source>
+        <translation>Tourne sur cet ordinateur dans un bac à sable sans réseau ni fichiers : il n’atteint que les outils des compétences accordées par son slot, à travers l’application, avec une nouvelle vérification à chaque appel et une écriture au journal.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Suspended: the model&apos;s files changed since the slot took it.</source>
+        <translation>Suspendu : les fichiers du modèle ont changé depuis que le slot l’a pris.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Agent outside the app</source>
+        <translation>Agent hors de l’application</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Reaches the same tools over MCP, on this computer only (127.0.0.1) and with a token, according to the skills ticked in AI › Models › Integration; every call is written to the journal.</source>
+        <translation>Atteint les mêmes outils par MCP, sur cet ordinateur seulement (127.0.0.1) et avec un jeton, selon les compétences cochées dans IA › Modèles › Intégration ; chaque appel est écrit au journal.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Serving is off: it reaches nothing until it&apos;s turned on.</source>
+        <translation>Le service est éteint : il n’atteint rien tant qu’il n’est pas allumé.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remote model</source>
+        <translation>Modèle distant</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Nothing of Deepwater&apos;s data is sent to it: the app only checks its key and lists its models.</source>
+        <translation>Aucune donnée de Deepwater ne lui est envoyée : l’application vérifie seulement sa clé et liste ses modèles.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Models trained on this computer</source>
+        <translation>Modèles entraînés sur cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No tools: Python reads the CSV files AI › Machine learning writes when you export the data, and prices only for the symbols you enter.</source>
+        <translation>Pas d’outils : Python lit les fichiers CSV qu’IA › Apprentissage automatique écrit quand vous exportez les données, et les cours seulement pour les symboles saisis.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <location line="+147"/>
+        <source>%n access(es)</source>
+        <translation>
+            <numerusform>%n accès</numerusform>
+            <numerusform>%n accès</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="-140"/>
+        <location line="+6"/>
+        <location line="+17"/>
+        <location line="+5"/>
+        <source>No skill needed</source>
+        <translation>Aucune compétence requise</translation>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>In the exported files</source>
+        <translation>Dans les fichiers exportés</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <location line="+5"/>
+        <source>Skill: %1</source>
+        <translation>Compétence : %1</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+8"/>
+        <location line="+14"/>
+        <location line="+79"/>
+        <source>%n data set(s)</source>
+        <translation>
+            <numerusform>%n jeu de données</numerusform>
+            <numerusform>%n jeux de données</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="-92"/>
+        <source>%n part(s) of the app</source>
+        <translation>
+            <numerusform>%n partie de l’application</numerusform>
+            <numerusform>%n parties de l’application</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+12"/>
+        <location line="+110"/>
+        <source>%n source(s)</source>
+        <translation>
+            <numerusform>%n source</numerusform>
+            <numerusform>%n sources</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="-102"/>
+        <source>%n source(s) listed, not read by the app</source>
+        <translation>
+            <numerusform>%n source répertoriée, non lue par l’application</numerusform>
+            <numerusform>%n sources répertoriées, non lues par l’application</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Bodies the official catalogue of the list names behind the countries&apos; figures (from the sources Trading Economics credits), whose site the app doesn&apos;t read.</source>
+        <translation>Les organismes que le catalogue officiel de la liste nomme derrière les chiffres des pays (d’après les sources que cite Trading Economics), dont l’application ne lit pas le site.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 free, %2 with the headline figure free, %3 paid; %4 answered the last check of their site.</source>
+        <translation>%1 gratuites, %2 au chiffre-titre gratuit, %3 payantes ; %4 ont répondu au dernier contrôle de leur site.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>The list&apos;s section also shows the bodies the app reads, drawn above.</source>
+        <translation>La section de la liste montre aussi les organismes que l’application lit, dessinés plus haut.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Several countries</source>
+        <translation>Plusieurs pays</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No country</source>
+        <translation>Sans pays</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 (%2 countries)</source>
+        <translation>%1 (%2 pays)</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+22"/>
+        <source>%n country(ies)</source>
+        <translation>
+            <numerusform>%n pays</numerusform>
+            <numerusform>%n pays</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>%n indicator(s)</source>
+        <translation>
+            <numerusform>%n indicateur</numerusform>
+            <numerusform>%n indicateurs</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>When a country&apos;s indicator has several sources, the app reads them all and makes one series of them, a golden record: the most trusted source first, the others filling its gaps and its older history once checked to measure the same thing (on another base if need be); the sources that measure something else are left out. The tables of Economy › Countries and Indicators show these records; their tooltips say where each part comes from.</source>
+        <translation>Quand l&apos;indicateur d&apos;un pays a plusieurs sources, l&apos;application les lit toutes et en fait une seule série, un golden record : la source la plus fiable d&apos;abord, les autres comblant ses trous et son historique ancien une fois vérifié qu&apos;elles mesurent la même chose (sur une autre base au besoin) ; les sources qui mesurent autre chose sont écartées. Les tableaux d&apos;Économie › Pays et Indicateurs affichent ces records ; leurs infobulles disent d&apos;où vient chaque partie.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>%1 periods, of which %2 from a source after the most trusted one</source>
+        <translation>%1 périodes, dont %2 d&apos;une source après la plus fiable</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>%n period(s) rebased onto the most trusted source&apos;s base</source>
+        <translation>
+            <numerusform>%n période ramenée à la base de la source la plus fiable</numerusform>
+            <numerusform>%n périodes ramenées à la base de la source la plus fiable</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>%n period(s) from a source no common period could check</source>
+        <translation>
+            <numerusform>%n période d&apos;une source qu&apos;aucune période commune n&apos;a pu vérifier</numerusform>
+            <numerusform>%n périodes d&apos;une source qu&apos;aucune période commune n&apos;a pu vérifier</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>%n disagreement(s) between sources, the more trusted value kept</source>
+        <translation>
+            <numerusform>%n désaccord entre sources, la valeur la plus fiable est gardée</numerusform>
+            <numerusform>%n désaccords entre sources, la valeur la plus fiable est gardée</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Last fusion: %1</source>
+        <translation>Dernière fusion : %1</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Sources combined</source>
+        <translation>Sources combinées</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Feeds</source>
+        <translation>Alimente</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>through data fusion</source>
+        <translation>par la fusion des données</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The AIs and what they reach</source>
+        <translation>Les IA et ce qu’elles atteignent</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hover or click an item of this floor</source>
+        <translation>Survolez ou cliquez un élément de cet étage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>On the right, the AIs of the app; on the left, what they can reach of the data, with a shaft up to where it comes from. A dashed link is granted but not in force. The up arrow goes back to the ground floor.</source>
+        <translation>À droite, les IA de l’application ; à gauche, ce qu’elles peuvent atteindre des données, avec un puits jusqu’à sa provenance. Un lien en pointillés est accordé mais pas en vigueur. La flèche haut ramène au rez-de-chaussée.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>AIs</source>
+        <translation>IA</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Sources and the app</source>
+        <translation>Les sources et l’application</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hover or click an item of the diagram</source>
+        <translation>Survolez ou cliquez un élément du diagramme</translation>
+    </message>
+    <message>
+        <source>On the left, the bodies and companies Deepwater reads, by kind; on the right, the pages of the app and their sections. The dots and links take the states of the Sources list: green working, red failing, grey not checked yet; a dashed link is turned off.</source>
+        <translation type="vanished">À gauche, les organismes et les entreprises que lit Deepwater, par type ; à droite, les pages de l’application et leurs sections. Les points et les liens prennent les états de la liste des sources : vert, fonctionne ; rouge, en échec ; gris, pas encore vérifiée ; un lien en pointillés est désactivé.</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Parts with the most sources</source>
+        <translation>Parties aux sources les plus nombreuses</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Click to keep it here.</source>
+        <translation>Cliquez pour le garder ici.</translation>
+    </message>
+</context>
+<context>
     <name>SourcesPage</name>
     <message>
-        <location filename="../src/SourcesPage.cpp" line="+205"/>
+        <location filename="../src/SourcesPage.cpp" line="+238"/>
         <source>Sources</source>
         <translation>Sources</translation>
     </message>
@@ -7811,7 +10023,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tout tester</translation>
     </message>
     <message>
-        <location line="+71"/>
+        <location line="+82"/>
         <source>Map · shipping</source>
         <translation>Carte · navigation</translation>
     </message>
@@ -8165,7 +10377,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Statistiques européennes</translation>
     </message>
     <message>
-        <location line="-310"/>
+        <location line="-442"/>
+        <source>List</source>
+        <translation>Liste</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Data</source>
+        <translation>Données</translation>
+    </message>
+    <message>
+        <location line="+91"/>
+        <source>Show every source again</source>
+        <translation>Afficher de nouveau toutes les sources</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Map · supply chains</source>
         <translation>Carte · chaînes d’approvisionnement</translation>
     </message>
@@ -8988,7 +11215,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Graphiques : actions américaines, screener, carte thermique, résultats, dividendes, actualités, états financiers</translation>
     </message>
     <message numerus="yes">
-        <location line="+77"/>
+        <location line="+101"/>
+        <source>Only %1 · %n data set(s)  ✕</source>
+        <translation>
+            <numerusform>Seulement %1 · %n jeu de données  ✕</numerusform>
+            <numerusform>Seulement %1 · %n jeux de données  ✕</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+47"/>
         <source>%n countries</source>
         <translation>
             <numerusform>%n pays</numerusform>
@@ -9019,12 +11254,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Statistiques officielles · toutes les sources</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>The bodies behind each country&apos;s figures, from the statistical offices and central banks to the private institutes: what each one publishes, whether its data is free and how a program reads it, and whether its site answered the last check. Open a group, or search above. The compilations above (OECD, Eurostat, IMF, BLS, World Bank, BIS) read these bodies for the map.</source>
         <translation>Les organismes derrière les chiffres de chaque pays, des instituts statistiques et banques centrales aux instituts privés : ce que chacun publie, la gratuité de ses données, la façon dont un programme les lit, et si son site a répondu au dernier contrôle. Ouvrez un groupe, ou cherchez ci-dessus. Les compilations plus haut (OCDE, Eurostat, FMI, BLS, Banque mondiale, BRI) lisent ces organismes pour la carte.</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+20"/>
         <source>Show more</source>
         <translation>Afficher la suite</translation>
     </message>
@@ -9034,7 +11269,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Afficher %1 de plus</translation>
     </message>
     <message numerus="yes">
-        <location line="+57"/>
+        <location line="+63"/>
         <source>%n source(s)</source>
         <translation>
             <numerusform>%n source</numerusform>
@@ -9047,7 +11282,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 au site joignable</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+74"/>
         <source>Open the site</source>
         <translation>Ouvrir le site</translation>
     </message>
@@ -9067,7 +11302,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>La clé a été refusée (HTTP %1)</translation>
     </message>
     <message>
-        <location line="+138"/>
+        <location line="+139"/>
         <source>Enter a free key below to turn this source on</source>
         <translation>Saisissez une clé gratuite ci-dessous pour activer cette source</translation>
     </message>
@@ -9125,13 +11360,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1289"/>
+        <location line="-1373"/>
         <location line="+394"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
     </message>
     <message>
-        <location line="-542"/>
+        <location line="-553"/>
         <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
         <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
     </message>
@@ -9166,7 +11401,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tous les accès</translation>
     </message>
     <message>
-        <location line="+490"/>
+        <location line="+501"/>
         <source>Charts: the Calendar tab</source>
         <translation>Graphiques : l’onglet Calendar</translation>
     </message>
@@ -9331,7 +11566,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Graphiques : symboles CSV:…</translation>
     </message>
     <message>
-        <location line="+292"/>
+        <location line="+375"/>
         <source>Test</source>
         <translation>Tester</translation>
     </message>
@@ -9419,19 +11654,19 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+248"/>
+        <location line="+249"/>
         <source>No site known</source>
         <translation>Site inconnu</translation>
     </message>
     <message>
-        <location line="-258"/>
+        <location line="-259"/>
         <location line="+39"/>
-        <location line="+230"/>
+        <location line="+231"/>
         <source>HTTP %1</source>
         <translation>HTTP %1</translation>
     </message>
     <message>
-        <location line="-173"/>
+        <location line="-174"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -9461,7 +11696,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>vérifié toutes les %1 h</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+37"/>
         <location line="+25"/>
         <location line="+33"/>
         <location line="+29"/>
@@ -9602,8 +11837,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pas encore utilisée dans cette session</translation>
     </message>
     <message>
-        <location line="-235"/>
-        <location line="+160"/>
+        <location line="-236"/>
+        <location line="+161"/>
         <location line="+86"/>
         <source>No key</source>
         <translation>Pas de clé</translation>
@@ -9915,22 +12150,23 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Une clé FRED gratuite est nécessaire (Sources)</translation>
     </message>
     <message>
-        <location filename="../src/CountryData.cpp" line="+1525"/>
+        <location filename="../src/CountryData.cpp" line="+1899"/>
+        <location line="+238"/>
         <source>A free EIA key is needed (Sources)</source>
         <translation>Une clé EIA gratuite est nécessaire (Sources)</translation>
     </message>
     <message>
-        <location line="-780"/>
+        <location line="-1690"/>
         <source>World Bank</source>
         <translation>Banque mondiale</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="+443"/>
         <source>A free %1 key is needed (Sources)</source>
         <translation>Une clé %1 gratuite est nécessaire (Sources)</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="-442"/>
         <source>IMF WEO</source>
         <translation>FMI (WEO)</translation>
     </message>
@@ -9994,14 +12230,113 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <source>Central Bank of Türkiye</source>
         <translation>Banque centrale de Turquie</translation>
     </message>
+    <message numerus="yes">
+        <location line="+641"/>
+        <source>Fused from %1 of %2 sources: %3 – %4, %n periods</source>
+        <translation>
+            <numerusform>Fusionné : %1 source(s) utilisée(s) sur %2, %3 – %4, %n période</numerusform>
+            <numerusform>Fusionné : %1 source(s) utilisée(s) sur %2, %3 – %4, %n périodes</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+9"/>
+        <source>the most trusted: %n periods, %1</source>
+        <translation>
+            <numerusform>la plus fiable : %n période, %1</numerusform>
+            <numerusform>la plus fiable : %n périodes, %1</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>the same series: %n periods taken, %1</source>
+        <translation>
+            <numerusform>la même série : %n période reprise, %1</numerusform>
+            <numerusform>la même série : %n périodes reprises, %1</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+56"/>
+        <location line="+1"/>
+        <source>the same series, nothing to add</source>
+        <translation>la même série, rien à ajouter</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>the same series on another base (× %1): %n periods taken, %2</source>
+        <translation>
+            <numerusform>la même série sur une autre base (× %1) : %n période reprise, %2</numerusform>
+            <numerusform>la même série sur une autre base (× %1) : %n périodes reprises, %2</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>the same series on another base (× %1), nothing to add</source>
+        <translation>la même série sur une autre base (× %1), rien à ajouter</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+3"/>
+        <source>no common period to check it: %n periods taken, %1</source>
+        <translation>
+            <numerusform>aucune période commune pour la vérifier : %n période reprise, %1</numerusform>
+            <numerusform>aucune période commune pour la vérifier : %n périodes reprises, %1</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>no common period to check it</source>
+        <translation>aucune période commune pour la vérifier</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>left out: agrees on %1 % of %2 common periods only</source>
+        <translation>écartée : concorde sur %1 % des %2 périodes communes seulement</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>left out: another definition (%n common periods compared)</source>
+        <translation>
+            <numerusform>écartée : une autre définition (%n période commune comparée)</numerusform>
+            <numerusform>écartée : une autre définition (%n périodes communes comparées)</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>left out: another unit</source>
+        <translation>écartée : une autre unité</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+6"/>
+        <source>%n periods rebased onto the most trusted source&apos;s base</source>
+        <translation>
+            <numerusform>%n période ramenée à la base de la source la plus fiable</numerusform>
+            <numerusform>%n périodes ramenées à la base de la source la plus fiable</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+2"/>
+        <source>%n periods from a source no common period could check</source>
+        <translation>
+            <numerusform>%n période d&apos;une source qu&apos;aucune période commune n&apos;a pu vérifier</numerusform>
+            <numerusform>%n périodes d&apos;une source qu&apos;aucune période commune n&apos;a pu vérifier</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+5"/>
+        <source>%n disagreements between sources (the more trusted value kept); the latest: %1, %2 %3 against %4 %5</source>
+        <translation>
+            <numerusform>%n désaccord entre sources (la valeur la plus fiable est gardée) ; le dernier : %1, %2 %3 contre %4 %5</numerusform>
+            <numerusform>%n désaccords entre sources (la valeur la plus fiable est gardée) ; le dernier : %1, %2 %3 contre %4 %5</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+40"/>
+        <location line="+777"/>
+        <location line="+249"/>
         <source>No data</source>
         <translation>Aucune donnée</translation>
     </message>
     <message>
-        <location line="+28"/>
-        <location line="+94"/>
+        <location line="-995"/>
+        <location line="+95"/>
         <location line="+12"/>
         <location line="+12"/>
         <location line="+40"/>
@@ -10024,17 +12359,20 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+20"/>
         <location line="+33"/>
         <location line="+35"/>
-        <location line="+67"/>
+        <location line="+68"/>
+        <location line="+72"/>
+        <location line="+91"/>
         <source>Not published</source>
         <translation>Non publié</translation>
     </message>
     <message>
-        <location line="-574"/>
+        <location line="-738"/>
         <source>No key</source>
         <translation>Pas de clé</translation>
     </message>
     <message>
-        <location line="+579"/>
+        <location line="+580"/>
+        <location line="+297"/>
         <source>Unknown source</source>
         <translation>Source inconnue</translation>
     </message>

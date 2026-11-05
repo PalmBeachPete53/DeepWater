@@ -342,12 +342,12 @@ void HeatmapEvents::sync(const DepthFeed *depth, const TradeFeed *trades, const 
     if (trades && m_lastId < 0 && m_nextCol < st->endIndex()) {
         // Not started yet: wait until the trades reach back to the first sample to read (the history loads newest
         // first, page by page); samples from before the trades loaded (the history stopped earlier) are read without.
-        const std::deque<TradeFeed::TapeTrade> &tape = trades->tape();
+        const TradeFeed::Tape tape = trades->tape();
         const double first = st->meta(m_nextCol).time;
         if (!trades->ready() || (trades->loadingHistory() && (tape.empty() || tape.front().t.time > first))) return;
     }
     if (trades && trades->ready()) {
-        const std::deque<TradeFeed::TapeTrade> &tape = trades->tape();
+        const TradeFeed::Tape tape = trades->tape();
         if (trades->tapeGeneration() != m_tapeGen) {
             m_tapeGen = trades->tapeGeneration();
             m_lastId = -1;

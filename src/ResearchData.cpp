@@ -167,10 +167,15 @@ QString hostGroup(const QUrl &url)
     return h;
 }
 
-// The shortest time between two requests to a host with a rate limit: FRED allows 120 a minute per key.
+// The shortest time between two requests to a host with a rate limit: FRED allows 120 a minute per key, the OECD's
+// data API 20 a minute (it answers 429 beyond).
 qint64 minSpacingMs(const QString &group)
 {
-    return group == "fred" ? 550 : 0;
+    if (group == "fred")
+        return 550;
+    if (group == "oecd")
+        return 3000;
+    return 0;
 }
 
 int maxInFlight(const QString &group)
@@ -862,8 +867,8 @@ void Client::send(Job job)
         // Too many requests: wait a little and try again (three times).
         if (status == 429 && job.attempt < 3) {
             job.attempt++;
-            // FRED counts a minute: wait it out.
-            const int delay = group == "fred" ? 20000 * job.attempt : 2000 * job.attempt;
+            // FRED and the OECD count a minute: wait it out.
+            const int delay = group == "fred" || group == "oecd" ? 20000 * job.attempt : 2000 * job.attempt;
             QTimer::singleShot(delay, this, [this, job] {
                 m_queue.enqueue(job);
                 pump();

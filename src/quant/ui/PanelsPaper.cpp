@@ -409,41 +409,9 @@ void Panels::Private::renderPaper()
         const QString type = typeP->value();
         const double amt = amtP->number();
         auto go = [this, sym, type, amt, slP, tpP, priceP, side](double cur) {
-            if (!js::truthy(cur) || !(amt > 0)) return app->toast("Need a live price and an amount.", "err");
-            const double qty = amt / cur;
-            const double sl = slP ? slP->number() : 0, tp = tpP ? tpP->number() : 0;
-            const double entry = type == "market" ? cur : (priceP ? priceP->number() : 0);
-            const QString exitSide = side == "buy" ? "sell" : "buy";
-            const double dir = side == "buy" ? 1 : -1;
-            auto pushOrder = [this](const QJsonObject &o) {
-                QJsonObject acct = paper();
-                QJsonArray orders = acct.value("orders").toArray();
-                orders.append(o);
-                acct.insert("orders", orders);
-                savePaper(acct);
-            };
-            auto addBracket = [&] {
-                const QJsonValue oco = sl > 0 && tp > 0 ? QJsonValue("oco" + nowId()) : QJsonValue(QJsonValue::Null);
-                if (sl > 0)
-                    pushOrder({{"id", "o" + nowId() + "s"}, {"symbol", sym}, {"side", exitSide}, {"type", "stop"},
-                               {"price", entry * (1 - (dir * sl) / 100)}, {"qty", qty}, {"oco", oco}, {"note", "stop loss"}});
-                if (tp > 0)
-                    pushOrder({{"id", "o" + nowId() + "t"}, {"symbol", sym}, {"side", exitSide}, {"type", "limit"},
-                               {"price", entry * (1 + (dir * tp) / 100)}, {"qty", qty}, {"oco", oco}, {"note", "take profit"}});
-            };
-            if (type == "market") {
-                fill(sym, side, qty, cur);
-                addBracket();
-            } else {
-                if (!(entry > 0)) return app->toast("Set a price for the order.", "err");
-                pushOrder({{"id", "o" + nowId()}, {"symbol", sym}, {"side", side}, {"type", type}, {"price", entry},
-                           {"qty", amt / entry}});
-                addBracket();
-                app->toast(QString("%1 %2 order placed.").arg(type, side));
-            }
-            app->persist();
-            renderPaper();
-            refreshQuotes();
+            const QString error = placePaperOrder(sym, side, type, amt, priceP ? priceP->number() : 0,
+                                                  slP ? slP->number() : 0, tpP ? tpP->number() : 0, cur);
+            if (!error.isEmpty()) app->toast(error, "err");
         };
         std::optional<double> cur = price(sym);
         if (!cur && app->active && !app->active->bars.isEmpty()) cur = app->active->bars.last().close;
@@ -501,6 +469,48 @@ void Panels::Private::renderPaper()
         app->persist();
         QMetaObject::invokeMethod(q, [this] { renderPaper(); }, Qt::QueuedConnection);
     });
+}
+
+QString Panels::Private::placePaperOrder(const QString &sym, const QString &side, const QString &type, double amt,
+                                        double entryPrice, double sl, double tp, double cur, const QString &note)
+{
+    if (!js::truthy(cur) || !(amt > 0)) return "Need a live price and an amount.";
+    const double qty = amt / cur;
+    const double entry = type == "market" ? cur : entryPrice;
+    const QString exitSide = side == "buy" ? "sell" : "buy";
+    const double dir = side == "buy" ? 1 : -1;
+    if (type != "market" && !(entry > 0)) return "Set a price for the order.";
+    auto pushOrder = [this](const QJsonObject &o) {
+        QJsonObject acct = paper();
+        QJsonArray orders = acct.value("orders").toArray();
+        orders.append(o);
+        acct.insert("orders", orders);
+        savePaper(acct);
+    };
+    auto addBracket = [&] {
+        const QJsonValue oco = sl > 0 && tp > 0 ? QJsonValue("oco" + nowId()) : QJsonValue(QJsonValue::Null);
+        if (sl > 0)
+            pushOrder({{"id", "o" + nowId() + "s"}, {"symbol", sym}, {"side", exitSide}, {"type", "stop"},
+                       {"price", entry * (1 - (dir * sl) / 100)}, {"qty", qty}, {"oco", oco}, {"note", "stop loss"}});
+        if (tp > 0)
+            pushOrder({{"id", "o" + nowId() + "t"}, {"symbol", sym}, {"side", exitSide}, {"type", "limit"},
+                       {"price", entry * (1 + (dir * tp) / 100)}, {"qty", qty}, {"oco", oco}, {"note", "take profit"}});
+    };
+    if (type == "market") {
+        fill(sym, side, qty, cur, note);
+        addBracket();
+    } else {
+        QJsonObject o {{"id", "o" + nowId()}, {"symbol", sym}, {"side", side}, {"type", type}, {"price", entry},
+                       {"qty", amt / entry}};
+        if (!note.isEmpty()) o.insert("note", note);
+        pushOrder(o);
+        addBracket();
+        app->toast(QString("%1 %2 order placed.").arg(type, side));
+    }
+    app->persist();
+    if (bottomTab == "paper") renderPaper();
+    refreshQuotes();
+    return {};
 }
 
 // Limit and stop orders in the replay account fill when a replayed bar's range reaches them.

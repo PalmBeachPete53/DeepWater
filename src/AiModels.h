@@ -100,6 +100,24 @@ public:
 
     QVector<Entry> scan() const;
     bool remove(const QString &id);
+
+    // What a file of a model is. Weights the app may one day load are data-only formats (GGUF, safetensors, ONNX);
+    // pickle-based formats (.bin, .pt, .pth, .ckpt, .pkl, .joblib, .h5/.keras with their Lambda layers) and Python
+    // files can run code when loaded: they are never ticked by default and Deepwater never loads them.
+    enum class FileKind { Weights, Code, Other };
+    static FileKind fileKind(const QString &file);
+    // Whether the local engine can run the model: it reads GGUF files only.
+    static bool runnable(const QStringList &files);
+    // A file as it was when a slot took the model: its SHA-256, and its size and date to see quickly that it changed.
+    struct Fingerprint {
+        QString sha256;
+        qint64 size = 0;
+        qint64 modified = 0;   // ms since the epoch
+    };
+    // The fingerprints of every file of a model (the SHA-256 of a multi-gigabyte file takes seconds: call it off the
+    // UI thread), or only their sizes and dates (cheap).
+    static QHash<QString, Fingerprint> fingerprint(const QString &id);
+    static QHash<QString, Fingerprint> stat(const QString &id);
     bool removeFile(const QString &id, const QString &file);
     QString folder(const QString &id) const;
     static QString formatBytes(qint64 bytes);

@@ -2,7 +2,7 @@
 
 // The order book of the liquidity heatmap (a Deepwater addition to the Charts tab, not in Quant Terminal): the resting
 // quantity at each price level, bids and asks, rebuilt from a snapshot and the incremental updates that follow it.
-// Pure code, no network: the feed (ui/DepthFeed) parses the exchange's messages into DepthSnapshot / DepthUpdate and
+// Pure code, no network: the stream (server/DepthStream) parses the exchange's messages into DepthSnapshot / DepthUpdate and
 // asks for a new snapshot when apply() says so.
 //
 // Market by price (MBP): one quantity per level, not per order. Prices are whole ticks (int64) like the footprint's.

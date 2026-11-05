@@ -1118,4 +1118,45 @@ void SupplyChainGraph::leaveEvent(QEvent *)
     update();
 }
 
+QString LineChart::aiRead() const
+{
+    QStringList out;
+    for (const Series &s : m_series)
+        if (const QString line = aiSeries(s.name, m_categories, s.values); !line.isEmpty()) out << line;
+    return out.join('\n');
+}
+
+QString BarChart::aiRead() const
+{
+    QStringList out;
+    for (const Series &s : m_series)
+        if (const QString line = aiSeries(s.name, m_categories, s.values); !line.isEmpty()) out << line;
+    return out.join('\n');
+}
+
+QString StackedBarChart::aiRead() const
+{
+    QStringList out;
+    for (const Stack &s : m_stacks)
+        if (const QString line = aiSeries(s.name, m_categories, s.values); !line.isEmpty()) out << line;
+    if (const QString line = aiSeries(m_lineName, m_categories, m_line); !line.isEmpty()) out << line;
+    return out.join('\n');
+}
+
+QString DonutChart::aiRead() const
+{
+    QStringList out;
+    if (!m_title.isEmpty() || !m_value.isEmpty()) out << m_title + ' ' + m_value;
+    for (const Slice &s : m_slices)
+        out << s.label + ": " + aiNumber(s.value) + (s.detail.isEmpty() ? QString() : " (" + s.detail + ")");
+    return out.join('\n');
+}
+
+QString HBars::aiRead() const
+{
+    QStringList out;
+    for (const Bar &b : m_bars) out << b.label + ": " + (b.text.isEmpty() ? aiNumber(b.value) : b.text);
+    return out.join('\n');
+}
+
 } // namespace research

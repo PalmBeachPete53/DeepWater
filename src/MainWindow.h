@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AiRead.h"
+
 #include <QHash>
 #include <QMainWindow>
 #include <QPointer>
@@ -7,6 +9,7 @@
 
 #include <functional>
 
+#include "MlData.h"
 #include "SeaRoutes.h"
 #include "SourcesPage.h"
 
@@ -18,6 +21,7 @@ class CotData;
 class CotReport;
 class DetailPanel;
 class DevToolsDock;
+class AiDock;
 class IndicatorPanel;
 class MacroIndicators;
 class WorldEconomy;
@@ -63,6 +67,7 @@ class LeftPanel;
 class QStackedWidget;
 class QTranslator;
 class SettingsDialog;
+class HelpWindow;
 
 class MainWindow : public QMainWindow
 {
@@ -79,6 +84,9 @@ public:
     void showPage(const QString &id);
     void openSettings();
     QWidget *settingsWindow() const;   // the settings window once opened (for --settings screenshots)
+    // The documentation window (header ? icon, F1), on a chapter: a page id, or empty for the page shown.
+    void openHelp(const QString &chapter = QString());
+    QWidget *helpWindow() const;       // once opened (for --help-page screenshots)
     // Shows the developer flap (header </> icon) and, when open, the side panel.
     void setDevToolsEnabled(bool on);
     void setDevToolsOpen(bool open);
@@ -89,15 +97,20 @@ public:
     void showSupply(const QString &key);
     void scrollDetailToEnd(double fraction = 1.0);
     void searchSources(const QString &text);
+    void showSourcesTab(int index);
+    void showSourcesDisc(const QString &pin);
     void searchModels(const QString &text);
     void filterNews(const QString &ticker);   // --news-ticker: open the News page on one ticker
     void openEconomyCountry(const QString &iso3, int tab);   // --economy-country [--economy-tab n]
+    void openEconomyIndicator(const QString &name);          // --economy-indicator "Inflation Rate"
     void openNewsArticle(int index);          // --news-article: open the reader on the index-th article
     void favoriteNewsArticle(int index);      // --news-favorite: star the index-th article
     void openNewsUrl(const QString &url);     // --news-url: open the reader on a URL
     void downloadModelFile(const QString &modelId, const QString &file);
     void exportMlData();
     void trainMl(const QString &file, const QString &target);
+    void runLocalPrompt(const QString &prompt);
+    void askAiDock(const QString &prompt);   // --ai-dock [prompt]: the AI side panel open (and asked)
 
     // Apply, persist and rebuild the UI so every widget picks up the change.
     void setLanguage(const QString &code);
@@ -110,6 +123,8 @@ private:
     void applyLanguage(const QString &code);
     void applyTheme(const QString &id);
     SourcesPage::Targets sourceTargets() const;
+    // The data the AI tools read (machine learning exports, local models, opencode over MCP).
+    MlDataExporter::Sources mlSources() const;
 
     void selectSite(int index, bool fly);
     void selectVessel(qint64 mmsi, bool fly);
@@ -132,6 +147,16 @@ private:
     MarketData *m_data;
     HeaderBar *m_header = nullptr;
     DevToolsDock *m_devTools = nullptr;
+    AiDock *m_aiDock = nullptr;
+    QHash<QString, QString> m_pageLabels;   // the navigation's labels, by page id
+    // A page, built if it wasn't yet (without showing it).
+    QWidget *ensurePage(const QString &id);
+    // Where the user is, for the AI side panel: the page and what it shows ("Charts › BINANCE:BTCUSDT, 1h").
+    QString pageContext() const;
+    // The read_page and open_page tools (LocalTools).
+    void aiReadPage(const AiPageRequest &request, std::function<void(const AiPageRead &)> done);
+    QString aiOpenPage(const AiPageRequest &request, QString *error);
+    void aiPoll(std::function<AiPageRead()> read, std::function<void()> finished, std::function<void(const AiPageRead &)> done, int tick, qsizetype previous);
     QStackedWidget *m_pages = nullptr;
     QHash<QString, QWidget *> m_pageById;
     QHash<QString, std::function<QWidget *()>> m_pageFactories;   // pages not built yet
@@ -195,6 +220,7 @@ private:
     QString m_language;
     QList<QTranslator *> m_translators;
     QPointer<SettingsDialog> m_settings;
+    QPointer<HelpWindow> m_help;
     // The Charts page (Quant Terminal port). Its backend runs for the whole session so alerts
     // keep firing; the page itself is kept across UI rebuilds so charts don't reload.
     qtm::Backend *m_quantBackend = nullptr;

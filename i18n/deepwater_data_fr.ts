@@ -3145,6 +3145,442 @@
         <source>general services</source>
         <translation>services généraux</translation>
     </message>
+    <message>
+        <source>crude oil including lease condensate (EIA international)</source>
+        <translation>pétrole brut, condensats de gisement compris (EIA, données internationales)</translation>
+    </message>
+    <message>
+        <source>Average Annual Wages</source>
+        <translation>Salaire annuel moyen</translation>
+    </message>
+    <message>
+        <source>USD PPP</source>
+        <translation>USD PPA</translation>
+    </message>
+    <message>
+        <source>constant prices and PPPs of the latest year</source>
+        <translation>prix constants et PPA de la dernière année</translation>
+    </message>
+    <message>
+        <source>Gross Average Monthly Wages</source>
+        <translation>Salaire mensuel brut moyen</translation>
+    </message>
+    <message>
+        <source>employees' mean monthly earnings; a country's surveys and registers may alternate from one year to the next</source>
+        <translation>gains mensuels moyens des salariés ; enquêtes et registres d'un pays peuvent alterner d'une année à l'autre</translation>
+    </message>
+    <message>
+        <source>Employment Change YoY</source>
+        <translation>Variation de l'emploi sur un an</translation>
+    </message>
+    <message>
+        <source>Retirement Age Men</source>
+        <translation>Âge de la retraite (hommes)</translation>
+    </message>
+    <message>
+        <source>current retirement age for a career started at 22 (OECD Pensions at a Glance)</source>
+        <translation>âge actuel de la retraite pour une carrière commencée à 22 ans (OCDE, Panorama des pensions)</translation>
+    </message>
+    <message>
+        <source>Retirement Age Women</source>
+        <translation>Âge de la retraite (femmes)</translation>
+    </message>
+    <message>
+        <source>Harmonised Consumer Prices</source>
+        <translation>Prix à la consommation harmonisés</translation>
+    </message>
+    <message>
+        <source>2025 = 100</source>
+        <translation>2025 = 100</translation>
+    </message>
+    <message>
+        <source>Harmonised Inflation Rate YoY</source>
+        <translation>Inflation harmonisée sur un an</translation>
+    </message>
+    <message>
+        <source>Harmonised Inflation Rate MoM</source>
+        <translation>Inflation harmonisée sur un mois</translation>
+    </message>
+    <message>
+        <source>Loan Growth</source>
+        <translation>Croissance des crédits</translation>
+    </message>
+    <message>
+        <source>Remittances</source>
+        <translation>Envois de fonds des émigrés</translation>
+    </message>
+    <message>
+        <source>personal remittances received</source>
+        <translation>transferts personnels reçus</translation>
+    </message>
+    <message>
+        <source>Capital Flows</source>
+        <translation>Flux de capitaux</translation>
+    </message>
+    <message>
+        <source>financial account balance (net lending or borrowing)</source>
+        <translation>solde du compte financier (capacité ou besoin de financement)</translation>
+    </message>
+    <message>
+        <source>Asylum Applications</source>
+        <translation>Demandes d'asile</translation>
+    </message>
+    <message>
+        <source>persons</source>
+        <translation>personnes</translation>
+    </message>
+    <message>
+        <source>first-time applicants, a month</source>
+        <translation>primo-demandeurs, par mois</translation>
+    </message>
+    <message>
+        <source>Corruption Index</source>
+        <translation>Indice de corruption</translation>
+    </message>
+    <message>
+        <source>World Bank's control of corruption score, 0 to 100 (not Transparency International's index)</source>
+        <translation>score de maîtrise de la corruption de la Banque mondiale, de 0 à 100 (pas l'indice de Transparency International)</translation>
+    </message>
+    <message>
+        <source>Social Security Rate</source>
+        <translation>Taux de cotisations sociales</translation>
+    </message>
+    <message>
+        <source>employee and employer contributions, % of the average gross wage (single, no child)</source>
+        <translation>cotisations salariales et patronales, % du salaire brut moyen (célibataire sans enfant)</translation>
+    </message>
+    <message>
+        <source>Social Security Rate For Companies</source>
+        <translation>Taux de cotisations sociales patronales</translation>
+    </message>
+    <message>
+        <source>employer contributions, % of the average gross wage</source>
+        <translation>cotisations patronales, % du salaire brut moyen</translation>
+    </message>
+    <message>
+        <source>Social Security Rate For Employees</source>
+        <translation>Taux de cotisations sociales salariales</translation>
+    </message>
+    <message>
+        <source>employee contributions, % of the average gross wage</source>
+        <translation>cotisations salariales, % du salaire brut moyen</translation>
+    </message>
+    <message>
+        <source>GDP from Construction</source>
+        <translation>PIB de la construction</translation>
+    </message>
+    <message>
+        <source>{CUR} Million</source>
+        <translation>millions {CUR}</translation>
+    </message>
+    <message>
+        <source>chained 2017 dollars, annual rate</source>
+        <translation>dollars chaînés de 2017, en rythme annuel</translation>
+    </message>
+    <message>
+        <source>chain-linked volumes, seasonally adjusted</source>
+        <translation>volumes chaînés, CVS</translation>
+    </message>
+    <message>
+        <source>chain-linked volumes (2020)</source>
+        <translation>volumes chaînés (2020)</translation>
+    </message>
+    <message>
+        <source>chain-linked volumes</source>
+        <translation>volumes chaînés</translation>
+    </message>
+    <message>
+        <source>GDP from Mining</source>
+        <translation>PIB des industries extractives</translation>
+    </message>
+    <message>
+        <source>GDP from Public Administration</source>
+        <translation>PIB de l'administration publique</translation>
+    </message>
+    <message>
+        <source>government, chained 2017 dollars, annual rate</source>
+        <translation>administrations publiques, dollars chaînés de 2017, en rythme annuel</translation>
+    </message>
+    <message>
+        <source>public administration, defence, education, health and social work; chain-linked volumes</source>
+        <translation>administration publique, défense, enseignement, santé et action sociale ; volumes chaînés</translation>
+    </message>
+    <message>
+        <source>public administration, education, health; chain-linked volumes (2020)</source>
+        <translation>administration publique, enseignement, santé ; volumes chaînés (2020)</translation>
+    </message>
+    <message>
+        <source>public administration and defence; chain-linked volumes</source>
+        <translation>administration publique et défense ; volumes chaînés</translation>
+    </message>
+    <message>
+        <source>GDP from Transport</source>
+        <translation>PIB des transports</translation>
+    </message>
+    <message>
+        <source>transportation and warehousing, chained 2017 dollars, annual rate</source>
+        <translation>transports et entreposage, dollars chaînés de 2017, en rythme annuel</translation>
+    </message>
+    <message>
+        <source>transportation and storage; chain-linked volumes</source>
+        <translation>transports et entreposage ; volumes chaînés</translation>
+    </message>
+    <message>
+        <source>transportation and storage; chain-linked volumes (2020)</source>
+        <translation>transports et entreposage ; volumes chaînés (2020)</translation>
+    </message>
+    <message>
+        <source>GDP from Utilities</source>
+        <translation>PIB de l'énergie (électricité, gaz)</translation>
+    </message>
+    <message>
+        <source>electricity, gas and steam; chain-linked volumes</source>
+        <translation>électricité, gaz et vapeur ; volumes chaînés</translation>
+    </message>
+    <message>
+        <source>electricity, gas and steam; chain-linked volumes (2020)</source>
+        <translation>électricité, gaz et vapeur ; volumes chaînés (2020)</translation>
+    </message>
+    <message>
+        <source>Price to Rent Ratio</source>
+        <translation>Ratio prix / loyers</translation>
+    </message>
+    <message>
+        <source>index 2015 = 100</source>
+        <translation>indice 2015 = 100</translation>
+    </message>
+    <message>
+        <source>Bankruptcies</source>
+        <translation>Faillites</translation>
+    </message>
+    <message>
+        <source>bankruptcy declarations, index 2021 = 100</source>
+        <translation>déclarations de faillite, indice 2021 = 100</translation>
+    </message>
+    <message>
+        <source>Electricity Production</source>
+        <translation>Production d'électricité</translation>
+    </message>
+    <message>
+        <source>Gigawatt-hour</source>
+        <translation>gigawattheures</translation>
+    </message>
+    <message>
+        <source>net electricity generation, a month</source>
+        <translation>production nette d'électricité, par mois</translation>
+    </message>
+    <message>
+        <source>Electric Car Registrations</source>
+        <translation>Immatriculations de voitures électriques</translation>
+    </message>
+    <message>
+        <source>new battery-electric passenger cars, a year</source>
+        <translation>voitures particulières neuves à batterie, par an</translation>
+    </message>
+    <message>
+        <source>Households Debt to Income</source>
+        <translation>Dette des ménages / revenu</translation>
+    </message>
+    <message>
+        <source>% of gross disposable income</source>
+        <translation>% du revenu disponible brut</translation>
+    </message>
+    <message>
+        <source>CO2 Emissions</source>
+        <translation>Émissions de CO2</translation>
+    </message>
+    <message>
+        <source>Million Tonnes</source>
+        <translation>millions de tonnes</translation>
+    </message>
+    <message>
+        <source>excluding land use, Mt CO2 equivalent</source>
+        <translation>hors utilisation des terres, Mt d'équivalent CO2</translation>
+    </message>
+    <message>
+        <source>Hospitals</source>
+        <translation>Hôpitaux</translation>
+    </message>
+    <message>
+        <source>per million people</source>
+        <translation>par million d'habitants</translation>
+    </message>
+    <message>
+        <source>ICU Beds</source>
+        <translation>Lits de soins intensifs</translation>
+    </message>
+    <message>
+        <source>per 100,000 people</source>
+        <translation>pour 100 000 habitants</translation>
+    </message>
+    <message>
+        <source>Main Indicators</source>
+        <translation>Indicateurs principaux</translation>
+    </message>
+    <message>
+        <source>Implied Rates</source>
+        <translation>Taux implicites</translation>
+    </message>
+    <message>
+        <source>Market expectations of central bank rates, from rate futures: no free source</source>
+        <translation>Anticipations de taux directeurs tirées des contrats à terme : aucune source gratuite</translation>
+    </message>
+    <message>
+        <source>Markets</source>
+        <translation>Marchés</translation>
+    </message>
+    <message>
+        <source>Job Vacancies</source>
+        <translation>Postes vacants</translation>
+    </message>
+    <message>
+        <source>Corruption Rank</source>
+        <translation>Classement de la corruption</translation>
+    </message>
+    <message>
+        <source>Transparency International publishes its index as files only, no API (Corruption Index shows the World Bank's control of corruption score)</source>
+        <translation>Transparency International ne publie son indice qu'en fichiers, sans API (Indice de corruption montre le score de maîtrise de la corruption de la Banque mondiale)</translation>
+    </message>
+    <message>
+        <source>Credit Rating</source>
+        <translation>Notation souveraine</translation>
+    </message>
+    <message>
+        <source>Ratings belong to the agencies (S&amp;P, Moody's, Fitch): no free source</source>
+        <translation>Les notes appartiennent aux agences (S&amp;P, Moody's, Fitch) : aucune source gratuite</translation>
+    </message>
+    <message>
+        <source>Holidays</source>
+        <translation>Jours fériés</translation>
+    </message>
+    <message>
+        <source>Days, not a figure: see the Calendar page</source>
+        <translation>Des jours, pas un chiffre : voir la page Calendrier</translation>
+    </message>
+    <message>
+        <source>Inflation Expectations</source>
+        <translation>Anticipations d'inflation</translation>
+    </message>
+    <message>
+        <source>Cash Reserve Ratio</source>
+        <translation>Taux de réserves obligatoires</translation>
+    </message>
+    <message>
+        <source>Set by each central bank, no source gathers them</source>
+        <translation>Fixé par chaque banque centrale, aucune source ne les rassemble</translation>
+    </message>
+    <message>
+        <source>Lending Rate</source>
+        <translation>Taux débiteur</translation>
+    </message>
+    <message>
+        <source>Terrorism Index</source>
+        <translation>Indice du terrorisme</translation>
+    </message>
+    <message>
+        <source>The Global Terrorism Index is published as a report only, no API</source>
+        <translation>Le Global Terrorism Index n'est publié qu'en rapport, sans API</translation>
+    </message>
+    <message>
+        <source>Cement Production</source>
+        <translation>Production de ciment</translation>
+    </message>
+    <message>
+        <source>No free source publishes it country by country (Eurostat's production indexes cover a handful)</source>
+        <translation>Aucune source gratuite ne la publie pays par pays (les indices de production d'Eurostat n'en couvrent qu'une poignée)</translation>
+    </message>
+    <message>
+        <source>Industrial Production Mom</source>
+        <translation>Production industrielle sur un mois</translation>
+    </message>
+    <message>
+        <source>Leading Economic Index</source>
+        <translation>Indicateur avancé</translation>
+    </message>
+    <message>
+        <source>Small Business Sentiment</source>
+        <translation>Moral des petites entreprises</translation>
+    </message>
+    <message>
+        <source>The surveys (NFIB…) are not free to reuse</source>
+        <translation>Les enquêtes (NFIB…) ne sont pas libres de réutilisation</translation>
+    </message>
+    <message>
+        <source>Steel Production</source>
+        <translation>Production d'acier</translation>
+    </message>
+    <message>
+        <source>worldsteel publishes its figures as files only, no API</source>
+        <translation>worldsteel ne publie ses chiffres qu'en fichiers, sans API</translation>
+    </message>
+    <message>
+        <source>ZEW Economic Sentiment Index</source>
+        <translation>Indice ZEW du sentiment économique</translation>
+    </message>
+    <message>
+        <source>ZEW's survey has no free API</source>
+        <translation>L'enquête du ZEW n'a pas d'API gratuite</translation>
+    </message>
+    <message>
+        <source>Crude Oil Rigs</source>
+        <translation>Plateformes pétrolières actives</translation>
+    </message>
+    <message>
+        <source>Baker Hughes publishes its rig count as files only, no API</source>
+        <translation>Baker Hughes ne publie son décompte qu'en fichiers, sans API</translation>
+    </message>
+    <message>
+        <source>Natural Gas Stocks Capacity</source>
+        <translation>Stocks de gaz : capacité</translation>
+    </message>
+    <message>
+        <source>GIE's AGSI+ wants a key: not supported yet</source>
+        <translation>AGSI+ (GIE) demande une clé : pas encore pris en charge</translation>
+    </message>
+    <message>
+        <source>Natural Gas Stocks Injection</source>
+        <translation>Stocks de gaz : injection</translation>
+    </message>
+    <message>
+        <source>Natural Gas Stocks Inventory</source>
+        <translation>Stocks de gaz : niveau</translation>
+    </message>
+    <message>
+        <source>Natural Gas Stocks Withdrawal</source>
+        <translation>Stocks de gaz : soutirage</translation>
+    </message>
+    <message>
+        <source>Taxes</source>
+        <translation>Fiscalité</translation>
+    </message>
+    <message>
+        <source>Sales Tax Rate</source>
+        <translation>Taux de TVA</translation>
+    </message>
+    <message>
+        <source>No free API publishes standard VAT and sales tax rates</source>
+        <translation>Aucune API gratuite ne publie les taux normaux de TVA</translation>
+    </message>
+    <message>
+        <source>Climate</source>
+        <translation>Climat</translation>
+    </message>
+    <message>
+        <source>Precipitation</source>
+        <translation>Précipitations</translation>
+    </message>
+    <message>
+        <source>The World Bank's Climate Knowledge Portal has it: not supported yet</source>
+        <translation>Le Climate Knowledge Portal de la Banque mondiale l'a : pas encore pris en charge</translation>
+    </message>
+    <message>
+        <source>Temperature</source>
+        <translation>Température</translation>
+    </message>
+    <message>
+        <source>No free source publishes it country by country</source>
+        <translation>Aucune source gratuite ne le publie pays par pays</translation>
+    </message>
 </context>
 <context>
     <name>OilSites</name>

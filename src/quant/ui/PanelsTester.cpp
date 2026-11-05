@@ -30,6 +30,7 @@
 
 #include <cmath>
 #include <functional>
+#include <utility>
 
 namespace qtm {
 
@@ -628,11 +629,16 @@ void Panels::Private::renderTester()
 void Panels::Private::runTester()
 {
     ChartPane *p = app->active;
-    if (!p || p->bars.isEmpty()) return app->toast("The active chart has no data yet.", "err");
+    if (!p || p->bars.isEmpty()) {
+        app->toast("The active chart has no data yet.", "err");
+        return testerFinished("The active chart has no data yet.");
+    }
     QStringList order;
     QJsonObject strat = readTester(&order);
-    if (strat.value("entryLong").toArray().isEmpty() && strat.value("entryShort").toArray().isEmpty())
-        return app->toast("Add at least one entry condition.", "err");
+    if (strat.value("entryLong").toArray().isEmpty() && strat.value("entryShort").toArray().isEmpty()) {
+        app->toast("Add at least one entry condition.", "err");
+        return testerFinished("Add at least one entry condition.");
+    }
     const Bars bars = p->replay ? p->bars.mid(0, p->replay->index + 1) : p->bars;
     QPointer<ChartPane> pane(p);
     const QString symbol = p->cfg.symbol, tf = p->cfg.tf;
@@ -671,10 +677,13 @@ void Panels::Private::runTester()
                 pane->render(false);
             }
             showResult(*lastResult);
+            testerFinished(QString());
         } catch (const Error &e) {
             app->toast(e.message(), "err");
+            testerFinished(e.message());
         } catch (const std::exception &e) {
             app->toast(QString::fromUtf8(e.what()), "err");
+            testerFinished(QString::fromUtf8(e.what()));
         }
     };
     // The backtest runs on a worker thread (long histories, the bar magnifier and custom
@@ -686,7 +695,9 @@ void Panels::Private::runTester()
                      if (run == testerRun) show(r, subBars);
                  },
                  [this, run](const QString &message) {
-                     if (run == testerRun) app->toast(message, "err");
+                     if (run != testerRun) return;
+                     app->toast(message, "err");
+                     testerFinished(message);
                  });
     };
     try {
@@ -706,14 +717,23 @@ void Panels::Private::runTester()
                                      if (c.time >= first && c.time < last + sec) sub << c;
                                  finish(sub);
                              },
-                             [this](const QString &msg) { app->toast(msg, "err"); });
+                             [this](const QString &msg) {
+                                 app->toast(msg, "err");
+                                 testerFinished(msg);
+                             });
                 return;
             }
         }
     } catch (const Error &e) {
-        return app->toast(e.message(), "err");
+        app->toast(e.message(), "err");
+        return testerFinished(e.message());
     }
     finish(std::nullopt);
+}
+
+void Panels::Private::testerFinished(const QString &error)
+{
+    for (const auto &waiter : std::exchange(testerWaiters, {})) waiter(error);
 }
 
 // ---------------------------------------------------------------- result

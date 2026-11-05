@@ -1195,7 +1195,7 @@ QVector<IndicatorDef> builtinIndicators()
              });
 
     // Deepwater addition, not in Quant Terminal: the liquidity heatmap, the resting orders of the chart's Binance order
-    // book over time (ui/DepthFeed, drawn by ui/HeatmapLayer under the candles). The calculation only hands the
+    // book over time (server/DepthStream and ui/DepthFeed, drawn by ui/HeatmapLayer under the candles). The calculation only hands the
     // settings over.
     L << def("heatmap", "Liquidity Heatmap", VOL, true,
              { selectIn("interval", "Sampling interval", { "100 ms", "250 ms", "500 ms", "1 s" }, "250 ms"),

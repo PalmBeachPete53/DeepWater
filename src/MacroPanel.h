@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AiRead.h"
+
 #include "MacroIndicators.h"
 
 #include <QMap>
@@ -98,10 +100,11 @@ private:
 };
 
 // Annual bars, with years from `firstProjected` on drawn as projections.
-class AnnualChart : public QWidget
+class AnnualChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit AnnualChart(QWidget *parent = nullptr);
 
     void setSeries(const QMap<int, double> &values, int firstProjected, const QColor &positive,
@@ -125,10 +128,11 @@ private:
 // A country's primary, secondary and tertiary sectors as stacked bars, one per measure (share of
 // GDP, share of jobs). The part of GDP no sector accounts for (taxes on products less subsidies)
 // stays blank.
-class SectorChart : public QWidget
+class SectorChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Bar {
         QString label;                // "Share of GDP · 2025"
         double shares[3];             // primary, secondary, tertiary, in %; NaN when not reported
@@ -156,10 +160,11 @@ private:
 
 // The shares of GDP of the three sectors over the decades, one line each, with the numbered events of the
 // country's history marked on the time axis (a band for a period).
-class SectorHistoryChart : public QWidget
+class SectorHistoryChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Event {
         int from = 0;
         int to = 0;   // 0 for a single year
@@ -189,10 +194,11 @@ private:
 
 // Lines over time (quarterly or annual, time as a fractional year), with an optional reference line (100 for
 // an index, the long-term average…) and a tooltip giving every line's value at the hovered time.
-class TimeSeriesChart : public QWidget
+class TimeSeriesChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Line {
         QString name;
         QColor color;

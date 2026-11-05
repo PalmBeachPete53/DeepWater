@@ -25,6 +25,7 @@ public:
     void setSymbol(const QString &symbol);
     void showSection(int index);
     void searchIcs(const QString &text);   // shows the ICS section and fills its search box
+    Q_INVOKABLE QString aiContext() const;   // the AI side panel's context: the symbol and the section
 
 protected:
     void showEvent(QShowEvent *) override;
@@ -46,5 +47,6 @@ private:
     QString m_symbol;
     QTimer m_searchDelay;
     QTimer m_quoteTimer;
-    QString m_firstHit;   // the best match of the last search, for Enter on a company name
+    QString m_firstHit;
+    QStringList m_sectionNames;   // translated, by section   // the best match of the last search, for Enter on a company name
 };

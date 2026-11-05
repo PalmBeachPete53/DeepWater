@@ -1,7 +1,7 @@
 #pragma once
 
 // The liquidity heatmap on the chart (a Deepwater addition, not in Quant Terminal): the "heatmap" indicator. The depth
-// feed (ui/DepthFeed) fills a store of columns and its time pyramid; this draws them under the candles, and the
+// feed (server/DepthStream, ui/DepthFeed) fills a store of columns and its time pyramid; this draws them under the candles, and the
 // current book (the newest column) as a compact DOM at the right edge.
 //
 // The chart is painted with QPainter (no GPU), so the heatmap is an image, a "texture" of texels in time × price, kept

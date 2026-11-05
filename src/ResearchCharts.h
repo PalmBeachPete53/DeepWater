@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AiRead.h"
+
 #include <QColor>
 #include <QDate>
 #include <QStringList>
@@ -31,10 +33,11 @@ QVector<double> niceTicks(double lo, double hi, int count = 5);
 
 // Groups of bars (one group per category, one bar per series) with the change against the previous
 // group above each bar.
-class BarChart : public QWidget
+class BarChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Series {
         QString name;
         QColor color;
@@ -60,10 +63,11 @@ private:
 };
 
 // Lines over categories (dates or periods). A series may end in a dashed projection.
-class LineChart : public QWidget
+class LineChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Series {
         QString name;
         QColor color;
@@ -97,10 +101,11 @@ private:
 };
 
 // A ring of slices, with text in the middle and, optionally, labels on leader lines.
-class DonutChart : public QWidget
+class DonutChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Slice {
         QString label;
         double value = 0;
@@ -148,10 +153,11 @@ private:
 };
 
 // Horizontal bars with a label on the left and the count inside.
-class HBars : public QWidget
+class HBars : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Bar {
         QString label;
         double value = 0;
@@ -212,10 +218,11 @@ private:
 };
 
 // Stacked bars per period (counts by category) with a line on a second axis.
-class StackedBarChart : public QWidget
+class StackedBarChart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Stack {
         QString name;
         QColor color;

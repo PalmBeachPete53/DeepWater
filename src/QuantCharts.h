@@ -1,5 +1,7 @@
 #pragma once
 
+#include "AiRead.h"
+
 #include <QColor>
 #include <QDate>
 #include <QDateTime>
@@ -28,10 +30,11 @@ struct TitlePart {
 };
 
 // Base: margins, the plot rectangle, axes, tooltip and hover tracking over a row of dates.
-class Chart : public QWidget
+class Chart : public QWidget, public AiReadable
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit Chart(QWidget *parent = nullptr);
     void setTitle(const QVector<TitlePart> &parts);
     void setDateFormat(const QString &f) { m_dateFormat = f; update(); }
@@ -50,6 +53,7 @@ protected:
     void leaveEvent(QEvent *) override;
     virtual void paint(QPainter &p, const QRectF &plot) = 0;
     void drawTitle(QPainter &p);
+    QString aiTitle() const;
     void drawEmpty(QPainter &p, const QString &text);
     void drawValueAxis(QPainter &p, const QRectF &plot, const Axis &axis, const Format &format, bool right, bool grid,
                        const QColor &color = QColor());
@@ -73,6 +77,7 @@ class MultiLineChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Line {
         QString name;
         QColor color;
@@ -137,6 +142,7 @@ class OverlayChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit OverlayChart(QWidget *parent = nullptr);
     void setData(const QVector<QDate> &dates, const QString &nameA, const QColor &colorA, const QVector<double> &a,
                  const QString &nameB, const QColor &colorB, const QVector<double> &b);
@@ -158,6 +164,7 @@ class SpreadChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit SpreadChart(QWidget *parent = nullptr);
     void setData(const QVector<QDate> &dates, const QVector<double> &spread, const QVector<double> &mean,
                  const QVector<double> &upper, const QVector<double> &lower, int window);
@@ -181,6 +188,7 @@ class ZScoreChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit ZScoreChart(QWidget *parent = nullptr);
     void setData(const QVector<QDate> &dates, const QVector<double> &z);
 
@@ -223,6 +231,7 @@ class LongShortBars : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Group {
         QString label;
         double longPos = 0, shortPos = 0;
@@ -242,6 +251,7 @@ class StepChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     struct Line {
         QString name;
         QColor color;
@@ -263,6 +273,7 @@ class RegimeChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit RegimeChart(QWidget *parent = nullptr);
     // regime: one index per date into labels / colors; probability: that regime's probability (for the tooltip).
     void setData(const QVector<QDate> &dates, const QVector<double> &price, const QVector<int> &regime,
@@ -284,6 +295,7 @@ class StackedAreaChart : public Chart
 {
     Q_OBJECT
 public:
+    QString aiRead() const override;
     explicit StackedAreaChart(QWidget *parent = nullptr);
     // series: one per regime, one value per date, summing to 1 at each date.
     void setData(const QVector<QDate> &dates, const QVector<QVector<double>> &series, const QStringList &labels,

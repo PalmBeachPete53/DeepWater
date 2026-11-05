@@ -1,4 +1,5 @@
-# Builds Deepwater on a GitHub macOS machine and packs it as a .dmg (Apple silicon). The .dmg is in the run's
+# Builds Deepwater on a GitHub macOS machine and packs it as a .dmg: Apple silicon on a branch push, universal (Apple
+# silicon + Intel, about twice the build time) for a tag v* or a run started by hand. The .dmg is in the run's
 # "Artifacts" (kept 5 days); a tag v* also publishes it in a GitHub Release. Locally, the same packaging is
 # `cmake --build build --target dist` (README › Packaging). The Windows job (MSVC, NSIS .exe, smoke test) was
 # dropped on 2026-11-02 to keep development on macOS only; it is in git history (commit 7a4ba3f) to bring back.
@@ -32,6 +33,15 @@ jobs:
         run: |
           if [[ "$GITHUB_REF" == refs/tags/v* ]]; then v="${GITHUB_REF_NAME#v}"; else v="0.1-${GITHUB_SHA::7}"; fi
           echo "PKG_VERSION=$v" >> "$GITHUB_ENV"
+          if [[ "$GITHUB_REF" == refs/tags/v* || "$GITHUB_EVENT_NAME" == workflow_dispatch ]]; then
+            echo "ARCHS=arm64;x86_64" >> "$GITHUB_ENV"
+          else
+            echo "ARCHS=arm64" >> "$GITHUB_ENV"
+          fi
+
+      - name: Rust target for the Intel half
+        if: contains(env.ARCHS, 'x86_64')
+        run: rustup target add x86_64-apple-darwin
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
@@ -46,7 +56,7 @@ jobs:
       - name: Configure
         run: >
           cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$QT_ROOT_DIR"
-          -DCMAKE_OSX_ARCHITECTURES=arm64 -DDEEPWATER_PACKAGE_VERSION="$PKG_VERSION"
+          -DCMAKE_OSX_ARCHITECTURES="$ARCHS" -DDEEPWATER_PACKAGE_VERSION="$PKG_VERSION"
 
       - name: Build and package
         run: cmake --build build --target dist --parallel 4

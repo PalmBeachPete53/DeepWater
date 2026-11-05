@@ -1,5 +1,6 @@
 #include "MlData.h"
 
+#include "CountryData.h"
 #include "DomesticFinance.h"
 #include "FxData.h"
 #include "KeyedSources.h"
@@ -9,6 +10,7 @@
 #include "QuantData.h"
 #include "ResearchData.h"
 #include "SurveyHeadlines.h"
+#include "fusion/Store.h"
 
 #include <QDir>
 #include <QFile>
@@ -22,12 +24,6 @@
 #include <cmath>
 
 namespace {
-
-struct NamedSet {
-    const CountrySeriesSet *set;
-    const char *source;
-    QStringList series;
-};
 
 QString csvCell(const QString &s)
 {
@@ -102,10 +98,10 @@ QStringList MlDataExporter::columns(const QString &file)
     return QString::fromUtf8(f.readLine()).trimmed().split(',');
 }
 
-int MlDataExporter::writeCountrySeries()
+QVector<MlDataExporter::CountrySet> MlDataExporter::countrySets(const Sources &s)
 {
-    const KeyIndicators::Sets &k = m_s.key ? m_s.key->sets() : KeyIndicators::Sets();
-    const QVector<NamedSet> sets = {
+    const KeyIndicators::Sets &k = s.key ? s.key->sets() : KeyIndicators::Sets();
+    const QVector<CountrySet> all = {
         {k.oecd, "oecd", {"cpi_yoy", "unemployment", "industry_yoy", "retail_yoy", "business_confidence", "consumer_confidence",
                           "leading_indicator", "short_rate", "long_rate", "wages_yoy", "gdp_qoq", "gdp_yoy", "current_account_gdp"}},
         {k.eurostat, "eurostat", {"hicp_yoy", "unemployment", "gdp_qoq", "industry_yoy", "retail_yoy", "consumer_confidence", "ppi_yoy",
@@ -124,13 +120,28 @@ int MlDataExporter::writeCountrySeries()
         {k.evds, "evds", {"cpi_yoy"}},
         {k.surveys, "surveys", {"manufacturing_pmi", "services_pmi", "composite_pmi", "business_climate", "economic_sentiment",
                                 "consumer_sentiment", "private_payrolls"}},
-        {m_s.property, "bis_property", {"real_house_prices", "household_credit_gdp", "corporate_credit_gdp", "household_debt_service", "private_debt_service"}},
-        {m_s.housePrices, "oecd_housing", {"price_to_income", "price_to_rent"}},
-        {m_s.globalDebt, "imf_gdd", {"household_debt_gdp", "corporate_debt_gdp", "government_debt_gdp"}},
-        {m_s.bankCredit, "worldbank_credit", {"private_credit_gdp", "bad_loans_pct"}},
+        {s.property, "bis_property", {"real_house_prices", "household_credit_gdp", "corporate_credit_gdp", "household_debt_service", "private_debt_service"}},
+        {s.housePrices, "oecd_housing", {"price_to_income", "price_to_rent"}},
+        {s.globalDebt, "imf_gdd", {"household_debt_gdp", "corporate_debt_gdp", "government_debt_gdp"}},
+        {s.bankCredit, "worldbank_credit", {"private_credit_gdp", "bad_loans_pct"}},
     };
+    QVector<CountrySet> out;
+    for (const CountrySet &c : all)
+        if (c.set) out << c;
+    return out;
+}
+
+QStringList MlDataExporter::weoIndicators()
+{
+    return {"gdp_growth", "inflation", "unemployment", "current_account_gdp", "gov_balance_gdp", "gov_debt_gdp",
+            "gdp_usd_bn", "gdp_per_capita_ppp", "export_volume_growth"};
+}
+
+int MlDataExporter::writeCountrySeries()
+{
+    const QVector<CountrySet> sets = countrySets(m_s);
     return writeFile("country_series.csv", {"source", "iso3", "series", "time", "value"}, [&](QTextStream &out, int &rows) {
-        for (const NamedSet &ns : sets) {
+        for (const CountrySet &ns : sets) {
             if (!ns.set || !ns.set->hasData())
                 continue;
             for (const QString &iso3 : ns.set->countries())
@@ -150,8 +161,7 @@ int MlDataExporter::writeWeo()
 {
     if (!m_s.economy || !m_s.economy->hasData())
         return 0;
-    const QStringList names {"gdp_growth", "inflation", "unemployment", "current_account_gdp", "gov_balance_gdp", "gov_debt_gdp",
-                             "gdp_usd_bn", "gdp_per_capita_ppp", "export_volume_growth"};
+    const QStringList names = weoIndicators();
     return writeFile("weo.csv", {"iso3", "indicator", "year", "value"}, [&](QTextStream &out, int &rows) {
         for (const WorldEconomy::Country &c : m_s.economy->countries())
             for (int i = 0; i < WorldEconomy::IndicatorCount && i < names.size(); ++i) {
@@ -218,6 +228,37 @@ int MlDataExporter::writeCot()
                      });
 }
 
+// The golden records of data fusion saved so far (Economy › Countries), every frequency of those fused from two
+// sources or more: a row per period, with the source of its value and whether it was rebased or unchecked.
+int MlDataExporter::writeGolden()
+{
+    const QString dir = countries::fusionDir();
+    const QVector<fusion::Summary> index = fusion::loadIndex(dir);
+    return writeFile("golden_series.csv", {"iso3", "indicator", "frequency", "date", "time", "value", "source", "rebased", "unchecked"},
+                     [&](QTextStream &out, int &rows) {
+        for (const fusion::Summary &f : index) {
+            if (f.records <= 0)
+                continue;
+            const std::optional<fusion::Record> r = fusion::load(dir, f.country, f.indicator);
+            if (!r)
+                continue;
+            for (const fusion::Golden &g : r->golden) {
+                if (g.sources.size() < 2)
+                    continue;
+                for (const fusion::GoldenPoint &p : g.points) {
+                    const QString source = p.source >= 0 && p.source < g.sources.size() ? g.sources[p.source].label : QString();
+                    const double time = p.date.year() + (p.date.dayOfYear() - 1) / double(p.date.daysInYear());
+                    out << f.country << ',' << f.indicator << ',' << fusion::freqName(g.freq) << ','
+                        << p.date.toString(Qt::ISODate) << ',' << QString::number(time, 'f', 3) << ','
+                        << QString::number(p.value, 'g', 10) << ',' << csvCell(source) << ',' << int(p.spliced) << ','
+                        << int(p.unverified) << '\n';
+                    ++rows;
+                }
+            }
+        }
+    });
+}
+
 void MlDataExporter::exportAll()
 {
     if (isBusy())
@@ -226,7 +267,7 @@ void MlDataExporter::exportAll()
     emit log(tr("Writing to %1").arg(dir()));
     const struct { const char *name; int rows; } written[] = {
         {"country_series.csv", writeCountrySeries()}, {"weo.csv", writeWeo()}, {"policy_rates.csv", writeRates()},
-        {"fx_daily.csv", writeFx()}, {"cot_legacy.csv", writeCot()}};
+        {"fx_daily.csv", writeFx()}, {"cot_legacy.csv", writeCot()}, {"golden_series.csv", writeGolden()}};
     for (const auto &w : written)
         emit log(w.rows < 0 ? tr("%1: couldn't write").arg(w.name)
                  : w.rows == 0 ? tr("%1: no data loaded yet, skipped").arg(w.name)

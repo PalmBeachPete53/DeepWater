@@ -120,11 +120,16 @@ class App : public QWidget
 {
     Q_OBJECT
 public:
+    // The AI side panel's context line: the active chart's symbol and timeframe (and bar replay).
+    Q_INVOKABLE QString aiContext() const;
     // The backend (Backend::instance()) must exist before the App is created. The state is loaded
     // asynchronously (GET /api/state), like app.js init(); ready() is emitted once the panes exist.
     explicit App(QWidget *parent = nullptr);
     ~App() override;
     bool isReady() const;
+    // The Charts page of Deepwater (there is one), for the local models' Trade skill (Panels::agent*); null before
+    // it exists or after it is gone.
+    static App *current();
 
     // ---- state (app.state / app.settings) ----
     AppState state;
@@ -141,6 +146,10 @@ public:
     void setLayout(const QString &layout, bool save = true);
     void setActive(ChartPane *pane);
     void onPaneLoaded(ChartPane *pane);
+    // Called each time a pane has loaded its bars or failed to (`error`), until the listener returns true: a caller
+    // waiting for a symbol it asked for.
+    QVector<std::function<bool(ChartPane *, const QString &error)>> paneLoadedListeners;
+    void paneLoadFinished(ChartPane *pane, const QString &error);
     void syncToolbar();
     void setTf(const QString &tf);
     void setSymbol(const QString &sym, ChartPane *pane = nullptr);   // null = active

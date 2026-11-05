@@ -16,7 +16,7 @@ CMake builds `third_party/adblock-ffi` and the reader gets Brave's ad blocker; w
 
 `--screenshot out.png` renders the window to a PNG and exits (handy for UI checks); `--page <id>`, `--theme <id>`,
 `--devtools`, `--country <ISO3>`, `--indicator <n>`, `--supply [port:<id>|oil:<id>|event:<id>]` (the supply chain layer's overview or one of its sheets), `--search <text>` (the Sources page's search box),
-`--ai-search <text>` (the AI tab's Hub search), `--news-ticker <sym>`, `--news-article <n>`, `--news-favorite <n>` and `--news-url <url>` (the News
+`--ai-search <text>` (the AI tab's Hub search), `--ai-local <prompt>` (AI › Local: loads the first model of a bound slot and sends the prompt), `--news-ticker <sym>`, `--news-article <n>`, `--news-favorite <n>` and `--news-url <url>` (the News
 tab's filter, its reader, a card's star, any page in the reader), `--settings [0|1]` (opens the settings window on its language or theme
 page; the screenshot then captures that window), `--scroll <0..1>`, `--scroll-end` and `--delay <ms>` choose what it
 shows first.
@@ -29,22 +29,66 @@ iconset (16 to 1024 px, e.g. with QSvgRenderer) into `deepwater.iconset/` and ru
 ### Packaging (.dmg)
 
 `cmake --build build --target dist` builds the app and packs it with CPack into `build/dist/`:
-`Deepwater-<version>-macOS-arm64.dmg` (deepwater.app and a link to Applications). The install step behind it
+`Deepwater-<version>-macOS-arm64.dmg`, or `-macOS-universal.dmg` for a universal build (deepwater.app and a link to
+Applications). The install step behind it
 (`cmake --install build --prefix <dir>`) runs macdeployqt, so the result runs on a Mac without Qt;
 `cmake/MacBundleFix.cmake` then points the library paths macdeployqt leaves on Homebrew (QtWebEngineProcess) at the
-bundle's own copies, keeps only the arm64 half of Qt's universal libraries (the online installer's Qt), drops the
+bundle's own copies, keeps only the built architecture's half of Qt's universal libraries (the online installer's
+Qt; a universal build keeps both), drops the
 plugins whose libraries aren't deployed (virtual keyboard, NMEA positioning) and signs the bundle again, ad-hoc. The
 version in the names is `DEEPWATER_PACKAGE_VERSION` (default: the project version).
 
 GitHub Actions (`.github/workflows/build.yml`) makes the .dmg at every push to `main` or a `ci/...` branch on a macOS
 runner (Apple silicon, Qt from the online installer, about 4 minutes); it is in the run's *Artifacts* for 5 days.
-Pushing a tag `v1.2` builds `Deepwater-1.2-macOS-arm64.dmg` and publishes it in a GitHub Release. Qt's version and
+Pushing a tag `v1.2` builds the universal `Deepwater-1.2-macOS-universal.dmg` (Apple silicon and Intel, about twice
+the build time) and publishes it in a GitHub Release; a run started by hand (*Run workflow*) is universal too. Qt's version and
 modules are at the top of the workflow.
 
 The app is ad-hoc signed only, not with a developer certificate: a downloaded .dmg is quarantined and Gatekeeper
 refuses it the first time (System Settings › Privacy & Security › *Open Anyway*, or
-`xattr -dr com.apple.quarantine /Applications/deepwater.app`); notarisation would need an Apple Developer ID. The
-.dmg is arm64 only (no Intel Macs).
+`xattr -dr com.apple.quarantine /Applications/deepwater.app`); notarisation would need an Apple Developer ID. Only
+the universal .dmg runs on Intel Macs.
+
+### Universal binary and build options
+
+A universal binary (arm64 + x86_64) needs a universal Qt: Homebrew's is arm64 only, the online installer's is
+universal (`aqt install-qt mac desktop 6.12.0 clang_64 -m qtwebengine qtwebchannel qtpositioning qtwebsockets
+qthttpserver qtmultimedia --outputdir ~/Qt`, the modules of the CI), and Rust's Intel target for the ad blocker
+(`rustup target add x86_64-apple-darwin`):
+
+```sh
+cmake -S . -B build-universal -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$HOME/Qt/6.12.0/macos \
+      -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64"
+cmake --build build-universal -j 10 --target dist      # build-universal/dist/Deepwater-0.1-macOS-universal.dmg
+lipo -archs build-universal/deepwater.app/Contents/MacOS/deepwater                       # x86_64 arm64
+```
+
+Every optimised configuration (Release, RelWithDebInfo, MinSizeRel; Debug stays as CMake makes it) gets:
+
+- **one CPU per slice**, through `-Xarch_<arch>`: `-mcpu=apple-m1` on arm64 (every Apple silicon Mac),
+  `-march=x86-64-v3` on x86_64 (AVX2, FMA, BMI2: every Intel Mac that runs macOS 14). `-DDEEPWATER_X86_LEVEL=v2`
+  targets SSE4.2 instead. The Rust library gets the same CPUs (`-Ctarget-cpu`) and macOS version.
+- **ThinLTO** (`-flto=thin`, `DEEPWATER_LTO`, on), with its cache in `<build>/lto-cache` so a rebuild only
+  re-optimises what changed.
+- **macOS 14.4 as the minimum** (`CMAKE_OSX_DEPLOYMENT_TARGET`, Qt 6.12's own) when the architectures are named
+  (`CMAKE_OSX_ARCHITECTURES`, as the CI and the universal build do). A plain build for this Mac keeps the host's
+  version, as Homebrew's Qt is built for it.
+
+Profile-guided optimisation is ready but off (`DEEPWATER_PGO=OFF|GENERATE|USE`): one instrumented build, a training
+run that writes one profile per architecture, then the optimised build. The training runs the test programs (the
+x86_64 half under Rosetta on an Apple silicon Mac):
+
+```sh
+cmake -S . -B build-pgo-gen -DCMAKE_BUILD_TYPE=Release -DDEEPWATER_PGO=GENERATE [same Qt and architectures]
+cmake --build build-pgo-gen -j 10
+cmake/pgo-train.sh build-pgo-gen                       # build-pgo-profiles/<arch>.profdata
+cmake -S . -B build -DDEEPWATER_PGO=USE -DDEEPWATER_PGO_DIR=$PWD/build-pgo-profiles
+```
+
+Measured on an M3 Pro (Release, medians of 5 runs, run-to-run noise about 1.5 %): `-mcpu=apple-m1` (already
+clang's default on arm64) and ThinLTO leave the chart, heatmap and Markov benchmarks unchanged, as their time is in
+Qt (QPainter) and libm; PGO moves them by −14 % to +9 % depending on the benchmark, so it stays off. The universal
+build against the online installer's Qt draws the chart 4 to 10 % faster than against Homebrew's.
 
 ### Windows 11
 
@@ -376,7 +420,7 @@ The original JavaScript sources are no longer in the repo. Code in `src/quant/` 
 | `qtm_core` (`core/`) | `public/lib/*.js`: 87 indicators, series and chart-type transforms, seasonals, backtester, quant checks; custom JS indicators run unchanged on QJSEngine; Pine Script indicators run on PineTS (below) |
 | `qtm_server` (`server/`) | `server.js` + `lib/*.js`: data providers and fallbacks, feeds, CSV imports, alerts (every 15 s), store, PTQ connector, and the same local HTTP API on 127.0.0.1:3777 for your scripts (`quant-terminal/examples` work against it) |
 | `qtm_chart` (`chart/`) | Lightweight Charts, re-implemented with QPainter |
-| `qtm_ui` (`ui/`) | `public/js/*.js`, `index.html`, `app.css`: the terminal UI |
+| `qtm_ui` (`ui/`) | `public/js/*.js`, `index.html`, `app.css`: the terminal UI; `PanelsAgent.cpp` (Deepwater's) lets the local models' Trade skill drive the tester and the live paper account |
 
 The backend lives for the whole session (alerts keep firing on other tabs); its data is in
 `~/Library/Application Support/Deepwater/Deepwater/quant-terminal/` (`data/`, `custom/`). Numbers were checked
@@ -429,6 +473,14 @@ volume profile keeps its sessions and closed sessions' profiles between frames; 
 as one buffer the JS side turns into objects; the watchlist keeps its rows when only the quotes change; Yahoo is asked
 only for the days a request needs (a live poll's 5 bars: tens of days, not 20 years).
 
+Live data: Binance pairs get the forming candle from the backend's `<pair>@kline_<interval>` stream (`KlineStream`), one
+per pair and timeframe whatever the number of panes showing it, opened again 3 s after a drop; when no stream host
+answers, and on other exchanges, the pane polls the last 5 bars every 3 s (crypto) or 10 s. The footprint's trades
+(`TradeStream`) and the heatmap's order book (`DepthStream`) are fetched once per pair the same way, so two panes on
+BTCUSDT 1m with a heatmap hold 3 Binance sockets, not 6. All three use `BinanceSocket` (binance.com's stream hosts in turn,
+or binance.us's); the panes only subscribe. Code: `src/quant/server/{BinanceSocket,KlineStream,TradeStream,DepthStream}.*`;
+tests in `tests/quant/{klinestream,tradestream,depthstream}`.
+
 ### Range slider
 
 Under every chart pane (a Deepwater addition) a thin strip shows the closes of all the bars loaded as a small line,
@@ -478,6 +530,12 @@ each closed candle's footprint volume equals Binance's own candle volume (to 1e-
 minute with the app hidden. Other symbols and timeframes show plain candles and the reason in
 the legend; candles before the oldest trade loaded stay plain (the legend says from when the footprint starts).
 
+The trades of a pair are fetched once, whatever the number of panes showing it: the backend keeps one stream per pair
+(`TradeStream`, one socket, one history), which fetches back to the earliest first bar and up to the largest budget
+of the panes using it, runs while one of them is live and closes with the last. Each pane builds its own footprint
+from it and keeps its own budget, so two panes on BTCUSDT (or one changing its timeframe) don't fetch the history
+twice. The trades are there in the backend, not only in a chart.
+
 Per candle: delta per row (ask − bid) and in total, volume per row and the **POC** (most volume; ties go to the row
 nearest the candle's middle, then the lower), **diagonal imbalances** (buy at P when ask(P) ≥ ratio × bid(P − 1
 row), sell at P when bid(P) ≥ ratio × ask(P + 1 row); the row below the candle's low and above its high is no
@@ -500,13 +558,17 @@ Prices are whole ticks (int64) everywhere, so rows never drift with floating poi
 dense array that grows at either end, and a trade only touches its row and the candle's totals. New trades redraw
 the chart at most 15 times a second; a frame takes 1–3 ms with 10 to 400 candles on screen (M3 Pro, Retina).
 Code: `src/quant/core/Footprint.*` (classification, ticks and rows, aggregation, analysis: pure, no Qt widgets),
-`src/quant/ui/TradeFeed.*` (Binance trades, shared with Big Trades), `src/quant/ui/FootprintLayer.*` (the drawing, a series primitive
-over a transparent main series), `Providers::binanceTickSize` / `binanceAggTrades`; tests in `tests/quant/footprint`.
+`src/quant/server/TradeStream.*` (the pair's Binance trades in the backend, shared by the panes: REST history, WebSocket, gaps;
+the network behind `TradeSource`), `src/quant/ui/TradeFeed.*` (a pane's side of it: its footprint candles and its
+stretch of the trades, read by Big Trades and the heatmap's events too), `src/quant/ui/FootprintLayer.*` (the drawing,
+a series primitive over a transparent main series), `Providers::binanceTickSize` / `binanceAggTrades`; tests in
+`tests/quant/footprint` and `tests/quant/tradestream` (the shared stream on a fake source: history, live, gaps,
+binance.us, several panes, pauses, each pane's footprint against its trades rebuilt at once).
 
 ### Big Trades
 
 **Big Trades** in the indicator list (Volume group, a Deepwater addition) puts a bubble on the chart for each large
-aggressive order, from the same Binance trades as the footprint (one feed per chart, `TradeFeed`; Binance pairs only,
+aggressive order, from the same Binance trades as the footprint (the pair's shared stream, `TradeStream`; Binance pairs only,
 any time-based chart type). Trades are first **aggregated**: consecutive trades on the same side less than the window
 (50 ms) after the aggregate's first one, or only those of the same millisecond, at one price or, with *Sweep*, at prices
 moving one way (up for a buy, down for a sell), become one aggregate with its start time, side, volume, volume-weighted
@@ -617,8 +679,12 @@ Data: the book is rebuilt from Binance's depth (a REST snapshot of 5000 levels a
 diffs, market by price: one quantity per price level, not per order), with Binance's resync rules: updates before the
 snapshot are buffered, a hole in the update ids or a crossed book (best bid ≥ best ask) stops the book until a new
 snapshot (3 s apart at least). Binance sends the diffs every 100 ms, so an order placed and pulled within 100 ms is
-never seen, and it has no history of the book: the heatmap fills in from when the chart opens. The feed runs on a
-thread of its own (`DepthFeed`, socket, book and sampler); it follows the trade feed's rule for binance.us. Every
+never seen, and it has no history of the book: the heatmap fills in from when the chart opens. The depth is fetched
+once per pair, whatever the number of panes showing it: the backend keeps one stream per pair (`DepthStream`, on a
+thread of its own: one socket, one book, one recorder) with a sampler and a store of columns for each sampling interval
+the panes ask for, kept as long as the longest history among them; each pane builds what it shows from them (its
+stability filter, its time pyramid), and a pane opened on a pair already streaming shows its columns at once. It
+follows the trade stream's rule for binance.us. Every
 interval the book is sampled into a column: the quantity per price row (~2 $ on BTCUSDT: 2e-5 of the price, rounded to
 1-2-5 ticks; bids and asks on the same scale) in a band of 800 rows around the price (±800 $ on BTCUSDT, inside the
 snapshot's reach), stored as 16-bit log codes (0.07 % off at most) in a ring of columns: 23.5 MB an hour at 250 ms
@@ -643,9 +709,11 @@ thread uses 0.5 % of a core; a column reaches the screen 25 ms after it is made.
 Code: `src/quant/core/OrderBook.*`, `src/quant/core/Heatmap.*` (book, sampling, store, time pyramid, stability filter, grouping, normalisation, palettes:
 pure), `src/quant/core/HeatmapEvents.*` (pulled and absorbed liquidity: pure), `src/quant/core/DepthRecord.*` (recordings:
 format, reader, replayer: pure),
-`src/quant/ui/DepthFeed.*` (Binance depth on its thread, the recorder, loading recordings), `src/quant/ui/HeatmapLayer.*` (texture, layer, DOM, debug overlay),
+`src/quant/server/DepthStream.*` (the pair's Binance depth in the backend, shared by the panes: its thread, socket, book,
+samplers, the recorder, loading recordings; the network behind `DepthSource`), `src/quant/ui/DepthFeed.*` (a pane's side
+of it: the shown store and pyramid), `src/quant/ui/HeatmapLayer.*` (texture, layer, DOM, debug overlay),
 `Providers::binanceDepth`; tests in `tests/quant/heatmap` (a minute at 1,000 updates a second: ~1.1 µs an update, flat
-from the first seconds to the last).
+from the first seconds to the last) and `tests/quant/depthstream` (the shared stream on a fake source).
 
 ### Terminal
 
@@ -718,7 +786,8 @@ movers) to open it in **Research**. Code: `src/OverviewPage.*` (data and layout)
 
 ## Economy
 
-The **Economy** tab is a board of US (and a few global) economic indicators in ten sections, then **Countries** (below): **Sentiment**,
+The **Economy** tab is a board of US (and a few global) economic indicators in ten sections, then **Countries** and
+**Indicators** (below): **Sentiment**,
 **Crypto**, **Growth**, **Inflation**, **Employment**, **Rates**, **Housing**, **Consumer**, **Liquidity** and
 **Global**. Each panel is one indicator: an area chart with its own ranges (1M … 5Y for daily series, 1Y … 10Y for
 monthly ones, up to MAX for quarterly ones), the last value and its change since the observation before (in
@@ -770,7 +839,36 @@ say so. The last tab shown is remembered (`economy/countryTab`).
 The rows and their sources are in `resources/country_indicators.json` (the format is described in
 `src/CountryData.h`). Each indicator lists sources in order; the first that covers the country and answers wins,
 unless its series stopped more than 400 days ago, in which case a later source that goes on is preferred (an office
-that stopped reporting to a compilation). Sources:
+that stopped reporting to a compilation).
+
+**Data fusion** (`src/fusion/`): once a row has settled, the country's loader reads every other source of the row that
+covers the country, in the background (three requests at a time, through the same caches), and fuses them into
+golden records, one per frequency (`fusion::fuse`: units read, sources normalised, each compared with the record built
+so far on their common periods, then merged in the catalogue's order; see `src/fusion/Fusion.h`). A source is *the
+same* when the median gap is within 1 % of the level (0.1 point for rates) and 90 % of the common periods agree within
+twice that; *rebased* when a steady ratio (within 2 %, rank correlation 0.95, 90 % agreeing once rebased) maps it on
+the record (another index base, another price year; never for rates, where a shift is another definition); otherwise
+*distinct* and left out. Currencies are never mixed; magnitudes are converted. The records go to
+`<app data>/fusion/<ISO3>/<indicator>.json` (points with their source, spliced and unverified flags, each source's
+relation and why, conflicts), the sources as read beside them (`.raw.json`); fused again after 12 hours or on a
+refresh. Rows loaded alone (Economy › Indicators) aren't fused, but show a record already saved.
+
+A row whose source is part of a golden record of two sources or more (at the row's frequency, not left out, in the
+same units) shows the record (`CountryLoader::applyGolden`, at once from a saved record younger than 7 days, again
+when a fusion ends): the last and previous values are the record's, the highest and lowest over its whole history;
+the Source column names the provider of the latest point, "+1" for each other source that gave the record points.
+The tooltip (`CountryLoader::fusionTip`) lists the record's span and each source: the most trusted, the same series
+(periods taken), on another base (the factor), unchecked, or left out and why (agreement, definition, unit), then the
+periods rebased and the disagreements (the latest one with both values). Each save also updates `<app data>/fusion/index.json`
+(per country and indicator: records of two sources or more, their points, the points added after the most trusted
+source, splices, unchecked points, disagreements, the providers that gave points; written from the records when it
+is missing), which **Sources › Data** reads: a **Fusion** block sits between the sources that gave points to a
+record and Economy › Countries and Indicators, their links passing through it; hovering it lists the sources
+combined, the parts fed and the counts. On France's Overview and Prices tabs: food inflation
+back to 1971 and energy inflation to 1961 (OECD before Eurostat's HICP), GDP growth to 1960, monthly inflation to
+1955 (IMF); headline inflation stays from 1997 (OECD's and the IMF's CPI are distinct from the HICP); about 1 MB.
+
+Sources:
 
 - **FRED** (United States, with the key saved in Sources): about 170 series, national accounts, payrolls by
   sector, claims, JOLTS, prices (CPI and its parts, PCE, PPI, import and export prices, Cleveland Fed median and
@@ -853,6 +951,39 @@ compilation's on a row already filled, fresher and at the source, rather than fi
 Dev flag: `deepwater --economy-country FRA --economy-tab 3 --delay 30000 --screenshot out.png` opens a country on a
 tab (0 Overview … 11 Health). Code: `src/CountryData.*` (catalogue, providers, parsing, transformations, the loader),
 `src/CountriesView.*` (the list and the country page).
+
+### Indicators
+
+The **Indicators** sub-tab is the other way round: the indicators by section, as Trading Economics lists them
+(Main Indicators, Markets, Labour, Government, Prices, Money, Trade, GDP, Housing, Business, Energy, Taxes,
+Consumer, Climate, Health; a search box), and clicking one opens its table of countries: **Country**, **Last**,
+**Previous**, **Reference** (the period of the last value), **Unit** and **Next release**, sorted by any column and
+filtered by region (All, G20, America, Europe, Africa, Asia, Oceania; remembered in `economy/indicatorRegion`).
+Countries no free source covers are left out (the note under the table counts them, and names those a free key
+would add); hovering a row gives its source and series code. **Export CSV** saves the rows shown, in their order.
+
+- The list is `resources/indicator_list.json`: each item names rows of the Countries catalogue (`ids`, the first
+  a country has wins: "Personal Savings" is the US personal saving rate, else the household saving rate). Items
+  without a free source are greyed, the reason in their tooltip (credit ratings, the corruption and terrorism
+  indexes, rig counts, steel and cement…). Markets' Commodity, Crypto and Shares and the News, Calendar,
+  UN Comtrade and World Bank sections of Trading Economics' list are not tables of countries and are left out.
+- Values are the Countries view's: the same catalogue rows, sources tried in the same order, the same
+  transformations (`countries::CountryLoader`, one per country). What differs is the download: the providers that
+  allow it are asked once for every country (`countries::CrossCountry`: World Bank `country/all`, IMF and WEO with
+  `*` for the country, OECD / ECB with the country dimension left empty, BIS with `*`, Eurostat without `geo`,
+  ILOSTAT without `ref_area` but with the sex and breakdown filtered by the server, Yahoo's spark 20 symbols a
+  request), over the last ten years (25 for annual World Bank and ILO series), so an indicator for ~200 countries
+  is a handful of requests; national sources (FRED, ONS, Bundesbank…) are asked for their own country as usual.
+  Highest and lowest are not shown, hence the shorter history.
+- **Next release** comes from TradingView's economic calendar (the Calendar page's source, ~130 countries), whose
+  events carry Trading Economics' indicator name: the country's first event of that name after now, over ten weeks
+  from this week's Monday (one request a week, 2000 events at most each, kept twelve hours;
+  `countries::ReleaseCalendar`). An item can list other names in `calendar`. The column is shown only when the
+  calendar has releases of the indicator.
+
+Dev flag: `deepwater --economy-indicator "Inflation Rate" --delay 40000 --screenshot out.png` opens an indicator
+(its English name). Code: `src/IndicatorData.*` (the list, the per-indicator loader, the release calendar),
+`src/IndicatorsView.*` (the list and the indicator's page); the cross-country requests are in `src/CountryData.cpp`.
 
 ## News
 
@@ -1137,10 +1268,12 @@ under Research). The page is translated; numbers keep the English grouping (`1,2
 
 ## AI
 
-The **AI** tab has two sections (the one shown is remembered, `ai/section`). Keys live in **Sources › AI**
+The **AI** tab has three sections: Models, Local, Machine learning (the one shown is remembered, `ai/section`). Models has a
+bar under its header, **Local models | Integration** (`ai/modelsPart`): the models of this computer and the Hub, or the
+Claude settings and opencode, with the slots under both (either can be dragged into a slot, like a model); the description and the key state above the bar follow the part shown. Keys live in **Sources › AI**
 (`keys/anthropic`, `keys/huggingface`), with a **Test** that asks the API with the key.
 
-- **Models**: the models on this computer (`~/Library/Application Support/Deepwater/Deepwater/models/<org>/<name>/`,
+- **Models › Local models**: the models on this computer (`~/Library/Application Support/Deepwater/Deepwater/models/<org>/<name>/`,
   scanned on show: files, size, date; open the folder, delete) and the Hugging Face Hub to get more
   (`src/AiModels.*`): a search (`/api/models?search=…&sort=downloads`, 30 results: task, downloads, likes, date;
   gated repositories marked), the files of the chosen repository with their sizes (`/api/models/<id>?blobs=true`;
@@ -1154,17 +1287,168 @@ The **AI** tab has two sections (the one shown is remembered, `ai/section`). Key
   21 MB/s with curl, the app the same (491 MB in under 30 s, hash matching); 4 and 8 parallel byte ranges 20 and
   18 MB/s, so segmented downloads weren't added, the line being the limit. An interrupted download (127 MB of 415)
   resumed and matched the Hub's hash. The Hub token, when set, goes in an `Authorization: Bearer` header and opens
-  gated models whose terms were accepted. Nothing runs the models yet: this is the store.
-- **Claude** (`src/ClaudeClient.*`): a conversation with Claude through the Messages API
-  (`api.anthropic.com/v1/messages`, API version `2026-10-21`, raw HTTP since there is no C++ SDK), streamed as
-  server-sent events (`text_delta` shown as it comes, `thinking_delta` summaries kept for the status line's tooltip).
-  Model (the API's list when a key is set, else Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.1; `claude-opus-5-5` by
-  default), effort (`output_config.effort`, `medium` by default), an optional system prompt (remembered), 16,000
-  `max_tokens`. Thinking is adaptive with a summarized display; on Opus 5.5, Opus 5, Sonnet 5.5 and Fable 5.1 the
-  request carries `fallbacks: "default"` with the `server-side-fallback-2026-07-01` beta header, so a safety refusal
-  is re-run by the server on a fallback model inside the same call (the status line names the model that answered,
-  the tokens in and out, the time, a refusal or a cut at the token limit). The conversation is kept in memory for
-  the session (**New conversation** clears it); a failed turn drops the question so it can be sent again.
+  gated models whose terms were accepted. Files that can run code when loaded (`LocalModels::fileKind`: pickle-based
+  `.bin`, `.pt`, `.pth`, `.ckpt`, `.pkl`, `.joblib`, Keras `.h5`/`.keras`, Python, native libraries) are never ticked,
+  are marked in red ("can run code"), and ticking one asks first; data-only weights (GGUF, safetensors, ONNX) are
+  ticked. On `openai-community/gpt2`, `pytorch_model.bin` and `tf_model.h5` are marked and left out, the safetensors
+  and ONNX files ticked. This is the store; **Local** runs them. The Models view scrolls when the window is
+  too short for the tables and the slots.
+  - **Slots** (`src/ModelSlots.*`), under the models on this computer: four squares that give a model its skills.
+    Drag a model from the list (only the models on this computer are taken, and only those with a GGUF file, the
+    local engine's format: another is refused with the reason above the slots) into a slot, or from one slot to
+    another, or an integration from Models › Integration (Claude, opencode: no files to bind, one slot at a time, a
+    second drop moves it); tick the skills the slot grants (**Read Deepwater's data**: read only, through the app, no file, network
+    or writing; **Trade**: the Charts tab's tester and live paper account, below). The skills belong to the slot: a model dropped in gets that slot's skills, the slot it
+    left keeps its own, ✕ takes the model out, and a new slot grants nothing until a box is ticked.
+    A slot is **bound to the model's files**: dropping a model from the list takes the SHA-256 of each of its files
+    (on the thread pool) with their sizes and dates. When the page shows, a slot compares them with the files on
+    disk: same sizes and dates, bound; a size or date changed, it hashes again (the same bytes keep it bound, with the
+    new dates); a file changed, appeared or went, its skills are **suspended** (red dashed well) until the model is
+    dragged in again. A deleted model or one without GGUF suspends them too, and the files that can run code are
+    named ("never loaded"). `ModelSlotsView::grantedSkills(model)` gives what a model may do: the skills of the bound
+    slots holding it. Kept in `ai/slots` (JSON: model id, skill ids, and per file its SHA-256, size and date). Checked
+    with a test model: bound on drop, still bound after a `touch`, suspended after a byte was appended. Only a model
+    in a bound slot can run (**Local**); `ModelSlotsView::runnable()` lists them with their GGUF files (a split model
+    once, by its first part) and `mayRun()` checks the files on disk again right before a load. A slot's skills are
+    the tools its model is offered and may call (**Local** › tools).
+- **Local** (`src/AiLocalView.*`, `src/LocalEngine.*`, `src/llm/deepwater-llm.cpp`): a conversation with a model of
+  this computer. The models offered are those of the bound slots ("Slot 1 · name · file.gguf"); context 4,096 to
+  32,768 tokens (`ai/localContext`, 8,192 by default, capped at the model's training context), an optional system
+  prompt (`ai/localSystem`). **Load** refuses a model larger than three quarters of the Mac's memory. The engine is
+  **llama.cpp b12070** (MIT, `third_party/llama.cpp`: `ggml/`, `src/`, `include/`, `vendor/`, `cmake/`, unchanged),
+  built static with Metal and the shaders embedded, behind `deepwater-llm`, a helper in `deepwater.app/Contents/MacOS`
+  that speaks JSON lines on stdin/stdout (`chat` with the whole conversation, `stop`; `ready`, `token` in whole UTF-8
+  characters, `done` with the token counts and times, `error`) and keeps the last conversation's tokens in its cache,
+  so a conversation that goes on evaluates only its new part. The app starts it with
+  `/usr/bin/sandbox-exec -p <profile>`, the profile written for the model (`LocalEngine::sandboxProfile`):
+  `(deny default)` + `system.sb`, exec of the helper only, reads of the app's bundle (its code; Metal and IOSurface
+  look the main bundle up and crash without it) and of the model's files (each part of a split model), and the GPU's
+  two IOKit user clients (`AGXDeviceUserClient`, `IOSurfaceRootUserClient`). No network, no writing, no other file,
+  no other program, `LANG` as its only environment variable, no core dump (`RLIMIT_CORE` 0) and 64 file descriptors.
+  Checked on 3 November 2026 with the same profile around `cat`, `touch`, `nc` and `sh`: the model file reads, the
+  app's preferences (where the API keys are) and another model's files don't, writes and TCP connections are
+  refused, no shell starts. The model is unloaded when its slot lets it go or its files change (`slotsChanged`), and
+  the helper quits when the app closes its input. Answers stream as they are written; a `<think>…</think>` part
+  (Qwen3, DeepSeek-R1) is shown dim and italic above the answer and left out of the conversation sent back. The
+  status line gives the tokens, tokens per second, and the prompt's tokens with those already evaluated. Sampling:
+  temperature 0.7, top-k 40, top-p 0.9, min-p 0.05, 2,048 tokens per answer. Measured on this Mac (36 GB) with
+  Qwen3-6B Q8_0 (6.3 GB): loaded in 0.4 s, 16 to 18 tokens/s. The helper is built only for a one-architecture build
+  (CMake `DEEPWATER_LLM`; ggml chooses its CPU code by the target architecture): a universal build goes without, and
+  the section says so. Dev flag `--ai-local <prompt>` loads the first model offered and sends the prompt.
+  The conversation itself is `LocalChat` (`src/LocalChat.*`: the engine, the messages, the tool rounds, the journal),
+  drawn by `ChatTranscript`; AI › Local and the side panel are two views of it (one model in memory, one
+  conversation).
+- **opencode in the conversation** (`src/OpencodeRun.*`): when a slot holds opencode it is one of the choices of AI › Local
+  and the side panel, ready without loading. Each message runs `opencode run --standalone --format json --agent
+  deepwater-chat` (on its input, in the empty folder `<app data>/ai/opencode`), the same session from one to the next, with the
+  model chosen in a second list shown while opencode is the choice (`ai/opencodeModel`, from `opencode models`; empty: the one
+  opencode is set to use, which the free tier may refuse in some countries). That model is usually at a provider: it gets the questions and what the tools read. opencode only supplies the
+  model: `OPENCODE_CONFIG_CONTENT` denies all its tools (shell, files, web, MCP), over a user configuration that allows
+  them (`--standalone` makes it apply; the background service keeps its own; an unknown agent is an error), and a tool of its
+  own that completes all the same kills the run. Deepwater's tools go through the same loop as a local model's: written in
+  the conversation (`<tool_call>`), checked against the slot at each call, in the journal (model `opencode`). MCP is not
+  involved here: serving can be off. Checked on 4 November 2026 in the app against a local fake provider and a global
+  configuration allowing everything: `list_data` run, `paper_account` refused, a shell call answered "no tool" and no file
+  written; with the real free tier, its quota error shows in the status line. No answer from a real model yet (quota reached).
+- **Side panel** (`src/AiDock.*`): a flap labelled AI on the right edge of every page, under the developer tools'
+  one, slides a 440 px panel over the right of the page (`ai/dockOpen` remembers it; Esc closes it; when the
+  developer tools are on, it opens left of their flap). It holds the model among those the bound slots offer (load,
+  unload), its state, a prompt (Cmd+Enter), Send, Stop, New conversation, and the conversation under it. Each
+  question goes with a context line, shown under it and sent to the model before it ("[The user is in Deepwater,
+  on: …]"): the page's label and what it shows, from a page's `Q_INVOKABLE aiContext()` when it has one
+  (`MainWindow::pageContext`): Charts › the active chart's symbol and timeframe (and bar replay), Economy › the
+  section, the country and tab open (`France (FRA), Prices`) or the indicator, Research › the symbol and section,
+  Map › the selected country. That line holds no data: an AI reads the app's tables and charts only through the tool `read_page` of the skill *Read Deepwater's data*, so it is offered, checked and in the journal like any other (the user's rule: nothing of it reaches a model outside a skill). `read_page [page] [section] [country tab] [indicator] [part]` reads any page and section, open or not, without moving the user; **Sources and AI can't be read**. A page not on screen is shown past the edge of its parent for the time of a read, a section's tab clicked and clicked back in the same tick (nothing is painted between), again every 1.5 s until the data has arrived (12 s at most, the result then says so); a country's or an indicator's sheet is a separate one shown nowhere (`MainWindow::aiReadPage`). `open_page` takes the user there, for any page (it reads nothing), and only when they ask. `aiReadPage` (`src/AiRead.*`) walks the visible widgets: a table widget gives its model; any other widget is painted on a device that records the text it draws, by position, so a table or a card painted by hand reads as it shows; a chart gives its values through `AiReadable::aiRead()` (the span and the latest points). Buttons, inputs, text editors, GL and web views and the terminal are left out. Long pages come in parts of 5,000 characters. Checked on 4 November 2026: every page read in 2 to 42 ms once loaded, Economy › Inflation and Quant › Portfolio read from Overview; without the skill the tool isn't offered and a call forced from the side panel or over MCP is refused and in the journal; with it, Sources and AI are refused. Asked from France's Prices tab "the latest food inflation of this country", the model
+  called `golden_series` for FRA and answered 1.5 % (September 2026, since January 1971). The panel builds the AI
+  page the first time it opens (the slots live there). Dev flag `--ai-dock [prompt]` opens it (and asks once the
+  model is loaded, with the context of that moment).
+  - **Tools** (`src/LocalTools.*`): what a slot's skills let its model do, run by the app (the model's process can
+    reach nothing). Skill `read_data` gives eight: `list_data` (what is loaded: the country series by source with
+    their series names, the WEO indicators, the FX pairs, the COT markets, how many golden records each country has),
+    `golden_series` (country, indicator of Economy › Countries by id or English name, optional frequency, last N
+    points: the golden record of data fusion with the source of every point, rebased or unchecked ones marked, the
+    sources with their relation and why, the disagreements; without a record, the indicators the country has one
+    for, or how to get one), `country_series` (source, series,
+    country, last N points with their periods, or without a country the latest value of every country, highest
+    first; the sets and names are `MlDataExporter::countrySets()`, shared with the CSV export), `imf_weo` (yearly,
+    projections included), `policy_rate` (BIS, monthly; EA for the ECB), `fx_rate` (ECB daily), `cot_positions`
+    (CFTC legacy, weekly nets) and `prices` (Yahoo through the Research client: summary and the latest 40 bars; the
+    symbol is checked against `[A-Za-z0-9.^=-]{1,20}`, range and interval against lists). The calls follow the
+    Hermes convention (Qwen2.5/3 and most open models): the system prompt lists the tools of the slot's skills only
+    (`LocalTools::systemPrompt`, with today's date and the rule to never invent a figure), the model writes
+    `<tool_call>{"name", "arguments"}</tool_call>`, the app runs the calls one after the other and sends the results
+    back as `<tool_response>` in a user turn, and the model goes on: at most 6 rounds per question, and the loop
+    tells the model to answer with what it has after two rounds where every call failed, and stops after a third. **Every call is checked again** against the skills the slot
+    grants at that moment (`AiLocalView::grantedSkills` → `ModelSlotsView::mayRun`): a tool of a skill not granted,
+    or a call after the slot let the model go, is refused with "not allowed". A result is cut to 6,000 characters
+    (the oldest rows go, and it says so) and gives the latest point apart, which a small model reads more reliably
+    than the end of a list. Bad arguments come back as an error naming the right values, and the model corrects
+    itself (seen: `eurostat`/`cpi_yoy` → told the series are `hicp_yoy`…, then asked `imf_cpi`). The transcript shows
+    each call (⚙ name, arguments, size of the data or the error) and hides the raw `<tool_call>` text.
+  - **Trade** skill (`trade`; `src/quant/ui/PanelsAgent.cpp` on the Charts side, through `qtm::App::current()`):
+    seven more tools that drive the Charts tab's panels as a click would. `backtest_help` gives the strategy JSON
+    format (the one documented in `core/Backtest.cpp`), the operators, the price fields, every indicator on one line
+    (`macd(fast=12, slow=26, signal=9) → macd|signal|hist`, ~5.6 kB in all), the five `exampleStrategies()` and the
+    names of the user's saved strategies. `run_backtest` (a strategy object, or an example's or a saved strategy's
+    name; symbol and timeframe optional) checks the rules (operators, operands declared, indicator ids), loads the
+    strategy into the tester (`applyStrategy`, named "AI · …"), opens the tester tab and runs it on the active chart:
+    when another symbol or timeframe is asked, the active chart switches first (refused during a bar replay) and the
+    run waits for that load (`App::paneLoadedListeners`, matched by the pane's load token since the provider may
+    rewrite the symbol, BTCUSDT → BINANCE:BTCUSDT; failures are reported, 30 s at most). The result (stats, the last
+    8 trades) comes back when the tester has shown it (`testerWaiters`), with the marks on the chart.
+    `backtest_trades_csv` writes the tester's CSV export (`tradesCsv`) to `<app data>/ai/exports/<symbol>-<tf>-trades.csv`
+    and returns its header, the latest trades that fit, and a summary computed over every trade (wins, losses,
+    average win and loss, best, worst; a 6B model miscounted from a truncated CSV). `paper_account` reads the
+    **live** paper account (cash, equity, positions with live or average prices, working orders and their ids, the
+    last 10 fills). `paper_order` (symbol, side, market/limit/stop, amount in the account's currency, price, optional
+    stop loss / take profit %) goes through `placePaperOrder`, the order ticket's own code (the Buy and Sell buttons
+    now call it too), so fills, brackets, fees and the panel behave the same; the fill is noted "local model" in the
+    history, and the answer spells out what was done ("bought 0.0129 units of … worth 1000"). `paper_close` and
+    `paper_cancel` match the panel's Close and Cancel buttons. Limits (the user's choices, 3 November 2026): the
+    model trades the live paper account only (refused while the active chart is in bar replay, whose practice
+    account the ticket would use), no order above the account's equity, at most 5 orders, closes or cancels per
+    question (`LocalTools::MaxOrders`, counted in `AiLocalView`), and the system prompt tells it to trade only when
+    asked. Paper trading is simulated; the PTQ connector (real execution) has no tool. Checked on 3 November 2026
+    with Qwen3-6B, context 16,384: "backtest EMA cross (9/21) on BINANCE:BTCUSDT 1h, read the CSV, buy 1000 at market"
+    → `backtest_help`, `run_backtest` (1.8 s, 3,000 bars, chart switched), `backtest_trades_csv`, `paper_account`,
+    `paper_order` (filled at 77,356.5), and a correct summary; the user's chart and paper account were restored after.
+    The skill's tools take about 10,000 tokens of context in such a turn: 16,384 is the size to pick.
+  - **Journal** (`src/ToolJournal.*`): every call, run, refused or failed, one JSON line in
+    `<app data>/ai/tool-journal.jsonl` (time, model, slot, tool, arguments, outcome, the error or the start of the
+    result, characters returned, ms), rotated at 2 MB (`.1` kept); the last 200 are shown under the conversation,
+    newest first, with **Show the file**. Checked on 3 November 2026 with Qwen3-6B: "the latest inflation in France and
+    the ECB rate" → `list_data`, a wrong series corrected, `country_series(imf_cpi, cpi_yoy, FRA)`,
+    `policy_rate(EA)`, then a sourced answer; "SPY over a year" → `prices` (150 ms), +10.06 %; with the skill unticked,
+    a forced `list_data` call was refused and logged.
+- **Models › Integration**, Claude (`src/ClaudeClient.*`): the settings of Claude through the Messages API
+  (`api.anthropic.com/v1/messages`, API version `2026-10-21`, raw HTTP since there is no C++ SDK): the model
+  (`ai/model`; the API's list when a key is set, else Opus 5.5, Sonnet 5.5, Haiku 5.5, Fable 5.1; `claude-opus-5-5` by
+  default) and the effort (`ai/effort`, `output_config.effort`, `medium` by default), with the key state. The
+  conversation with Claude was removed from the app (2026-11, the user's choice); `ClaudeClient` still streams
+  requests (server-sent events, adaptive thinking, `fallbacks: "default"` with the `server-side-fallback-2026-07-01`
+  beta header on the models that take it) for a later use. The slots stay under both parts of Models. Claude can be
+  dragged into a slot and the slot's skills ticked, but nothing in the app calls it yet: its card says so, it reads
+  nothing, and its links on the Sources underground floor are dashed (granted, not in force).
+- **Models › Integration**, opencode (`src/McpServer.*`, `src/AiOpencodeView.*`): [opencode](https://opencode.ai), the
+  terminal AI agent, reads Deepwater's data through MCP. While the app is open and **Serve Deepwater's tools to
+  opencode** is ticked (`ai/opencodeServe`, off by default), `McpServer` listens on `http://127.0.0.1:47821/mcp`
+  (`ai/opencodePort`) and speaks MCP over Streamable HTTP: one JSON-RPC message per POST, answered in JSON (no SSE
+  stream, GET is 405), `initialize` (revisions 2024-11-05 to 2025-11-25), `tools/list`, `tools/call`, `ping`. The tools
+  are `LocalTools`' own, granted by the slot opencode is dragged into (**opencode** chip of this view → a slot; the
+  slot's skills, none outside a slot, `McpServer::skills` reads `ai/slots`) and checked again at each call; at most 5 paper orders per MCP session. Every call goes to
+  the tool journal (model `opencode`, shown in the Slot column of AI › Local). Requests need the token
+  (`Authorization: Bearer`, `ai/opencodeToken`, 32 random bytes made at the first launch, **New token** replaces it), a
+  `Host` of 127.0.0.1 or localhost on that port and no foreign `Origin`, so a web page can't reach it through the
+  browser. **Add to opencode** runs `opencode mcp add deepwater --global --url … --header Authorization=Bearer …`
+  (opencode writes its own config, `~/.config/opencode/opencode.json`, under `mcp.servers`) then `opencode reload`;
+  the view reads that file back (JSON or JSONC) to say whether Deepwater is there with this address and token
+  (else **Update opencode**). **Copy the configuration** gives the JSON for a hand edit. opencode is looked for on the
+  PATH, then in `~/.opencode/bin`, `/opt/homebrew/bin`, `/usr/local/bin`, `~/.local/bin`, `~/.bun/bin`. What the
+  tools return goes to the model opencode uses, usually at a provider. Checked on 3 November 2026 with curl against
+  the running app: 401 without a token, 403 with a wrong one, a foreign Origin or Host, `tools/list` of the 8
+  `read_data` tools, `list_data` and `fx_rate` run, `paper_account` refused, two pipelined requests on one connection.
+  Checked on 4 November 2026, with drop events sent to the slots: no tool outside a slot or in a slot with nothing
+  ticked, the 8 `read_data` tools once ticked, none again when moved to a slot with nothing ticked.
 
 - **Machine learning** (`src/AiMlView.*`, `src/MlEnvironment.*`, `src/MlData.*`, scripts in `resources/ml/`): training
   classical models on Deepwater's data from the app.
@@ -1178,7 +1462,9 @@ The **AI** tab has two sections (the one shown is remembered, `ai/section`). Key
   - **Data**: `Export Deepwater's data` writes CSV files to `ml/data/`: `country_series.csv` (long form: source, iso3,
     series, time, value, for every `CountrySeriesSet`: OECD, Eurostat, IMF CPI, BLS, national offices, keyed sources,
     surveys, BIS property and credit, OECD housing, IMF debt, World Bank credit), `weo.csv`, `policy_rates.csv`,
-    `fx_daily.csv`, `cot_legacy.csv`, and `prices_<symbol>.csv` (ten years of daily candles from Yahoo through the
+    `fx_daily.csv`, `cot_legacy.csv`, `golden_series.csv` (the golden records of data fusion saved so far, those
+    fused from two sources or more: iso3, indicator, frequency, date, time, value, source, rebased, unchecked), and
+    `prices_<symbol>.csv` (ten years of daily candles from Yahoo through the
     Research client) for the symbols in `ml/symbols` (SPY, QQQ, GLD, USO, TLT, ^VIX, EURUSD=X, BTC-USD by default).
   - **Training** (`train.py`): framework (scikit-learn: random forest, gradient boosting, ridge / logistic; LightGBM;
     XGBoost; PyTorch: a multi-layer perceptron on standardised inputs, Adam, early stopping, MPS when available),
@@ -1212,6 +1498,96 @@ replaces the former Settings › Data sources page), the Charts page's own Alpac
 `quant-terminal/data/feeds.json` (mode 0600), and the free keys of FRED, EIA, BEA, Banxico, the Bank of Korea, the
 Turkish central bank and UN Comtrade, kept in the settings (`keys/<id>`); a keyed source without a key says so and
 makes no request. The survey publishers' rows only carry a switch: off, their figures leave the country sheets. The states refresh once a second, and only while the tab is shown.
+
+Two sub-tabs (`sources/tab`): **List** (the above) and **Data**, a diagram of where the data goes. On the left the
+bodies and companies the app reads (about 64), grouped: international bodies, US agencies, national offices and
+central banks, markets and data companies, web, news and AI, this computer; on the right the parts of the app (the
+map's ships, supply chains, commodities, heatmaps and country sheets, trade flows; Overview; Forex; the Calendar's
+three views; Economy's dashboards, Countries and Indicators; Research; Quant; Charts; News; AI). A link for each
+(source, part) pair, as thick as the data sets it carries; dots and links take the list's states (working, failing,
+not checked yet, dashed when off). Hovering a source, a part or a link brings its data out and lists its data sets
+in the side card; a click pins it, and **Show in the list** opens the List with only those data sets (a chip clears
+the filter). Below the sources, **Listed, not read by the app**: the official catalogue's bodies (Statistical
+offices, Central banks, Ministries and agencies, International organisations, Private institutes, about 1,400 in
+all) whose site the app doesn't read — a body counts as read when its site's domain (`bcb.gov.br`, `ecb.europa.eu`)
+is one a row reads from. Hollow dots, no links; the side card gives their access (free, headline, paid), how many
+answered the last check, and their names by country (those of more than ten countries together), and **Show in the
+list** opens that section of the catalogue with every access. The diagram is built from the List's rows and a table in `src/SourceFlow.cpp` that says which bodies
+are behind each row and which parts it feeds; a row added to the list without an entry there is still drawn, from
+its provider line and its section. `deepwater --sources-tab 1` opens the diagram (screenshots).
+
+Two buttons under the sources' states show the whole diagram at once (one at a time; from one to the other the
+diagram goes back to its columns first). **Zoom out: disc** lays it out on a flat disc: in 0.7 s each row
+leaves its column for its place on the disc (the sources along its left arc, the parts of the app along its right
+one, up to 77° each side of the middle, in the same order; every row and heading turned outward along the radius),
+the links bend through the disc's middle, the Fusion block sits on the way to the parts it feeds, the columns'
+rectangle rounds into the disc, and the whole tilts into an isometric view (turned 45°, half as high: an ellipse
+with no corners to fill), every element at the same level, a soft shadow under the disc (`Canvas::relayout` works
+out each row's move and turn, `Canvas::place` the links, `Canvas::projection` the view). Hovering and clicking
+still work (the mouse is mapped back through the projection and each row's move) and the side card follows; **Zoom
+in** goes back to the columns where they were scrolled.
+
+Under the disc, the **underground floor** (disc view only): the AIs of the app and what each can reach of the data.
+On its right the AIs: each slot holding a model (or a single "Local models" row when none does), opencode (MCP), Claude
+(Anthropic API), each named with its slot when it sits in one, Machine learning. On its left what they reach: country series, tables and charts, golden records, IMF WEO, policy rates,
+exchange rates, COT positions, prices (skill *Read Deepwater's data*), the strategy tester and the paper account
+(skill *Trade*), the page in view (the context line of the AI side panel, no skill needed; models in a slot and opencode). A link
+for each access, dashed when it's granted but not in force (a slot suspended because its model's files changed,
+opencode neither in a slot nor served); shafts rise from the left rows to what they read on the disc above: the sources of their
+rows, the Fusion block, the Charts part. Claude has dashed links at most, those of its slot: the app only checks its key and lists its models, nothing
+calls `ClaudeClient::send`. Machine learning reaches what `MlDataExporter` writes as CSV, not the tools. Hovering or
+clicking an AI, an access or a link follows it up the shafts and lists it in the side card (**Show in the list** gives
+its data sets); hovering a source, the Fusion block or the Charts part lights the AIs that reach it, and its card gets
+a *Reached by the AIs* group. Built each second by `sourceflow::readAis` (slots, by sizes and dates of the model's files;
+`McpServer`) and `addUnderground`, from `LocalTools::tools()` and the `AccessDefs` table in `src/SourceFlow.cpp`: a new
+tool without an entry there is still drawn, on a row of its own, without shafts. `deepwater --sources-disc [floor:1|ai:0|access:2|open:source:3]`
+opens this view, with that item pinned or looked at closely (screenshots).
+
+**A click on an item of the disc** (a source, a group of the catalogue, the Fusion block, a part, an access, an AI; a link stays pinned as before) looks at it closely: it rises from its place as a card, the camera comes close and the disc fades behind, with on its left what it comes from (a source: its data sets) and on its right what it goes to, each row linked to the card and, when it's an item, a click away (across the floors if it must). The **left and right arrows** go to the previous and the next item in the order of the floor, around it; **Escape** or a click beside goes back to the disc, on the floor of the last item. The side card follows. The disc is drawn once into an image the camera moves over (`Canvas::paintInspect`), so the frames stay cheap: 5.3 ms on average measured on 4 November 2026, 70 ms for the sharp image each item starts with. Escape is a window shortcut (`MainWindow`): the canvas claims it with `ShortcutOverride` while an item is open.
+
+The disc view has a focus, one floor at a time, and a camera that goes to it: the **up and down arrows** move it from the
+ground floor (the disc) to the underground and back in 0.52 s (`Canvas::setFloor`; the canvas takes the keyboard focus
+when the view opens, and the scroll areas pass theirs on to it). Each floor then has the view to itself: the disc at the
+scale it has alone (0.79 at 1362×703), the underground filling the view with its rows spread out, in larger type and
+with a second line (`Canvas::computeFloors`: the sources or data of an access, the kind and accesses of an AI). The
+floors stay where they are, one above the other, the lower one starting a quarter of its height up under the disc:
+only the camera moves (`Canvas::underShift`, `Canvas::projection`), so the other floor shows past the edge of the view,
+faded to 30 % and leaving the mouse alone. The floor in focus gets a coloured rim with a soft glow. An item being followed
+draws both floors at full strength, and the shafts (a bundle down the inside of the floor, out to each dot from its inner
+side, so they cross no name) run off the view towards the other floor; since its far end is then
+out of view, the cards say it: *Reached by the AIs* on a source, the Fusion block or the Charts part, *Where it comes
+from* on an AI. Changing floor drops the pinned item, and the side card follows the floor (on the underground, the AIs
+with the number of accesses of each). A small rectangle of the floor's colour at the bottom left of the view says where
+you are, violet (the theme's accent) for **Ground floor · Data** and green (its "up" colour) for **Underground · AIs**,
+with the arrow that leaves it beside it. Leaving the disc view brings the camera back to the ground floor.
+`--sources-disc floor:1` opens the view on the underground.
+
+**Zoom out: plates** stands it on thin plates one behind the other in isometric view: in front the sources (their
+rows, headings and the catalogue's kinds filled into columns of up to 24 rows), in the middle the fusion with its
+block (sized to where the links go through it), at the back the parts of the app (columns of up to 14); every row is
+laid on its plate (`Canvas::computePlates`: a transform per row, from its anchor to its cell), the links leave the
+plates square to them and are cut where they go through the middle plate, so the plates, a little see-through, are
+drawn between their halves (back plate, far halves, middle plate and block, near halves, front plate). Each row moves
+from the columns by mixing its transform coefficient by coefficient (`Canvas::rowMatrix`).
+The overviews follow the view when the window is resized. While it moves, each frame is drawn at one pixel per point
+(a quarter of a Retina screen's pixels) and shown scaled up, the links as one-pixel lines and the labels from a cache
+of small images (turned text is drawn glyph by glyph as paths): about 6 ms a frame, 60 frames a second, against
+45 ms drawn sharp; at rest it is drawn sharp. The links' mouse bands are stroked only when the mouse needs them.
+
+## Help
+
+The `?` icon between `</>` and the gear (also `F1` and the platform's help shortcut, `Cmd+?` on macOS) opens the
+documentation in a floating, resizable window (`src/HelpWindow.*`): a sidebar of chapters, the chapter's text, and a
+search box that keeps the chapters mentioning the words, jumps to the first match and goes to the next on Enter. It
+opens on the chapter of the page shown (the page ids are chapter ids); `help:<id>` links jump between chapters, other
+links open in the browser. The chapters are Markdown files compiled in as resources, `resources/help/<lang>/<id>.md`
+(`en` and `fr`, 14 each: the pages, plus `start`, `devtools` and `data`), picked by the UI language and reloaded when it
+changes; the first line `# Title` names the chapter in the sidebar, and a chapter missing in a language falls back to
+English. The text is user-facing (what a page shows, how to use it, where its data comes from, what is estimated),
+written from this README's sections: keep both current when a page changes. Qt's Markdown importer sets no colours,
+so headings, code, tables and links take the theme's after the document is built (`HelpWindow::styleDocument`); the
+sidebar wears the settings window's object names, so the style sheet dresses both the same. The window's size is
+remembered (`help/size`). `deepwater --help-page [chapter] --delay 3000 --screenshot out.png` shoots it.
 
 ## Developer tools
 
@@ -1248,12 +1624,27 @@ selection, a second `Esc` turns the indicator heatmap off.
 
 | Path | What |
 |---|---|
-| `src/HeaderBar.*` | Top bar: brand, navigation tabs (a tab added since the saved order takes its default place), UTC clock, developer tools and settings icons |
+| `src/HeaderBar.*` | Top bar: brand, navigation tabs (a tab added since the saved order takes its default place), UTC clock, developer tools, help and settings icons |
 | `src/MainWindow.*` | Page stack; `addPage(id, label, widget)` registers a new nav tab + page, `addPage(id, label, factory)` one built the first time it is shown (Overview, Forex, Calendar, News, Research, Quant, AI and Sources are; the map and Charts are built at launch, Charts because it plays the alerts) |
 | `src/SettingsDialog.*` | Floating settings window (gear icon): language, theme |
-| `src/DevTools.*` | Developer tools: the flap on the right edge and the full-width tabbed panel it opens (`DevToolsDock`) |
+| `src/HelpWindow.*`, `resources/help/<lang>/*.md` | The documentation window (? icon, F1): chapters in Markdown per language, search, theme colours applied to the document |
+| `src/DevTools.*` | Developer tools: the flap on the right edge (`SideFlap`) and the full-width tabbed panel it opens (`DevToolsDock`) |
 | `src/CodeGraphView.*` | The Codebase tab: `codegraph::load` (graph.json and graph.html's nodes and edges), `GraphCanvas` (graph.html in 3D: ForceAtlas2 layout, vis-style dots, labels and dashed links, cached scene, orbit, hover, filter) and `CodeGraphView` (communities ↔ one community's nodes, status, file watcher) |
-| `src/SourcesPage.*` | The Sources tab: every data source, its state, test / refresh, on/off switches and API keys |
+| `src/SourcesPage.*` | The Sources tab: every data source, its state, test / refresh, on/off switches and API keys; sub-tabs List and Data |
+| `src/ModelSlots.*` | AI › Models › Slots: the four slots a local model or an integration is dragged into, the skills each grants (`ai/slots`) |
+| `src/LocalEngine.*` | The local engine: runs `deepwater-llm` for one GGUF model in a Seatbelt sandbox written for it, JSON lines in and out |
+| `src/AiLocalView.*` | AI › Local: the engine's controls, the conversation (a view of `LocalChat`) and the journal table |
+| `src/LocalChat.*` | The conversation with a model of the slots shared by AI › Local and the side panel: engine, messages, tool-call rounds, journal; `ChatTranscript` draws it |
+| `src/AiRead.*` | What the `read_page` tool reads: a page as data, from its table models, the text its widgets draw and its charts' values |
+| `src/OpencodeRun.*` | opencode as the model of that conversation: `opencode run --standalone` with its own tools denied, the same session from one message to the next |
+| `src/AiDock.*` | The AI side panel: a flap on the right edge, a panel to ask a model of the slots from any page with a context line |
+| `src/SideFlap.*` | The flap that opens a side panel (DEV, AI) and the panels' close button |
+| `src/LocalTools.*` | The tools a local model may call, by skill (`read_data`: country series, WEO, policy rates, FX, COT, prices; `trade`: tester and paper account), Hermes-format prompt and parsing, checks at every call, order cap |
+| `src/ToolJournal.*` | The journal of the local models' tool calls (`ai/tool-journal.jsonl`) |
+| `src/McpServer.*` | Deepwater's tools served to opencode over MCP (Streamable HTTP on 127.0.0.1, token, skills checked per call, journal) |
+| `src/AiOpencodeView.*` | AI › Models › Integration › opencode: detection, serving on/off, its chip for the slots, registration in opencode's config |
+| `src/llm/deepwater-llm.cpp` | The helper process: llama.cpp (Metal) behind JSON lines on stdin/stdout, prompt cache kept between turns |
+| `src/SourceFlow.*` | Sources › Data: the diagram of sources → parts of the app (`sourceflow::build` from the list's rows and the row → bodies / parts table, plus the catalogue's unread bodies by kind; the AIs and what they reach, `readAis` and `AccessDefs`; the painted `Canvas`, `SourceFlowView` with its side card) |
 | `src/CalendarData.*` | Calendar data: economic releases (TradingView), US corporate events (Nasdaq), exchange sessions (Yahoo); the economic and corporate calendars are parsed (and the corporate one's answers joined) on the thread pool when they arrive |
 | `src/CalendarPage.*` | The Calendar tab: sub-header, Economic, Corporate and Market hours views |
 | `src/ResearchData.*` | Research data: the cached on-demand client (Yahoo session and crumb, Nasdaq, SEC, Wikipedia, Wikidata), SEC XBRL reduction, statement layouts, valuation and grades, formatting |
@@ -1265,11 +1656,14 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/EconomyPage.*` | The Economy tab: sub-header, panels, area charts with ranges, zones and hover, Fear & Greed dials |
 | `src/CountryData.*` | Economy › Countries: the catalogue (`resources/country_indicators.json`), providers (FRED, World Bank, IMF, OECD, Eurostat, BIS, Yahoo, EIA, surveys), parsing, transformations, the per-country loader |
 | `src/CountriesView.*` | Economy › Countries: the list of countries by group with search, the country page with its tabs and tables, CSV export |
+| `src/IndicatorData.*` | Economy › Indicators: the list (`resources/indicator_list.json`), one indicator's loader for every country (a CountryLoader each, sharing `CrossCountry`), next releases from TradingView's calendar |
+| `src/IndicatorsView.*` | Economy › Indicators: the list of indicators by section with search, an indicator's table of countries by region, sortable, CSV export |
 | `src/NewsData.*` | News data: `news::Wire` (Financial Modeling Prep with a key, else the free RSS feeds merged; five-minute cache; the Sources page's state per provider), the RSS / Atom parser, the ticker guess and `news::Favorites` (the starred articles, `news-favorites.json`) |
 | `src/NewsPage.*` | The News tab: categories and ticker filter, the "News wire" strip, the painted cards (`newsui::Card`, with their favorites star) and their grid (`newsui::Grid`, as many columns as 420 px fit) |
 | `src/NewsReader.*` | The article reader (`newsui::Reader`): the floating panel over the News page with the article's web page, back, the favorites star, open in the browser, close, the ad blocker's shield and the HTTP-refusal notice |
 | `src/NewsWebHost.*`, `src/NewsWebHostQt.cpp`, `src/NewsWebHostMac.mm` | The reader's web view behind one interface (`newsui::WebHost`): the system's WebKit on macOS (WKWebView in a native child widget, Brave's lists as compiled WebKit content rules, snapshots for `--screenshot`), Qt WebEngine elsewhere (own profile, request interceptor, injected cosmetic rules) |
 | `src/AdBlock.*` | The reader's ad blocker: `adblock::Blocker` (Brave's default filter lists downloaded daily, the adblock-rust engine built on the thread pool, request checks from the IO thread, cosmetic rules) and `adblock::Interceptor` (the profile's request interceptor) |
+| `third_party/llama.cpp/` | llama.cpp b12070 (MIT): only what libllama needs, unchanged (`VERSION` names the tag) |
 | `third_party/adblock-ffi/` | A Rust crate (`staticlib`) exposing Brave's `adblock` crate as a C ABI (`include/adblock_ffi.h`): build, check a request, cosmetic resources, hidden selectors, (de)serialization; built by cargo from CMake |
 | `src/QuantPage.*`, `src/QuantViews.h`, `src/Quant{Compare,Pair,Cot,Signals}View*.cpp` | The Quant tab: sub-header and its five sections (compare, correlation, risk & beta, COT, signals) |
 | `src/QuantCharts.*` | Quant charts (QPainter): multi-line with end labels, dual-axis overlay, spread and band, z-score, scatter with regression and marginal histograms, long/short bars, step chart; the multi-line chart keeps everything but the hover crosshair and tooltip as an image, redrawn when its data, size or theme change |
@@ -1279,7 +1673,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/QuantMarketState.*` | The regime (with its chain) and volatility forecast per symbol and source published by the Markov views, the background refresher, and the strip the other tabs show (`MarketState`, `StateRefresher`, `MarketStateStrip`) |
 | `src/QuantMarkovJobs.*` | The HMM and MS-GARCH estimations as functions of prices and a spec, shared by the views, the refresher and the execution view |
 | `src/QuantPortfolioView.cpp` | The Portfolio tab: positions, parametric risk, regimes |
-| `src/AiPage.*` | The AI tab: Models (Hub search, files, downloads, the models on this computer) and Claude (the conversation) |
+| `src/AiPage.*` | The AI tab: Models › Local models (Hub search, files, downloads, the models on this computer) and Integration (the Claude model and effort, opencode over MCP), the slots under both, Local, Machine learning |
 | `src/AiModels.*` | `HuggingFaceHub` (search, files, resumable downloads) and `LocalModels` (the models folder) |
 | `src/ClaudeClient.*` | The Messages API client: streamed requests, the models list |
 | `src/AiMlView.*` | The Machine learning section: environment, data export, training form, metrics, runs |
@@ -1287,9 +1681,13 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/MlData.*` | The CSV export of Deepwater's data for the scripts |
 | `resources/ml/` | `train.py` (scikit-learn, LightGBM, XGBoost, PyTorch) and `check_env.py`, copied into the environment |
 | `src/markov/` | The Markov engine, no UI: `LinAlg` (small dense matrices, Cholesky), `Dist` (normal and Student densities, quantiles, partial expectations), `Optim` (Nelder-Mead, BFGS), `Hmm` (Gaussian HMM: EM, filter, smooth, Viterbi, criteria), `MsGarch` (GARCH and MS-GARCH: Hamilton filter, MLE, forecast, VaR/ES), `Execution` (Almgren-Chriss, MDP policy, TWAP/VWAP schedules, volume profiles, square-root impact, Q-learning agent, path simulator and Monte Carlo), `Simulate` (synthetic samples), `Job.h` (progress and cancel contract) |
+| `src/fusion/` | Data fusion, no UI: several sources of one indicator (a row of `country_indicators.json`) made into golden records, one per frequency: units read (magnitude, currency, price year), sources normalised (one point per period, on its first day), compared on their common periods (same, rebased by a steady ratio, distinct, unverified, incompatible units), merged in priority order (the catalogue's) with every point's source, the spliced ones marked and the disagreements kept as conflicts. Tested by `tests/quant/fusion` |
 | `tests/quant/markov/` | `qtm_test_markov [hmm|garch|execution]`: parameter recovery on simulated data (HMM, GARCH, MS-GARCH, Student), optimiser and distribution checks, the MDP against Almgren-Chriss and the Monte Carlo against the analytic costs, volume profiles, square-root impact and the Q-learning agent, stability (long series, extreme scales, missing steps, outliers), cancellation, timings |
 | `tests/quant/footprint/` | `qtm_test_footprint`: the footprint aggregation on hand-made trades worked out by hand (sides from the feed, quotes and tick rule, ticks and rows, delta, POC and ties, diagonal imbalances at the candle's edges and around empty rows, minimum volume and its Auto, stacked imbalances, regrouping, incremental vs rebuilt, trimming) |
 | `tests/quant/bigtrades/` | `qtm_test_bigtrades`: Big Trades on hand-made trades worked out by hand (aggregation window from the first trade, side changes, same price vs sweep VWAP and min/max, exact timestamp, flush, tick-rule fallback, rolling percentile against a full sort and its speed, minute ATR and the bounded factor, manual min/max with max = 0, auto percentile, warm-up fallback, bubble sizes and opacity) |
+| `tests/quant/tradestream/` | `qtm_test_tradestream`: the Binance trades the panes share (`server/TradeStream`) and each pane's side of them (`ui/TradeFeed`) on a fake source: history newest first to the budget, live trades, a missed one fetched from REST, a second pane on the same stream (one socket, no second history), a larger budget going further back, a recent first bar, pauses of every pane or of one, budget trims (whole candles, the tape always holding every pane's trades), the chart dropping old bars, a gap longer than the budget starting over, binance.us, failed requests, the last pane closing the stream; each pane's footprint against its trades rebuilt at once |
+| `tests/quant/depthstream/` | `qtm_test_depthstream`: the order book depth the panes share (`server/DepthStream`) and each pane's side of it (`ui/DepthFeed`) on a fake source answering on the stream's thread, a book update every 50 ms of real time: two panes on one pair (one configuration, one socket, the same samples, a display each), one recorder and one file, another interval (its own sampler and store, the same socket), a pane joining late (the samples at once; its stability filter built at once = built bit by bit), every pane paused (socket closed, samples kept) and back, the last pane closing the stream, a pane starting in replay (the recordings read back, no socket) |
+| `tests/quant/klinestream/` | `qtm_test_klinestream`: the live candles the panes share (`server/KlineStream`) on a fake source: the timeframe → Binance interval mapping, two panes on one pair and timeframe (one socket, both hear each bar), another timeframe (its own stream), a dropped connection opened again, no host at all (the panes poll) and a pane joining then trying again, the last pane closing the stream |
 | `tests/quant/heatmap/` | `qtm_test_heatmap [load]`: the liquidity heatmap's data on hand-made depth updates worked out by hand (levels added, changed, removed; buffering before the snapshot, stale updates, holes and resync, a snapshot older than the stream, futures `pu`, crossed books, trimming far levels; 16-bit codes; sampling at fixed times before an update, repeated columns without updates, holes while unsynced, catch-up cap, rows shared by bids and asks, the band's anchor; the column ring, resizing; the time pyramid (max, mean over the samples present, a band moving inside a bucket, nesting, bounded levels); row grouping over negative rows; percentile, gain, contrast, threshold, colour table; palettes: background at 0, brightness steadily up on dark backgrounds and down on light ones, a stop worked out by hand, Custom's three colours; the stability filter over a moved band and a hole; pulled liquidity (reached, filled instead, never reached, too far, back again, an ask, too small); absorbed (held, broken through, too little traded, another tick, buys at a bid, too short, an ask); filling the store in steps; recordings: exact round trip, a file cut short or damaged, other versions, a session recorded then replayed column for column), then a minute at 1,000 updates a second (book against a reference copy, bounded memory, flat time per update) |
 | `tests/quant/navigator/` | `qtm_test_navigator`: the range slider. `core/RangeSlider` on hand-worked cases (span, hit zones of wide, narrow and sub-pixel windows, clip, bounds, the two-bar rule, pans, resizes, clicks outside, frozen pans, ranges past the data) and 100,000 random gestures (1.9 million moves) against its invariants; then `ChartNavigator` on a real chart, offscreen, with real mouse events: pans and resizes, bursts faster than the chart's frames, drags out of the strip, wheel and chart drags followed, live bars at and away from the end, new data, a compared series adding times (indexes and the line), no data, one bar, the line's cache, resizing, cursors, the chart going away; `BarAxis` (bars at their own chart index with a compared symbol going further back or sitting between the bars, a time inside its slot) |
 | `src/Theme.*` | Palettes (Ember, Abyss, Jade, Oxide, Nova, Bloomberg; Glacier, Dune and Sakura — light); `resources/style.qss` is a template using `@Token` colors; `Theme::installedFamilies` keeps only installed fonts in a font list (`@MonoFamilies` in the stylesheet), since Qt spends tens of milliseconds the first time it is asked for a missing one |

@@ -243,6 +243,8 @@ void CountryPage::updateRow(const QString &id)
             QString tip = row.source + (row.code.isEmpty() ? QString() : " · " + row.code);
             if (!row.note.isEmpty())
                 tip += "\n" + text(row.note);
+            if (const QString fusion = CountryLoader::fusionTip(row); !fusion.isEmpty())
+                tip += "\n\n" + fusion;
             if (row.latestOnly)
                 tip += "\n" + tr("This source gives the latest and previous values only: no history for the highest "
                                  "and lowest.");
@@ -443,4 +445,18 @@ void CountriesView::showList()
         m_stack->removeWidget(m_page);
         m_page->deleteLater();
     }
+}
+
+QString CountryPage::aiContext() const
+{
+    const int tab = m_tabs->checkedId();
+    const QVector<TabDef> &tabs = catalogue().tabs;
+    QString s = QStringLiteral("%1 (%2)").arg(countryName(m_iso3), m_iso3);
+    if (tab >= 0 && tab < tabs.size()) s += ", " + text(tabs[tab].name);
+    return s;
+}
+
+QString CountriesView::aiContext() const
+{
+    return m_page && m_stack->currentWidget() == m_page ? m_page->aiContext() : QString();
 }

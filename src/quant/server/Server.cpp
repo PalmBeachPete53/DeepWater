@@ -19,6 +19,9 @@
 #include "Providers.h"
 #include "Ptq.h"
 #include "Store.h"
+#include "DepthStream.h"
+#include "KlineStream.h"
+#include "TradeStream.h"
 
 #include <QAtomicPointer>
 #include <QDir>
@@ -47,6 +50,9 @@ struct Backend::Private {
     Alerts alerts;
     Ptq ptq;
     HttpApi *http = nullptr;
+    std::unique_ptr<TradeStreams> tradeStreams;   // on the UI thread; made on first use
+    std::unique_ptr<DepthStreams> depthStreams;   // the same
+    std::unique_ptr<KlineStreams> klineStreams;   // the same
 
     QMutex customMutex;                 // custom/ file writes and customErrors
     QHash<QString, QString> customErrors;
@@ -218,6 +224,9 @@ Backend::~Backend()
     // mirror request, an alert check) ends before our members go.
     s_instance.testAndSetRelease(this, nullptr);
     if (d->alertTimer) d->alertTimer->stop();
+    d->tradeStreams.reset();   // their sockets close; REST calls on the way finish below, their answers dropped
+    d->depthStreams.reset();   // each joins its thread
+    d->klineStreams.reset();
     http::abortAll(true);
     async::requestPool()->waitForDone();
     async::pool()->waitForDone();
@@ -328,6 +337,25 @@ void Backend::start()
 double Backend::binanceTickSize(const QString &ticker)
 {
     return d->data.binanceTickSize(ticker);
+}
+
+KlineStreams *Backend::klineStreams()
+{
+    if (!d->klineStreams) d->klineStreams = std::make_unique<KlineStreams>(std::make_shared<BinanceKlineSource>());
+    return d->klineStreams.get();
+}
+
+DepthStreams *Backend::depthStreams()
+{
+    if (!d->depthStreams)
+        d->depthStreams = std::make_unique<DepthStreams>(std::make_shared<BinanceDepthSource>(this), d->dataDir);
+    return d->depthStreams.get();
+}
+
+TradeStreams *Backend::tradeStreams()
+{
+    if (!d->tradeStreams) d->tradeStreams = std::make_unique<TradeStreams>(std::make_shared<BinanceTradeSource>(this));
+    return d->tradeStreams.get();
 }
 
 QJsonArray Backend::binanceAggTrades(const QString &ticker, qint64 fromId, int limit, bool *us)

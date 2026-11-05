@@ -1402,4 +1402,86 @@ void StackedAreaChart::paint(QPainter &p, const QRectF &plot)
     }
 }
 
+namespace {
+QStringList isoDates(const QVector<QDate> &dates)
+{
+    QStringList out;
+    for (const QDate &d : dates) out << d.toString(Qt::ISODate);
+    return out;
+}
+} // namespace
+
+QString Chart::aiTitle() const
+{
+    QStringList parts;
+    for (const TitlePart &t : m_title) parts << t.text;
+    return parts.join(' ').trimmed();
+}
+
+QString Chart::aiRead() const
+{
+    return {};   // a chart with no values of its own to give: what it draws
+}
+
+QString MultiLineChart::aiRead() const
+{
+    const QStringList labels = m_xLabels.isEmpty() ? isoDates(m_dates) : m_xLabels;
+    QStringList out {aiTitle()};
+    for (const Line &l : m_lines)
+        if (const QString line = aiSeries(l.name, labels, l.values); !line.isEmpty()) out << line;
+    return out.join('\n').trimmed();
+}
+
+QString OverlayChart::aiRead() const
+{
+    const QStringList labels = isoDates(m_dates);
+    return QStringList {aiTitle(), aiSeries(m_nameA, labels, m_a), aiSeries(m_nameB, labels, m_b)}.join('\n').trimmed();
+}
+
+QString SpreadChart::aiRead() const
+{
+    const QStringList labels = isoDates(m_dates);
+    return QStringList {aiTitle(), aiSeries(QStringLiteral("Spread"), labels, m_spread), aiSeries(QStringLiteral("Mean"), labels, m_mean, 1),
+                        aiSeries(QStringLiteral("Upper band"), labels, m_upper, 1), aiSeries(QStringLiteral("Lower band"), labels, m_lower, 1)}
+        .join('\n').trimmed();
+}
+
+QString ZScoreChart::aiRead() const
+{
+    return QStringList {aiTitle(), aiSeries(QStringLiteral("Z-score"), isoDates(m_dates), m_z)}.join('\n').trimmed();
+}
+
+QString StepChart::aiRead() const
+{
+    const QStringList labels = isoDates(m_dates);
+    QStringList out {aiTitle()};
+    for (const Line &l : m_lines)
+        if (const QString line = aiSeries(l.name, labels, l.values); !line.isEmpty()) out << line;
+    return out.join('\n').trimmed();
+}
+
+QString RegimeChart::aiRead() const
+{
+    const QStringList labels = isoDates(m_dates);
+    QStringList out {aiTitle(), aiSeries(QStringLiteral("Price"), labels, m_price), aiSeries(QStringLiteral("Probability"), labels, m_probability, 6)};
+    if (!m_regime.isEmpty() && m_regime.back() >= 0 && m_regime.back() < m_labels.size()) out << "Latest regime: " + m_labels[m_regime.back()];
+    return out.join('\n').trimmed();
+}
+
+QString StackedAreaChart::aiRead() const
+{
+    const QStringList labels = isoDates(m_dates);
+    QStringList out {aiTitle()};
+    for (int k = 0; k < m_series.size(); ++k)
+        if (const QString line = aiSeries(m_labels.value(k), labels, m_series[k], 6); !line.isEmpty()) out << line;
+    return out.join('\n').trimmed();
+}
+
+QString LongShortBars::aiRead() const
+{
+    QStringList out {aiTitle()};
+    for (const Group &g : m_groups) out << QString("%1: long %2, short %3").arg(g.label, aiNumber(g.longPos), aiNumber(g.shortPos));
+    return out.join('\n').trimmed();
+}
+
 } // namespace quant

@@ -22,17 +22,17 @@
 
   "tabs": [
     {"id": "overview", "name": "Overview", "tables": [["currency", "stock_market", "gdp_growth", "gdp_annual_growth", "unemployment", "non_farm_payrolls", "inflation", "inflation_mom", "interest_rate", "balance_of_trade", "current_account", "current_account_gdp", "gov_debt_gdp", "gov_budget", "business_confidence", "manufacturing_pmi", "services_pmi", "consumer_confidence", "retail_sales_mom", "building_permits", "corporate_tax", "personal_income_tax"]]},
-    {"id": "gdp", "name": "GDP", "tables": [["gdp_growth", "gdp_annual_growth", "gdp", "gdp_constant", "gnp", "gfcf", "gdp_per_capita", "gdp_per_capita_ppp", "full_year_gdp_growth", "gdp_contrib_consumer", "gdp_contrib_exports", "gdp_contrib_government", "gdp_contrib_imports", "gdp_contrib_investment", "gdp_sales_qoq", "gdpnow", "real_consumer_spending", "weekly_economic_index", "gdp_from_agriculture", "gdp_from_industry", "gdp_from_manufacturing", "gdp_from_services"]]},
-    {"id": "labour", "name": "Labour", "tables": [["unemployment", "non_farm_payrolls", "employment_change", "unemployment_change", "gov_payrolls", "private_payrolls", "manufacturing_payrolls", "initial_claims", "continuing_claims", "adp_change", "employed_persons", "unemployed_persons", "labour_force", "average_hourly_earnings", "average_weekly_hours", "participation_rate", "long_term_unemployment", "youth_unemployment", "labour_costs", "labour_cost_growth", "productivity", "job_offers", "job_vacancy_rate", "wages", "minimum_wages", "wage_growth", "wages_manufacturing", "employment_cost_index", "population", "ahe_yoy", "construction_payrolls", "eci_benefits", "eci_wages", "federal_payrolls", "financial_payrolls", "health_payrolls", "information_payrolls", "job_layoffs", "job_quits", "job_quits_rate", "leisure_payrolls", "mining_payrolls", "productivity_qoq", "professional_payrolls", "retail_payrolls", "social_payrolls", "transport_payrolls", "u6_unemployment", "unit_labour_costs_qoq", "wholesale_payrolls", "employment_rate", "full_time_employment", "claims_4week", "part_time_employment"]]},
-    {"id": "prices", "name": "Prices", "tables": [["inflation", "inflation_mom", "cpi", "core_cpi", "core_inflation", "gdp_deflator", "producer_prices", "producer_prices_change", "export_prices", "import_prices", "food_inflation", "core_inflation_mom", "core_pce_yoy", "core_pce_mom", "core_ppi_mom", "core_ppi_yoy", "cpi_clothing", "cpi_education", "cpi_food", "cpi_recreation", "cpi_sa", "energy_inflation", "export_prices_mom", "export_prices_yoy", "import_prices_mom", "import_prices_yoy", "inflation_expectations_1y", "inflation_expectations_5y", "michigan_inflation_expectations", "pce_yoy", "pce_mom", "ppi_mom", "rent_inflation", "services_inflation", "core_pce", "core_producer_prices", "cpi_housing", "cpi_median", "cpi_transportation", "cpi_trimmed_mean", "cpi_core_core", "pce_index", "inflation_annual"]]},
-    {"id": "money", "name": "Money", "tables": [["interest_rate", "interbank_rate", "bond_10y", "money_supply_m0", "money_supply_m1", "money_supply_m2", "money_supply_m3", "money_supply_m4", "banks_balance_sheet", "central_bank_balance_sheet", "fx_reserves", "loans_private_sector", "effective_fed_funds", "reverse_repo", "reserve_balances", "sofr", "private_debt_gdp", "lending_rate", "deposit_rate", "domestic_credit_gdp"]]},
-    {"id": "trade", "name": "Trade", "tables": [["balance_of_trade", "current_account", "current_account_gdp", "exports", "imports", "external_debt", "terms_of_trade", "fdi", "gold_reserves", "crude_oil_production", "current_account_goods", "current_account_services", "foreign_treasury_holdings", "goods_trade_balance", "tourism_revenues", "tourist_arrivals", "tourist_nights", "weapons_sales"]]},
-    {"id": "government", "name": "Government", "tables": [["gov_debt_gdp", "gov_budget", "gov_budget_value", "gov_spending", "gov_revenues", "gov_debt", "fiscal_expenditure", "treasury_cash", "gov_spending_gdp", "gov_revenues_gdp", "military_expenditure", "military_expenditure_gdp"], ["corporate_tax", "personal_income_tax", "withholding_tax"]]},
-    {"id": "business", "name": "Business", "tables": [["business_confidence", "manufacturing_pmi", "services_pmi", "composite_pmi", "industrial_production", "industrial_production_mom", "manufacturing_production", "capacity_utilization", "durable_goods", "durable_goods_ex_defense", "durable_goods_ex_transport", "factory_orders_ex_transport", "factory_orders", "new_orders", "business_inventories", "changes_in_inventories", "wholesale_inventories", "corporate_profits", "cfnai", "dallas_fed", "philly_fed", "total_vehicle_sales", "car_production", "car_registrations", "composite_leading", "coincident_index", "philly_employment", "philly_new_orders", "philly_prices", "manufacturing_production_mom", "nondefense_capital_goods", "mining_production", "retail_inventories", "construction_output", "economic_sentiment", "services_sentiment"]]},
-    {"id": "consumer", "name": "Consumer", "tables": [["consumer_confidence", "retail_sales_mom", "retail_sales_ex_autos", "retail_sales_yoy", "consumer_spending", "disposable_income", "personal_spending", "personal_income", "personal_savings", "consumer_credit", "private_sector_credit", "bank_lending_rate", "real_personal_spending", "rs_building", "rs_car_dealers", "rs_clothing", "rs_electronics", "rs_food_beverage", "rs_furniture", "rs_gasoline", "rs_general_merchandise", "rs_health", "rs_misc", "rs_online", "rs_restaurants", "rs_sporting", "gasoline_prices", "households_debt_gdp", "household_saving_rate"]]},
-    {"id": "housing", "name": "Housing", "tables": [["building_permits", "housing_starts", "new_home_sales", "existing_home_sales", "construction_spending", "housing_index", "mortgage_rate", "mortgage_approvals", "mortgage_rate_15y", "average_house_prices", "building_permits_mom", "case_shiller_mom", "case_shiller_yoy", "existing_home_sales_mom", "hpi_mom", "hpi_yoy", "housing_starts_mom", "housing_starts_multi", "housing_starts_single", "new_home_sales_mom", "case_shiller", "home_ownership", "median_house_price", "residential_property_prices", "house_listings"]]},
-    {"id": "energy", "name": "Energy", "tables": [["crude_oil_stocks_change", "gasoline_stocks_change", "natural_gas_stocks_change", "spr_stocks", "distillate_stocks_change", "gasoline_production", "refinery_crude_runs", "crude_oil_imports", "crude_oil_production_weekly", "wti_price", "electricity_access", "renewable_energy_share", "renewable_electricity_share", "energy_use_per_capita", "co2_per_capita"]]},
-    {"id": "health", "name": "Health", "tables": [["hospital_beds", "medical_doctors", "nurses", "life_expectancy", "health_expenditure"]]}
+    {"id": "gdp", "name": "GDP", "tables": [["gdp_growth", "gdp_annual_growth", "gdp", "gdp_constant", "gnp", "gfcf", "gdp_per_capita", "gdp_per_capita_ppp", "full_year_gdp_growth", "gdp_contrib_consumer", "gdp_contrib_exports", "gdp_contrib_government", "gdp_contrib_imports", "gdp_contrib_investment", "gdp_sales_qoq", "gdpnow", "real_consumer_spending", "weekly_economic_index", "gdp_from_agriculture", "gdp_from_industry", "gdp_from_manufacturing", "gdp_from_services", "gdp_from_construction", "gdp_from_mining", "gdp_from_public_admin", "gdp_from_transport", "gdp_from_utilities"]]},
+    {"id": "labour", "name": "Labour", "tables": [["unemployment", "non_farm_payrolls", "employment_change", "unemployment_change", "gov_payrolls", "private_payrolls", "manufacturing_payrolls", "initial_claims", "continuing_claims", "adp_change", "employed_persons", "employment_change_yoy", "unemployed_persons", "labour_force", "average_hourly_earnings", "average_weekly_hours", "participation_rate", "long_term_unemployment", "youth_unemployment", "labour_costs", "labour_cost_growth", "productivity", "job_offers", "job_vacancy_rate", "wages", "avg_annual_wages", "gross_monthly_wages", "minimum_wages", "wage_growth", "wages_manufacturing", "employment_cost_index", "population", "retirement_age_men", "retirement_age_women", "ahe_yoy", "construction_payrolls", "eci_benefits", "eci_wages", "federal_payrolls", "financial_payrolls", "health_payrolls", "information_payrolls", "job_layoffs", "job_quits", "job_quits_rate", "leisure_payrolls", "mining_payrolls", "productivity_qoq", "professional_payrolls", "retail_payrolls", "social_payrolls", "transport_payrolls", "u6_unemployment", "unit_labour_costs_qoq", "wholesale_payrolls", "employment_rate", "full_time_employment", "claims_4week", "part_time_employment"]]},
+    {"id": "prices", "name": "Prices", "tables": [["inflation", "inflation_mom", "hicp_yoy", "hicp_mom", "hicp", "cpi", "core_cpi", "core_inflation", "gdp_deflator", "producer_prices", "producer_prices_change", "export_prices", "import_prices", "food_inflation", "core_inflation_mom", "core_pce_yoy", "core_pce_mom", "core_ppi_mom", "core_ppi_yoy", "cpi_clothing", "cpi_education", "cpi_food", "cpi_recreation", "cpi_sa", "energy_inflation", "export_prices_mom", "export_prices_yoy", "import_prices_mom", "import_prices_yoy", "inflation_expectations_1y", "inflation_expectations_5y", "michigan_inflation_expectations", "pce_yoy", "pce_mom", "ppi_mom", "rent_inflation", "services_inflation", "core_pce", "core_producer_prices", "cpi_housing", "cpi_median", "cpi_transportation", "cpi_trimmed_mean", "cpi_core_core", "pce_index", "inflation_annual"]]},
+    {"id": "money", "name": "Money", "tables": [["interest_rate", "interbank_rate", "bond_10y", "money_supply_m0", "money_supply_m1", "money_supply_m2", "money_supply_m3", "money_supply_m4", "banks_balance_sheet", "central_bank_balance_sheet", "fx_reserves", "loans_private_sector", "loan_growth", "effective_fed_funds", "reverse_repo", "reserve_balances", "sofr", "private_debt_gdp", "lending_rate", "deposit_rate", "domestic_credit_gdp"]]},
+    {"id": "trade", "name": "Trade", "tables": [["balance_of_trade", "current_account", "current_account_gdp", "exports", "imports", "external_debt", "terms_of_trade", "fdi", "capital_flows", "remittances", "gold_reserves", "crude_oil_production", "current_account_goods", "current_account_services", "foreign_treasury_holdings", "goods_trade_balance", "tourism_revenues", "tourist_arrivals", "tourist_nights", "weapons_sales"]]},
+    {"id": "government", "name": "Government", "tables": [["gov_debt_gdp", "gov_budget", "gov_budget_value", "gov_spending", "gov_revenues", "gov_debt", "fiscal_expenditure", "treasury_cash", "gov_spending_gdp", "gov_revenues_gdp", "military_expenditure", "military_expenditure_gdp", "asylum_applications", "corruption_index"], ["corporate_tax", "personal_income_tax", "withholding_tax", "social_security_rate", "social_security_rate_companies", "social_security_rate_employees"]]},
+    {"id": "business", "name": "Business", "tables": [["business_confidence", "manufacturing_pmi", "services_pmi", "composite_pmi", "industrial_production", "industrial_production_mom", "manufacturing_production", "capacity_utilization", "bankruptcies", "electricity_production", "electric_car_registrations", "durable_goods", "durable_goods_ex_defense", "durable_goods_ex_transport", "factory_orders_ex_transport", "factory_orders", "new_orders", "business_inventories", "changes_in_inventories", "wholesale_inventories", "corporate_profits", "cfnai", "dallas_fed", "philly_fed", "total_vehicle_sales", "car_production", "car_registrations", "composite_leading", "coincident_index", "philly_employment", "philly_new_orders", "philly_prices", "manufacturing_production_mom", "nondefense_capital_goods", "mining_production", "retail_inventories", "construction_output", "economic_sentiment", "services_sentiment"]]},
+    {"id": "consumer", "name": "Consumer", "tables": [["consumer_confidence", "retail_sales_mom", "retail_sales_ex_autos", "retail_sales_yoy", "consumer_spending", "disposable_income", "personal_spending", "personal_income", "personal_savings", "consumer_credit", "private_sector_credit", "bank_lending_rate", "real_personal_spending", "rs_building", "rs_car_dealers", "rs_clothing", "rs_electronics", "rs_food_beverage", "rs_furniture", "rs_gasoline", "rs_general_merchandise", "rs_health", "rs_misc", "rs_online", "rs_restaurants", "rs_sporting", "gasoline_prices", "households_debt_gdp", "households_debt_income", "household_saving_rate"]]},
+    {"id": "housing", "name": "Housing", "tables": [["building_permits", "housing_starts", "new_home_sales", "existing_home_sales", "construction_spending", "housing_index", "mortgage_rate", "mortgage_approvals", "mortgage_rate_15y", "average_house_prices", "building_permits_mom", "case_shiller_mom", "case_shiller_yoy", "existing_home_sales_mom", "hpi_mom", "hpi_yoy", "housing_starts_mom", "housing_starts_multi", "housing_starts_single", "new_home_sales_mom", "case_shiller", "home_ownership", "median_house_price", "residential_property_prices", "price_to_rent", "house_listings"]]},
+    {"id": "energy", "name": "Energy", "tables": [["crude_oil_stocks_change", "gasoline_stocks_change", "natural_gas_stocks_change", "spr_stocks", "distillate_stocks_change", "gasoline_production", "refinery_crude_runs", "crude_oil_imports", "crude_oil_production_weekly", "wti_price", "electricity_access", "renewable_energy_share", "renewable_electricity_share", "energy_use_per_capita", "co2_per_capita", "co2_emissions"]]},
+    {"id": "health", "name": "Health", "tables": [["hospital_beds", "hospitals", "icu_beds", "medical_doctors", "nurses", "life_expectancy", "health_expenditure"]]}
   ],
 
   "indicators": {
@@ -576,7 +576,8 @@
     "gold_reserves": {"name": "Gold Reserves", "unit": "Tonnes", "src": [
       {"p": "imf", "flow": "IL", "key": "RGV_REVS.FTO.M", "scale": 3.11034768e-05}]},
     "crude_oil_production": {"name": "Crude Oil Production", "unit": "BBL/D/1K", "src": [
-      {"p": "eia", "id": "PET.MCRFPUS2.M"}]},
+      {"p": "eia", "id": "PET.MCRFPUS2.M"},
+      {"p": "eia", "id": "INTL.57-1-{ISO3}-TBPD.M", "note": "crude oil including lease condensate (EIA international)"}]},
     "current_account_goods": {"name": "Current Account Goods", "unit": "USD Billion", "src": [
       {"p": "fred", "id": "IEABCG", "scale": 0.001},
       {"p": "imf", "flow": "BOP", "key": "NETCD_T.G.USD.Q", "scale": 1e-09}]},
@@ -941,6 +942,92 @@
     "unemployment_change": {"name": "Unemployment Change", "unit": "Thousand", "src": [
       {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.UNE.UBA000.A0000.A01.D00.0.ABA.A", "t": "diff", "note": "registered"}]},
     "cpi_core_core": {"name": "CPI Core Core", "unit": "percent", "src": [
-      {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0178&cdArea=00000", "note": "all items less fresh food and energy"}]}
+      {"p": "estat", "id": "0004052037", "q": "cdTab=3&cdCat01=0178&cdArea=00000", "note": "all items less fresh food and energy"}]},
+    "avg_annual_wages": {"name": "Average Annual Wages", "unit": "USD", "src": [
+      {"p": "oecd", "flow": "OECD.ELS.SAE,DSD_EARNINGS@AV_AN_WAGE,1.0", "key": "{ISO3}.WG.USD_PPP.A.Q.MEAN._Z", "unit": "USD PPP", "note": "constant prices and PPPs of the latest year"}]},
+    "gross_monthly_wages": {"name": "Gross Average Monthly Wages", "unit": "{CUR}/Month", "src": [
+      {"p": "ilo", "id": "EAR_EMTA_SEX_NB_A", "classif": "-", "note": "employees' mean monthly earnings; a country's surveys and registers may alternate from one year to the next"}]},
+    "employment_change_yoy": {"name": "Employment Change YoY", "unit": "percent", "src": [
+      {"p": "bbk", "flow": "BBDL1", "key": "M.DE.Y.EMP.EAA000.A0000.A00.D10.0.ABA.A", "t": "yoy"},
+      {"p": "statcan", "id": "2062811", "t": "yoy"},
+      {"p": "abs", "flow": "LF", "key": "M3.3.1599.20.AUS.M", "t": "yoy"},
+      {"p": "fred", "id": "CE16OV", "t": "yoy"},
+      {"p": "ons", "id": "employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/mgrz/lms", "t": "yoy"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.M.EMP.PS._T.Y._Z", "t": "yoy"},
+      {"p": "oecd", "flow": "OECD.SDD.STES,DSD_KEI@DF_KEI,4.0", "key": "{ISO3}.Q.EMP.PS._T.Y._Z", "t": "yoy"},
+      {"p": "imf", "flow": "LS", "key": "E.PE.M", "t": "yoy"},
+      {"p": "imf", "flow": "LS", "key": "E.PE.Q", "t": "yoy"},
+      {"p": "ilo", "id": "EMP_TEMP_SEX_AGE_NB_Q", "t": "yoy"},
+      {"p": "ilo", "id": "EMP_TEMP_SEX_AGE_NB_A", "t": "yoy"}]},
+    "retirement_age_men": {"name": "Retirement Age Men", "unit": "Years", "src": [
+      {"p": "oecd", "flow": "OECD.ELS.SPD,DSD_PAG@DF_PAG,1.0", "key": "{ISO3}.A.CRPLF22.Y.M._Z._Z", "note": "current retirement age for a career started at 22 (OECD Pensions at a Glance)"}]},
+    "retirement_age_women": {"name": "Retirement Age Women", "unit": "Years", "src": [
+      {"p": "oecd", "flow": "OECD.ELS.SPD,DSD_PAG@DF_PAG,1.0", "key": "{ISO3}.A.CRPLF22.Y.F._Z._Z", "note": "current retirement age for a career started at 22 (OECD Pensions at a Glance)"}]},
+    "hicp": {"name": "Harmonised Consumer Prices", "unit": "points", "src": [
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=TOTAL&unit=I25", "note": "2025 = 100"}]},
+    "hicp_yoy": {"name": "Harmonised Inflation Rate YoY", "unit": "percent", "src": [
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=TOTAL&unit=RCH_A"}]},
+    "hicp_mom": {"name": "Harmonised Inflation Rate MoM", "unit": "percent", "src": [
+      {"p": "eurostat", "ds": "prc_hicp_minr", "q": "coicop18=TOTAL&unit=RCH_M"}]},
+    "loan_growth": {"name": "Loan Growth", "unit": "percent", "src": [
+      {"p": "bcb", "id": "20539", "note": "total credit outstanding", "since": "2007-03", "t": "yoy"},
+      {"p": "boj", "flow": "MD11", "id": "DLCLAEDBLTTO", "note": "banks' loans and bills discounted", "t": "yoy"},
+      {"p": "fred", "id": "TOTCI", "note": "commercial and industrial loans", "t": "yoy"},
+      {"p": "ecb", "flow": "BSI", "key": "M.U2.Y.U.A20T.A.1.U2.2240.Z01.E", "note": "loans to non-financial companies", "only": ["EMU"], "t": "yoy"},
+      {"p": "ecb", "flow": "BSI", "key": "M.{ECB}.N.A.A20.A.1.U2.2240.Z01.E", "note": "loans to non-financial companies", "t": "yoy"},
+      {"p": "imf", "flow": "MFS_DC", "key": "ODCORP_A_ACO_PS.XDC.M", "note": "banks' claims on the private sector", "t": "yoy"}]},
+    "remittances": {"name": "Remittances", "unit": "USD Million", "src": [
+      {"p": "wb", "id": "BX.TRF.PWKR.CD.DT", "scale": 1e-06, "note": "personal remittances received"}]},
+    "capital_flows": {"name": "Capital Flows", "unit": "USD Billion", "src": [
+      {"p": "imf", "flow": "BOP", "key": "NNAFANIL_T.FAB.USD.Q", "scale": 1e-09, "note": "financial account balance (net lending or borrowing)"}]},
+    "asylum_applications": {"name": "Asylum Applications", "unit": "persons", "src": [
+      {"p": "eurostat", "ds": "migr_asyappctzm", "q": "citizen=TOTAL&sex=T&age=TOTAL&applicant=FRST&unit=PER", "note": "first-time applicants, a month"}]},
+    "corruption_index": {"name": "Corruption Index", "unit": "points", "src": [
+      {"p": "wb", "source": "3", "id": "GOV_WGI_CC.SC", "note": "World Bank's control of corruption score, 0 to 100 (not Transparency International's index)"}]},
+    "social_security_rate": {"name": "Social Security Rate", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.CTP.TPS,DSD_TAX_PIT@DF_PIT_AV,1.0", "key": "{ISO3}.A.AVG_R.EESSC.PT_WG_EARN_G.S13.S.S_C0.AW100._Z._Z._Z", "plus": "{ISO3}.A.AVG_R.ERSSC.PT_WG_EARN_G.S13.S.S_C0.AW100._Z._Z._Z", "note": "employee and employer contributions, % of the average gross wage (single, no child)"}]},
+    "social_security_rate_companies": {"name": "Social Security Rate For Companies", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.CTP.TPS,DSD_TAX_PIT@DF_PIT_AV,1.0", "key": "{ISO3}.A.AVG_R.ERSSC.PT_WG_EARN_G.S13.S.S_C0.AW100._Z._Z._Z", "note": "employer contributions, % of the average gross wage"}]},
+    "social_security_rate_employees": {"name": "Social Security Rate For Employees", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.CTP.TPS,DSD_TAX_PIT@DF_PIT_AV,1.0", "key": "{ISO3}.A.AVG_R.EESSC.PT_WG_EARN_G.S13.S.S_C0.AW100._Z._Z._Z", "note": "employee contributions, % of the average gross wage"}]},
+    "gdp_from_construction": {"name": "GDP from Construction", "unit": "{CUR} Million", "src": [
+      {"p": "fred", "id": "RVAC", "unit": "USD Billion", "note": "chained 2017 dollars, annual rate"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA_BY_ACTIVITY_OUTPUT,1.1", "key": "Q.Y.{ISO3}.S1.S1.B1G._Z.F._Z.XDC.L.N.T0101", "note": "chain-linked volumes, seasonally adjusted"},
+      {"p": "eurostat", "ds": "namq_10_a10", "q": "unit=CLV20_MEUR&na_item=B1G&nace_r2=F&s_adj=SCA", "unit": "EUR Million", "note": "chain-linked volumes (2020)"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE6,2.0", "key": "A.{ISO3}.S1.S1.B1G._Z.F._Z.XDC.L.N.T0301", "note": "chain-linked volumes"}]},
+    "gdp_from_mining": {"name": "GDP from Mining", "unit": "{CUR} Million", "src": [
+      {"p": "fred", "id": "RVAM", "unit": "USD Billion", "note": "chained 2017 dollars, annual rate"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE6,2.0", "key": "A.{ISO3}.S1.S1.B1G._Z.B._Z.XDC.L.N.T0301", "note": "chain-linked volumes"},
+      {"p": "eurostat", "ds": "nama_10_a64", "q": "unit=CLV20_MEUR&na_item=B1G&nace_r2=B", "unit": "EUR Million", "note": "chain-linked volumes (2020)"}]},
+    "gdp_from_public_admin": {"name": "GDP from Public Administration", "unit": "{CUR} Million", "src": [
+      {"p": "fred", "id": "RVAG", "unit": "USD Billion", "note": "government, chained 2017 dollars, annual rate"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN1@DF_QNA_BY_ACTIVITY_OUTPUT,1.1", "key": "Q.Y.{ISO3}.S1.S1.B1G._Z.OTQ._Z.XDC.L.N.T0101", "note": "public administration, defence, education, health and social work; chain-linked volumes"},
+      {"p": "eurostat", "ds": "namq_10_a10", "q": "unit=CLV20_MEUR&na_item=B1G&nace_r2=O-Q&s_adj=SCA", "unit": "EUR Million", "note": "public administration, education, health; chain-linked volumes (2020)"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE6,2.0", "key": "A.{ISO3}.S1.S1.B1G._Z.O._Z.XDC.L.N.T0301", "note": "public administration and defence; chain-linked volumes"}]},
+    "gdp_from_transport": {"name": "GDP from Transport", "unit": "{CUR} Million", "src": [
+      {"p": "fred", "id": "RVAT", "unit": "USD Billion", "note": "transportation and warehousing, chained 2017 dollars, annual rate"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE6,2.0", "key": "A.{ISO3}.S1.S1.B1G._Z.H._Z.XDC.L.N.T0301", "note": "transportation and storage; chain-linked volumes"},
+      {"p": "eurostat", "ds": "nama_10_a64", "q": "unit=CLV20_MEUR&na_item=B1G&nace_r2=H", "unit": "EUR Million", "note": "transportation and storage; chain-linked volumes (2020)"}]},
+    "gdp_from_utilities": {"name": "GDP from Utilities", "unit": "{CUR} Million", "src": [
+      {"p": "fred", "id": "RVAU", "unit": "USD Billion", "note": "chained 2017 dollars, annual rate"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_NAMAIN10@DF_TABLE6,2.0", "key": "A.{ISO3}.S1.S1.B1G._Z.D._Z.XDC.L.N.T0301", "note": "electricity, gas and steam; chain-linked volumes"},
+      {"p": "eurostat", "ds": "nama_10_a64", "q": "unit=CLV20_MEUR&na_item=B1G&nace_r2=D", "unit": "EUR Million", "note": "electricity, gas and steam; chain-linked volumes (2020)"}]},
+    "price_to_rent": {"name": "Price to Rent Ratio", "unit": "points", "src": [
+      {"p": "oecd", "flow": "OECD.ECO.MPD,DSD_AN_HOUSE_PRICES@DF_HOUSE_PRICES,1.0", "key": "{ISO3}.Q.HPI_RPI.IX", "note": "index 2015 = 100"}]},
+    "bankruptcies": {"name": "Bankruptcies", "unit": "points", "src": [
+      {"p": "eurostat", "ds": "sts_rb_q", "q": "indic_bt=BKRT&nace_r2=B-S_X_O_S94&s_adj=SCA&unit=I21", "note": "bankruptcy declarations, index 2021 = 100"}]},
+    "electricity_production": {"name": "Electricity Production", "unit": "Gigawatt-hour", "src": [
+      {"p": "eurostat", "ds": "nrg_cb_pem", "q": "siec=TOTAL&unit=GWH", "note": "net electricity generation, a month"}]},
+    "electric_car_registrations": {"name": "Electric Car Registrations", "unit": "Units", "src": [
+      {"p": "eurostat", "ds": "road_eqr_carpda", "q": "mot_nrg=ELC&unit=NR", "note": "new battery-electric passenger cars, a year"}]},
+    "households_debt_income": {"name": "Households Debt to Income", "unit": "percent", "src": [
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_HHDASH@DF_HHDASH_INDIC,1.1", "key": "Q.{ISO3}.LES1M_FD4.PT_B6G_S1M", "note": "% of gross disposable income"},
+      {"p": "oecd", "flow": "OECD.SDD.NAD,DSD_HHDASH@DF_HHDASH_INDIC,1.1", "key": "A.{ISO3}.LES1M_FD4.PT_B6G_S1M", "note": "% of gross disposable income"}]},
+    "co2_emissions": {"name": "CO2 Emissions", "unit": "Million Tonnes", "src": [
+      {"p": "wb", "id": "EN.GHG.CO2.MT.CE.AR5", "note": "excluding land use, Mt CO2 equivalent"}]},
+    "hospitals": {"name": "Hospitals", "unit": "per million people", "src": [
+      {"p": "oecd", "flow": "OECD.ELS.HD,DSD_HEALTH_REAC_HOSP@DF_HOSP,1.1", "key": "{ISO3}.H.10P6HB._Z._T._Z._Z._Z._Z"}]},
+    "icu_beds": {"name": "ICU Beds", "unit": "per 100,000 people", "src": [
+      {"p": "oecd", "flow": "OECD.ELS.HD,DSD_HEALTH_REAC_HOSP@DF_BEDS_ICU,1.1", "key": "{ISO3}.HBU_ICU.10P5HB.MEAN._Z._Z._Z._Z._Z"}]}
   }
 }
