@@ -53,6 +53,8 @@ private:
     QLabel *m_empty;                // instead of the table when nothing matches
     QFrame *m_history = nullptr;    // one release's past figures against their forecasts, under the table
     QLabel *m_historyTitle = nullptr, *m_historyNote = nullptr;
+    QPushButton *m_historySource = nullptr;   // the publisher's page for this figure
+    QString m_historySourceUrl;
     QTableWidget *m_historyTable = nullptr;
     quant::MultiLineChart *m_historyChart = nullptr;
     int m_historySerial = 0;

@@ -15,28 +15,29 @@ QStringList sectionNames()
 {
     return {DeskPage::tr("Markets"), DeskPage::tr("Strength"), DeskPage::tr("Sessions"), DeskPage::tr("Recap"), DeskPage::tr("Wire"), DeskPage::tr("Rates"),
             DeskPage::tr("Positioning"), DeskPage::tr("Risk appetite"), DeskPage::tr("Seasonality"), DeskPage::tr("Fundamentals"), DeskPage::tr("Technicals"),
-            DeskPage::tr("Liquidity"), DeskPage::tr("Notes"), DeskPage::tr("Workspaces")};
+            DeskPage::tr("Liquidity"), DeskPage::tr("Notes"), DeskPage::tr("Forecasts"), DeskPage::tr("Workspaces")};
 }
 
 int sectionCount()
 {
-    return 13;   // the workspaces aren't a panel of a workspace
+    return 14;   // the workspaces aren't a panel of a workspace
 }
 
 QWidget *makeSection(int index, const Context &c)
 {
     using Maker = QWidget *(*)(const Context &);
     static const Maker makers[] = {makeMarkets, makeStrength, makeSessions, makeRecap, makeWire, makeRates, makePositioning,
-                                   makeAppetite, makeSeasonality, makeFundamentals, makeTechnical, makeLiquidity, makeNotes};
+                                   makeAppetite, makeSeasonality, makeFundamentals, makeTechnical, makeLiquidity, makeNotes, makeForecasts};
     return index >= 0 && index < sectionCount() ? makers[index](c) : nullptr;
 }
 
 } // namespace deskui
 
-DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, QWidget *parent)
+DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, QWidget *parent)
     : QWidget(parent)
     , m_calendar(calendar)
     , m_rates(rates)
+    , m_economy(economy)
 {
     setObjectName("quantPage");
     setAttribute(Qt::WA_StyledBackground);
@@ -84,7 +85,7 @@ void DeskPage::showSection(int index)
     m_tabs->button(index)->setChecked(true);
     QWidget *current = m_stack->widget(index);
     if (!current->layout()) {
-        const deskui::Context c {m_calendar, m_rates, this};
+        const deskui::Context c {m_calendar, m_rates, this, m_economy};
         auto *layout = new QVBoxLayout(current);
         layout->setContentsMargins(0, 0, 0, 0);
         layout->addWidget(index == deskui::sectionCount() ? deskui::makeWorkspaces(c) : deskui::makeSection(index, c));

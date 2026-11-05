@@ -1,6 +1,6 @@
 # Desk
 
-Une lecture des marchés de trader en quatorze sections, dans le sous-en-tête ; la dernière affichée est retenue. Les prix viennent de Yahoo Finance, avec environ quinze minutes de retard. Rien ici ne demande de clé ni de compte, et chaque source figure dans [Sources](help:sources) › Desk.
+Une lecture des marchés de trader en quinze sections, dans le sous-en-tête ; la dernière affichée est retenue. Les prix viennent de Yahoo Finance, avec environ quinze minutes de retard. Rien ici ne demande de clé ni de compte, et chaque source figure dans [Sources](help:sources) › Desk.
 
 Les textes sont écrits par des règles fixes, pas par un modèle. Quand une section a un bouton **Demander à l'IA**, il ouvre le [panneau IA](help:ai) et demande à votre modèle local de lire la section par son outil : la question ne contient aucun chiffre.
 
@@ -27,10 +27,10 @@ Une seule liste de trois choses, les plus récentes d'abord : les titres du flux
 ## Taux
 
 - **Le chemin de la Fed** : ce qu'impliquent les contrats à terme CME sur fed funds à 30 jours à chaque réunion du calendrier de la Fed : le taux après la réunion, la variation, le cumul, et les probabilités de −50, −25, statu quo, +25 et +50 points de base. Chaque mouvement est réparti entre les deux quarts de point les plus proches, la simplification habituelle. Cela lit ce qui est intégré dans les prix, pas ce qui arrivera.
-- **Banques centrales** : neuf taux directeurs de la BRI, le dernier mouvement et sa date, la variation sur un an et la prochaine décision quand elle est connue. Le calendrier économique n'annonce que certaines décisions à l'avance : la colonne est souvent vide hors de la Fed.
-- **Courbes des taux** : les rendements au pair du Trésor américain et la courbe au comptant AAA de la zone euro de la BCE, dernière publication.
+- **Banques centrales** : neuf taux directeurs de la BRI, le dernier mouvement et sa date, la variation sur un an, le dernier vote quand la banque le publie dans son texte (les dissidences à la Fed, le décompte à la Banque d'Angleterre) et la prochaine décision d'après les pages des banques. La RBA et la RBNZ refusent les programmes : leurs dates n'apparaissent que si le calendrier économique les annonce.
+- **Courbes des taux** : États-Unis, zone euro, Royaume-Uni, Japon et Canada, dernière publication. Les méthodes diffèrent : les niveaux se comparent approximativement.
 
-Seule la Fed a des probabilités : aucune source gratuite ne publie de contrats à terme de taux pour les autres banques.
+Seule la Fed a des probabilités : aucune source gratuite qui l'autorise ne publie de contrats à terme de taux pour les autres banques. Les prévisions d'ING pour leurs taux sont dans Prévisions.
 
 ## Positionnement
 
@@ -62,6 +62,10 @@ Des zones de stops lues sur le seul prix : plus hauts et plus bas égaux en boug
 ## Notes
 
 Les titres d'ING Think, de la Fed, de la BCE, de la Banque d'Angleterre et des discours de banquiers centraux de la BRI, par éditeur et avec une recherche. Un clic ouvre la note dans votre navigateur. **Les notes et les prévisions de change des grandes banques sont réservées à leurs clients**, sans flux public : elles ne sont pas ici.
+
+## Prévisions
+
+Les prévisions des autres, côte à côte. **ING Think** par trimestre, pour la croissance, l'inflation, les taux directeurs, les taux à trois mois, les obligations, le change et les matières premières, avec la date de sa dernière mise à jour. Le **FMI** et l'**OCDE** par année pour la croissance, l'inflation et le chômage des huit grandes économies. Les **projections de la Fed**, qui demandent la clé FRED gratuite dans [Sources](help:sources). TD, KBC, MUFG et RBC publient aussi des tableaux de change, mais leurs conditions n'autorisent pas ou n'indiquent pas de droit de reprendre leurs chiffres : ce sont des liens vers leurs sites.
 
 ## Espaces
 

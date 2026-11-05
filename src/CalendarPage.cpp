@@ -8,6 +8,7 @@
 #include <QCheckBox>
 #include <QComboBox>
 #include <QCoreApplication>
+#include <QDesktopServices>
 #include <QDateEdit>
 #include <QGridLayout>
 #include <QHBoxLayout>
@@ -393,6 +394,12 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
     m_historyNote = new QLabel;
     m_historyNote->setObjectName("qtNote");
     hh->addWidget(m_historyNote, 1);
+    m_historySource = new QPushButton(tr("Official source"));
+    m_historySource->setObjectName("qtChip");
+    m_historySource->setCursor(Qt::PointingHandCursor);
+    m_historySource->hide();
+    connect(m_historySource, &QPushButton::clicked, this, [this] { QDesktopServices::openUrl(QUrl(m_historySourceUrl)); });
+    hh->addWidget(m_historySource);
     auto *historyClose = new QPushButton("✕");
     historyClose->setObjectName("qtChip");
     historyClose->setCursor(Qt::PointingHandCursor);
@@ -522,6 +529,9 @@ void EconomicView::showHistory(const QString &country, const QString &title)
             m_historyTable->setItem(r, 4, deskui::cell(surprise > 0 ? "+" + surpriseText : surpriseText,
                                                        std::isnan(surprise) ? ui.TextFaint : surprise > 0 ? ui.Up : surprise < 0 ? ui.Down : ui.TextDim));
         }
+        m_historySourceUrl = past.last().sourceUrl;
+        m_historySource->setVisible(m_historySourceUrl.startsWith("http"));
+        m_historySource->setToolTip(past.last().source);
         const QString unit = past.last().unit, scale = past.last().scale;
         m_historyChart->setData(dates, {{tr("Actual"), ui.Accent, actual}, {tr("Forecast"), ui.TextDim, forecast}},
                                 [unit, scale](double v) { return formatValue(v, decimalsOf(v), unit, scale); });

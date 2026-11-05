@@ -1,12 +1,16 @@
 // The Desk's macro sections: Rates, Positioning, Risk appetite, Seasonality, Fundamentals.
 #include "DeskViews.h"
 
+#include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
+#include "KeyedSources.h"
+#include "ResearchCharts.h"
 #include "Myfxbook.h"
 #include "desk/Rates.h"
 
 #include <QButtonGroup>
 #include <QCheckBox>
+#include <QDesktopServices>
 #include <QHBoxLayout>
 #include <QHeaderView>
 #include <QJsonArray>
@@ -74,9 +78,9 @@ public:
         auto *low = new QHBoxLayout;
         low->setSpacing(10);
         auto *banksCard = quant::card(tr("Central banks"), &body);
-        m_banks = table({tr("Bank"), tr("Rate"), tr("Last move"), tr("On"), tr("1 year"), tr("Next decision"), tr("In")});
+        m_banks = table({tr("Bank"), tr("Rate"), tr("Last move"), tr("On"), tr("1 year"), tr("Last vote"), tr("Next decision"), tr("In")});
         body->addWidget(m_banks);
-        auto *banksNote = quant::label(tr("Policy rates from the BIS; decisions from the Fed's own calendar and the economic calendar, which only lists some of them ahead. No free source publishes rate futures for the other banks, so only the Fed has probabilities here."), "qtNote");
+        auto *banksNote = quant::label(tr("Policy rates from the BIS; decisions and votes from the banks' own pages, where they publish them. The RBA and the RBNZ refuse programs, so their dates come from the economic calendar when it lists them. No free source that allows it publishes rate futures for the other banks, so only the Fed has probabilities here; ING's forecasts for the others are in Forecasts."), "qtNote");
         banksNote->setWordWrap(true);
         body->addWidget(banksNote);
         low->addWidget(banksCard, 3);
@@ -86,7 +90,8 @@ public:
         m_yields->setZeroLine(false);
         m_yields->setLegend(true);
         body->addWidget(m_yields);
-        auto *yieldsNote = quant::label(tr("US Treasury par yields and the ECB's AAA euro area spot curve, latest published."), "qtNote");
+        auto *yieldsNote = quant::label(tr("Latest published: US Treasury and Japan's finance ministry par yields, the ECB's AAA euro area curve, the Bank of England's gilt zero-coupon curve, the Bank of Canada's benchmark bonds, long-term shown at 30 years. Methods differ, so levels compare roughly."), "qtNote");
+        yieldsNote->setWordWrap(true);
         body->addWidget(yieldsNote);
         low->addWidget(yieldsCard, 2);
         content()->addLayout(low);
@@ -104,9 +109,50 @@ protected:
             m_context.rates->refreshIfStale();
         fillBanks();
         fetchDecisions();
+        fetchOfficial();
     }
 
 private:
+    // The banks' own calendars and how the last decision was voted. A page that changes gives a dash, not a guess.
+    void fetchOfficial()
+    {
+        const auto page = [this](const QString &key, const QString &url, std::function<void(const QString &)> done) {
+            research::Client::instance()->raw(key, QUrl(url), 24 * 3600, false, this, [done](const QByteArray &body, const QString &) { done(QString::fromUtf8(body)); });
+        };
+        const auto dates = [this](const QString &currency, const QVector<QDate> &list) {
+            m_meetings_.insert(currency, list);
+            fillBanks();
+        };
+        page("ecb:mgcgc", "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html", [dates](const QString &html) { dates("EUR", desk::parseEcbMeetings(html)); });
+        page("boj:mpm", "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm", [dates](const QString &html) { dates("JPY", desk::parseBojMeetings(html)); });
+        page("snb:schedule", "https://www.snb.ch/en/services-events/digital-services/event-schedule", [dates](const QString &html) { dates("CHF", desk::parseSnbMeetings(html)); });
+        page("boc:schedule", "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/", [dates](const QString &html) { dates("CAD", desk::parseBocMeetings(html)); });
+        page("boe:mpc-dates", "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates", [this, page, dates](const QString &html) {
+            const QVector<QDate> list = desk::parseBoeMeetings(html);
+            dates("GBP", list);
+            QDate last;
+            for (const QDate &d : list)
+                if (d < QDate::currentDate())
+                    last = d;
+            if (!last.isValid())
+                return;
+            page("boe:summary:" + last.toString(Qt::ISODate), desk::boeSummaryUrl(last), [this](const QString &summary) {
+                m_votes.insert("GBP", desk::parseBoeVote(summary));
+                fillBanks();
+            });
+        });
+        page("fed:feed", "https://www.federalreserve.gov/feeds/press_monetary.xml", [this, page](const QString &feed) {
+            const QString url = desk::latestFomcStatementUrl(feed);
+            if (url.isEmpty())
+                return;
+            page("fed:statement:" + url.section('/', -1), url, [this](const QString &statement) {
+                m_votes.insert("USD", desk::parseFedVote(statement));
+                fillBanks();
+            });
+        });
+    }
+
+
     // The calendar page holds a week around today; a decision is often further away.
     void fetchDecisions()
     {
@@ -232,8 +278,25 @@ private:
                     next = e.time;
             if (b.currency == "USD" && m_nextFomc.isValid() && (!next.isValid() || m_nextFomc < next.date()))
                 next = m_nextFomc.startOfDay(QTimeZone::UTC);
-            m_banks->setItem(r, 5, cell(next.isValid() ? loc.toString(next.toLocalTime().date(), "d MMM yyyy") : "—"));
-            m_banks->setItem(r, 6, cell(next.isValid() ? tr("%1 d").arg(now.daysTo(next)) : "—", pal.TextDim));
+            for (const QDate &d : m_meetings_.value(b.currency))
+                if (d >= now.toLocalTime().date() && (!next.isValid() || d < next.toLocalTime().date())) {
+                    next = d.startOfDay(QTimeZone::UTC);
+                    break;
+                }
+            const desk::Vote vote = m_votes.value(b.currency);
+            QString voteText = QStringLiteral("—");
+            if (vote.known && vote.unanimous)
+                voteText = tr("Unanimous");
+            else if (vote.known && vote.majority)
+                voteText = QString("%1–%2").arg(vote.majority).arg(vote.minority);
+            else if (vote.known)
+                voteText = vote.dissenters.size() == 1 ? tr("1 dissent") : tr("%1 dissents").arg(vote.dissenters.size());
+            auto *voteCell = cell(voteText, vote.known ? pal.Text : pal.TextDim);
+            if (!vote.dissenters.isEmpty())
+                voteCell->setToolTip(vote.dissenters.join(", "));
+            m_banks->setItem(r, 5, voteCell);
+            m_banks->setItem(r, 6, cell(next.isValid() ? loc.toString(next.toLocalTime().date(), "d MMM yyyy") : "—"));
+            m_banks->setItem(r, 7, cell(next.isValid() ? tr("%1 d").arg(now.daysTo(next)) : "—", pal.TextDim));
         }
         fitColumns(m_banks, 0);
         fitHeight(m_banks);
@@ -242,26 +305,29 @@ private:
     void fetchYields()
     {
         struct State {
-            QHash<QString, double> us, euro;
-            int left = 0;
+            QHash<QString, double> us, euro, uk, japan, canada;
         };
         const QStringList tenors {"3M", "1Y", "2Y", "5Y", "10Y", "20Y", "30Y"};
         const QHash<QString, QString> treasury {{"3M", "3 Mo"}, {"1Y", "1 Yr"}, {"2Y", "2 Yr"}, {"5Y", "5 Yr"}, {"10Y", "10 Yr"}, {"20Y", "20 Yr"}, {"30Y", "30 Yr"}};
         auto state = std::make_shared<State>();
-        state->left = tenors.size() + 1;
+        // Each answer redraws: one slow source doesn't hide the others.
         const auto finish = [this, state, tenors] {
-            --state->left;   // each answer redraws: one slow source doesn't hide the other
             const Palette &pal = Theme::current();
-            QVector<double> us, euro;
-            for (const QString &t : tenors) {
-                us << state->us.value(t, research::NaN);
-                euro << state->euro.value(t, research::NaN);
-            }
+            const auto column = [&](const QHash<QString, double> &values) {
+                QVector<double> out;
+                for (const QString &t : tenors)
+                    out << values.value(t, research::NaN);
+                return out;
+            };
             QVector<QDate> dates(tenors.size(), QDate::currentDate());
             m_yields->setXLabels(tenors);
-            m_yields->setData(dates, {{tr("United States"), pal.Accent, us}, {tr("Euro area"), pal.Up, euro}}, [](double v) { return QString("%1%").arg(amount(v)); });
+            m_yields->setData(dates, {{tr("United States"), pal.Accent, column(state->us)}, {tr("Euro area"), pal.Up, column(state->euro)},
+                                      {tr("United Kingdom"), research::palette::red(), column(state->uk)}, {tr("Japan"), QColor(0xE8, 0xB0, 0x4B), column(state->japan)},
+                                      {tr("Canada"), research::palette::blue(), column(state->canada)}},
+                              [](double v) { return QString("%1%").arg(amount(v)); });
         };
-        research::Client::instance()->treasuryYields(this, [state, treasury, finish](const QVector<research::YieldCurveDay> &days, const QString &) {
+        research::Client *client = research::Client::instance();
+        client->treasuryYields(this, [state, treasury, finish](const QVector<research::YieldCurveDay> &days, const QString &) {
             if (!days.isEmpty())
                 for (auto it = treasury.begin(); it != treasury.end(); ++it)
                     if (days.first().yields.contains(it.value()))
@@ -270,7 +336,7 @@ private:
         });
         for (const QString &t : tenors) {
             const QString url = QString("https://data-api.ecb.europa.eu/service/data/YC/B.U2.EUR.4F.G_N_A.SV_C_YM.SR_%1?lastNObservations=1&format=csvdata").arg(t);
-            research::Client::instance()->raw("ecb:yc:" + t, QUrl(url), 6 * 3600, false, this, [state, t, finish](const QByteArray &body, const QString &) {
+            client->raw("ecb:yc:" + t, QUrl(url), 6 * 3600, false, this, [state, t, finish](const QByteArray &body, const QString &) {
                 const QStringList lines = QString::fromUtf8(body).split('\n', Qt::SkipEmptyParts);
                 if (lines.size() >= 2) {
                     const int col = lines.first().split(',').indexOf("OBS_VALUE");
@@ -281,6 +347,20 @@ private:
                 finish();
             });
         }
+        QUrl gilts("https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp");
+        gilts.setQuery(QString("csv.x=yes&Datefrom=%1&Dateto=now&SeriesCodes=IUDSNZC,IUDMNZC,IUDLNZC&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N").arg(QLocale::c().toString(QDate::currentDate().addDays(-14), "dd/MMM/yyyy")));
+        client->raw("boe:gilts", gilts, 6 * 3600, false, this, [state, finish](const QByteArray &body, const QString &) {
+            state->uk = desk::parseBoeYields(QString::fromUtf8(body));
+            finish();
+        });
+        client->raw("mof:jgb", QUrl("https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv"), 6 * 3600, false, this, [state, finish](const QByteArray &body, const QString &) {
+            state->japan = desk::parseMofYields(QString::fromUtf8(body));
+            finish();
+        });
+        client->raw("boc:yields", QUrl("https://www.bankofcanada.ca/valet/observations/group/bond_yields_all/json?recent=1"), 6 * 3600, false, this, [state, finish](const QByteArray &body, const QString &) {
+            state->canada = desk::parseValetYields(body);
+            finish();
+        });
     }
 
     // The calendar's names for a policy decision differ by country ("Interest Rate", "Marginal Lending Rate"…).
@@ -292,6 +372,8 @@ private:
 
     Context m_context;
     QVector<EconomicCalendar::Event> m_decisions;
+    QHash<QString, QVector<QDate>> m_meetings_;   // by currency, from the banks' own pages
+    QHash<QString, desk::Vote> m_votes;
     QDate m_nextFomc;
     QLabel *m_current, *m_currentSub, *m_next, *m_nextSub, *m_priced, *m_pricedSub, *m_end, *m_endSub;
     quant::MultiLineChart *m_curve, *m_yields;
@@ -636,6 +718,254 @@ private:
     QTableWidget *m_table;
     quant::MultiLineChart *m_history;
     QVector<Row> m_rows;
+};
+
+// ------------------------------------------------------------------ Forecasts
+
+// Other people's forecasts, side by side: ING's by quarter, the IMF's and the OECD's by year, the Fed's own projections.
+class ForecastsView : public quant::View
+{
+    Q_OBJECT
+public:
+    explicit ForecastsView(const Context &c, QWidget *parent = nullptr)
+        : View(parent)
+        , m_context(c)
+    {
+        QHBoxLayout *h;
+        QVBoxLayout *body;
+        auto *ing = quant::card(tr("ING Think, by quarter"), &body, &h);
+        m_updated = quant::label({}, "qtNote");
+        h->addWidget(m_updated);
+        auto *open = deskAction(tr("Open the page"));
+        connect(open, &QPushButton::clicked, this, [] { QDesktopServices::openUrl(QUrl("https://think.ing.com/forecasts/")); });
+        h->addWidget(open);
+        m_tab = deskCombo();
+        m_tab->setMinimumWidth(240);
+        body->addWidget(m_tab, 0, Qt::AlignLeft);
+        m_ing = table({tr("Group"), tr("Name")});
+        body->addWidget(m_ing);
+        auto *ingNote = quant::label(tr("Source: ING Bank N.V., think.ing.com. The bank's own forecasts, end of period unless the table says otherwise; they are revised and aren't advice."), "qtNote");
+        ingNote->setWordWrap(true);
+        body->addWidget(ingNote);
+        content()->addWidget(ing);
+
+        auto *row = new QHBoxLayout;
+        row->setSpacing(10);
+        auto *macro = quant::card(tr("Growth, inflation and unemployment, by year"), &body);
+        const int year = QDate::currentDate().year();
+        const int now = year % 100, next = now + 1;
+        m_macro = table({tr("Economy"), tr("GDP %1 IMF").arg(now), tr("GDP %1 IMF").arg(next), tr("GDP %1 OECD").arg(now), tr("GDP %1 OECD").arg(next),
+                         tr("CPI %1 IMF").arg(now), tr("CPI %1 IMF").arg(next), tr("Unemp. %1 IMF").arg(next), tr("Unemp. %1 OECD").arg(next)});
+        body->addWidget(m_macro);
+        auto *macroNote = quant::label(tr("IMF World Economic Outlook and OECD Economic Outlook, in % a year. Germany stands in for the euro at the IMF, the euro area at the OECD."), "qtNote");
+        macroNote->setWordWrap(true);
+        body->addWidget(macroNote);
+        row->addWidget(macro, 3);
+        auto *fed = quant::card(tr("The Fed's own projections, median"), &body);
+        m_fed = table({tr("Measure"), QString::number(year), QString::number(year + 1), QString::number(year + 2)});
+        body->addWidget(m_fed);
+        m_fedNote = quant::label(tr("The FOMC's Summary of Economic Projections, through FRED."), "qtNote");
+        m_fedNote->setWordWrap(true);
+        body->addWidget(m_fedNote);
+        row->addWidget(fed, 2);
+        content()->addLayout(row);
+
+        auto *others = quant::card(tr("Other banks, on their own sites"), &body);
+        auto *linkNote = quant::label(tr("TD, KBC, MUFG and RBC publish FX tables too. RBC and MUFG don't allow theirs to be extracted or quoted without consent, and TD and KBC state no such permission, so their figures stay on their pages."), "qtNote");
+        linkNote->setWordWrap(true);
+        body->addWidget(linkNote);
+        auto *links = new QHBoxLayout;
+        const struct { const char *name, *url; } sites[] = {{"TD Economics", "https://economics.td.com/ca-forecast-tables"}, {"KBC Economics", "https://www.kbc.com/en/economics/forecasts/world.html"},
+                                                            {"MUFG Research", "https://www.mufgresearch.com/forecasts/"}, {"RBC Economics", "https://www.rbc.com/en/economics/monthly-forecast-update/"}};
+        for (const auto &site : sites) {
+            auto *b = deskAction(site.name);
+            b->setToolTip(tr("Opens in your browser"));
+            connect(b, &QPushButton::clicked, this, [url = QString(site.url)] { QDesktopServices::openUrl(QUrl(url)); });
+            links->addWidget(b);
+        }
+        links->addStretch(1);
+        body->addLayout(links);
+        content()->addWidget(others);
+        content()->addStretch(1);
+        connect(m_tab, &QComboBox::currentIndexChanged, this, [this](int i) {
+            if (i >= 0 && !m_filling)
+                QSettings().setValue("desk/forecasts/tab", m_tab->currentData().toString());
+            fillIng();
+        });
+    }
+
+protected:
+    void load() override
+    {
+        setStatus(tr("Loading the forecasts…"));
+        research::Client *client = research::Client::instance();
+        client->raw("ing:forecasts", QUrl("https://think.ing.com/forecasts/"), 12 * 3600, false, this, [this](const QByteArray &body, const QString &error) {
+            m_tabs = desk::parseIngForecasts(QString::fromUtf8(body));
+            setStatus(m_tabs.isEmpty() ? tr("ING's forecasts are unavailable: %1").arg(error.isEmpty() ? tr("the page changed") : error) : QString());
+            const QString saved = QSettings().value("desk/forecasts/tab", "fx").toString();
+            m_filling = true;
+            m_tab->clear();
+            for (const desk::ForecastTab &t : std::as_const(m_tabs))
+                m_tab->addItem(t.title, t.id);
+            m_tab->setCurrentIndex(std::max(0, m_tab->findData(saved)));
+            m_filling = false;
+            fillIng();
+        });
+        const int year = QDate::currentDate().year();
+        QUrl oecd("https://sdmx.oecd.org/public/rest/data/OECD.ECO.MAD,DSD_EO@DF_EO,/USA+EA17+JPN+GBR+CHE+CAN+AUS+NZL.GDPV_ANNPCT+UNR.A");
+        oecd.setQuery(QString("startPeriod=%1&format=csvfile").arg(year));
+        client->raw("oecd:eo", oecd, 24 * 3600, false, {{"Accept-Language", "en"}}, this, [this](const QByteArray &body, const QString &) {
+            const QStringList lines = QString::fromUtf8(body).split('\n', Qt::SkipEmptyParts);
+            if (lines.size() < 2)
+                return;
+            const QStringList head = lines.first().trimmed().split(',');
+            const int area = head.indexOf("REF_AREA"), measure = head.indexOf("MEASURE"), period = head.indexOf("TIME_PERIOD"), value = head.indexOf("OBS_VALUE");
+            if (area < 0 || measure < 0 || period < 0 || value < 0)
+                return;
+            for (int i = 1; i < lines.size(); ++i) {
+                const QStringList cells = lines[i].trimmed().split(',');
+                if (cells.size() > std::max({area, measure, period, value}))
+                    m_oecd.insert(cells[area] + '/' + cells[measure] + '/' + cells[period], cells[value].toDouble());
+            }
+            fillMacro();
+        });
+        if (m_context.economy) {
+            connect(m_context.economy, &RemoteDataSet::updated, this, &ForecastsView::fillMacro, Qt::UniqueConnection);
+            m_context.economy->refreshIfStale();
+        }
+        fillMacro();
+        fetchFed();
+    }
+
+private:
+    void fillIng()
+    {
+        const int index = m_tab->currentIndex();
+        if (index < 0 || index >= m_tabs.size()) {
+            m_ing->setRowCount(0);
+            return;
+        }
+        const desk::ForecastTab &tab = m_tabs[index];
+        m_updated->setText(tr("updated %1").arg(tab.updated));
+        int columns = 0, labels = 0, rows = 0;
+        for (const desk::ForecastTable &t : tab.tables) {
+            columns = std::max(columns, int(t.columns.size()));
+            rows += int(t.rows.size());
+            for (const auto &r : t.rows)
+                labels = std::max(labels, int(r.labels.size()));
+        }
+        labels = std::max(labels, 1);
+        QStringList headers(labels + columns, QString());
+        headers[0] = tr("Name");
+        if (!tab.tables.isEmpty())
+            for (int c = 0; c < tab.tables.first().columns.size(); ++c)
+                headers[labels + c] = tab.tables.first().columns[c];
+        m_ing->setColumnCount(labels + columns);
+        m_ing->setHorizontalHeaderLabels(headers);
+        fitColumns(m_ing);
+        // Each table of the tab under a line naming its group, with its own periods when they differ.
+        m_ing->setRowCount(rows + int(tab.tables.size()));
+        int r = 0;
+        const Palette &pal = Theme::current();
+        for (const desk::ForecastTable &t : tab.tables) {
+            for (int c = 0; c < m_ing->columnCount(); ++c)
+                m_ing->setItem(r, c, cell({}));
+            m_ing->setItem(r, 0, cell(t.group, pal.Accent, Qt::AlignLeft, true));
+            // The header row already names the first table's periods.
+            if (t.columns != tab.tables.first().columns)
+                for (int c = 0; c < t.columns.size(); ++c)
+                    m_ing->setItem(r, labels + c, cell(t.columns[c], pal.TextDim));
+            ++r;
+            for (const auto &row : t.rows) {
+                for (int c = 0; c < m_ing->columnCount(); ++c)
+                    m_ing->setItem(r, c, cell({}));
+                for (int c = 0; c < row.labels.size(); ++c)
+                    m_ing->setItem(r, c, cell(row.labels[c], {}, Qt::AlignLeft, c == row.labels.size() - 1));
+                for (int c = 0; c < row.values.size(); ++c)
+                    m_ing->setItem(r, labels + c, cell(row.values[c]));
+                ++r;
+            }
+        }
+        fitHeight(m_ing);
+    }
+
+    void fillMacro()
+    {
+        const struct { const char *imf, *oecd, *name; } economies[] = {
+            {"USA", "USA", QT_TR_NOOP("United States")}, {"DEU", "EA17", QT_TR_NOOP("Euro area")}, {"JPN", "JPN", QT_TR_NOOP("Japan")}, {"GBR", "GBR", QT_TR_NOOP("United Kingdom")},
+            {"CHE", "CHE", QT_TR_NOOP("Switzerland")}, {"CAN", "CAN", QT_TR_NOOP("Canada")}, {"AUS", "AUS", QT_TR_NOOP("Australia")}, {"NZL", "NZL", QT_TR_NOOP("New Zealand")}};
+        const int year = QDate::currentDate().year();
+        m_macro->setRowCount(int(std::size(economies)));
+        const auto figure = [](double v) { return std::isnan(v) ? QStringLiteral("—") : amount(v, 1); };
+        const auto imf = [&](const char *iso, WorldEconomy::Indicator ind, int y) {
+            return m_context.economy ? m_context.economy->value(iso, ind, y) : std::nan("");
+        };
+        const auto oecd = [&](const char *area, const char *measure, int y) {
+            return m_oecd.value(QString("%1/%2/%3").arg(area, measure).arg(y), std::nan(""));
+        };
+        int r = 0;
+        for (const auto &e : economies) {
+            m_macro->setItem(r, 0, cell(tr(e.name), {}, Qt::AlignLeft, true));
+            m_macro->setItem(r, 1, cell(figure(imf(e.imf, WorldEconomy::GdpGrowth, year))));
+            m_macro->setItem(r, 2, cell(figure(imf(e.imf, WorldEconomy::GdpGrowth, year + 1))));
+            m_macro->setItem(r, 3, cell(figure(oecd(e.oecd, "GDPV_ANNPCT", year))));
+            m_macro->setItem(r, 4, cell(figure(oecd(e.oecd, "GDPV_ANNPCT", year + 1))));
+            m_macro->setItem(r, 5, cell(figure(imf(e.imf, WorldEconomy::Inflation, year))));
+            m_macro->setItem(r, 6, cell(figure(imf(e.imf, WorldEconomy::Inflation, year + 1))));
+            m_macro->setItem(r, 7, cell(figure(imf(e.imf, WorldEconomy::Unemployment, year + 1))));
+            m_macro->setItem(r, 8, cell(figure(oecd(e.oecd, "UNR", year + 1))));
+            ++r;
+        }
+        fitColumns(m_macro);
+        m_macro->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);   // names stay whole
+        fitHeight(m_macro);
+    }
+
+    void fetchFed()
+    {
+        const QString key = sourceKey("fred");
+        const struct { const char *series, *name; } measures[] = {{"FEDTARMD", QT_TR_NOOP("Fed funds rate")}, {"GDPC1MD", QT_TR_NOOP("Real GDP growth")},
+                                                                  {"UNRATEMD", QT_TR_NOOP("Unemployment")}, {"PCECTPIMD", QT_TR_NOOP("PCE inflation")}};
+        m_fed->setRowCount(int(std::size(measures)));
+        const int year = QDate::currentDate().year();
+        int r = 0;
+        for (const auto &m : measures) {
+            m_fed->setItem(r, 0, cell(tr(m.name), {}, Qt::AlignLeft, true));
+            for (int c = 1; c <= 3; ++c)
+                m_fed->setItem(r, c, cell("—", Theme::current().TextDim));
+            ++r;
+        }
+        fitColumns(m_fed, 0);
+        fitHeight(m_fed);
+        if (key.isEmpty()) {
+            m_fedNote->setText(tr("The FOMC's Summary of Economic Projections needs a free FRED key, in Sources."));
+            return;
+        }
+        r = 0;
+        for (const auto &m : measures) {
+            QUrl url("https://api.stlouisfed.org/fred/series/observations");
+            url.setQuery(QString("series_id=%1&api_key=%2&file_type=json&sort_order=desc&limit=8").arg(m.series, key));
+            research::Client::instance()->raw(QString("fred:sep:") + m.series, url, 12 * 3600, true, this, [this, r, year](const QByteArray &body, const QString &) {
+                for (const QJsonValue &v : QJsonDocument::fromJson(body).object().value("observations").toArray()) {
+                    const QJsonObject o = v.toObject();
+                    const int y = o.value("date").toString().left(4).toInt();
+                    bool good = false;
+                    const double value = o.value("value").toString().toDouble(&good);
+                    if (good && y >= year && y <= year + 2)
+                        m_fed->setItem(r, 1 + y - year, cell(QString("%1%").arg(amount(value, 1))));
+                }
+            });
+            ++r;
+        }
+    }
+
+    Context m_context;
+    QComboBox *m_tab;
+    QLabel *m_updated, *m_fedNote;
+    QTableWidget *m_ing, *m_macro, *m_fed;
+    QVector<desk::ForecastTab> m_tabs;
+    QHash<QString, double> m_oecd;
+    bool m_filling = false;
 };
 
 // ------------------------------------------------------------------ Risk appetite
@@ -1191,6 +1521,7 @@ private:
 } // namespace
 
 QWidget *makeRates(const Context &c) { return new RatesView(c); }
+QWidget *makeForecasts(const Context &c) { return new ForecastsView(c); }
 QWidget *makePositioning(const Context &) { return new PositioningView; }
 QWidget *makeAppetite(const Context &) { return new AppetiteView; }
 QWidget *makeSeasonality(const Context &) { return new SeasonalityView; }

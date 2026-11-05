@@ -176,7 +176,7 @@ void SourcesPage::applySaved(const Targets &t)
     for (const char *group : {"yahoo", "nasdaq", "sec", "wikipedia", "wikidata", "treasury", "fred", "oecd", "coinmarketcap",
                               "alternative", "worldbank", "imf", "eurostat", "bis", "ecb", "ilo", "eia", "ons", "boe", "bcb",
                               "statcan", "boc", "boj", "snb", "abs", "bbk", "insee", "ine", "pxweb", "inegi", "bps", "estat",
-                              "fed", "cftc", "binance", "investinglive", "ing"})
+                              "fed", "cftc", "binance", "investinglive", "ing", "mof"})
         research::Client::instance()->setEnabled(group, on(QByteArray("research_") + group));
     Myfxbook::instance()->setEnabled(on("myfxbook"));
     news::Wire::instance()->setEnabled("rss", on("news_feeds"));
@@ -502,7 +502,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     add(buildRow({"research_ecb", Kind::Dataset, tr("Money, credit and bank rates"), tr("European Central Bank"),
                   "data-api.ecb.europa.eu",
                   tr("Countries (euro area and members): M1, M2, M3, loans, mortgage, lending and deposit rates, central "
-                     "bank balance sheets")},
+                     "bank balance sheets. Desk › Rates: the euro area yield curve and meeting dates")},
                  research("ecb", QUrl("https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.A2C.A.R.A.2250.EUR.N"
                                       "?format=csvdata&lastNObservations=1"))));
     add(buildRow({"research_bis", Kind::Dataset, tr("Policy rates, property prices and credit"),
@@ -526,7 +526,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                                        "current account, production, saving, productivity")},
                  research("ons", QUrl("https://www.ons.gov.uk/economy/inflationandpriceindices/timeseries/d7g7/mm23/data"))));
     add(buildRow({"research_boe", Kind::Dataset, tr("Money and mortgages"), tr("Bank of England"), "www.bankofengland.co.uk",
-                  tr("Countries › United Kingdom: M4, mortgage approvals, fixed mortgage rates")},
+                  tr("Countries › United Kingdom: M4, mortgage approvals, fixed mortgage rates. Desk › Rates: the gilt curve, meeting dates and the last vote")},
                  research("boe", QUrl("https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes"
                                       "&Datefrom=01/Jan/2026&Dateto=now&SeriesCodes=IUDBEDR&CSVF=TN&UsingCodes=Y&VPD=Y&VFD=N"))));
     add(buildRow({"research_bcb", Kind::Dataset, tr("Brazilian time series (SGS)"), tr("Central Bank of Brazil"), "api.bcb.gov.br",
@@ -539,14 +539,14 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
                  research("statcan", QUrl("https://www150.statcan.gc.ca/t1/wds/rest/getDataFromVectorByReferencePeriodRange"
                                           "?vectorIds=2062815&startRefPeriod=2026-01-01&endReferencePeriod=2026-12-31"))));
     add(buildRow({"research_boc", Kind::Dataset, tr("Rates and money"), tr("Bank of Canada"), "www.bankofcanada.ca",
-                  tr("Countries › Canada: policy rate, 10-year yield, prime and 5-year mortgage rates, M2, the Bank's assets")},
+                  tr("Countries › Canada: policy rate, 10-year yield, prime and 5-year mortgage rates, M2, the Bank's assets. Desk › Rates: the yield curve and meeting dates")},
                  research("boc", QUrl("https://www.bankofcanada.ca/valet/observations/V39079/json?recent=1"))));
     add(buildRow({"research_boj", Kind::Dataset, tr("Time-series data"), tr("Bank of Japan"), "www.stat-search.boj.or.jp",
                   tr("Countries › Japan: call rate, monetary base, M2, M3, producer, export and import prices, Tankan, the "
-                     "Bank's assets, bank loans and lending rate, balance of payments")},
+                     "Bank's assets, bank loans and lending rate, balance of payments. Desk › Rates: meeting dates")},
                  research("boj", QUrl("https://www.stat-search.boj.or.jp/api/v1/getDataCode?format=json&lang=en&db=FM01&code=STRDCLUCON&startDate=202610"))));
     add(buildRow({"research_snb", Kind::Dataset, tr("Data portal"), tr("Swiss National Bank"), "data.snb.ch",
-                  tr("Countries › Switzerland: M1, M2, M3, consumer prices, SARON")},
+                  tr("Countries › Switzerland: M1, M2, M3, consumer prices, SARON. Desk › Rates: meeting dates")},
                  research("snb", QUrl("https://data.snb.ch/api/cube/plkopr/data/csv/en"))));
     add(buildRow({"research_abs", Kind::Dataset, tr("Australian statistics"), tr("Australian Bureau of Statistics"),
                   "data.api.abs.gov.au", tr("Countries › Australia: labour force, monthly CPI and trimmed mean, GDP, saving "
@@ -643,9 +643,13 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     add(buildRow({"research_investinglive", Kind::Dataset, tr("Market headlines"), "InvestingLive", "investinglive.com",
                   tr("Desk › Wire and Recap: its public feed of market headlines")},
                  research("investinglive", QUrl("https://investinglive.com/feed/"))));
-    add(buildRow({"research_ing", Kind::Dataset, tr("Economic research"), "ING Think", "think.ing.com",
-                  tr("Desk › Notes: the titles of its public research")},
+    add(buildRow({"research_ing", Kind::Dataset, tr("Economic research and forecasts"), "ING Think", "think.ing.com",
+                  tr("Desk › Notes: the titles of its public research. Desk › Forecasts: its forecasts by quarter for growth, "
+                     "inflation, rates, bonds, FX and commodities")},
                  research("ing", QUrl("https://think.ing.com/rss/"))));
+    add(buildRow({"research_mof", Kind::Dataset, tr("Japanese government bond yields"), tr("Ministry of Finance, Japan"), "www.mof.go.jp",
+                  tr("Desk › Rates: the yield curve")},
+                 research("mof", QUrl("https://www.mof.go.jp/english/policy/jgbs/reference/interest_rate/jgbcme.csv"))));
     l->addSpacing(12);
 
     section(tr("Map · macroeconomics"));

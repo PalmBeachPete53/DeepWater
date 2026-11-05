@@ -1,4 +1,5 @@
 // The Desk and Journal logic (src/desk) on made-up data. Plain checks, a count at the end, non-zero exit on any failure.
+#include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
 #include "desk/Instruments.h"
 #include "desk/Journal.h"
@@ -655,6 +656,69 @@ void testPositioning()
     eqs("Invalid email or password.", message, "says why");
 }
 
+void testCentralBanks()
+{
+    CAT = "central banks";
+    // Pieces of the real pages, November 2026.
+    QVector<QDate> d = parseEcbMeetings(R"(<dt> 25/11/2026 </dt> <dd> Governing Council of the ECB: non-monetary policy meeting (in Frankfurt)<br> </dd>
+        <dt> 16/12/2026 </dt> <dd> Governing Council of the ECB: monetary policy meeting in Frankfurt (Day 1)<br> </dd>
+        <dt> 17/12/2026 </dt> <dd> Governing Council of the ECB: monetary policy meeting in Frankfurt (Day 2), followed by press conference<br> </dd>)");
+    eqi(1, d.size(), "the ECB's decision day only");
+    check(d.value(0) == QDate(2026, 12, 17), "day 2");
+    d = parseBoeMeetings(R"(<h2>2026 confirmed dates</h2> <table> <tbody> <tr> <td>Thursday 5 February</td> <td><a href="x">February MPC</a></td> </tr>
+        <tr> <td>Thursday&nbsp;17 December</td> <td>y</td> </tr> </tbody> </table> <h2>2027 provisional dates</h2><table><tr><td>Thursday 4 February</td></tr></table>)");
+    eqi(3, d.size(), "the BoE's dates over two years");
+    check(d.value(1) == QDate(2026, 12, 17) && d.value(2) == QDate(2027, 2, 4), "with a non-breaking space, and the next year");
+    d = parseBojMeetings(R"(<caption class="non-caption">Table : 2026</caption> <tbody> <tr> <td><a href="k.pdf">Jan. 22 (Thurs.), 23 (Fri.) [PDF 171KB]</a></td> <td>Jan. 23 (Fri.)</td> </tr>
+        <tr> <td>Apr. 30 (Thurs.), May 1 (Fri.)</td> <td>May 1</td> </tr> </tbody></table>
+        <caption>Table : 2027</caption> <tbody> <tr> <td>Jan. 21 (Thurs.), 22 (Fri.)</td> <td>Jan. 22 (Fri.)</td> </tr> </tbody></table>)");
+    eqi(3, d.size(), "the BoJ's meetings");
+    check(d.value(0) == QDate(2026, 1, 23), "the last day of two");
+    check(d.value(1) == QDate(2026, 5, 1), "across a month");
+    check(d.value(2) == QDate(2027, 1, 22), "next year's table");
+    d = parseSnbMeetings("<h3>Monetary policy assessment of 10 December 2026 (press release)</h3> <h3>Monetary policy assessment of 10 December 2026 (news conference)</h3> Monetary policy assessment of 18 March 2027");
+    eqi(2, d.size(), "the SNB's, once each");
+    d = parseBocMeetings("<h3>Schedule for 2026</h3> Dates Publications <td>January&nbsp;28</td><td>Interest rate announcement and Monetary Policy Report</td> <td>December 9</td><td>Interest rate announcement</td> <h3>Schedule for 2027</h3> <td>January 27</td><td>Interest rate announcement</td>");
+    eqi(3, d.size(), "the BoC's");
+    check(d.value(1) == QDate(2026, 12, 9) && d.value(2) == QDate(2027, 1, 27), "by the year above them");
+    eqi(0, parseEcbMeetings("<html>changed</html>").size(), "a page that changed gives nothing");
+
+    Vote v = parseFedVote("Federal Reserve issues FOMC statement ... &nbsp; Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range.");
+    check(v.known && !v.unanimous, "dissents are read");
+    eqi(2, v.dissenters.size(), "two names");
+    eqs("Lisa D. Cook", v.dissenters.value(0), "with the initial's dot");
+    v = parseFedVote("Federal Reserve issues FOMC statement ... Voting for the monetary policy action were Jerome H. Powell, Chair; and others.");
+    check(v.known && v.unanimous, "no one against");
+    check(!parseFedVote("<html>changed</html>").known, "unknown when it isn't the statement");
+    v = parseBoeVote("the Monetary Policy Committee (MPC) voted by a majority of 6&ndash;3 to maintain Bank Rate at 3.75%.");
+    check(v.known && v.majority == 6 && v.minority == 3, "the BoE's count");
+    check(parseBoeVote("the MPC voted unanimously to maintain Bank Rate").unanimous, "unanimous");
+    eqs("https://x/monetary20261028a.htm", latestFomcStatementUrl(R"(<item> <title>Minutes of the FOMC</title> <link><![CDATA[https://x/fomcminutes.htm]]></link></item>
+        <item> <title>Federal Reserve issues FOMC statement</title> <link><![CDATA[https://x/monetary20261028a.htm]]></link> </item>)"), "the statement, not the minutes");
+    eqs("https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026", boeSummaryUrl(QDate(2026, 9, 17)), "the BoE's address");
+
+    QHash<QString, double> y = parseMofYields("Interest Rate (November 2026),,,\nDate,1Y,2Y,40Y\n2026/11/2,1.671,1.88,3.96\n2026/11/4,1.676,1.891,3.99\n,,,\n");
+    check(y.value("2Y") == 1.891, "the MoF's last day");
+    y = parseBoeYields("DATE,IUDSNZC,IUDMNZC,IUDLNZC\n30 Oct 2026,4.8961,5.2767,5.7564\n02 Nov 2026,4.8059,5.1815,5.6668\n");
+    check(y.value("10Y") == 5.1815, "the BoE's last day");
+    y = parseValetYields(R"({"observations":[{"d":"2026-11-03","BD.CDN.2YR.DQ.YLD":{"v":"3.26"},"BD.CDN.LONG.DQ.YLD":{"v":"4.09"}}]})");
+    check(y.value("2Y") == 3.26 && y.value("30Y") == 4.09, "the BoC's, long-term at 30 years");
+
+    const QVector<ForecastTab> tabs = parseIngForecasts(R"(<div class="tab-pane fade" id="fx" role="tabpanel"><h2 class="font-ing-display">FX</h2><p>Last updated: 15 October</p>
+        <table> <thead> <tr> <th>G10 (eop)</th> <th>&nbsp;</th> <th>4Q26F</th> <th>1Q27F</th> </tr> </thead> <tbody>
+        <tr> <td>Euro</td> <td>EUR/USD</td> <td>1.13</td> <td>1.13</td> </tr> <tr> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> </tr>
+        <tr> <th>EMEA (eop)</th> <th>&nbsp;</th> <th>4Q26F</th> <th>1Q27F</th> </tr> <tr> <td>Poland</td> <td>EUR/PLN</td> <td>4.2</td> <td>4.1</td> </tr> </tbody></table></div>
+        <div class="tab-pane fade" id="policy-rates"><h2>Policy rates</h2><p>Last updated: 15 October</p><table><tr><th>G10 (%, eop)</th><th>4Q26F</th></tr><tr><td>Eurozone</td><td>2.75</td></tr></table></div>)");
+    eqi(2, tabs.size(), "ING's tabs");
+    eqs("15 October", tabs.value(0).updated, "the date");
+    eqi(2, tabs.value(0).tables.size(), "two groups in a tab");
+    eqs("EMEA (eop)", tabs.value(0).tables.value(1).group, "a group inside the table");
+    eqs("EUR/USD", tabs.value(0).tables.value(0).rows.value(0).labels.value(1), "two labels");
+    eqs("1.13", tabs.value(0).tables.value(0).rows.value(0).values.value(1), "a value");
+    eqs("2.75", tabs.value(1).tables.value(0).rows.value(0).values.value(0), "one label");
+    eqi(0, parseIngForecasts("<html></html>").size(), "nothing when the page changed");
+}
+
 } // namespace
 
 int main(int argc, char **argv)
@@ -675,6 +739,7 @@ int main(int argc, char **argv)
     testNews();
     testRates();
     testPositioning();
+    testCentralBanks();
     std::cout << checks << " checks, " << fails << " failed\n";
     return fails ? 1 : 0;
 }

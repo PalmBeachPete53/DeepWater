@@ -350,7 +350,7 @@ void MainWindow::buildUi()
         return quantPage;
     });
     addPage("desk", tr("Desk"), [this] {
-        auto *desk = new DeskPage(m_economicCalendar, m_policyRates);
+        auto *desk = new DeskPage(m_economicCalendar, m_policyRates, m_economy);
         connect(desk, &DeskPage::askAi, this, &MainWindow::askAiDock);
         return desk;
     });

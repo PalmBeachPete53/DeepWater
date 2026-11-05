@@ -31,6 +31,7 @@ public:
         QString unit;       // "%", "$", "€", "cf"…
         QString scale;      // "K", "M", "B", "T"
         QString source;
+        QString sourceUrl;  // the publisher's page for this figure
     };
 
     explicit EconomicCalendar(QObject *parent = nullptr);

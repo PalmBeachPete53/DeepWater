@@ -4,6 +4,7 @@
 
 class EconomicCalendar;
 class PolicyRates;
+class WorldEconomy;
 class QButtonGroup;
 class QStackedWidget;
 
@@ -14,7 +15,7 @@ class DeskPage : public QWidget
 {
     Q_OBJECT
 public:
-    DeskPage(EconomicCalendar *calendar, PolicyRates *rates, QWidget *parent = nullptr);
+    DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy *economy, QWidget *parent = nullptr);
 
     void showSection(int index);
 
@@ -26,6 +27,7 @@ signals:
 private:
     EconomicCalendar *m_calendar;
     PolicyRates *m_rates;
+    WorldEconomy *m_economy;
     QButtonGroup *m_tabs;
     QStackedWidget *m_stack;
 };
@@ -37,6 +39,7 @@ struct Context {
     EconomicCalendar *calendar = nullptr;
     PolicyRates *rates = nullptr;
     DeskPage *page = nullptr;
+    WorldEconomy *economy = nullptr;
 };
 QStringList sectionNames();
 // A new view of a section; `index` in sectionNames(), the workspaces section excluded.
@@ -56,6 +59,7 @@ QWidget *makeFundamentals(const Context &c);
 QWidget *makeTechnical(const Context &c);
 QWidget *makeLiquidity(const Context &c);
 QWidget *makeNotes(const Context &c);
+QWidget *makeForecasts(const Context &c);
 QWidget *makeWorkspaces(const Context &c);
 
 } // namespace deskui

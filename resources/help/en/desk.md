@@ -1,6 +1,6 @@
 # Desk
 
-A trader's reading of the markets in fourteen sections, under the sub-header; the last one shown is remembered. Prices come from Yahoo Finance, delayed by about fifteen minutes. Nothing here needs a key or an account, and every source is listed in [Sources](help:sources) › Desk.
+A trader's reading of the markets in fifteen sections, under the sub-header; the last one shown is remembered. Prices come from Yahoo Finance, delayed by about fifteen minutes. Nothing here needs a key or an account, and every source is listed in [Sources](help:sources) › Desk.
 
 The texts are written by fixed rules, not by a model. Where a section has an **Ask the AI** button, it opens the [AI side panel](help:ai) and asks your local model to read the section through its tool: the question holds no figures.
 
@@ -27,10 +27,10 @@ One list of three things, newest first: headlines from InvestingLive's public fe
 ## Rates
 
 - **The Fed's path**: what CME 30-day fed funds futures imply at each meeting of the Fed's own calendar: the rate after the meeting, the change, the cumulative change, and the probabilities of −50, −25, hold, +25 and +50 basis points. Each move is split between the two nearest quarter points, the usual simplification. It reads what is priced, not what will happen.
-- **Central banks**: nine policy rates from the BIS, the last move and its date, the change over a year, and the next decision when it is known. The economic calendar only lists some decisions ahead, so the column is often empty outside the Fed.
-- **Yield curves**: US Treasury par yields and the ECB's AAA euro area spot curve, latest published.
+- **Central banks**: nine policy rates from the BIS, the last move and its date, the change over a year, the last vote where the bank publishes one in its text (the Fed's dissents, the Bank of England's count), and the next decision from the banks' own pages. The RBA and the RBNZ refuse programs, so their dates only appear when the economic calendar lists them.
+- **Yield curves**: the United States, the euro area, the United Kingdom, Japan and Canada, latest published. Their methods differ, so levels compare roughly.
 
-Only the Fed has probabilities: no free source publishes rate futures for the other banks.
+Only the Fed has probabilities: no free source that allows it publishes rate futures for the other banks. ING's forecasts for their rates are in Forecasts.
 
 ## Positioning
 
@@ -62,6 +62,10 @@ Stop pools read from price alone: equal highs and lows on 1-hour or daily bars, 
 ## Notes
 
 Titles from ING Think, the Fed, the ECB, the Bank of England and the BIS's central bankers' speeches, by publisher and with a search. A click opens the note in your browser. **The large banks' notes and FX forecasts are for their clients**, with no public feed, so they aren't here.
+
+## Forecasts
+
+Other people's forecasts, side by side. **ING Think** by quarter, for growth, inflation, policy rates, three-month rates, bonds, FX and commodities, with the date of its last update. The **IMF** and the **OECD** by year for growth, inflation and unemployment in the eight main economies. The **Fed's own projections**, which need the free FRED key in [Sources](help:sources). TD, KBC, MUFG and RBC also publish FX tables, but their terms don't allow or don't state a right to reuse their figures, so they are links to their sites.
 
 ## Workspaces
 

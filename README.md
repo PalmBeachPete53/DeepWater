@@ -1274,7 +1274,7 @@ under Research). The page is translated; numbers keep the English grouping (`1,2
 
 ## Desk
 
-The **Desk** tab is a trader's reading of the markets in 14 sub-tabs built when first shown (`desk/section`, `--section <name>`).
+The **Desk** tab is a trader's reading of the markets in 15 sub-tabs built when first shown (`desk/section`, `--section <name>`).
 Market logic is in `src/desk/` (static library `desk`, Qt Core only, tested by `qtm_test_desk`), the views in
 `src/DeskPage.*` and `src/DeskViews{Market,Macro,Tech}.cpp`, the shared pieces in `src/DeskWidgets.*` and `src/DeskData.*`.
 Public sources only, listed in **Sources › Desk**. Texts are fixed rules; an **Ask the AI** button sends a question that
@@ -1287,8 +1287,9 @@ holds no figures, and the model reads the section through `read_page`.
 - **Wire**: InvestingLive's feed, markets crossing another 3% step, and calendar releases; live TV links open YouTube.
 - **Rates**: the Fed's path from CME 30-day futures on Yahoo (`ZQ<month><yy>.CBT`) and the FOMC's calendar page
   (`desk/Rates`: 100 minus the price, each month's average solved for the meeting's move, split between the two nearest
-  quarter points); BIS policy rates with next decisions (the economic calendar lists few ahead: `fetchRange` over 125 days,
-  the Fed from its page); US Treasury and ECB AAA yield curves.
+  quarter points); BIS policy rates; next decisions and votes from the banks' own pages (`desk/CentralBanks`; the RBA and RBNZ
+  answer 403, so they fall back on the calendar's `fetchRange` over 125 days); yield curves of the US, euro area, UK (BoE IADB),
+  Japan (MoF CSV) and Canada (Valet). `fetchRange` pages through TradingView's cap of 2000 events per answer.
 - **Positioning**: Binance's public long/short account ratio on twelve USDT perpetuals, and Myfxbook's community outlook on
   forex and CFDs through its official API (`src/Myfxbook.*`, `desk/Positioning`). That needs the user's free account: the password
   goes once to `login.json` and isn't kept, only the session (`desk/myfxbook/session`), which ends after a month or when the
@@ -1301,6 +1302,9 @@ holds no figures, and the model reads the section through `read_page`.
 - **Technicals**: six signals per market (`computeSignals`), filters, radar.
 - **Liquidity**: stop pools from equal highs and lows (`findLiquidity`), an estimate from candles, not an order book.
 - **Notes**: ING Think, Fed, ECB, BoE and BIS speeches, from their feeds. Banks' client research has no public feed.
+- **Forecasts**: ING Think by quarter (`parseIngForecasts`; ING's terms allow reuse with attribution), IMF WEO and OECD Economic
+  Outlook (`DSD_EO@DF_EO`) by year, the Fed's projections through FRED. RBC and MUFG forbid extraction, TD and KBC state no right,
+  so they are links. Kalshi's public API is **not used**: its Developer Agreement limits the API to a member's own trading.
 - **Workspaces**: named sets of up to six live panels (`desk/workspaces`).
 
 ## Journal
@@ -1686,7 +1690,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/LocalChat.*` | The conversation with a model of the slots shared by AI › Local and the side panel: engine, messages, tool-call rounds, journal; `ChatTranscript` draws it |
 | `src/AiRead.*` | What the `read_page` tool reads: a page as data, from its table models, the text its widgets draw and its charts' values |
 | `src/OpencodeRun.*` | opencode as the model of that conversation: `opencode run --standalone` with its own tools denied, the same session from one message to the next |
-| `src/DeskPage.*`, `src/DeskViews*.cpp`, `src/DeskWidgets.*`, `src/DeskData.*` | The Desk tab: 14 sections, shared tables, tiles and charts, candle and feed loading |
+| `src/DeskPage.*`, `src/DeskViews*.cpp`, `src/DeskWidgets.*`, `src/DeskData.*` | The Desk tab: 15 sections, shared tables, tiles and charts, candle and feed loading |
 | `src/desk/` | Market logic without UI (library `desk`): instruments, risk, journal parsing and statistics, strength, signals, liquidity, seasonality, appetite, sessions, fundamentals, headline tags, Fed path, TFF |
 | `src/Myfxbook.*` | Myfxbook's API with the user's free account: login, session, community outlook, cache |
 | `src/JournalPage.*`, `src/JournalData.*` | The Journal tab and its store |

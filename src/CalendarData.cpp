@@ -120,6 +120,7 @@ QVector<EconomicCalendar::Event> EconomicCalendar::parseEvents(const QJsonArray 
         e.unit = o.value("unit").toString();
         e.scale = o.value("scale").toString();
         e.source = o.value("source").toString();
+        e.sourceUrl = o.value("source_url").toString();
         out.push_back(e);
     }
     std::stable_sort(out.begin(), out.end(), [](const Event &a, const Event &b) { return a.time < b.time; });
