@@ -378,7 +378,7 @@ void MainWindow::buildUi()
     connect(m_devTools, &DevToolsDock::openChanged, this,
             [](bool open) { QSettings().setValue("devtools/open", open); });
 
-    // The AI side panel, under the developer tools' flap: AI › Local's conversation, from any page.
+    // The AI side panel, under the developer tools' flap when shown: AI › Local's conversation, from any page.
     m_aiDock = new AiDock(
         central, m_header->height(),
         [this]() -> LocalChat * {
@@ -390,7 +390,7 @@ void MainWindow::buildUi()
     LocalTools::setPageAccess(
         [this](const AiPageRequest &request, std::function<void(const AiPageRead &)> done) { aiReadPage(request, std::move(done)); },
         [this](const AiPageRequest &request, QString *error) { return aiOpenPage(request, error); });
-    m_aiDock->setRightInset(devEnabled ? SideFlap::Width : 0);
+    m_aiDock->setDevFlapShown(devEnabled);
     m_aiDock->setOpen(QSettings().value("ai/dockOpen", false).toBool(), false);
     connect(m_aiDock, &AiDock::openChanged, this, [](bool open) { QSettings().setValue("ai/dockOpen", open); });
 
@@ -755,7 +755,7 @@ void MainWindow::setDevToolsEnabled(bool on)
     if (!on)
         m_devTools->setOpen(false, false);
     if (m_aiDock)
-        m_aiDock->setRightInset(on ? SideFlap::Width : 0);
+        m_aiDock->setDevFlapShown(on);
 }
 
 void MainWindow::setDevToolsOpen(bool open)

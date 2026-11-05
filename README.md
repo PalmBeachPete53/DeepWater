@@ -1410,7 +1410,7 @@ Claude settings and opencode, with the slots under both (either can be dragged i
   configuration allowing everything: `list_data` run, `paper_account` refused, a shell call answered "no tool" and no file
   written; with the real free tier, its quota error shows in the status line. No answer from a real model yet (quota reached).
 - **Side panel** (`src/AiDock.*`): a flap labelled AI on the right edge of every page, under the developer tools'
-  one, slides a 440 px panel over the right of the page (`ai/dockOpen` remembers it; Esc closes it; when the
+  one (at the top when they are off), slides a 440 px panel over the right of the page (`ai/dockOpen` remembers it; Esc closes it; when the
   developer tools are on, it opens left of their flap). It holds the model among those the bound slots offer (load,
   unload), its state, a prompt (Cmd+Enter), Send, Stop, New conversation, and the conversation under it. Each
   question goes with a context line, shown under it and sent to the model before it ("[The user is in Deepwater,

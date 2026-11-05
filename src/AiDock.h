@@ -34,8 +34,9 @@ public:
     bool isOpen() const { return m_open; }
     // The page changed: the context line follows.
     void refreshContext();
-    // Room left on the right for the developer tools' flap when it is shown (the panel opens to its left).
-    void setRightInset(int inset);
+    // The developer tools' flap is shown: this flap goes under it and the panel opens to its left. Hidden: this flap
+    // takes its place at the top.
+    void setDevFlapShown(bool shown);
     // Dev flag --ai-dock [prompt]: opens the panel and asks (loading the chosen model first).
     void ask(const QString &prompt);
 
@@ -79,5 +80,5 @@ private:
     double m_shown = 0;   // 0 closed .. 1 open
     bool m_open = false;
     QString m_pendingPrompt;   // ask(): sent once the model is ready
-    int m_inset = 0;
+    bool m_devFlapShown = false;
 };

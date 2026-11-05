@@ -100,7 +100,7 @@ void DevToolsDock::relayout()
     setGeometry(m_host->width() - SideFlap::Width - panelShown, m_topOffset, SideFlap::Width + panelShown, h);
     // Open, the panel also covers the flap's column; the flap stays on top of it.
     m_panel->setGeometry(SideFlap::Width - int(SideFlap::Width * m_shown + 0.5), 0, m_host->width(), h);
-    m_flap->move(0, 24 + int(66 * m_shown));   // open: below the panel's tool row
+    m_flap->move(0, SideFlap::Top + int(66 * m_shown));   // open: below the panel's tool row
     m_flap->raise();
     // The dock is as high as the page area but only its flap (and its panel while open) takes the mouse: the rest of
     // its column lets clicks through, to the AI panel's flap under it or the page.

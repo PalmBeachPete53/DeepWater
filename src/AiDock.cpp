@@ -25,7 +25,7 @@
 
 namespace {
 constexpr int PanelWidth = 440;
-constexpr int FlapTop = 24 + SideFlap::Height + 10;   // under the developer tools' flap
+constexpr int FlapGap = 10;   // between the developer tools' flap and this one
 }
 
 AiDock::AiDock(QWidget *host, int topOffset, std::function<LocalChat *()> chat, std::function<QString()> context)
@@ -343,26 +343,27 @@ bool AiDock::eventFilter(QObject *watched, QEvent *event)
     return QWidget::eventFilter(watched, event);
 }
 
-void AiDock::setRightInset(int inset)
+void AiDock::setDevFlapShown(bool shown)
 {
-    m_inset = inset;
+    m_devFlapShown = shown;
     relayout();
 }
 
 void AiDock::relayout()
 {
     // The panel slides in from the right edge (its left part first, as a drawer); the flap rides outside its left edge,
-    // under the developer tools' flap.
+    // under the developer tools' flap, or at the top when that one is hidden.
     const int width = std::min(PanelWidth, std::max(260, m_host->width() - 60));
     const int shown = int(width * m_shown + 0.5);
     const int h = m_host->height() - m_topOffset;
     // Closed, the flap sits on the right edge under the developer tools' one; open, the panel stops left of it.
-    const int right = m_host->width() - int(m_inset * m_shown + 0.5);
+    const int inset = m_devFlapShown ? SideFlap::Width : 0;
+    const int right = m_host->width() - int(inset * m_shown + 0.5);
     setGeometry(right - SideFlap::Width - shown, m_topOffset, SideFlap::Width + shown, h);
     // The flap stays outside the panel, against its left edge, over the page: always in sight to close it again.
     m_panel->setGeometry(SideFlap::Width, 0, width, h);
     m_panel->setVisible(m_shown > 0);
-    m_flap->move(0, FlapTop);
+    m_flap->move(0, m_devFlapShown ? SideFlap::Top + SideFlap::Height + FlapGap : SideFlap::Top);
     m_flap->raise();
     // Only the flap (and the panel while open) takes the mouse: the rest of the dock's column lets clicks through,
     // to the developer tools' flap above it or the page.

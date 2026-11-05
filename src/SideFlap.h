@@ -10,6 +10,7 @@ class SideFlap : public QWidget
 public:
     static constexpr int Width = 22;
     static constexpr int Height = 84;
+    static constexpr int Top = 24;   // from the top of the page area, for the highest flap
 
     explicit SideFlap(const QString &label, QWidget *parent = nullptr);
     void setOpen(bool open);
