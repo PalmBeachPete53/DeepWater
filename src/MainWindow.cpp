@@ -32,6 +32,7 @@
 #include <cmath>
 #include "QuantData.h"
 #include "QuantMarketState.h"
+#include "JournalPage.h"
 #include "QuantPage.h"
 #include "ResearchPage.h"
 #include "DetailPanel.h"
@@ -333,6 +334,7 @@ void MainWindow::buildUi()
     addPage("news", tr("News"), [] { return new NewsPage; });
     addPage("research", tr("Research"), [] { return new ResearchPage; });
     addPage("quant", tr("Quant"), [this] { return new QuantPage(m_cotReport); });
+    addPage("journal", tr("Journal"), [] { return new JournalPage; });
     addPage("ai", tr("AI"), [this] { return new AiPage(mlSources()); });
     addPage("sources", tr("Sources"), [this] {
         auto *sourcesPage = new SourcesPage(sourceTargets());
@@ -756,6 +758,11 @@ void MainWindow::addPage(const QString &id, const QString &label, std::function<
     m_pageLabels.insert(id, label);
     m_pageFactories.insert(id, std::move(factory));
     m_header->addNavItem(id, label);
+}
+
+QWidget *MainWindow::currentPage() const
+{
+    return m_pages->currentWidget();
 }
 
 QWidget *MainWindow::ensurePage(const QString &id)

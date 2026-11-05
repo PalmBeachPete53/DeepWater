@@ -1,4 +1,6 @@
 #include "HttpCache.h"
+#include "AiRead.h"
+#include "JournalData.h"
 #include "MainWindow.h"
 #include "SettingsDialog.h"
 #include "MarketData.h"
@@ -7,6 +9,7 @@
 #include "quant/core/Error.h"
 #include "quant/core/PineIndicators.h"
 
+#include <QAbstractButton>
 #include <QApplication>
 #include <QIcon>
 #include <QMessageBox>
@@ -60,9 +63,16 @@ int main(int argc, char *argv[])
     MainWindow w(&data, themeArg > 0 && themeArg + 1 < args.size() ? args.at(themeArg + 1) : QString());
     w.show();
 
+    // --journal-sample <file>: a statement in memory for this run; the journal's file isn't read or written.
+    if (const int sampleArg = args.indexOf("--journal-sample"); sampleArg > 0 && sampleArg + 1 < args.size())
+        JournalStore::instance()->loadSampleForThisRun(args.at(sampleArg + 1));
     const int pageArg = args.indexOf("--page");
     if (pageArg > 0 && pageArg + 1 < args.size())
         w.showPage(args.at(pageArg + 1));
+    // --section <name>: a sub-tab of the page, as read_page names them.
+    if (const int sectionArg = args.indexOf("--section"); sectionArg > 0 && sectionArg + 1 < args.size())
+        if (QAbstractButton *b = aiFindSection(aiSectionButtons(w.currentPage()), args.at(sectionArg + 1)))
+            b->click();
     if (args.contains("--devtools"))
         w.setDevToolsOpen(true);
     const int supplyArg = args.indexOf("--supply");

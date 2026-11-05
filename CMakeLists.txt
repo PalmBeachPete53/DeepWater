@@ -128,6 +128,14 @@ target_compile_features(fusion PUBLIC cxx_std_20)
 target_link_libraries(fusion PUBLIC Qt6::Core)
 target_include_directories(fusion PUBLIC src)
 
+# The Desk and Journal tabs' logic (src/desk): sizing, statements, statistics, market readings. Qt Core only, tested by
+# tests/quant/desk.
+file(GLOB DESK_SOURCES CONFIGURE_DEPENDS src/desk/*.h src/desk/*.cpp)
+add_library(desk STATIC ${DESK_SOURCES})
+target_compile_features(desk PUBLIC cxx_std_20)
+target_link_libraries(desk PUBLIC Qt6::Core)
+target_include_directories(desk PUBLIC src)
+
 # Local models (AI › Local): llama.cpp b12070 (MIT, third_party/llama.cpp: only what libllama needs, unchanged), built
 # static with Metal, behind deepwater-llm (src/llm), a helper process the app starts in a Seatbelt sandbox
 # (src/LocalEngine.cpp). macOS only, one architecture per build (ggml picks its CPU code by the target architecture):
@@ -242,11 +250,14 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/AdBlock.h src/AdBlock.cpp
     src/NewsWebHost.h src/NewsWebHost.cpp src/NewsWebHostQt.cpp
     src/HelpWindow.h src/HelpWindow.cpp
+    src/DeskWidgets.h src/DeskWidgets.cpp
+    src/JournalData.h src/JournalData.cpp
+    src/JournalPage.h src/JournalPage.cpp
     resources/resources.qrc
     resources/icon/deepwater.icns
 )
 
-target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov fusion ZLIB::ZLIB)
+target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov fusion desk ZLIB::ZLIB)
 if(DEEPWATER_LLM)   # built before the app, so that the bundle is signed with it inside
     add_dependencies(deepwater deepwater-llm)
 endif()

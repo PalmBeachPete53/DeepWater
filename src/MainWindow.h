@@ -86,6 +86,7 @@ public:
     QWidget *settingsWindow() const;   // the settings window once opened (for --settings screenshots)
     // The documentation window (header ? icon, F1), on a chapter: a page id, or empty for the page shown.
     void openHelp(const QString &chapter = QString());
+    QWidget *currentPage() const;      // the page shown
     QWidget *helpWindow() const;       // once opened (for --help-page screenshots)
     // Shows the developer flap (header </> icon) and, when open, the side panel.
     void setDevToolsEnabled(bool on);
