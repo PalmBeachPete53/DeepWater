@@ -56,7 +56,7 @@ AiLocalView::AiLocalView(LocalChat *chat, QWidget *parent)
     auto *title = new QLabel(tr("Local models"));
     title->setObjectName("title");
     v->addWidget(title);
-    v->addWidget(dimLabel(tr("A conversation with a model of this computer, run by llama.cpp on its GPU. Only the models in "
+    v->addWidget(dimLabel(tr("A conversation with a model of this computer, run by llama.cpp. Only the models in "
                              "a bound slot (Models › Slots) can run. The engine runs in a sandbox: it reads its own model "
                              "file and nothing else of yours, has no network, writes nowhere and starts no other program. "
                              "opencode, when a slot holds it, can be chosen too: it runs outside the sandbox, with its own "
@@ -230,7 +230,7 @@ QString AiLocalView::engineState(LocalChat *chat, QString *tone)
     }
     if (!LocalEngine::available()) {
         *tone = "bad";
-        return tr("The local engine isn't part of this build (a universal build leaves it out).");
+        return tr("The local engine isn't part of this build.");
     }
     if (s == LocalEngine::State::Off && chat->choices().isEmpty())
         return tr("No model can run: drag a GGUF model or opencode into a slot (Models › Slots); it shows here once the "

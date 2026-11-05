@@ -72,7 +72,7 @@ jobs:
 
   windows:
     name: Windows 11 (.exe)
-    runs-on: windows-2022
+    runs-on: windows-2025   # same base as Windows 11 24H2: Qt 6.12's DLLs don't load on Server 2022's older system
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -153,6 +153,27 @@ jobs:
           compression-level: 0
           if-no-files-found: error
 
+      # The local engine, from the packed folder: refused the network and the user's files inside its sandbox, and able to
+      # load and run a small model there.
+      - name: Local engine in its sandbox
+        shell: pwsh
+        run: |
+          $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
+          if (-not (Test-Path "$dir\deepwater-llm.exe")) { throw "deepwater-llm.exe isn't in the packed folder" }
+          $secret = Join-Path $env:USERPROFILE "deepwater-sandbox-secret.txt"
+          "secret" | Out-File $secret
+          $log = "$PWD\build\dist\sandbox.log"
+          $env:QT_FORCE_STDERR_LOGGING = '1'
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--llm-sandbox-check', "`"$secret`""
+          Get-Content $log
+          if ($p.ExitCode -ne 0) { throw "the sandbox let something through, or didn't start (exit $($p.ExitCode))" }
+          $model = Join-Path $env:USERPROFILE "stories260K.gguf"
+          Invoke-WebRequest https://huggingface.co/ggml-org/models/resolve/main/tinyllamas/stories260K.gguf -OutFile $model
+          $log = "$PWD\build\dist\engine.log"
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--llm-check', "`"$model`""
+          Get-Content $log
+          if ($p.ExitCode -ne 0) { throw "the model didn't run in the sandbox (exit $($p.ExitCode))" }
+
       # The packed folder must run on its own: launch it with Qt off the PATH and no Qt variables, open the News
       # reader on a page (Qt WebEngine and its QtWebEngineProcess.exe on Windows), and take a screenshot.
       - name: Smoke test
@@ -160,7 +181,7 @@ jobs:
         run: |
           $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
           Get-ChildItem $dir | Format-Table -AutoSize Mode, Length, Name | Out-String -Width 200
-          foreach ($f in 'deepwater.exe', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
+          foreach ($f in 'deepwater.exe', 'deepwater-llm.exe', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
             if (-not (Test-Path "$dir\$f")) { throw "$f isn't at the top of the packed folder" }
           }
           $env:PATH = "$env:SystemRoot\System32;$env:SystemRoot;$env:SystemRoot\System32\Wbem"
@@ -186,7 +207,16 @@ jobs:
             throw "deepwater.exe didn't exit within 2 minutes"
           }
           "--- its log"; Get-Content $log -ErrorAction SilentlyContinue | Select-Object -Last 60
-          if ($p.ExitCode -ne 0) { throw "deepwater.exe exited with code $($p.ExitCode)" }
+          if ($p.ExitCode -ne 0) {
+            # 0xC0000139 and its kin: a DLL that doesn't load. Windows' loader says which, under a debugger.
+            $kits = "${env:ProgramFiles(x86)}\Windows Kits\10\Debuggers\x64"
+            if (Test-Path "$kits\cdb.exe") {
+              & "$kits\gflags.exe" /i deepwater.exe +sls | Out-Null
+              & "$kits\cdb.exe" -g -G -c "q" "$dir\deepwater.exe" 2>&1 |
+                Select-String -Pattern 'ERROR|entry point|Procedure|was not found|failed' | Select-Object -Last 30
+            } else { "no debugger on this machine" }
+            throw "deepwater.exe exited with code $($p.ExitCode)"
+          }
           if (-not (Test-Path $shot)) { throw "no screenshot" }
           "Screenshot: $((Get-Item $shot).Length) bytes"
 

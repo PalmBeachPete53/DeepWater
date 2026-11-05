@@ -23,9 +23,13 @@ public:
     explicit LocalEngine(QObject *parent = nullptr);
     ~LocalEngine() override;
 
-    // Whether this build has the engine (macOS only), and where it is.
+    // Whether this build has the engine, and where it is. It only ever runs sandboxed: Seatbelt on macOS, an AppContainer
+    // on Windows (LocalSandboxWin), and it isn't offered elsewhere.
     static QString helperPath();
     static bool available();
+    // Windows, `deepwater --llm-sandbox-check <file>`: the helper, in the sandbox, tries to read that file, write beside it
+    // and reach the network. The exit code is 0 when all three are refused.
+    static int checkSandbox(const QString &file);
     // The Seatbelt profile for a model's files (exposed for the tests and the README's description).
     static QString sandboxProfile(const QStringList &files);
 

@@ -1,6 +1,6 @@
 // deepwater-llm: runs one local GGUF model for Deepwater (AI › Local), with llama.cpp (third_party/llama.cpp).
 //
-// The app starts it in a Seatbelt sandbox (src/LocalEngine.cpp): it may read its own model file and nothing else of
+// The app starts it in a sandbox, Seatbelt on macOS and an AppContainer on Windows (src/LocalEngine.cpp): it may read its own model file and nothing else of
 // the user's, has no network, writes nowhere and gets an empty environment. It knows nothing of Deepwater; it only
 // turns conversations into answers. One process, one model; it exits when its standard input closes.
 //
@@ -34,6 +34,15 @@
 #include <string>
 #include <thread>
 #include <vector>
+
+#ifdef _WIN32
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+#include <fcntl.h>
+#include <io.h>
+#include <shellapi.h>
+#endif
 
 using json = nlohmann::json;
 
@@ -275,16 +284,80 @@ struct Engine {
 
 } // namespace
 
+#ifdef _WIN32
+// The arguments in UTF-8, which llama.cpp expects: argv holds the system's code page, which can't spell every user name.
+static std::vector<std::string> arguments()
+{
+    std::vector<std::string> out;
+    int count = 0;
+    wchar_t **wide = CommandLineToArgvW(GetCommandLineW(), &count);
+    for (int i = 0; i < count; ++i) {
+        const int size = WideCharToMultiByte(CP_UTF8, 0, wide[i], -1, nullptr, 0, nullptr, nullptr);
+        std::string s(size > 0 ? size - 1 : 0, '\0');
+        if (size > 1) WideCharToMultiByte(CP_UTF8, 0, wide[i], -1, s.data(), size, nullptr, nullptr);
+        out.push_back(std::move(s));
+    }
+    LocalFree(wide);
+    return out;
+}
+
+// deepwater --llm-sandbox-check: from inside the sandbox, what must be refused. 0 when it all is.
+static int sandboxSelfTest(const std::string &file)
+{
+    const int size = MultiByteToWideChar(CP_UTF8, 0, file.c_str(), -1, nullptr, 0);
+    std::wstring path(size > 0 ? size - 1 : 0, L'\0');
+    if (size > 1) MultiByteToWideChar(CP_UTF8, 0, file.c_str(), -1, path.data(), size);
+
+    HANDLE h = CreateFileW(path.c_str(), GENERIC_READ, FILE_SHARE_READ, nullptr, OPEN_EXISTING, 0, nullptr);
+    const bool read = h != INVALID_HANDLE_VALUE;
+    if (read) CloseHandle(h);
+
+    const std::wstring beside = path + L".sandbox-test";
+    h = CreateFileW(beside.c_str(), GENERIC_WRITE, 0, nullptr, CREATE_NEW, FILE_FLAG_DELETE_ON_CLOSE, nullptr);
+    const bool write = h != INVALID_HANDLE_VALUE;
+    if (write) CloseHandle(h);
+
+    WSADATA wsa;
+    WSAStartup(MAKEWORD(2, 2), &wsa);
+    bool network = false;
+    const SOCKET s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (s != INVALID_SOCKET) {
+        sockaddr_in to {};
+        to.sin_family = AF_INET;
+        to.sin_port = htons(443);
+        inet_pton(AF_INET, "1.1.1.1", &to.sin_addr);
+        network = connect(s, reinterpret_cast<sockaddr *>(&to), sizeof to) == 0;
+        closesocket(s);
+    }
+    WSACleanup();
+    std::printf("{\"read\":%s,\"write\":%s,\"network\":%s}\n", read ? "true" : "false", write ? "true" : "false",
+                network ? "true" : "false");
+    std::fflush(stdout);
+    return read || write || network ? 3 : 0;
+}
+#endif
+
 int main(int argc, char **argv)
 {
     std::string path;
     int nCtx = 8192, threads = 0, gpuLayers = -1;
-    for (int i = 1; i + 1 < argc; i += 2) {
-        const std::string a = argv[i];
-        if (a == "--model") path = argv[i + 1];
-        else if (a == "--ctx") nCtx = std::atoi(argv[i + 1]);
-        else if (a == "--threads") threads = std::atoi(argv[i + 1]);
-        else if (a == "--gpu-layers") gpuLayers = std::atoi(argv[i + 1]);
+#ifdef _WIN32
+    // Lines as they are written: no \r added, and no byte taken for the end of the input.
+    _setmode(_fileno(stdin), _O_BINARY);
+    _setmode(_fileno(stdout), _O_BINARY);
+    const std::vector<std::string> args = arguments();
+#else
+    const std::vector<std::string> args(argv, argv + argc);
+#endif
+    for (size_t i = 1; i + 1 < args.size(); i += 2) {
+        const std::string &a = args[i];
+        if (a == "--model") path = args[i + 1];
+        else if (a == "--ctx") nCtx = std::atoi(args[i + 1].c_str());
+        else if (a == "--threads") threads = std::atoi(args[i + 1].c_str());
+        else if (a == "--gpu-layers") gpuLayers = std::atoi(args[i + 1].c_str());
+#ifdef _WIN32
+        else if (a == "--sandbox-selftest") return sandboxSelfTest(args[i + 1]);
+#endif
     }
     if (path.empty()) {
         std::fputs("usage: deepwater-llm --model <file.gguf> [--ctx n] [--threads n] [--gpu-layers n]\n", stderr);

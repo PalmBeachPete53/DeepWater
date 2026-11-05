@@ -3,7 +3,7 @@
 #include <QObject>
 #include <QString>
 
-// Talking to the local model, on this Mac only (Apple's on-device speech recognition and system voices): push-to-talk,
+// Talking to the local model, on this computer only (macOS: Apple's on-device recognition and voices; Windows: SAPI's): push-to-talk,
 // nothing listens unless the button is held, no sound or text leaves the machine. When a language has no on-device
 // recognition the capture refuses rather than fall back on Apple's servers. Elsewhere than macOS it isn't available.
 class Voice : public QObject

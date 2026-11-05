@@ -320,8 +320,12 @@ Durée %5
     </message>
     <message>
         <location line="-21"/>
+        <source>Listens only while held. Recognition runs on this computer: no sound or text leaves it.</source>
+        <translation>N’écoute que tant que le bouton est maintenu. La reconnaissance se fait sur cet ordinateur : aucun son ni texte n’en sort.</translation>
+    </message>
+    <message>
         <source>Listens only while held. Recognition runs on this Mac: no sound or text leaves it.</source>
-        <translation>N&apos;écoute que pendant l&apos;appui. La reconnaissance tourne sur ce Mac : aucun son ni texte n&apos;en sort.</translation>
+        <translation type="vanished">N&apos;écoute que pendant l&apos;appui. La reconnaissance tourne sur ce Mac : aucun son ni texte n&apos;en sort.</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -339,17 +343,27 @@ Durée %5
         <translation>Rien n&apos;a été compris.</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+12"/>
+        <source>Deepwater may not use the microphone: allow desktop apps in Settings › Privacy &amp; security › Microphone.</source>
+        <translation>Deepwater n’a pas accès au micro : autorisez les applications de bureau dans Paramètres › Confidentialité et sécurité › Microphone.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Deepwater may not use the microphone or speech recognition: allow them in System Settings › Privacy &amp; Security.</source>
         <translation>Deepwater n&apos;a pas le droit d&apos;utiliser le micro ou la reconnaissance vocale : autorisez-les dans Réglages Système › Confidentialité et sécurité.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
+        <source>This PC has no speech recognizer for %1: add the language&apos;s speech pack in Settings › Time &amp; language › Speech.</source>
+        <translation>Ce PC n’a pas de reconnaissance vocale pour %1 : ajoutez le module vocal de cette langue dans Paramètres › Heure et langue › Voix.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>This Mac has no on-device recognition for %1 yet: turn on Dictation for that language in System Settings › Keyboard. Nothing is sent to a server instead.</source>
         <translation>Ce Mac n&apos;a pas encore de reconnaissance sur l&apos;appareil pour %1 : activez la dictée pour cette langue dans Réglages Système › Clavier. Rien n&apos;est envoyé à un serveur à la place.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>No microphone is available. %1</source>
         <translation>Aucun micro n&apos;est disponible. %1</translation>
     </message>
@@ -371,9 +385,13 @@ Durée %5
         <translation type="vanished">Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp sur sa carte graphique. Seuls les modèles d’un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d’autre de vos fichiers, n’a pas de réseau, n’écrit nulle part et ne lance aucun autre programme.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>A conversation with a model of this computer, run by llama.cpp on its GPU. Only the models in a bound slot (Models › Slots) can run. The engine runs in a sandbox: it reads its own model file and nothing else of yours, has no network, writes nowhere and starts no other program. opencode, when a slot holds it, can be chosen too: it runs outside the sandbox, with its own tools turned off.</source>
-        <translation>Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp sur son GPU. Seuls les modèles d&apos;un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d&apos;autre de vos fichiers, n&apos;a pas de réseau, n&apos;écrit nulle part et ne lance aucun autre programme. opencode, quand un emplacement le tient, peut aussi être choisi : il tourne hors du bac à sable, avec ses propres outils désactivés.</translation>
+        <translation type="vanished">Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp sur son GPU. Seuls les modèles d&apos;un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d&apos;autre de vos fichiers, n&apos;a pas de réseau, n&apos;écrit nulle part et ne lance aucun autre programme. opencode, quand un emplacement le tient, peut aussi être choisi : il tourne hors du bac à sable, avec ses propres outils désactivés.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>A conversation with a model of this computer, run by llama.cpp. Only the models in a bound slot (Models › Slots) can run. The engine runs in a sandbox: it reads its own model file and nothing else of yours, has no network, writes nowhere and starts no other program. opencode, when a slot holds it, can be chosen too: it runs outside the sandbox, with its own tools turned off.</source>
+        <translation>Une conversation avec un modèle de cet ordinateur, exécuté par llama.cpp. Seuls les modèles d’un emplacement lié (Modèles › Emplacements) peuvent tourner. Le moteur tourne dans un bac à sable : il lit son propre fichier de modèle et rien d’autre de vos fichiers, n’a pas de réseau, n’écrit nulle part et ne lance aucun autre programme.</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -472,11 +490,16 @@ Durée %5
         <translation>opencode répond avec le modèle choisi ici, généralement chez un fournisseur, qui reçoit vos questions et ce que lisent les outils. Ses propres outils (shell, fichiers, web) sont désactivés ici.</translation>
     </message>
     <message>
+        <location line="+5"/>
+        <source>The local engine isn&apos;t part of this build.</source>
+        <translation>Le moteur local ne fait pas partie de ce build.</translation>
+    </message>
+    <message>
         <source>opencode answers with the model it is set to use, usually at a provider, which gets your questions and what the tools read. Its own tools (shell, files, web) are off here.</source>
         <translation type="vanished">opencode répond avec le modèle qu&apos;il est réglé pour utiliser, généralement chez un fournisseur, qui reçoit vos questions et ce que lisent les outils. Ses propres outils (shell, fichiers, web) sont désactivés ici.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+3"/>
         <source>No model can run: drag a GGUF model or opencode into a slot (Models › Slots); it shows here once the slot has it.</source>
         <translation>Aucun modèle ne peut tourner : glissez un modèle GGUF ou opencode dans un emplacement (Modèles › Emplacements) ; il apparaît ici une fois dans l&apos;emplacement.</translation>
     </message>
@@ -601,16 +624,15 @@ Durée %5
         <translation>Décharger</translation>
     </message>
     <message>
-        <location line="-25"/>
         <source>The local engine isn&apos;t part of this build (a universal build leaves it out).</source>
-        <translation>Le moteur local ne fait pas partie de cette version (une version universelle s’en passe).</translation>
+        <translation type="vanished">Le moteur local ne fait pas partie de cette version (une version universelle s’en passe).</translation>
     </message>
     <message>
         <source>No model can run: drag a GGUF model into a slot (Models › Slots); it shows here once the slot has bound it.</source>
         <translation type="vanished">Aucun modèle ne peut tourner : glissez un modèle GGUF dans un emplacement (Modèles › Emplacements) ; il apparaît ici une fois que l’emplacement l’a lié.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-20"/>
         <source>Not loaded.</source>
         <translation>Non chargé.</translation>
     </message>
@@ -6599,7 +6621,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>LocalChat</name>
     <message>
-        <location filename="../src/LocalChat.cpp" line="+107"/>
+        <location filename="../src/LocalChat.cpp" line="+114"/>
         <source>Unloaded: slot %1 no longer holds the model with the files it was bound to.</source>
         <translation>Déchargé : l’emplacement %1 ne tient plus le modèle avec les fichiers auxquels il était lié.</translation>
     </message>
@@ -6728,12 +6750,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>LocalEngine</name>
     <message>
-        <location filename="../src/LocalEngine.cpp" line="+81"/>
+        <location filename="../src/LocalEngine.cpp" line="+113"/>
         <source>The local engine isn&apos;t part of this build.</source>
         <translation>Le moteur local ne fait pas partie de cette version.</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+118"/>
         <source>the engine couldn&apos;t start (%1)</source>
         <translation>le moteur n’a pas pu démarrer (%1)</translation>
     </message>
@@ -9796,6 +9818,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+235"/>
         <source>Energy</source>
         <translation>Énergie</translation>
+    </message>
+    <message>
+        <location filename="../src/LocalSandboxWin.cpp" line="+120"/>
+        <source>Windows wouldn&apos;t create the sandbox: %1</source>
+        <translation>Windows a refusé de créer le bac à sable : %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Windows wouldn&apos;t open %1 to the sandbox: %2</source>
+        <translation>Windows a refusé d’ouvrir %1 au bac à sable : %2</translation>
     </message>
 </context>
 <context>
@@ -14084,7 +14116,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>Updater</name>
     <message>
-        <location filename="../src/Updater.cpp" line="+115"/>
+        <location filename="../src/Updater.cpp" line="+120"/>
         <source>Updates install on macOS only for now.</source>
         <translation>Pour l’instant, les mises à jour ne s’installent que sur macOS.</translation>
     </message>

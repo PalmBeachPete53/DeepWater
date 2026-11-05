@@ -1,5 +1,10 @@
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
+#include <QDebug>
 #include "BuildInfo.h"
 #include "HttpCache.h"
+#include "LocalEngine.h"
 #include "AiRead.h"
 #include "JournalData.h"
 #include "Myfxbook.h"
@@ -43,6 +48,32 @@ int main(int argc, char *argv[])
 
     // The bundle's Info.plist gives Finder and the Dock the .icns; this covers a bare binary run.
     app.setWindowIcon(QIcon(":/icon/deepwater-512.png"));
+
+    // Checks of the local engine, for the Windows CI. --llm-check <file.gguf>: it loads in the sandbox and answers.
+    // --llm-sandbox-check <file>: from inside the sandbox that file, a write beside it and the network are all refused.
+    {
+        const QStringList args = app.arguments();
+        const int sandboxArg = args.indexOf("--llm-sandbox-check");
+        if (sandboxArg > 0 && sandboxArg + 1 < args.size())
+            return LocalEngine::checkSandbox(args.at(sandboxArg + 1));
+        const int llmArg = args.indexOf("--llm-check");
+        if (llmArg > 0 && llmArg + 1 < args.size()) {
+            LocalEngine engine;
+            QObject::connect(&engine, &LocalEngine::loaded, &app, [&engine](const QJsonObject &info) {
+                qWarning().noquote() << "loaded:" << QJsonDocument(info).toJson(QJsonDocument::Compact);
+                engine.chat(QJsonArray {QJsonObject {{"role", "user"}, {"content", "Hello"}}}, QJsonObject {{"max_tokens", 8}});
+            });
+            QObject::connect(&engine, &LocalEngine::token, &app, [](const QString &t) { qWarning().noquote() << "token:" << t; });
+            QObject::connect(&engine, &LocalEngine::answered, &app, [](const QJsonObject &) { QCoreApplication::exit(0); });
+            QObject::connect(&engine, &LocalEngine::failed, &app, [](const QString &why) {
+                qWarning().noquote() << "failed:" << why;
+                QCoreApplication::exit(1);
+            });
+            QTimer::singleShot(180000, &app, [] { QCoreApplication::exit(2); });
+            engine.load("check", {args.at(llmArg + 1)}, 512);
+            return app.exec();
+        }
+    }
 
     // `deepwater --pine-js file.pine` prints the JavaScript PineTS runs for a Pine Script and exits.
     {

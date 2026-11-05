@@ -1,6 +1,7 @@
 #include "LocalEngine.h"
 
 #include <QCoreApplication>
+#include <QDebug>
 #include <QDir>
 #include <QFileInfo>
 #include <QJsonDocument>
@@ -9,6 +10,9 @@
 
 #ifdef Q_OS_UNIX
 #include <sys/resource.h>
+#endif
+#ifdef Q_OS_WIN
+#include "LocalSandboxWin.h"
 #endif
 
 namespace {
@@ -46,15 +50,43 @@ LocalEngine::~LocalEngine()
 
 QString LocalEngine::helperPath()
 {
+#ifdef Q_OS_WIN
+    return QCoreApplication::applicationDirPath() + "/deepwater-llm.exe";
+#else
     return QCoreApplication::applicationDirPath() + "/deepwater-llm";
+#endif
 }
 
 bool LocalEngine::available()
 {
 #ifdef Q_OS_MACOS
     return QFileInfo(helperPath()).isExecutable() && QFileInfo(SandboxExec).isExecutable();
+#elif defined(Q_OS_WIN)
+    return QFileInfo::exists(helperPath());
 #else
     return false;   // no sandbox written for other systems yet: the engine doesn't run there
+#endif
+}
+
+int LocalEngine::checkSandbox(const QString &file)
+{
+#ifdef Q_OS_WIN
+    QString error;
+    if (!localsandbox::prepare({}, QCoreApplication::applicationDirPath(), &error)) {
+        qWarning().noquote() << error;
+        return 2;
+    }
+    QProcess p;
+    localsandbox::applyTo(&p);
+    p.setWorkingDirectory(QCoreApplication::applicationDirPath());
+    p.setProcessChannelMode(QProcess::MergedChannels);
+    p.start(helperPath(), {"--sandbox-selftest", file});
+    const bool done = p.waitForFinished(90000);
+    qWarning().noquote() << QString::fromUtf8(p.readAll()) << "started:" << (p.error() != QProcess::FailedToStart);
+    return done && p.exitStatus() == QProcess::NormalExit ? p.exitCode() : 2;
+#else
+    Q_UNUSED(file);
+    return 2;
 #endif
 }
 
@@ -93,7 +125,19 @@ void LocalEngine::load(const QString &model, const QStringList &files, int conte
     QProcessEnvironment env;
     env.insert("LANG", "en_US.UTF-8");
     m_process->setProcessEnvironment(env);
+#ifdef Q_OS_WIN
+    m_process->setWorkingDirectory(QCoreApplication::applicationDirPath());
+    QString refused;
+    if (!localsandbox::prepare(files, QCoreApplication::applicationDirPath(), &refused)) {
+        delete m_process;
+        m_process = nullptr;
+        emit failed(refused);
+        return;
+    }
+    localsandbox::applyTo(m_process);
+#else
     m_process->setWorkingDirectory("/");
+#endif
 #ifdef Q_OS_UNIX
     m_process->setChildProcessModifier([] {
         const rlimit none {0, 0};
@@ -114,8 +158,12 @@ void LocalEngine::load(const QString &model, const QStringList &files, int conte
 
     const int threads = std::max(1, QThread::idealThreadCount() / 2);
     setState(State::Loading);
-    m_process->start(SandboxExec, {"-p", sandboxProfile(files), helperPath(), "--model", files.first(),
-                                   "--ctx", QString::number(context), "--threads", QString::number(threads)});
+    const QStringList arguments {"--model", files.first(), "--ctx", QString::number(context), "--threads", QString::number(threads)};
+#ifdef Q_OS_WIN
+    m_process->start(helperPath(), arguments);
+#else
+    m_process->start(SandboxExec, QStringList {"-p", sandboxProfile(files), helperPath()} + arguments);
+#endif
 }
 
 void LocalEngine::unload()

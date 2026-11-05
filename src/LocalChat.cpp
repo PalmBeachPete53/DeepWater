@@ -23,6 +23,9 @@
 #ifdef Q_OS_MACOS
 #include <sys/sysctl.h>
 #endif
+#ifdef Q_OS_WIN
+#include <windows.h>
+#endif
 
 namespace {
 
@@ -32,6 +35,10 @@ qint64 physicalMemory()
     int64_t bytes = 0;
     size_t len = sizeof bytes;
     if (sysctlbyname("hw.memsize", &bytes, &len, nullptr, 0) == 0) return bytes;
+#elif defined(Q_OS_WIN)
+    MEMORYSTATUSEX status {};
+    status.dwLength = sizeof status;
+    if (GlobalMemoryStatusEx(&status)) return qint64(status.ullTotalPhys);
 #endif
     return 0;
 }

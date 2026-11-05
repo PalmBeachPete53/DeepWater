@@ -210,7 +210,7 @@ void AiDock::refreshContext()
     m_contextLine->setText(context.isEmpty() ? QString() : tr("Context: %1").arg(context));
 }
 
-// Push-to-talk: nothing listens unless the button is held; recognition and voices stay on this Mac (Voice).
+// Push-to-talk: nothing listens unless the button is held; recognition and voices stay on this computer (Voice).
 void AiDock::buildVoice(QVBoxLayout *layout)
 {
     auto *row = new QHBoxLayout;
@@ -218,7 +218,7 @@ void AiDock::buildVoice(QVBoxLayout *layout)
     m_talk = new QPushButton(tr("Hold to talk"));
     m_talk->setObjectName("segButton");
     m_talk->setCursor(Qt::PointingHandCursor);
-    m_talk->setToolTip(tr("Listens only while held. Recognition runs on this Mac: no sound or text leaves it."));
+    m_talk->setToolTip(tr("Listens only while held. Recognition runs on this computer: no sound or text leaves it."));
     row->addWidget(m_talk);
     m_speak = new QCheckBox(tr("Read the answers aloud"));
     m_speak->setObjectName("qtCheck");
@@ -254,10 +254,18 @@ void AiDock::buildVoice(QVBoxLayout *layout)
         QString text;
         switch (why) {
         case Voice::Failure::Denied:
+#ifdef Q_OS_WIN
+            text = tr("Deepwater may not use the microphone: allow desktop apps in Settings › Privacy & security › Microphone.");
+#else
             text = tr("Deepwater may not use the microphone or speech recognition: allow them in System Settings › Privacy & Security.");
+#endif
             break;
         case Voice::Failure::NotOnDevice:
+#ifdef Q_OS_WIN
+            text = tr("This PC has no speech recognizer for %1: add the language's speech pack in Settings › Time & language › Speech.").arg(detail);
+#else
             text = tr("This Mac has no on-device recognition for %1 yet: turn on Dictation for that language in System Settings › Keyboard. Nothing is sent to a server instead.").arg(detail);
+#endif
             break;
         case Voice::Failure::NoMicrophone:
             text = tr("No microphone is available. %1").arg(detail);
