@@ -372,6 +372,13 @@ int main(int argc, char **argv)
     llama_model_params mp = llama_model_default_params();
     mp.n_gpu_layers = gpuLayers;
     e.model = llama_model_load_from_file(path.c_str(), mp);
+#ifdef _WIN32
+    // Not enough memory on the graphics card, most often: the CPU can still run it.
+    if (!e.model && mp.n_gpu_layers != 0) {
+        mp.n_gpu_layers = 0;
+        e.model = llama_model_load_from_file(path.c_str(), mp);
+    }
+#endif
     if (!e.model) {
         fail("load", "llama.cpp couldn't load the model");
         return 1;
@@ -386,6 +393,21 @@ int main(int argc, char **argv)
         cp.n_threads_batch = threads;
     }
     e.ctx = llama_init_from_model(e.model, cp);
+#ifdef _WIN32
+    if (!e.ctx && mp.n_gpu_layers != 0) {
+        llama_model_free(e.model);
+        mp.n_gpu_layers = 0;
+        e.model = llama_model_load_from_file(path.c_str(), mp);
+        if (e.model) {
+            e.vocab = llama_model_get_vocab(e.model);
+            e.ctx = llama_init_from_model(e.model, cp);
+        }
+    }
+    if (!e.model) {
+        fail("load", "llama.cpp couldn't load the model");
+        return 1;
+    }
+#endif
     if (!e.ctx) {
         fail("load", "llama.cpp couldn't create a context for the model");
         llama_model_free(e.model);
@@ -397,7 +419,12 @@ int main(int argc, char **argv)
     char desc[256] = {};
     llama_model_desc(e.model, desc, sizeof desc);
     json devices = json::array();
-    for (size_t i = 0; i < ggml_backend_dev_count(); ++i) devices.push_back(ggml_backend_dev_name(ggml_backend_dev_get(i)));
+    for (size_t i = 0; i < ggml_backend_dev_count(); ++i) {
+        ggml_backend_dev_t device = ggml_backend_dev_get(i);
+        // What this model really runs on: not a GPU it had to leave for the CPU.
+        if (mp.n_gpu_layers != 0 || ggml_backend_dev_type(device) == GGML_BACKEND_DEVICE_TYPE_CPU)
+            devices.push_back(ggml_backend_dev_name(device));
+    }
     emit({{"type", "ready"}, {"model", desc}, {"params", llama_model_n_params(e.model)},
           {"bytes", llama_model_size(e.model)}, {"ctx", llama_n_ctx(e.ctx)}, {"ctx_train", ctxTrain},
           {"devices", devices}, {"template", tmpl != nullptr}, {"load_ms", msSince(start)}});

@@ -112,6 +112,17 @@ jobs:
               -not (Test-Path "${env:ProgramFiles(x86)}\NSIS\makensis.exe")) { choco install nsis -y --no-progress }
           if (-not (Get-Command ninja -ErrorAction SilentlyContinue)) { choco install ninja -y --no-progress }
 
+      # glslc, the headers and the loader, for the local engine's GPU backend (llama.cpp's Vulkan).
+      - name: Install the Vulkan SDK
+        shell: pwsh
+        run: |
+          $v = '1.4.363.1'
+          Invoke-WebRequest "https://sdk.lunarg.com/sdk/download/$v/windows/vulkansdk-windows-X64-$v.exe" -OutFile vulkan-sdk.exe
+          Start-Process .\vulkan-sdk.exe -Wait -ArgumentList '--root', "C:\VulkanSDK\$v", '--accept-licenses', '--default-answer', '--confirm-command', 'install'
+          if (-not (Test-Path "C:\VulkanSDK\$v\Bin\glslc.exe")) { throw "no glslc in the SDK" }
+          "VULKAN_SDK=C:\VulkanSDK\$v" | Out-File $env:GITHUB_ENV -Append -Encoding utf8
+          "C:\VulkanSDK\$v\Bin" | Out-File $env:GITHUB_PATH -Append -Encoding utf8
+
       # The x64 MSVC environment (what the "x64 Native Tools Command Prompt" sets) for the next steps.
       - name: MSVC environment
         shell: pwsh
@@ -184,6 +195,35 @@ jobs:
           $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--llm-check', "`"$model`""
           Get-Content $log
           if ($p.ExitCode -ne 0) { throw "the model didn't run in the sandbox (exit $($p.ExitCode))" }
+          # This machine has no GPU driver: the engine must have settled on the CPU.
+          if (-not (Select-String -Path $log -Pattern '"devices":\["CPU"\]' -Quiet)) { throw "without a driver the engine should be on the CPU alone" }
+
+          # A software Vulkan driver stands in for a graphics card: Vulkan's whole path, inside the sandbox.
+          $m = '26.2.6'
+          Invoke-WebRequest "https://github.com/pal1000/mesa-dist-win/releases/download/$m/mesa3d-$m-release-msvc.7z" -OutFile mesa.7z
+          7z x mesa.7z -omesa -y | Out-Null
+          $lvp = "$env:ProgramFiles\lavapipe"
+          New-Item -ItemType Directory $lvp -Force | Out-Null
+          Copy-Item mesa\x64\* $lvp -Recurse
+          $icd = (Get-ChildItem $lvp -Filter 'lvp_icd*.json' | Select-Object -First 1).FullName
+          "ICD: $icd"; Get-Content $icd
+          New-Item -Path 'HKLM:\SOFTWARE\Khronos\Vulkan\Drivers' -Force | Out-Null
+          New-ItemProperty -Path 'HKLM:\SOFTWARE\Khronos\Vulkan\Drivers' -Name $icd -Value 0 -PropertyType DWord -Force | Out-Null
+          $log = "$PWD\build\dist\engine-vulkan.log"
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--llm-check', "`"$model`""
+          Get-Content $log
+          if ($p.ExitCode -ne 0) { throw "the model didn't run on Vulkan in the sandbox (exit $($p.ExitCode))" }
+          if (-not (Select-String -Path $log -Pattern '"Vulkan' -Quiet)) { throw "the engine didn't use the Vulkan driver" }
+
+          # The CPU mode, what a driver that crashes falls back on, must keep the driver out.
+          $log = "$PWD\build\dist\engine-cpu.log"
+          $env:DEEPWATER_LLM_CPU = '1'
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--llm-check', "`"$model`""
+          Remove-Item Env:DEEPWATER_LLM_CPU
+          Get-Content $log
+          if ($p.ExitCode -ne 0) { throw "the model didn't run in CPU mode (exit $($p.ExitCode))" }
+          if (-not (Select-String -Path $log -Pattern '"devices":\["CPU"\]' -Quiet)) { throw "CPU mode still used the driver" }
+          Remove-ItemProperty -Path 'HKLM:\SOFTWARE\Khronos\Vulkan\Drivers' -Name $icd
 
       # The packed folder must run on its own: launch it with Qt off the PATH and no Qt variables, open the News
       # reader on a page (Qt WebEngine and its QtWebEngineProcess.exe on Windows), and take a screenshot.
@@ -194,7 +234,7 @@ jobs:
         run: |
           $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
           Get-ChildItem $dir | Format-Table -AutoSize Mode, Length, Name | Out-String -Width 200
-          foreach ($f in 'deepwater.exe', 'deepwater-llm.exe', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
+          foreach ($f in 'deepwater.exe', 'deepwater-llm.exe', 'vulkan-1.dll', 'Qt6Core.dll', 'QtWebEngineProcess.exe', 'qt.conf', 'msvcp140.dll') {
             if (-not (Test-Path "$dir\$f")) { throw "$f isn't at the top of the packed folder" }
           }
           $fullPath = $env:PATH

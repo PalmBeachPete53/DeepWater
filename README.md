@@ -65,9 +65,13 @@ renderer must be able to read the app's folder: from a folder with a narrow acce
 `0xC0000135` and the reader stays blank, while Program Files works. The packed folder is therefore tested with
 `QTWEBENGINE_DISABLE_SANDBOX=1`, and the install with the sandbox on.
 
-What differs from the Mac: the **local models** run on the CPU (AVX2), in an AppContainer (`src/LocalSandboxWin.*`, no network,
-read access to the model and the app's folder only, a job forbidding child processes; the engine doesn't start if it can't be
-set up). The **reader** uses Qt WebEngine rather than WebKit, and its **translation** the local model, as Apple's framework
+What differs from the Mac: the **local models** run in an AppContainer (`src/LocalSandboxWin.*`, no network, read access to the
+model and the app's folder only, a job forbidding child processes; the engine doesn't start if it can't be set up), on the GPU
+through Vulkan, whatever its maker, or else on the CPU (AVX2). The Vulkan loader (`vulkan-1.dll`, from the Vulkan SDK, Apache 2.0)
+is installed beside the app, so a PC without a driver simply finds no GPU. A model too big for the graphics card goes to the CPU
+in the helper, and a driver that brings the helper down while loading gets one more try with `VK_LOADER_DRIVERS_DISABLE=*`
+(`LocalEngine::finished`). The CI checks all this with Mesa's software driver, lavapipe, inside the sandbox; no real graphics
+card has run it yet, and whether a maker's driver accepts an AppContainer is exactly what the CPU fallback is there for. The **reader** uses Qt WebEngine rather than WebKit, and its **translation** the local model, as Apple's framework
 doesn't exist there. **Voice** uses SAPI, on this PC only (`src/VoiceWin.cpp`), which needs the language's speech pack; it has
 only been compiled, as the CI has no microphone. **Updates** aren't offered yet: only the Mac's are written.
 

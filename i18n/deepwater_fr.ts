@@ -400,12 +400,12 @@ Durée %5
     </message>
     <message>
         <location line="+1"/>
-        <location line="+184"/>
+        <location line="+187"/>
         <source>Load</source>
         <translation>Charger</translation>
     </message>
     <message>
-        <location line="-181"/>
+        <location line="-184"/>
         <source>Model</source>
         <translation>Modèle</translation>
     </message>
@@ -535,7 +535,7 @@ Durée %5
         <translation type="vanished">arrêté : les appels d’outils échouaient à chaque fois</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+53"/>
         <source>Skills of slot %1: %2. Its tools: %3. Each call is checked against the slot and written to the journal below.</source>
         <translation>Compétences de l’emplacement %1 : %2. Ses outils : %3. Chaque appel est vérifié auprès de l’emplacement et inscrit au journal ci-dessous.</translation>
     </message>
@@ -592,7 +592,7 @@ Durée %5
         </translation>
     </message>
     <message>
-        <location line="-83"/>
+        <location line="-86"/>
         <source>run</source>
         <translation>exécuté</translation>
     </message>
@@ -619,7 +619,7 @@ Durée %5
         <translation type="vanished">appel d’un outil…</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+55"/>
         <source>Unload</source>
         <translation>Décharger</translation>
     </message>
@@ -632,7 +632,7 @@ Durée %5
         <translation type="vanished">Aucun modèle ne peut tourner : glissez un modèle GGUF dans un emplacement (Modèles › Emplacements) ; il apparaît ici une fois que l’emplacement l’a lié.</translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-23"/>
         <source>Not loaded.</source>
         <translation>Non chargé.</translation>
     </message>
@@ -643,21 +643,26 @@ Durée %5
     </message>
     <message>
         <location line="+5"/>
+        <source>Vulkan GPU</source>
+        <translation>GPU Vulkan</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>%1 · %2 billion parameters · %3 · context %4 tokens · loaded in %5 s</source>
         <translation>%1 · %2 milliards de paramètres · %3 · contexte de %4 jetons · chargé en %5 s</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-4"/>
         <source>Metal GPU</source>
         <translation>GPU Metal</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-2"/>
         <source>CPU</source>
         <translation>Processeur</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+44"/>
         <source>Slot %1 grants no skill: the model sees this conversation and nothing else.</source>
         <translation>L’emplacement %1 n’accorde aucune compétence : le modèle voit cette conversation et rien d’autre.</translation>
     </message>
@@ -6750,12 +6755,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>LocalEngine</name>
     <message>
-        <location filename="../src/LocalEngine.cpp" line="+113"/>
+        <location filename="../src/LocalEngine.cpp" line="+122"/>
         <source>The local engine isn&apos;t part of this build.</source>
         <translation>Le moteur local ne fait pas partie de cette version.</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+143"/>
         <source>the engine couldn&apos;t start (%1)</source>
         <translation>le moteur n’a pas pu démarrer (%1)</translation>
     </message>

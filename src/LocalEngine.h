@@ -52,6 +52,7 @@ signals:
     void failed(const QString &message);
 
 private:
+    void start(const QString &model, const QStringList &files, int context, bool cpuOnly);
     void readOutput();
     void finished();
     void setState(State s);
@@ -63,4 +64,8 @@ private:
     QByteArray m_buffer;
     QByteArray m_stderr;   // the end of it, for the message when the helper fails
     bool m_unloading = false;
+    // Windows: a GPU driver that brings the helper down while loading gets one more try, on the CPU.
+    QStringList m_files;
+    int m_context = 0;
+    bool m_cpuOnly = false;
 };

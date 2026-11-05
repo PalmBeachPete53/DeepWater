@@ -238,13 +238,16 @@ QString AiLocalView::engineState(LocalChat *chat, QString *tone)
     if (s == LocalEngine::State::Off) return tr("Not loaded.");
     if (s == LocalEngine::State::Loading) return tr("Loading %1 in the sandbox…").arg(engine->model());
     const QJsonObject i = engine->info();
-    bool gpu = false;
-    for (const QJsonValue &d : i.value("devices").toArray()) gpu = gpu || d.toString().startsWith("MTL");
+    QString device = tr("CPU");
+    for (const QJsonValue &d : i.value("devices").toArray()) {
+        if (d.toString().startsWith("MTL")) device = tr("Metal GPU");
+        else if (d.toString().startsWith("Vulkan")) device = tr("Vulkan GPU");
+    }
     *tone = "good";
     return QString::fromUtf8("✓ ") + tr("%1 · %2 billion parameters · %3 · context %4 tokens · loaded in %5 s")
                .arg(i.value("model").toString().remove(" ?B"))   // llama.cpp's "?B" when it can't name the size
                .arg(QLocale().toString(i.value("params").toDouble() / 1e9, 'f', 1))
-               .arg(gpu ? tr("Metal GPU") : tr("CPU"))
+               .arg(device)
                .arg(QLocale().toString(i.value("ctx").toInt()))
                .arg(QLocale().toString(i.value("load_ms").toDouble() / 1000.0, 'f', 1));
 }

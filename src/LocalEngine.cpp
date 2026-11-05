@@ -108,7 +108,16 @@ QString LocalEngine::sandboxProfile(const QStringList &files)
 
 void LocalEngine::load(const QString &model, const QStringList &files, int context)
 {
+    // DEEPWATER_LLM_CPU: for the Windows CI, to check that the CPU mode really keeps the GPU's drivers out.
+    start(model, files, context, qEnvironmentVariableIsSet("DEEPWATER_LLM_CPU"));
+}
+
+void LocalEngine::start(const QString &model, const QStringList &files, int context, bool cpuOnly)
+{
     unload();
+    m_files = files;
+    m_context = context;
+    m_cpuOnly = cpuOnly;
     if (!available()) {
         emit failed(tr("The local engine isn't part of this build."));
         return;
@@ -130,6 +139,8 @@ void LocalEngine::load(const QString &model, const QStringList &files, int conte
     const QProcessEnvironment system = QProcessEnvironment::systemEnvironment();
     for (const char *name : {"SystemRoot", "SystemDrive", "USERPROFILE", "LOCALAPPDATA", "APPDATA", "TEMP", "TMP"})
         if (system.contains(name)) env.insert(name, system.value(name));
+    if (cpuOnly)
+        env.insert("VK_LOADER_DRIVERS_DISABLE", "*");   // the Vulkan loader then opens no driver at all
 #endif
     m_process->setProcessEnvironment(env);
 #ifdef Q_OS_WIN
@@ -165,7 +176,9 @@ void LocalEngine::load(const QString &model, const QStringList &files, int conte
 
     const int threads = std::max(1, QThread::idealThreadCount() / 2);
     setState(State::Loading);
-    const QStringList arguments {"--model", files.first(), "--ctx", QString::number(context), "--threads", QString::number(threads)};
+    QStringList arguments {"--model", files.first(), "--ctx", QString::number(context), "--threads", QString::number(threads)};
+    if (cpuOnly)
+        arguments << "--gpu-layers" << "0";
 #ifdef Q_OS_WIN
     m_process->start(helperPath(), arguments);
 #else
@@ -234,6 +247,20 @@ void LocalEngine::readOutput()
 void LocalEngine::finished()
 {
     if (!m_process || m_unloading) return;
+#ifdef Q_OS_WIN
+    // Windows reports a crash as a normal exit whose code is the NTSTATUS, 0xC...
+    const bool crashed = m_process->exitStatus() == QProcess::CrashExit || uint(m_process->exitCode()) >= 0xC0000000u;
+    if (m_state == State::Loading && !m_cpuOnly && crashed && m_process->error() != QProcess::FailedToStart) {
+        qWarning().noquote() << "local engine: it stopped while loading, trying again on the CPU";
+        const QString model = m_model;
+        const QStringList files = m_files;
+        const int context = m_context;
+        m_process->deleteLater();
+        m_process = nullptr;
+        start(model, files, context, true);
+        return;
+    }
+#endif
     QString why;
     if (m_process->error() == QProcess::FailedToStart) why = tr("the engine couldn't start (%1)").arg(m_process->errorString());
     else if (m_process->exitStatus() == QProcess::CrashExit) why = tr("the engine stopped unexpectedly");
