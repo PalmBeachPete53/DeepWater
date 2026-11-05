@@ -72,7 +72,7 @@ jobs:
 
   windows:
     name: Windows 11 (.exe)
-    runs-on: windows-2025   # same base as Windows 11 24H2: Qt 6.12's DLLs don't load on Server 2022's older system
+    runs-on: windows-2025   # the same base as Windows 11 24H2
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
@@ -86,7 +86,9 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
-          version: ${{ env.QT_VERSION }}
+          # Not 6.12.0: its WebEngine for MSVC dates from July, its qtbase from September, and they don't load together
+          # (a constructor became protected, which MSVC writes into the symbol). Checked: 6.11.3's pieces match.
+          version: 6.11.3
           host: windows
           target: desktop
           arch: win64_msvc2022_64
@@ -152,6 +154,12 @@ jobs:
           retention-days: 5
           compression-level: 0
           if-no-files-found: error
+
+      - name: The packed DLLs fit together
+        shell: pwsh
+        run: |
+          $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
+          python tools/check_pe_imports.py "$dir"
 
       # The local engine, from the packed folder: refused the network and the user's files inside its sandbox, and able to
       # load and run a small model there.
