@@ -204,6 +204,7 @@ if(DEEPWATER_LLM)
     set_target_properties(deepwater-llm PROPERTIES AUTOMOC OFF AUTORCC OFF
         RUNTIME_OUTPUT_DIRECTORY $<IF:$<BOOL:${APPLE}>,${CMAKE_BINARY_DIR}/deepwater.app/Contents/MacOS,${CMAKE_BINARY_DIR}>)
     if(WIN32)
+        target_link_libraries(deepwater-llm PRIVATE ws2_32)   # its sandbox self-test tries the network
         install(TARGETS deepwater-llm RUNTIME DESTINATION .)
     endif()
 endif()
