@@ -359,25 +359,43 @@ jobs:
   # names the commit, in the form src/UpdateRelease.cpp parses. A tag made with this token starts no workflow.
   update-release:
     name: Update release
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    needs: [macos]
+    # A system whose build failed just isn't in this release: the other shouldn't wait for it.
+    if: ${{ !cancelled() && github.ref == 'refs/heads/main' && github.event_name == 'push' && (needs.macos.result == 'success' || needs.windows.result == 'success') }}
+    needs: [macos, windows]
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 40   # the "change:" lines
       - uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           name: deepwater-macos
           path: artifact
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: deepwater-windows
+          path: artifact
+      - name: Notes
+        run: |
+          {
+            echo 'Latest build of main, for the update system.'
+            echo
+            echo "commit: $GITHUB_SHA"
+            echo "time: $(git log -1 --format=%ct "$GITHUB_SHA")"
+            git log -30 --format='change: %H %s' "$GITHUB_SHA"
+          } > notes.txt
+          ls -la artifact
       - name: Publish
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete latest-main --cleanup-tag --yes || true
-          notes="$(printf 'Latest build of main, for the update system.\n\ncommit: %s\ntime: %s\n' "$GITHUB_SHA" "$(git log -1 --format=%ct)")"
-          gh release create latest-main artifact/*.dmg --prerelease --target "$GITHUB_SHA" \
-            --title "Latest build of main" --notes "$notes"
+          gh release create latest-main artifact/*.dmg artifact/*.exe --prerelease --target "$GITHUB_SHA" \
+            --title "Latest build of main" --notes-file notes.txt
       # Tells the running apps, which hold a WebSocket on this channel (src/Updater.cpp). It says nothing and isn't trusted:
       # they then ask GitHub. A failure here only means they learn of the build at their next start.
       - name: Tell the apps

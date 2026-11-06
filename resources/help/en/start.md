@@ -32,7 +32,7 @@ The pencil after the tabs turns on the edit mode: drag a tab to move it, click i
 
 When a new version is out, the arrow in the header turns violet with a dot, and a banner and a desktop notification say so. Click the arrow to see what's new, then **Update**: Deepwater downloads the new version and checks it; **Restart and install** closes the app and starts the new one. Your data and settings aren't touched, and the old version is kept in the app's data folder (`update/previous.app`).
 
-The app stays connected and hears of a new version as soon as it is published, which you can turn off in that window. While the repository is private it needs access to GitHub: a token saved in [Sources](help:sources) › Updates, or the GitHub CLI signed in on this computer.
+The app stays connected and hears of a new version as soon as it is published, which you can turn off in that window. No account is needed. On Windows, **Download the installer** gets the new version, which you then run yourself.
 
 ## Settings
 

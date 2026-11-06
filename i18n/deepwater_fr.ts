@@ -7491,7 +7491,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1504"/>
+        <location filename="../src/MainWindow.cpp" line="+1505"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -7570,6 +7570,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>MetaTrader</source>
+        <translation>MetaTrader</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>AI</source>
         <translation>IA</translation>
     </message>
@@ -7579,7 +7584,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+436"/>
+        <location line="+431"/>
         <source>A new version of Deepwater is available.</source>
         <translation>Une nouvelle version de Deepwater est disponible.</translation>
     </message>
@@ -7589,7 +7594,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Voir</translation>
     </message>
     <message>
-        <location line="+503"/>
+        <location line="+507"/>
         <source>Trade in goods</source>
         <translation>Commerce de biens</translation>
     </message>
@@ -7957,6 +7962,532 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/CalendarData.cpp" line="+261"/>
         <source>no trading sessions in Yahoo&apos;s answer</source>
         <translation>aucune séance dans la réponse de Yahoo</translation>
+    </message>
+</context>
+<context>
+    <name>MetaTraderPage</name>
+    <message>
+        <location filename="../src/MetaTraderPage.cpp" line="+86"/>
+        <source>Orders sent from here are real orders on your MetaTrader accounts, through MetaCopier, a paid service that holds your MetaTrader logins. Check that your broker or prop firm allows it: FTMO limits the capital per trader or strategy and may suspend accounts with identical trades.</source>
+        <translation>Les ordres envoyés d&apos;ici sont de vrais ordres sur vos comptes MetaTrader, via MetaCopier, un service payant qui détient vos identifiants MetaTrader. Vérifiez que votre courtier ou votre prop firm l&apos;autorise : FTMO limite le capital par trader ou par stratégie et peut suspendre les comptes aux trades identiques.</translation>
+    </message>
+    <message>
+        <location line="+44"/>
+        <location line="+198"/>
+        <source>Your MetaCopier API key</source>
+        <translation>Votre clé d&apos;API MetaCopier</translation>
+    </message>
+    <message>
+        <location line="-198"/>
+        <location line="+184"/>
+        <source>A key is saved in this computer&apos;s secret store</source>
+        <translation>Une clé est enregistrée dans le coffre de cet ordinateur</translation>
+    </message>
+    <message>
+        <location line="-174"/>
+        <source>METACOPIER KEY</source>
+        <translation>CLÉ METACOPIER</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Forget</source>
+        <translation>Oublier</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open MetaCopier</source>
+        <translation>Ouvrir MetaCopier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Accounts are added on MetaCopier&apos;s site, which is also where the API key is made</source>
+        <translation>Les comptes s&apos;ajoutent sur le site de MetaCopier, où se crée aussi la clé d&apos;API</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Accounts</source>
+        <translation>Comptes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Allow real-money accounts</source>
+        <translation>Autoriser les comptes d&apos;argent réel</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>For this session only. An account the service doesn&apos;t report as a demo counts as real money.</source>
+        <translation>Pour cette session seulement. Un compte que le service n&apos;indique pas comme démo compte comme de l&apos;argent réel.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Armed</source>
+        <translation>Armé</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+67"/>
+        <location line="+17"/>
+        <source>Account</source>
+        <translation>Compte</translation>
+    </message>
+    <message>
+        <location line="-84"/>
+        <source>Server</source>
+        <translation>Serveur</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Kind</source>
+        <translation>Type</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+67"/>
+        <source>State</source>
+        <translation>État</translation>
+    </message>
+    <message>
+        <location line="-67"/>
+        <source>Balance</source>
+        <translation>Solde</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Equity</source>
+        <translation>Capitaux</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+84"/>
+        <location line="+262"/>
+        <source>Open</source>
+        <translation>Ouvert</translation>
+    </message>
+    <message>
+        <location line="-330"/>
+        <source>SYMBOL</source>
+        <translation>SYMBOLE</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <location line="+344"/>
+        <location line="+24"/>
+        <location line="+40"/>
+        <source>Buy</source>
+        <translation>Achat</translation>
+    </message>
+    <message>
+        <location line="-408"/>
+        <location line="+344"/>
+        <location line="+24"/>
+        <location line="+40"/>
+        <source>Sell</source>
+        <translation>Vente</translation>
+    </message>
+    <message>
+        <location line="-407"/>
+        <source>RISK PER ACCOUNT</source>
+        <translation>RISQUE PAR COMPTE</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>STOP</source>
+        <translation>STOP</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>TARGET</source>
+        <translation>OBJECTIF</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>optional</source>
+        <translation>facultatif</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Prepare</source>
+        <translation>Préparer</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Plan</source>
+        <translation>Plan</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Send to the armed accounts</source>
+        <translation>Envoyer aux comptes armés</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+17"/>
+        <source>Symbol</source>
+        <translation>Symbole</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <location line="+17"/>
+        <source>Side</source>
+        <translation>Sens</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Price</source>
+        <translation>Prix</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+17"/>
+        <source>Stop</source>
+        <translation>Stop</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <location line="+17"/>
+        <source>Target</source>
+        <translation>Objectif</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <location line="+17"/>
+        <source>Lots</source>
+        <translation>Lots</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Risk</source>
+        <translation>Risque</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location line="+306"/>
+        <source>Prepare an order to see what each account would send. Lots are rounded down, so an account never risks more than asked.</source>
+        <translation>Préparez un ordre pour voir ce que chaque compte enverrait. Les lots sont arrondis à l&apos;inférieur : un compte ne risque jamais plus que demandé.</translation>
+    </message>
+    <message>
+        <location line="-296"/>
+        <source>Positions</source>
+        <translation>Positions</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Close all on the armed accounts</source>
+        <translation>Tout fermer sur les comptes armés</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Profit</source>
+        <translation>Résultat</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Close the position</source>
+        <translation>Fermer la position</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Close %1 %2 lots of %3 on %4?</source>
+        <translation>Fermer %1 %2 lots de %3 sur %4 ?</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Trying the key…</source>
+        <translation>Essai de la clé…</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>MetaCopier refused this key: %1</source>
+        <translation>MetaCopier a refusé cette clé : %1</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>The key wasn&apos;t saved: %1. Nothing was kept.</source>
+        <translation>La clé n&apos;a pas été enregistrée : %1. Rien n&apos;a été conservé.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <location line="+34"/>
+        <source>No account on this key: add them on MetaCopier&apos;s site.</source>
+        <translation>Aucun compte sur cette clé : ajoutez-les sur le site de MetaCopier.</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>The key was removed from this computer.</source>
+        <translation>La clé a été retirée de cet ordinateur.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Loading the accounts…</source>
+        <translation>Chargement des comptes…</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>MetaCopier didn&apos;t answer: %1</source>
+        <translation>MetaCopier n&apos;a pas répondu : %1</translation>
+    </message>
+    <message>
+        <location line="+85"/>
+        <source>Real money: allow it above first</source>
+        <translation>Argent réel : autorisez-le d&apos;abord ci-dessus</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Include this account in the orders</source>
+        <translation>Inclure ce compte dans les ordres</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Demo</source>
+        <translation>Démo</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+219"/>
+        <source>Real money</source>
+        <translation>Argent réel</translation>
+    </message>
+    <message>
+        <location line="-219"/>
+        <source>Unknown: counted as real</source>
+        <translation>Inconnu : compté comme réel</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Wrong login</source>
+        <translation>Identifiants erronés</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+65"/>
+        <source>Read only</source>
+        <translation>Lecture seule</translation>
+    </message>
+    <message>
+        <location line="-65"/>
+        <source>Connected</source>
+        <translation>Connecté</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location line="+63"/>
+        <source>Not connected</source>
+        <translation>Non connecté</translation>
+    </message>
+    <message>
+        <location line="-52"/>
+        <source>The armed accounts hold more than %1. If they are FTMO accounts, identical trades over its limit of $400,000 per trader or strategy, counted before scaling, can get them suspended.</source>
+        <translation>Les comptes armés détiennent plus de %1. S&apos;il s&apos;agit de comptes FTMO, des trades identiques au-delà de sa limite de 400 000 $ par trader ou par stratégie, comptée avant scaling, peuvent les faire suspendre.</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Arm at least one account.</source>
+        <translation>Armez au moins un compte.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A symbol and a stop are needed: without a stop, the risk can&apos;t be worked out.</source>
+        <translation>Il faut un symbole et un stop : sans stop, le risque ne peut pas être calculé.</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Pricing the order on each account…</source>
+        <translation>Calcul de l&apos;ordre sur chaque compte…</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>No such symbol on this account</source>
+        <translation>Ce symbole n&apos;existe pas sur ce compte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Several symbols could be it: %1</source>
+        <translation>Plusieurs symboles possibles : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Symbol disabled by the broker</source>
+        <translation>Symbole désactivé par le courtier</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The service gave no contract size or volume steps</source>
+        <translation>Le service n&apos;a donné ni taille de contrat ni pas de volume</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No price</source>
+        <translation>Pas de prix</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No price to convert into the account&apos;s currency</source>
+        <translation>Pas de prix pour convertir dans la devise du compte</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No balance known</source>
+        <translation>Solde inconnu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Invalid risk</source>
+        <translation>Risque invalide</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Risk over %1 %</source>
+        <translation>Risque supérieur à %1 %</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>No stop</source>
+        <translation>Pas de stop</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Stop on the wrong side of the price</source>
+        <translation>Stop du mauvais côté du prix</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Target on the wrong side of the price</source>
+        <translation>Objectif du mauvais côté du prix</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Under the minimum volume at this risk</source>
+        <translation>Sous le volume minimum à ce risque</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Wrong MetaTrader login</source>
+        <translation>Identifiants MetaTrader erronés</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Real money not allowed</source>
+        <translation>Argent réel non autorisé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>The risk couldn&apos;t be checked</source>
+        <translation>Le risque n&apos;a pas pu être vérifié</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Ready, at the symbol&apos;s maximum volume</source>
+        <translation>Prêt, au volume maximum du symbole</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ready</source>
+        <translation>Prêt</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sending…</source>
+        <translation>Envoi…</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Sent, checking on the account…</source>
+        <translation>Envoyé, vérification sur le compte…</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Refused: %1</source>
+        <translation>Refusé : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Not seen on the account: check in MetaTrader before sending again</source>
+        <translation>Pas vu sur le compte : vérifiez dans MetaTrader avant de renvoyer</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>A plan holds for %1 seconds: prices move. Sending uses it up.</source>
+        <translation>Un plan vaut %1 secondes : les prix bougent. L&apos;envoi le consomme.</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Close</source>
+        <translation>Fermer</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <location line="+34"/>
+        <source>This plan is too old: prepare the order again.</source>
+        <translation>Ce plan est trop ancien : préparez de nouveau l&apos;ordre.</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>%1: %2 %3 lots of %4, risk %5</source>
+        <translation>%1 : %2 %3 lots de %4, risque %5</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Send this order</source>
+        <translation>Envoyer cet ordre</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+1"/>
+        <source>Send to %n account(s), REAL MONEY included?</source>
+        <translation>
+            <numerusform>Envoyer à %n compte, ARGENT RÉEL compris ?</numerusform>
+            <numerusform>Envoyer à %n comptes, ARGENT RÉEL compris ?</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>Send to %n account(s)?</source>
+        <translation>
+            <numerusform>Envoyer à %n compte ?</numerusform>
+            <numerusform>Envoyer à %n comptes ?</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Send</source>
+        <translation>Envoyer</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>The position wasn&apos;t closed: %1</source>
+        <translation>La position n&apos;a pas été fermée : %1</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Close all</source>
+        <translation>Tout fermer</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+0"/>
+        <source>Close every position on %n armed account(s), including those not opened from here?</source>
+        <translation>
+            <numerusform>Fermer toutes les positions de %n compte armé, y compris celles ouvertes ailleurs ?</numerusform>
+            <numerusform>Fermer toutes les positions de %n comptes armés, y compris celles ouvertes ailleurs ?</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>%1 wasn&apos;t closed: %2</source>
+        <translation>%1 n&apos;a pas été fermé : %2</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>REAL</source>
+        <translation>REEL</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Orders will be able to reach real-money accounts until the app closes. Type %1 to allow it.</source>
+        <translation>Les ordres pourront atteindre les comptes d&apos;argent réel jusqu&apos;à la fermeture de l&apos;app. Tapez %1 pour l&apos;autoriser.</translation>
     </message>
 </context>
 <context>
@@ -12761,12 +13292,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Mises à jour</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Token with read access to the repository&apos;s contents (optional with the GitHub CLI)</source>
-        <translation>Jeton avec accès en lecture au contenu du dépôt (facultatif avec la CLI GitHub)</translation>
+        <translation type="vanished">Jeton avec accès en lecture au contenu du dépôt (facultatif avec la CLI GitHub)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>The app&apos;s updates: the latest build of main</source>
         <translation>Mises à jour de l’application : le dernier build de main</translation>
     </message>
@@ -12888,7 +13418,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>hf_…</translation>
     </message>
     <message>
-        <location line="+165"/>
+        <location line="+181"/>
         <source>The key was refused (HTTP %1)</source>
         <translation>La clé a été refusée (HTTP %1)</translation>
     </message>
@@ -12951,7 +13481,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1420"/>
+        <location line="-1436"/>
         <location line="+439"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
@@ -13253,7 +13783,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Les clés n’ont pas pu être enregistrées dans %1</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+79"/>
         <source>Turned off</source>
         <translation>Désactivée</translation>
     </message>
@@ -13264,7 +13794,8 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Site inconnu</translation>
     </message>
     <message>
-        <location line="-259"/>
+        <location line="-291"/>
+        <location line="+32"/>
         <location line="+39"/>
         <location line="+231"/>
         <source>HTTP %1</source>
@@ -13275,7 +13806,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Pays (zone euro et membres) : M1, M2, M3, prêts, taux hypothécaires, débiteurs et de dépôt, bilans des banques centrales. Desk › Taux : la courbe de la zone euro et les dates de réunion</translation>
     </message>
     <message>
-        <location line="-1228"/>
+        <location line="-1244"/>
         <source>Countries: policy rates, residential property prices, household and private debt in % of GDP. Desk › Notes: central bankers&apos; speeches</source>
         <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
     </message>
@@ -13343,7 +13874,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Desk › Taux : la courbe des taux</translation>
     </message>
     <message>
-        <location line="+914"/>
+        <location line="+176"/>
+        <source>Public repository: no account needed</source>
+        <translation>Dépôt public : aucun compte nécessaire</translation>
+    </message>
+    <message>
+        <location line="+754"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -14042,7 +14578,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>UpdateDialog</name>
     <message>
-        <location filename="../src/UpdateDialog.cpp" line="+22"/>
+        <location filename="../src/UpdateDialog.cpp" line="+23"/>
         <source>unknown build</source>
         <translation>build inconnu</translation>
     </message>
@@ -14092,14 +14628,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Deepwater est à jour.</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>The repository is private, so checking takes a GitHub token. Save one in Sources › Updates (read access to the repository&apos;s contents), or sign in with the GitHub CLI (gh auth login).</source>
-        <translation>Le dépôt est privé : la vérification demande un jeton GitHub. Enregistrez-en un dans Sources › Mises à jour (accès en lecture au contenu du dépôt), ou connectez-vous avec la CLI GitHub (gh auth login).</translation>
+        <translation type="vanished">Le dépôt est privé : la vérification demande un jeton GitHub. Enregistrez-en un dans Sources › Mises à jour (accès en lecture au contenu du dépôt), ou connectez-vous avec la CLI GitHub (gh auth login).</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Open Sources</source>
-        <translation>Ouvrir Sources</translation>
+        <translation type="vanished">Ouvrir Sources</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>A new build is ready. Download the installer and run it: your data and settings aren&apos;t touched.</source>
+        <translation>Une nouvelle version est prête. Téléchargez l&apos;installeur et lancez-le : vos données et vos réglages ne sont pas touchés.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Download the installer</source>
+        <translation>Télécharger l&apos;installeur</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -14160,7 +14704,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>Updater</name>
     <message>
-        <location filename="../src/Updater.cpp" line="+120"/>
+        <location filename="../src/Updater.cpp" line="+140"/>
         <source>Updates install on macOS only for now.</source>
         <translation>Pour l’instant, les mises à jour ne s’installent que sur macOS.</translation>
     </message>
@@ -14175,17 +14719,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Deepwater ne peut pas écrire dans %1.</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+56"/>
         <source>GitHub is turned off in Sources.</source>
         <translation>GitHub est désactivé dans Sources.</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+22"/>
+        <source>GitHub is limiting requests from this connection: try again in an hour.</source>
+        <translation>GitHub limite les requêtes depuis cette connexion : réessayez dans une heure.</translation>
+    </message>
+    <message>
+        <location line="+9"/>
         <source>GitHub&apos;s answer holds no build.</source>
         <translation>La réponse de GitHub ne contient aucun build.</translation>
     </message>
     <message>
-        <location line="+187"/>
+        <location line="+134"/>
         <source>The download is incomplete.</source>
         <translation>Le téléchargement est incomplet.</translation>
     </message>

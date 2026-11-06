@@ -24,8 +24,7 @@ class QProcess;
 // runs the copy with --version: it must say the release's commit. install() then quits, and a small script, once this
 // process is gone, puts the new bundle in place, keeps the old one in <app data>/update/previous.app and starts the app.
 //
-// The repository is private, so reading it takes a token: the key saved in Sources › Updates, or else `gh auth token`
-// when the GitHub CLI is signed in. The latter is asked for when needed and never stored.
+// The repository is public, so a check takes no account and no token.
 //
 // For tests with a local server: DEEPWATER_UPDATE_API replaces https://api.github.com/repos/<owner>/<repo>,
 // DEEPWATER_UPDATE_SOCKET the relay's channel, and
@@ -38,7 +37,6 @@ public:
         Idle,           // not checked yet
         Checking,
         UpToDate,
-        NeedsToken,     // GitHub answered 404 or 401: no token, or one that can't read the repository
         Available,
         Downloading,
         Preparing,      // checking the download and the app inside it
@@ -58,6 +56,8 @@ public:
     // Where install() puts the app; empty, with the reason in cantInstallReason(), when it can't.
     QString target() const { return m_target; }
     QString cantInstallReason() const;
+    // macOS replaces itself; on Windows the dialog sends the user to the installer.
+    static bool installsInPlace();
 
     // --update-auto (tests): downloads what it finds and installs it without a click.
     void setUnattended(bool on) { m_unattended = on; }
@@ -85,12 +85,8 @@ private:
     void onSocketMessage(const QString &message);
     bool turnedOff() const;
     QNetworkRequest apiRequest(const QUrl &url) const;
-    void askGitHubCli();
-    void checkAccess();
-    void startCheck();
     void onRelease(const update::Release &release);
-    void fetchChanges();
-    void fetchAsset(const QUrl &url, bool authorized);
+    void fetchAsset(const QUrl &url);
     void prepare();
     void runStep(const QString &program, const QStringList &args, int timeoutMs,
                  std::function<void(int exitCode, const QByteArray &output)> done);
@@ -108,8 +104,6 @@ private:
     update::Release m_release;
     QStringList m_changes;
     QString m_target;
-    QString m_token;           // saved key or GitHub CLI's, in memory only
-    bool m_triedCli = false;
     bool m_unattended = false;
     QByteArray m_etag;         // of m_release's answer
     QFile m_file;

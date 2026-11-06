@@ -1699,8 +1699,7 @@ build is published, a commit that doesn't compile is never offered.
 
 A new build turns the icon violet with a dot and, once per commit (`updates/announced`), shows a banner in the window
 and a desktop notification, whose click opens the dialog (`src/UpdateDialog.*`): installed and latest builds, what's new
-(GitHub's comparison of the two commits), and **Update**. That downloads the `.dmg` from the API's asset address (GitHub
-redirects to its storage, and the token isn't sent there), checks its size and SHA-256, copies the app out of it and runs
+(the release's list of commits since this build), and **Update**. That downloads the `.dmg` from the API's asset address, checks its size and SHA-256, copies the app out of it and runs
 the copy with `--version`, which must name the release's commit. Then **Restart and install**: the app quits and a small
 script (`install.sh` in `<app data>/update`, its output in `install.log`), once the process is gone, moves the old
 bundle to `previous.app` there, puts the new one in place, and starts it. If a step fails it puts back what was there. Data
@@ -1708,9 +1707,7 @@ and settings live outside the bundle and aren't touched. An app in a CMake build
 instead, since the next `cmake --build` would write over a foreign bundle; one still on its disk image, or run by macOS
 from a temporary copy, is asked to move to Applications first.
 
-The repository is private, so reading it takes a token: the key saved in Sources › Updates (`keys/github`, read access to
-the repository's contents), or else `gh auth token` when the GitHub CLI is signed in, kept in memory only. Without
-either, the dialog says so. The row's switch stops the requests and closes the socket; the dialog's check box closes the socket and the check at start.
+The repository is public, so a check takes no account and no token (GitHub allows 60 requests an hour per address that way, and an unchanged answer doesn't count). A release holds the `.dmg` and the `.exe`, or the one that built, and its body lists the last 30 commits (`change:` lines), which the dialog shows as what's new. macOS installs itself; on Windows **Download the installer** opens the `.exe`'s address, and the user runs it. Older versions' token (`keys/github`) is removed from the settings at launch. The row's switch stops the requests and closes the socket; the dialog's check box closes the socket and the check at start.
 `src/UpdateRelease.*` holds the parsing and decisions, tested by `qtm_test_update`. `--update-dialog` opens the dialog
 and checks. For tests against a local server, `DEEPWATER_UPDATE_API` replaces the repository's API address,
 `DEEPWATER_UPDATE_SOCKET` the relay's channel,

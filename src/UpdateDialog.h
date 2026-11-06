@@ -16,9 +16,6 @@ class UpdateDialog : public QDialog
 public:
     explicit UpdateDialog(Updater *updater, QWidget *parent = nullptr);
 
-signals:
-    void openSourcesRequested();   // to enter a GitHub token
-
 private:
     void refresh();
     void onAction();

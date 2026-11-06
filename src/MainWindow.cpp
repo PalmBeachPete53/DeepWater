@@ -838,11 +838,6 @@ void MainWindow::openUpdates(bool checkNow)
     m_updateNotified = false;
     if (!m_updateDialog) {
         m_updateDialog = new UpdateDialog(m_updater, this);
-        connect(m_updateDialog, &UpdateDialog::openSourcesRequested, this, [this] {
-            m_updateDialog->close();
-            showSourcesTab(0);
-            searchSources("github");
-        });
     }
     m_updateDialog->show();
     m_updateDialog->raise();

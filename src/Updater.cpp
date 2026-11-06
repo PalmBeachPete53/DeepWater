@@ -1,7 +1,6 @@
 #include "Updater.h"
 
 #include "BuildInfo.h"
-#include "KeyedSources.h"
 
 #include <QCoreApplication>
 #include <QCryptographicHash>
@@ -15,6 +14,7 @@
 
 namespace {
 
+// A public repository: no user needs an account or a token to update.
 const char *const Repository = "https://api.github.com/repos/PalmBeachPete53/DeepWater";
 // The channel the CI posts to (.github/workflows/build.yml). Its name is no secret worth keeping: see isBuildSignal().
 const char *const Relay = "wss://ntfy.sh/deepwater-updates-08dccc156782ea69cc5eb407/ws";
@@ -30,6 +30,16 @@ QString apiBase()
     return custom.isEmpty() ? QString::fromLatin1(Repository) : QString::fromUtf8(custom);
 }
 
+// This system's installer among a release's files.
+QString installerSuffix()
+{
+#ifdef Q_OS_WIN
+    return QStringLiteral(".exe");
+#else
+    return QStringLiteral(".dmg");
+#endif
+}
+
 // The running bundle: <bundle>.app/Contents/MacOS/<binary>.
 QString runningBundle()
 {
@@ -42,6 +52,7 @@ QString runningBundle()
 Updater::Updater(QObject *parent)
     : QObject(parent)
 {
+    QSettings().remove("keys/github");   // the token older versions asked for: nothing reads it now
     const QString bundle = runningBundle();
     m_target = update::installTarget(bundle, QFileInfo::exists(QFileInfo(bundle).absolutePath() + "/CMakeCache.txt"));
     connect(&m_socket, &QWebSocket::connected, this, [this] {
@@ -55,7 +66,7 @@ Updater::Updater(QObject *parent)
     connect(&m_timer, &QTimer::timeout, this, &Updater::keepListening);
     m_timer.start();
     keepListening();
-#ifdef Q_OS_MACOS
+#if defined(Q_OS_MACOS) || defined(Q_OS_WIN)
     QTimer::singleShot(FirstCheckMs, this, [this] {
         if (autoCheck() && !turnedOff()) check();
     });
@@ -66,8 +77,8 @@ Updater::Updater(QObject *parent)
 // down costs one attempt each time.
 void Updater::keepListening()
 {
-#ifndef Q_OS_MACOS
-    return;   // builds are published for macOS only: nothing to hear, nothing this platform could install
+#if !defined(Q_OS_MACOS) && !defined(Q_OS_WIN)
+    return;   // builds are published for these two only
 #endif
     const bool wanted = autoCheck() && !turnedOff();
     const QAbstractSocket::SocketState state = m_socket.state();
@@ -112,6 +123,15 @@ bool Updater::hasUpdate() const
     return m_state == State::Available || m_state == State::Downloading || m_state == State::Preparing
            || m_state == State::Ready
            || (m_state == State::Failed && update::isNewer(currentCommit(), currentTime(), m_release));
+}
+
+bool Updater::installsInPlace()
+{
+#ifdef Q_OS_MACOS
+    return true;
+#else
+    return false;
+#endif
 }
 
 QString Updater::cantInstallReason() const
@@ -169,8 +189,6 @@ QNetworkRequest Updater::apiRequest(const QUrl &url) const
     request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("Deepwater"));
     request.setRawHeader("Accept", "application/vnd.github+json");
     request.setRawHeader("X-GitHub-Api-Version", "2022-11-28");
-    if (!m_token.isEmpty())
-        request.setRawHeader("Authorization", "Bearer " + m_token.toUtf8());
     request.setTransferTimeout(30 * 1000);
     return request;
 }
@@ -184,16 +202,6 @@ void Updater::check()
         setState(State::Failed, tr("GitHub is turned off in Sources."));
         return;
     }
-    const QString saved = sourceKey("github");
-    if (!saved.isEmpty()) {
-        m_token = saved;
-        m_triedCli = false;
-    }
-    startCheck();
-}
-
-void Updater::startCheck()
-{
     setState(State::Checking);
     QNetworkRequest request = apiRequest(QUrl(apiBase() + "/releases/tags/latest-main"));
     if (!m_etag.isEmpty())
@@ -206,57 +214,27 @@ void Updater::startCheck()
             onRelease(m_release);
             return;
         }
-        if (status == 404 || status == 401) {
-            // A private repository answers 404 to whoever can't see it, and so does a repository with no build yet.
-            if (m_token.isEmpty() && !m_triedCli)
-                askGitHubCli();
-            else if (status == 404 && !m_token.isEmpty())
-                checkAccess();
-            else
-                setState(State::NeedsToken);
+        if (status == 404) {   // nothing published yet
+            setState(State::UpToDate);
+            return;
+        }
+        // GitHub allows 60 requests an hour from one address without an account. An unchanged answer doesn't count, and an
+        // app asks rarely, so this takes several computers behind one address.
+        if (status == 403 || status == 429) {
+            setState(State::Failed, tr("GitHub is limiting requests from this connection: try again in an hour."));
             return;
         }
         if (reply->error() != QNetworkReply::NoError) {
             setState(State::Failed, reply->errorString());
             return;
         }
-        const update::Release release = update::parseRelease(reply->readAll());
+        const update::Release release = update::parseRelease(reply->readAll(), installerSuffix());
         if (!release.isValid()) {
             setState(State::Failed, tr("GitHub's answer holds no build."));
             return;
         }
         m_etag = reply->rawHeader("ETag");
         onRelease(release);
-    });
-}
-
-// A 404 with a token: if the token sees the repository, there is simply no build yet.
-void Updater::checkAccess()
-{
-    QNetworkReply *reply = m_net.get(apiRequest(QUrl(apiBase())));
-    connect(reply, &QNetworkReply::finished, this, [this, reply] {
-        reply->deleteLater();
-        setState(reply->error() == QNetworkReply::NoError ? State::UpToDate : State::NeedsToken);
-    });
-}
-
-void Updater::askGitHubCli()
-{
-    m_triedCli = true;
-    // A GUI app has a short PATH, so the usual places are looked at too.
-    QString gh = QStandardPaths::findExecutable("gh");
-    if (gh.isEmpty())
-        gh = QStandardPaths::findExecutable("gh", {"/opt/homebrew/bin", "/usr/local/bin"});
-    if (gh.isEmpty()) {
-        setState(State::NeedsToken);
-        return;
-    }
-    runStep(gh, {"auth", "token"}, 10000, [this](int code, const QByteArray &out) {
-        m_token = code == 0 ? QString::fromUtf8(out).trimmed() : QString();
-        if (m_token.isEmpty())
-            setState(State::NeedsToken);
-        else
-            startCheck();
     });
 }
 
@@ -267,34 +245,14 @@ void Updater::onRelease(const update::Release &release)
         setState(State::UpToDate);
         return;
     }
-    const bool newBuild = release.commit != m_release.commit;
     m_release = release;
-    if (newBuild)
-        m_changes.clear();
+    m_changes = update::changesSince(release, currentCommit());
     setState(State::Available);
-    if (m_changes.isEmpty())
-        fetchChanges();
     QSettings settings;
     if (settings.value("updates/announced").toString() != release.commit) {
         settings.setValue("updates/announced", release.commit);
         emit updateFound();
     }
-}
-
-void Updater::fetchChanges()
-{
-    if (currentCommit().isEmpty())
-        return;
-    const QUrl url(apiBase() + "/compare/" + currentCommit() + "..." + m_release.commit);
-    QNetworkReply *reply = m_net.get(apiRequest(url));
-    connect(reply, &QNetworkReply::finished, this, [this, reply] {
-        reply->deleteLater();
-        // A build from a commit that was never pushed answers 404: the dialog then just says a new build is there.
-        if (reply->error() == QNetworkReply::NoError) {
-            m_changes = update::parseCompareSubjects(reply->readAll());
-            emit changed();
-        }
-    });
 }
 
 void Updater::download()
@@ -313,17 +271,14 @@ void Updater::download()
     }
     m_received = 0;
     setState(State::Downloading);
-    fetchAsset(m_release.assetUrl, true);
+    fetchAsset(m_release.assetUrl);
 }
 
-void Updater::fetchAsset(const QUrl &url, bool authorized)
+void Updater::fetchAsset(const QUrl &url)
 {
     QNetworkRequest request = apiRequest(url);
     request.setRawHeader("Accept", "application/octet-stream");
-    // GitHub redirects to its storage, which must not receive the token and refuses it: redirects are followed by hand.
-    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::ManualRedirectPolicy);
-    if (!authorized)
-        request.setRawHeader("Authorization", QByteArray());
+    request.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::ManualRedirectPolicy);   // to its storage
     request.setTransferTimeout(60 * 1000);
     m_download = m_net.get(request);
     connect(m_download, &QIODevice::readyRead, this, [this] {
@@ -344,7 +299,7 @@ void Updater::fetchAsset(const QUrl &url, bool authorized)
         const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
         if (status / 100 == 3) {
             const QUrl next = reply->url().resolved(reply->attribute(QNetworkRequest::RedirectionTargetAttribute).toUrl());
-            fetchAsset(next, false);
+            fetchAsset(next);
             return;
         }
         const QString written = m_file.fileName();

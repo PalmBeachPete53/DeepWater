@@ -64,7 +64,7 @@ const QStringList MarketIds {"binance", "coinbase", "kraken", "yahoo", "nasdaq",
 // Keys kept in the settings ("keys/<id>") and read by a page itself (the AI tab, the News tab).
 bool settingsKeyRow(const QString &id)
 {
-    return id == "anthropic" || id == "huggingface" || id == "fmp" || id == "github";
+    return id == "anthropic" || id == "huggingface" || id == "fmp";
 }
 
 QStringList disabledIds()
@@ -824,7 +824,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     l->addSpacing(12);
 
     section(tr("Updates"));
-    add(buildRow({"github", Kind::Key, "GitHub", tr("Token with read access to the repository's contents (optional with the GitHub CLI)"),
+    add(buildRow({"github", Kind::Key, "GitHub", tr("Public repository: no account needed"),
                   "api.github.com · ntfy.sh", tr("The app's updates: the latest build of main")}));
     l->addSpacing(12);
 
@@ -1271,7 +1271,7 @@ QWidget *SourcesPage::buildRow(const Info &info, const Dataset &dataset)
     h->addWidget(actions, 0, Qt::AlignTop);
 
     // API keys
-    if (info.kind == Kind::Stream || info.kind == Kind::Key || (info.kind == Kind::Dataset && !dataset.keyId.isEmpty())) {
+    if (info.id != "github" && (info.kind == Kind::Stream || info.kind == Kind::Key || (info.kind == Kind::Dataset && !dataset.keyId.isEmpty()))) {
         row.keyBox = new QWidget;
         auto *k = new QHBoxLayout(row.keyBox);
         k->setContentsMargins(26, 0, 0, 0);
@@ -1438,6 +1438,22 @@ void SourcesPage::runTest(Row &row)
         self->updateRow(r);
         self->updateSummary();
     };
+    if (row.id == "github") {
+        QNetworkRequest req(QUrl("https://api.github.com/repos/PalmBeachPete53/DeepWater/releases/tags/latest-main"));
+        req.setTransferTimeout(20000);
+        req.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("Deepwater/0.1"));
+        auto *timer = new QElapsedTimer;
+        timer->start();
+        QNetworkReply *reply = m_net.get(req);
+        connect(reply, &QNetworkReply::finished, this, [reply, timer, finish] {
+            reply->deleteLater();
+            const double ms = timer->nsecsElapsed() / 1e6;
+            delete timer;
+            const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+            finish(reply->error() == QNetworkReply::NoError, ms, reply->error() == QNetworkReply::NoError ? QString() : status ? tr("HTTP %1").arg(status) : reply->errorString());
+        });
+        return;
+    }
     if (row.kind == Kind::Key && settingsKeyRow(row.id)) {
         const QString key = sourceKey(row.id);
         if (key.isEmpty()) {

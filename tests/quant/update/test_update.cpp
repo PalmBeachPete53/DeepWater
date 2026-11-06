@@ -68,13 +68,25 @@ void testIsNewer()
     check(!isNewer(HashA, 500, Release()), "an invalid release never is");
 }
 
-void testCompare()
+void testChanges()
 {
-    const QByteArray json = R"({"commits":[{"commit":{"message":"Oldest\n\nbody"}},{"commit":{"message":"Middle"}},{"commit":{"message":"Newest\nmore"}}]})";
-    const QStringList s = parseCompareSubjects(json);
-    check(s == QStringList({"Newest", "Middle", "Oldest"}), "subjects only, newest first");
-    check(parseCompareSubjects(json, 2) == QStringList({"Newest", "Middle"}), "the limit keeps the newest");
-    check(parseCompareSubjects("{}").isEmpty(), "no commits");
+    const QString c1(40, '1'), c2(40, '2'), c3(40, '3');
+    const QString body = QString(R"("commit: %1\ntime: 1000\nchange: %1 Newest subject\nchange: %2 Middle: with a colon\nchange: %3 Oldest\n")").arg(c1, c2, c3);
+    const Release r = parseRelease(releaseJson(body, dmgAsset()));
+    check(r.isValid(), "a body with changes parses");
+    check(r.changeSubjects == QStringList({"Newest subject", "Middle: with a colon", "Oldest"}), "the subjects, in order");
+    check(changesSince(r, c2) == QStringList({"Newest subject"}), "only what's newer than this build");
+    check(changesSince(r, c1).isEmpty(), "nothing on the same commit");
+    check(changesSince(r, HashA).size() == 3, "a build the list doesn't reach gets all of it");
+    check(changesSince(parseRelease(releaseJson(QString(R"("commit: %1\ntime: 1000")").arg(c1), dmgAsset())), HashA).isEmpty(), "a body listing none");
+    // The right file for the system, with the address a person downloads it from.
+    const QString exe = R"({"name":"Deepwater-0.1-abc-windows-x64.exe","url":"https://api.github.com/repos/o/r/releases/assets/2","browser_download_url":"https://github.com/o/r/releases/download/latest-main/x.exe","size":99})";
+    const QString both = dmgAsset() + ", " + exe;
+    check(parseRelease(releaseJson(body, both)).assetName.endsWith(".dmg"), "the .dmg by default");
+    const Release win = parseRelease(releaseJson(body, both), ".exe");
+    check(win.assetName.endsWith(".exe") && win.assetSize == 99, "the .exe on Windows");
+    check(win.browserUrl.toString().endsWith("x.exe"), "its download address");
+    check(!parseRelease(releaseJson(body, dmgAsset()), ".exe").isValid(), "no installer for this system, no build");
     check(shortCommit(HashA).size() == 7, "a short hash");
 }
 
@@ -103,7 +115,7 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
     testParseRelease();
     testIsNewer();
-    testCompare();
+    testChanges();
     testSignal();
     testInstallTarget();
     std::cout << checks << " checks, " << fails << " failed\n";

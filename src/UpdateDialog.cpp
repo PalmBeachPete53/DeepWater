@@ -2,6 +2,7 @@
 
 #include "Updater.h"
 
+#include <QDesktopServices>
 #include <QCheckBox>
 #include <QCoreApplication>
 #include <QDateTime>
@@ -115,11 +116,11 @@ void UpdateDialog::onAction()
     case Updater::State::Ready:
         m_updater->install();
         break;
-    case Updater::State::NeedsToken:
-        emit openSourcesRequested();
-        break;
     default:
-        m_updater->download();
+        if (Updater::installsInPlace())
+            m_updater->download();
+        else
+            QDesktopServices::openUrl(m_updater->release().browserUrl);
     }
 }
 
@@ -143,12 +144,12 @@ void UpdateDialog::refresh()
     case Updater::State::UpToDate:
         status = tr("Deepwater is up to date.");
         break;
-    case Updater::State::NeedsToken:
-        status = tr("The repository is private, so checking takes a GitHub token. Save one in Sources › Updates "
-                    "(read access to the repository's contents), or sign in with the GitHub CLI (gh auth login).");
-        action = tr("Open Sources");
-        break;
     case Updater::State::Available:
+        if (!Updater::installsInPlace()) {
+            status = tr("A new build is ready. Download the installer and run it: your data and settings aren't touched.");
+            action = tr("Download the installer");
+            break;
+        }
         status = elsewhere ? tr("A new build is ready. This copy runs from a build folder, so it will be installed in "
                                 "Applications and started from there.")
                            : tr("A new build is ready. Your data and settings aren't touched.");

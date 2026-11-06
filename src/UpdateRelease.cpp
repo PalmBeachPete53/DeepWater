@@ -7,7 +7,7 @@
 
 namespace update {
 
-Release parseRelease(const QByteArray &json)
+Release parseRelease(const QByteArray &json, const QString &suffix)
 {
     const QJsonObject root = QJsonDocument::fromJson(json).object();
     Release r;
@@ -19,13 +19,20 @@ Release parseRelease(const QByteArray &json)
         r.commit = m.captured(1);
     if (const auto m = timeLine.match(body); m.hasMatch())
         r.commitTime = m.captured(1).toLongLong();
+    static const QRegularExpression changeLine("^change:\\s*([0-9a-f]{40})\\s+(.+?)\\s*$", QRegularExpression::MultilineOption);
+    for (auto it = changeLine.globalMatch(body); it.hasNext();) {
+        const QRegularExpressionMatch m = it.next();
+        r.changeCommits << m.captured(1);
+        r.changeSubjects << m.captured(2);
+    }
     for (const QJsonValue &v : root.value("assets").toArray()) {
         const QJsonObject asset = v.toObject();
         const QString name = asset.value("name").toString();
-        if (!name.endsWith(".dmg", Qt::CaseInsensitive))
+        if (!name.endsWith(suffix, Qt::CaseInsensitive))
             continue;
         r.assetName = name;
         r.assetUrl = QUrl(asset.value("url").toString());
+        r.browserUrl = QUrl(asset.value("browser_download_url").toString());
         r.assetSize = qint64(asset.value("size").toDouble());
         const QString digest = asset.value("digest").toString();
         if (digest.startsWith("sha256:"))
@@ -44,16 +51,13 @@ bool isNewer(const QString &currentCommit, qint64 currentTime, const Release &re
     return release.commitTime > currentTime;
 }
 
-QStringList parseCompareSubjects(const QByteArray &json, int limit)
+QStringList changesSince(const Release &release, const QString &currentCommit)
 {
-    const QJsonArray commits = QJsonDocument::fromJson(json).object().value("commits").toArray();
     QStringList out;
-    for (auto it = commits.end(); it != commits.begin() && out.size() < limit;) {   // the API lists oldest first
-        --it;
-        const QString message = (*it).toObject().value("commit").toObject().value("message").toString();
-        const QString subject = message.section('\n', 0, 0).trimmed();
-        if (!subject.isEmpty())
-            out << subject;
+    for (int i = 0; i < release.changeCommits.size(); ++i) {
+        if (release.changeCommits[i] == currentCommit)
+            break;
+        out << release.changeSubjects.value(i);
     }
     return out;
 }
