@@ -162,7 +162,7 @@ void runLayoutAudit(MainWindow *window, const QString &dir, const QList<QSize> &
     QFile file(dir + "/report.txt");
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) return;
     QTextStream out(&file);
-    const QStringList pages = {"map", "overview", "economy", "forex", "charts", "calendar", "news", "research", "quant", "desk", "journal", "ai", "sources"};
+    const QStringList pages = {"map", "overview", "economy", "forex", "charts", "calendar", "news", "research", "quant", "desk", "journal", "metatrader", "ai", "sources"};
     for (const QSize &size : sizes) {
         window->resize(size);
         wait(200);

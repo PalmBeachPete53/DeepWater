@@ -19,6 +19,7 @@ Le bandeau porte la marque, les onglets, l'horloge UTC et quatre icônes : la fl
 | [Quant](help:quant) | Paires, bêta, COT, signaux, régimes de Markov, prévisions de volatilité, exécution, risque de portefeuille |
 | [Desk](help:desk) | Une lecture de trader : force des devises, sessions, récaps, fil, taux, positionnement, appétit pour le risque, saisonnalité, fondamentaux, technique, liquidité, notes, espaces |
 | [Journal](help:journal) | Vos vrais trades depuis les relevés MetaTrader ou cTrader, leurs statistiques et un calculateur de risque |
+| [MetaTrader](help:metatrader) | Un vrai ordre pour plusieurs comptes MetaTrader, dimensionné selon le solde de chacun, via MetaCopier |
 | [IA](help:ai) | Les modèles de langage locaux, leurs compétences, les intégrations Claude et opencode, l'apprentissage automatique |
 | [Sources](help:sources) | Chaque source de données, son état, son interrupteur, vos clés d'API, et un diagramme du chemin des données |
 

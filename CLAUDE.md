@@ -38,10 +38,12 @@ cmake --build build -j 10 --target deepwater
 ./build/tests-quant/desk/qtm_test_desk                              # Desk and Journal logic: instruments, risk, statements, stats, strength, signals, seasonality, rates (src/desk)
 ./build/tests-quant/update/qtm_test_update                          # what the update system reads from GitHub (src/UpdateRelease.*)
 ./build/tests-quant/server/qtm_test_server                          # the backend: providers, feeds, imports, routes, candles on disk, a candle's countdown
+./build/tests-quant/broker/qtm_test_broker [--serve <port>]         # the MetaTrader page's logic (src/broker): sizing, refusals, sending, against a fake MetaCopier
 ./build/tests-quant/pinets/qtm_test_pinets                          # Pine Script via PineTS on Node.js (src/quant/core/PineScript.cpp); SKIPPED without Node
 deepwater --llm-check <file.gguf>                                  # the local engine loads and answers, in its sandbox, and exit (Windows CI)
 deepwater --llm-sandbox-check <file>                               # Windows: from inside the sandbox, that file, a write and the network are refused
 python3 tools/check_pe_imports.py <folder>                         # a packed Windows folder's DLLs give each other what they ask for; runs on any system
+deepwater --secret-check                                           # the system's secret store takes, returns and removes a throwaway secret, and exit (Windows CI)
 deepwater --layout-audit <dir> 1280x640,960x640                    # every page and section at those window sizes: captures and report.txt (README › Window sizes)
 deepwater --version                                                # print the commit of this build and exit
 deepwater --pine-js file.pine                                      # print the JavaScript PineTS runs for a Pine Script and exit

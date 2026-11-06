@@ -28,7 +28,7 @@ namespace {
 // The chapters in the sidebar's order. The page ids are chapter ids, so the ? icon lands on the page's chapter.
 const QStringList Chapters {
     "start", "map", "overview", "economy", "forex", "charts", "calendar", "news",
-    "research", "quant", "desk", "journal", "ai", "sources", "devtools", "data",
+    "research", "quant", "desk", "journal", "metatrader", "ai", "sources", "devtools", "data",
 };
 
 QString readMarkdown(const QString &id, const QString &lang)

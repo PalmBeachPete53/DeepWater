@@ -44,7 +44,7 @@ holds (a country's tax office, a national labour ministry, a small central bank)
 
 ## The cards
 
-133 cards. **called**: its catalogue or a sample answered (100). **docs**: public documentation and code only, usually for lack of a key (16). **refused**: it refused or failed, so the card says what could not be seen (16).
+134 cards. **called**: its catalogue or a sample answered (100). **docs**: public documentation and code only, usually for lack of a key (17). **refused**: it refused or failed, so the card says what could not be seen (16).
 
 | Card | Holds | Access | Confidence |
 |---|---|---|---|
@@ -127,6 +127,7 @@ holds (a country's tax office, a national labour ministry, a small central bank)
 | [kosis](kosis.md) | Korea's national statistics portal, for every statistics-producing agency, run by the renamed Ministry of Data and Statistics (국가데이터처, `mods.go.kr`). | free key | docs |
 | [kraken](kraken.md) | Crypto spot market with many EUR and USD pairs: | free, no key | called |
 | [mas](mas.md) | Singapore's central bank. | free account | refused |
+| [metacopier](metacopier.md) | A paid cloud service that holds connections to MetaTrader and other trading accounts and exposes them over a REST API. | paid | docs |
 | [mofjapan](mofjapan.md) | No API: | free, no key | called |
 | [mospi](mospi.md) | India's official statistics on eSankhyiki: | free, no key | called |
 | [myfxbook](myfxbook.md) | A site where retail traders link their forex accounts. | free account | docs |

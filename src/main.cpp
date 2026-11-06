@@ -9,6 +9,7 @@
 #include "JournalData.h"
 #include "Myfxbook.h"
 #include "LayoutAudit.h"
+#include "SecretStore.h"
 #include "MainWindow.h"
 #include "DeskHistory.h"
 #include "SettingsDialog.h"
@@ -54,6 +55,8 @@ int main(int argc, char *argv[])
     // --llm-sandbox-check <file>: from inside the sandbox that file, a write beside it and the network are all refused.
     {
         const QStringList args = app.arguments();
+        if (args.contains("--secret-check"))   // the system's secret store works: --secret-check, for the CI
+            return SecretStore::check();
         const int sandboxArg = args.indexOf("--llm-sandbox-check");
         if (sandboxArg > 0 && sandboxArg + 1 < args.size())
             return LocalEngine::checkSandbox(args.at(sandboxArg + 1));

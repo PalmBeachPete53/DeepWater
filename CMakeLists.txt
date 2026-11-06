@@ -136,6 +136,14 @@ target_compile_features(desk PUBLIC cxx_std_20)
 target_link_libraries(desk PUBLIC Qt6::Core)
 target_include_directories(desk PUBLIC src)
 
+# The MetaTrader page's logic (src/broker): orders sized per account, sent through MetaCopier. Tested by tests/quant/broker.
+file(GLOB BROKER_SOURCES CONFIGURE_DEPENDS src/broker/*.h src/broker/*.cpp)
+add_library(broker STATIC ${BROKER_SOURCES})
+target_compile_features(broker PUBLIC cxx_std_20)
+set_target_properties(broker PROPERTIES AUTOMOC ON)
+target_link_libraries(broker PUBLIC Qt6::Core Qt6::Network desk)
+target_include_directories(broker PUBLIC src)
+
 # Local models (AI › Local): llama.cpp b12070 (MIT, third_party/llama.cpp: only what libllama needs, unchanged), built
 # static with Metal, behind deepwater-llm (src/llm), a helper process the app starts in a Seatbelt sandbox
 # (src/LocalEngine.cpp). macOS only. ggml picks its CPU code by the target architecture, so a universal build makes it
@@ -315,6 +323,8 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/PageTranslator.h src/PageTranslator.cpp
     src/HelpWindow.h src/HelpWindow.cpp
     src/LayoutAudit.h src/LayoutAudit.cpp
+    src/MetaTraderPage.h src/MetaTraderPage.cpp
+    src/SecretStore.h src/SecretStore.cpp
     src/DeskHistory.h src/DeskHistory.cpp
     src/DeskWidgets.h src/DeskWidgets.cpp
     src/JournalData.h src/JournalData.cpp
@@ -326,6 +336,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     resources/icon/deepwater.icns
 )
 
+target_link_libraries(deepwater PRIVATE broker)
 target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov fusion desk ZLIB::ZLIB)
 # The commit this build comes from, for the update system (src/Updater.cpp) and --version.
 set(DEEPWATER_BUILDINFO ${CMAKE_BINARY_DIR}/generated/BuildInfo.h)
@@ -343,6 +354,7 @@ endif()
 if(APPLE)
     target_sources(deepwater PRIVATE src/NewsWebHostMac.mm src/VoiceMac.mm)
     set_source_files_properties(src/NewsWebHostMac.mm src/VoiceMac.mm PROPERTIES COMPILE_OPTIONS -fobjc-arc)
+    target_link_libraries(deepwater PRIVATE "-framework Security" "-framework CoreFoundation")
     target_link_libraries(deepwater PRIVATE "-framework WebKit" "-framework Speech" "-framework AVFoundation")
 elseif(WIN32)
     target_sources(deepwater PRIVATE src/VoiceWin.cpp)

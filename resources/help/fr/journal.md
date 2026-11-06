@@ -1,6 +1,6 @@
 # Journal
 
-Vos vrais trades et votre risque, gardés sur cet ordinateur dans un fichier des données de l'application. Rien n'est envoyé nulle part. Deepwater ne se connecte jamais à un courtier et ne demande jamais de mot de passe : les trades arrivent par fichier ou à la main.
+Vos vrais trades et votre risque, gardés sur cet ordinateur dans un fichier des données de l'application. Rien n'est envoyé nulle part. Le Journal ne se connecte jamais à un courtier et ne demande jamais de mot de passe : les trades arrivent par fichier ou à la main. L'envoi d'ordres relève de [MetaTrader](help:metatrader), une page à part.
 
 La barre du haut choisit le compte (vous pouvez en garder plusieurs, chacun avec sa devise et son solde) et filtre par année, instrument, sens et stratégie.
 

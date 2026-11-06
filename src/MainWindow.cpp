@@ -1,6 +1,7 @@
 #include <QPointer>
 #include <QAbstractButton>
 #include "MainWindow.h"
+#include "MetaTraderPage.h"
 #include "IndicatorData.h"
 #include "IndicatorsView.h"
 #include "CountriesView.h"
@@ -432,6 +433,7 @@ void MainWindow::buildUi()
         return desk;
     });
     addPage("journal", tr("Journal"), [] { return new JournalPage; });
+    addPage("metatrader", tr("MetaTrader"), [] { return new MetaTraderPage; });
     addPage("ai", tr("AI"), [this] { return new AiPage(mlSources()); });
     addPage("sources", tr("Sources"), [this] {
         auto *sourcesPage = new SourcesPage(sourceTargets());
@@ -1042,7 +1044,7 @@ void MainWindow::aiReadPage(const AiPageRequest &request, std::function<void(con
     const QString id = request.page.isEmpty() ? m_pageById.key(m_pages->currentWidget()) : request.page;
     AiPageRead refused;
     refused.page = m_pageLabels.value(id);
-    if (id == "sources" || id == "ai") {
+    if (id == "sources" || id == "ai" || id == "metatrader") {   // keys, and on metatrader real accounts
         refused.error = "not allowed: the " + id + " page can't be read";
         done(refused);
         return;
@@ -1118,6 +1120,10 @@ QString MainWindow::aiOpenPage(const AiPageRequest &request, QString *error)
         return pageContext();
     }
     const QString id = request.page.isEmpty() ? m_pageById.key(m_pages->currentWidget()) : request.page;
+    if (id == "metatrader") {   // no model goes near real orders, not even to look
+        *error = "not allowed: the metatrader page can't be opened or read";
+        return {};
+    }
     if (!m_pageLabels.contains(id) || !ensurePage(id)) {
         *error = "unknown page \"" + request.page + "\": " + QString(AiPages) + ", sources or ai";
         return {};

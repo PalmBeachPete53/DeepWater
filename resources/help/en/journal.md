@@ -1,6 +1,6 @@
 # Journal
 
-Your real trades and your risk, kept on this computer in a file of the app's data. Nothing is sent anywhere. Deepwater never connects to a broker and never asks for a password: trades come in by file or by hand.
+Your real trades and your risk, kept on this computer in a file of the app's data. Nothing is sent anywhere. The Journal never connects to a broker and never asks for a password: trades come in by file or by hand. Sending orders is [MetaTrader](help:metatrader)'s business, a separate page.
 
 The bar at the top picks the account (you can keep several, each with its currency and balance) and filters by year, instrument, side and strategy.
 

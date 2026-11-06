@@ -19,6 +19,7 @@ The header holds the brand, the tabs, the UTC clock and four icons: the arrow (u
 | [Quant](help:quant) | Pairs, beta, COT, signals, Markov regimes, volatility forecasts, execution, portfolio risk |
 | [Desk](help:desk) | A trader's reading: strength, sessions, recaps, wire, rates, positioning, risk appetite, seasonality, fundamentals, technicals, liquidity, notes, workspaces |
 | [Journal](help:journal) | Your real trades from MetaTrader or cTrader statements, their statistics and a risk calculator |
+| [MetaTrader](help:metatrader) | One real order for several MetaTrader accounts, sized for each by its balance, through MetaCopier |
 | [AI](help:ai) | Local language models, their skills, the Claude and opencode integrations, machine learning |
 | [Sources](help:sources) | Every data source, its state, its switch, your API keys, and a diagram of where the data goes |
 
