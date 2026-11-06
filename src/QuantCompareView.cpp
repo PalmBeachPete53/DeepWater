@@ -159,7 +159,6 @@ View::View(QWidget *parent)
     scroll->setObjectName("qtScroll");
     scroll->setWidgetResizable(true);
     scroll->setFrameShape(QFrame::NoFrame);
-    scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     auto *inner = new QWidget;
     inner->setObjectName("qtContent");
     m_content = new QVBoxLayout(inner);

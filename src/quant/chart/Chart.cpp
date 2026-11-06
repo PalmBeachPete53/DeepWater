@@ -113,7 +113,7 @@ double ChartPrivate::optimalAxisWidth(PaneImpl *pane)
         t = std::max(text.width(marks.first().label), text.width(marks.last().label));
     for (const AxisLabel &l : axisLabels(pane, sc))
         if (l.axisVisible)
-            t = std::max(t, text.width(l.axisText));
+            t = std::max({t, text.width(l.axisText), l.axisDetail.isEmpty() ? 0.0 : text.width(l.axisDetail)});
     const auto fv = sc->firstValue();
     if (fv && opts.crosshairMode != CrosshairMode::Hidden && pane->height > 0 && !sc->isEmpty()) {
         const double a = sc->coordinateToPrice(1, *fv);
@@ -1135,6 +1135,13 @@ QVector<DataItem> Series::data() const
         if (!it.whitespace())
             out.push_back(it);
     return out;
+}
+
+void Series::setLastValueDetail(const QString &text)
+{
+    SeriesImpl *s = impl(this);
+    s->opts.lastValueDetail = text;
+    s->chart->request();
 }
 
 void Series::applyOptions(const SeriesOptions &options)

@@ -17,6 +17,8 @@ namespace qtm {
 class ChartPane;
 class LegendInput;
 
+inline const QString VolumeRow = QStringLiteral("volume");   // the volume's uid in LegendModel::inds
+
 struct LegendModel {
     QString name;               // "BTCUSDT · 1D · Binance"
     bool hasBar = false;
@@ -30,6 +32,7 @@ struct LegendModel {
         QString name;
         QVector<Val> vals;
         bool hidden = false;
+        bool volume = false;   // the volume bars on the price chart: its own actions, in ChartPane's config
     };
     QVector<Ind> inds;
     QStringList notes;

@@ -384,7 +384,6 @@ View::View(QWidget *parent)
     m_scroll->setObjectName("resScroll");
     m_scroll->setWidgetResizable(true);
     m_scroll->setFrameShape(QFrame::NoFrame);
-    m_scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     auto *inner = new QWidget;
     inner->setObjectName("resContent");
     m_content = new QVBoxLayout(inner);
@@ -995,8 +994,7 @@ void FinancialsView::fill(const Statement &s)
     m_table->setHorizontalHeaderLabels(headers);
     m_table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
     for (int i = 1; i < headers.size(); ++i) {
-        m_table->horizontalHeader()->setSectionResizeMode(i, QHeaderView::Fixed);
-        m_table->setColumnWidth(i, 220);
+        m_table->horizontalHeader()->setSectionResizeMode(i, QHeaderView::ResizeToContents);
         m_table->horizontalHeaderItem(i)->setTextAlignment(Qt::AlignRight | Qt::AlignVCenter);
     }
     m_table->setRowCount(0);
@@ -1049,6 +1047,7 @@ FinancialChartsView::FinancialChartsView(QWidget *parent)
     addChart(tr("Cash Flow"), &m_cash);
     addChart(tr("Balance Sheet"), &m_balance);
     m_source = label({}, "resNote");
+    m_source->setWordWrap(true);
     content()->addWidget(m_source);
     content()->addStretch(1);
     connect(m_period, &QButtonGroup::idClicked, this, [this] { fill(); });
@@ -1226,6 +1225,7 @@ OwnershipView::OwnershipView(QWidget *parent)
 
     auto *holders = panel(tr("Top 25 Shareholders"), &b);
     m_holdersNote = label({}, "resNote");
+    m_holdersNote->setWordWrap(true);
     b->addWidget(m_holdersNote);
     m_holders = table({tr("% Own"), tr("Holder"), tr("Reported"), tr("Shares"), tr("Value"), tr("Change")});
     b->addWidget(m_holders);
@@ -1238,6 +1238,7 @@ OwnershipView::OwnershipView(QWidget *parent)
 
     auto *trades = panel(tr("Recent Transactions"), &b);
     m_tradesNote = label({}, "resNote");
+    m_tradesNote->setWordWrap(true);
     b->addWidget(m_tradesNote);
     m_trades = table({tr("Date"), tr("Name"), tr("Relationship"), tr("Action"), tr("Shares"), tr("Price"), tr("Value")});
     b->addWidget(m_trades);
@@ -1439,6 +1440,7 @@ RatingsView::RatingsView(QWidget *parent)
     QVBoxLayout *b;
     auto *rec = panel(tr("Analyst Recommendation"), &b);
     m_basedOn = label({}, "resNote");
+    m_basedOn->setWordWrap(true);
     b->addWidget(m_basedOn);
     auto *recRow = new QHBoxLayout;
     m_gauge = new Gauge;

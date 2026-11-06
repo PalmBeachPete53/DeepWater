@@ -157,6 +157,28 @@ void candles(QObject *context, const QString &symbol, const QString &tf, int lim
         std::move(ok), std::move(fail));
 }
 
+void storedCandles(QObject *context, const QString &symbol, const QString &tf, std::function<void(const StoredCandles &)> ok)
+{
+    runAsync<StoredCandles>(
+        context,
+        [symbol, tf]() -> StoredCandles {
+            Backend *b = Backend::instance();
+            return b ? b->candleStore().read(symbol, tf).value_or(StoredCandles{}) : StoredCandles{};
+        },
+        std::move(ok), [](const QString &) {});
+}
+
+void saveCandles(QObject *context, const QString &symbol, const QString &tf, const StoredCandles &stored)
+{
+    runAsync<int>(
+        context,
+        [symbol, tf, stored]() -> int {
+            if (Backend *b = Backend::instance()) b->candleStore().write(symbol, tf, stored);
+            return 0;
+        },
+        [](const int &) {}, [](const QString &) {});
+}
+
 void quotes(QObject *context, const QStringList &symbols, Ok ok, Fail fail)
 {
     get(context, "/api/quotes?symbols=" + enc(symbols.join(',')), std::move(ok), std::move(fail));

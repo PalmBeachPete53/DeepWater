@@ -61,6 +61,48 @@ bool isIntraday(const QString &tf)
 }
 
 // Start of the bucket a bar at time t (UTC seconds) belongs to.
+// The end of the bar starting at t: a bar's own time, since a session's bars don't start on the timeframe's multiples.
+static qint64 barEnd(qint64 t, const Tf &p)
+{
+    if (p.unit == QLatin1Char('M')) {
+        const js::UtcParts d = js::utcParts(double(t) * 1000);
+        const qint64 months = qint64(d.year) * 12 + qint64(d.month) + p.n;
+        return qint64(js::dateUtc(double(floorDiv(months, 12)), double(months % 12), 1) / 1000);
+    }
+    return t + p.seconds;
+}
+
+qint64 secondsToBarClose(qint64 barTime, const QString &tf, qint64 now, bool knownClose)
+{
+    Tf p;
+    try {
+        p = parseTf(tf);
+    } catch (const Error &) {
+        return -1;
+    }
+    if (p.seconds <= 0 || (!knownClose && p.seconds >= 86400))
+        return -1;
+    qint64 end = barEnd(barTime, p);
+    if (now - end > 1800)
+        return -1;
+    while (end <= now)
+        end = barEnd(end, p);
+    return end - now;
+}
+
+QString formatCountdown(qint64 seconds)
+{
+    if (seconds < 0)
+        return {};
+    const qint64 d = seconds / 86400, h = seconds / 3600 % 24, m = seconds / 60 % 60, s = seconds % 60;
+    const auto two = [](qint64 v) { return QStringLiteral("%1").arg(v, 2, 10, QLatin1Char('0')); };
+    if (d > 0)
+        return QStringLiteral("%1d %2:%3").arg(d).arg(two(h), two(m));
+    if (h > 0)
+        return QStringLiteral("%1:%2:%3").arg(two(h), two(m), two(s));
+    return QStringLiteral("%1:%2").arg(two(m), two(s));
+}
+
 qint64 bucketStart(qint64 t, const QString &tf)
 {
     const Tf p = parseTf(tf);

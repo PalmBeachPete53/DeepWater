@@ -314,6 +314,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/Myfxbook.h src/Myfxbook.cpp
     src/PageTranslator.h src/PageTranslator.cpp
     src/HelpWindow.h src/HelpWindow.cpp
+    src/LayoutAudit.h src/LayoutAudit.cpp
     src/DeskHistory.h src/DeskHistory.cpp
     src/DeskWidgets.h src/DeskWidgets.cpp
     src/JournalData.h src/JournalData.cpp

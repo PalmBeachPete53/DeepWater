@@ -13,6 +13,8 @@ class IndicatorsView;
 class QButtonGroup;
 class QLabel;
 class QPushButton;
+class QFrame;
+class QLineEdit;
 class QStackedWidget;
 
 namespace economy {
@@ -102,11 +104,16 @@ public:
     // The AI side panel's context: the section, and the country or indicator open in it.
     Q_INVOKABLE QString aiContext() const;
 
+signals:
+    void fredKeySaved();
+
 protected:
     void showEvent(QShowEvent *) override;
     void hideEvent(QHideEvent *) override;
 
 private:
+    QWidget *buildFredBanner();
+    void reloadAll();
     QWidget *buildSection(int index);
     int countriesSection() const { return int(economy::sections().size()); }
     int indicatorsSection() const { return countriesSection() + 1; }
@@ -116,6 +123,9 @@ private:
     void finished(const QString &error);
     void updateStatus();
 
+    QFrame *m_fredBanner = nullptr;
+    QLineEdit *m_fredKey = nullptr;
+    QLabel *m_fredNote = nullptr;
     QButtonGroup *m_tabs;
     QStackedWidget *m_stack;
     QLabel *m_status;

@@ -67,7 +67,7 @@ GlobeWidget::GlobeWidget(MarketData *data, VesselStore *vessels, ChokepointMonit
     , m_chokepoints(chokepoints)
 {
     setMouseTracking(true);
-    setMinimumSize(400, 400);
+    setMinimumSize(360, 360);
     setAttribute(Qt::WA_OpaquePaintEvent);
 
     m_countries = Geo::loadCountries(":/countries.json");

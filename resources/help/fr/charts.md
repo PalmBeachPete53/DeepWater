@@ -5,10 +5,14 @@ La page Graphiques est un terminal de trading : un portage de Quant Terminal (li
 ## Disposition
 
 - **Les volets de graphique** : un ou plusieurs, chacun avec son symbole, son unité de temps et son type (chandeliers, barres, ligne, aire, Heikin Ashi, Renko, Kagi, point & figure, **Footprint**…). La barre d'outils porte le champ du symbole, l'unité de temps, le type de graphique, **Indicators**, **Compare** (un autre symbole sur le même graphique), **Replay** (rejeu barre par barre avec un curseur), l'export CSV et les réglages. Un fin **curseur de plage** sous chaque volet montre toutes les barres chargées et la fenêtre affichée (plus bas).
+- **La légende** en haut à gauche du graphique : l'engrenage, l'œil et le × de chaque indicateur, et **Vol** pour les barres de volume, dont le × les retire de ce graphique (**Settings › Volume on the price chart** les remet).
+- **Le compte à rebours** sous le dernier prix : le temps restant avant la clôture de la bougie, sur les unités de temps intraday et sur les plus longues en crypto ; **Settings** permet de le masquer.
 - **Le panneau latéral** : **Watchlist**, **Alerts**, **Calendar** et **News**.
 - **Le panneau du bas** : **Strategy tester**, **Screener**, **Heatmap**, **Seasonals**, **Financials**, **Paper trading**, **Indicator editor**, **Terminal** et **PTQ**. Tirez son bord supérieur pour le redimensionner.
 
 Le moteur tourne pendant toute la session : les alertes continuent de se déclencher et le compte fictif de s'exécuter pendant que vous êtes sur un autre onglet.
+
+Une unité de temps déjà vue s'ouvre aussitôt à partir des bougies enregistrées sur cet ordinateur, puis les nouvelles arrivent. **Settings › Load times** ouvre un fichier texte des temps de chaque chargement, à joindre à un signalement de lenteur.
 
 ## Données
 

@@ -4,7 +4,7 @@ Deepwater est un terminal de bureau pour les marchés de matières premières et
 
 ## La fenêtre
 
-Le bandeau porte la marque, les onglets, l'horloge UTC et quatre icônes : la flèche (mises à jour), `</>` (les outils de développement), `?` (cette aide) et l'engrenage (les paramètres). Chaque onglet est une page :
+Le bandeau porte la marque, les onglets, l'horloge UTC et quatre icônes : la flèche (mises à jour), `</>` (les outils de développement), `?` (cette aide) et l'engrenage (les paramètres). Dans une fenêtre étroite, le bandeau se resserre : l'horloge se réduit puis disparaît, et les derniers onglets passent dans le menu **Plus**. Sur les pages, les barres passent à la ligne, les cartes changent de nombre de colonnes, et ce qui ne tient toujours pas défile. Chaque onglet est une page :
 
 | Onglet | Ce qu'il montre |
 |---|---|

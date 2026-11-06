@@ -8,6 +8,8 @@
 #include "desk/Instruments.h"
 #include "desk/Risk.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QComboBox>
 #include <QDateTimeEdit>
@@ -380,9 +382,8 @@ public:
         : QFrame(parent)
     {
         setObjectName("qtBar");
-        auto *h = new QHBoxLayout(this);
+        auto *h = new qtm::kit::WrapBarLayout(this, 8, 6);
         h->setContentsMargins(10, 6, 10, 6);
-        h->setSpacing(8);
         m_account = combo();
         m_account->setMinimumWidth(150);
         m_year = combo();
@@ -407,8 +408,8 @@ public:
         h->addWidget(m_symbol);
         h->addWidget(m_side);
         h->addWidget(m_strategy);
-        h->addStretch(1);
         m_last = quant::label({}, "qtNote");
+        m_last->setProperty("marginLeftAuto", true);
         h->addWidget(m_last);
         auto *log = action(tr("+ LOG TRADE"));
         auto *import = action(tr("IMPORT TRADES"));
@@ -1294,9 +1295,8 @@ JournalPage::JournalPage(QWidget *parent)
     sub->setObjectName("qtSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(36);
-    auto *sh = new QHBoxLayout(sub);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
     sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     const QStringList names {tr("Dashboard"), tr("Trade log"), tr("Advanced details"), tr("Risk calculator")};
     for (int i = 0; i < names.size(); ++i) {
@@ -1309,7 +1309,6 @@ JournalPage::JournalPage(QWidget *parent)
         m_tabs->addButton(b, i);
         sh->addWidget(b);
     }
-    sh->addStretch(1);
     v->addWidget(sub);
 
     auto *barHolder = new QWidget;

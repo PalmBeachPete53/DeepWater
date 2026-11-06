@@ -196,6 +196,16 @@ HeaderBar::HeaderBar(QWidget *parent)
     layout->addLayout(m_navLayout);
     layout->addSpacing(6);
 
+    m_moreButton = new QToolButton;
+    m_moreButton->setObjectName("navButton");
+    m_moreButton->setText(tr("More") + QString::fromUtf8(" \u25BE"));
+    m_moreButton->setCursor(Qt::PointingHandCursor);
+    m_moreButton->setFocusPolicy(Qt::NoFocus);
+    m_moreButton->setFixedHeight(52);
+    m_moreButton->hide();
+    connect(m_moreButton, &QToolButton::clicked, this, &HeaderBar::showMoreMenu);
+    layout->addWidget(m_moreButton);
+
     m_addButton = new QToolButton;
     m_addButton->setObjectName("headerIconButton");
     m_addButton->setToolTip(tr("Show a hidden tab"));
@@ -375,20 +385,24 @@ void HeaderBar::setNavHidden(const QStringList &ids)
 void HeaderBar::setNavItemHidden(const QString &id, bool hidden)
 {
     QToolButton *b = m_navButtons.value(id);
-    if (!b || b->isHidden() == hidden)
+    if (!b || m_hiddenIds.contains(id) == hidden)
         return;
-    if (hidden && hiddenNavItems().size() == m_navOrder.size() - 1)
+    if (hidden && m_hiddenIds.size() == m_navOrder.size() - 1)
         return;   // keep the last visible tab
-    b->setVisible(!hidden);
+    if (hidden)
+        m_hiddenIds.append(id);
+    else
+        m_hiddenIds.removeAll(id);
     // Hiding the open page moves to the first visible tab.
     if (hidden && b->isChecked()) {
         for (const QString &other : std::as_const(m_navOrder)) {
-            if (!m_navButtons.value(other)->isHidden()) {
+            if (!m_hiddenIds.contains(other)) {
                 emit navigationRequested(other);
                 break;
             }
         }
     }
+    fitToWidth();
     updateEditControls();
 }
 
@@ -396,7 +410,7 @@ QStringList HeaderBar::hiddenNavItems() const
 {
     QStringList ids;
     for (const QString &id : m_navOrder)
-        if (m_navButtons.value(id)->isHidden())
+        if (m_hiddenIds.contains(id))
             ids.append(id);
     return ids;
 }
@@ -409,6 +423,137 @@ void HeaderBar::updateEditControls()
         remove->setVisible(m_editing && canRemove);
     m_addButton->setVisible(m_editing);
     m_addButton->setEnabled(!hidden.isEmpty());
+}
+
+// The tabs that don't fit in the bar.
+void HeaderBar::showMoreMenu()
+{
+    auto *menu = new QMenu(this);
+    menu->setObjectName("navHiddenMenu");
+    menu->setAttribute(Qt::WA_DeleteOnClose);
+    menu->setAttribute(Qt::WA_TranslucentBackground);   // rounded corners (style.qss)
+    for (const QString &id : std::as_const(m_overflowIds))
+        menu->addAction(m_navButtons.value(id)->text(), this, [this, id] { emit navigationRequested(id); });
+    menu->popup(m_moreButton->mapToGlobal(QPoint(0, m_moreButton->height())));
+}
+
+void HeaderBar::setCompact(bool compact)
+{
+    if (m_compact == compact)
+        return;
+    m_compact = compact;
+    for (QToolButton *b : std::as_const(m_navButtons)) {
+        b->setProperty("compact", compact);
+        repolish(b);
+    }
+    m_moreButton->setProperty("compact", compact);
+    repolish(m_moreButton);
+}
+
+// Gives way as the width runs out: first the tabs' padding, then the clock's date, the clock, and last the tabs, those at
+// the end going under "More". The open tab always stays in the bar.
+void HeaderBar::fitToWidth()
+{
+    if (m_fitting)
+        return;
+    m_fitting = true;
+    QStringList shown;
+    for (const QString &id : std::as_const(m_navOrder))
+        if (!m_hiddenIds.contains(id))
+            shown.append(id);
+
+    constexpr int PaddingSaved = 12;   // both sides, style.qss
+    const bool canCompact = !m_editing;
+    const auto tabWidth = [&](QToolButton *b, bool compact) {
+        const int hint = b->sizeHint().width();
+        if (!canCompact)
+            return hint;
+        return hint + (m_compact ? PaddingSaved : 0) - (compact ? PaddingSaved : 0);
+    };
+    const auto tabsWidth = [&](bool compact) {
+        int total = 0;
+        for (const QString &id : shown)
+            total += tabWidth(m_navButtons.value(id), compact) + m_navLayout->spacing();
+        return total;
+    };
+
+    const QFontMetrics clockMetrics = m_clock->fontMetrics();
+    const QDateTime now = QDateTime::currentDateTimeUtc();
+    const int longClock = clockMetrics.horizontalAdvance(QLocale().toString(now, "ddd d MMM  HH:mm:ss") + " UTC  ") + 12;
+    const int shortClock = clockMetrics.horizontalAdvance(now.toString("HH:mm:ss") + " UTC  ") + 12;
+
+    // All that isn't a tab or the clock.
+    const QMargins margins = layout()->contentsMargins();
+    int fixed = margins.left() + margins.right() + 36 + 6 + 4 + m_editButton->width();
+    for (QWidget *w : findChildren<QWidget *>(Qt::FindDirectChildrenOnly)) {
+        if (w == m_editButton || w == m_clock || w == m_moreButton || w == m_addButton || w->isWindow())
+            continue;
+        if (!m_navButtons.key(qobject_cast<QToolButton *>(w)).isEmpty() || w->isHidden())
+            continue;
+        fixed += qobject_cast<QToolButton *>(w) ? w->width() + 2 : w->sizeHint().width();
+    }
+    if (m_editing)
+        fixed += m_addButton->width();
+    const int room = width() - fixed;
+
+    bool compact = canCompact;
+    int clockLevel = 2;
+    if (tabsWidth(false) + longClock <= room) {
+        compact = false;
+        clockLevel = 0;
+    } else if (tabsWidth(canCompact) + longClock <= room) {
+        clockLevel = 0;
+    } else if (tabsWidth(canCompact) + shortClock <= room) {
+        clockLevel = 1;
+    }
+
+    QStringList overflow;
+    if (tabsWidth(compact) > room - (clockLevel == 0 ? longClock : clockLevel == 1 ? shortClock : 0) && !shown.isEmpty()) {
+        const int moreWidth = m_moreButton->sizeHint().width() + (m_compact ? PaddingSaved : 0) - (compact ? PaddingSaved : 0);
+        int left = room - moreWidth;
+        const auto spaceFor = [&](const QString &id) { return tabWidth(m_navButtons.value(id), compact) + m_navLayout->spacing(); };
+        if (shown.contains(m_currentId))
+            left -= spaceFor(m_currentId);
+        bool full = false;
+        for (const QString &id : std::as_const(shown)) {
+            if (id == m_currentId)
+                continue;
+            if (!full && spaceFor(id) <= left)
+                left -= spaceFor(id);
+            else {
+                full = true;
+                overflow.append(id);
+            }
+        }
+    }
+
+    setCompact(compact);
+    m_clockLevel = clockLevel;
+    m_clock->setVisible(clockLevel < 2);
+    updateClock();
+    m_overflowIds = overflow;
+    for (const QString &id : std::as_const(m_navOrder))
+        m_navButtons.value(id)->setVisible(shown.contains(id) && !overflow.contains(id));
+    m_moreButton->setVisible(!overflow.isEmpty());
+    layout()->activate();
+    m_fitting = false;
+}
+
+QSize HeaderBar::minimumSizeHint() const
+{
+    return QSize(560, 52);
+}
+
+void HeaderBar::resizeEvent(QResizeEvent *event)
+{
+    QWidget::resizeEvent(event);
+    fitToWidth();
+}
+
+void HeaderBar::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    fitToWidth();   // the first time, the style sheet has only just given the tabs their sizes
 }
 
 // Floating vertical list of the hidden tabs; picking one shows it again at its place.
@@ -437,6 +582,7 @@ void HeaderBar::setEditing(bool editing)
         b->setCursor(editing ? Qt::OpenHandCursor : Qt::PointingHandCursor);
         repolish(b);
     }
+    fitToWidth();
     updateEditControls();
 }
 
@@ -532,12 +678,18 @@ bool HeaderBar::eventFilter(QObject *watched, QEvent *event)
 
 void HeaderBar::setCurrent(const QString &id)
 {
-    if (QToolButton *b = m_navButtons.value(id))
+    if (QToolButton *b = m_navButtons.value(id)) {
         b->setChecked(true);
+        m_currentId = id;
+        fitToWidth();
+    }
 }
 
 void HeaderBar::updateClock()
 {
-    m_clock->setText(QLocale().toString(QDateTime::currentDateTimeUtc(), "ddd d MMM  HH:mm:ss")
-                     + " UTC");
+    const QDateTime now = QDateTime::currentDateTimeUtc();
+    if (m_clockLevel == 0)
+        m_clock->setText(QLocale().toString(now, "ddd d MMM  HH:mm:ss") + " UTC");
+    else if (m_clockLevel == 1)
+        m_clock->setText(now.toString("HH:mm:ss") + " UTC");
 }

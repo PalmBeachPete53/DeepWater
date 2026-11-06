@@ -32,6 +32,7 @@ public:
 protected:
     void showEvent(QShowEvent *) override;
     void hideEvent(QHideEvent *) override;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
     enum Range { LastWeek, Yesterday, Today, Tomorrow, ThisWeek, NextWeek, Day };

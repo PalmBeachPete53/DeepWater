@@ -125,6 +125,7 @@ public:
 
 private:
     void buildUi();
+    void fitToScreen();
     void rebuildUi();
     void applyLanguage(const QString &code);
     void applyTheme(const QString &id);

@@ -5,6 +5,8 @@
 #include "desk/NewsTags.h"
 #include "desk/Sessions.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QDesktopServices>
 #include <QHBoxLayout>
@@ -74,8 +76,7 @@ public:
         tiles->addWidget(tile(tr("Laggard"), &m_laggard, &m_laggardSub), 1);
         content()->addLayout(tiles);
 
-        auto *columns = new QHBoxLayout;
-        columns->setSpacing(10);
+        auto *columns = new CardGrid(300, 5, Qt::AlignTop);
         const AssetClass classes[] = {AssetClass::Fx, AssetClass::Index, AssetClass::Commodity, AssetClass::Stock, AssetClass::Crypto};
         for (AssetClass cls : classes) {
             QVBoxLayout *body;
@@ -83,18 +84,16 @@ public:
             body->setContentsMargins(6, 8, 6, 6);
             auto *t = table({tr("Market"), tr("Last"), tr("Change")});
             t->setCursor(Qt::PointingHandCursor);
-            t->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);   // names stay whole
-            t->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
-            t->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+            fitColumns(t, 0);   // the figures stay whole; a name gives way first
             body->addWidget(t);
-            columns->addWidget(card, 1, Qt::AlignTop);
+            columns->addCard(card);
             m_tables.insert(int(cls), t);
             connect(t, &QTableWidget::cellClicked, this, [this, t](int row, int) {
                 if (auto *item = t->item(row, 0))
                     openMarketSheet(item->data(Qt::UserRole).toString(), m_context, this);
             });
         }
-        content()->addLayout(columns);
+        content()->addWidget(columns);
         content()->addStretch(1);
         auto *note = quant::label(tr("Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market for its sheet."), "qtNote");
         content()->addWidget(note);
@@ -228,7 +227,9 @@ public:
     {
         QHBoxLayout *h;
         auto *top = quant::bar(&h);
-        h->addWidget(quant::label(tr("Unweighted currency indices: each currency against the seven others, every pair counting the same."), "qtNote"), 1);
+        auto *note = quant::label(tr("Unweighted currency indices: each currency against the seven others, every pair counting the same."), "qtNote");
+        note->setWordWrap(true);
+        h->addWidget(note, 1);
         h->addWidget(quant::segments({"15m", "1H", "4H", "D", "W"}, &m_timeframe, std::clamp(QSettings().value("desk/strength/tf", 1).toInt(), 0, 4)));
         content()->addWidget(top);
         auto *row = new QHBoxLayout;
@@ -240,6 +241,7 @@ public:
         body->addWidget(m_chart);
         row->addWidget(chartCard, 3);
         auto *rankCard = quant::card(tr("Ranking"), &body);
+        rankCard->setMinimumWidth(200);
         m_rank = table({"#", tr("Currency"), tr("Change")});
         body->addWidget(m_rank);
         body->addStretch(1);
@@ -530,7 +532,9 @@ public:
         m_read->setTextInteractionFlags(Qt::TextSelectableByMouse);
         body->addWidget(m_read);
         auto *actions = new QHBoxLayout;
-        actions->addWidget(quant::label(tr("Written by the app from the figures below, by fixed rules."), "qtNote"), 1);
+        auto *written = quant::label(tr("Written by the app from the figures below, by fixed rules."), "qtNote");
+        written->setWordWrap(true);
+        actions->addWidget(written, 1);
         actions->addWidget(askAiButton(c, tr("ASK THE AI TO READ IT"),
                                        tr("Use read_page on the Desk page, section Recap, then explain this session in a few sentences: what moved most, the releases and headlines that may explain it. Use only what the page shows and say what it doesn't show.")));
         body->addLayout(actions);
@@ -545,7 +549,10 @@ public:
         m_chart->setMinimumHeight(220);
         body->addWidget(m_chart);
         mid->addWidget(chartCard);
-        row->addLayout(mid, 2);
+        // The side tables need the width of a column of their own: under the rest on a laptop.
+        auto *flip = new FlipRow(1100);
+        flip->setSpacing(10);
+        flip->addLayout(mid, 1);
 
         auto *side = new QVBoxLayout;
         side->setSpacing(10);
@@ -561,7 +568,8 @@ public:
         body->addWidget(m_wire);
         side->addWidget(wire);
         side->addStretch(1);
-        row->addLayout(side, 2);
+        flip->addLayout(side, 1);
+        row->addLayout(flip, 4);
         content()->addLayout(row);
         content()->addStretch(1);
 
@@ -784,13 +792,16 @@ public:
         : View(parent)
         , m_context(c)
     {
-        QHBoxLayout *h;
-        auto *top = quant::bar(&h);
+        auto *top = new QFrame;
+        top->setObjectName("qtBar");
+        auto *h = new qtm::kit::WrapBarLayout(top, 10, 6);
+        h->setContentsMargins(10, 6, 10, 6);
         h->addWidget(quant::segments({tr("All"), tr("Headlines"), tr("Movers"), tr("Releases")}, &m_filter));
         m_counts = quant::label({}, "qtNote");
         h->addWidget(m_counts);
-        h->addStretch(1);
-        h->addWidget(quant::label(tr("LIVE TV"), "qtFieldLabel"));
+        auto *liveTv = quant::label(tr("LIVE TV"), "qtFieldLabel");
+        liveTv->setProperty("marginLeftAuto", true);
+        h->addWidget(liveTv);
         const struct { const char *name, *url; } channels[] = {{"Bloomberg Television", "https://www.youtube.com/@markets/live"},
                                                                {"Yahoo Finance", "https://www.youtube.com/@YahooFinance/live"},
                                                                {"CNBC Television", "https://www.youtube.com/@CNBCtelevision/live"}};

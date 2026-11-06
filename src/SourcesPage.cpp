@@ -26,6 +26,8 @@
 #include "quant/server/Server.h"
 #include "quant/ui/Api.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QComboBox>
 #include <QDesktopServices>
 #include <QElapsedTimer>
@@ -205,9 +207,8 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     bar->setObjectName("calSubBar");
     bar->setAttribute(Qt::WA_StyledBackground);
     bar->setFixedHeight(36);
-    auto *barLayout = new QHBoxLayout(bar);
+    auto *barLayout = new qtm::kit::WrapBarLayout(bar, 4);
     barLayout->setContentsMargins(12, 0, 12, 0);
-    barLayout->setSpacing(4);
     m_tabs = new QButtonGroup(this);
     const QStringList tabNames {tr("List"), tr("Data")};
     for (int i = 0; i < tabNames.size(); ++i) {
@@ -220,7 +221,6 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
         m_tabs->addButton(b, i);
         barLayout->addWidget(b);
     }
-    barLayout->addStretch(1);
     outer->addWidget(bar);
     m_stack = new QStackedWidget;
     outer->addWidget(m_stack, 1);

@@ -4,6 +4,8 @@
 #include "ResearchViews.h"
 #include "Theme.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QAbstractItemView>
 #include <QButtonGroup>
 #include <QCompleter>
@@ -34,9 +36,8 @@ ResearchPage::ResearchPage(QWidget *parent)
     bar->setObjectName("resSymbolBar");
     bar->setAttribute(Qt::WA_StyledBackground);
     bar->setFixedHeight(46);
-    auto *h = new QHBoxLayout(bar);
-    h->setContentsMargins(10, 6, 12, 6);
-    h->setSpacing(16);
+    auto *h = new qtm::kit::WrapBarLayout(bar, 16, 4);
+    h->setContentsMargins(10, 6, 30, 6);   // clear of the side flaps
     m_edit = new QLineEdit;
     m_edit->setObjectName("resSymbolEdit");
     m_edit->setFixedWidth(240);
@@ -52,7 +53,8 @@ ResearchPage::ResearchPage(QWidget *parent)
     m_quote = new QLabel;
     m_quote->setObjectName("resQuote");
     m_quote->setTextFormat(Qt::RichText);
-    h->addWidget(m_quote, 1);
+    m_quote->setProperty("flexGrow", 1);
+    h->addWidget(m_quote);
     m_state = new quant::MarketStateStrip(nullptr, true);
     m_state->setToolTip(tr("Regime and volatility forecast from Quant › Markov"));
     h->addWidget(m_state);
@@ -63,9 +65,8 @@ ResearchPage::ResearchPage(QWidget *parent)
     sub->setObjectName("resSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(34);
-    auto *sh = new QHBoxLayout(sub);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
     sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     m_sectionNames = {tr("Key Metrics"), tr("Financials"), tr("Financial Charts"), tr("Ownership"), tr("Ratings"),
                       tr("Compare"), tr("Compare Charts"), tr("Sectors"), "ICS", "SPLC"};
@@ -82,7 +83,6 @@ ResearchPage::ResearchPage(QWidget *parent)
     }
     m_tabs->button(8)->setToolTip(tr("Industrial Classification System"));
     m_tabs->button(9)->setToolTip(tr("Supply chain"));
-    sh->addStretch(1);
     v->addWidget(sub);
 
     m_stack = new QStackedWidget;

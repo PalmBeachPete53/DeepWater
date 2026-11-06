@@ -48,15 +48,14 @@ public:
         h->addStretch(1);
         content()->addWidget(top);
 
-        auto *grid = new QGridLayout;
-        grid->setSpacing(10);
-        addCard(grid, 0, 0, "supertrend", tr("Supertrend"), {{"atrLength", tr("ATR"), 10, 1, 100, false}, {"factor", tr("Factor"), 3, 0.5, 10, true}});
-        addCard(grid, 0, 1, "bb", tr("Bollinger Bands"), {{"length", tr("Length"), 20, 2, 200, false}, {"mult", tr("Deviations"), 2, 0.5, 5, true}});
-        addCard(grid, 0, 2, "ema", tr("Moving averages"), {{"fast", tr("Fast"), 20, 2, 200, false}, {"slow", tr("Slow"), 50, 3, 400, false}});
-        addCard(grid, 1, 0, "rsi", tr("RSI"), {{"length", tr("Length"), 14, 2, 100, false}, {"oversold", tr("Low line"), 30, 1, 49, false}, {"overbought", tr("High line"), 70, 51, 99, false}});
-        addCard(grid, 1, 1, "macd", tr("MACD"), {{"fast", tr("Fast"), 12, 2, 100, false}, {"slow", tr("Slow"), 26, 3, 200, false}, {"signal", tr("Signal"), 9, 2, 100, false}});
-        addCard(grid, 1, 2, "dmi", tr("ADX and directional movement"), {{"diLength", tr("Length"), 14, 2, 100, false}});
-        content()->addLayout(grid);
+        auto *grid = new CardGrid(0, 3);
+        addCard(grid, "supertrend", tr("Supertrend"), {{"atrLength", tr("ATR"), 10, 1, 100, false}, {"factor", tr("Factor"), 3, 0.5, 10, true}});
+        addCard(grid, "bb", tr("Bollinger Bands"), {{"length", tr("Length"), 20, 2, 200, false}, {"mult", tr("Deviations"), 2, 0.5, 5, true}});
+        addCard(grid, "ema", tr("Moving averages"), {{"fast", tr("Fast"), 20, 2, 200, false}, {"slow", tr("Slow"), 50, 3, 400, false}});
+        addCard(grid, "rsi", tr("RSI"), {{"length", tr("Length"), 14, 2, 100, false}, {"oversold", tr("Low line"), 30, 1, 49, false}, {"overbought", tr("High line"), 70, 51, 99, false}});
+        addCard(grid, "macd", tr("MACD"), {{"fast", tr("Fast"), 12, 2, 100, false}, {"slow", tr("Slow"), 26, 3, 200, false}, {"signal", tr("Signal"), 9, 2, 100, false}});
+        addCard(grid, "dmi", tr("ADX and directional movement"), {{"diLength", tr("Length"), 14, 2, 100, false}});
+        content()->addWidget(grid);
         auto *note = quant::label(tr("Daily closes from Yahoo Finance, delayed, computed here with the indicators of the Charts tab; the last six months are shown. The settings are remembered. Plain readings, not signals to trade."), "qtNote");
         note->setWordWrap(true);
         content()->addWidget(note);
@@ -83,7 +82,7 @@ private:
         QHash<QString, QAbstractSpinBox *> params;
     };
 
-    void addCard(QGridLayout *grid, int row, int column, const QString &id, const QString &title, const QVector<Param> &params)
+    void addCard(CardGrid *grid, const QString &id, const QString &title, const QVector<Param> &params)
     {
         QVBoxLayout *body;
         QHBoxLayout *head;
@@ -125,7 +124,7 @@ private:
         card.chart->setMinimumHeight(220);
         card.chart->setZeroLine(false);
         body->addWidget(card.chart);
-        grid->addWidget(frame, row, column);
+        grid->addCard(frame);
         m_cards.insert(id, card);
     }
 

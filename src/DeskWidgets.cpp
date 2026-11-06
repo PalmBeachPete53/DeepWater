@@ -5,6 +5,7 @@
 #include "QuantViews.h"
 #include "Theme.h"
 
+#include <QGridLayout>
 #include <QDateTime>
 #include <QHeaderView>
 #include <QLabel>
@@ -78,10 +79,73 @@ QTableWidget *table(const QStringList &headers)
     t->setFocusPolicy(Qt::NoFocus);
     t->setShowGrid(false);
     t->setFrameShape(QFrame::NoFrame);
-    t->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     t->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     fitColumns(t);
+    t->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);   // what the row is about stays whole
     return t;
+}
+
+CardGrid::CardGrid(int cardWidth, int maxColumns, Qt::Alignment alignment, QWidget *parent)
+    : QWidget(parent)
+    , m_grid(new QGridLayout(this))
+    , m_cardWidth(cardWidth)
+    , m_maxColumns(maxColumns)
+    , m_alignment(alignment)
+{
+    m_grid->setContentsMargins(0, 0, 0, 0);
+    m_grid->setSpacing(10);
+}
+
+void CardGrid::addCard(QWidget *card)
+{
+    m_cards << card;
+    arrange(m_columns > 0 ? m_columns : m_maxColumns);
+}
+
+int CardGrid::columnWidth() const
+{
+    int w = m_cardWidth;
+    for (const QWidget *card : m_cards)
+        w = std::max(w, card->minimumSizeHint().width());
+    return w;
+}
+
+QSize CardGrid::minimumSizeHint() const
+{
+    return QSize(columnWidth(), m_grid->minimumSize().height());
+}
+
+void CardGrid::resizeEvent(QResizeEvent *event)
+{
+    QWidget::resizeEvent(event);
+    const int columns = std::clamp((width() + m_grid->spacing()) / (columnWidth() + m_grid->spacing()), 1, m_maxColumns);
+    if (columns != m_columns)
+        arrange(columns);
+}
+
+void CardGrid::arrange(int columns)
+{
+    m_columns = columns;
+    for (QWidget *card : std::as_const(m_cards))
+        m_grid->removeWidget(card);
+    for (int i = 0; i < m_cards.size(); ++i)
+        m_grid->addWidget(m_cards[i], i / columns, i % columns, m_alignment);
+    for (int c = 0; c < m_maxColumns; ++c)
+        m_grid->setColumnStretch(c, c < columns ? 1 : 0);
+}
+
+FlipRow::FlipRow(int threshold, QWidget *parent)
+    : QBoxLayout(LeftToRight, parent)
+    , m_threshold(threshold)
+{
+}
+
+void FlipRow::setGeometry(const QRect &rect)
+{
+    const Direction wanted = rect.width() >= m_threshold ? LeftToRight : TopToBottom;
+    if (rect.width() > 0 && wanted != direction())
+        setDirection(wanted);
+    QBoxLayout::setGeometry(rect);
 }
 
 void fitColumns(QTableWidget *t, int stretch)

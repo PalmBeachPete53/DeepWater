@@ -8,6 +8,7 @@
 #include "AiRead.h"
 #include "JournalData.h"
 #include "Myfxbook.h"
+#include "LayoutAudit.h"
 #include "MainWindow.h"
 #include "DeskHistory.h"
 #include "SettingsDialog.h"
@@ -105,6 +106,22 @@ int main(int argc, char *argv[])
     const int themeArg = args.indexOf("--theme");
     MainWindow w(&data, themeArg > 0 && themeArg + 1 < args.size() ? args.at(themeArg + 1) : QString());
     w.show();
+    // --window-size 1280x640: this size for this run, to check a layout on a smaller or a larger screen.
+    if (const int sizeArg = args.indexOf("--window-size"); sizeArg > 0 && sizeArg + 1 < args.size()) {
+        const QStringList size = args.at(sizeArg + 1).split('x');
+        if (size.size() == 2)
+            w.resize(size.at(0).toInt(), size.at(1).toInt());
+    }
+    // --layout-audit <dir> 1280x640,1920x1080: every page and section at these sizes; see LayoutAudit.h.
+    if (const int auditArg = args.indexOf("--layout-audit"); auditArg > 0 && auditArg + 2 < args.size()) {
+        QList<QSize> sizes;
+        for (const QString &text : args.at(auditArg + 2).split(',')) {
+            const QStringList size = text.split('x');
+            if (size.size() == 2)
+                sizes << QSize(size.at(0).toInt(), size.at(1).toInt());
+        }
+        QTimer::singleShot(1500, &app, [&w, dir = args.at(auditArg + 1), sizes] { runLayoutAudit(&w, dir, sizes); });
+    }
 
     // --journal-sample <file>: a statement in memory for this run; the journal's file isn't read or written.
     if (const int sampleArg = args.indexOf("--journal-sample"); sampleArg > 0 && sampleArg + 1 < args.size())

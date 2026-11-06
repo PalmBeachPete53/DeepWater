@@ -4,7 +4,7 @@ Deepwater is a desktop terminal for commodity markets and the world economy: a g
 
 ## The window
 
-The header holds the brand, the tabs, the UTC clock and four icons: the arrow (updates), `</>` (the developer tools), `?` (this help) and the gear (settings). Each tab is a page:
+The header holds the brand, the tabs, the UTC clock and four icons: the arrow (updates), `</>` (the developer tools), `?` (this help) and the gear (settings). In a narrow window the bar tightens: the clock shortens then goes, and the last tabs move under **More**. On the pages, bars wrap onto more lines, cards change their number of columns, and what still doesn't fit scrolls. Each tab is a page:
 
 | Tab | What it shows |
 |---|---|

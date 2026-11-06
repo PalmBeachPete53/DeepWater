@@ -273,6 +273,7 @@ struct AxisLabel {
     bool axisVisible = false;
     bool paneVisible = false;
     QString axisText;
+    QString axisDetail;  // a second line under axisText
     QString paneText;
     QColor background;   // opaque
     QColor textColor;

@@ -2,6 +2,8 @@
 
 #include "Theme.h"
 
+#include <QGuiApplication>
+#include <QScreen>
 #include <QApplication>
 #include <QDesktopServices>
 #include <QEvent>
@@ -55,7 +57,9 @@ HelpWindow::HelpWindow(const QString &language, QWidget *parent)
     setAttribute(Qt::WA_StyledBackground);
     setModal(false);
     setMinimumSize(760, 480);
-    resize(QSettings().value("help/size", QSize(1180, 760)).toSize());
+    const QScreen *screen = QGuiApplication::primaryScreen();
+    const QSize room = screen ? screen->availableGeometry().size() - QSize(40, 60) : QSize(1180, 760);
+    resize(QSettings().value("help/size", QSize(1180, 760)).toSize().boundedTo(room));
 
     auto *layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);

@@ -4,6 +4,8 @@
 #include "QuantCharts.h"
 #include "Theme.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QCheckBox>
 #include <QComboBox>
@@ -286,8 +288,9 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
     fl->setContentsMargins(14, 6, 14, 8);
     auto *left = new QVBoxLayout;
     left->setSpacing(6);
-    auto *tabs = new QHBoxLayout;
-    tabs->setSpacing(2);
+    auto *tabsRow = new QWidget;
+    tabsRow->setFixedHeight(30);
+    auto *tabs = new qtm::kit::WrapBarLayout(tabsRow, 2, 2);
     m_rangeGroup = new QButtonGroup(this);
     const QStringList ranges {tr("Last week"), tr("Yesterday"), tr("Today"), tr("Tomorrow"), tr("Current week"),
                               tr("Next week")};
@@ -300,9 +303,8 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
         m_rangeGroup->addButton(b, i);
         tabs->addWidget(b);
     }
-    tabs->addStretch(1);
     connect(m_rangeGroup, &QButtonGroup::idClicked, this, &EconomicView::setRange);
-    left->addLayout(tabs);
+    left->addWidget(tabsRow);
     auto *dateRow = new QHBoxLayout;
     dateRow->setSpacing(8);
     dateRow->addWidget(fieldLabel(tr("Specific date")));
@@ -363,7 +365,8 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
                         34, "calTableLarge");
     m_table->setItemDelegateForColumn(4, new ImpactDelegate(m_table));
     QHeaderView *h = m_table->horizontalHeader();
-    const int widths[] = {90, 80, 200, 0, 110, 120, 120, 120, 110, 90};
+    m_table->viewport()->installEventFilter(this);
+    const int widths[] = {84, 70, 150, 0, 96, 92, 92, 92, 92, 84};
     for (int i = 0; i < 10; ++i) {
         if (i == 3) {
             h->setSectionResizeMode(i, QHeaderView::Stretch);
@@ -448,6 +451,17 @@ EconomicView::EconomicView(EconomicCalendar *calendar, QWidget *parent)
     m_range = std::clamp(settings.value("calendar/range", int(Today)).toInt(), 0, int(NextWeek));
     m_rangeGroup->button(m_range)->setChecked(true);
     rebuild();
+}
+
+// A narrow window drops Surprise and the time left, so that the event's name stays readable.
+bool EconomicView::eventFilter(QObject *watched, QEvent *event)
+{
+    if (watched == m_table->viewport() && event->type() == QEvent::Resize) {
+        const bool narrow = m_table->viewport()->width() < 1060;
+        m_table->setColumnHidden(8, narrow);
+        m_table->setColumnHidden(9, narrow);
+    }
+    return QWidget::eventFilter(watched, event);
 }
 
 void EconomicView::showEvent(QShowEvent *)
@@ -687,15 +701,14 @@ CorporateView::CorporateView(CorporateCalendar *calendar, QWidget *parent)
         QHeaderView *h = t->horizontalHeader();
         h->setSectionResizeMode(QHeaderView::Fixed);
         h->setSectionResizeMode(1, QHeaderView::Stretch);
-        t->setColumnWidth(0, 90);
+        t->setColumnWidth(0, 70);
         for (int c = 2; c < t->columnCount(); ++c)
-            t->setColumnWidth(c, 96);
+            t->setColumnWidth(c, 76);
         // Figures line up on the right, as in the last column's header.
         const int last = t->columnCount() - 1;
         t->model()->setHeaderData(last, Qt::Horizontal, int(Qt::AlignRight | Qt::AlignVCenter), Qt::TextAlignmentRole);
     }
-    m_ipos->setColumnWidth(3, 150);
-    m_ipos->setColumnWidth(4, 120);
+    m_ipos->setColumnWidth(3, 130);
     grid->setRowStretch(0, 3);
     grid->setRowStretch(1, 2);
     outer->addLayout(grid, 1);
@@ -1210,7 +1223,6 @@ MarketHoursView::MarketHoursView(MarketSessions *sessions, QWidget *parent)
     auto *scroll = new QScrollArea;
     scroll->setWidgetResizable(true);
     scroll->setFrameShape(QFrame::NoFrame);
-    scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     auto *content = new QWidget;
     content->setObjectName("calContent");
     auto *l = new QVBoxLayout(content);
@@ -1315,9 +1327,8 @@ CalendarPage::CalendarPage(EconomicCalendar *economic, CorporateCalendar *corpor
     bar->setObjectName("calSubBar");
     bar->setAttribute(Qt::WA_StyledBackground);
     bar->setFixedHeight(36);
-    auto *h = new QHBoxLayout(bar);
+    auto *h = new qtm::kit::WrapBarLayout(bar, 4);
     h->setContentsMargins(12, 0, 12, 0);
-    h->setSpacing(4);
     m_tabs = new QButtonGroup(this);
     const QStringList names {tr("Economic"), tr("Corporate"), tr("Market hours")};
     for (int i = 0; i < names.size(); ++i) {
@@ -1330,7 +1341,6 @@ CalendarPage::CalendarPage(EconomicCalendar *economic, CorporateCalendar *corpor
         m_tabs->addButton(b, i);
         h->addWidget(b);
     }
-    h->addStretch(1);
     v->addWidget(bar);
 
     m_stack = new QStackedWidget;

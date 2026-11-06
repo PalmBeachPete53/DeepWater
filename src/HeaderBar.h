@@ -29,6 +29,8 @@ public:
     void setDevToolsChecked(bool on);
     // The update icon in the accent colour with a dot: a new build can be installed.
     void setUpdateAvailable(bool available);
+    // However many tabs there are: what doesn't fit goes under "More", the clock first (see fitToWidth()).
+    QSize minimumSizeHint() const override;
 
 signals:
     void navigationRequested(const QString &id);
@@ -41,6 +43,8 @@ signals:
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
+    void showEvent(QShowEvent *event) override;
 
 private:
     void updateClock();
@@ -51,6 +55,9 @@ private:
     QStringList hiddenNavItems() const;
     void updateEditControls();
     void showHiddenMenu();
+    void showMoreMenu();
+    void setCompact(bool compact);
+    void fitToWidth();
 
     QHBoxLayout *m_navLayout;
     QButtonGroup *m_navGroup;
@@ -59,6 +66,13 @@ private:
     QHash<QString, QToolButton *> m_removeButtons;   // the × shown on each tab in edit mode
     QToolButton *m_editButton;
     QToolButton *m_addButton;            // edit mode: lists the hidden tabs
+    QToolButton *m_moreButton;           // the tabs that don't fit
+    QStringList m_hiddenIds;             // hidden by the user, as opposed to those under "More"
+    QStringList m_overflowIds;           // under "More", in display order
+    QString m_currentId;
+    bool m_compact = false;              // tabs with less padding
+    int m_clockLevel = 0;                // 0: date and time, 1: time, 2: no clock
+    bool m_fitting = false;
     bool m_editing = false;
     QToolButton *m_dragButton = nullptr; // tab being dragged in edit mode
     int m_pressX = 0;

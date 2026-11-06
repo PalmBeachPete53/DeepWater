@@ -226,10 +226,11 @@ production sites are a hand-picked sample.
 
 ## Forex
 
-The **Forex** page shows the 7 majors plus EUR/GBP, EUR/JPY and USD/CNY: last fix, daily change, 90-day sparkline, and
-a correlation matrix of daily log returns (1M / 3M / 6M / 1Y). Source: European Central Bank reference rates via
-[frankfurter.dev](https://frankfurter.dev) (no key, one fix per business day, no intraday), cached in `fx_rates.json`
-and refreshed every 6 h.
+The **Forex** page shows the 7 majors plus EUR/GBP, EUR/JPY and USD/CNY: price and daily change from Yahoo Finance (the
+same as the Desk and Overview, every minute while the page is open; the last fix when Yahoo doesn't answer), 90-day
+sparkline, and a correlation matrix of daily log returns (1M / 3M / 6M / 1Y). The history: European Central Bank
+reference rates via [frankfurter.dev](https://frankfurter.dev) (no key, one fix per business day, no intraday), cached
+in `fx_rates.json` and refreshed every 6 h.
 
 - **Policy rates**: BIS central bank policy rates (daily series, `stats.bis.org`, no key) for the 9 currencies:
   current rate, last move, 1-year change, 3-year step chart; pair cards show the carry (base − quote rate).
@@ -498,6 +499,22 @@ its oldest bars once 500 more than the bar setting have come in, the view stayin
 volume profile keeps its sessions and closed sessions' profiles between frames; custom JS indicators get their bars
 as one buffer the JS side turns into objects; the watchlist keeps its rows when only the quotes change; Yahoo is asked
 only for the days a request needs (a live poll's 5 bars: tens of days, not 20 years).
+
+Loading: a chart shows the candles saved on disk at once, then asks only for what came since (`server/CandleStore`,
+`data/candles/`, `ChartPane::load`, `planCandleRefresh`): changing timeframe costs a request for a few bars instead of 3000
+(measured 6 November 2026 on a Mac: 1.1 s to about 15 ms to the first drawing on Binance, about 0.3 s more for the new bars).
+Everything is downloaded again when nothing is saved, the copy is over 24 hours old (a stock's history gets adjusted after a
+split), more bars are asked for, the source changed or a gap would be left. With compared symbols, an imported file or a
+spread there is no saved copy. Every load adds a line to `data/chart-timing.log` (Settings › Load times), to send with a
+report of slowness: the data's time, the drawing's and the next paint's, with the system on the first line.
+
+Legend: each indicator's ⚙ 👁 × and a compared symbol's × are always there. **Vol**, the volume bars on the price chart,
+has a row of its own: 👁 hides them, × takes them off this chart (`PaneConfig::volumeHidden`, `volumeRemoved`), and Settings ›
+Volume on the price chart brings them back on every chart.
+
+Countdown: under the last price, the time to the candle's close (`secondsToBarClose`, `formatCountdown`, the series' last
+value detail), on intraday timeframes everywhere and on days and longer for crypto, whose days have a fixed end. Nothing once
+the bar ended over 30 minutes ago (market closed); a feed delayed less than that counts on to the next bar. Settings can hide it.
 
 Live data: Binance pairs get the forming candle from the backend's `<pair>@kline_<interval>` stream (`KlineStream`), one
 per pair and timeframe whatever the number of panes showing it, opened again 3 s after a drop; when no stream host
@@ -837,8 +854,10 @@ it is opened; **Refresh** downloads it again; "Updating…" / "Unavailable: n" i
   reverse repo, retail money funds, M2 and its velocity, USD/JPY, Japan's 10-year yield and euro area HICP.
   Through FRED's API when a key is saved in Sources (Map · databases with a free key › FRED, the same key as the
   map's), else the public CSV of FRED's graphs (`fredgraph.csv`), which turns away requests that don't come from
-  a browser (checked 2026-11-01: HTTP/2 stream reset to the app's own user agent); the panels then say a key is
-  needed. Kept six hours; each request starts on January 1st so its cached copy holds all year.
+  a browser (checked 2026-11-01: HTTP/2 stream reset to the app's own user agent); without a key a banner at the top of the
+  page explains it and takes the key on the spot (it is tried on UNRATE before being kept), and the panels say a key is
+  needed. Kept an hour; each request starts on January 1st so its cached copy holds all year. The VIX comes from Yahoo
+  (`^VIX`): FRED's copy is a day late, which showed another figure than the Desk.
 - **OECD** key economic indicators: US consumer confidence (`USA.M.CCICP`), a day.
 - **Yahoo Finance**: the dollar index (`DX-Y.NYB`).
 - **Crypto**: alternative.me's Fear & Greed index; CoinMarketCap's altcoin season index (since March 2024), total
@@ -1738,6 +1757,18 @@ pages. One tab for now:
 
 `deepwater --devtools` opens the panel at launch (screenshots).
 
+## Window sizes
+
+The app fits a laptop's screen as well as a large one: nothing past a window's edge from 960×540, the smallest it goes (half of a 1080p screen, where a window snapped to one side lands). It opens on the primary screen: all of it on one under 1500 px wide, 92 % of a larger one (`MainWindow::fitToScreen`). Reported in logical pixels: a 1920×1080 laptop at 150 % is 1280×720.
+
+- The header (`HeaderBar::fitToWidth`) gives way in order: the tabs' padding, the clock's date, the clock, then the last tabs, which go under **More**. The open tab stays in the bar. A tab under **More** can't be dragged in edit mode: widen the window to reorder it.
+- The bars at the top of a page use `qtm::kit::WrapBarLayout`: more lines when the width runs out. Its height goes through `setFixedHeight`, not height-for-width, which a stack would turn into the preferred height of all its pages as a minimum.
+- Cards: `deskui::CardGrid` picks its number of columns (Desk › Markets and Indicators, the Overview board); `deskui::FlipRow` puts two blocks one under the other (Desk › Recap).
+- The Charts top bar: its four buttons with an icon lose their word (the tooltip stays) before it takes a second line. The drawing tools scroll with the wheel on a short window.
+- `PageStack` (`MainWindow.cpp`) asks only for what the page on screen needs, so a wide page no longer holds the others up, and a page that can't shrink further scrolls in `pagesScroll`. The scroll areas of a page let a horizontal bar appear rather than cut content.
+
+Check it with `deepwater --layout-audit <dir> 1280x640,960x640,1728x1000`, which walks every page and section (and the panels under the chart) at those sizes and writes a capture of each view and `report.txt`: `PAGE-SCROLL` (the page didn't fit), `WIDE` and `TALL` (what holds its minimum up), `CUT` (a scroll area without a bar cutting content), `HSCROLL`, `CLIPPED` (past the window's edge), `TRUNCATED` and `ELIDED` (text that doesn't fit its label or table column). `--window-size 1280x640` does it for one run with any other flag. The audit clicks through sections, so it saves the last ones like a user would: see the rule on QSettings in CLAUDE.md. macOS keeps a window within the screen's height.
+
 ## Controls
 
 Drag to spin · scroll to zoom · click a dot, cluster or country · `Space` toggles rotation · `Esc` clears the
@@ -1750,6 +1781,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `src/HeaderBar.*` | Top bar: brand, navigation tabs (a tab added since the saved order takes its default place), UTC clock, developer tools, help and settings icons |
 | `src/MainWindow.*` | Page stack; `addPage(id, label, widget)` registers a new nav tab + page, `addPage(id, label, factory)` one built the first time it is shown (Overview, Forex, Calendar, News, Research, Quant, AI and Sources are; the map and Charts are built at launch, Charts because it plays the alerts) |
 | `src/SettingsDialog.*` | Floating settings window (gear icon): language, theme, news (article translation) |
+| `src/LayoutAudit.*` | `--layout-audit`: every page at given window sizes, with captures and a report (README › Window sizes) |
 | `src/Updater.*`, `src/UpdateDialog.*`, `src/UpdateRelease.*`, `cmake/BuildInfo.cmake` | The update system (README › Updates): checks the release `latest-main`, the dialog, the parsing and decisions; the commit compiled into a build |
 | `src/HelpWindow.*`, `resources/help/<lang>/*.md` | The documentation window (? icon, F1): chapters in Markdown per language, search, theme colours applied to the document |
 | `src/DevTools.*` | Developer tools: the flap on the right edge (`SideFlap`) and the full-width tabbed panel it opens (`DevToolsDock`) |
@@ -1817,6 +1849,7 @@ selection, a second `Esc` turns the indicator heatmap off.
 | `tests/quant/bigtrades/` | `qtm_test_bigtrades`: Big Trades on hand-made trades worked out by hand (aggregation window from the first trade, side changes, same price vs sweep VWAP and min/max, exact timestamp, flush, tick-rule fallback, rolling percentile against a full sort and its speed, minute ATR and the bounded factor, manual min/max with max = 0, auto percentile, warm-up fallback, bubble sizes and opacity) |
 | `tests/quant/tradestream/` | `qtm_test_tradestream`: the Binance trades the panes share (`server/TradeStream`) and each pane's side of them (`ui/TradeFeed`) on a fake source: history newest first to the budget, live trades, a missed one fetched from REST, a second pane on the same stream (one socket, no second history), a larger budget going further back, a recent first bar, pauses of every pane or of one, budget trims (whole candles, the tape always holding every pane's trades), the chart dropping old bars, a gap longer than the budget starting over, binance.us, failed requests, the last pane closing the stream; each pane's footprint against its trades rebuilt at once |
 | `tests/quant/depthstream/` | `qtm_test_depthstream`: the order book depth the panes share (`server/DepthStream`) and each pane's side of it (`ui/DepthFeed`) on a fake source answering on the stream's thread, a book update every 50 ms of real time: two panes on one pair (one configuration, one socket, the same samples, a display each), one recorder and one file, another interval (its own sampler and store, the same socket), a pane joining late (the samples at once; its stability filter built at once = built bit by bit), every pane paused (socket closed, samples kept) and back, the last pane closing the stream, a pane starting in replay (the recordings read back, no socket) |
+| `src/quant/server/CandleStore.*` | A chart's candles on disk, and what to fetch after showing them (README › Charts) |
 | `tests/quant/klinestream/` | `qtm_test_klinestream`: the live candles the panes share (`server/KlineStream`) on a fake source: the timeframe → Binance interval mapping, two panes on one pair and timeframe (one socket, both hear each bar), another timeframe (its own stream), a dropped connection opened again, no host at all (the panes poll) and a pane joining then trying again, the last pane closing the stream |
 | `tests/quant/heatmap/` | `qtm_test_heatmap [load]`: the liquidity heatmap's data on hand-made depth updates worked out by hand (levels added, changed, removed; buffering before the snapshot, stale updates, holes and resync, a snapshot older than the stream, futures `pu`, crossed books, trimming far levels; 16-bit codes; sampling at fixed times before an update, repeated columns without updates, holes while unsynced, catch-up cap, rows shared by bids and asks, the band's anchor; the column ring, resizing; the time pyramid (max, mean over the samples present, a band moving inside a bucket, nesting, bounded levels); row grouping over negative rows; percentile, gain, contrast, threshold, colour table; palettes: background at 0, brightness steadily up on dark backgrounds and down on light ones, a stop worked out by hand, Custom's three colours; the stability filter over a moved band and a hole; pulled liquidity (reached, filled instead, never reached, too far, back again, an ask, too small); absorbed (held, broken through, too little traded, another tick, buys at a bid, too short, an ask); filling the store in steps; recordings: exact round trip, a file cut short or damaged, other versions, a session recorded then replayed column for column), then a minute at 1,000 updates a second (book against a reference copy, bounded memory, flat time per update) |
 | `tests/quant/navigator/` | `qtm_test_navigator`: the range slider. `core/RangeSlider` on hand-worked cases (span, hit zones of wide, narrow and sub-pixel windows, clip, bounds, the two-bar rule, pans, resizes, clicks outside, frozen pans, ranges past the data) and 100,000 random gestures (1.9 million moves) against its invariants; then `ChartNavigator` on a real chart, offscreen, with real mouse events: pans and resizes, bursts faster than the chart's frames, drags out of the strip, wheel and chart drags followed, live bars at and away from the end, new data, a compared series adding times (indexes and the line), no data, one bar, the line's cache, resizing, cursors, the chart going away; `BarAxis` (bars at their own chart index with a compared symbol going further back or sitting between the bars, a time inside its slot) |

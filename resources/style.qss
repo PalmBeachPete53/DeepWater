@@ -27,6 +27,7 @@ QToolButton#navButton {
     background: transparent; border: none; border-bottom: 2px solid transparent;
     color: @TextDim; font-size: 13px; font-weight: 500; padding: 0 14px;
 }
+QToolButton#navButton[compact="true"] { padding: 0 8px; }
 QToolButton#navButton:hover { color: @Text; }
 QToolButton#navButton:checked { color: @Text; border-bottom-color: @Accent; }
 /* Edit mode: tabs become draggable chips. */
@@ -172,6 +173,10 @@ QSlider#yearSlider::handle:horizontal { width: 14px; height: 14px; margin: -5px 
 
 QToolTip { background: @Tooltip; color: @Text; border: 1px solid @TooltipBorder; padding: 6px; border-radius: 4px; }
 
+QScrollBar:horizontal { background: transparent; height: 8px; margin: 0; }
+QScrollBar::handle:horizontal { background: @ControlBorder; border-radius: 4px; min-width: 30px; }
+QScrollBar::handle:horizontal:hover { background: @ControlBorderHover; }
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal, QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal { width: 0; background: none; }
 QScrollBar:vertical { background: transparent; width: 8px; margin: 0; }
 QScrollBar::handle:vertical { background: @ControlBorder; border-radius: 4px; min-height: 30px; }
 QScrollBar::handle:vertical:hover { background: @ControlBorderHover; }
@@ -369,6 +374,8 @@ QLabel#ecoHelp {
     color: @TextFaint; border: 1px solid @ControlBorder; border-radius: 7px; font-size: 9px; font-weight: 700;
 }
 QLabel#ecoHelp:hover { color: @Text; border-color: @ControlBorderHover; }
+QFrame#ecoKeyBanner { background: @Panel; border-bottom: 1px solid @PanelLine; }
+QLabel#ecoKeyText { color: @Text; font-size: 12px; }
 QLabel#ecoStatus { color: @TextFaint; font-size: 10px; font-weight: 700; letter-spacing: 1px; }
 QLabel#ecoStatus[state="busy"] { color: @Accent; }
 QLabel#ecoStatus[state="error"] { color: @Down; }

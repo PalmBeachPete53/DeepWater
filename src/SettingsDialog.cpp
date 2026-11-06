@@ -1,5 +1,7 @@
 #include "SettingsDialog.h"
 
+#include <QGuiApplication>
+#include <QScreen>
 #include <QButtonGroup>
 #include <QGridLayout>
 #include <QEvent>
@@ -29,7 +31,9 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     setObjectName("settingsDialog");
     setAttribute(Qt::WA_StyledBackground);
     setModal(false);
-    setFixedSize(1100, 650);
+    const QScreen *screen = QGuiApplication::primaryScreen();
+    const QSize room = screen ? screen->availableGeometry().size() - QSize(40, 60) : QSize(1100, 650);
+    setFixedSize(QSize(1100, 650).boundedTo(room));
 
     auto *layout = new QHBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);

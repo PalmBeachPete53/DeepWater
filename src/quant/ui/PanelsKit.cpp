@@ -654,6 +654,11 @@ FlowLayout::~FlowLayout()
 }
 
 void FlowLayout::addItem(QLayoutItem *item) { m_items.append(item); }
+void FlowLayout::addSpacing(int width)
+{
+    addItem(new QSpacerItem(width, 0, QSizePolicy::Fixed, QSizePolicy::Minimum));
+    invalidate();
+}
 int FlowLayout::count() const { return m_items.size(); }
 QLayoutItem *FlowLayout::itemAt(int index) const { return m_items.value(index); }
 QLayoutItem *FlowLayout::takeAt(int index)
@@ -684,7 +689,7 @@ QSize FlowLayout::sizeHint() const
     // one line, everything side by side
     int w = 0, h = 0, n = 0;
     for (QLayoutItem *item : m_items) {
-        if (item->isEmpty()) continue;
+        if (item->isEmpty() && !item->spacerItem()) continue;
         const QSize s = item->sizeHint();
         w += s.width() + (n++ ? m_gapX : 0);
         h = qMax(h, s.height());
@@ -697,6 +702,18 @@ void FlowLayout::setGeometry(const QRect &rect)
 {
     QLayout::setGeometry(rect);
     doLayout(rect, false);
+}
+
+WrapBarLayout::WrapBarLayout(QWidget *bar, int gap, int lineGap) : FlowLayout(bar, gap, lineGap) {}
+
+void WrapBarLayout::setGeometry(const QRect &rect)
+{
+    FlowLayout::setGeometry(rect);
+    if (QWidget *bar = parentWidget(); bar && rect.width() > 0) {
+        const int needed = FlowLayout::heightForWidth(rect.width());
+        if (needed > 0 && needed != bar->height())
+            bar->setFixedHeight(needed);
+    }
 }
 
 int FlowLayout::doLayout(const QRect &rect, bool testOnly) const
@@ -715,7 +732,7 @@ int FlowLayout::doLayout(const QRect &rect, bool testOnly) const
         return w;
     };
     for (QLayoutItem *item : m_items) {
-        if (item->isEmpty()) continue;
+        if (item->spacerItem() ? line.isEmpty() : item->isEmpty()) continue;
         QWidget *wd = item->widget();
         It it {item, hintW(item), 0, wd ? wd->property("flexGrow").toInt() : 0,
                wd ? wd->property("alignSelf").toString() : QString(), wd && wd->property("marginLeftAuto").toBool()};

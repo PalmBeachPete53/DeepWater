@@ -6,6 +6,8 @@
 #include "Theme.h"
 #include "desk/NewsTags.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QComboBox>
 #include <QDesktopServices>
@@ -414,9 +416,8 @@ NewsPage::NewsPage(QWidget *parent)
     sub->setObjectName("qtSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(36);
-    auto *sh = new QHBoxLayout(sub);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
     sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     const QStringList names {tr("General"), tr("Stocks"), tr("Crypto"), tr("Forex"), tr("Favorites")};
     for (int i = 0; i < names.size(); ++i) {
@@ -473,7 +474,6 @@ NewsPage::NewsPage(QWidget *parent)
         QSettings().setValue("news/topic", m_topic->currentData().toString());
         applyTags();
     });
-    sh->addStretch(1);
     v->addWidget(sub);
 
     // The strip: title, state, refresh.
@@ -482,7 +482,7 @@ NewsPage::NewsPage(QWidget *parent)
     bar->setAttribute(Qt::WA_StyledBackground);
     bar->setFixedHeight(28);
     auto *bh = new QHBoxLayout(bar);
-    bh->setContentsMargins(8, 0, 8, 0);
+    bh->setContentsMargins(8, 0, 30, 0);   // clear of the side flaps
     bh->setSpacing(10);
     auto *title = new QLabel(tr("News wire").toUpper());
     title->setObjectName("newsTitle");

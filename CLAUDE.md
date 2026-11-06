@@ -37,13 +37,15 @@ cmake --build build -j 10 --target deepwater
 ./build/tests-quant/heatmap/qtm_test_heatmap [load]                 # liquidity heatmap: book, sampling, store, pyramid, filters, events, recordings (src/quant/core/OrderBook.*, Heatmap*.*, DepthRecord.*)
 ./build/tests-quant/desk/qtm_test_desk                              # Desk and Journal logic: instruments, risk, statements, stats, strength, signals, seasonality, rates (src/desk)
 ./build/tests-quant/update/qtm_test_update                          # what the update system reads from GitHub (src/UpdateRelease.*)
+./build/tests-quant/server/qtm_test_server                          # the backend: providers, feeds, imports, routes, candles on disk, a candle's countdown
 ./build/tests-quant/pinets/qtm_test_pinets                          # Pine Script via PineTS on Node.js (src/quant/core/PineScript.cpp); SKIPPED without Node
 deepwater --llm-check <file.gguf>                                  # the local engine loads and answers, in its sandbox, and exit (Windows CI)
 deepwater --llm-sandbox-check <file>                               # Windows: from inside the sandbox, that file, a write and the network are refused
 python3 tools/check_pe_imports.py <folder>                         # a packed Windows folder's DLLs give each other what they ask for; runs on any system
+deepwater --layout-audit <dir> 1280x640,960x640                    # every page and section at those window sizes: captures and report.txt (README › Window sizes)
 deepwater --version                                                # print the commit of this build and exit
 deepwater --pine-js file.pine                                      # print the JavaScript PineTS runs for a Pine Script and exit
-deepwater [--theme <id>] --page <id> [--devtools] [--country FRA] [--indicator <n>] [--search <text>] [--ai-search <text>] [--ai-local <prompt>] [--ai-dock [prompt]] [--news-ticker <sym>] [--news-article <n>] [--news-favorite <n>] [--news-url <url>] [--section <name>] [--journal-sample <file>] [--myfxbook-sample <file>] [--history-sample <file>] [--settings [0|1|2]] [--sources-tab 0|1] [--sources-disc [floor:1|ai:0|access:2|open:source:3]] [--help-page [chapter]] [--update-dialog] [--ml-train <csv> <target>] [--scroll <0..1>|--scroll-end] --delay <ms> --screenshot out.png   # render a page (a country sheet, a heatmap, the Sources page) and exit
+deepwater [--theme <id>] [--window-size 1280x640] --page <id> [--devtools] [--country FRA] [--indicator <n>] [--search <text>] [--ai-search <text>] [--ai-local <prompt>] [--ai-dock [prompt]] [--news-ticker <sym>] [--news-article <n>] [--news-favorite <n>] [--news-url <url>] [--section <name>] [--journal-sample <file>] [--myfxbook-sample <file>] [--history-sample <file>] [--settings [0|1|2]] [--sources-tab 0|1] [--sources-disc [floor:1|ai:0|access:2|open:source:3]] [--help-page [chapter]] [--update-dialog] [--ml-train <csv> <target>] [--scroll <0..1>|--scroll-end] --delay <ms> --screenshot out.png   # render a page (a country sheet, a heatmap, the Sources page) and exit
 ```
 
 Working rules:

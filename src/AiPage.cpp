@@ -9,6 +9,8 @@
 #include "KeyedSources.h"
 #include "Theme.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QComboBox>
 #include <QDesktopServices>
@@ -612,9 +614,8 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
     sub->setObjectName("qtSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(36);
-    auto *sh = new QHBoxLayout(sub);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
     sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     const QStringList names {tr("Models"), tr("Local"), tr("Machine learning")};
     for (int i = 0; i < names.size(); ++i) {
@@ -627,7 +628,6 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
         m_tabs->addButton(b, i);
         sh->addWidget(b);
     }
-    sh->addStretch(1);
     v->addWidget(sub);
     m_stack = new QStackedWidget;
     m_models = new AiModelsView;
@@ -654,9 +654,8 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
         nav->setObjectName("aiModelsNav");
         nav->setAttribute(Qt::WA_StyledBackground);
         nav->setFixedHeight(34);
-        auto *nh = new QHBoxLayout(nav);
+        auto *nh = new qtm::kit::WrapBarLayout(nav, 4);
         nh->setContentsMargins(0, 0, 0, 0);
-        nh->setSpacing(4);
         m_modelsTabs = new QButtonGroup(this);
         const QStringList parts {tr("Local models"), tr("Integration")};
         for (int i = 0; i < parts.size(); ++i) {
@@ -669,7 +668,6 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
             m_modelsTabs->addButton(b, i);
             nh->addWidget(b);
         }
-        nh->addStretch(1);
         sv->addSpacing(4);
         sv->addWidget(nav);
         sv->addSpacing(8);
@@ -686,7 +684,12 @@ AiPage::AiPage(const MlDataExporter::Sources &mlSources, QWidget *parent)
     }
     m_chat = new LocalChat(m_models->slotsView(), mlSources, this);
     m_localView = new AiLocalView(m_chat);
-    m_stack->addWidget(m_localView);
+    // Short window: the conversation, its controls and the journal together scroll under the section tabs.
+    auto *localScroll = new QScrollArea;
+    localScroll->setWidgetResizable(true);
+    localScroll->setFrameShape(QFrame::NoFrame);
+    localScroll->setWidget(m_localView);
+    m_stack->addWidget(localScroll);
     m_ml = new AiMlView(mlSources);
     m_stack->addWidget(m_ml);
     v->addWidget(m_stack, 1);

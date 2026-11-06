@@ -8,6 +8,7 @@
 
 #include "App.h"
 
+#include <QElapsedTimer>
 #include <QSet>
 
 #include <memory>
@@ -23,6 +24,8 @@ namespace qtm {
 class DrawingLayer;
 struct Drawing;
 class VolumeProfile;
+struct CandleSet;
+struct StoredCandles;
 class TradeFeed;
 class KlineSubscription;
 class FootprintLayer;
@@ -195,6 +198,16 @@ private:
     QHash<QString, Mtf> mtf;
     QSet<QString> mtfLoading;
     int loadToken = 0;
+    QElapsedTimer loadClock;
+    void loadFull(bool keepView, int token);
+    void showCandles(const CandleSet &r);
+    void refreshStored(const StoredCandles &stored, int token);
+    void loadedFully(const CandleSet &r);
+    void noteTiming(const char *step, qint64 dataMs, qint64 renderMs);
+    bool volumeOffered() const;   // this chart type has volume bars, and neither Settings nor the legend's × took them off
+    QTimer *countdownTimer = nullptr;
+    QString countdownShown;
+    void updateCountdown();
     std::unique_ptr<KlineSubscription> klineSub;   // the live candle, from the backend (Binance pairs)
     QTimer *liveTimer = nullptr;
     QTimer *replayTimer = nullptr;

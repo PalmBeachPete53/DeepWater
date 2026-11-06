@@ -830,7 +830,9 @@ static void drawPrimitives(QPainter &p, double hpr, double vpr, double mw, doubl
 
 double AxisLabel::heightOf(double fs) const
 {
-    return (axisVisible || paneVisible) ? fs + 2 * (2.5 / 12 * fs) : 0;
+    if (!axisVisible && !paneVisible)
+        return 0;
+    return fs + 2 * (2.5 / 12 * fs) + (axisDetail.isEmpty() ? 0 : fs + 2);
 }
 
 // PriceAxisViewRenderer.draw for one label part. alignRight: the label hugs the right edge of
@@ -848,7 +850,8 @@ static void drawAxisLabelPart(QPainter &p, TextMetrics &tm, double fs, const Axi
     const double padInner = fs / 12 * tickLength, padOuter = padInner;
     const double o = paneLabel ? 0 : tickLength;
     const double border = paneLabel ? borderSize : 0;
-    const double w = std::ceil(tm.width(text));
+    const bool detail = !paneLabel && !l.axisDetail.isEmpty();
+    const double w = std::ceil(std::max(tm.width(text), detail ? tm.width(l.axisDetail) : 0.0));
     const double g = fs + padTop + padBottom;
     const double M = borderSize + padInner + padOuter + w + o;
     const int b = std::max(1, int(std::floor(vpr)));
@@ -860,7 +863,9 @@ static void drawAxisLabelPart(QPainter &p, TextMetrics &tm, double fs, const Axi
     const double P = l.coord();
     const int k = int(jsRound(P * vpr)) - int(std::floor(0.5 * vpr));
     const int T = int(std::floor(k + b / 2.0 - S / 2.0));
-    const int R = T + S;
+    // The first line stays on the price; a detail hangs under it.
+    const int extra = detail ? int(jsRound((fs + 2) * vpr)) : 0;
+    const int R = T + S + extra;
     const double I = alignRight ? mediaWidth - border : border;
     const int V = alignRight ? bitmapWidth - x : x;
     double textX;
@@ -868,18 +873,20 @@ static void drawAxisLabelPart(QPainter &p, TextMetrics &tm, double fs, const Axi
     if (alignRight) {
         const int E = V - C;
         textX = I - o - padInner - border;
-        fillRoundRect(p, E, T, C, S, l.background, {radius, 0, 0, radius});
+        fillRoundRect(p, E, T, C, S + extra, l.background, {radius, 0, 0, radius});
     } else {
         textX = I + o + padInner;
-        fillRoundRect(p, V, T, C, S, l.background, {0, radius, radius, 0});
+        fillRoundRect(p, V, T, C, S + extra, l.background, {0, radius, radius, 0});
     }
     if (paneLabel)   // a strip of chart background between the label and the axis
         fillRectI(p, alignRight ? bitmapWidth - x : 0, T, x, R - T, chartBg);
-    const double cy = (T / vpr + R / vpr) / 2;
+    const double cy = (T / vpr + (T + S) / vpr) / 2;
     const double baseline = cy + tm.centerOffset(text);
     const double tw = tm.rawWidth(text);
     drawTextMedia(p, hpr, vpr, tm, l.textColor,
                   QPointF(alignRight ? textX - tw : textX, baseline), text);
+    if (detail)
+        drawTextMedia(p, hpr, vpr, tm, l.textColor, QPointF(textX, baseline + fs + 2), l.axisDetail);
 }
 
 // Series last-value labels and price line labels of one price scale (PriceAxisWidget._updateLabels)
@@ -916,6 +923,7 @@ QVector<AxisLabel> ChartPrivate::axisLabels(PaneImpl *pane, PriceScaleModel *sca
             if (s->opts.lastValueVisible) {
                 lv.axisText = sc->formatPrice(r.c, fv->first);
                 lv.axisVisible = !lv.axisText.isEmpty();
+                lv.axisDetail = s->opts.lastValueDetail;
             }
             if (!s->opts.title.isEmpty()) {
                 lv.paneText = s->opts.title;

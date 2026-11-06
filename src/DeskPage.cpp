@@ -2,6 +2,8 @@
 
 #include "QuantViews.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QHBoxLayout>
 #include <QSettings>
@@ -51,9 +53,8 @@ DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy 
     sub->setObjectName("qtSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(36);
-    auto *sh = new QHBoxLayout(sub);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
     sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     const QStringList names = deskui::sectionNames();
     for (int i = 0; i < names.size(); ++i) {
@@ -66,7 +67,6 @@ DeskPage::DeskPage(EconomicCalendar *calendar, PolicyRates *rates, WorldEconomy 
         m_tabs->addButton(b, i);
         sh->addWidget(b);
     }
-    sh->addStretch(1);
     v->addWidget(sub);
 
     // Each section is built the first time it is shown: they download a lot.

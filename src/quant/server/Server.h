@@ -10,6 +10,7 @@
 // health, the alert list, Yahoo's back-off ...) is shared state behind a mutex.
 
 #include "../core/CandleSet.h"
+#include "CandleStore.h"
 
 #include <QByteArray>
 #include <QHash>
@@ -57,6 +58,8 @@ public:
 
     // data.getCandles(symbol, tf, limit) without the JSON round trip. Throws qtm::Error.
     CandleSet candles(const QString &symbol, const QString &tf, int limit);
+    // A chart's saved candles (CandleStore).
+    const CandleStore &candleStore() const;
 
     // The footprint chart's Binance calls (Providers::binanceTickSize / binanceAggTrades). Blocking: off the UI thread.
     double binanceTickSize(const QString &ticker);

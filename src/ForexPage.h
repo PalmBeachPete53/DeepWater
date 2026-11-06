@@ -1,6 +1,9 @@
 #pragma once
 
+#include <QTimer>
 #include <QWidget>
+
+#include <limits>
 
 class CotData;
 class FxData;
@@ -15,6 +18,9 @@ class FxPairCard : public QWidget
     Q_OBJECT
 public:
     FxPairCard(FxData *fx, PolicyRates *rates, int pair, QWidget *parent = nullptr);
+    int pair() const { return m_pair; }
+    // The market's price and change, over the day's fix they replace; NaN: back to the fix.
+    void setLive(double price, double changePct);
 
 protected:
     void paintEvent(QPaintEvent *) override;
@@ -23,6 +29,8 @@ private:
     FxData *m_fx;
     PolicyRates *m_rates;
     int m_pair;
+    double m_livePrice = std::numeric_limits<double>::quiet_NaN();
+    double m_livePct = std::numeric_limits<double>::quiet_NaN();
 };
 
 // Central bank card: current policy rate, last move and 3-year step chart.
@@ -92,9 +100,16 @@ public:
     ForexPage(FxData *fx, PolicyRates *rates, CotData *cot, QWidget *parent = nullptr);
     void setTopStrip(QWidget *strip);   // under the page's title
 
+protected:
+    void showEvent(QShowEvent *) override;
+    void hideEvent(QHideEvent *) override;
+
 private:
     void refresh();
+    void fetchLive();
 
+    QTimer m_liveTimer;
+    bool m_liveOk = false;
     QVBoxLayout *m_layout;
 
     FxData *m_fx;

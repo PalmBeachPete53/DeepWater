@@ -43,7 +43,15 @@ bool available()
 
 void translate(const QStringList &texts, const QString &target, QObject *ctx, std::function<void(const Result &)> done)
 {
-    auto *process = new QProcess(ctx);
+    // Not a child of ctx: a widget deletes its children before its connections go, and a running QProcess's destructor
+    // waits and emits finished(), which would call `done` on an object half destroyed (a crash on quitting mid-translation).
+    auto *process = new QProcess;
+    QObject::connect(ctx, &QObject::destroyed, process, [process] {
+        process->disconnect();
+        process->kill();
+        process->waitForFinished(1000);
+        process->deleteLater();
+    });
     auto *timeout = new QTimer(process);
     timeout->setSingleShot(true);
     QObject::connect(timeout, &QTimer::timeout, process, &QProcess::kill);

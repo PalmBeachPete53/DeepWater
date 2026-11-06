@@ -1176,15 +1176,14 @@ void Client::fredSeries(const QString &id, const QDate &since, QObject *ctx, Don
         url.setQuery(q);
     }
     const bool api = !key.isEmpty();
-    get(QString("fred:%1:%2:%3").arg(id, start, api ? "api" : "csv"), url, 6 * 3600, 0, ctx,
+    get(QString("fred:%1:%2:%3").arg(id, start, api ? "api" : "csv"), url, 3600, 0, ctx,
         [done, api](const QByteArray &body, const QString &err) {
             Series s = api ? readFredJson(body) : readFredCsv(body);
             sortByDate(s);
             QString error = s.isEmpty() && err.isEmpty() ? tr("No observations") : err;
             // FRED's public CSV turns away requests that don't come from a browser; its API takes a free key.
             if (s.isEmpty() && !api)
-                error = tr("FRED refused the download (%1). A free FRED key, saved in Sources › Map · databases with "
-                           "a free key › FRED, makes it use FRED's API.").arg(error);
+                error = tr("Needs a free FRED key");
             done(s, error);
         });
 }

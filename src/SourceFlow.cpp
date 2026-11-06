@@ -2786,6 +2786,7 @@ SourceFlowView::SourceFlowView(QWidget *parent)
     v->addSpacing(6);
     m_summary = new QLabel;
     m_summary->setTextFormat(Qt::RichText);
+    m_summary->setWordWrap(true);
     v->addWidget(m_summary);
     v->addSpacing(6);
     // Under the sources' states: the overview.

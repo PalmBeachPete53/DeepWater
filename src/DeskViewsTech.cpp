@@ -9,6 +9,8 @@
 #include "DeskData.h"
 #include "desk/Positioning.h"
 #include "desk/Rates.h"
+#include "quant/ui/PanelsKit.h"
+
 #include <QTimer>
 
 #include <QButtonGroup>
@@ -79,13 +81,14 @@ public:
         auto *listCard = quant::card({}, &body);
         body->setContentsMargins(4, 4, 4, 4);
         m_table = table({tr("Market"), tr("Last"), tr("1D"), tr("Trend"), tr("Momentum"), tr("Volatility"), tr("Volume"), tr("Structure"), tr("Liquidity")});
-        m_table->horizontalHeader()->setSectionResizeMode(8, QHeaderView::ResizeToContents);   // "Pool above +0,12%" stays whole
-        m_table->horizontalHeader()->setSectionResizeMode(7, QHeaderView::ResizeToContents);   // "Plus bas décroissants" too
+        // Every word stays whole ("Pool above +0,12%", "Plus bas décroissants"): a table too narrow scrolls.
+        fitColumns(m_table, m_table->columnCount());
+        m_table->horizontalHeader()->setStretchLastSection(true);
         m_table->setCursor(Qt::PointingHandCursor);
         body->addWidget(m_table);
         row->addWidget(listCard, 3, Qt::AlignTop);
         auto *fileCard = quant::card(tr("Signal file"), &body);
-        fileCard->setMinimumWidth(360);
+        fileCard->setMinimumWidth(300);
         m_fileTitle = quant::label("—", "qtTitle");
         m_fileTitle->setWordWrap(true);
         body->addWidget(m_fileTitle);
@@ -705,8 +708,10 @@ public:
         auto *v = new QVBoxLayout(this);
         v->setContentsMargins(12, 10, 12, 10);
         v->setSpacing(10);
-        QHBoxLayout *h;
-        auto *top = quant::bar(&h);
+        auto *top = new QFrame;
+        top->setObjectName("qtBar");
+        auto *h = new qtm::kit::WrapBarLayout(top, 10, 6);
+        h->setContentsMargins(10, 6, 10, 6);
         h->addWidget(quant::label(tr("WORKSPACE"), "qtFieldLabel"));
         m_list = deskCombo();
         m_list->setMinimumWidth(190);
@@ -728,8 +733,9 @@ public:
         h->addWidget(m_panelChoice);
         auto *addPanel = deskAction(tr("Add"));
         h->addWidget(addPanel);
-        h->addStretch(1);
-        h->addWidget(quant::label(tr("Each panel is a live copy of a Desk section."), "qtNote"));
+        auto *note = quant::label(tr("Each panel is a live copy of a Desk section."), "qtNote");
+        note->setProperty("marginLeftAuto", true);
+        h->addWidget(note);
         v->addWidget(top);
         m_gridHost = new QWidget;
         m_grid = new QGridLayout(m_gridHost);

@@ -135,6 +135,7 @@ public:
     ~FlowLayout() override;
     void setWrap(bool on) { m_wrap = on; invalidate(); }
     void setAlignItems(Qt::Alignment a) { m_alignItems = a; invalidate(); }   // AlignVCenter, AlignTop, AlignBottom
+    void addSpacing(int width);   // a gap on the line; dropped when it would open one
 
     void addItem(QLayoutItem *item) override;
     int count() const override;
@@ -153,6 +154,17 @@ private:
     int m_gapX, m_gapY;
     bool m_wrap = true;
     Qt::Alignment m_alignItems = Qt::AlignVCenter;
+};
+
+// The row of a bar at the top of a page: tabs and controls side by side, on more lines when the width runs out. The bar's
+// height follows through setFixedHeight rather than height-for-width: a page holding a bar in a stack would otherwise take
+// the preferred height of everything in that stack as its minimum. A control pushed to the right has "marginLeftAuto".
+class WrapBarLayout : public FlowLayout
+{
+public:
+    explicit WrapBarLayout(QWidget *bar, int gap = 2, int lineGap = 0);
+    bool hasHeightForWidth() const override { return false; }
+    void setGeometry(const QRect &rect) override;
 };
 
 // A widget with a .row-flex layout. `margins` are the padding.

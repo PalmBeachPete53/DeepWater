@@ -2,9 +2,12 @@
 
 #include "FxData.h"
 #include "MacroData.h"
+#include "ResearchData.h"
 #include "Theme.h"
 
 #include <QButtonGroup>
+#include <QHash>
+#include <QJsonObject>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -16,6 +19,8 @@
 #include <QScrollArea>
 #include <QToolTip>
 #include <QVBoxLayout>
+
+#include <cmath>
 
 namespace {
 
@@ -53,6 +58,13 @@ FxPairCard::FxPairCard(FxData *fx, PolicyRates *rates, int pair, QWidget *parent
     setMinimumSize(170, 118);
 }
 
+void FxPairCard::setLive(double price, double changePct)
+{
+    m_livePrice = price;
+    m_livePct = changePct;
+    update();
+}
+
 void FxPairCard::paintEvent(QPaintEvent *)
 {
     const Palette &ui = Theme::current();
@@ -76,7 +88,8 @@ void FxPairCard::paintEvent(QPaintEvent *)
     const QVector<double> s = m_fx->series(m_pair);
     if (s.isEmpty())
         return;
-    const double pct = m_fx->changePct(m_pair);
+    const bool live = std::isfinite(m_livePrice);
+    const double pct = live && std::isfinite(m_livePct) ? m_livePct : m_fx->changePct(m_pair);
     const QColor trend = pct >= 0 ? ui.Up : ui.Down;
 
     f.setPointSizeF(11);
@@ -91,7 +104,7 @@ void FxPairCard::paintEvent(QPaintEvent *)
     p.setFont(f);
     p.setPen(ui.Text);
     p.drawText(QRectF(pad, 32, w, 28), Qt::AlignLeft | Qt::AlignVCenter,
-               loc.toString(s.last(), 'f', decimalsFor(pair)));
+               loc.toString(live ? m_livePrice : s.last(), 'f', decimalsFor(pair)));
 
     // Carry: policy rate of the base currency minus that of the quote currency.
     if (m_rates->hasRate(pair.base) && m_rates->hasRate(pair.quote)) {
@@ -431,6 +444,8 @@ ForexPage::ForexPage(FxData *fx, PolicyRates *rates, CotData *cot, QWidget *pare
     , m_rates(rates)
     , m_cot(cot)
 {
+    m_liveTimer.setInterval(60 * 1000);
+    connect(&m_liveTimer, &QTimer::timeout, this, &ForexPage::fetchLive);
     setObjectName("sidePanel");
     setAttribute(Qt::WA_StyledBackground);
 
@@ -547,12 +562,43 @@ void ForexPage::setTopStrip(QWidget *strip)
     m_layout->insertSpacing(4, 14);
 }
 
+// The cards' prices and changes come from the market, as on the strip above them and the Desk; the fix stays for the history.
+void ForexPage::fetchLive()
+{
+    QStringList symbols;
+    for (const FxPair &pair : m_fx->pairs())
+        symbols << pair.base + pair.quote + "=X";
+    research::Client::instance()->quotes(symbols, 60, this, [this](const QHash<QString, QJsonObject> &quotes, const QString &) {
+        m_liveOk = !quotes.isEmpty();
+        for (FxPairCard *card : std::as_const(m_cards)) {
+            const FxPair &pair = m_fx->pairs()[card->pair()];
+            const QJsonObject q = quotes.value(pair.base + pair.quote + "=X");
+            const double price = research::raw(q, "regularMarketPrice");
+            card->setLive(research::ok(price) ? price : research::NaN, research::raw(q, "regularMarketChangePercent"));
+        }
+        refresh();
+    });
+}
+
+void ForexPage::showEvent(QShowEvent *)
+{
+    fetchLive();
+    m_liveTimer.start();
+}
+
+void ForexPage::hideEvent(QHideEvent *)
+{
+    m_liveTimer.stop();
+}
+
 void ForexPage::refresh()
 {
     const QLocale loc;
     const QVector<QDate> &dates = m_fx->dates();
-    QString source = tr("European Central Bank reference rates via frankfurter.dev: one fix per business day "
-                        "around 16:00 CET, no intraday data.");
+    QString source = m_liveOk ? tr("Prices and day changes: Yahoo Finance, refreshed every minute. Charts and correlations: European "
+                                   "Central Bank reference rates via frankfurter.dev, one fix per business day around 16:00 CET.")
+                              : tr("European Central Bank reference rates via frankfurter.dev: one fix per business day "
+                                   "around 16:00 CET, no intraday data.");
     if (!dates.isEmpty())
         source += ' ' + tr("Latest fix: %1.").arg(loc.toString(dates.last(), QLocale::LongFormat));
     else if (!m_fx->errorString().isEmpty())

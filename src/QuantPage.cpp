@@ -3,6 +3,8 @@
 #include "QuantMarkovViews.h"
 #include "QuantViews.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QHBoxLayout>
 #include <QSettings>
@@ -25,9 +27,8 @@ QuantPage::QuantPage(CotReport *cot, QWidget *parent)
     sub->setObjectName("qtSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(36);
-    auto *sh = new QHBoxLayout(sub);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
     sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     const QStringList names {tr("Compare"), tr("Correlation"), tr("Risk & Beta"), "COT", tr("Signals"), tr("Markov"), tr("Portfolio")};
     for (int i = 0; i < names.size(); ++i) {
@@ -41,7 +42,6 @@ QuantPage::QuantPage(CotReport *cot, QWidget *parent)
         sh->addWidget(b);
     }
     m_tabs->button(3)->setToolTip(tr("Commitments of Traders"));
-    sh->addStretch(1);
     v->addWidget(sub);
 
     m_stack = new QStackedWidget;

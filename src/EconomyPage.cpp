@@ -2,11 +2,19 @@
 
 #include "CountriesView.h"
 #include "IndicatorsView.h"
+#include "KeyedSources.h"
+#include "ResearchData.h"
 
 #include "OverviewWidgets.h"
 #include "QuantCharts.h"
 #include "Theme.h"
 
+#include "quant/ui/PanelsKit.h"
+
+#include <QDesktopServices>
+#include <QFrame>
+#include <QLineEdit>
+#include <QUrl>
 #include <QButtonGroup>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -625,9 +633,8 @@ EconomyPage::EconomyPage(QWidget *parent)
     sub->setObjectName("qtSubBar");
     sub->setAttribute(Qt::WA_StyledBackground);
     sub->setFixedHeight(36);
-    auto *sh = new QHBoxLayout(sub);
-    sh->setContentsMargins(6, 0, 12, 0);
-    sh->setSpacing(2);
+    auto *sh = new qtm::kit::WrapBarLayout(sub, 2);
+    sh->setContentsMargins(6, 0, 30, 0);   // clear of the side flaps
     m_tabs = new QButtonGroup(this);
     const QVector<Section> &all = sections();
     for (int i = 0; i < all.size(); ++i) {
@@ -653,9 +660,9 @@ EconomyPage::EconomyPage(QWidget *parent)
         m_tabs->addButton(b, id);
         sh->addWidget(b);
     }
-    sh->addStretch(1);
     m_status = new QLabel;
     m_status->setObjectName("ecoStatus");
+    m_status->setProperty("marginLeftAuto", true);
     sh->addWidget(m_status);
     sh->addSpacing(8);
     m_refresh = new QPushButton(tr("Refresh").toUpper());
@@ -664,6 +671,7 @@ EconomyPage::EconomyPage(QWidget *parent)
     m_refresh->setToolTip(tr("Download every indicator of this section again"));
     sh->addWidget(m_refresh);
     v->addWidget(sub);
+    v->addWidget(buildFredBanner());
 
     m_stack = new QStackedWidget;
     v->addWidget(m_stack, 1);
@@ -682,6 +690,63 @@ EconomyPage::EconomyPage(QWidget *parent)
 
     showSection(std::clamp(QSettings().value("economy/section", 0).toInt(), 0, sectionCount - 1));
     updateStatus();
+}
+
+// Most US series need a free FRED key. Without one the page says it once, at the top, and takes the key right there.
+QWidget *EconomyPage::buildFredBanner()
+{
+    m_fredBanner = new QFrame;
+    m_fredBanner->setObjectName("ecoKeyBanner");
+    auto *h = new qtm::kit::WrapBarLayout(m_fredBanner, 10, 6);
+    h->setContentsMargins(14, 8, 30, 8);
+    auto *text = new QLabel(tr("The US charts come from FRED, which asks for a free key: create an account, ask for a key and paste it here."));
+    text->setObjectName("ecoKeyText");
+    h->addWidget(text);
+    auto *get = new QPushButton(tr("Get a free key").toUpper());
+    get->setObjectName("newsRefresh");
+    get->setCursor(Qt::PointingHandCursor);
+    connect(get, &QPushButton::clicked, this, [] { QDesktopServices::openUrl(QUrl("https://fredaccount.stlouisfed.org/apikeys")); });
+    h->addWidget(get);
+    m_fredKey = new QLineEdit;
+    m_fredKey->setObjectName("keyEdit");
+    m_fredKey->setPlaceholderText(tr("Your FRED key"));
+    m_fredKey->setMinimumWidth(280);
+    h->addWidget(m_fredKey);
+    auto *save = new QPushButton(tr("Save").toUpper());
+    save->setObjectName("newsRefresh");
+    save->setCursor(Qt::PointingHandCursor);
+    h->addWidget(save);
+    m_fredNote = new QLabel;
+    m_fredNote->setObjectName("ecoStatus");
+    m_fredNote->setProperty("state", "error");
+    m_fredNote->hide();
+    h->addWidget(m_fredNote);
+    const auto tryKey = [this, save] {
+        const QString key = m_fredKey->text().trimmed();
+        if (key.isEmpty())
+            return;
+        save->setEnabled(false);
+        m_fredNote->hide();
+        setSourceKey("fred", key);
+        research::Client::instance()->forget("fred");
+        research::Client::instance()->fredSeries("UNRATE", QDate::currentDate().addYears(-1), this,
+            [this, save](const research::Series &series, const QString &error) {
+                save->setEnabled(true);
+                if (series.isEmpty()) {
+                    setSourceKey("fred", QString());
+                    m_fredNote->setText(tr("FRED refused this key: %1").arg(error));
+                    m_fredNote->show();
+                    return;
+                }
+                m_fredBanner->hide();
+                emit fredKeySaved();
+                reloadAll();
+            });
+    };
+    connect(save, &QPushButton::clicked, this, tryKey);
+    connect(m_fredKey, &QLineEdit::returnPressed, this, tryKey);
+    m_fredBanner->setVisible(sourceKey("fred").isEmpty());
+    return m_fredBanner;
 }
 
 void EconomyPage::showSection(int index)
@@ -735,7 +800,6 @@ QWidget *EconomyPage::buildSection(int index)
     scroll->setObjectName("ecoScroll");
     scroll->setWidgetResizable(true);
     scroll->setFrameShape(QFrame::NoFrame);
-    scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     auto *content = new QWidget;
     content->setObjectName("ecoContent");
     content->setAttribute(Qt::WA_StyledBackground);
@@ -872,8 +936,22 @@ void EconomyPage::updateStatus()
     m_status->style()->polish(m_status);
 }
 
+// Every section already built, as one: a new key changes what all of them can show.
+void EconomyPage::reloadAll()
+{
+    research::Client::instance()->forget("fred");
+    m_errors = 0;
+    m_lastError.clear();
+    for (int i = 0; i < m_built.size(); ++i)
+        if (m_built[i])
+            for (const auto &load : std::as_const(m_loaders[i]))
+                load();
+    updateStatus();
+}
+
 void EconomyPage::showEvent(QShowEvent *)
 {
+    m_fredBanner->setVisible(sourceKey("fred").isEmpty());
     m_timer.start();
 }
 

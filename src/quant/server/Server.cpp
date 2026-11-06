@@ -43,6 +43,7 @@ struct Backend::Private {
     QString dataDir;
     QString customDir;
     Store store;
+    CandleStore candleStore;
     Feeds feeds;
     Imports imports;
     Providers data;
@@ -77,7 +78,7 @@ struct Backend::Private {
     }
 
     Private(const QString &data, const QString &custom)
-        : dataDir(data), customDir(custom), store(data), feeds(data, timeoutMs()), imports(data),
+        : dataDir(data), customDir(custom), store(data), candleStore(data + "/candles"), feeds(data, timeoutMs()), imports(data),
           data(feeds, imports, providerOptions()), info(this->data), alerts(store, this->data), ptq(Ptq::fromEnv())
     {
     }
@@ -260,6 +261,11 @@ bool Backend::setFeedConfig(const QJsonObject &config)
 Backend *Backend::instance()
 {
     return s_instance.loadAcquire();
+}
+
+const CandleStore &Backend::candleStore() const
+{
+    return d->candleStore;
 }
 
 QString Backend::dataDir() const

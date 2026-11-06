@@ -1,4 +1,5 @@
 // Port of quant-terminal/public/js/app.js + index.html: the whole terminal as one widget.
+#include "PanelsKit.h"
 #include "App.h"
 
 #include "Api.h"
@@ -313,6 +314,8 @@ QJsonObject paneToJson(const PaneConfig &c)
     }
     QJsonObject o{{"symbol", c.symbol}, {"tf", c.tf}, {"type", c.type}, {"indicators", inds},
                   {"compare", QJsonArray::fromStringList(c.compare)}, {"log", c.log}};
+    if (c.volumeHidden) o["volumeHidden"] = true;
+    if (c.volumeRemoved) o["volumeRemoved"] = true;
     if (!c.footprint.isEmpty()) o["footprint"] = c.footprint;   // not in the JS: Deepwater's footprint chart
     return o;
 }
@@ -337,6 +340,8 @@ PaneConfig paneFromJson(const QJsonObject &o)
     }
     for (const auto &v : o.value("compare").toArray()) c.compare << v.toString();
     c.log = o.value("log").toBool();
+    c.volumeHidden = o.value("volumeHidden").toBool();
+    c.volumeRemoved = o.value("volumeRemoved").toBool();
     c.footprint = o.value("footprint").toObject();
     return c;
 }
@@ -377,6 +382,7 @@ QJsonObject AppState::toJson() const
     o["drawings"] = drawings;
     o["settings"] = QJsonObject{{"theme", settings.theme},
                                 {"volume", settings.volume},
+                                {"countdown", settings.countdown},
                                 {"bars", settings.bars},
                                 {"utc", settings.utc},
                                 {"stayInDrawMode", settings.stayInDrawMode},
@@ -427,6 +433,7 @@ AppState AppState::fromJson(const QJsonObject &o)
     const QJsonObject st = o.value("settings").toObject();
     if (st.contains("theme")) s.settings.theme = st.value("theme").toString();
     if (st.contains("volume")) s.settings.volume = st.value("volume").toBool();
+    if (st.contains("countdown")) s.settings.countdown = st.value("countdown").toBool();
     if (st.contains("bars")) s.settings.bars = st.value("bars").toInt();
     if (st.contains("utc")) s.settings.utc = st.value("utc").toBool();
     if (st.contains("stayInDrawMode")) s.settings.stayInDrawMode = st.value("stayInDrawMode").toBool();
@@ -482,6 +489,8 @@ struct App::Ui {
     // timers
     QTimer *saveTimer = nullptr;
     QTimer *healthTimer = nullptr;
+    bool topbarCompact = false;     // the top bar's buttons show their icon only (fitTopbar)
+    int topbarWords = 0;            // the width their words take
     bool relayoutPending = false;   // a modal relayout is queued (eventFilter)
     bool ready = false;
     bool syncing = false;
@@ -592,9 +601,9 @@ void App::buildShell()
     tb->setObjectName("qtmTopbar");
     tb->setAttribute(Qt::WA_StyledBackground);
     tb->setFixedHeight(44);
-    auto *h = new QHBoxLayout(tb);
-    h->setContentsMargins(8, 0, 8, 1);
-    h->setSpacing(2);
+    // Everything stays in sight: a window narrower than the bar gets a second line of it.
+    auto *h = new qtm::kit::WrapBarLayout(tb, 2, 8);
+    h->setContentsMargins(8, 6, 30, 6);   // clear of the side flaps
     ui->topbar = tb;
     h->addWidget(new Brand);
     BtnStyle sym = tbStyle();
@@ -661,10 +670,10 @@ void App::buildShell()
     ui->alertBtn = new Btn(tbStyle(), IconAlert, "Alert");
     ui->alertBtn->setToolTip("Create alert");
     h->addWidget(ui->alertBtn);
-    h->addStretch(1);
     ui->helpBtn = new Btn(tbStyle(), QString(), "Help");
     ui->helpBtn->setToolTip("What's new, how to update, and common questions");
     connect(ui->helpBtn, &QAbstractButton::clicked, this, [] { QDesktopServices::openUrl(QUrl(HelpUrl)); });
+    ui->helpBtn->setProperty("marginLeftAuto", true);   // this and the rest on the right
     h->addWidget(ui->helpBtn);
     ui->logBtn = new Btn(tbStyle(), QString(), "Log");
     ui->logBtn->setToolTip("Logarithmic price scale");
@@ -683,22 +692,12 @@ void App::buildShell()
     h->addWidget(ui->themeBtn);
     ui->themeBtn->setVisible(!theme::hasPalette());   // a host palette decides the theme
     ui->status = new StatusDot;
-    h->addSpacing(-2);
     h->addWidget(ui->status);
-    // .topbar { overflow-x: auto } with a hidden scrollbar: its items never shrink (flex: none),
-    // and a window narrower than the bar scrolls it sideways instead of squashing it.
+    // Its items never shrink (flex: none).
     for (int i = 0; i < h->count(); ++i)
         if (QWidget *w = h->itemAt(i)->widget())
             w->setSizePolicy(QSizePolicy::Fixed, w->sizePolicy().verticalPolicy());
-    auto *tbScroll = new QScrollArea;
-    tbScroll->setObjectName("qtmTopbarScroll");
-    tbScroll->setFrameShape(QFrame::NoFrame);
-    tbScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    tbScroll->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    tbScroll->setWidgetResizable(true);
-    tbScroll->setFixedHeight(44);
-    tbScroll->setWidget(tb);
-    ui->root->addWidget(tbScroll);
+    ui->root->addWidget(tb);
 
     // ---- main: draw bar, centre (grid + bottom panel), side panel
     auto *mainArea = new QWidget;
@@ -714,7 +713,16 @@ void App::buildShell()
     ui->drawLayout->setContentsMargins(0, 6, 1, 0);
     ui->drawLayout->setSpacing(2);
     ui->drawLayout->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
-    ui->mainLayout->addWidget(ui->drawbar);
+    // A window too short for all the tools scrolls them with the wheel rather than holding the window up.
+    auto *drawScroll = new QScrollArea;
+    drawScroll->setObjectName("qtmDrawbarScroll");
+    drawScroll->setFrameShape(QFrame::NoFrame);
+    drawScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    drawScroll->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    drawScroll->setWidgetResizable(true);
+    drawScroll->setFixedWidth(44);
+    drawScroll->setWidget(ui->drawbar);
+    ui->mainLayout->addWidget(drawScroll);
     ui->center = new QWidget;
     ui->centerLayout = new QVBoxLayout(ui->center);
     ui->centerLayout->setContentsMargins(0, 0, 0, 0);
@@ -1977,12 +1985,15 @@ void App::openSettings()
     };
     auto *utc = mk("sUtc", {{"0", "My local time"}, {"1", "UTC"}}, s.utc ? "1" : "0");
     g->addWidget(field("Time axis", utc), 0, 1);
-    auto *vol = mk("sVol", {{"1", "Show"}, {"0", "Hide"}}, s.volume ? "1" : "0");
+    const bool volumeShown = s.volume && !(active && active->cfg.volumeRemoved);
+    auto *vol = mk("sVol", {{"1", "Show"}, {"0", "Hide"}}, volumeShown ? "1" : "0");
     g->addWidget(field("Volume on the price chart", vol), 1, 0);
     auto *stay = mk("sStay", {{"0", "Back to cursor"}, {"1", "Keep the tool"}}, s.stayInDrawMode ? "1" : "0");
     g->addWidget(field("After placing a drawing", stay), 1, 1);
     auto *sync = mk("sSync", {{"0", "Independent"}, {"1", "Synced"}}, s.syncCrosshair ? "1" : "0");
     g->addWidget(field("Crosshair across charts", sync), 2, 0);
+    auto *countdown = mk("sCountdown", {{"1", "Show"}, {"0", "Hide"}}, s.countdown ? "1" : "0");
+    g->addWidget(field("Countdown to the candle's close", countdown), 2, 1);
     v->addWidget(gw);
     auto *hint = label(QString("Everything you save lives in the <code style=\"font-family:'%1'\">data</code> folder next to the app, on your machine.")
                            .arg(theme::monoFont(12).family()),
@@ -1993,17 +2004,33 @@ void App::openSettings()
     v->addWidget(hint);
     auto *foot = new QWidget;
     auto *fh = new QHBoxLayout(foot);
+    auto *times = new QPushButton("Load times");
+    theme::setCls(times, "btn");
+    times->setCursor(Qt::PointingHandCursor);
+    times->setToolTip("How long each chart took to load, in a text file to send with a report of slowness");
+    connect(times, &QPushButton::clicked, this, [] {
+        if (const Backend *b = Backend::instance())
+            QDesktopServices::openUrl(QUrl::fromLocalFile(b->dataDir() + "/chart-timing.log"));
+    });
+    fh->addWidget(times);
+    fh->addStretch(1);
     auto *ok = new QPushButton("Save");
     theme::setCls(ok, "btn primary");
     ok->setCursor(Qt::PointingHandCursor);
     fh->addWidget(ok);
     ModalCard *card = modal("Settings", body, foot);
-    connect(ok, &QPushButton::clicked, card, [this, bars, utc, vol, stay, sync] {
+    connect(ok, &QPushButton::clicked, card, [this, bars, utc, vol, volumeShown, stay, sync, countdown] {
         AppSettings &st = state.settings;
         const double n = jsNumber(bars->text());
         st.bars = int(std::max(200.0, std::min(20000.0, js::truthy(n) ? n : 3000.0)));
         st.utc = utc->value() == "1";
-        st.volume = vol->value() == "1";
+        const bool showVolume = vol->value() == "1";
+        if (showVolume != volumeShown) {
+            st.volume = showVolume;
+            if (showVolume)   // back on every chart, whatever its legend had done
+                for (auto *p : panes) p->cfg.volumeHidden = p->cfg.volumeRemoved = false;
+        }
+        st.countdown = countdown->value() == "1";
         st.stayInDrawMode = stay->value() == "1";
         st.syncCrosshair = sync->value() == "1";
         closeModal();
@@ -2331,9 +2358,31 @@ void App::layoutToasts()
     ui->toasts->raise();
 }
 
+// Under the width of the whole top bar, the buttons with an icon lose their word (the tooltip stays) before it takes a second line.
+void App::fitTopbar()
+{
+    const QVector<QPair<Btn *, QString>> buttons = {{ui->indicatorsBtn, "Indicators"}, {ui->compareBtn, "Compare"}, {ui->replayBtn, "Replay"}, {ui->alertBtn, "Alert"}};
+    if (ui->topbarWords == 0) {   // measured once, with the words on
+        for (const auto &[button, word] : buttons) {
+            ui->topbarWords += button->sizeHint().width();
+            button->setLabel(QString());
+            ui->topbarWords -= button->sizeHint().width();
+            button->setLabel(word);
+        }
+    }
+    const int bar = ui->topbar->layout()->sizeHint().width();
+    const bool compact = width() < (ui->topbarCompact ? bar + ui->topbarWords : bar);
+    if (compact == ui->topbarCompact)
+        return;
+    ui->topbarCompact = compact;
+    for (const auto &[button, word] : buttons)
+        button->setLabel(compact ? QString() : word);
+}
+
 void App::resizeEvent(QResizeEvent *e)
 {
     QWidget::resizeEvent(e);
+    fitTopbar();
     relayoutModal();
     layoutToasts();
 }

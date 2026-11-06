@@ -72,12 +72,15 @@ struct PaneConfig {
     QVector<IndicatorInstance> indicators;
     QStringList compare;
     bool log = false;
+    bool volumeHidden = false;    // the eye in the legend
+    bool volumeRemoved = false;   // its ×; Settings shows it again
     QJsonObject footprint;   // Deepwater addition: the footprint chart's settings (FootprintLayer::Settings JSON)
 };
 
 struct AppSettings {
     QString theme = "dark";
     bool volume = true;
+    bool countdown = true;
     int bars = 3000;
     bool utc = false;
     bool stayInDrawMode = false;
@@ -231,6 +234,7 @@ protected:
     bool eventFilter(QObject *o, QEvent *e) override;
     void keyPressEvent(QKeyEvent *e) override;
     void resizeEvent(QResizeEvent *e) override;
+    void fitTopbar();
     void showEvent(QShowEvent *e) override;
     void hideEvent(QHideEvent *e) override;
 

@@ -1,3 +1,4 @@
+#include "DeskWidgets.h"
 #include "OverviewPage.h"
 
 #include <QCoreApplication>
@@ -237,7 +238,7 @@ OverviewPage::OverviewPage(QWidget *parent)
     outer->addWidget(scroll);
     auto *content = new QWidget;
     content->setObjectName("ovContent");
-    content->setMinimumWidth(1180);
+    content->setMinimumWidth(900);
     scroll->setWidget(content);
     auto *v = new QVBoxLayout(content);
     m_layout = v;
@@ -293,8 +294,7 @@ OverviewPage::OverviewPage(QWidget *parent)
     });
 
     // --- Sectors, US indices and bonds, world, crypto, currencies, commodities.
-    auto *board = new QHBoxLayout;
-    board->setSpacing(6);
+    auto *board = new deskui::CardGrid(280, 6);
     auto makeList = [](Panel *panel, int minRows) {
         auto *t = new Table;
         t->setColumns(listColumns(), false);
@@ -313,13 +313,15 @@ OverviewPage::OverviewPage(QWidget *parent)
     m_sectors->setMessage(tr("Loading…"));
     sectors->body()->addWidget(m_sectors);
     sectors->body()->addStretch(1);
-    board->addWidget(sectors, 6);
+    board->addCard(sectors);
     connect(m_sectorRange, &QButtonGroup::idClicked, this, [this](int id) {
         QSettings().setValue("overview/sectorRange", id);
         fillSectors();
     });
 
-    auto *usColumn = new QVBoxLayout;
+    auto *usHolder = new QWidget;
+    auto *usColumn = new QVBoxLayout(usHolder);
+    usColumn->setContentsMargins(0, 0, 0, 0);
     usColumn->setSpacing(6);
     auto *us = new Panel(tr("US indices"));
     m_usIndices = makeList(us, 5);
@@ -332,21 +334,21 @@ OverviewPage::OverviewPage(QWidget *parent)
     m_bondsPanel->body()->addWidget(m_bonds);
     m_bondsPanel->body()->addStretch(1);
     usColumn->addWidget(m_bondsPanel, 1);
-    board->addLayout(usColumn, 5);
+    board->addCard(usHolder);
 
     auto *global = new Panel(tr("Global"));
     m_global = makeList(global, 14);
-    board->addWidget(global, 5);
+    board->addCard(global);
     auto *crypto = new Panel(tr("Crypto"));
     m_crypto = makeList(crypto, 14);
-    board->addWidget(crypto, 5);
+    board->addCard(crypto);
     auto *fx = new Panel("FX");
     m_fx = makeList(fx, 14);
-    board->addWidget(fx, 5);
+    board->addCard(fx);
     auto *cmdty = new Panel(tr("Commodities"));
     m_commodities = makeList(cmdty, 14);
-    board->addWidget(cmdty, 5);
-    v->addLayout(board);
+    board->addCard(cmdty);
+    v->addWidget(board);
 
     // --- Largest companies and the day's movers.
     auto *movers = new QHBoxLayout;

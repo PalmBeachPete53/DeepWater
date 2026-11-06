@@ -4,7 +4,7 @@ La page Forex suit les sept paires majeures (EUR/USD, USD/JPY, GBP/USD, USD/CHF,
 
 ## Cours
 
-Chaque carte de paire montre le dernier fixing, la variation du jour, une courbe sur 90 jours et le **portage** (le taux directeur de la devise de base moins celui de la devise cotée). La source est les taux de référence de la Banque centrale européenne : un fixing par jour ouvré, pas de cours intrajournalier, rafraîchi toutes les six heures.
+Chaque carte de paire montre le cours et la variation du jour selon Yahoo Finance, actualisés chaque minute, une courbe sur 90 jours et le **portage** (le taux directeur de la devise de base moins celui de la devise cotée). Les courbes et les corrélations utilisent les taux de référence de la Banque centrale européenne : un fixing par jour ouvré, pas de cours intrajournalier, rafraîchi toutes les six heures.
 
 ## Corrélations
 

@@ -103,6 +103,7 @@ struct SeriesOptions {
     QString title;
     bool visible = true;
     bool lastValueVisible = true;
+    QString lastValueDetail;              // a second line in the last value's label (a candle's countdown)
     bool priceLineVisible = true;
     int priceLineWidth = 1;
     LineStyle priceLineStyle = LineStyle::Dashed;
@@ -215,6 +216,7 @@ public:
     QVector<DataItem> data() const;
     void applyOptions(const SeriesOptions &options);
     SeriesOptions options() const;
+    void setLastValueDetail(const QString &text);   // only redraws: applyOptions recomputes the scales
     PriceLine *createPriceLine(const PriceLineOptions &options);   // owned by the series
     void removePriceLine(PriceLine *line);
     std::optional<double> priceToCoordinate(double price) const;

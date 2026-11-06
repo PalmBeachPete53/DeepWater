@@ -7,6 +7,7 @@
 // (data.error, or the body text, or "HTTP <status>"), like the JS req() throws.
 
 #include "../core/CandleSet.h"
+#include "../server/CandleStore.h"
 
 #include <QByteArray>
 #include <QJsonObject>
@@ -34,6 +35,9 @@ void postText(QObject *context, const QString &url, const QByteArray &body, Ok o
 // api.candles / api.quotes / api.search from api.js. candles() skips the JSON round trip.
 void candles(QObject *context, const QString &symbol, const QString &tf, int limit,
              std::function<void(const CandleSet &)> ok, Fail fail = {});
+// A chart's saved candles (server/CandleStore), off the UI thread; none: an empty set.
+void storedCandles(QObject *context, const QString &symbol, const QString &tf, std::function<void(const StoredCandles &)> ok);
+void saveCandles(QObject *context, const QString &symbol, const QString &tf, const StoredCandles &stored);
 void quotes(QObject *context, const QStringList &symbols, Ok ok, Fail fail = {});
 void search(QObject *context, const QString &q, Ok ok, Fail fail = {});
 

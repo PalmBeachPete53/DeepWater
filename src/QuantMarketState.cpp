@@ -402,9 +402,12 @@ MarketStateStrip::MarketStateStrip(QWidget *parent, bool compact)
     m_regime = label({}, "qtCardLabel");
     h->addWidget(m_regime);
     m_vol = label({}, "qtCardLabel");
-    h->addWidget(m_vol);
-    if (!compact)
-        h->addStretch(1);
+    if (compact) {
+        h->addWidget(m_vol);
+    } else {
+        m_vol->setWordWrap(true);
+        h->addWidget(m_vol, 1);
+    }
     connect(MarketState::instance(), &MarketState::regimeChanged, this, [this](const QString &s) { if (s == m_symbol) refresh(); });
     connect(MarketState::instance(), &MarketState::volatilityChanged, this, [this](const QString &s) { if (s == m_symbol) refresh(); });
     connect(StateRefresher::instance(), &StateRefresher::changed, this, &MarketStateStrip::refresh);

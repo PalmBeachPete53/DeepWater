@@ -11,6 +11,7 @@
 #include "../../../src/quant/core/Series.h"
 #include "../../../src/quant/server/Alerts.h"
 #include "../../../src/quant/server/Async.h"
+#include "../../../src/quant/server/CandleStore.h"
 #include "../../../src/quant/server/Feeds.h"
 #include "../../../src/quant/server/Http.h"
 #include "../../../src/quant/server/HttpApi.h"
@@ -274,6 +275,82 @@ static QJsonObject obj(const char *json) { return jsv::parse(QByteArray(json)).t
 // ---------------------------------------------------------------- reference: JS helpers
 
 static QJsonObject REF;
+
+static void testCandleStore()
+{
+    test("CandleStore");
+    QTemporaryDir dir;
+    CandleStore store(dir.path() + "/candles");
+    CHECK(!store.read("BINANCE:BTCUSDT", "1h").has_value());
+    StoredCandles s;
+    s.set.symbol = "BINANCE:BTCUSDT";
+    s.set.provider = "Binance";
+    s.limit = 3000;
+    s.fullAt = 1800000000;
+    for (int i = 0; i < 10; ++i) {
+        Bar b;
+        b.time = 1800000000 - 3600 * (9 - i);
+        b.open = 100 + i;
+        b.high = 101 + i;
+        b.low = 99 + i;
+        b.close = 100.5 + i;
+        b.volume = 7 * i;
+        s.set.candles.push_back(b);
+    }
+    CHECK(store.write("BINANCE:BTCUSDT", "1h", s));
+    const auto back = store.read("BINANCE:BTCUSDT", "1h");
+    CHECK(back.has_value());
+    CHECK(back->set.symbol == s.set.symbol && back->set.provider == "Binance" && back->limit == 3000 && back->fullAt == s.fullAt);
+    CHECK(back->set.candles.size() == 10);
+    CHECK(back->set.candles.last().time == s.set.candles.last().time && back->set.candles[3].volume == 21 && back->set.candles[9].close == 109.5);
+    // 1m and 1M are one file name on Windows and macOS when written as they are.
+    CHECK(store.write("A", "1m", s));
+    StoredCandles other = s;
+    other.limit = 5;
+    CHECK(store.write("A", "1M", other));
+    CHECK(store.read("A", "1m")->limit == 3000 && store.read("A", "1M")->limit == 5);
+    // A file cut short is as if it weren't there.
+    QDir files(dir.path() + "/candles");
+    const QStringList all = files.entryList({"*.candles"}, QDir::Files);
+    CHECK(all.size() == 3);
+    for (const QString &name : all) {
+        QFile f(files.filePath(name));
+        CHECK(f.open(QIODevice::ReadWrite));
+        CHECK(f.resize(f.size() - 20));
+    }
+    CHECK(!store.read("BINANCE:BTCUSDT", "1h").has_value());
+
+    test("planCandleRefresh");
+    const qint64 last = qint64(s.set.candles.last().time);
+    s.fullAt = last;
+    CandleRefresh plan = planCandleRefresh(s, "1h", 3000, last + 7200);
+    CHECK(!plan.full && plan.recent == 5);
+    plan = planCandleRefresh(s, "1h", 3000, last + 3600 * 20);
+    CHECK(!plan.full && plan.recent == 22);
+    CHECK(planCandleRefresh(s, "1h", 3000, last + CandleStore::FullAfter + 1).full);   // too old to trust
+    CHECK(planCandleRefresh(s, "1h", 4000, last + 60).full);                           // asked for more bars
+    CHECK(planCandleRefresh(StoredCandles{}, "1h", 3000, last).full);
+    CHECK(planCandleRefresh(s, "nonsense", 3000, last + 60).full);
+    CHECK(planCandleRefresh(s, "1m", 500, last + 3600 * 12).full);                     // more missing than asked for
+
+    test("secondsToBarClose");
+    const qint64 h4 = 1800000000 - 1800000000 % 14400;
+    CHECK(secondsToBarClose(h4, "4h", h4 + 100) == 14300);
+    CHECK(secondsToBarClose(h4, "1h", h4 + 3000) == 600);
+    CHECK(secondsToBarClose(h4, "1h", h4 + 3600 + 60) == 3540);          // a delayed feed: on to the next bar
+    CHECK(secondsToBarClose(h4, "1h", h4 + 3600 + 1801) == -1);          // market closed
+    CHECK(secondsToBarClose(h4, "1D", h4 + 60, false) == -1);            // a session's day
+    CHECK(secondsToBarClose(h4, "1D", h4 + 60, true) == 86340);
+    CHECK(secondsToBarClose(h4, "nonsense", h4) == -1);
+    // A month's length follows the calendar: 1 February 2027 to 1 March 2027 is 28 days.
+    CHECK(secondsToBarClose(1801440000, "1M", 1801440000) == 28 * 86400);
+    CHECK(formatCountdown(-1).isEmpty());
+    CHECK(formatCountdown(59) == "00:59");
+    CHECK(formatCountdown(3599) == "59:59");
+    CHECK(formatCountdown(3600) == "01:00:00");
+    CHECK(formatCountdown(14300) == "03:58:20");
+    CHECK(formatCountdown(2 * 86400 + 3 * 3600 + 4 * 60 + 5) == "2d 03:04");
+}
 
 static void testJsHelpers()
 {
@@ -2084,6 +2161,7 @@ int main(int argc, char **argv)
     }();
 
     QTemporaryDir refData, provData, feedData;
+    testCandleStore();
     testJsHelpers();
     testReferenceProviders(refData.path());
     testReferenceImports();

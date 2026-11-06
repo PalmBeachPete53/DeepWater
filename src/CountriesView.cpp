@@ -3,6 +3,8 @@
 #include "CountryData.h"
 #include "Theme.h"
 
+#include "quant/ui/PanelsKit.h"
+
 #include <QButtonGroup>
 #include <QFile>
 #include <QFileDialog>
@@ -35,7 +37,6 @@ QScrollArea *scrollArea(QWidget *content)
     scroll->setObjectName("ecoScroll");
     scroll->setWidgetResizable(true);
     scroll->setFrameShape(QFrame::NoFrame);
-    scroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     scroll->setWidget(content);
     return scroll;
 }
@@ -65,7 +66,7 @@ CountryPage::CountryPage(const QString &iso3, QWidget *parent)
     bar->setAttribute(Qt::WA_StyledBackground);
     bar->setFixedHeight(40);
     auto *bh = new QHBoxLayout(bar);
-    bh->setContentsMargins(10, 0, 12, 0);
+    bh->setContentsMargins(10, 0, 30, 0);   // clear of the side flaps
     bh->setSpacing(10);
     auto *backButton = new QToolButton;
     backButton->setObjectName("ctryBack");
@@ -98,9 +99,8 @@ CountryPage::CountryPage(const QString &iso3, QWidget *parent)
     nav->setObjectName("qtSubBar");
     nav->setAttribute(Qt::WA_StyledBackground);
     nav->setFixedHeight(34);
-    auto *nh = new QHBoxLayout(nav);
+    auto *nh = new qtm::kit::WrapBarLayout(nav, 2);
     nh->setContentsMargins(6, 0, 12, 0);
-    nh->setSpacing(2);
     m_tabs = new QButtonGroup(this);
     const Catalogue &cat = catalogue();
     for (int i = 0; i < cat.tabs.size(); ++i) {
@@ -113,7 +113,6 @@ CountryPage::CountryPage(const QString &iso3, QWidget *parent)
         m_tabs->addButton(b, i);
         nh->addWidget(b);
     }
-    nh->addStretch(1);
     v->addWidget(nav);
 
     m_stack = new QStackedWidget;

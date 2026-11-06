@@ -4,7 +4,7 @@
 <context>
     <name>AccountDialog</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+355"/>
+        <location filename="../src/JournalPage.cpp" line="+357"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
@@ -22,7 +22,7 @@
 <context>
     <name>AdvancedView</name>
     <message>
-        <location line="+502"/>
+        <location line="+501"/>
         <location line="+33"/>
         <source>Drawdown</source>
         <translation>Drawdown</translation>
@@ -140,7 +140,7 @@ Durée %5
 <context>
     <name>AiClaudeView</name>
     <message>
-        <location filename="../src/AiPage.cpp" line="+525"/>
+        <location filename="../src/AiPage.cpp" line="+527"/>
         <source>Claude</source>
         <translation>Claude</translation>
     </message>
@@ -1422,13 +1422,13 @@ Durée %5
 <context>
     <name>AiPage</name>
     <message>
-        <location filename="../src/AiPage.cpp" line="+118"/>
-        <location line="+29"/>
+        <location filename="../src/AiPage.cpp" line="+117"/>
+        <location line="+28"/>
         <source>Models</source>
         <translation>Modèles</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-28"/>
         <source>Machine learning</source>
         <translation>Apprentissage automatique</translation>
     </message>
@@ -1438,7 +1438,7 @@ Durée %5
         <translation>Local</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+40"/>
         <source>Local models</source>
         <translation>Modèles locaux</translation>
     </message>
@@ -1500,7 +1500,7 @@ Durée %5
 <context>
     <name>CalendarPage</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="+64"/>
+        <location filename="../src/CalendarPage.cpp" line="+66"/>
         <source>Euro area</source>
         <translation>Zone euro</translation>
     </message>
@@ -1525,7 +1525,7 @@ Durée %5
         <translation>Faible</translation>
     </message>
     <message>
-        <location line="+1102"/>
+        <location line="+1111"/>
         <source>Economic</source>
         <translation>Économique</translation>
     </message>
@@ -2001,7 +2001,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CorporateView</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="-662"/>
+        <location filename="../src/CalendarPage.cpp" line="-659"/>
         <source>Earnings calendar</source>
         <translation>Calendrier des résultats</translation>
     </message>
@@ -2020,51 +2020,51 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location line="+47"/>
+        <location line="+46"/>
         <location line="+1"/>
         <source>Symbol</source>
         <translation>Symbole</translation>
     </message>
     <message>
-        <location line="-60"/>
+        <location line="-59"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location line="+47"/>
+        <location line="+46"/>
         <location line="+1"/>
         <source>Company</source>
         <translation>Société</translation>
     </message>
     <message>
-        <location line="-60"/>
+        <location line="-59"/>
         <location line="+8"/>
         <location line="+4"/>
-        <location line="+47"/>
+        <location line="+46"/>
         <location line="+1"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message>
-        <location line="-60"/>
-        <location line="+60"/>
+        <location line="-59"/>
+        <location line="+59"/>
         <source>Actual</source>
         <translation>Publié</translation>
     </message>
     <message>
-        <location line="-60"/>
-        <location line="+59"/>
+        <location line="-59"/>
+        <location line="+58"/>
         <location line="+1"/>
         <source>Est.</source>
         <translation>Est.</translation>
     </message>
     <message>
-        <location line="-60"/>
-        <location line="+60"/>
+        <location line="-59"/>
+        <location line="+59"/>
         <source>Surprise</source>
         <translation>Surprise</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-56"/>
         <source>Dividends calendar</source>
         <translation>Calendrier des dividendes</translation>
     </message>
@@ -2114,7 +2114,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Statut</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+46"/>
         <source>Time</source>
         <translation>Heure</translation>
     </message>
@@ -2192,7 +2192,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CorrelationMatrix</name>
     <message>
-        <location filename="../src/ForexPage.cpp" line="+410"/>
+        <location filename="../src/ForexPage.cpp" line="+423"/>
         <source>%1 vs %2: %3 over %4 daily returns</source>
         <translation>%1 vs %2 : %3 sur %4 rendements quotidiens</translation>
     </message>
@@ -2226,7 +2226,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CountriesView</name>
     <message>
-        <location filename="../src/CountriesView.cpp" line="+363"/>
+        <location filename="../src/CountriesView.cpp" line="+362"/>
         <source>Search countries…</source>
         <translation>Rechercher un pays…</translation>
     </message>
@@ -2234,7 +2234,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CountryPage</name>
     <message>
-        <location line="-291"/>
+        <location line="-289"/>
         <source>Countries</source>
         <translation>Pays</translation>
     </message>
@@ -2245,12 +2245,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+240"/>
+        <location line="+238"/>
         <source>Export CSV</source>
         <translation>Exporter en CSV</translation>
     </message>
     <message>
-        <location line="-237"/>
+        <location line="-235"/>
         <source>Save the table of this tab as a CSV file</source>
         <translation>Enregistrer le tableau de cet onglet en fichier CSV</translation>
     </message>
@@ -2265,7 +2265,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Télécharger de nouveau les indicateurs de ce pays</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="+68"/>
         <source>Last</source>
         <translation>Dernier</translation>
     </message>
@@ -2581,7 +2581,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>DeskPage</name>
     <message>
-        <location filename="../src/DeskPage.cpp" line="+16"/>
+        <location filename="../src/DeskPage.cpp" line="+18"/>
         <source>Markets</source>
         <translation>Marchés</translation>
     </message>
@@ -4510,7 +4510,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>EconomicView</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="-672"/>
+        <location filename="../src/CalendarPage.cpp" line="-683"/>
         <source>due</source>
         <translation>attendu</translation>
     </message>
@@ -4540,7 +4540,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Actualiser</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+17"/>
         <source>Last week</source>
         <translation>Semaine dernière</translation>
     </message>
@@ -4570,7 +4570,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Semaine prochaine</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+14"/>
         <source>Specific date</source>
         <translation>Date précise</translation>
     </message>
@@ -4608,12 +4608,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+19"/>
-        <location line="+50"/>
+        <location line="+51"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-51"/>
         <source>Time</source>
         <translation>Heure</translation>
     </message>
@@ -4624,36 +4624,36 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+50"/>
-        <location line="+125"/>
+        <location line="+51"/>
+        <location line="+136"/>
         <source>Actual</source>
         <translation>Publié</translation>
     </message>
     <message>
-        <location line="-174"/>
-        <location line="+49"/>
-        <location line="+125"/>
+        <location line="-186"/>
+        <location line="+50"/>
+        <location line="+136"/>
         <source>Forecast</source>
         <translation>Prévision</translation>
     </message>
     <message>
-        <location line="-174"/>
+        <location line="-186"/>
         <source>Previous</source>
         <translation>Précédent</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+49"/>
+        <location line="+50"/>
         <source>Surprise</source>
         <translation>Surprise</translation>
     </message>
     <message>
-        <location line="-49"/>
+        <location line="-50"/>
         <source>In</source>
         <translation>Dans</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Click an event for its past figures against the forecasts</source>
         <translation>Cliquez sur un événement pour voir ses chiffres passés face aux prévisions</translation>
     </message>
@@ -4668,7 +4668,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Période</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+87"/>
         <source>Loading three years of releases…</source>
         <translation>Chargement de trois ans de publications…</translation>
     </message>
@@ -4802,12 +4802,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Indice de volatilité VIX</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>The volatility of the S&amp;P 500 that options price for the next 30 days, in percent a year. Below 15 is calm, above 30 is stress.</source>
-        <translation>La volatilité du S&amp;P 500 que les options anticipent sur les 30 prochains jours, en pourcentage annuel. Sous 15 c&apos;est le calme, au-dessus de 30 le stress.</translation>
+        <translation type="vanished">La volatilité du S&amp;P 500 que les options anticipent sur les 30 prochains jours, en pourcentage annuel. Sous 15 c&apos;est le calme, au-dessus de 30 le stress.</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+1"/>
+        <source>The volatility of the S&amp;P 500 that options price for the next 30 days, in percent a year. Below 15 is calm, above 30 is stress (Yahoo Finance: FRED&apos;s copy comes a day late).</source>
+        <translation>La volatilité du S&amp;P 500 que les options intègrent pour les 30 prochains jours, en pourcentage annuel. Sous 15, le marché est calme ; au-dessus de 30, il est sous tension (Yahoo Finance : la copie de FRED arrive un jour plus tard).</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Michigan sentiment</source>
         <translation>Sentiment Michigan</translation>
     </message>
@@ -5383,7 +5387,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+42"/>
-        <location filename="../src/EconomyPage.cpp" line="+275"/>
+        <location filename="../src/EconomyPage.cpp" line="+283"/>
         <source>Altcoin season</source>
         <translation>Saison des altcoins</translation>
     </message>
@@ -5503,19 +5507,19 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>EconomyPage</name>
     <message>
-        <location line="+70"/>
-        <location line="+243"/>
+        <location line="+69"/>
+        <location line="+314"/>
         <source>Countries</source>
         <translation>Pays</translation>
     </message>
     <message>
-        <location line="-243"/>
-        <location line="+244"/>
+        <location line="-314"/>
+        <location line="+315"/>
         <source>Indicators</source>
         <translation>Indicateurs</translation>
     </message>
     <message>
-        <location line="-229"/>
+        <location line="-300"/>
         <source>Refresh</source>
         <translation>Actualiser</translation>
     </message>
@@ -5525,7 +5529,32 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Télécharger à nouveau tous les indicateurs de cette section</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+31"/>
+        <source>The US charts come from FRED, which asks for a free key: create an account, ask for a key and paste it here.</source>
+        <translation>Les graphiques américains viennent de FRED, qui demande une clé gratuite : créez un compte, demandez une clé et collez-la ici.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Get a free key</source>
+        <translation>Obtenir une clé gratuite</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Your FRED key</source>
+        <translation>Votre clé FRED</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Save</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>FRED refused this key: %1</source>
+        <translation>FRED a refusé cette clé : %1</translation>
+    </message>
+    <message>
+        <location line="+103"/>
         <source>ESTIMATE</source>
         <translation>ESTIMATION</translation>
     </message>
@@ -5562,7 +5591,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>ForexPage</name>
     <message>
-        <location filename="../src/ForexPage.cpp" line="+39"/>
+        <location filename="../src/ForexPage.cpp" line="+41"/>
         <source>Forex</source>
         <translation>Forex</translation>
     </message>
@@ -5607,7 +5636,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>1A</translation>
     </message>
     <message>
-        <location line="+45"/>
+        <location line="+74"/>
+        <source>Prices and day changes: Yahoo Finance, refreshed every minute. Charts and correlations: European Central Bank reference rates via frankfurter.dev, one fix per business day around 16:00 CET.</source>
+        <translation>Cours et variations du jour : Yahoo Finance, actualisés chaque minute. Graphiques et corrélations : taux de référence de la Banque centrale européenne via frankfurter.dev, un fixing par jour ouvré vers 16 h (heure de Paris).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>European Central Bank reference rates via frankfurter.dev: one fix per business day around 16:00 CET, no intraday data.</source>
         <translation>Taux de référence de la Banque centrale européenne via frankfurter.dev : un fixing par jour ouvré vers 16 h (heure de Paris), pas de données intrajournalières.</translation>
     </message>
@@ -5672,7 +5706,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>FxPairCard</name>
     <message>
-        <location filename="../src/ForexPage.cpp" line="-476"/>
+        <location filename="../src/ForexPage.cpp" line="-509"/>
         <source>carry %1%2 pp</source>
         <translation>portage %1%2 pts</translation>
     </message>
@@ -5788,17 +5822,22 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <name>HeaderBar</name>
     <message>
         <location filename="../src/HeaderBar.cpp" line="+201"/>
+        <source>More</source>
+        <translation>Plus</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Show a hidden tab</source>
         <translation>Afficher un onglet masqué</translation>
     </message>
     <message>
         <location line="+13"/>
-        <location line="+220"/>
+        <location line="+355"/>
         <source>Edit tabs</source>
         <translation>Modifier les onglets</translation>
     </message>
     <message>
-        <location line="-183"/>
+        <location line="-318"/>
         <source>Developer tools</source>
         <translation>Outils de développement</translation>
     </message>
@@ -5828,7 +5867,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Masquer cet onglet</translation>
     </message>
     <message>
-        <location line="+98"/>
+        <location line="+233"/>
         <source>Done</source>
         <translation>Terminé</translation>
     </message>
@@ -5836,7 +5875,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>HelpWindow</name>
     <message>
-        <location filename="../src/HelpWindow.cpp" line="+163"/>
+        <location filename="../src/HelpWindow.cpp" line="+167"/>
         <source>Help</source>
         <translation>Aide</translation>
     </message>
@@ -5895,7 +5934,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>ImportDialog</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="-643"/>
+        <location filename="../src/JournalPage.cpp" line="-642"/>
         <source>Import trades</source>
         <translation>Importer des trades</translation>
     </message>
@@ -6012,18 +6051,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>IndicatorPage</name>
     <message>
-        <location filename="../src/IndicatorsView.cpp" line="+109"/>
+        <location filename="../src/IndicatorsView.cpp" line="+110"/>
         <source>Indicators</source>
         <translation>Indicateurs</translation>
     </message>
     <message>
         <location line="+11"/>
-        <location line="+228"/>
+        <location line="+226"/>
         <source>Export CSV</source>
         <translation>Exporter CSV</translation>
     </message>
     <message>
-        <location line="-225"/>
+        <location line="-223"/>
         <source>Save the table as a CSV file</source>
         <translation>Enregistrer le tableau dans un fichier CSV</translation>
     </message>
@@ -6038,12 +6077,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Télécharger à nouveau cet indicateur pour chaque pays</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
         <source>All</source>
         <translation>Tous</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+18"/>
         <source>Country</source>
         <translation>Pays</translation>
     </message>
@@ -6165,7 +6204,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>JournalBar</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+208"/>
+        <location filename="../src/JournalPage.cpp" line="+207"/>
         <source>Long and short</source>
         <translation>Long et short</translation>
     </message>
@@ -6270,7 +6309,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>JournalPage</name>
     <message>
-        <location line="+786"/>
+        <location line="+785"/>
         <source>Dashboard</source>
         <translation>Tableau de bord</translation>
     </message>
@@ -6760,7 +6799,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Le moteur local ne fait pas partie de cette version.</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+146"/>
         <source>the engine couldn&apos;t start (%1)</source>
         <translation>le moteur n’a pas pu démarrer (%1)</translation>
     </message>
@@ -7452,7 +7491,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1459"/>
+        <location filename="../src/MainWindow.cpp" line="+1504"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -7460,17 +7499,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-1167"/>
+        <location filename="../src/MainWindow.cpp" line="-1177"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
     <message>
-        <location line="+59"/>
+        <location line="+65"/>
         <source>Map</source>
         <translation>Carte</translation>
     </message>
     <message>
-        <location line="+12"/>
+        <location line="+16"/>
         <source>Forex</source>
         <translation>Forex</translation>
     </message>
@@ -7480,7 +7519,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Graphiques</translation>
     </message>
     <message>
-        <location line="-18"/>
+        <location line="-22"/>
         <source>Overview</source>
         <translation>Overview</translation>
     </message>
@@ -7500,7 +7539,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Economy</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Calendar</source>
         <translation>Calendrier</translation>
     </message>
@@ -7631,12 +7670,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MarketCard</name>
     <message>
-        <location filename="../src/CalendarPage.cpp" line="-395"/>
+        <location filename="../src/CalendarPage.cpp" line="-407"/>
         <source>%1d %2h %3m</source>
         <translation>%1j %2h %3m</translation>
     </message>
     <message>
-        <location line="+697"/>
+        <location line="+708"/>
         <source>Open</source>
         <translation>Ouvert</translation>
     </message>
@@ -7882,7 +7921,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>la nuit, ~6 heures</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="+55"/>
         <source>Global Market Hours</source>
         <translation>Horaires des marchés mondiaux</translation>
     </message>
@@ -8244,7 +8283,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>NewsPage</name>
     <message>
-        <location filename="../src/NewsPage.cpp" line="+167"/>
+        <location filename="../src/NewsPage.cpp" line="+169"/>
         <source>MMM d, yyyy HH:mm</source>
         <translation>d MMM yyyy HH:mm</translation>
     </message>
@@ -8259,7 +8298,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>IMPORTANT</translation>
     </message>
     <message>
-        <location line="+224"/>
+        <location line="+223"/>
         <source>General</source>
         <translation>Général</translation>
     </message>
@@ -8354,7 +8393,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Résultats</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+21"/>
         <source>News wire</source>
         <translation>Fil d’actualité</translation>
     </message>
@@ -8508,7 +8547,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../src/OverviewPage.cpp" line="+112"/>
+        <location filename="../src/OverviewPage.cpp" line="+113"/>
         <source>Technology</source>
         <translation>Technologie</translation>
     </message>
@@ -8569,19 +8608,19 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+54"/>
+        <location line="+53"/>
         <source>TODAY</source>
         <translation>JOUR</translation>
     </message>
     <message>
-        <location line="-25"/>
+        <location line="-24"/>
         <source>Statistics</source>
         <translation>Statistiques</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+17"/>
         <location line="+11"/>
-        <location line="+18"/>
+        <location line="+20"/>
         <location line="+45"/>
         <location line="+23"/>
         <location line="+26"/>
@@ -8592,12 +8631,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Chargement…</translation>
     </message>
     <message>
-        <location line="-633"/>
+        <location line="-635"/>
         <source>Sectors</source>
         <translation>Secteurs</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+18"/>
         <source>US indices</source>
         <translation>Indices US</translation>
     </message>
@@ -8802,24 +8841,24 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1331"/>
+        <location line="+1330"/>
         <source>Gross Profit</source>
         <translation>Résultat brut</translation>
     </message>
     <message>
-        <location line="-1330"/>
-        <location line="+1335"/>
+        <location line="-1329"/>
+        <location line="+1334"/>
         <source>Operating Income</source>
         <translation>Résultat d&apos;exploitation</translation>
     </message>
     <message>
-        <location line="-1334"/>
-        <location line="+1343"/>
+        <location line="-1333"/>
+        <location line="+1342"/>
         <source>Net Income</source>
         <translation>Résultat net</translation>
     </message>
     <message>
-        <location line="-1342"/>
+        <location line="-1341"/>
         <source>EBITDA</source>
         <translation>EBITDA</translation>
     </message>
@@ -8850,12 +8889,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1355"/>
+        <location line="+1354"/>
         <source>Total Assets</source>
         <translation>Total de l&apos;actif</translation>
     </message>
     <message>
-        <location line="-1354"/>
+        <location line="-1353"/>
         <source>Total Liabilities</source>
         <translation>Total des passifs</translation>
     </message>
@@ -8866,29 +8905,29 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1390"/>
+        <location line="+1389"/>
         <source>Total Debt</source>
         <translation>Dette totale</translation>
     </message>
     <message>
-        <location line="-1389"/>
+        <location line="-1388"/>
         <source>Cash &amp; Equivalents</source>
         <translation>Trésorerie et équivalents</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1394"/>
+        <location line="+1393"/>
         <source>Operating Cash Flow</source>
         <translation>Flux de trésorerie d&apos;exploitation</translation>
     </message>
     <message>
-        <location line="-1393"/>
-        <location line="+1441"/>
+        <location line="-1392"/>
+        <location line="+1440"/>
         <source>Free Cash Flow</source>
         <translation>Flux de trésorerie disponible</translation>
     </message>
     <message>
-        <location line="-1440"/>
+        <location line="-1439"/>
         <source>CapEx</source>
         <translation>Investissements (CapEx)</translation>
     </message>
@@ -8899,17 +8938,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1313"/>
+        <location line="+1312"/>
         <source>Cost of Revenue</source>
         <translation>Coût des ventes</translation>
     </message>
     <message>
-        <location line="-1312"/>
+        <location line="-1311"/>
         <source>Depreciation &amp; Amortization</source>
         <translation>Dotations aux amortissements</translation>
     </message>
     <message>
-        <location line="+1311"/>
+        <location line="+1310"/>
         <source>Total Revenue</source>
         <translation>Chiffre d&apos;affaires total</translation>
     </message>
@@ -9634,7 +9673,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>EXPÉRIMENTAL</translation>
     </message>
     <message>
-        <location line="+905"/>
+        <location line="+904"/>
         <source>No insider trades reported</source>
         <translation>Aucune transaction d&apos;initié déclarée</translation>
     </message>
@@ -9764,7 +9803,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 o</translation>
     </message>
     <message>
-        <location filename="../src/JournalPage.cpp" line="-1223"/>
+        <location filename="../src/JournalPage.cpp" line="-1221"/>
         <source>%1 min</source>
         <translation>%1 min</translation>
     </message>
@@ -9779,7 +9818,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 j</translation>
     </message>
     <message>
-        <location filename="../src/DeskViewsMarket.cpp" line="+37"/>
+        <location filename="../src/DeskViewsMarket.cpp" line="+39"/>
         <location line="+458"/>
         <location line="+0"/>
         <location line="+0"/>
@@ -9820,7 +9859,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+3"/>
         <location line="+0"/>
-        <location line="+235"/>
+        <location line="+241"/>
         <source>Energy</source>
         <translation>Énergie</translation>
     </message>
@@ -9838,7 +9877,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>QuantPage</name>
     <message>
-        <location filename="../src/QuantPage.cpp" line="+32"/>
+        <location filename="../src/QuantPage.cpp" line="+33"/>
         <source>Compare</source>
         <translation>Comparer</translation>
     </message>
@@ -9876,17 +9915,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>ResearchPage</name>
     <message>
-        <location filename="../src/ResearchPage.cpp" line="+43"/>
+        <location filename="../src/ResearchPage.cpp" line="+44"/>
         <source>Symbol or company…</source>
         <translation>Symbole ou société…</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <source>Regime and volatility forecast from Quant › Markov</source>
         <translation>Régime et prévision de volatilité de Quant › Markov</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+12"/>
         <source>Key Metrics</source>
         <translation>Chiffres clés</translation>
     </message>
@@ -9936,7 +9975,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Chaîne d&apos;approvisionnement</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="+127"/>
         <source>unknown symbol</source>
         <translation>symbole inconnu</translation>
     </message>
@@ -9954,7 +9993,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>RiskView</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="+942"/>
+        <location filename="../src/JournalPage.cpp" line="+941"/>
         <source>Trade parameters</source>
         <translation>Paramètres du trade</translation>
     </message>
@@ -10160,7 +10199,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../src/SettingsDialog.cpp" line="+191"/>
+        <location filename="../src/SettingsDialog.cpp" line="+195"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
@@ -10919,7 +10958,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>et %1 de plus</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+310"/>
         <source>The whole diagram at once, tilted on a plane; under it, the underground floor: the AIs and what they can reach of the data. The up and down arrows change floor; a click on an item looks at it closely.</source>
         <translation>Tout le diagramme d&apos;un coup, incliné sur un plan ; dessous, le sous-sol : les IA et ce qu&apos;elles peuvent atteindre des données. Les flèches haut et bas changent d&apos;étage ; un clic sur un élément le montre de près.</translation>
     </message>
@@ -10936,7 +10975,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Le tableau du pays ou de l&apos;indicateur ouvert dans Economy, tel qu&apos;il s&apos;affiche, par l&apos;outil page_table.</translation>
     </message>
     <message>
-        <location line="-2473"/>
+        <location line="-2474"/>
         <source>The page in view</source>
         <translation>La page affichée</translation>
     </message>
@@ -11037,7 +11076,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message numerus="yes">
         <location line="+416"/>
-        <location line="+1280"/>
+        <location line="+1281"/>
         <source>%n golden record(s)</source>
         <translation>
             <numerusform>%n golden record</numerusform>
@@ -11045,7 +11084,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         </translation>
     </message>
     <message>
-        <location line="-1104"/>
+        <location line="-1105"/>
         <source>Underground: the AIs and what they reach</source>
         <translation>Sous-sol : les IA et ce qu’elles atteignent</translation>
     </message>
@@ -11075,7 +11114,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>D’où viennent les données de Deepwater et quelles parties de l’application elles alimentent : un lien par jeu de données, d’autant plus épais qu’il en porte, coloré selon leur état dans la liste. Survolez une source, une partie de l’application ou un lien pour suivre ses données ; cliquez pour le garder.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
         <location line="+65"/>
         <source>Zoom out: disc</source>
         <translation>Dézoomer · disque</translation>
@@ -11842,7 +11881,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Statistiques européennes</translation>
     </message>
     <message>
-        <location line="-482"/>
+        <location line="-481"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
@@ -11852,7 +11891,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Données</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+90"/>
         <source>Show every source again</source>
         <translation>Afficher de nouveau toutes les sources</translation>
     </message>
@@ -13727,7 +13766,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>TradeDialog</name>
     <message>
-        <location filename="../src/JournalPage.cpp" line="-1035"/>
+        <location filename="../src/JournalPage.cpp" line="-1034"/>
         <source>Log a trade</source>
         <translation>Saisir un trade</translation>
     </message>
@@ -13856,7 +13895,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Laissés vides, car votre message ne les donne pas ou le trade est ouvert : %1.</translation>
     </message>
     <message>
-        <location line="+975"/>
+        <location line="+974"/>
         <source>Check this entry, prepared by the AI</source>
         <translation>Vérifiez cette entrée, préparée par l&apos;IA</translation>
     </message>
@@ -14635,7 +14674,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::BarsChart</name>
     <message>
-        <location filename="../src/DeskWidgets.cpp" line="+155"/>
+        <location filename="../src/DeskWidgets.cpp" line="+219"/>
         <source>No data</source>
         <translation>Aucune donnée</translation>
     </message>
@@ -15438,7 +15477,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>MARCHÉ</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Supertrend</source>
         <translation>Supertrend</translation>
     </message>
@@ -15726,7 +15765,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::LiquidityView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+382"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+385"/>
         <source>Daily</source>
         <translation>Journalier</translation>
     </message>
@@ -15915,7 +15954,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::MarketSheet</name>
     <message>
-        <location line="+351"/>
+        <location line="+354"/>
         <source>Technicals</source>
         <translation>Technique</translation>
     </message>
@@ -16205,7 +16244,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::MarketsView</name>
     <message>
-        <location filename="../src/DeskViewsMarket.cpp" line="-672"/>
+        <location filename="../src/DeskViewsMarket.cpp" line="-678"/>
         <source>Search %1 markets: EUR/USD, Gold, Nvidia, Bitcoin…</source>
         <translation>Chercher parmi %1 marchés : EUR/USD, Or, Nvidia, Bitcoin…</translation>
     </message>
@@ -16255,7 +16294,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>À la traîne</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+9"/>
         <source>Market</source>
         <translation>Marché</translation>
     </message>
@@ -16270,7 +16309,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Variation</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+13"/>
         <source>Yahoo Finance quotes, about 15 minutes delayed for most markets, refreshed every minute. Click a market for its sheet.</source>
         <translation>Cours de Yahoo Finance, différés d&apos;environ 15 minutes pour la plupart des marchés, actualisés chaque minute. Cliquez sur un marché pour ouvrir sa fiche.</translation>
     </message>
@@ -16307,7 +16346,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::NotesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-638"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-641"/>
         <source>All publishers</source>
         <translation>Tous les éditeurs</translation>
     </message>
@@ -16905,7 +16944,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::RecapView</name>
     <message>
-        <location filename="../src/DeskViewsMarket.cpp" line="+328"/>
+        <location filename="../src/DeskViewsMarket.cpp" line="+331"/>
         <source>Recaps</source>
         <translation>Récaps</translation>
     </message>
@@ -16925,7 +16964,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Écrit par l&apos;application à partir des chiffres ci-dessous, selon des règles fixes.</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>ASK THE AI TO READ IT</source>
         <translation>DEMANDER À L&apos;IA DE LE LIRE</translation>
     </message>
@@ -16980,7 +17019,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Le plus grand mouvement de la période</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Releases in the window</source>
         <translation>Publications de la période</translation>
     </message>
@@ -17021,7 +17060,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Titre</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Loading the bars and the wire…</source>
         <translation>Chargement des bougies et du fil…</translation>
     </message>
@@ -17192,7 +17231,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::SessionsView</name>
     <message>
-        <location filename="../src/DeskViewsMarket.cpp" line="-325"/>
+        <location filename="../src/DeskViewsMarket.cpp" line="-331"/>
         <source>Today, in your time</source>
         <translation>Aujourd&apos;hui, à votre heure</translation>
     </message>
@@ -17249,12 +17288,12 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::StrengthView</name>
     <message>
-        <location line="-242"/>
+        <location line="-245"/>
         <source>Unweighted currency indices: each currency against the seven others, every pair counting the same.</source>
         <translation>Indices de devises non pondérés : chaque devise contre les sept autres, chaque paire comptant autant.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Currency strength, % since the first bar on screen</source>
         <translation>Force des devises, % depuis la première bougie à l&apos;écran</translation>
     </message>
@@ -17264,7 +17303,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>Classement</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Currency</source>
         <translation>Devise</translation>
     </message>
@@ -17287,33 +17326,33 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::TechnicalView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="-603"/>
+        <location filename="../src/DeskViewsTech.cpp" line="-604"/>
         <location line="+16"/>
-        <location line="+93"/>
+        <location line="+94"/>
         <source>Bullish</source>
         <translation>Haussier</translation>
     </message>
     <message>
-        <location line="-108"/>
+        <location line="-109"/>
         <location line="+15"/>
-        <location line="+93"/>
+        <location line="+94"/>
         <source>Bearish</source>
         <translation>Baissier</translation>
     </message>
     <message>
-        <location line="-107"/>
-        <location line="+108"/>
+        <location line="-108"/>
+        <location line="+109"/>
         <source>Overbought</source>
         <translation>Suracheté</translation>
     </message>
     <message>
-        <location line="-107"/>
-        <location line="+107"/>
+        <location line="-108"/>
+        <location line="+108"/>
         <source>Oversold</source>
         <translation>Survendu</translation>
     </message>
     <message>
-        <location line="-106"/>
+        <location line="-107"/>
         <source>Near liquidity</source>
         <translation>Près de la liquidité</translation>
     </message>
@@ -17364,13 +17403,13 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+93"/>
+        <location line="+94"/>
         <location line="+1"/>
         <source>Neutral</source>
         <translation>Neutre</translation>
     </message>
     <message>
-        <location line="-86"/>
+        <location line="-87"/>
         <source>Market</source>
         <translation>Marché</translation>
     </message>
@@ -17386,37 +17425,37 @@ heure locale %2, horaires %3–%4 là-bas
     </message>
     <message>
         <location line="+0"/>
-        <location line="+100"/>
+        <location line="+101"/>
         <source>Trend</source>
         <translation>Tendance</translation>
     </message>
     <message>
-        <location line="-100"/>
-        <location line="+100"/>
+        <location line="-101"/>
+        <location line="+101"/>
         <source>Momentum</source>
         <translation>Momentum</translation>
     </message>
     <message>
-        <location line="-100"/>
-        <location line="+100"/>
+        <location line="-101"/>
+        <location line="+101"/>
         <source>Volatility</source>
         <translation>Volatilité</translation>
     </message>
     <message>
-        <location line="-100"/>
-        <location line="+100"/>
+        <location line="-101"/>
+        <location line="+101"/>
         <source>Volume</source>
         <translation>Volume</translation>
     </message>
     <message>
-        <location line="-100"/>
-        <location line="+100"/>
+        <location line="-101"/>
+        <location line="+101"/>
         <source>Structure</source>
         <translation>Structure</translation>
     </message>
     <message>
-        <location line="-100"/>
-        <location line="+100"/>
+        <location line="-101"/>
+        <location line="+101"/>
         <source>Liquidity</source>
         <translation>Liquidité</translation>
     </message>
@@ -17615,7 +17654,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::WireView</name>
     <message>
-        <location filename="../src/DeskViewsMarket.cpp" line="+487"/>
+        <location filename="../src/DeskViewsMarket.cpp" line="+495"/>
         <source>All</source>
         <translation>Tous</translation>
     </message>
@@ -17635,7 +17674,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>Publications</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+3"/>
         <source>LIVE TV</source>
         <translation>TV EN DIRECT</translation>
     </message>
@@ -17644,7 +17683,7 @@ heure locale %2, horaires %3–%4 là-bas
         <translation type="vanished">Ouvre le direct de la chaîne sur YouTube, dans votre navigateur</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Opens the channel&apos;s live stream on YouTube, here</source>
         <translation>Ouvre le direct de la chaîne sur YouTube, ici</translation>
     </message>
@@ -17727,18 +17766,18 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>deskui::WorkspacesView</name>
     <message>
-        <location filename="../src/DeskViewsTech.cpp" line="+361"/>
+        <location filename="../src/DeskViewsTech.cpp" line="+363"/>
         <source>WORKSPACE</source>
         <translation>ESPACE</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+35"/>
+        <location line="+36"/>
         <source>New workspace</source>
         <translation>Nouvel espace</translation>
     </message>
     <message>
-        <location line="-34"/>
+        <location line="-35"/>
         <source>Rename</source>
         <translation>Renommer</translation>
     </message>
@@ -17758,12 +17797,12 @@ heure locale %2, horaires %3–%4 là-bas
         <translation>Ajouter</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Each panel is a live copy of a Desk section.</source>
         <translation>Chaque panneau est une copie en direct d&apos;une section du Desk.</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+20"/>
         <location line="+11"/>
         <source>Name</source>
         <translation>Nom</translation>
@@ -17870,7 +17909,7 @@ heure locale %2, horaires %3–%4 là-bas
 <context>
     <name>newsui::Card</name>
     <message>
-        <location filename="../src/NewsPage.cpp" line="-427"/>
+        <location filename="../src/NewsPage.cpp" line="-425"/>
         <source>Remove from favorites</source>
         <translation>Retirer des favoris</translation>
     </message>
@@ -18089,7 +18128,7 @@ Titre : %2</translation>
 <context>
     <name>quant::CompareView</name>
     <message>
-        <location filename="../src/QuantCompareView.cpp" line="+292"/>
+        <location filename="../src/QuantCompareView.cpp" line="+291"/>
         <source>1 Year</source>
         <translation>1 an</translation>
     </message>
@@ -19408,7 +19447,7 @@ Titre : %2</translation>
 <context>
     <name>quant::MarketStateStrip</name>
     <message>
-        <location filename="../src/QuantMarketState.cpp" line="+342"/>
+        <location filename="../src/QuantMarketState.cpp" line="+345"/>
         <source>NO REGIME</source>
         <translation>PAS DE RÉGIME</translation>
     </message>
@@ -20475,7 +20514,7 @@ Titre : %2</translation>
 <context>
     <name>quant::StateRefresher</name>
     <message>
-        <location filename="../src/QuantMarketState.cpp" line="-76"/>
+        <location filename="../src/QuantMarketState.cpp" line="-79"/>
         <source>%1: not enough prices</source>
         <translation>%1 : pas assez de prix</translation>
     </message>
@@ -20517,7 +20556,7 @@ Titre : %2</translation>
 <context>
     <name>research::Client</name>
     <message>
-        <location filename="../src/ResearchData.cpp" line="-1579"/>
+        <location filename="../src/ResearchData.cpp" line="-1578"/>
         <source>This source is turned off in Sources</source>
         <translation>Cette source est désactivée dans Sources</translation>
     </message>
@@ -20548,19 +20587,18 @@ Titre : %2</translation>
     </message>
     <message>
         <location line="+160"/>
-        <location line="+38"/>
+        <location line="+37"/>
         <location line="+31"/>
         <location line="+21"/>
         <source>No observations</source>
         <translation>Aucune observation</translation>
     </message>
     <message>
-        <location line="-87"/>
         <source>FRED refused the download (%1). A free FRED key, saved in Sources › Map · databases with a free key › FRED, makes it use FRED&apos;s API.</source>
-        <translation>FRED a refusé le téléchargement (%1). Une clé FRED gratuite, enregistrée dans Sources › Carte · bases avec clé gratuite › FRED, lui fait utiliser l&apos;API de FRED.</translation>
+        <translation type="vanished">FRED a refusé le téléchargement (%1). Une clé FRED gratuite, enregistrée dans Sources › Carte · bases avec clé gratuite › FRED, lui fait utiliser l&apos;API de FRED.</translation>
     </message>
     <message>
-        <location line="+160"/>
+        <location line="+73"/>
         <source>No statements for this symbol</source>
         <translation>Aucun état financier pour ce symbole</translation>
     </message>
@@ -20592,14 +20630,19 @@ Titre : %2</translation>
         <translation>Aucune transaction d&apos;initié déclarée</translation>
     </message>
     <message>
-        <location line="-537"/>
-        <location line="+836"/>
+        <location line="-536"/>
+        <location line="+835"/>
         <location line="+30"/>
         <source>Empty screener</source>
         <translation>Screener vide</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="-716"/>
+        <source>Needs a free FRED key</source>
+        <translation>Clé FRED gratuite requise</translation>
+    </message>
+    <message>
+        <location line="+737"/>
         <location line="+25"/>
         <source>No index members</source>
         <translation>Aucun membre d&apos;indice</translation>
@@ -20943,7 +20986,7 @@ Titre : %2</translation>
 <context>
     <name>research::FinancialChartsView</name>
     <message>
-        <location filename="../src/ResearchCompanyViews.cpp" line="-154"/>
+        <location filename="../src/ResearchCompanyViews.cpp" line="-155"/>
         <source>Annual</source>
         <translation>Annuel</translation>
     </message>
@@ -20978,7 +21021,7 @@ Titre : %2</translation>
         <translation>Bilan</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+14"/>
         <source>Loading the reported figures…</source>
         <translation>Chargement des chiffres publiés…</translation>
     </message>
@@ -22079,7 +22122,7 @@ fort</translation>
         <translation>25 premiers actionnaires</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>% Own</source>
         <translation>% détenu</translation>
     </message>
@@ -22095,18 +22138,18 @@ fort</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+12"/>
+        <location line="+13"/>
         <source>Shares</source>
         <translation>Actions</translation>
     </message>
     <message>
-        <location line="-12"/>
-        <location line="+12"/>
+        <location line="-13"/>
+        <location line="+13"/>
         <source>Value</source>
         <translation>Valeur</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="-13"/>
         <source>Change</source>
         <translation>Variation</translation>
     </message>
@@ -22121,7 +22164,7 @@ fort</translation>
         <translation>Transactions récentes</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Date</source>
         <translation>Date</translation>
     </message>
@@ -22222,7 +22265,7 @@ fort</translation>
         <translation>Recommandation des analystes</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+10"/>
         <source>Average Analyst Rating</source>
         <translation>Note moyenne des analystes</translation>
     </message>

@@ -19,6 +19,12 @@ struct Tf {
 Tf parseTf(const QString &tf);               // throws qtm::Error("Bad timeframe ...")
 bool isIntraday(const QString &tf);
 qint64 bucketStart(qint64 t, const QString &tf);
+// Seconds until the current candle closes, from the last bar's time; -1 when there is nothing to count down: that bar's
+// period ended more than half an hour ago (market closed; a delayed feed stays within that), or `knownClose` is false and
+// the bar is a day or longer, whose close depends on an exchange's session.
+qint64 secondsToBarClose(qint64 barTime, const QString &tf, qint64 now, bool knownClose = true);
+// 59:30, 03:59:30, 2d 23:59
+QString formatCountdown(qint64 seconds);
 Bars resample(const Bars &bars, const QString &tf);
 QString nativeBase(const QString &tf, const QStringList &natives);   // empty = none
 

@@ -39,6 +39,11 @@
 #include <QStyle>
 #include <QStyleOptionButton>
 #include <QTimeZone>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QSysInfo>
+#include <QTextStream>
 #include <QTimer>
 
 #include <algorithm>
@@ -262,6 +267,10 @@ ChartPane::ChartPane(App *app_, const PaneConfig &cfg_, QWidget *parent) : QWidg
     liveTimer = new QTimer(this);
     liveTimer->setSingleShot(true);
     replayTimer = new QTimer(this);
+    countdownTimer = new QTimer(this);
+    countdownTimer->setInterval(1000);
+    connect(countdownTimer, &QTimer::timeout, this, &ChartPane::updateCountdown);
+    countdownTimer->start();
     btTimer = new QTimer(this);
     btTimer->setInterval(250);
     connect(btTimer, &QTimer::timeout, this, [this] {
@@ -488,7 +497,7 @@ void ChartPane::makeMainSeries()
     main->setMarkers({});
     markersSet = false;
     mainType = t;
-    if (!PRICE_ONLY.contains(t) && t != "footprint" && app->settings().volume) {
+    if (volumeOffered() && !cfg.volumeHidden) {
         lw::SeriesOptions v;
         v.priceScaleId = "vol";
         v.priceFormat.type = lw::PriceFormatType::Volume;
@@ -592,30 +601,127 @@ QString ChartPane::formatPrice(double v) const
 
 // ---------------------------------------------------------------- data
 
+// A chart shows its saved candles at once, then asks only for what came since: changing timeframe costs a request for a
+// few bars instead of downloading the whole history. With compared symbols, or nothing saved yet, it downloads everything.
 void ChartPane::load(bool keepView)
 {
     const int token = ++loadToken;
     stopLive();
-    showMsg(QString::fromUtf8("Loading %1…").arg(theme::ticker(cfg.symbol)));
+    loadClock.start();
+    // An imported file or a spread can change as a whole, which a look at the last bars wouldn't see.
+    const QString exchange = theme::exchange(cfg.symbol);
+    if (!cfg.compare.isEmpty() || exchange == "CSV" || exchange == "SPREAD") {
+        showMsg(QString::fromUtf8("Loading %1…").arg(theme::ticker(cfg.symbol)));
+        loadFull(keepView, token);
+        return;
+    }
+    api::storedCandles(this, cfg.symbol, cfg.tf, [this, token, keepView](const StoredCandles &stored) {
+        if (token != loadToken || destroyed) return;
+        if (stored.set.candles.isEmpty()) {
+            showMsg(QString::fromUtf8("Loading %1…").arg(theme::ticker(cfg.symbol)));
+            loadFull(keepView, token);
+            return;
+        }
+        const int limit = app->settings().bars ? app->settings().bars : 3000;
+        CandleSet shownSet = stored.set;
+        if (shownSet.candles.size() > limit) shownSet.candles = shownSet.candles.mid(shownSet.candles.size() - limit);
+        const qint64 dataMs = loadClock.elapsed();
+        QElapsedTimer renderClock;
+        renderClock.start();
+        try {
+            showCandles(shownSet);
+            render(!keepView);
+        } catch (const Error &) {
+            loadFull(keepView, token);   // what's on disk doesn't draw: the network's turn
+            return;
+        }
+        noteTiming("saved", dataMs, renderClock.elapsed());
+        refreshStored(stored, token);
+    });
+}
+
+void ChartPane::showCandles(const CandleSet &r)
+{
+    cfg.symbol = r.symbol;
+    provider = r.provider;
+    notes = r.notes;
+    bars = r.candles;
+    mtf.clear();
+    replay.reset();
+    replayTimer->stop();
+    removeReplayBar();
+    drawings->setItems(drawingsFromJson(app->getDrawings(r.symbol)));
+    showMsg(bars.isEmpty() ? QString("No data for this symbol and timeframe.") : QString());
+    compareData.clear();
+}
+
+void ChartPane::refreshStored(const StoredCandles &stored, int token)
+{
+    const int limit = app->settings().bars ? app->settings().bars : 3000;
+    const CandleRefresh plan = planCandleRefresh(stored, cfg.tf, limit, QDateTime::currentSecsSinceEpoch());
+    if (plan.full) {
+        loadFull(true, token);
+        return;
+    }
+    const QString tf = cfg.tf;
+    api::candles(this, cfg.symbol, tf, plan.recent,
+        [this, token, stored, tf](const CandleSet &r) {
+            if (token != loadToken || destroyed) return;
+            // Another source's prices don't continue these, and a gap can't be filled from here.
+            if (bars.isEmpty() || r.provider != stored.set.provider || (!r.candles.isEmpty() && r.candles.first().time > bars.last().time)) {
+                loadFull(true, token);
+                return;
+            }
+            const qint64 dataMs = loadClock.elapsed();
+            QElapsedTimer renderClock;
+            renderClock.start();
+            notes = r.notes;
+            if (!r.candles.isEmpty()) catchUp(r.candles);
+            noteTiming("recent", dataMs, renderClock.elapsed());
+            StoredCandles updated = stored;
+            updated.set.symbol = cfg.symbol;
+            updated.set.candles = bars;
+            api::saveCandles(this, cfg.symbol, tf, updated);
+            startLive();
+            app->onPaneLoaded(this);
+        },
+        [this, token](const QString &message) {
+            if (token != loadToken || destroyed) return;
+            // The saved candles stay on screen, said to be old; the live updates keep trying.
+            notes << QStringLiteral("Showing saved candles: %1").arg(message);
+            updateLegend();
+            noteTiming("recent failed", loadClock.elapsed(), 0);
+            startLive();
+            app->onPaneLoaded(this);
+        });
+}
+
+void ChartPane::loadedFully(const CandleSet &r)
+{
+    StoredCandles stored;
+    stored.set = r;
+    stored.set.notes.clear();
+    stored.limit = app->settings().bars ? app->settings().bars : 3000;
+    stored.fullAt = QDateTime::currentSecsSinceEpoch();
+    api::saveCandles(this, r.symbol, cfg.tf, stored);
+}
+
+void ChartPane::loadFull(bool keepView, int token)
+{
     const int limit = app->settings().bars ? app->settings().bars : 3000;
     api::candles(this, cfg.symbol, cfg.tf, limit,
         [this, token, keepView](const CandleSet &r) {
             if (token != loadToken || destroyed) return;
-            cfg.symbol = r.symbol;
-            provider = r.provider;
-            notes = r.notes;
-            bars = r.candles;
-            mtf.clear();
-            replay.reset();
-            replayTimer->stop();
-            removeReplayBar();
-            drawings->setItems(drawingsFromJson(app->getDrawings(r.symbol)));
-            showMsg(bars.isEmpty() ? QString("No data for this symbol and timeframe.") : QString());
+            const qint64 dataMs = loadClock.elapsed();
+            showCandles(r);
+            const QString ex = theme::exchange(r.symbol);
+            if (!r.candles.isEmpty() && cfg.compare.isEmpty() && ex != "CSV" && ex != "SPREAD") loadedFully(r);
             // loadCompare
-            compareData.clear();
             const QStringList syms = cfg.compare;
-            auto finish = [this, keepView] {
+            auto finish = [this, keepView, dataMs] {
                 if (destroyed) return;
+                QElapsedTimer renderClock;
+                renderClock.start();
                 try {
                     render(!keepView);
                 } catch (const Error &e) {
@@ -624,6 +730,7 @@ void ChartPane::load(bool keepView)
                     app->paneLoadFinished(this, e.message());
                     return;
                 }
+                noteTiming("full", dataMs, renderClock.elapsed());
                 startLive();
                 app->onPaneLoaded(this);
             };
@@ -652,6 +759,49 @@ void ChartPane::load(bool keepView)
             showMsg(QString("Couldn't load %1 on %2.\n%3").arg(theme::esc(cfg.symbol), theme::esc(cfg.tf), theme::esc(message)));
             app->paneLoadFinished(this, message);
         });
+}
+
+// Where the time of a chart's load goes, for a report from another computer: data/chart-timing.log (Settings › Load times).
+void ChartPane::noteTiming(const char *step, qint64 dataMs, qint64 renderMs)
+{
+    QTimer::singleShot(0, this, [this, step = QString::fromLatin1(step), dataMs, renderMs, total = loadClock.elapsed(), n = bars.size()] {
+        const qint64 ui = loadClock.elapsed() - total;
+        const Backend *backend = Backend::instance();
+        if (!backend) return;
+        QDir().mkpath(backend->dataDir());
+        const QString path = backend->dataDir() + "/chart-timing.log";
+        if (QFileInfo(path).size() > 256 * 1024) {
+            QFile::remove(path + ".old");
+            QFile::rename(path, path + ".old");
+        }
+        QFile file(path);
+        const bool fresh = !file.exists();
+        if (!file.open(QIODevice::Append | QIODevice::Text)) return;
+        QTextStream out(&file);
+        if (fresh) out << QSysInfo::prettyProductName() << " " << QSysInfo::currentCpuArchitecture() << "\n";
+        out << QDateTime::currentDateTimeUtc().toString(Qt::ISODate) << "  " << cfg.symbol << " " << cfg.tf << "  " << step
+            << "  data " << dataMs << " ms  render " << renderMs << " ms  next paint " << ui << " ms  " << n << " bars  " << provider << "\n";
+    });
+}
+
+// The close of the current candle, under the last price. Nothing where it isn't known: a replay, charts built from price
+// alone, a session's daily bars (only crypto's days have a fixed end).
+void ChartPane::updateCountdown()
+{
+    QString text;
+    if (app->settings().countdown && isVisible() && main && !replay && !bars.isEmpty() && !PRICE_ONLY.contains(cfg.type)) {
+        const QString ex = theme::exchange(cfg.symbol);
+        const bool crypto = ex == "BINANCE" || ex == "COINBASE" || ex == "KRAKEN";
+        text = formatCountdown(secondsToBarClose(qint64(bars.last().time), cfg.tf, QDateTime::currentSecsSinceEpoch(), crypto));
+    }
+    if (text == countdownShown) return;
+    countdownShown = text;
+    if (main) main->setLastValueDetail(text);
+}
+
+bool ChartPane::volumeOffered() const
+{
+    return !PRICE_ONLY.contains(cfg.type) && cfg.type != "footprint" && app->settings().volume && !cfg.volumeRemoved;
 }
 
 void ChartPane::showMsg(const QString &text)
@@ -723,7 +873,7 @@ void ChartPane::render(bool resetView)
 {
     const auto prevRange = chart->timeScale()->getVisibleLogicalRange();
     const bool atEnd = prevRange && !shown.isEmpty() && prevRange->to >= lastBarLogical() - 2;
-    const bool wantVolume = !PRICE_ONLY.contains(cfg.type) && cfg.type != "footprint" && app->settings().volume;
+    const bool wantVolume = volumeOffered() && !cfg.volumeHidden;
     if (mainType != cfg.type || (volume != nullptr) != wantVolume)
         makeMainSeries();
     shown = visibleBars();
@@ -775,6 +925,8 @@ void ChartPane::render(bool resetView)
         chart->timeScale()->setVisibleLogicalRange({lastIdx + 9 - w, lastIdx + 9});
     }
     updateLegend();
+    countdownShown.clear();
+    updateCountdown();
 }
 
 void ChartPane::renderCompare()
@@ -1166,6 +1318,18 @@ void ChartPane::updateLegend(std::optional<int> index)
     }
     for (const QString &sym : cfg.compare)
         m.compare.push_back({sym, theme::ticker(sym) + " (compare)"});
+    if (volumeOffered()) {
+        LegendModel::Ind row;
+        row.uid = VolumeRow;
+        row.volume = true;
+        row.hidden = cfg.volumeHidden;
+        row.name = QStringLiteral("Vol");
+        if (i >= 0 && i < n && !cfg.volumeHidden) {
+            const Bar &b = shown[i];
+            row.vals.push_back({footprint::formatVolume(b.volume), b.close >= b.open ? "--up" : "--down"});
+        }
+        m.inds.push_back(row);
+    }
     for (const auto &ind : cfg.indicators) {
         const IndicatorDefPtr def = indicatorById(ind.id);
         if (!def) continue;

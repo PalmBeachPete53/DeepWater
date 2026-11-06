@@ -106,8 +106,7 @@ void Legend::relayout()
         r.kind = Row::Compare;
         r.key = "c:" + model.compare[k].sym;
         r.index = k;
-        const bool hover = hoverKey == r.key;
-        r.width = 2 + tw(f, model.compare[k].label) + (hover ? space + 18 : 0) + 4;
+        r.width = 2 + tw(f, model.compare[k].label) + space + 18 + 4;
         rows << r;
     }
     for (int k = 0; k < model.inds.size(); ++k) {
@@ -115,9 +114,8 @@ void Legend::relayout()
         r.kind = Row::Ind;
         r.key = "i:" + model.inds[k].uid;
         r.index = k;
-        const bool hover = hoverKey == r.key;
         r.width = 2 + tw(f, model.inds[k].name.trimmed()) + space + valsWidth(model.inds[k].vals)
-            + (hover ? space + 58 : 0) + 4;
+            + space + (model.inds[k].volume ? 38 : 58) + 4;
         rows << r;
     }
     for (int k = 0; k < model.notes.size(); ++k) {
@@ -142,14 +140,19 @@ void Legend::relayout()
             r.h = 20;
             if (r.kind != Row::Main) r.width = legendWidth;
         }
-        if ((r.kind == Row::Ind || r.kind == Row::Compare) && hoverKey == r.key) {
-            double x = 2;
-            if (r.kind == Row::Compare) {
-                x += tw(f, model.compare[r.index].label) + space;
-                r.acts = {QRectF(x, y + 1, 18, 18)};
-                r.actNames = {"rmcompare"};
+        // Always there: a value too long for the pane goes under them rather than pushing them out of reach.
+        if (r.kind == Row::Compare) {
+            const double x = std::min(2 + tw(f, model.compare[r.index].label) + space, legendWidth - 20);
+            r.acts = {QRectF(x, y + 1, 18, 18)};
+            r.actNames = {"rmcompare"};
+        } else if (r.kind == Row::Ind) {
+            const bool volume = model.inds[r.index].volume;
+            const double x = std::min(2 + tw(f, model.inds[r.index].name.trimmed()) + space + valsWidth(model.inds[r.index].vals) + space,
+                                      legendWidth - (volume ? 40 : 60));
+            if (volume) {
+                r.acts = {QRectF(x, y + 1, 18, 18), QRectF(x + 20, y + 1, 18, 18)};
+                r.actNames = {"hide", "remove"};
             } else {
-                x += tw(f, model.inds[r.index].name.trimmed()) + space + valsWidth(model.inds[r.index].vals) + space;
                 r.acts = {QRectF(x, y + 1, 18, 18), QRectF(x + 20, y + 1, 18, 18), QRectF(x + 40, y + 1, 18, 18)};
                 r.actNames = {"settings", "hide", "remove"};
             }
@@ -213,6 +216,11 @@ void Legend::paintEvent(QPaintEvent *)
                     x += tw(f, vals[k].text);
                 }
             }
+            if (!r.acts.isEmpty() && x > r.acts.first().x()) {
+                p.setPen(Qt::NoPen);
+                p.setBrush(theme::color("--panel"));
+                p.drawRect(QRectF(r.acts.first().x() - 2, r.y, legendWidth - r.acts.first().x() + 2, r.h));
+            }
             for (int k = 0; k < r.acts.size(); ++k) {
                 const QString act = r.actNames[k];
                 const QString svg = act == "settings" ? IconGear : act == "hide" ? IconEye : IconX;
@@ -273,7 +281,6 @@ void LegendInput::hoverAt(const QPointF &p)
     if (hk != m_legend->hoverKey) {
         m_legend->hoverKey = hk;
         m_legend->relayout();
-        act = actAt(p, &key);   // the action buttons appear with the hover
         changed = true;
     }
     const QString ha = act.isEmpty() || act == "symbol" ? QString() : key + "|" + act;
@@ -317,6 +324,13 @@ void LegendInput::mouseReleaseEvent(QMouseEvent *e)
         return;
     }
     const QString uid = key.mid(2);
+    if (uid == VolumeRow) {
+        if (act == "hide") pane->cfg.volumeHidden = !pane->cfg.volumeHidden;
+        if (act == "remove") pane->cfg.volumeRemoved = true;
+        pane->app->persist();
+        pane->render(false);
+        return;
+    }
     IndicatorInstance *ind = nullptr;
     for (auto &x : pane->cfg.indicators)
         if (x.uid == uid) ind = &x;

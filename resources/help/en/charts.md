@@ -5,10 +5,14 @@ The Charts page is a trading terminal: a port of Quant Terminal (MIT licence) wi
 ## Layout
 
 - **The chart panes**: one or several, each with its symbol, timeframe and chart type (candles, bars, line, area, Heikin Ashi, Renko, Kagi, point & figure, **Footprint**…). The toolbar holds the symbol box, the timeframe, the chart type, **Indicators**, **Compare** (another symbol on the same chart), **Replay** (bar replay with a cursor), the CSV export and the settings. A thin **range slider** under each pane shows all the bars loaded and the window the chart shows (below).
+- **The legend** at the top left of a chart: each indicator's gear, eye and ×, and **Vol** for the volume bars, whose × takes them off this chart (**Settings › Volume on the price chart** brings them back).
+- **The countdown** under the last price: the time left to the candle's close, on intraday timeframes and on crypto's longer ones; **Settings** can hide it.
 - **The side panel**: **Watchlist**, **Alerts**, **Calendar** and **News**.
 - **The bottom panel**: **Strategy tester**, **Screener**, **Heatmap**, **Seasonals**, **Financials**, **Paper trading**, **Indicator editor**, **Terminal** and **PTQ**. Drag its top edge to resize it.
 
 The backend runs for the whole session: alerts keep firing and the paper account keeps filling while you are on another tab.
+
+A timeframe already seen opens at once from the candles saved on this computer, then the new ones arrive. **Settings › Load times** opens a text file of how long each load took, to send with a report of slowness.
 
 ## Data
 

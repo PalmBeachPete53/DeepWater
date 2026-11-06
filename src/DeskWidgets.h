@@ -3,11 +3,13 @@
 #include "AiRead.h"
 #include "QuantCharts.h"
 
+#include <QBoxLayout>
 #include <QFrame>
 #include <QStringList>
 #include <QVector>
 #include <QWidget>
 
+class QGridLayout;
 class QLabel;
 class QTableWidget;
 class QTableWidgetItem;
@@ -18,6 +20,40 @@ namespace deskui {
 // A figure with a small title and a line under it.
 QFrame *tile(const QString &title, QLabel **value, QLabel **sub = nullptr);
 void setSigned(QLabel *value, const QString &text, double sign);   // coloured by the sign of `sign`
+
+// Cards in as many equal columns as fit, up to maxColumns: fewer in a narrow window or a workspace's panel. A column is as
+// wide as the widest card needs, and at least cardWidth for cards whose tables ask for nothing.
+class CardGrid : public QWidget
+{
+public:
+    explicit CardGrid(int cardWidth, int maxColumns, Qt::Alignment alignment = {}, QWidget *parent = nullptr);
+    void addCard(QWidget *card);
+    QSize minimumSizeHint() const override;
+
+protected:
+    void resizeEvent(QResizeEvent *event) override;
+
+private:
+    int columnWidth() const;
+    void arrange(int columns);
+    QGridLayout *m_grid;
+    QVector<QWidget *> m_cards;
+    int m_cardWidth;
+    int m_maxColumns;
+    int m_columns = 0;
+    Qt::Alignment m_alignment;
+};
+
+// Two blocks side by side from `threshold` pixels wide, one above the other under it.
+class FlipRow : public QBoxLayout
+{
+public:
+    explicit FlipRow(int threshold, QWidget *parent = nullptr);
+    void setGeometry(const QRect &rect) override;
+
+private:
+    int m_threshold;
+};
 
 QTableWidget *table(const QStringList &headers);
 // Rows as tall as the Quant page's; `stretch` is the column that takes the room left (-1: all equally).

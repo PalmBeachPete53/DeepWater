@@ -80,8 +80,30 @@
 #include <QTimer>
 #include <QSplitter>
 #include <QStackedWidget>
+#include <QGuiApplication>
+#include <QScreen>
 #include <QTranslator>
 #include <QVBoxLayout>
+
+namespace {
+
+// The pages, asking only for what the page on screen needs: the others, however wide, don't constrain it.
+class PageStack : public QStackedWidget
+{
+public:
+    PageStack()
+    {
+        connect(this, &QStackedWidget::currentChanged, this, [this] { updateGeometry(); });
+    }
+    QSize sizeHint() const override { return minimumSizeHint(); }
+    QSize minimumSizeHint() const override
+    {
+        const QWidget *page = currentWidget();
+        return page ? page->minimumSizeHint().expandedTo(page->minimumSize()) : QSize();
+    }
+};
+
+} // namespace
 
 namespace {
 
@@ -175,7 +197,7 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
 
     m_seaRoutes.load(":/searoutes.json");
     m_ports.load(":/ports.json");
-    resize(1600, 980);
+    fitToScreen();
     connect(m_vessels, &VesselStore::changed, this, [this] { updateVesselRoute(false); });
 
     // The data sets parse their cached copies on the thread pool, side by side, while the above runs:
@@ -277,6 +299,19 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     }
 }
 
+// Most of the screen on a large one; all of it, title bar aside, on a laptop's.
+void MainWindow::fitToScreen()
+{
+    constexpr int TitleBar = 32;
+    setMinimumSize(960, 540);   // half of a 1080p screen, where a window snapped to one side lands
+    const QScreen *screen = QGuiApplication::primaryScreen();
+    const QRect room = screen ? screen->availableGeometry() : QRect(0, 0, 1600, 1012);
+    const double share = room.width() < 1500 ? 1.0 : 0.92;
+    const QSize size(int(room.width() * share), int(room.height() * share) - TitleBar);
+    resize(size);
+    move(room.x() + (room.width() - size.width()) / 2, room.y() + (room.height() - TitleBar - size.height()) / 2);
+}
+
 MainWindow::~MainWindow()
 {
     // The Charts page talks to the backend until it's gone: delete the pages first.
@@ -298,10 +333,10 @@ void MainWindow::buildUi()
     m_leftStack = new QStackedWidget;
     m_leftStack->addWidget(m_left);
     m_leftStack->addWidget(m_detail);
-    m_leftStack->setMinimumWidth(300);
+    m_leftStack->setMinimumWidth(320);
     m_globe = new GlobeWidget(m_data, m_vessels, m_chokepoints);
     m_indicators = new IndicatorPanel(m_macro);
-    m_indicators->setMinimumWidth(260);
+    m_indicators->setMinimumWidth(240);
 
     auto *splitter = new QSplitter(Qt::Horizontal);
     splitter->setHandleWidth(1);
@@ -313,7 +348,7 @@ void MainWindow::buildUi()
     splitter->setSizes({340, 960, 300});
 
     m_header = new HeaderBar;
-    m_pages = new QStackedWidget;
+    m_pages = new PageStack;
     m_pageById.clear();
     m_pageFactories.clear();
     auto *central = new QWidget;
@@ -321,7 +356,13 @@ void MainWindow::buildUi()
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
     layout->addWidget(m_header);
-    layout->addWidget(m_pages, 1);
+    // A page that can't go as small as the window scrolls, instead of holding the window bigger than the screen.
+    auto *pagesScroll = new QScrollArea;
+    pagesScroll->setObjectName("pagesScroll");
+    pagesScroll->setFrameShape(QFrame::NoFrame);
+    pagesScroll->setWidgetResizable(true);
+    pagesScroll->setWidget(m_pages);
+    layout->addWidget(pagesScroll, 1);
     setCentralWidget(central);
     connect(m_header, &HeaderBar::navigationRequested, this, &MainWindow::showPage);
     connect(m_header, &HeaderBar::settingsRequested, this, &MainWindow::openSettings);
@@ -359,7 +400,11 @@ void MainWindow::buildUi()
         });
         return overview;
     });
-    addPage("economy", tr("Economy"), [] { return new EconomyPage; });
+    addPage("economy", tr("Economy"), [this] {
+        auto *economy = new EconomyPage;
+        connect(economy, &EconomyPage::fredKeySaved, m_fred, &RemoteDataSet::refreshNow);
+        return economy;
+    });
     addPage("forex", tr("Forex"), [this] {
         auto *forex = new ForexPage(m_fx, m_policyRates, m_cot);
         forex->setTopStrip(makeDeskStrip());

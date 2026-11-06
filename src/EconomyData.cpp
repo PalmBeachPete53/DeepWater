@@ -93,10 +93,11 @@ const QVector<Section> &sections()
         QVector<Section> s;
         s.push_back({QT_TRANSLATE_NOOP("Economy", "Sentiment"), {
             {gauge(stockFg, 2),
-             chart(fred(QT_TRANSLATE_NOOP("Economy", "VIX volatility index"),
-                        QT_TRANSLATE_NOOP("Economy", "The volatility of the S&P 500 that options price for the next 30 "
-                                                     "days, in percent a year. Below 15 is calm, above 30 is stress."),
-                        "VIXCLS", U::Number, 1, 2, H::Red, Daily, "1Y"), 3)},
+             chart(other(QT_TRANSLATE_NOOP("Economy", "VIX volatility index"),
+                         QT_TRANSLATE_NOOP("Economy", "The volatility of the S&P 500 that options price for the next 30 "
+                                                      "days, in percent a year. Below 15 is calm, above 30 is stress "
+                                                      "(Yahoo Finance: FRED's copy comes a day late)."),
+                         Source::Yahoo, "^VIX", U::Number, 2, H::Red, Daily, "1Y"), 3)},
             {chart(stockFgHistory),
              chart(fred(QT_TRANSLATE_NOOP("Economy", "Michigan sentiment"),
                         QT_TRANSLATE_NOOP("Economy", "The University of Michigan's index of consumer sentiment "

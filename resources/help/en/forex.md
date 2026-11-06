@@ -4,7 +4,7 @@ The Forex page follows the seven majors (EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD
 
 ## Rates
 
-Each pair card shows the last fix, the daily change, a 90-day sparkline and the **carry** (the base currency's policy rate less the quote's). The source is the European Central Bank's reference rates: one fix per business day, no intraday prices, refreshed every six hours.
+Each pair card shows the price and the day's change from Yahoo Finance, refreshed every minute, a 90-day sparkline and the **carry** (the base currency's policy rate less the quote's). The sparklines and correlations use the European Central Bank's reference rates: one fix per business day, no intraday prices, refreshed every six hours.
 
 ## Correlations
 
