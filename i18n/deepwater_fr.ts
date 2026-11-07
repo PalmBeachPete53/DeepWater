@@ -2664,7 +2664,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>DeskStrip</name>
     <message>
-        <location filename="../src/DeskStrip.cpp" line="+36"/>
+        <location filename="../src/DeskStrip.cpp" line="+37"/>
         <source>FX sessions</source>
         <translation>Sessions FX</translation>
     </message>
@@ -2769,9 +2769,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>risk-on extrême</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
+        <source>Deepwater&apos;s composite of seven markets, %1 a week ago; not CNN&apos;s Fear &amp; Greed index, whose estimate follows. Click for the Desk&apos;s risk appetite</source>
+        <translation>Composite Deepwater de sept marchés, %1 il y a une semaine ; ce n’est pas l’indice Fear &amp; Greed de CNN, dont l’estimation suit. Cliquez pour l’appétit pour le risque du Desk</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>%1 · Fear &amp; Greed %2</source>
+        <translation>%1 · Fear &amp; Greed %2</translation>
+    </message>
+    <message>
         <source>%1, %2 a week ago</source>
-        <translation>%1, %2 il y a une semaine</translation>
+        <translation type="vanished">%1, %2 il y a une semaine</translation>
     </message>
 </context>
 <context>
@@ -15174,12 +15183,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::AppetiteView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+1426"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+1427"/>
         <source>Composite risk appetite</source>
         <translation>Appétit pour le risque composite</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+14"/>
         <source>Composite, last year</source>
         <translation>Composite, dernière année</translation>
     </message>
@@ -15219,7 +15228,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Chargement de sept marchés…</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+86"/>
         <source>Prices unavailable: %1</source>
         <translation>Prix indisponibles : %1</translation>
     </message>
@@ -15229,7 +15238,27 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Volatilité (VIX)</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-99"/>
+        <source>Stock market Fear &amp; Greed (estimate)</source>
+        <translation>Fear &amp; Greed des actions (estimation)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Loading…</source>
+        <translation>Chargement…</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Unavailable: %1</source>
+        <translation>Indisponible : %1</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>&lt;b&gt;%1&lt;/b&gt;, %2. Built the way CNN builds the index that financial sites quote (momentum, volatility, safe haven demand, breadth, junk bonds against their last year); not CNN&apos;s own figure. The gauge above is another index, broader: credit, currencies, metals and crypto too, so the two can differ.</source>
+        <translation>&lt;b&gt;%1&lt;/b&gt;, %2. Construit comme l’indice de CNN que citent les sites financiers (momentum, volatilité, demande de valeurs refuges, ampleur du marché, obligations à haut rendement, chacun comparé à sa dernière année) ; ce n’est pas le chiffre de CNN lui-même. La jauge ci-dessus est un autre indice, plus large : crédit, devises, métaux et crypto en plus, d’où les écarts possibles.</translation>
+    </message>
+    <message>
+        <location line="+64"/>
         <source>Lower volatility, more appetite</source>
         <translation>Moins de volatilité, plus d&apos;appétit</translation>
     </message>
@@ -15358,7 +15387,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::ForecastsView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="-579"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="-596"/>
         <source>ING Think, by quarter</source>
         <translation>ING Think, par trimestre</translation>
     </message>
@@ -15655,7 +15684,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::FundamentalsView</name>
     <message>
-        <location line="+464"/>
+        <location line="+482"/>
         <source>Currencies on their fundamentals, strongest first</source>
         <translation>Devises selon leurs fondamentaux, les plus fortes d&apos;abord</translation>
     </message>
@@ -15901,7 +15930,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::FxPositioningPanel</name>
     <message>
-        <location line="-1415"/>
+        <location line="-1433"/>
         <source>Connect your Myfxbook account</source>
         <translation>Connecter votre compte Myfxbook</translation>
     </message>
@@ -17786,7 +17815,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>deskui::SeasonalityView</name>
     <message>
-        <location filename="../src/DeskViewsMacro.cpp" line="+1132"/>
+        <location filename="../src/DeskViewsMacro.cpp" line="+1150"/>
         <source>YEARS</source>
         <translation>ANNÉES</translation>
     </message>

@@ -51,6 +51,8 @@ Myfxbook gives only today's figures, so Deepwater notes the crowd's long share e
 
 A composite from 0 to 100 of seven markets on daily closes: the VIX, the S&P 500's trend, high yield against investment grade, AUD/JPY, copper against gold, stocks against gold, and bitcoin. Each is ranked against its own last 252 days and the ranks are averaged; under 40 reads risk-off, over 60 risk-on. It is this app's own estimate, not a published index.
 
+**Stock market Fear & Greed (estimate)**, under the gauge, is the index traders usually quote, built the way CNN builds it; it is not CNN's own figure. The composite above is broader (credit, currencies, metals, crypto), so the two can differ: on 6 November 2026 the composite read 17, the estimate 21 and CNN 22. The Overview and Forex strip shows both.
+
 ## Seasonality
 
 How a market behaved over the calendar: the average path of the year against this year, the win rate and the mean return of the period, the mean return by month and by weekday, and the period year by year. Choose 5, 10, 15 or 20 years, the full year, a half or a quarter, or drag across the months on the chart, and whether to leave out extreme years beyond 1.5 standard deviations. The current year is left out of the averages. Past seasonality doesn't predict a given year.

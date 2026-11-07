@@ -2,6 +2,7 @@
 #include "DeskViews.h"
 
 #include "DeskHistory.h"
+#include "EconomyData.h"
 
 #include "desk/CentralBanks.h"
 #include "desk/Fundamentals.h"
@@ -1431,6 +1432,12 @@ public:
         m_change->setAlignment(Qt::AlignCenter);
         body->addWidget(m_change);
         left->addWidget(dialCard);
+        // The index traders quote is CNN's Fear & Greed, a narrower one: its estimate here, so the two aren't mistaken.
+        auto *fgCard = quant::card(tr("Stock market Fear & Greed (estimate)"), &body);
+        m_fearGreed = quant::label(tr("Loading…"), "qtCardLabel");
+        m_fearGreed->setWordWrap(true);
+        body->addWidget(m_fearGreed);
+        left->addWidget(fgCard);
         auto *historyCard = quant::card(tr("Composite, last year"), &body);
         m_history = new quant::MultiLineChart;
         m_history->setMinimumHeight(220);
@@ -1455,6 +1462,17 @@ protected:
     void load() override
     {
         setStatus(tr("Loading seven markets…"));
+        economy::stockFearGreed(this, [this](const economy::FearGreed &f, const QString &error) {
+            if (f.index.isEmpty()) {
+                m_fearGreed->setText(tr("Unavailable: %1").arg(error));
+                return;
+            }
+            const double v = f.index.last().value;
+            m_fearGreed->setText(tr("<b>%1</b>, %2. Built the way CNN builds the index that financial sites quote (momentum, volatility, "
+                                    "safe haven demand, breadth, junk bonds against their last year); not CNN's own figure. The gauge above "
+                                    "is another index, broader: credit, currencies, metals and crypto too, so the two can differ.")
+                                     .arg(amount(v, 0), economy::zoneLabel(economy::Zones::FearGreed, v).toLower()));
+        });
         deskdata::loadCandles(symbols(), "2y", "1d", this, [this](const deskdata::Candles &c, const QString &error) {
             compute(c, error);
         });
@@ -1557,6 +1575,7 @@ private:
 
     GaugeDial *m_dial;
     QLabel *m_change;
+    QLabel *m_fearGreed;
     quant::MultiLineChart *m_history;
     QTableWidget *m_components;
 };

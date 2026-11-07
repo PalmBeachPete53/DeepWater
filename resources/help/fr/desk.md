@@ -51,6 +51,8 @@ Myfxbook ne donne que les chiffres du jour : Deepwater note donc la part de long
 
 Un composite de 0 à 100 de sept marchés en clôtures journalières : le VIX, la tendance du S&P 500, le haut rendement contre la qualité, AUD/JPY, le cuivre contre l'or, les actions contre l'or, et le bitcoin. Chacun est classé par rapport à ses 252 derniers jours et les rangs sont moyennés ; sous 40 on lit risk-off, au-dessus de 60 risk-on. C'est une estimation propre à cette application, pas un indice publié.
 
+**Fear & Greed des actions (estimation)**, sous la jauge, est l'indice que citent habituellement les traders, construit comme celui de CNN ; ce n'est pas le chiffre de CNN lui-même. Le composite ci-dessus est plus large (crédit, devises, métaux, crypto), d'où des écarts : le 6 novembre 2026, le composite valait 17, l'estimation 21 et CNN 22. La bande d'Overview et de Forex montre les deux.
+
 ## Saisonnalité
 
 Le comportement d'un marché au fil du calendrier : le chemin moyen de l'année contre l'année en cours, le taux de réussite et le rendement moyen de la période, le rendement moyen par mois et par jour de la semaine, et la période année par année. Choisissez 5, 10, 15 ou 20 ans, l'année entière, un semestre ou un trimestre, ou glissez sur les mois du graphique, et décidez d'écarter ou non les années extrêmes au-delà de 1,5 écart-type. L'année en cours est exclue des moyennes. La saisonnalité passée ne prédit pas une année donnée.

@@ -1,6 +1,7 @@
 #include "DeskStrip.h"
 
 #include "DeskViews.h"
+#include "EconomyData.h"
 #include "desk/Instruments.h"
 #include "desk/Sessions.h"
 
@@ -139,6 +140,22 @@ void DeskStrip::fetchMarkets()
         const QStringList zones {tr("extreme risk-off"), tr("risk-off"), tr("neutral"), tr("risk-on"), tr("extreme risk-on")};
         const desk::AppetiteZone zone = desk::zoneOf(a.now);
         deskui::setSigned(m_appetite, deskui::amount(a.now, 0), zone == desk::AppetiteZone::Neutral ? 0 : a.now - 50);
-        m_appetiteSub->setText(tr("%1, %2 a week ago").arg(zones[int(zone)], deskui::amount(a.weekAgo, 0)));
+        m_appetiteZone = zones[int(zone)];
+        m_appetite->parentWidget()->setToolTip(tr("Deepwater's composite of seven markets, %1 a week ago; not CNN's Fear & Greed index, "
+                                                  "whose estimate follows. Click for the Desk's risk appetite").arg(deskui::amount(a.weekAgo, 0)));
+        fillAppetiteSub();
     });
+    economy::stockFearGreed(this, [this](const economy::FearGreed &f, const QString &) {
+        if (!f.index.isEmpty())
+            m_fearGreed = f.index.last().value;
+        fillAppetiteSub();
+    });
+}
+
+void DeskStrip::fillAppetiteSub()
+{
+    if (m_appetiteZone.isEmpty())
+        return;
+    m_appetiteSub->setText(m_fearGreed < 0 ? m_appetiteZone
+                                           : tr("%1 · Fear & Greed %2").arg(m_appetiteZone, deskui::amount(m_fearGreed, 0)));
 }

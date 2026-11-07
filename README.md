@@ -1353,7 +1353,11 @@ holds no figures, and the model reads the section through `read_page`.
   statuses rather than `errorString()`, which would hold the URL. A free account has 100 requests a day: answers are cached
   (`myfxbook_outlook`) and asked at most every 30 minutes, across launches. `--myfxbook-sample <file>` shows an answer in memory.
   `DeskHistory` notes each weekday, while the app is open, the community's long share and the move priced for the Fed's and the BoE's meetings (`AppData/desk/history.json`, `desk/History`), since no free source keeps them; `--history-sample <file>` shows a history in memory. Shown in Positioning and Rates.
-- **Risk appetite**: seven markets ranked over 252 days and averaged (`computeAppetite`); this app's own estimate.
+- **Risk appetite**: seven markets ranked over 252 days and averaged (`computeAppetite`); this app's own estimate. The
+  stock Fear & Greed estimate (`economy::stockFearGreed`, built like CNN's) shows beside it on the Desk and in the strip
+  of Overview and Forex: traders quote CNN's index, and the composite read as that index looked wrong (a tester saw 17
+  against CNN's 22 on 6 Nov 2026, when the estimate gave 21). CNN's own figure isn't read: its terms forbid automated
+  gathering.
 - **Seasonality**: `computeSeasonal` over 25 years of daily closes; `range=max` would make Yahoo answer monthly bars.
   Dragging on the year's path picks the months (`SeasonalPathChart`).
 - **Fundamentals**: six themes per currency from 150 days of calendar releases and BIS rates (`desk/Fundamentals`).

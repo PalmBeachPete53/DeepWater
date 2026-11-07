@@ -30,6 +30,11 @@ private:
 
     EconomicCalendar *m_calendar;
     QLabel *m_sessions, *m_sessionsSub, *m_strength, *m_strengthSub, *m_appetite, *m_appetiteSub, *m_next, *m_nextSub;
+    // The composite's zone and the stock Fear & Greed estimate, which arrive apart: a trader reads CNN's index, so the
+    // card names that figure too, lest the composite pass for it.
+    QString m_appetiteZone;
+    double m_fearGreed = -1;
+    void fillAppetiteSub();
     QHash<QObject *, int> m_targets;
     QTimer m_clock;
     QTimer m_markets;
