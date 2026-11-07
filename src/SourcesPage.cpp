@@ -311,6 +311,10 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
     auto dataset = [](auto *t, qint64 every, const QUrl &probe) {
         D d;
         d.fetchedAt = [t] { return t->fetchedAt(); };
+        if constexpr (requires { t->changedAt(); t->checkEverySecs(); }) {
+            d.changedAt = [t] { return t->changedAt(); };
+            d.checkEvery = [t] { return t->checkEverySecs(); };
+        }
         d.error = [t] { return t->errorString(); };
         d.fetching = [t] { return t->isFetching(); };
         d.refresh = [t] { t->refreshNow(); };
@@ -389,8 +393,8 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
 
     section(tr("Forex"));
     add(buildRow({"fx", Kind::Dataset, tr("Reference exchange rates"), tr("European Central Bank, via Frankfurter"),
-                  "api.frankfurter.dev", tr("Forex: pairs, sparklines, correlations")},
-                 dataset(m_t.fx, 6 * 3600, QUrl("https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR&providers=ECB"))));
+                  "api.frankfurter.dev", tr("Forex: the sparklines and correlations, from the ECB's one fixing a day. The prices on the cards come from Yahoo, every minute")},
+                 dataset(m_t.fx, 3600, QUrl("https://api.frankfurter.dev/v2/rates?base=USD&quotes=EUR&providers=ECB"))));
     add(buildRow({"bis_daily", Kind::Dataset, tr("Central bank policy rates"), tr("Bank for International Settlements"),
                   "stats.bis.org", tr("Forex: policy rates and the carry on each pair")},
                  dataset(m_t.policyRates, 12 * 3600, m_t.policyRates->sourceUrl())));
@@ -424,6 +428,7 @@ SourcesPage::SourcesPage(const Targets &targets, QWidget *parent)
         d.fetching = [group] { return research::Client::instance()->host(group).pending > 0; };
         d.refresh = [group] { research::Client::instance()->forget(group); };
         d.everySecs = 24 * 3600;
+        d.onDemand = true;
         d.probeUrl = probe;
         return d;
     };
@@ -1249,6 +1254,9 @@ QWidget *SourcesPage::buildRow(const Info &info, const Dataset &dataset)
         connect(row.refresh, &QPushButton::clicked, this, [this, id] {
             Row &r = m_rows[m_index.value(id)];
             r.dataset.refresh();
+            // Read when a page needs it: the button alone would show nothing, so it also reaches the source.
+            if (r.dataset.onDemand)
+                runTest(r);
             updateRow(r);
         });
         a->addWidget(row.refresh);
@@ -1586,7 +1594,11 @@ QString SourcesPage::age(const QDateTime &t) const
 
 QString SourcesPage::every(qint64 secs) const
 {
-    return secs >= 48 * 3600 ? tr("checked every %1 days").arg(secs / 86400) : tr("checked every %1 h").arg(secs / 3600);
+    if (secs >= 48 * 3600)
+        return tr("checked every %1 days").arg(secs / 86400);
+    if (secs >= 3600)
+        return tr("checked every %1 h").arg(secs / 3600);
+    return tr("checked every %1 min").arg(std::max<qint64>(1, secs / 60));
 }
 
 void SourcesPage::refresh()
@@ -1635,10 +1647,22 @@ void SourcesPage::updateRow(Row &r, const QStringList &disabled)
             detail = at.isValid() ? tr("Using the copy saved %1 · retrying in a few minutes").arg(age(at))
                                   : tr("No data yet · retrying in a few minutes");
         } else if (at.isValid()) {
-            const bool fresh = at.secsTo(QDateTime::currentDateTimeUtc()) <= 2 * r.dataset.everySecs;
+            const qint64 period = r.dataset.checkEvery ? r.dataset.checkEvery() : r.dataset.everySecs;
+            const bool fresh = r.dataset.onDemand || at.secsTo(QDateTime::currentDateTimeUtc()) <= 2 * period;
             status = fresh ? tr("Up to date") : tr("Out of date");
             color = fresh ? ui.Up : ui.TextDim;
-            detail = tr("Updated %1 · %2").arg(age(at), every(r.dataset.everySecs));
+            if (r.dataset.onDemand) {
+                detail = tr("Read %1 · when a page needs it").arg(age(at));
+            } else {
+                const QDateTime changed = r.dataset.changedAt ? r.dataset.changedAt() : at;
+                detail = changed.isValid() && changed.secsTo(at) > 60
+                             ? tr("Checked %1 · new data %2 · %3").arg(age(at), age(changed), every(period))
+                             : tr("Updated %1 · %2").arg(age(at), every(period));
+            }
+        } else if (r.dataset.onDemand) {
+            status = tr("Read when a page needs it");
+            color = ui.TextDim;
+            detail = tr("Open the page it feeds, or press Test to reach the source now");
         } else {
             status = tr("Waiting for the first download");
         }

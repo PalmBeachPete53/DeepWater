@@ -208,7 +208,7 @@ under the chart):
 - **Futures** for 20 commodities, from Yahoo Finance (`query1.finance.yahoo.com/v7/finance/spark`, no key, about 10
   minutes behind the exchange): NYMEX (WTI, Brent Last Day Financial, Henry Hub gas, platinum, palladium), COMEX (gold,
   silver, copper in USD/lb, aluminium), CBOT (wheat, corn, soybeans, rough rice), ICE US (coffee, cocoa, sugar No. 11,
-  cotton). Three requests every five minutes, 20 symbols at most each: intraday bars over five days (the chart), over
+  cotton). Three requests a minute while the futures trade and every quarter of an hour at the weekend, 20 symbols at most each: intraday bars over five days (the chart), over
   one day (the previous close: Yahoo's daily bars of a continuous symbol are spliced from other contract months and
   can't give it), and daily closes over three months for LNG (Platts JKM), iron ore 62% and palm oil, which Yahoo only
   carries as daily settlements. Yahoo answers 429 to most user agents, so these requests send a bare `Mozilla/5.0`.
@@ -230,7 +230,7 @@ The **Forex** page shows the 7 majors plus EUR/GBP, EUR/JPY and USD/CNY: price a
 same as the Desk and Overview, every minute while the page is open; the last fix when Yahoo doesn't answer), 90-day
 sparkline, and a correlation matrix of daily log returns (1M / 3M / 6M / 1Y). The history: European Central Bank
 reference rates via [frankfurter.dev](https://frankfurter.dev) (no key, one fix per business day, no intraday), cached
-in `fx_rates.json` and refreshed every 6 h.
+in `fx_rates.json` and checked every hour.
 
 - **Policy rates**: BIS central bank policy rates (daily series, `stats.bis.org`, no key) for the 9 currencies:
   current rate, last move, 1-year change, 3-year step chart; pair cards show the carry (base − quote rate).
@@ -1766,6 +1766,33 @@ pages. One tab for now:
   reloaded on their own when `graphify update` rewrites them, so the view follows the Stop hook.
 
 `deepwater --devtools` opens the panel at launch (screenshots).
+
+## Keeping data up to date
+
+Official statistics have no push: nothing tells an app that a figure is out, it can only ask. So the app asks little where
+that costs nothing or where nothing can have changed, and fast at the minutes a figure is due. The rules are in
+`src/fresh` (no network, `qtm_test_fresh`).
+
+- **One timer** (`RefreshScheduler`): every data set of the map, Forex, the calendar and the Countries tables, whichever
+  page is open, one every two seconds at most. What only a page reads is read when that page is open.
+- **A check that costs nothing**: a data set or `research::Client` request sends what the server gave to recognise its last
+  answer (`If-None-Match`, `If-Modified-Since`). Once a server has answered 304, that source is checked every 15 minutes
+  instead of its own period. Measured in November 2026: ECB, Frankfurter, Forex Factory, the Fed, ECB and investingLive
+  feeds answer 304; BIS, OECD and CFTC give validators and send everything anyway. The answer's hash covers those and the
+  servers without validators: an answer already known isn't parsed, and no page is told to redraw.
+  A small answer (512 KB or less) is checked every hour for that reason, whatever its own period; a large one keeps its period.
+  `RemoteDataSet::fetchedAt` is the last answer, `changedAt` the last new data: Sources shows both.
+- **A figure about to come out** (`ReleaseWatcher`): the economic calendar gives the time, so from a minute before it until
+  it comes or 20 minutes have passed, the calendar is asked about those countries only, every 10 s for a high-impact figure
+  and 30 s for the others. Once it's there, what a medium or high impact figure concerns is read again at once, after 2, 10
+  and 60 minutes and after 3 hours (`fresh::targetsFor`), since the publisher's series can follow the calendar by hours. The
+  OECD and the IMF aren't in it: they republish days or weeks later. At launch, a figure of the last 12 hours makes what was
+  saved before it stale. `data/release-timing.log`, in the app's data folder, says how late each figure reached the app.
+- **Prices**: the commodity futures every minute while they trade. Overview also shows index futures: an index stops with its
+  exchange while its future goes on, and a trader's platform often quotes the future or a CFD, so a closed Nikkei can read
+  1.5% away from it. A price whose market isn't trading shows when it dates from.
+
+Test with a fake calendar: `DEEPWATER_CALENDAR_URL=http://127.0.0.1:<port>/events deepwater --page calendar` (loopback only).
 
 ## Window sizes
 

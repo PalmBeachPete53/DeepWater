@@ -68,7 +68,7 @@ private:
     // Quotes of the fixed lists (indices, world, crypto, FX, commodities, sector ETFs).
     QHash<QString, QJsonObject> m_board;
     QString m_boardError;
-    overview::Table *m_usIndices, *m_global, *m_crypto, *m_fx, *m_commodities;
+    overview::Table *m_usIndices, *m_usFutures, *m_global, *m_crypto, *m_fx, *m_commodities;
 
     // Sectors.
     QButtonGroup *m_sectorRange;

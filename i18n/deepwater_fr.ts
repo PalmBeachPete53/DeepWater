@@ -1487,7 +1487,7 @@ Durée %5
 <context>
     <name>BalanceOfPayments</name>
     <message>
-        <location filename="../src/MacroData.cpp" line="+708"/>
+        <location filename="../src/MacroData.cpp" line="+814"/>
         <source>Unexpected IMF response</source>
         <translation>Réponse du FMI inattendue</translation>
     </message>
@@ -1955,7 +1955,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CommodityBenchmarks</name>
     <message>
-        <location filename="../src/CommodityPrices.cpp" line="+215"/>
+        <location filename="../src/CommodityPrices.cpp" line="+220"/>
         <source>Unexpected IMF commodity price format</source>
         <translation>Format inattendu des prix des matières premières du FMI</translation>
     </message>
@@ -1992,7 +1992,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CorporateCalendar</name>
     <message>
-        <location filename="../src/CalendarData.cpp" line="+345"/>
+        <location filename="../src/CalendarData.cpp" line="+397"/>
         <location line="+125"/>
         <source>unexpected answer from Nasdaq</source>
         <translation>réponse inattendue de Nasdaq</translation>
@@ -2226,7 +2226,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>CountriesView</name>
     <message>
-        <location filename="../src/CountriesView.cpp" line="+362"/>
+        <location filename="../src/CountriesView.cpp" line="+371"/>
         <source>Search countries…</source>
         <translation>Rechercher un pays…</translation>
     </message>
@@ -4499,10 +4499,10 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>EconomicCalendar</name>
     <message>
-        <location filename="../src/CalendarData.cpp" line="-312"/>
+        <location filename="../src/CalendarData.cpp" line="-358"/>
         <location line="+32"/>
         <location line="+35"/>
-        <location line="+47"/>
+        <location line="+93"/>
         <source>unexpected answer from TradingView</source>
         <translation>réponse inattendue de TradingView</translation>
     </message>
@@ -5387,7 +5387,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+42"/>
-        <location filename="../src/EconomyPage.cpp" line="+283"/>
+        <location filename="../src/EconomyPage.cpp" line="+285"/>
         <source>Altcoin season</source>
         <translation>Saison des altcoins</translation>
     </message>
@@ -5508,18 +5508,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <name>EconomyPage</name>
     <message>
         <location line="+69"/>
-        <location line="+314"/>
+        <location line="+320"/>
         <source>Countries</source>
         <translation>Pays</translation>
     </message>
     <message>
-        <location line="-314"/>
-        <location line="+315"/>
+        <location line="-320"/>
+        <location line="+321"/>
         <source>Indicators</source>
         <translation>Indicateurs</translation>
     </message>
     <message>
-        <location line="-300"/>
+        <location line="-306"/>
         <source>Refresh</source>
         <translation>Actualiser</translation>
     </message>
@@ -5529,7 +5529,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Télécharger à nouveau tous les indicateurs de cette section</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+37"/>
         <source>The US charts come from FRED, which asks for a free key: create an account, ask for a key and paste it here.</source>
         <translation>Les graphiques américains viennent de FRED, qui demande une clé gratuite : créez un compte, demandez une clé et collez-la ici.</translation>
     </message>
@@ -7491,7 +7491,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1505"/>
+        <location filename="../src/MainWindow.cpp" line="+1517"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -9078,7 +9078,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>OverviewPage</name>
     <message>
-        <location filename="../src/OverviewPage.cpp" line="+113"/>
+        <location filename="../src/OverviewPage.cpp" line="+123"/>
         <source>Technology</source>
         <translation>Technologie</translation>
     </message>
@@ -9133,7 +9133,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Services de communication</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+67"/>
+        <source>h</source>
+        <comment>hour, after a day: Fri 22h</comment>
+        <translation>h</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Last price: %1</source>
+        <translation>Dernier cours : %1</translation>
+    </message>
+    <message>
+        <location line="+76"/>
         <source>Index performance</source>
         <translation>Performance des indices</translation>
     </message>
@@ -9151,18 +9162,18 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+17"/>
         <location line="+11"/>
-        <location line="+20"/>
-        <location line="+45"/>
+        <location line="+26"/>
+        <location line="+46"/>
         <location line="+23"/>
         <location line="+26"/>
         <location line="+229"/>
-        <location line="+63"/>
+        <location line="+64"/>
         <location line="+224"/>
         <source>Loading…</source>
         <translation>Chargement…</translation>
     </message>
     <message>
-        <location line="-635"/>
+        <location line="-643"/>
         <source>Sectors</source>
         <translation>Secteurs</translation>
     </message>
@@ -9172,7 +9183,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Indices US</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
+        <source>Index futures</source>
+        <translation>Contrats à terme sur indices</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Trading nearly around the clock, unlike the indices above; on Yahoo, about ten minutes behind the exchange</source>
+        <translation>Cotés presque 24 h/24, contrairement aux indices ci-dessus ; sur Yahoo, environ dix minutes de retard sur la bourse</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>US bonds</source>
         <translation>Obligations US</translation>
     </message>
@@ -9182,7 +9203,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Monde</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Crypto</source>
         <translation>Crypto</translation>
     </message>
@@ -9268,7 +9289,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Aucun cours sur cette période</translation>
     </message>
     <message>
-        <location line="+192"/>
+        <location line="+193"/>
         <source>%1 · Select Sector SPDR fund</source>
         <translation>%1 · fonds Select Sector SPDR</translation>
     </message>
@@ -9372,24 +9393,24 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1330"/>
+        <location line="+1402"/>
         <source>Gross Profit</source>
         <translation>Résultat brut</translation>
     </message>
     <message>
-        <location line="-1329"/>
-        <location line="+1334"/>
+        <location line="-1401"/>
+        <location line="+1406"/>
         <source>Operating Income</source>
         <translation>Résultat d&apos;exploitation</translation>
     </message>
     <message>
-        <location line="-1333"/>
-        <location line="+1342"/>
+        <location line="-1405"/>
+        <location line="+1414"/>
         <source>Net Income</source>
         <translation>Résultat net</translation>
     </message>
     <message>
-        <location line="-1341"/>
+        <location line="-1413"/>
         <source>EBITDA</source>
         <translation>EBITDA</translation>
     </message>
@@ -9420,12 +9441,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1354"/>
+        <location line="+1426"/>
         <source>Total Assets</source>
         <translation>Total de l&apos;actif</translation>
     </message>
     <message>
-        <location line="-1353"/>
+        <location line="-1425"/>
         <source>Total Liabilities</source>
         <translation>Total des passifs</translation>
     </message>
@@ -9436,29 +9457,29 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1389"/>
+        <location line="+1461"/>
         <source>Total Debt</source>
         <translation>Dette totale</translation>
     </message>
     <message>
-        <location line="-1388"/>
+        <location line="-1460"/>
         <source>Cash &amp; Equivalents</source>
         <translation>Trésorerie et équivalents</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1393"/>
+        <location line="+1465"/>
         <source>Operating Cash Flow</source>
         <translation>Flux de trésorerie d&apos;exploitation</translation>
     </message>
     <message>
-        <location line="-1392"/>
-        <location line="+1440"/>
+        <location line="-1464"/>
+        <location line="+1512"/>
         <source>Free Cash Flow</source>
         <translation>Flux de trésorerie disponible</translation>
     </message>
     <message>
-        <location line="-1439"/>
+        <location line="-1511"/>
         <source>CapEx</source>
         <translation>Investissements (CapEx)</translation>
     </message>
@@ -9469,17 +9490,17 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1312"/>
+        <location line="+1384"/>
         <source>Cost of Revenue</source>
         <translation>Coût des ventes</translation>
     </message>
     <message>
-        <location line="-1311"/>
+        <location line="-1383"/>
         <source>Depreciation &amp; Amortization</source>
         <translation>Dotations aux amortissements</translation>
     </message>
     <message>
-        <location line="+1310"/>
+        <location line="+1382"/>
         <source>Total Revenue</source>
         <translation>Chiffre d&apos;affaires total</translation>
     </message>
@@ -12059,7 +12080,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tout tester</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+86"/>
         <source>Map · shipping</source>
         <translation>Carte · navigation</translation>
     </message>
@@ -12129,25 +12150,24 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Banque centrale européenne, via Frankfurter</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Forex: pairs, sparklines, correlations</source>
-        <translation>Forex : paires, courbes, corrélations</translation>
+        <translation type="vanished">Forex : paires, courbes, corrélations</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Central bank policy rates</source>
         <translation>Taux directeurs des banques centrales</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+116"/>
+        <location line="+117"/>
         <location line="+155"/>
         <location line="+8"/>
         <source>Bank for International Settlements</source>
         <translation>Banque des règlements internationaux</translation>
     </message>
     <message>
-        <location line="-278"/>
+        <location line="-279"/>
         <source>Forex: policy rates and the carry on each pair</source>
         <translation>Forex : taux directeurs et portage de chaque paire</translation>
     </message>
@@ -12162,7 +12182,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Forex : flux de capitaux des gérants d’actifs et des fonds à effet de levier</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+47"/>
         <source>Head counts and supply chain</source>
         <translation>Effectifs et chaîne d&apos;approvisionnement</translation>
     </message>
@@ -12412,7 +12432,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Statistiques européennes</translation>
     </message>
     <message>
-        <location line="-481"/>
+        <location line="-486"/>
         <source>List</source>
         <translation>Liste</translation>
     </message>
@@ -12427,7 +12447,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Afficher de nouveau toutes les sources</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+45"/>
         <source>Map · supply chains</source>
         <translation>Carte · chaînes d’approvisionnement</translation>
     </message>
@@ -12532,7 +12552,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Carte : tonnage routier, expéditions de fret, services de fret et prix du fret maritime hauturier</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+19"/>
+        <source>Forex: the sparklines and correlations, from the ECB&apos;s one fixing a day. The prices on the cards come from Yahoo, every minute</source>
+        <translation>Forex : les mini-graphiques et les corrélations, d’après le fixing quotidien de la BCE. Les cours des cartes viennent de Yahoo, chaque minute</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Research: profile, key statistics, statements, analysts&apos; ratings and targets, prices, peers. Desk and Journal: quotes and bars, fed funds futures</source>
         <translation>Research : profil, statistiques clés, états financiers, notes et objectifs des analystes, cours, sociétés comparables. Desk et Journal : cours et barres, contrats à terme sur fed funds</translation>
     </message>
@@ -13408,7 +13433,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Ouvrir le site</translation>
     </message>
     <message>
-        <location line="+75"/>
+        <location line="+78"/>
         <source>sk-ant-…</source>
         <translation>sk-ant-…</translation>
     </message>
@@ -13423,12 +13448,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>La clé a été refusée (HTTP %1)</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+143"/>
         <source>Enter a free key below to turn this source on</source>
         <translation>Saisissez une clé gratuite ci-dessous pour activer cette source</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+97"/>
         <source>Needed to talk to Claude in the AI tab</source>
         <translation>Nécessaire pour parler à Claude dans l&apos;onglet IA</translation>
     </message>
@@ -13481,13 +13506,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>%1 sources officielles référencées, %2 gratuites au site joignable</translation>
     </message>
     <message>
-        <location line="-1436"/>
-        <location line="+439"/>
+        <location line="-1456"/>
+        <location line="+440"/>
         <source>Economic calendar</source>
         <translation>Calendrier économique</translation>
     </message>
     <message>
-        <location line="-598"/>
+        <location line="-603"/>
         <source>Every place Deepwater gets its data from, what each one feeds and how it is doing, and the official bodies behind each country&apos;s statistics, with their sites and APIs. A source turned off makes no more requests: the map and forex pages keep the last copy saved on this computer, and the charts move on to the next provider in line.</source>
         <translation>Toutes les sources de données de Deepwater, ce que chacune alimente et son état, et les organismes officiels derrière les statistiques de chaque pays, avec leurs sites et leurs API. Une source désactivée ne fait plus aucune requête : la carte et la page Forex gardent la dernière copie enregistrée sur cet ordinateur, et les graphiques passent au fournisseur suivant.</translation>
     </message>
@@ -13522,7 +13547,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Tous les accès</translation>
     </message>
     <message>
-        <location line="+546"/>
+        <location line="+551"/>
         <source>Charts: the Calendar tab</source>
         <translation>Graphiques : l’onglet Calendar</translation>
     </message>
@@ -13577,7 +13602,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Fournis avec l’application</translation>
     </message>
     <message>
-        <location line="-518"/>
+        <location line="-519"/>
         <source>Map: daily transits through the chokepoints by vessel type, a few days behind</source>
         <translation>Carte : transits quotidiens dans les points de passage par type de navire, avec quelques jours de retard</translation>
     </message>
@@ -13617,7 +13642,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Research</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Company data and prices</source>
         <translation>Données des sociétés et cours</translation>
     </message>
@@ -13721,7 +13746,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Télécharger à nouveau les données maintenant</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Reconnect</source>
         <translation>Reconnecter</translation>
     </message>
@@ -13789,15 +13814,15 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <location line="+249"/>
+        <location line="+265"/>
         <source>No site known</source>
         <translation>Site inconnu</translation>
     </message>
     <message>
-        <location line="-291"/>
+        <location line="-307"/>
         <location line="+32"/>
         <location line="+39"/>
-        <location line="+231"/>
+        <location line="+247"/>
         <source>HTTP %1</source>
         <translation>HTTP %1</translation>
     </message>
@@ -13806,7 +13831,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation type="vanished">Pays (zone euro et membres) : M1, M2, M3, prêts, taux hypothécaires, débiteurs et de dépôt, bilans des banques centrales. Desk › Taux : la courbe de la zone euro et les dates de réunion</translation>
     </message>
     <message>
-        <location line="-1244"/>
+        <location line="-1263"/>
         <source>Countries: policy rates, residential property prices, household and private debt in % of GDP. Desk › Notes: central bankers&apos; speeches</source>
         <translation>Pays : taux directeurs, prix de l’immobilier résidentiel, dette des ménages et du secteur privé en % du PIB. Desk › Notes : discours des banquiers centraux</translation>
     </message>
@@ -13879,7 +13904,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Dépôt public : aucun compte nécessaire</translation>
     </message>
     <message>
-        <location line="+754"/>
+        <location line="+757"/>
         <source>just now</source>
         <translation>à l’instant</translation>
     </message>
@@ -13899,18 +13924,23 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>il y a %1 jours</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
         <source>checked every %1 days</source>
         <translation>vérifié tous les %1 jours</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="+2"/>
         <source>checked every %1 h</source>
         <translation>vérifié toutes les %1 h</translation>
     </message>
     <message>
+        <location line="+1"/>
+        <source>checked every %1 min</source>
+        <translation>vérifié toutes les %1 min</translation>
+    </message>
+    <message>
         <location line="+37"/>
-        <location line="+25"/>
+        <location line="+37"/>
         <location line="+33"/>
         <location line="+29"/>
         <location line="+14"/>
@@ -13918,7 +13948,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Désactivée</translation>
     </message>
     <message>
-        <location line="-99"/>
+        <location line="-111"/>
         <source>Using the copy saved %1</source>
         <translation>Utilise la copie enregistrée %1</translation>
     </message>
@@ -13939,12 +13969,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+2"/>
-        <location line="+35"/>
+        <location line="+47"/>
         <source>Error: %1</source>
         <translation>Erreur : %1</translation>
     </message>
     <message>
-        <location line="-33"/>
+        <location line="-45"/>
         <source>Using the copy saved %1 · retrying in a few minutes</source>
         <translation>Utilise la copie enregistrée %1 · nouvel essai dans quelques minutes</translation>
     </message>
@@ -13954,7 +13984,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pas encore de données · nouvel essai dans quelques minutes</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Up to date</source>
         <translation>À jour</translation>
     </message>
@@ -13964,9 +13994,29 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pas à jour</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
+        <source>Read %1 · when a page needs it</source>
+        <translation>Lu %1 · quand une page en a besoin</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Checked %1 · new data %2 · %3</source>
+        <translation>Vérifié %1 · nouveau %2 · %3</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Updated %1 · %2</source>
         <translation>Mis à jour %1 · %2</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Read when a page needs it</source>
+        <translation>Lu quand une page en a besoin</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Open the page it feeds, or press Test to reach the source now</source>
+        <translation>Ouvrez la page qu’il alimente, ou cliquez sur Tester pour joindre la source maintenant</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -14050,9 +14100,9 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Pas encore utilisée dans cette session</translation>
     </message>
     <message>
-        <location line="-236"/>
-        <location line="+161"/>
-        <location line="+86"/>
+        <location line="-252"/>
+        <location line="+165"/>
+        <location line="+98"/>
         <source>No key</source>
         <translation>Pas de clé</translation>
     </message>
@@ -21105,17 +21155,17 @@ Titre : %2</translation>
 <context>
     <name>research::Client</name>
     <message>
-        <location filename="../src/ResearchData.cpp" line="-1578"/>
+        <location filename="../src/ResearchData.cpp" line="-1642"/>
         <source>This source is turned off in Sources</source>
         <translation>Cette source est désactivée dans Sources</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+128"/>
         <source>Yahoo session refused: %1</source>
         <translation>Session Yahoo refusée : %1</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+120"/>
         <source>No usable data in the answer</source>
         <translation>Aucune donnée exploitable dans la réponse</translation>
     </message>

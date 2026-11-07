@@ -136,6 +136,13 @@ target_compile_features(desk PUBLIC cxx_std_20)
 target_link_libraries(desk PUBLIC Qt6::Core)
 target_include_directories(desk PUBLIC src)
 
+# How often to ask each source, and what a published figure makes stale (src/fresh). Tested by tests/quant/fresh.
+file(GLOB FRESH_SOURCES CONFIGURE_DEPENDS src/fresh/*.h src/fresh/*.cpp)
+add_library(fresh STATIC ${FRESH_SOURCES})
+target_compile_features(fresh PUBLIC cxx_std_20)
+target_link_libraries(fresh PUBLIC Qt6::Core)
+target_include_directories(fresh PUBLIC src)
+
 # The MetaTrader page's logic (src/broker): orders sized per account, sent through MetaCopier. Tested by tests/quant/broker.
 file(GLOB BROKER_SOURCES CONFIGURE_DEPENDS src/broker/*.h src/broker/*.cpp)
 add_library(broker STATIC ${BROKER_SOURCES})
@@ -308,6 +315,8 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/OverviewPage.h src/OverviewPage.cpp
     src/EconomyData.h src/EconomyData.cpp
     src/EconomyPage.h src/EconomyPage.cpp
+    src/RefreshScheduler.h src/RefreshScheduler.cpp
+    src/ReleaseWatcher.h src/ReleaseWatcher.cpp
     src/CountryData.h src/CountryData.cpp
     src/CountriesView.h src/CountriesView.cpp
     src/IndicatorData.h src/IndicatorData.cpp
@@ -336,7 +345,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     resources/icon/deepwater.icns
 )
 
-target_link_libraries(deepwater PRIVATE broker)
+target_link_libraries(deepwater PRIVATE broker fresh)
 target_link_libraries(deepwater PRIVATE Qt6::Widgets Qt6::Network Qt6::WebSockets Qt6::Concurrent Qt6::WebEngineWidgets qtm_ui markov fusion desk ZLIB::ZLIB)
 # The commit this build comes from, for the update system (src/Updater.cpp) and --version.
 set(DEEPWATER_BUILDINFO ${CMAKE_BINARY_DIR}/generated/BuildInfo.h)

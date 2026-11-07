@@ -6,7 +6,7 @@ Chaque endroit d'où l'application tire ses données, en deux sous-onglets : la 
 
 Les sources sont groupées par la page qu'elles alimentent : la carte et les navires, le forex, la macroéconomie, les statistiques officielles, les offices nationaux, les bases à clé gratuite, les enquêtes privées, les rendements du Trésor de la Vue d'ensemble, les flux de News et les listes de son bloqueur, les clés de l'IA, les fournisseurs de Graphiques et vos propres clés Graphiques, les données livrées avec l'application. Chaque ligne montre :
 
-- Son **état** : à jour, en téléchargement ou en erreur, la dernière mise à jour et la fréquence de vérification.
+- Son **état** : à jour, en téléchargement ou en erreur, la dernière vérification, la dernière fois qu'il y a eu du nouveau et la fréquence de vérification. Ce qu'une seule page lit est lu quand cette page est ouverte.
 - **Test** : une petite requête, chronométrée.
 - **Rafraîchir**, pour les jeux de données téléchargés.
 - Un **interrupteur** : coupée, la source ne fait plus aucune requête. Les jeux de données de la carte et du forex gardent la dernière copie enregistrée sur le disque ; la page Graphiques passe au fournisseur suivant de sa chaîne et le dit sur le graphique. Les lignes des éditeurs d'enquêtes n'ont qu'un interrupteur : coupé, leurs chiffres quittent les fiches pays.

@@ -11,6 +11,8 @@
 #include <cerrno>
 #include <cstdio>
 #include <cstring>
+#include <filesystem>
+#include <system_error>
 #ifdef _WIN32
 #include <QDateTime>
 #include <QFileInfo>
@@ -47,15 +49,26 @@ void Store::write(const QString &name, const QJsonValue &value)
         if (!f.open(QIODevice::WriteOnly | QIODevice::Truncate) || f.write(text) != text.size())
             throw Error(QStringLiteral("Couldn't write %1: %2").arg(tmp, f.errorString()));
     }
-    if (std::rename(QFile::encodeName(tmp).constData(), QFile::encodeName(file).constData()) != 0) {
-        const int e = errno;
+    // std::filesystem::rename replaces an existing file on every system; C's rename refuses to on Windows (EEXIST),
+    // which made every save after the first fail there.
+    std::error_code renamed;
+    std::filesystem::rename(std::filesystem::path(tmp.toStdU16String()), std::filesystem::path(file.toStdU16String()), renamed);
+    if (renamed) {
         // Windows refuses to rename over a file that antivirus or the indexer has open.
         // Fall back to writing in place rather than losing the save.
-        if (e != EPERM && e != EBUSY && e != EACCES)
-            throw Error(QStringLiteral("Couldn't save %1: %2").arg(file, QString::fromLocal8Bit(std::strerror(e))));
+        const bool busy = renamed == std::errc::permission_denied || renamed == std::errc::operation_not_permitted
+                          || renamed == std::errc::device_or_resource_busy
+#ifdef _WIN32
+                          || renamed.value() == 5 /* ERROR_ACCESS_DENIED */ || renamed.value() == 32 /* ERROR_SHARING_VIOLATION */
+#endif
+            ;
+        if (!busy)
+            throw Error(QStringLiteral("Couldn't save %1: %2").arg(file, QString::fromStdString(renamed.message())));
         QFile f(file);
-        if (f.open(QIODevice::WriteOnly | QIODevice::Truncate)) f.write(text);
+        const bool written = f.open(QIODevice::WriteOnly | QIODevice::Truncate) && f.write(text) == text.size();
         QFile::remove(tmp);
+        if (!written)
+            throw Error(QStringLiteral("Couldn't save %1: %2").arg(file, f.errorString()));
     }
 }
 

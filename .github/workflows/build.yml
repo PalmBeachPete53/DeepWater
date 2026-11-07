@@ -186,6 +186,18 @@ jobs:
 
       # The local engine, from the packed folder: refused the network and the user's files inside its sandbox, and able to
       # load and run a small model there.
+      - name: Saving over an existing file
+        shell: pwsh
+        run: |
+          $dir = (Get-ChildItem build/dist/_CPack_Packages/win64/ZIP -Directory | Select-Object -First 1).FullName
+          $log = "$PWD\build\dist\store.log"
+          $env:QT_FORCE_STDERR_LOGGING = '1'
+          $p = Start-Process "$dir\deepwater.exe" -PassThru -Wait -RedirectStandardError $log -ArgumentList '--store-check'
+          Get-Content $log
+          if ($p.ExitCode -ne 0) { throw "saving failed (exit $($p.ExitCode))" }
+
+      # The local engine, from the packed folder: refused the network and the user's files inside its sandbox, and able to
+      # load and run a small model there.
       - name: Local engine in its sandbox
         id: engine
         continue-on-error: true

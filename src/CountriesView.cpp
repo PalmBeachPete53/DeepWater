@@ -1,5 +1,7 @@
 #include "CountriesView.h"
 
+#include "ReleaseWatcher.h"
+
 #include "CountryData.h"
 #include "Theme.h"
 
@@ -57,6 +59,13 @@ CountryPage::CountryPage(const QString &iso3, QWidget *parent)
     , m_iso3(iso3)
     , m_loader(new CountryLoader(iso3, this))
 {
+    // A figure of this country has come out: its table reads again what has aged, if it is the one on screen.
+    if (auto *watcher = ReleaseWatcher::instance())
+        connect(watcher, &ReleaseWatcher::sourcesAsked, this, [this](const QString &country, const QStringList &) {
+            const QString mine = m_iso3 == "EMU" ? QStringLiteral("EU") : countries::iso2(m_iso3);
+            if (country == mine && isVisible())
+                m_loader->refresh(false);
+        });
     auto *v = new QVBoxLayout(this);
     v->setContentsMargins(0, 0, 0, 0);
     v->setSpacing(0);

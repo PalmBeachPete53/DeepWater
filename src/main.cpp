@@ -1,3 +1,6 @@
+#include "quant/server/Store.h"
+
+#include <QTemporaryDir>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -57,6 +60,20 @@ int main(int argc, char *argv[])
         const QStringList args = app.arguments();
         if (args.contains("--secret-check"))   // the system's secret store works: --secret-check, for the CI
             return SecretStore::check();
+        if (args.contains("--store-check")) {   // saving over an existing file works here: --store-check, for the Windows CI
+            QTemporaryDir dir;
+            try {
+                qtm::Store store(dir.path());
+                store.write("check", QJsonObject {{"n", 1}});
+                store.write("check", QJsonObject {{"n", 2}});
+                const bool ok = store.read("check", QJsonValue()).toObject().value("n").toInt() == 2;
+                qWarning().noquote() << (ok ? "store: ok" : "store: wrong value read back");
+                return ok ? 0 : 1;
+            } catch (const std::exception &e) {
+                qWarning().noquote() << "store:" << e.what();
+                return 1;
+            }
+        }
         const int sandboxArg = args.indexOf("--llm-sandbox-check");
         if (sandboxArg > 0 && sandboxArg + 1 < args.size())
             return LocalEngine::checkSandbox(args.at(sandboxArg + 1));

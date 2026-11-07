@@ -713,9 +713,17 @@ void Client::get(const QString &key, const QUrl &url, qint64 maxAgeSecs, int fla
         if (HttpCache::load(safeKey(key), &e.body, &e.at))
             it = m_memory.insert(key, e);
     }
-    const bool enabled = !m_disabled.contains(key.section(':', 0, 0));
-    const bool fresh = it != m_memory.end() && it->at.secsTo(now) < maxAgeSecs;
-    if (fresh || (!enabled && it != m_memory.end())) {
+    const QString keyGroup = key.section(':', 0, 0);
+    const bool enabled = !m_disabled.contains(keyGroup);
+    loadConditionals();
+    // Where a check is free, asking costs nothing: at most LightCheckSecs behind, whatever the caller's period.
+    const auto known = m_conditional.constFind(key);
+    const qint64 maxAge = known != m_conditional.constEnd() && known->validators.any() && !known->ignored
+                              ? fresh::checkEverySecs(maxAgeSecs, true)
+                              : maxAgeSecs;
+    const QDateTime staleBefore = m_staleBefore.value(keyGroup);
+    const bool isFresh = it != m_memory.end() && it->at.secsTo(now) < maxAge && (!staleBefore.isValid() || it->at >= staleBefore);
+    if (isFresh || (!enabled && it != m_memory.end())) {
         const QByteArray body = it->body;
         QPointer<QObject> guard(ctx);
         QMetaObject::invokeMethod(this, [guard, done, body] { if (guard) done(body, {}); }, Qt::QueuedConnection);
@@ -748,6 +756,41 @@ void Client::forget(const QString &group)
     for (auto it = m_memory.begin(); it != m_memory.end(); ++it)
         if (it.key().section(':', 0, 0) == group)
             it->at = QDateTime::fromSecsSinceEpoch(0, QTimeZone::UTC);
+}
+
+void Client::forgetOlderThan(const QString &group, const QDateTime &when)
+{
+    m_staleBefore.insert(group, when);
+}
+
+void Client::loadConditionals()
+{
+    if (m_conditionalsLoaded)
+        return;
+    m_conditionalsLoaded = true;
+    QByteArray body;
+    QDateTime at;
+    if (!HttpCache::load("research_conditional", &body, &at))
+        return;
+    const QJsonObject all = QJsonDocument::fromJson(body).object();
+    for (auto it = all.begin(); it != all.end(); ++it) {
+        const QJsonArray a = it.value().toArray();
+        m_conditional.insert(it.key(), {{a.at(0).toString().toUtf8(), a.at(1).toString().toUtf8()}, a.at(2).toBool()});
+    }
+}
+
+void Client::saveConditionals()
+{
+    if (m_conditionalsSaving)
+        return;
+    m_conditionalsSaving = true;
+    QTimer::singleShot(10000, this, [this] {
+        m_conditionalsSaving = false;
+        QJsonObject all;
+        for (auto it = m_conditional.cbegin(); it != m_conditional.cend(); ++it)
+            all.insert(it.key(), QJsonArray {QString::fromUtf8(it->validators.etag), QString::fromUtf8(it->validators.lastModified), it->ignored});
+        HttpCache::save("research_conditional", QJsonDocument(all).toJson(QJsonDocument::Compact), QDateTime::currentDateTimeUtc());
+    });
 }
 
 void Client::enqueue(const Job &job)
@@ -864,11 +907,40 @@ void Client::send(Job job)
         req.setRawHeader(name, value);
     if (group == "oecd")   // the OECD server answers HTTP 500 to Qt's default Accept-Language now and then
         req.setRawHeader("Accept-Language", "en");
+    // "Unless it's still this": with the last answer at hand to give again.
+    fresh::Validators sent;
+    if (!(job.flags & YahooCrumb) && m_memory.contains(job.key)) {
+        const Conditional c = m_conditional.value(job.key);
+        if (!c.ignored && c.validators.any()) {
+            sent = c.validators;
+            if (!sent.etag.isEmpty())
+                req.setRawHeader("If-None-Match", sent.etag);
+            if (!sent.lastModified.isEmpty())
+                req.setRawHeader("If-Modified-Since", sent.lastModified);
+        }
+    }
     QNetworkReply *reply = m_net.get(req);
-    connect(reply, &QNetworkReply::finished, this, [this, reply, job, group]() mutable {
+    connect(reply, &QNetworkReply::finished, this, [this, reply, job, group, sent]() mutable {
         reply->deleteLater();
         m_inFlight[group]--;
         const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+        if (reply->error() == QNetworkReply::NoError) {
+            const fresh::Validators received {reply->rawHeader("ETag"), reply->rawHeader("Last-Modified")};
+            const bool ignored = fresh::judgeConditional(sent, status, received) == fresh::Conditional::Ignored;
+            if (status == 304) {
+                // Still the same: the body kept, as if it had just been downloaded.
+                m_hosts[group].pending--;
+                finish(job.key, m_memory.value(job.key).body, {});
+                pump();
+                return;
+            }
+            Conditional &c = m_conditional[job.key];
+            if (received.any() || ignored || c.validators.any()) {
+                c.validators = received;
+                c.ignored = ignored || (c.ignored && received == sent);
+                saveConditionals();
+            }
+        }
         // An expired Yahoo session: a new crumb, once.
         if ((job.flags & YahooCrumb) && (status == 401 || status == 403) && job.attempt == 0) {
             m_crumb.clear();

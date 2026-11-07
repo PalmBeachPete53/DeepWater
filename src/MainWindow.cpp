@@ -16,6 +16,8 @@
 #include "Chokepoints.h"
 #include "DomesticFinance.h"
 #include "KeyIndicators.h"
+#include "RefreshScheduler.h"
+#include "ReleaseWatcher.h"
 #include "KeyedSources.h"
 #include "NationalSources.h"
 #include "SurveyHeadlines.h"
@@ -235,10 +237,6 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     connect(m_benchmarks, &RemoteDataSet::updated, this, applyPrices);
     m_futures->refreshIfStale();
     m_benchmarks->refreshIfStale();
-    auto *quoteTimer = new QTimer(this);
-    connect(quoteTimer, &QTimer::timeout, m_futures, &RemoteDataSet::refreshIfStale);
-    connect(quoteTimer, &QTimer::timeout, m_benchmarks, &RemoteDataSet::refreshIfStale);
-    quoteTimer->start(5 * 60 * 1000);
     connect(m_macro, &MacroIndicators::updated, this, [this] {
         updateHeatmap();
         if (m_detail)
@@ -256,24 +254,38 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     m_portWatch->refreshIfStale();
     m_supply->refreshIfStale();
     connect(m_supply, &supply::SupplyChain::updated, this, &MainWindow::updateSupplyPoints);
-    auto *portWatchTimer = new QTimer(this);   // PortWatch publishes weekly; check twice a day
-    connect(portWatchTimer, &QTimer::timeout, m_supply, &supply::SupplyChain::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_portWatch, &PortWatch::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_fx, &FxData::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_policyRates, &PolicyRates::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_cot, &CotData::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_cotReport, &CotReport::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_economy, &WorldEconomy::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_worldRates, &WorldPolicyRates::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_bop, &BalanceOfPayments::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_trade, &TradeFlows::refreshIfStale);
-    connect(portWatchTimer, &QTimer::timeout, m_sectors, &EconomySectors::refreshIfStale);
-    for (RemoteDataSet *d : std::initializer_list<RemoteDataSet *> {m_propertyCredit, m_housePrices, m_globalDebt, m_bankCredit,
+    // Everything above from now on: one timer, whichever page is open (README › Keeping data up to date).
+    auto *scheduler = new RefreshScheduler(this);
+    for (RemoteDataSet *d : std::initializer_list<RemoteDataSet *> {m_futures, m_benchmarks, m_economicCalendar, m_policyRates, m_cot, m_cotReport,
+                                                                    m_economy, m_worldRates, m_bop, m_trade, m_sectors,
+                                                                    m_propertyCredit, m_housePrices, m_globalDebt, m_bankCredit,
                                                                     m_oecd, m_eurostat, m_imfPrices, m_bls, m_brazil, m_argentina,
                                                                     m_southAfrica, m_singapore, m_fred, m_eia, m_bea, m_banxico,
                                                                     m_ecos, m_evds, m_surveys})
-        connect(portWatchTimer, &QTimer::timeout, d, &RemoteDataSet::refreshIfStale);
-    portWatchTimer->start(60 * 60 * 1000);
+        scheduler->add(d);
+    scheduler->add("fx", 5 * 60, [this] { m_fx->refreshIfStale(); });
+    scheduler->add("supply", 60 * 60, [this] { m_supply->refreshIfStale(); });
+    scheduler->add("portwatch", 60 * 60, [this] { m_portWatch->refreshIfStale(); });
+    // A figure comes out: what was read before it is stale. The pages showing it hear sourcesAsked.
+    m_economicCalendar->refreshIfStale();
+    auto *watcher = new ReleaseWatcher(m_economicCalendar, this);
+    connect(watcher, &ReleaseWatcher::askAgain, this, [this, watcher](const QString &country, const QString &title, const QDateTime &olderThan) {
+        const fresh::Targets targets = fresh::targetsFor(country, title);
+        const QHash<QString, RemoteDataSet *> sets {{"fred", m_fred}, {"bls", m_bls}, {"bea", m_bea}, {"eurostat", m_eurostat}, {"eia", m_eia},
+                                                    {"banxico", m_banxico}, {"ecos", m_ecos}, {"evds", m_evds}};
+        QVector<RemoteDataSet *> asked;
+        for (const QString &group : targets.groups) {
+            research::Client::instance()->forgetOlderThan(group, olderThan);
+            if (RemoteDataSet *set = sets.value(group))
+                asked << set;
+        }
+        if (targets.policyRates)
+            asked << m_policyRates << m_worldRates;
+        for (RemoteDataSet *set : asked)
+            if (set->fetchedAt() < olderThan)
+                set->refreshNow();
+        emit watcher->sourcesAsked(country, targets.groups);
+    });
 
     QSettings settings;
     applyTheme(theme.isEmpty() ? settings.value("theme", "ember").toString() : theme);

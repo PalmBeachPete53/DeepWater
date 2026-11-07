@@ -65,6 +65,16 @@ const QVector<Instrument> &usIndices()
     return v;
 }
 
+// An index stops with its exchange; its futures go on nearly all day and night, and most traders' platforms quote those
+// or a CFD on them. Only these have a future on Yahoo: DAX, FTSE, Euro Stoxx and Hang Seng answer 404 (Nov 2026).
+const QVector<Instrument> &indexFutures()
+{
+    static const QVector<Instrument> v {
+        {"ES=F", "S&P 500"}, {"NQ=F", "Nasdaq 100"}, {"YM=F", "Dow Jones"}, {"RTY=F", "Russell 2000"}, {"NKD=F", "Nikkei 225"},
+    };
+    return v;
+}
+
 const QVector<Instrument> &globalIndices()
 {
     static const QVector<Instrument> v {
@@ -172,28 +182,51 @@ QColor signColor(double v)
     return !ok(v) ? c.TextFaint : v > 0 ? c.Up : v < 0 ? c.Down : c.TextDim;
 }
 
-Table::Row quoteRow(const QString &name, const QJsonObject &q, bool fx = false)
+// When a price dates from, for one whose market isn't trading now: empty while it is. Today's time, or the day and the
+// hour, short enough for the column; the row's tooltip has it in full.
+QString quoteMoment(const QJsonObject &q)
+{
+    const qint64 at = q.value("regularMarketTime").toInteger();
+    if (at <= 0 || q.value("marketState").toString() == "REGULAR")
+        return {};
+    const QDateTime when = QDateTime::fromSecsSinceEpoch(at).toLocalTime();
+    if (when.date() == QDate::currentDate())
+        return when.toString("HH:mm");
+    return QLocale().toString(when, "ddd").remove('.') + when.toString(" HH") + QCoreApplication::translate("OverviewPage", "h", "hour, after a day: Fri 22h");
+}
+
+Table::Row quoteRow(const QString &name, const QJsonObject &q, bool fx = false, bool moment = false)
 {
     const double chg = num(q, "regularMarketChangePercent");
     Table::Row row;
     row.cells = {{name}, {price(num(q, "regularMarketPrice"), q.value("currency").toString(), fx)},
                  {pct(chg), signColor(chg)}};
+    if (moment)
+        row.cells << Table::Cell {quoteMoment(q), Theme::current().TextFaint};
     const QString full = q.value("longName").toString(q.value("shortName").toString());
     row.tooltip = q.isEmpty() ? QString() : QString("%1 · %2").arg(q.value("symbol").toString(), full);
+    if (const qint64 at = q.value("regularMarketTime").toInteger(); at > 0)
+        row.tooltip += "\n" + QCoreApplication::translate("OverviewPage", "Last price: %1").arg(QLocale().toString(QDateTime::fromSecsSinceEpoch(at).toLocalTime(), QLocale::ShortFormat));
     return row;
 }
 
-QVector<Table::Row> listRows(const QVector<Instrument> &list, const QHash<QString, QJsonObject> &quotes, bool fx = false)
+QVector<Table::Row> listRows(const QVector<Instrument> &list, const QHash<QString, QJsonObject> &quotes, bool fx = false, bool moment = false)
 {
     QVector<Table::Row> rows;
     for (const Instrument &i : list)   // commodity names are translated in i18n/deepwater_data_fr.ts (MarketData)
-        rows << quoteRow(QCoreApplication::translate("MarketData", i.name.toUtf8().constData()), quotes.value(i.symbol), fx);
+        rows << quoteRow(QCoreApplication::translate("MarketData", i.name.toUtf8().constData()), quotes.value(i.symbol), fx, moment);
     return rows;
 }
 
 QVector<Table::Column> listColumns()
 {
     return {{"", 1, 0, Qt::AlignLeft}, {"", 1, 0, Qt::AlignRight}, {"", 1, 54, Qt::AlignRight}};
+}
+
+// With the moment of the last price, for what stops trading.
+QVector<Table::Column> timedColumns()
+{
+    return {{"", 1, 0, Qt::AlignLeft}, {"", 1, 0, Qt::AlignRight}, {"", 1, 54, Qt::AlignRight}, {"", 1, 62, Qt::AlignRight}};
 }
 
 QString shortName(const QJsonObject &q)
@@ -325,7 +358,13 @@ OverviewPage::OverviewPage(QWidget *parent)
     usColumn->setSpacing(6);
     auto *us = new Panel(tr("US indices"));
     m_usIndices = makeList(us, 5);
+    m_usIndices->setColumns(timedColumns(), false);
     usColumn->addWidget(us);
+    auto *futures = new Panel(tr("Index futures"));
+    futures->setToolTip(tr("Trading nearly around the clock, unlike the indices above; on Yahoo, about ten minutes behind the exchange"));
+    m_usFutures = makeList(futures, 5);
+    m_usFutures->setColumns(timedColumns(), false);
+    usColumn->addWidget(futures);
     m_bondsPanel = new Panel(tr("US bonds"));
     m_bonds = new Table;
     m_bonds->setColumns(listColumns(), false);
@@ -338,6 +377,7 @@ OverviewPage::OverviewPage(QWidget *parent)
 
     auto *global = new Panel(tr("Global"));
     m_global = makeList(global, 14);
+    m_global->setColumns(timedColumns(), false);
     board->addCard(global);
     auto *crypto = new Panel(tr("Crypto"));
     m_crypto = makeList(crypto, 14);
@@ -637,7 +677,7 @@ void OverviewPage::buildChart()
 void OverviewPage::fetchBoard()
 {
     QStringList symbols;
-    for (const auto *list : {&usIndices(), &globalIndices(), &cryptos(), &currencies(), &commodities()})
+    for (const auto *list : {&usIndices(), &indexFutures(), &globalIndices(), &cryptos(), &currencies(), &commodities()})
         for (const Instrument &i : *list)
             symbols << i.symbol;
     for (const Instrument &i : sectorFunds())
@@ -654,14 +694,15 @@ void OverviewPage::fetchBoard()
 void OverviewPage::fillBoard()
 {
     const QString message = m_boardError.isEmpty() ? tr("Loading…") : m_boardError;
-    auto fill = [&](Table *t, const QVector<Instrument> &list, bool fx = false) {
+    auto fill = [&](Table *t, const QVector<Instrument> &list, bool fx = false, bool moment = false) {
         if (m_board.isEmpty())
             t->setMessage(message);
         else
-            t->setRows(listRows(list, m_board, fx));
+            t->setRows(listRows(list, m_board, fx, moment));
     };
-    fill(m_usIndices, usIndices());
-    fill(m_global, globalIndices());
+    fill(m_usIndices, usIndices(), false, true);
+    fill(m_usFutures, indexFutures(), false, true);
+    fill(m_global, globalIndices(), false, true);
     fill(m_crypto, cryptos());
     fill(m_fx, currencies(), true);
     fill(m_commodities, commodities());

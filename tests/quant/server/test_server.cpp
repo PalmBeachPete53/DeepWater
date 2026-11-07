@@ -21,6 +21,7 @@
 #include "../../../src/quant/server/Providers.h"
 #include "../../../src/quant/server/Ptq.h"
 #include "../../../src/quant/server/Server.h"
+#include "../../../src/quant/server/Store.h"
 
 #include <QCoreApplication>
 #include <QDir>
@@ -275,6 +276,24 @@ static QJsonObject obj(const char *json) { return jsv::parse(QByteArray(json)).t
 // ---------------------------------------------------------------- reference: JS helpers
 
 static QJsonObject REF;
+
+// A save over an existing file: C's rename refuses it on Windows, and every save after the first failed there.
+static void testStoreOverwrites()
+{
+    test("Store overwrites");
+    QTemporaryDir dir;
+    Store store(dir.path());
+    store.write("state", QJsonObject {{"n", 1}});
+    bool threw = false;
+    try {
+        store.write("state", QJsonObject {{"n", 2}});
+    } catch (const std::exception &) {
+        threw = true;
+    }
+    CHECK(!threw);
+    CHECK(store.read("state", QJsonValue()).toObject().value("n").toInt() == 2);
+    CHECK(QDir(dir.path()).entryList({"*.tmp"}, QDir::Files).isEmpty());
+}
 
 static void testCandleStore()
 {
@@ -2161,6 +2180,7 @@ int main(int argc, char **argv)
     }();
 
     QTemporaryDir refData, provData, feedData;
+    testStoreOverwrites();
     testCandleStore();
     testJsHelpers();
     testReferenceProviders(refData.path());

@@ -1,6 +1,6 @@
 # Vue d'ensemble
 
-La Vue d'ensemble est un instantané des marchés, rafraîchi chaque minute tant qu'elle est affichée. Cliquez sur une action dans les plus grandes sociétés, les plus fortes variations ou celles des indices pour l'ouvrir dans [Research](help:research).
+La Vue d'ensemble est un instantané des marchés, rafraîchi chaque minute tant qu'elle est affichée. Un indice s'arrête à la fermeture de sa bourse : son heure s'affiche alors à côté, et **Contrats à terme sur indices** montre les contrats qui continuent de coter, souvent ce qu'affiche une plateforme de trading. Cliquez sur une action dans les plus grandes sociétés, les plus fortes variations ou celles des indices pour l'ouvrir dans [Research](help:research).
 
 ## Panneaux
 

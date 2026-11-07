@@ -17,7 +17,7 @@
 namespace {
 
 constexpr int HistoryDays = 400;        // ~1 year of business days plus margin
-constexpr qint64 StaleSecs = 6 * 3600;
+constexpr qint64 StaleSecs = 3600;   // the ECB fixes once a day, around 16:00 in Frankfurt; this finds it within the hour
 
 QString cachePath()
 {

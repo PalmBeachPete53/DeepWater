@@ -1,5 +1,7 @@
 #pragma once
 
+#include "fresh/Fresh.h"
+
 #include <QDate>
 #include <QDateTime>
 #include <QFuture>
@@ -36,21 +38,29 @@ public:
     void waitCached() const;
 
     void refreshIfStale();
+    // The last time the source answered, with something new or not.
     QDateTime fetchedAt() const { waitCached(); return m_fetchedAt; }
+    // The last time it had something new.
+    QDateTime changedAt() const { waitCached(); return m_changedAt.isValid() ? m_changedAt : m_fetchedAt; }
+    // How often it's worth asking: see fresh::checkEverySecs.
+    qint64 checkEverySecs() const;
     QString errorString() const { waitCached(); return m_error; }
 
     // Sources page: a source turned off makes no requests (its last cached copy stays in use);
     // refreshNow() downloads at once whatever the age of the data.
     void setEnabled(bool on);
     bool isEnabled() const { return m_enabled; }
-    void refreshNow() { fetch(); }
+    void refreshNow() { m_manual = true; fetch(); }
     bool isFetching() const { return m_fetching; }
     QUrl sourceUrl() const { return url(); }
 
 signals:
+    // New data, a new error, or the answer to refreshNow(). A check that finds nothing new says nothing.
     void updated();
 
 protected:
+    // Its period between two checks, when that depends on the moment (FuturesQuotes).
+    virtual qint64 staleSecsNow() const { return m_staleSecs; }
     // Call once at the end of the subclass constructor, after its members exist: starts reading and
     // parsing the cached copy on the thread pool. parse() then runs off the UI thread, so it must only
     // touch the data set's own members until waitCached() returns.
@@ -89,6 +99,9 @@ private:
     void fetchPart();
     void finish(const QByteArray &body);
     void finished(bool ok, const QByteArray &cacheBody);
+    void unchanged();
+    void readFreshness();
+    void saveFreshness() const;
 
     QString m_cacheName;
     QList<QUrl> m_partUrls;        // the fetch in progress: URLs left, bodies received
@@ -96,6 +109,15 @@ private:
     qint64 m_staleSecs;
     QNetworkAccessManager m_net;
     QDateTime m_fetchedAt;
+    QDateTime m_changedAt;
+    // What recognises the last answer. The body's hash also covers servers that give no validators: nothing is parsed
+    // again, and no page redrawn, for an answer already known.
+    fresh::Validators m_validators, m_received, m_sent;
+    QString m_validatorsUrl, m_receivedUrl;
+    QByteArray m_hash, m_receivedHash;
+    bool m_conditionalWorks = false;
+    qint64 m_lastBytes = -1;   // the size of the last whole answer
+    bool m_manual = false;
     QTimer m_retryTimer;
     bool m_fetching = false;
     bool m_enabled = true;

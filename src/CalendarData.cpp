@@ -1,5 +1,7 @@
 #include "CalendarData.h"
 
+#include <QHash>
+#include <QPointer>
 #include <QSet>
 
 #include <QJsonDocument>
@@ -53,7 +55,7 @@ QDate addWeekdays(QDate d, int n)
 // ---------------------------------------------------------------- EconomicCalendar
 
 EconomicCalendar::EconomicCalendar(QObject *parent)
-    : RemoteDataSet("tradingview_economic_calendar", 10 * 60, parent)
+    : RemoteDataSet("tradingview_economic_calendar", 30 * 60, parent)   // 800 KB for all of it; ReleaseWatcher asks about what's due
 {
     loadCached();
 }
@@ -78,7 +80,11 @@ QUrl EconomicCalendar::rangeUrl(const QDate &from, const QDate &to)
     auto iso = [](const QDate &d) {
         return d.startOfDay().toUTC().toString("yyyy-MM-ddTHH:mm:ss.000Z");
     };
-    QUrl url("https://economic-calendar.tradingview.com/events");
+    // A fake server for the tests, on this computer only (as DEEPWATER_METACOPIER_URL).
+    const QUrl test(qEnvironmentVariable("DEEPWATER_CALENDAR_URL"));
+    QUrl url = test.isValid() && (test.host() == "127.0.0.1" || test.host() == "localhost")
+                   ? test
+                   : QUrl("https://economic-calendar.tradingview.com/events");
     QUrlQuery q;
     q.addQueryItem("from", iso(from));
     q.addQueryItem("to", iso(to));
@@ -226,6 +232,52 @@ void EconomicCalendar::fetchDay(const QDate &day)
             return;
         }
         emit dayFetched(day, parseEvents(root.value("result").toArray()), {});
+    });
+}
+
+void EconomicCalendar::fetchLive(const QStringList &countries, QObject *ctx, std::function<void()> done)
+{
+    const QDate today = QDate::currentDate();
+    QUrl url = rangeUrl(today.addDays(-1), today.addDays(2));
+    QUrlQuery q(url);
+    q.removeAllQueryItems("countries");
+    q.addQueryItem("countries", countries.join(','));
+    url.setQuery(q);
+    QNetworkRequest request(url);
+    request.setTransferTimeout(8000);
+    request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("Deepwater/0.1"));
+    prepare(request);
+    QNetworkReply *reply = m_dayNet.get(request);
+    QPointer<QObject> guard(ctx);
+    connect(reply, &QNetworkReply::finished, this, [this, reply, guard, done] {
+        reply->deleteLater();
+        if (reply->error() == QNetworkReply::NoError) {
+            const QJsonObject root = QJsonDocument::fromJson(reply->readAll()).object();
+            if (root.value("status").toString() == "ok") {
+                const auto keyOf = [](const Event &e) { return QString::number(e.time.toSecsSinceEpoch()) + '|' + e.country + '|' + e.title; };
+                QHash<QString, int> index;
+                for (int i = 0; i < m_events.size(); ++i)
+                    index.insert(keyOf(m_events[i]), i);
+                bool changed = false;
+                const auto same = [](double a, double b) { return (std::isnan(a) && std::isnan(b)) || a == b; };
+                for (const Event &e : parseEvents(root.value("result").toArray())) {
+                    const auto it = index.constFind(keyOf(e));
+                    if (it == index.constEnd())
+                        continue;
+                    Event &mine = m_events[*it];
+                    if (same(mine.actual, e.actual) && same(mine.forecast, e.forecast))
+                        continue;
+                    mine.actual = e.actual;
+                    mine.forecast = e.forecast;
+                    mine.previous = e.previous;
+                    changed = true;
+                }
+                if (changed)
+                    emit updated();
+            }
+        }
+        if (guard)
+            done();
     });
 }
 

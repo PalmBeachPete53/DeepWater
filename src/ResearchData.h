@@ -1,5 +1,7 @@
 #pragma once
 
+#include "fresh/Fresh.h"
+
 #include <QDate>
 #include <QDateTime>
 #include <QHash>
@@ -211,6 +213,8 @@ public:
     HostState host(const QString &group) const { return m_hosts.value(group); }
     void setEnabled(const QString &group, bool on);
     void forget(const QString &group);
+    // Anything of the group fetched before `when` is stale from now on, in memory or on disk. A figure has come out.
+    void forgetOlderThan(const QString &group, const QDateTime &when);
 
 private:
     explicit Client(QObject *parent = nullptr);
@@ -267,6 +271,17 @@ private:
 
     QNetworkAccessManager m_net;
     QHash<QString, Entry> m_memory;
+    // What recognises each key's last answer, so that asking again costs a 304 where the server plays along.
+    struct Conditional {
+        fresh::Validators validators;
+        bool ignored = false;   // it was asked and sent everything anyway
+    };
+    void loadConditionals();
+    void saveConditionals();
+    QHash<QString, Conditional> m_conditional;
+    bool m_conditionalsLoaded = false;
+    bool m_conditionalsSaving = false;
+    QHash<QString, QDateTime> m_staleBefore;
     QHash<QString, QVector<Waiter>> m_waiting;
     QQueue<Job> m_queue;
     QHash<QString, int> m_inFlight;   // per host

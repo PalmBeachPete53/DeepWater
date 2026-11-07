@@ -2,6 +2,7 @@
 
 #include "HttpCache.h"
 
+#include <QCryptographicHash>
 #include <QCoreApplication>
 #include <QFile>
 #include <QJsonArray>
@@ -195,8 +196,10 @@ void RemoteDataSet::loadCached()
     m_cacheLoad = QtConcurrent::run([this] {
         QByteArray body;
         QDateTime at;
-        if (HttpCache::load(m_cacheName, &body, &at) && parse(body))
+        if (HttpCache::load(m_cacheName, &body, &at) && parse(body)) {
             m_fetchedAt = at;
+            readFreshness();
+        }
         m_error.clear();
     });
 }
@@ -206,10 +209,47 @@ void RemoteDataSet::waitCached() const
     m_cacheLoad.waitForFinished();
 }
 
+void RemoteDataSet::readFreshness()
+{
+    QByteArray body;
+    QDateTime at;
+    if (!HttpCache::load(m_cacheName + "_freshness", &body, &at))
+        return;
+    const QJsonObject o = QJsonDocument::fromJson(body).object();
+    m_validators = {o.value("etag").toString().toUtf8(), o.value("lastModified").toString().toUtf8()};
+    m_validatorsUrl = o.value("url").toString();
+    m_hash = o.value("hash").toString().toLatin1();
+    m_conditionalWorks = o.value("conditional").toBool();
+    m_lastBytes = o.value("bytes").toInteger(-1);
+    m_changedAt = QDateTime::fromString(o.value("changed").toString(), Qt::ISODate);
+    if (at > m_fetchedAt)   // a check that found nothing new doesn't write the copy again
+        m_fetchedAt = at;
+}
+
+void RemoteDataSet::saveFreshness() const
+{
+    const QJsonObject o {{"etag", QString::fromUtf8(m_validators.etag)},
+                         {"lastModified", QString::fromUtf8(m_validators.lastModified)},
+                         {"url", m_validatorsUrl},
+                         {"hash", QString::fromLatin1(m_hash)},
+                         {"conditional", m_conditionalWorks},
+                         {"bytes", m_lastBytes},
+                         {"changed", m_changedAt.toString(Qt::ISODate)}};
+    HttpCache::save(m_cacheName + "_freshness", QJsonDocument(o).toJson(QJsonDocument::Compact), m_fetchedAt);
+}
+
+qint64 RemoteDataSet::checkEverySecs() const
+{
+    waitCached();
+    return fresh::checkEverySecs(staleSecsNow(), m_conditionalWorks, m_lastBytes);
+}
+
 void RemoteDataSet::refreshIfStale()
 {
     waitCached();
-    if (!m_fetchedAt.isValid() || m_fetchedAt.secsTo(QDateTime::currentDateTimeUtc()) > m_staleSecs)
+    if (m_retryTimer.isActive())   // it failed a moment ago and tries again on its own
+        return;
+    if (!m_fetchedAt.isValid() || m_fetchedAt.secsTo(QDateTime::currentDateTimeUtc()) >= checkEverySecs())
         fetch();
 }
 
@@ -243,12 +283,24 @@ void RemoteDataSet::fetch()
 
 void RemoteDataSet::fetchPart()
 {
-    QNetworkRequest request(m_partUrls.takeFirst());
+    const bool single = m_partUrls.size() == 1 && m_parts.isEmpty();
+    const QUrl url = m_partUrls.takeFirst();
+    QNetworkRequest request(url);
     request.setTransferTimeout(m_transferTimeoutMs);
     request.setHeader(QNetworkRequest::UserAgentHeader, QStringLiteral("Deepwater/0.1"));
     prepare(request);
+    // "Unless it's still this": only with the answer already read, and for a data set of one request (the bodies of
+    // the others wouldn't be there to join).
+    m_sent = {};
+    if (single && m_fetchedAt.isValid() && m_validatorsUrl == url.toString()) {
+        m_sent = m_validators;
+        if (!m_sent.etag.isEmpty())
+            request.setRawHeader("If-None-Match", m_sent.etag);
+        if (!m_sent.lastModified.isEmpty())
+            request.setRawHeader("If-Modified-Since", m_sent.lastModified);
+    }
     QNetworkReply *reply = m_net.get(request);
-    connect(reply, &QNetworkReply::finished, this, [this, reply] {
+    connect(reply, &QNetworkReply::finished, this, [this, reply, single, url] {
         reply->deleteLater();
         if (reply->error() != QNetworkReply::NoError) {
             m_fetching = false;
@@ -257,7 +309,41 @@ void RemoteDataSet::fetchPart()
             emit updated();
             return;
         }
+        const int status = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+        const fresh::Validators received {reply->rawHeader("ETag"), reply->rawHeader("Last-Modified")};
+        switch (fresh::judgeConditional(m_sent, status, received)) {
+        case fresh::Conditional::Works: m_conditionalWorks = true; break;
+        case fresh::Conditional::Ignored: m_conditionalWorks = false; break;
+        case fresh::Conditional::Unknown: break;
+        }
+        if (status == 304) {
+            unchanged();
+            return;
+        }
+        if (single) {
+            m_received = received;
+            m_receivedUrl = url.toString();
+        } else {
+            m_received = {};
+            m_receivedUrl.clear();
+        }
         m_parts.push_back(reply->readAll());
+        if (m_partUrls.isEmpty()) {
+            QCryptographicHash hash(QCryptographicHash::Sha1);
+            m_lastBytes = 0;
+            for (const QByteArray &part : std::as_const(m_parts)) {
+                hash.addData(part);
+                m_lastBytes += part.size();
+            }
+            m_receivedHash = hash.result().toHex();
+            if (m_fetchedAt.isValid() && m_receivedHash == m_hash) {
+                m_validators = m_received;
+                m_validatorsUrl = m_receivedUrl;
+                m_parts.clear();
+                unchanged();
+                return;
+            }
+        }
         if (!m_partUrls.isEmpty())
             fetchPart();
         else if (Parser parse = parser())   // on the thread pool; published here unless we're gone by then
@@ -277,6 +363,7 @@ void RemoteDataSet::finish(const QByteArray &body)
 void RemoteDataSet::finished(bool ok, const QByteArray &cacheBody)
 {
     m_fetching = false;
+    m_manual = false;
     if (!ok) {
         m_retryTimer.start(5 * 60 * 1000);
         emit updated();
@@ -284,8 +371,27 @@ void RemoteDataSet::finished(bool ok, const QByteArray &cacheBody)
     }
     m_error.clear();
     m_fetchedAt = QDateTime::currentDateTimeUtc();
+    m_changedAt = m_fetchedAt;
+    m_validators = m_received;
+    m_validatorsUrl = m_receivedUrl;
+    m_hash = m_receivedHash;
     HttpCache::save(m_cacheName, cacheBody, m_fetchedAt);
+    saveFreshness();
     emit updated();
+}
+
+// The source was asked and has nothing new: the data and everything drawn from it stay as they are.
+void RemoteDataSet::unchanged()
+{
+    m_fetching = false;
+    const bool tell = m_manual || !m_error.isEmpty();
+    m_manual = false;
+    m_error.clear();
+    m_retryTimer.stop();
+    m_fetchedAt = QDateTime::currentDateTimeUtc();
+    saveFreshness();
+    if (tell)
+        emit updated();
 }
 
 // ---------------------------------------------------------------- PolicyRates

@@ -50,6 +50,11 @@ const FuturesQuotes::Quote *FuturesQuotes::quote(const QString &symbol) const
     return it == m_quotes.constEnd() ? nullptr : &*it;
 }
 
+qint64 FuturesQuotes::staleSecsNow() const
+{
+    return fresh::futuresEverySecs(QDateTime::currentDateTimeUtc());
+}
+
 QList<QUrl> FuturesQuotes::urls() const
 {
     // Intraday over five days for the contracts that trade on Yahoo's feed (the chart), and over one day for their

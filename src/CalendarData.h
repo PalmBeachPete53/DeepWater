@@ -44,6 +44,9 @@ public:
     const QVector<Event> &events() const { return m_events; }
 
     void fetchDay(const QDate &day);
+    // Today's and its neighbours' figures of a few countries, merged into events(): updated() if one has changed.
+    // Small, for asking often while a figure is due (ReleaseWatcher). `done` runs whatever the answer.
+    void fetchLive(const QStringList &countries, QObject *ctx, std::function<void()> done);
     // A longer range on its own (the Desk's fundamentals read the last months' releases), for `ctx`'s lifetime.
     // `country` empty: every country of the calendar; set, only that one (a few years of a country stay small).
     void fetchRange(const QString &country, const QDate &from, const QDate &to, QObject *ctx,

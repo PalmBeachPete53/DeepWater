@@ -1,5 +1,7 @@
 #include "EconomyPage.h"
 
+#include "ReleaseWatcher.h"
+
 #include "CountriesView.h"
 #include "IndicatorsView.h"
 #include "KeyedSources.h"
@@ -684,9 +686,15 @@ EconomyPage::EconomyPage(QWidget *parent)
 
     connect(m_tabs, &QButtonGroup::idClicked, this, &EconomyPage::showSection);
     connect(m_refresh, &QPushButton::clicked, this, [this] { reload(true); });
-    // The sources publish at most a few times a day: every half hour is plenty (cached answers cost nothing).
-    m_timer.setInterval(30 * 60 * 1000);
+    // The sources publish at most a few times a day and cached answers cost nothing. A figure published is seen sooner
+    // through ReleaseWatcher.
+    m_timer.setInterval(15 * 60 * 1000);
     connect(&m_timer, &QTimer::timeout, this, [this] { reload(false); });
+    if (auto *watcher = ReleaseWatcher::instance())
+        connect(watcher, &ReleaseWatcher::sourcesAsked, this, [this](const QString &, const QStringList &groups) {
+            if (isVisible() && groups.contains("fred"))
+                reload(false);
+        });
 
     showSection(std::clamp(QSettings().value("economy/section", 0).toInt(), 0, sectionCount - 1));
     updateStatus();

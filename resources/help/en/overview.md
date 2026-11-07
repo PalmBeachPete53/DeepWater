@@ -1,6 +1,6 @@
 # Overview
 
-The Overview is a snapshot of the markets, refreshed every minute while it is shown. Click a stock in the largest companies, the movers or the index movers to open it in [Research](help:research).
+The Overview is a snapshot of the markets, refreshed every minute while it is shown. An index stops when its exchange closes: its time then shows beside it, and **Index futures** shows the contracts that go on trading, often what a trading platform quotes. Click a stock in the largest companies, the movers or the index movers to open it in [Research](help:research).
 
 ## Panels
 

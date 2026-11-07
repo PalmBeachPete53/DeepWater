@@ -6,7 +6,7 @@ Every place the app gets data from, in two sub-tabs: the **List** and the **Data
 
 The sources are grouped by the page they feed: the map and shipping, forex, macroeconomics, official statistics, national offices, databases with a free key, private surveys, the Overview's Treasury yields, the News feeds and the ad blocker's lists, the AI keys, the Charts providers and your own Charts keys, the data bundled with the app. Each row shows:
 
-- Its **state**: up to date, downloading or error, the last update and how often it is checked.
+- Its **state**: up to date, downloading or error, the last check, the last time it had something new and how often it is checked. What only one page reads is read when that page is open.
 - **Test**: a small request, timed.
 - **Refresh**, for downloaded data sets.
 - A **switch**: off, the source makes no more requests. The map and forex data sets keep the last copy saved on disk; the Charts page moves on to the next provider in its chain and says so on the chart. The survey publishers' rows only carry a switch: off, their figures leave the country sheets.

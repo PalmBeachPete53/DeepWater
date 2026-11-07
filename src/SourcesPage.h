@@ -67,6 +67,9 @@ namespace qtm { class Backend; }
 // Sources page: a downloaded data set of the map or forex pages, seen through the methods they share.
 struct SourceDataset {
     std::function<QDateTime()> fetchedAt;
+    std::function<QDateTime()> changedAt;   // the last time it had something new; empty: not told apart from fetchedAt
+    std::function<qint64()> checkEvery;     // its period when that depends on the moment; empty: everySecs
+    bool onDemand = false;                  // read when a page needs it, not on a period
     std::function<QString()> error;
     std::function<bool()> fetching;
     std::function<void()> refresh;

@@ -47,6 +47,7 @@ public:
     const Quote *quote(const QString &symbol) const;
 
 protected:
+    qint64 staleSecsNow() const override;   // a minute while they trade, a quarter of an hour at the weekend
     QUrl url() const override { return urls().constFirst(); }
     QList<QUrl> urls() const override;
     QByteArray joinParts(const QList<QByteArray> &parts) const override;
