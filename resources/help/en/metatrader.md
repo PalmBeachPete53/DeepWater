@@ -1,6 +1,6 @@
-# MetaTrader
+# Accounts
 
-One order for several MetaTrader accounts, sized for each by its own balance, from Deepwater. **These are real orders.** No AI can read this page or send anything from it.
+The **Accounts** page (MetaTrader until November 2026). One order for several trading accounts: MetaTrader 4 and 5, cTrader, DXtrade, TradeLocker and Match-Trader, sized for each by its own balance, from Deepwater. **These are real orders.** No AI can read this page or send anything from it.
 
 The accounts are reached through **MetaCopier**, a paid cloud service that keeps the connections and holds your MetaTrader logins; Deepwater only holds its API key, in the system's secret store (Keychain on macOS, Credential Manager on Windows). Check that your broker or prop firm allows this before using it. FTMO limits capital to $400,000 per trader or strategy and may suspend accounts with identical trades over it; whether it accepts a service holding your logins is a question for FTMO.
 
@@ -27,3 +27,9 @@ An account the service doesn't report as a demo, or doesn't report at all, count
 The positions of every account, refreshed every few seconds while the page is open. **Close** ends one, after a question. **Close all on the armed accounts** ends every position on them, including those not opened from Deepwater.
 
 Balances come from MetaCopier, which syncs them once a minute. A slow answer or a symbol's rules can make the fill differ from the plan's price.
+
+## Platforms and safety
+
+MetaCopier also connects exchanges (Binance, Bybit, OKX…), Tradovate, TradeStation and Alpaca. Their accounts are listed, with their platform, but an order isn't sized for them yet: the page refuses them rather than guess what a lot is there.
+
+What protects the accounts: the MetaCopier key stays in the system's secret store and only goes to MetaCopier over HTTPS; your platform passwords are entered on MetaCopier's site, never in Deepwater; no AI reaches this page; real money stays locked until you allow it. Your part: a strong password and two-factor authentication on MetaCopier, a demo account first, and **Forget** the key on a shared computer.

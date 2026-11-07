@@ -440,6 +440,11 @@ scrolls the sheet (or the shown page) before the shot, `--search brazil` fills t
 
 The **Charts** tab is a C++/Qt port of Quant Terminal 1.0.0 (MIT, Lewis Jackson; licence and notices in
 `src/quant/LICENSE` and `src/quant/NOTICE`): the same trading terminal, UI and behaviour, without Node or a browser.
+
+Two deepwater additions to its look: the charts' own theme and colours (Settings › Chart theme, Colours:
+`theme::setChartStyle`, read by everything drawn inside a chart through `theme::chartColor`, kept in `state.json` as
+`chartBase` and `chartColors`; the dialog previews on the charts and puts the old look back when closed unsaved), and the
+side panel folding to a rail of icons (the open tab again, or »; `chartsSideFolded` in the settings).
 The original JavaScript sources are no longer in the repo. Code in `src/quant/` (see `src/quant/PORTING.md`):
 
 | Library | Ports |
@@ -1374,12 +1379,17 @@ Dev flag: `--journal-sample <file>` loads a statement in memory for screenshots,
 
 ## MetaTrader
 
-One order for several MetaTrader accounts, each sized by its own balance (`src/MetaTraderPage.*`, logic in `src/broker`, tested by `tests/quant/broker`; card in `docs/sources/metacopier.md`). The accounts are reached through MetaCopier's REST API, a paid service that holds the MetaTrader logins. **Written from its published spec and tested against a fake server: it has not been run against the real service or a real account.** A real run starts with a demo account.
+The **Accounts** tab (page id `metatrader`). One order for several trading accounts, each sized by its own balance (`src/MetaTraderPage.*`, logic in `src/broker`, tested by `tests/quant/broker`; card in `docs/sources/metacopier.md`). The accounts are reached through MetaCopier's REST API, a paid service that holds the MetaTrader logins. **Written from its published spec and tested against a fake server: it has not been run against the real service or a real account.** A real run starts with a demo account.
 
 - **No retries:** `MetaCopierClient` never resends. An answer that doesn't come may mean an executed order: the line is looked for on the account (`requestId`, or the `API|<id>|` comment), then says **Open**, or **Not seen on the account**.
 - **Refusals** (`buildPlanLine`): no stop, stop or target on the wrong side, risk over 5 %, below the minimum volume (never rounded up), no price, no conversion into the account's currency, not connected, read-only, real money not allowed. Each account is priced on its own; one refusing doesn't stop the others. The risk is worked out again from the lots that would leave.
 - **Real money:** `environment` LIVE or absent counts as real, and can't be armed until a typed word allows it, for the session. A prop firm's challenge can be reported as DEMO, so arming is always by hand, and nothing is armed at launch.
 - **The key** is in the system's secret store (`src/SecretStore.*`: Keychain, Credential Manager), never in QSettings like the other keys. `deepwater --secret-check` tries the store; the Windows CI runs it. A key is tried before it is kept.
+- **Platforms:** MetaCopier connects 17 kinds of account through the same calls, with a volume in lots of the symbol's
+  contract size. Orders are sized for MT5, MT4, DXtrade, cTrader, TradeLocker and Match-Trader (`broker::sizedPlatform`, types
+  1-6, the CFD platforms of brokers and prop firms); the others (exchanges, Tradovate, TradeStation, Alpaca) are listed and
+  refused (`PlatformNotChecked`) until their lots are checked. The page states what protects the accounts and what is the
+  trader's part.
 - **No AI:** `aiReadPage` and `aiOpenPage` refuse the page, and no tool sends orders. Models keep paper trading only.
 - `DEEPWATER_METACOPIER_URL=http://127.0.0.1:<port>` points the page at `qtm_test_broker --serve <port>` (key `test-key`); only the loopback address is accepted, and its key is kept apart.
 
@@ -1793,6 +1803,14 @@ that costs nothing or where nothing can have changed, and fast at the minutes a 
   1.5% away from it. A price whose market isn't trading shows when it dates from.
 
 Test with a fake calendar: `DEEPWATER_CALENDAR_URL=http://127.0.0.1:<port>/events deepwater --page calendar` (loopback only).
+
+## Display size
+
+Settings › Display sets the size of the whole interface, 80 % to 175 % (`src/UiZoom.*`): Qt's `QT_SCALE_FACTOR`, which
+Qt reads once before the application exists, so `main()` reads the setting (`ui/zoom`) first and a change restarts the app
+on the page that was open (after `main()` returns, so the local server and files are closed). A size whose least window
+(960 x 540 at 100 %) wouldn't fit the main screen is greyed. Ctrl/⌘ + and − step through the sizes, Ctrl/⌘ 0 is 100 %. An
+environment's own `QT_SCALE_FACTOR` wins.
 
 ## Window sizes
 

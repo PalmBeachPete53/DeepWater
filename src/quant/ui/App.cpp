@@ -19,6 +19,7 @@
 #include "../server/Server.h"
 
 #include <utility>
+#include <QColorDialog>
 #include <QApplication>
 #include <QAudioFormat>
 #include <QAudioSink>
@@ -388,7 +389,13 @@ QJsonObject AppState::toJson() const
                                 {"stayInDrawMode", settings.stayInDrawMode},
                                 {"syncCrosshair", settings.syncCrosshair},
                                 {"syncSymbol", settings.syncSymbol},
-                                {"syncReplay", settings.syncReplay}};
+                                {"syncReplay", settings.syncReplay},
+                                {"chartBase", settings.chartBase},
+                                {"chartColors", [this] {
+                                     QJsonObject c;
+                                     for (auto it = settings.chartColors.cbegin(); it != settings.chartColors.cend(); ++it) c[it.key()] = it.value();
+                                     return c;
+                                 }()}};
     o["paper"] = paper;
     if (!replayPaper.isNull() && !replayPaper.isUndefined()) o["replayPaper"] = replayPaper;
     QJsonObject st;
@@ -438,6 +445,9 @@ AppState AppState::fromJson(const QJsonObject &o)
     if (st.contains("utc")) s.settings.utc = st.value("utc").toBool();
     if (st.contains("stayInDrawMode")) s.settings.stayInDrawMode = st.value("stayInDrawMode").toBool();
     if (st.contains("syncCrosshair")) s.settings.syncCrosshair = st.value("syncCrosshair").toBool();
+    if (st.contains("chartBase")) s.settings.chartBase = st.value("chartBase").toString();
+    const QJsonObject chartColors = st.value("chartColors").toObject();
+    for (auto it = chartColors.begin(); it != chartColors.end(); ++it) s.settings.chartColors.insert(it.key(), it.value().toString());
     if (st.contains("syncSymbol")) s.settings.syncSymbol = st.value("syncSymbol").toBool();
     if (st.contains("syncReplay")) s.settings.syncReplay = st.value("syncReplay").toBool();
     if (o.contains("paper")) s.paper = o.value("paper");
@@ -552,6 +562,7 @@ void App::init(const QJsonObject &saved)
 {
     state = AppState::fromJson(saved);
     theme::setCurrent(state.settings.theme);
+    theme::setChartStyle(state.settings.chartBase, state.settings.chartColors);
     applyStyle();
     loadCustomIndicators([this] {
         buildToolbar();
@@ -1994,6 +2005,68 @@ void App::openSettings()
     g->addWidget(field("Crosshair across charts", sync), 2, 0);
     auto *countdown = mk("sCountdown", {{"1", "Show"}, {"0", "Hide"}}, s.countdown ? "1" : "0");
     g->addWidget(field("Countdown to the candle's close", countdown), 2, 1);
+    // The charts' own look: previewed on the charts as it changes, put back if the window closes without Save.
+    auto chartBase = std::make_shared<QString>(s.chartBase);
+    auto chartColors = std::make_shared<QHash<QString, QString>>(s.chartColors);
+    auto *look = mk("sChartBase", {{"app", "Follow the app's theme"}, {"dark", "Dark"}, {"light", "Light"}}, s.chartBase);
+    g->addWidget(field("Chart theme", look), 3, 0);
+    auto *reset = new QPushButton("Reset colours");
+    theme::setCls(reset, "btn");
+    reset->setCursor(Qt::PointingHandCursor);
+    reset->setToolTip("Back to the chart theme's own colours");
+    g->addWidget(field("Colours", reset), 3, 1);
+    auto *swatches = new QWidget;
+    auto *sg = new QGridLayout(swatches);
+    sg->setContentsMargins(0, 0, 0, 0);
+    sg->setHorizontalSpacing(8);
+    sg->setVerticalSpacing(6);
+    QVector<QPair<QString, QPushButton *>> swatchButtons;
+    for (int i = 0; i < theme::chartVars().size(); ++i) {
+        const auto &[var, name] = theme::chartVars()[i];
+        auto *b = new QPushButton(name);
+        theme::setCls(b, "btn");
+        b->setCursor(Qt::PointingHandCursor);
+        b->setToolTip(QString("%1: click to choose").arg(name));
+        b->setStyleSheet("text-align: left; padding-left: 8px;");
+        sg->addWidget(b, i / 4, i % 4);   // four across: the window keeps its height on a small screen
+        swatchButtons.push_back({var, b});
+    }
+    g->addWidget(swatches, 4, 0, 1, 2);
+    auto paintSwatches = [swatchButtons] {
+        for (const auto &[var, b] : swatchButtons) {
+            QPixmap px(14, 14);
+            px.fill(Qt::transparent);
+            QPainter p(&px);
+            p.setRenderHint(QPainter::Antialiasing);
+            p.setPen(QPen(theme::color("--border"), 1));
+            p.setBrush(theme::chartColor(var));
+            p.drawRoundedRect(QRectF(0.5, 0.5, 13, 13), 3, 3);
+            p.end();
+            b->setIcon(QIcon(px));
+        }
+    };
+    auto preview = [this, chartBase, chartColors, paintSwatches] {
+        theme::setChartStyle(*chartBase, *chartColors);
+        for (auto *p : panes) p->applyTheme();
+        paintSwatches();
+    };
+    paintSwatches();
+    connect(look, &QComboBox::currentIndexChanged, this, [look, chartBase, preview] {
+        *chartBase = look->value();
+        preview();
+    });
+    connect(reset, &QPushButton::clicked, this, [chartColors, preview] {
+        chartColors->clear();
+        preview();
+    });
+    for (const auto &[var, b] : swatchButtons) {
+        connect(b, &QPushButton::clicked, this, [this, var = var, name = b->text(), chartColors, preview] {
+            const QColor c = QColorDialog::getColor(theme::chartColor(var), this, name, QColorDialog::ShowAlphaChannel);
+            if (!c.isValid()) return;
+            (*chartColors)[var] = QString("rgba(%1, %2, %3, %4)").arg(c.red()).arg(c.green()).arg(c.blue()).arg(c.alphaF(), 0, 'g', 3);
+            preview();
+        });
+    }
     v->addWidget(gw);
     auto *hint = label(QString("Everything you save lives in the <code style=\"font-family:'%1'\">data</code> folder next to the app, on your machine.")
                            .arg(theme::monoFont(12).family()),
@@ -2019,8 +2092,17 @@ void App::openSettings()
     ok->setCursor(Qt::PointingHandCursor);
     fh->addWidget(ok);
     ModalCard *card = modal("Settings", body, foot);
-    connect(ok, &QPushButton::clicked, card, [this, bars, utc, vol, volumeShown, stay, sync, countdown] {
+    auto saved = std::make_shared<bool>(false);
+    connect(card, &ModalCard::closed, this, [this, saved, oldBase = s.chartBase, oldColors = s.chartColors] {
+        if (*saved) return;
+        theme::setChartStyle(oldBase, oldColors);
+        for (auto *p : panes) p->applyTheme();
+    });
+    connect(ok, &QPushButton::clicked, card, [this, bars, utc, vol, volumeShown, stay, sync, countdown, saved, chartBase, chartColors] {
         AppSettings &st = state.settings;
+        *saved = true;
+        st.chartBase = *chartBase;
+        st.chartColors = *chartColors;
         const double n = jsNumber(bars->text());
         st.bars = int(std::max(200.0, std::min(20000.0, js::truthy(n) ? n : 3000.0)));
         st.utc = utc->value() == "1";

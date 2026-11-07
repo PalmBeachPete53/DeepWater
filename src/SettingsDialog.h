@@ -21,12 +21,13 @@ public:
     explicit SettingsDialog(QWidget *parent = nullptr);
 
     void setCurrent(const QString &language, const QString &themeId, bool newsTranslation);
-    void showPage(int index);   // 0 language, 1 theme, 2 news
+    void showPage(int index);   // 0 language, 1 theme, 2 news, 3 display
 
 signals:
     void languageChosen(const QString &code);
     void themeChosen(const QString &id);
     void newsTranslationChosen(bool on);
+    void zoomChosen(int percent);
 
 protected:
     void changeEvent(QEvent *e) override;
@@ -35,6 +36,7 @@ private:
     QWidget *buildLanguagePage();
     QWidget *buildThemePage();
     QWidget *buildNewsPage();
+    QWidget *buildDisplayPage();
     void retranslateUi();
 
     QListWidget *m_nav;
@@ -48,6 +50,9 @@ private:
     QLabel *m_newsHint;
     QPushButton *m_translationOn;
     QPushButton *m_translationOff;
+    QLabel *m_displayTitle;
+    QLabel *m_displayHint;
+    QHash<int, QPushButton *> m_zoomButtons;
     QHash<QString, QPushButton *> m_languageButtons;
     QHash<QString, QAbstractButton *> m_themeButtons;
 };

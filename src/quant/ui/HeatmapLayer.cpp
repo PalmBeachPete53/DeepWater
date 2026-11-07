@@ -407,7 +407,7 @@ void HeatmapLayer::drawEvents(QPainter &p, const QSizeF &size)
             QPolygonF d;
             d << QPointF(x1, *y - 5) << QPointF(x1 + 5, *y) << QPointF(x1, *y + 5) << QPointF(x1 - 5, *y);
             p.setBrush(absorbed);
-            p.setPen(QPen(theme::color("--bg"), 1));
+            p.setPen(QPen(theme::chartColor("--bg"), 1));
             p.drawPolygon(d);
         }
     }
@@ -617,10 +617,10 @@ void HeatmapLayer::drawDom(QPainter &p, const QSizeF &size)
     }
     p.save();
     p.setRenderHint(QPainter::Antialiasing, false);
-    p.fillRect(QRectF(x0, 0, w, size.height()), theme::color("--bg", 0.82));
-    p.setPen(QPen(theme::color("--border"), 1));
+    p.fillRect(QRectF(x0, 0, w, size.height()), theme::chartColor("--bg", 0.82));
+    p.setPen(QPen(theme::chartColor("--border"), 1));
     p.drawLine(QPointF(x0 + 0.5, 0), QPointF(x0 + 0.5, size.height()));
-    const QColor up = theme::color("--up", 0.75), down = theme::color("--down", 0.75), both = theme::color("--muted", 0.6);
+    const QColor up = theme::chartColor("--up", 0.75), down = theme::chartColor("--down", 0.75), both = theme::chartColor("--muted", 0.6);
     const QFont f = theme::font(10);
     const QFontMetricsF fm(f);
     p.setFont(f);
@@ -630,7 +630,7 @@ void HeatmapLayer::drawDom(QPainter &p, const QSizeF &size)
         p.fillRect(QRectF(x0 + w - len, r.y0 + (h > 3 ? 0.5 : 0), std::max(1.0, len), std::max(1.0, h > 3 ? h - 1 : h)),
                    r.side > 0 ? up : r.side < 0 ? down : both);
         if (h >= fm.height() - 1) {
-            p.setPen(theme::color("--text"));
+            p.setPen(theme::chartColor("--text"));
             p.drawText(QRectF(x0 + 4, r.y0, w - 8, h), Qt::AlignVCenter | Qt::AlignLeft, footprint::formatVolume(r.q));
         }
     }

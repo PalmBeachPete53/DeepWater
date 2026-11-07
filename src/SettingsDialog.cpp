@@ -1,5 +1,7 @@
 #include "SettingsDialog.h"
 
+#include "UiZoom.h"
+
 #include <QGuiApplication>
 #include <QScreen>
 #include <QButtonGroup>
@@ -55,6 +57,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_nav->addItem(QString());
     m_nav->addItem(QString());
     m_nav->addItem(QString());
+    m_nav->addItem(QString());
     sl->addWidget(m_nav, 1);
     layout->addWidget(sidebar);
 
@@ -62,6 +65,7 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     m_pages->addWidget(buildLanguagePage());
     m_pages->addWidget(buildThemePage());
     m_pages->addWidget(buildNewsPage());
+    m_pages->addWidget(buildDisplayPage());
     layout->addWidget(m_pages, 1);
 
     connect(m_nav, &QListWidget::currentRowChanged, m_pages, &QStackedWidget::setCurrentIndex);
@@ -169,6 +173,41 @@ QWidget *SettingsDialog::buildNewsPage()
     return page;
 }
 
+QWidget *SettingsDialog::buildDisplayPage()
+{
+    auto *page = new QWidget;
+    auto *l = new QVBoxLayout(page);
+    l->setContentsMargins(28, 24, 28, 24);
+    l->setSpacing(6);
+    m_displayTitle = new QLabel;
+    m_displayTitle->setObjectName("pageTitle");
+    m_displayHint = new QLabel;
+    m_displayHint->setObjectName("dim");
+    m_displayHint->setWordWrap(true);
+    l->addWidget(m_displayTitle);
+    l->addWidget(m_displayHint);
+    l->addSpacing(14);
+    auto *group = new QButtonGroup(page);
+    auto *grid = new QGridLayout;
+    grid->setSpacing(10);
+    for (int i = 0; i < uizoom::levels().size(); ++i) {
+        const int percent = uizoom::levels()[i];
+        auto *b = new QPushButton;
+        b->setAttribute(Qt::WA_LayoutUsesWidgetRect);
+        b->setObjectName("optionCard");
+        b->setCheckable(true);
+        b->setCursor(Qt::PointingHandCursor);
+        b->setMinimumHeight(48);
+        group->addButton(b);
+        grid->addWidget(b, i / 4, i % 4);
+        m_zoomButtons.insert(percent, b);
+        connect(b, &QPushButton::clicked, this, [this, percent] { emit zoomChosen(percent); });
+    }
+    l->addLayout(grid);
+    l->addStretch();
+    return page;
+}
+
 void SettingsDialog::setCurrent(const QString &language, const QString &themeId, bool newsTranslation)
 {
     if (QPushButton *b = m_languageButtons.value(language))
@@ -176,6 +215,10 @@ void SettingsDialog::setCurrent(const QString &language, const QString &themeId,
     if (QAbstractButton *b = m_themeButtons.value(themeId))
         b->setChecked(true);
     (newsTranslation ? m_translationOn : m_translationOff)->setChecked(true);
+    for (auto it = m_zoomButtons.cbegin(); it != m_zoomButtons.cend(); ++it) {
+        it.value()->setChecked(it.key() == uizoom::current());
+        it.value()->setEnabled(uizoom::fits(it.key()) || it.key() == uizoom::current());
+    }
 }
 
 void SettingsDialog::showPage(int index)
@@ -197,6 +240,12 @@ void SettingsDialog::retranslateUi()
     m_nav->item(0)->setText(tr("Language"));
     m_nav->item(1)->setText(tr("Theme"));
     m_nav->item(2)->setText(tr("News"));
+    m_nav->item(3)->setText(tr("Display"));
+    m_displayTitle->setText(tr("Interface size"));
+    m_displayHint->setText(tr("Makes everything larger or smaller, as a browser's zoom. The app restarts to apply it. "
+                              "Shortcuts: Ctrl and + or − (⌘ on a Mac), Ctrl and 0 for 100 %. Greyed sizes don't fit this screen."));
+    for (auto it = m_zoomButtons.cbegin(); it != m_zoomButtons.cend(); ++it)
+        it.value()->setText(it.key() == 100 ? tr("%1 % (default)").arg(it.key()) : tr("%1 %").arg(it.key()));
     m_languageTitle->setText(tr("Language"));
     m_languageHint->setText(tr("Choose the language used across the interface and market data."));
     m_themeTitle->setText(tr("Theme"));

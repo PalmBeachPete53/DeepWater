@@ -54,7 +54,7 @@ const QString Down = "--down";
 // A CSS colour or a theme variable, with an alpha for the variables ("--up" at 0.18).
 QColor col(const QString &css, double alpha = 1)
 {
-    return css.startsWith("--") ? theme::color(css, alpha) : theme::parseColor(css);
+    return css.startsWith("--") ? theme::chartColor(css, alpha) : theme::parseColor(css);
 }
 } // namespace
 
@@ -352,7 +352,7 @@ void DrawingLayer::drawOne(QPainter &painter, const QSizeF &size, const Drawing 
         pen.setWidthF(1.5);
         painter.setOpacity(1);
         painter.setPen(pen);
-        painter.setBrush(theme::hasPalette() ? theme::color("--bg") : QColor("#fff"));   // handles
+        painter.setBrush(theme::hasPalette() ? theme::chartColor("--bg") : QColor("#fff"));   // handles
         for (const auto &p : pts)
             painter.drawEllipse(QPointF(p.x, p.y), 4, 4);
     }

@@ -87,6 +87,9 @@ struct AppSettings {
     bool syncCrosshair = false;
     bool syncSymbol = false;
     bool syncReplay = false;
+    // The charts' own look (theme::setChartStyle): "app", "dark" or "light", and colours set one by one.
+    QString chartBase = "app";
+    QHash<QString, QString> chartColors;
 };
 
 // app.state, saved with PUT /api/state.

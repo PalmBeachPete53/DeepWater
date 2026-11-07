@@ -83,11 +83,22 @@ MetaTraderPage::MetaTraderPage(QWidget *parent)
     scroll->setWidget(content);
     outer->addWidget(scroll);
 
-    auto *notice = quant::label(tr("Orders sent from here are real orders on your MetaTrader accounts, through MetaCopier, a paid service that holds your MetaTrader logins. "
+    auto *notice = quant::label(tr("Orders sent from here are real orders on your trading accounts (MetaTrader 4 and 5, cTrader, DXtrade, TradeLocker, "
+                                   "Match-Trader), through MetaCopier, a paid service that holds your logins. "
                                    "Check that your broker or prop firm allows it: FTMO limits the capital per trader or strategy and may suspend accounts with identical trades."),
                                 "qtNote");
     notice->setWordWrap(true);
     v->addWidget(notice);
+    // What keeps an account safe, and what is left to the trader.
+    auto *safety = quant::label(tr("<b>Safety.</b> The MetaCopier key stays in your system's secret store (Keychain, Windows Credential Manager), "
+                                   "never in the app's settings, and only goes to MetaCopier over HTTPS. Your platform passwords never go through "
+                                   "Deepwater: they are entered on MetaCopier's site. No AI can read this page or send an order. Real-money accounts "
+                                   "stay locked until you allow them, an order is shown before it leaves and is sent once. Your part: a strong "
+                                   "password and two-factor authentication on MetaCopier, a demo account to start, and Forget the key on a shared computer."),
+                              "qtNote");
+    safety->setWordWrap(true);
+    safety->setTextFormat(Qt::RichText);
+    v->addWidget(safety);
     v->addWidget(buildKeyBar());
     m_status = quant::label({}, "qtCardLabel");
     m_status->setWordWrap(true);
@@ -167,7 +178,7 @@ QWidget *MetaTraderPage::buildAccounts()
     m_real->setToolTip(tr("For this session only. An account the service doesn't report as a demo counts as real money."));
     connect(m_real, &QCheckBox::clicked, this, &MetaTraderPage::askRealMoney);
     head->addWidget(m_real);
-    m_accountsTable = deskui::table({tr("Armed"), tr("Account"), tr("Server"), tr("Kind"), tr("State"), tr("Balance"), tr("Equity"), tr("Open")});
+    m_accountsTable = deskui::table({tr("Armed"), tr("Account"), tr("Platform"), tr("Kind"), tr("State"), tr("Balance"), tr("Equity"), tr("Open")});
     deskui::fitColumns(m_accountsTable, 1);
     body->addWidget(m_accountsTable);
     m_capNote = quant::label({}, "qtNote");
@@ -430,7 +441,7 @@ void MetaTraderPage::fillAccounts()
         arm->setEnabled(!locked);
         arm->setToolTip(locked ? tr("Real money: allow it above first") : tr("Include this account in the orders"));
         m_accountsTable->setItem(r, 1, dataCell(a.alias.isEmpty() ? a.login : a.alias, QColor(), Qt::AlignLeft));
-        m_accountsTable->setItem(r, 2, dataCell(a.server));
+        m_accountsTable->setItem(r, 2, dataCell(a.typeName.isEmpty() ? a.server : a.typeName + " · " + a.server));
         const QString kind = a.environment == Environment::Demo ? tr("Demo") : a.environment == Environment::Live ? tr("Real money") : tr("Unknown: counted as real");
         m_accountsTable->setItem(r, 3, dataCell(kind, real ? ui.Down : QColor()));
         const QString state = a.wrongCredentials ? tr("Wrong login") : a.tradingDisabled ? tr("Read only") : a.connected ? tr("Connected") : tr("Not connected");
@@ -497,10 +508,11 @@ QString MetaTraderPage::refusalText(const PlanLine &line) const
     case Refusal::TargetWrongSide: return tr("Target on the wrong side of the price");
     case Refusal::TooSmall: return tr("Under the minimum volume at this risk");
     case Refusal::NotConnected: return tr("Not connected");
-    case Refusal::WrongCredentials: return tr("Wrong MetaTrader login");
+    case Refusal::WrongCredentials: return tr("Wrong login on the platform");
     case Refusal::TradingDisabled: return tr("Read only");
     case Refusal::RealMoneyLocked: return tr("Real money not allowed");
     case Refusal::NotChecked: return tr("The risk couldn't be checked");
+    case Refusal::PlatformNotChecked: return tr("%1: sizing in lots not checked for this platform yet").arg(line.account.typeName.isEmpty() ? tr("This platform") : line.account.typeName);
     }
     return {};
 }

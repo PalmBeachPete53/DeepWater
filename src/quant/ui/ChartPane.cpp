@@ -75,9 +75,9 @@ namespace {
 // Chart types built from price alone, with no meaningful volume per bar.
 const QStringList PRICE_ONLY = {"renko", "linebreak", "kagi", "pnf"};
 
-QColor css(const QString &name) { return theme::color(name); }
+QColor css(const QString &name) { return theme::chartColor(name); }   // the charts' own look
 // A CSS colour, or a theme variable ("--up") so marker colours follow theme changes.
-QColor col(const QString &c) { return c.startsWith("--") ? theme::color(c) : theme::parseColor(c); }
+QColor col(const QString &c) { return c.startsWith("--") ? theme::chartColor(c) : theme::parseColor(c); }
 
 // A chart line can't skip a blank point: it joins the neighbours. A segment takes the colour of
 // the point it starts from, so hiding a gap means making the point before it transparent and
@@ -406,15 +406,15 @@ void ChartPane::mainColors(lw::SeriesOptions &o, const QString &t)
         o.color = accent;
     } else if (t == "area") {
         o.lineColor = accent;
-        o.topColor = theme::color("--accent", 0.35);
-        o.bottomColor = theme::color("--accent", 0.02);
+        o.topColor = theme::chartColor("--accent", 0.35);
+        o.bottomColor = theme::chartColor("--accent", 0.02);
     } else if (t == "baseline") {
         o.topLineColor = up;
         o.bottomLineColor = down;
-        o.topFillColor1 = theme::color("--up", 0.25);
-        o.topFillColor2 = theme::color("--up", 0.02);
-        o.bottomFillColor1 = theme::color("--down", 0.02);
-        o.bottomFillColor2 = theme::color("--down", 0.25);
+        o.topFillColor1 = theme::chartColor("--up", 0.25);
+        o.topFillColor2 = theme::chartColor("--up", 0.02);
+        o.bottomFillColor1 = theme::chartColor("--down", 0.02);
+        o.bottomFillColor2 = theme::chartColor("--down", 0.25);
     } else if (t == "hollow") {
         o.upColor = QColor(0, 0, 0, 0);
         o.downColor = down;
@@ -435,8 +435,8 @@ void ChartPane::mainColors(lw::SeriesOptions &o, const QString &t)
     } else if (t != "columns") {
         o.upColor = up;
         o.downColor = down;
-        o.wickUpColor = up;
-        o.wickDownColor = down;
+        o.wickUpColor = css("--wick-up");
+        o.wickDownColor = css("--wick-down");
     }
 }
 
@@ -856,7 +856,7 @@ static lw::DataItem volPoint(const ChartPane *pane, const Bar &b)
     lw::DataItem d;
     d.time = pane->toChart(b.time);
     d.value = js::orZero(b.volume);
-    d.color = theme::color(b.close >= b.open ? "--up" : "--down", 0.45);
+    d.color = theme::chartColor(b.close >= b.open ? "--up" : "--down", 0.45);
     return d;
 }
 
@@ -2118,7 +2118,7 @@ protected:
         const QRectF box(0, (height() - 28) / 2.0, width(), 28);
         if (underMouse()) {
             p.setPen(Qt::NoPen);
-            p.setBrush(theme::color("--hover"));
+            p.setBrush(theme::chartColor("--hover"));
             p.drawRoundedRect(box, 4, 4);
         }
         const QFont f = theme::font(13);
@@ -2127,7 +2127,7 @@ protected:
         double top = height() / 2.0 - ls.size() * ReplayLine / 2;
         for (const QString &l : ls) {
             qtm::text::draw(p, QPointF((width() - qtm::text::width(f, l)) / 2, top + (ReplayLine - (a + d)) / 2 + a), f, l,
-                       theme::color("--text"));
+                       theme::chartColor("--text"));
             top += ReplayLine;
         }
     }
@@ -2172,7 +2172,7 @@ protected:
             const double x = 6 + (i == 0 ? 20 + (ls[0].isEmpty() ? 0 : qtm::text::width(f, " ")) : 0);
             // the first line's baseline is the checkbox's bottom margin edge
             const double base = i == 0 ? top + 19 : top + (ReplayLine - (a + d)) / 2 + a;
-            if (!ls[i].isEmpty()) qtm::text::draw(p, QPointF(x, base), f, ls[i], theme::color("--muted"));
+            if (!ls[i].isEmpty()) qtm::text::draw(p, QPointF(x, base), f, ls[i], theme::chartColor("--muted"));
             top += lh;
         }
     }

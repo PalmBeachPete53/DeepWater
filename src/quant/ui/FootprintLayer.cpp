@@ -147,14 +147,14 @@ void FootprintLayer::draw(QPainter &p, const QSizeF &size)
     };
 
     if (m_cache.size() > 5000) m_cache.clear();   // before the frame takes references into it
-    const QColor up = m_settings.buy.isValid() ? m_settings.buy : theme::color("--up");
-    const QColor down = m_settings.sell.isValid() ? m_settings.sell : theme::color("--down");
+    const QColor up = m_settings.buy.isValid() ? m_settings.buy : theme::chartColor("--up");
+    const QColor down = m_settings.sell.isValid() ? m_settings.sell : theme::chartColor("--down");
     auto tint = [&](bool buy, double alpha) {
         QColor c = buy ? up : down;
         c.setAlphaF(std::clamp(alpha, 0.0, 1.0));
         return c;
     };
-    const QColor text = theme::color("--text"), muted = theme::color("--muted");
+    const QColor text = theme::chartColor("--text"), muted = theme::chartColor("--muted");
     const QColor poc = m_settings.poc.isValid() ? m_settings.poc : QColor("#ff9800");
 
     // The candles that have a complete footprint.
@@ -284,7 +284,7 @@ void FootprintLayer::draw(QPainter &p, const QSizeF &size)
                 const double vol = l.volume(), d = l.delta();
                 if (m_settings.mode == Mode::Profile) {
                     const double share = a.maxLevelVolume > 0 ? vol / a.maxLevelVolume : 0;
-                    p.fillRect(cell, theme::color("--muted", 0.08));
+                    p.fillRect(cell, theme::chartColor("--muted", 0.08));
                     p.fillRect(QRectF(cellsL, cell.top(), cw * share, cell.height()),
                                tint(d >= 0, 0.25 + 0.35 * share));
                 } else {
@@ -379,8 +379,8 @@ void FootprintLayer::draw(QPainter &p, const QSizeF &size)
     // The delta / volume strip at the bottom.
     if (!items.empty()) {
         const double top = size.height() - STRIP_HEIGHT;
-        p.fillRect(QRectF(0, top, size.width(), STRIP_HEIGHT), theme::color("--bg", 0.92));
-        p.fillRect(QRectF(0, top, size.width(), 1), theme::color("--border"));
+        p.fillRect(QRectF(0, top, size.width(), STRIP_HEIGHT), theme::chartColor("--bg", 0.92));
+        p.fillRect(QRectF(0, top, size.width(), 1), theme::chartColor("--border"));
         const double rowH = (STRIP_HEIGHT - 2) / 2;
         const QString names[] = {QString::fromUtf8("Δ"), "Vol"};
         const double namesW = std::max(fm.horizontalAdvance(names[0]), fm.horizontalAdvance(names[1])) + 8;
@@ -414,13 +414,13 @@ void FootprintLayer::draw(QPainter &p, const QSizeF &size)
                            tint(d >= 0, 0.2 + 0.8 * k));
                 const double kv = maxCandleVol > 0 ? it.c->volume() / maxCandleVol : 0;
                 p.fillRect(QRectF(cx - w / 2, top + 1 + rowH + 2, std::max(1.0, w), rowH - 4),
-                           theme::color("--muted", 0.15 + 0.6 * kv));
+                           theme::chartColor("--muted", 0.15 + 0.6 * kv));
             }
         }
         // the strip's row names
         for (int k = 0; k < 2; ++k) {
             const QRectF r(0, top + 1 + k * rowH, namesW, rowH);
-            p.fillRect(r, theme::color("--bg"));
+            p.fillRect(r, theme::chartColor("--bg"));
             p.setPen(muted);
             p.drawText(r, Qt::AlignCenter, names[k]);
         }
@@ -430,7 +430,7 @@ void FootprintLayer::draw(QPainter &p, const QSizeF &size)
             const QFont f = theme::font(9, 600);
             const QFontMetricsF bm(f);
             const QRectF r(6, top - bm.height() - 8, bm.horizontalAdvance(s) + 10, bm.height() + 4);
-            p.fillRect(r, theme::color("--down", 0.85));
+            p.fillRect(r, theme::chartColor("--down", 0.85));
             p.setFont(f);
             p.setPen(Qt::white);
             p.drawText(r, Qt::AlignCenter, s);

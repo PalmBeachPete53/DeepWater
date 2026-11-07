@@ -312,6 +312,50 @@ QString css(const QString &var)
     return vars().value(var);
 }
 
+namespace {
+QString g_chartBase = "app";
+QHash<QString, QString> g_chartColors;
+} // namespace
+
+void setChartStyle(const QString &base, const QHash<QString, QString> &colors)
+{
+    g_chartBase = base == "dark" || base == "light" ? base : QStringLiteral("app");
+    g_chartColors = colors;
+}
+
+QString chartBase() { return g_chartBase; }
+QHash<QString, QString> chartColors() { return g_chartColors; }
+
+const QVector<QPair<QString, QString>> &chartVars()
+{
+    static const QVector<QPair<QString, QString>> v {
+        {"--bg", "Background"},     {"--grid", "Grid lines"},       {"--text", "Scales and text"}, {"--crosshair", "Crosshair"},
+        {"--up", "Rising candles"}, {"--down", "Falling candles"},  {"--wick-up", "Rising wicks"},  {"--wick-down", "Falling wicks"},
+    };
+    return v;
+}
+
+QColor chartColor(const QString &var)
+{
+    if (const auto it = g_chartColors.constFind(var); it != g_chartColors.constEnd()) {
+        const QColor c = parseColor(*it);
+        if (c.isValid()) return c;
+    }
+    // Wicks take their candle's colour unless set.
+    if (var == "--wick-up") return chartColor("--up");
+    if (var == "--wick-down") return chartColor("--down");
+    if (g_chartBase == "app") return color(var);
+    const QHash<QString, QString> &builtin = g_chartBase == "light" ? lightVars() : darkVars();
+    return parseColor(builtin.contains(var) ? builtin.value(var) : vars().value(var));
+}
+
+QColor chartColor(const QString &var, double a)
+{
+    QColor c = chartColor(var);
+    c.setAlphaF(float(a));
+    return c;
+}
+
 QColor color(const QString &var, double a)
 {
     QColor c = color(var);

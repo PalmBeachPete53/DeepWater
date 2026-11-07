@@ -1,6 +1,6 @@
-# MetaTrader
+# Comptes
 
-Un seul ordre pour plusieurs comptes MetaTrader, dimensionné pour chacun selon son solde, depuis Deepwater. **Ce sont de vrais ordres.** Aucune IA ne peut lire cette page ni envoyer quoi que ce soit depuis elle.
+La page **Comptes** (MetaTrader jusqu'en novembre 2026). Un seul ordre pour plusieurs comptes de trading : MetaTrader 4 et 5, cTrader, DXtrade, TradeLocker et Match-Trader, dimensionné pour chacun selon son solde, depuis Deepwater. **Ce sont de vrais ordres.** Aucune IA ne peut lire cette page ni envoyer quoi que ce soit depuis elle.
 
 Les comptes sont joints via **MetaCopier**, un service cloud payant qui maintient les connexions et détient vos identifiants MetaTrader ; Deepwater ne garde que sa clé d'API, dans le coffre du système (Trousseau sur macOS, Gestionnaire d'identifiants sur Windows). Vérifiez que votre courtier ou votre prop firm l'autorise avant de vous en servir. FTMO limite le capital à 400 000 $ par trader ou par stratégie et peut suspendre les comptes aux trades identiques au-delà ; savoir s'il accepte un service qui détient vos identifiants est une question à lui poser.
 
@@ -27,3 +27,9 @@ Un compte que le service n'indique pas comme démo, ou n'indique pas du tout, co
 Les positions de tous les comptes, actualisées toutes les quelques secondes tant que la page est ouverte. **Fermer** en termine une, après une question. **Tout fermer sur les comptes armés** termine toutes leurs positions, y compris celles ouvertes ailleurs que dans Deepwater.
 
 Les soldes viennent de MetaCopier, qui les synchronise une fois par minute. Une réponse lente ou les règles d'un symbole peuvent faire différer l'exécution du prix du plan.
+
+## Plateformes et sécurité
+
+MetaCopier relie aussi des plateformes d'échange (Binance, Bybit, OKX…), Tradovate, TradeStation et Alpaca. Leurs comptes s'affichent, avec leur plateforme, mais aucun ordre n'est encore dimensionné pour eux : la page les refuse plutôt que de deviner ce qu'est un lot chez eux.
+
+Ce qui protège les comptes : la clé MetaCopier reste dans le coffre de secrets du système et ne part que vers MetaCopier, en HTTPS ; les mots de passe de vos plateformes se saisissent sur le site de MetaCopier, jamais dans Deepwater ; aucune IA n'atteint cette page ; l'argent réel reste bloqué tant que vous ne l'autorisez pas. À vous : un mot de passe solide et la double authentification sur MetaCopier, un compte démo d'abord, et **Oublier** la clé sur un ordinateur partagé.

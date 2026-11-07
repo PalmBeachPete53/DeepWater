@@ -37,11 +37,12 @@ The app stays connected and hears of a new version as soon as it is published, w
 
 ## Settings
 
-The gear opens a floating window with three pages:
+The gear opens a floating window with four pages:
 
 - **Language**: English or French. The whole interface switches at once, market data included (commodity and country names, categories). Figures follow the language too: `1 234,5` in French, `1,234.5` in English; the Charts terminal keeps its English texts.
 - **Theme**: nine palettes, applied at once to every page, the globe and the charts. Six dark ones (Ember, Abyss, Jade, Oxide, Nova, Bloomberg) and three light ones (Glacier, Dune, Sakura).
 - **News**: turns article translation on or off. Off, the article reader has no **Translate** button.
+- **Display**: the size of the whole interface, from 80 % to 175 %, as a browser's zoom; sizes too large for the screen are greyed. The app restarts to apply it, on the same page. Shortcuts: Ctrl (⌘ on a Mac) with + or −, and with 0 for 100 %.
 
 ## Keys and data sources
 

@@ -22,7 +22,7 @@ const char *const IconX = R"(<path d="M6 6l12 12M18 6L6 18"/>)";
 
 QColor resolve(const QString &v)
 {
-    return v.startsWith("--") ? theme::color(v) : theme::parseColor(v);
+    return v.startsWith("--") ? theme::chartColor(v) : theme::parseColor(v);
 }
 
 QFont f12() { return theme::font(12); }
@@ -172,14 +172,14 @@ void Legend::paintEvent(QPaintEvent *)
     p.setRenderHint(QPainter::TextAntialiasing);
     const QFont f = f12();
     const double space = 8;
-    const QColor text = theme::color("--text"), muted = theme::color("--muted");
+    const QColor text = theme::chartColor("--text"), muted = theme::chartColor("--muted");
     for (const Row &r : rows) {
         p.save();
         p.setClipRect(QRectF(0, r.y, legendWidth, r.h));
         if (r.kind == Row::Main) {
             text::draw(p, QPointF(0, baseline(f13b(), r.y)), f13b(), model.name, text);
             if (model.hasBar) {
-                const QColor c = model.cls == "up" ? theme::color("--up") : model.cls == "down" ? theme::color("--down") : text;
+                const QColor c = model.cls == "up" ? theme::chartColor("--up") : model.cls == "down" ? theme::chartColor("--down") : text;
                 double x = r.title.width() + space;
                 const double by = baseline(f, r.y);
                 p.setFont(f);
@@ -200,7 +200,7 @@ void Legend::paintEvent(QPaintEvent *)
             const bool hover = hoverKey == r.key;
             if (hover) {
                 p.setPen(Qt::NoPen);
-                p.setBrush(theme::color("--panel"));
+                p.setBrush(theme::chartColor("--panel"));
                 p.drawRoundedRect(QRectF(0, r.y, legendWidth, 20), 3, 3);
             }
             const double by = baseline(f, r.y);
@@ -218,7 +218,7 @@ void Legend::paintEvent(QPaintEvent *)
             }
             if (!r.acts.isEmpty() && x > r.acts.first().x()) {
                 p.setPen(Qt::NoPen);
-                p.setBrush(theme::color("--panel"));
+                p.setBrush(theme::chartColor("--panel"));
                 p.drawRect(QRectF(r.acts.first().x() - 2, r.y, legendWidth - r.acts.first().x() + 2, r.h));
             }
             for (int k = 0; k < r.acts.size(); ++k) {

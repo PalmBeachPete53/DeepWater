@@ -21,6 +21,7 @@ Account accountFromJson(const QJsonObject &o)
     a.region = o.value("region").toObject().value("name").toString();
     a.status = o.value("status").toObject().value("name").toString();
     a.typeName = o.value("type").toObject().value("name").toString();
+    a.typeId = o.value("type").toObject().value("id").toInt();
     a.propFirm = o.value("propFirm").toBool();
     a.tradingDisabled = o.value("tradingDisabled").toBool();
     if (o.value("accountInformation").isObject())
@@ -130,6 +131,11 @@ double lotsDownToStep(double lots, double step)
     return std::round(steps * step * 1e8) / 1e8;
 }
 
+bool sizedPlatform(int typeId)
+{
+    return typeId >= 1 && typeId <= 6;
+}
+
 PlanLine buildPlanLine(const PlanInput &in)
 {
     PlanLine line;
@@ -148,6 +154,8 @@ PlanLine buildPlanLine(const PlanInput &in)
         return refuse(Refusal::NotConnected);
     if (a.tradingDisabled)
         return refuse(Refusal::TradingDisabled);
+    if (!sizedPlatform(a.typeId))
+        return refuse(Refusal::PlatformNotChecked);
     if (a.environment != Environment::Demo && !in.allowRealMoney)
         return refuse(Refusal::RealMoneyLocked);
     if (!(intent.riskPercent > 0) || !std::isfinite(intent.riskPercent))

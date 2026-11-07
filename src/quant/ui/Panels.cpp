@@ -24,6 +24,7 @@
 #include <QScrollBar>
 #include <QSet>
 #include <QSettings>
+#include <QToolButton>
 #include <QSvgRenderer>
 #include <QToolTip>
 #include <QUrl>
@@ -426,6 +427,10 @@ Panels::Panels(App *app) : QObject(app), d(std::make_unique<Private>())
             p.fillRect(QRect(0, height() - 1, width(), 1), theme::color("--border"));
         }
     };
+    d->sideFull = new QWidget;
+    auto *fl = new QVBoxLayout(d->sideFull);
+    fl->setContentsMargins(0, 0, 0, 0);
+    fl->setSpacing(0);
     auto *sideBar = new Bar;
     sideBar->setFixedHeight(38);
     {
@@ -438,13 +443,54 @@ Panels::Panels(App *app) : QObject(app), d(std::make_unique<Private>())
             b->setFixedHeight(30);
             l->addWidget(b);
             d->sideTabs << b;
-            connect(b, &QAbstractButton::clicked, this, [this, tab] { d->showSide(tab); });
+            // The open tab again folds the panel, as on TradingView.
+            connect(b, &QAbstractButton::clicked, this, [this, tab] {
+                if (tab == d->sideTab && !d->sideFolded) d->setSideFolded(true);
+                else d->showSide(tab);
+            });
         }
         l->addStretch(1);
+        auto *fold = new QToolButton;
+        fold->setAutoRaise(true);
+        fold->setCursor(Qt::PointingHandCursor);
+        fold->setToolTip("Hide the panel (click its tab again does the same)");
+        fold->setFixedSize(26, 26);
+        connect(fold, &QToolButton::clicked, this, [this] { d->setSideFolded(true); });
+        l->addWidget(fold);
+        l->addSpacing(18);   // clear of the window's side flaps
+        d->foldButton = fold;
     }
-    sl->addWidget(sideBar);
+    fl->addWidget(sideBar);
     d->sideBody = new Body;
-    sl->addWidget(d->sideBody, 1);
+    fl->addWidget(d->sideBody, 1);
+    sl->addWidget(d->sideFull, 1);
+
+    // The folded panel: one icon per tab, on the left of the rail so that the window's flaps (AI, DEV) don't cover them.
+    d->sideRail = new QWidget;
+    {
+        auto *rl = new QVBoxLayout(d->sideRail);
+        rl->setContentsMargins(3, 6, 0, 6);
+        rl->setSpacing(4);
+        for (const auto &[tab, label] : QVector<QPair<QString, QString>> {
+                 {"watchlist", "Watchlist"}, {"alerts", "Alerts"}, {"calendar", "Calendar"}, {"news", "News"}}) {
+            auto *b = new QToolButton;
+            b->setAutoRaise(true);
+            b->setCursor(Qt::PointingHandCursor);
+            b->setToolTip(label);
+            b->setFixedSize(30, 30);
+            b->setProperty("tab", tab);
+            connect(b, &QToolButton::clicked, this, [this, tab] {
+                d->setSideFolded(false);
+                d->showSide(tab);
+            });
+            rl->addWidget(b, 0, Qt::AlignLeft);
+            d->railButtons << b;
+        }
+        rl->addStretch(1);
+    }
+    sl->addWidget(d->sideRail, 1);
+    d->sideRail->hide();
+    d->paintRail();
 
     // <div id="bottom" class="bottom collapsed">
     d->bottomEl = new Frame(Frame::Top);
@@ -553,6 +599,7 @@ Panels::Panels(App *app) : QObject(app), d(std::make_unique<Private>())
         int m_grabH = 0;
     };
     d->bottomHeight = QSettings().value("chartsBottomHeight", 320).toInt();
+    if (QSettings().value("chartsSideFolded", false).toBool()) d->setSideFolded(true);
     new Grip(d.get());
 
     // The media query follows the window (the App) and the bottom's column height.
@@ -679,6 +726,7 @@ void Panels::onTheme()
 {
     // CSS variables update the side panel by themselves in the browser; here it is redrawn.
     d->side->update();
+    d->paintRail();
     d->bottomEl->update();
     d->renderSide();
     d->renderBottom();
@@ -695,6 +743,40 @@ void Panels::Private::showSide(const QString &t)
         b->update();
     }
     renderSide();
+}
+
+void Panels::Private::setSideFolded(bool on)
+{
+    sideFolded = on;
+    side->setFixedWidth(on ? 56 : 300);   // the window's flaps cover its right 22 px
+    sideFull->setVisible(!on);
+    sideRail->setVisible(on);
+    for (QAbstractButton *b : railButtons) {
+        // The tab the panel would open on stands out.
+        const bool current = b->property("tab").toString() == sideTab;
+        b->setStyleSheet(current ? QString("QToolButton { background: %1; border-radius: 4px; }").arg(theme::css("--hover")) : QString());
+    }
+    QSettings().setValue("chartsSideFolded", on);
+    if (!on) renderSide();
+}
+
+void Panels::Private::paintRail()
+{
+    static const QHash<QString, QString> icons {
+        {"watchlist", R"(<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>)"},
+        {"alerts", R"(<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>)"},
+        {"calendar", R"(<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>)"},
+        {"news", R"(<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"/>)"},
+    };
+    const QColor c = theme::color("--muted");
+    for (QAbstractButton *b : railButtons) {
+        b->setIcon(theme::svgIcon(icons.value(b->property("tab").toString()), c, 18));
+        b->setIconSize(QSize(18, 18));
+    }
+    if (foldButton) {
+        foldButton->setIcon(theme::svgIcon(R"(<path d="m6 17 5-5-5-5M13 17l5-5-5-5"/>)", c, 16));
+        foldButton->setIconSize(QSize(16, 16));
+    }
 }
 
 void Panels::Private::setCollapsed(bool on)

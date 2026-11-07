@@ -18,7 +18,7 @@ using namespace rangeslider;
 namespace {
 bool darkTheme()
 {
-    const QColor bg = theme::color("--bg");
+    const QColor bg = theme::chartColor("--bg");
     return 0.2126 * bg.redF() + 0.7152 * bg.greenF() + 0.0722 * bg.blueF() < 0.5;
 }
 } // namespace
@@ -146,7 +146,7 @@ const QPixmap &ChartNavigator::trackImage(const Span &s, const QRectF &track)
     key.w = track.width();
     key.h = track.height();
     key.dpr = devicePixelRatioF();
-    key.theme = theme::color("--accent").rgb() ^ (theme::color("--panel").rgb() << 1);
+    key.theme = theme::chartColor("--accent").rgb() ^ (theme::chartColor("--panel").rgb() << 1);
     if (key == m_trackKey && !m_track.isNull()) return m_track;
     m_trackKey = key;
     ++m_curveBuilds;
@@ -155,7 +155,7 @@ const QPixmap &ChartNavigator::trackImage(const Span &s, const QRectF &track)
     const QSize px(std::max(1, int(std::ceil(track.width() * key.dpr))), std::max(1, int(std::ceil(track.height() * key.dpr))));
     m_track = QPixmap(px);
     m_track.setDevicePixelRatio(key.dpr);
-    m_track.fill(theme::color("--panel"));
+    m_track.fill(theme::chartColor("--panel"));
     if (key.n < 2 || !m_chart) return m_track;
 
     // Each bar's logical index (a compared symbol's times can sit between them).
@@ -214,8 +214,8 @@ const QPixmap &ChartNavigator::trackImage(const Span &s, const QRectF &track)
     area.lineTo(line.currentPosition().x(), h);
     area.lineTo(line.elementAt(0).x, h);
     area.closeSubpath();
-    q.fillPath(area, theme::color("--accent", 0.12));
-    q.setPen(QPen(theme::color("--accent", 0.7), 1));
+    q.fillPath(area, theme::chartColor("--accent", 0.12));
+    q.setPen(QPen(theme::chartColor("--accent", 0.7), 1));
     q.setBrush(Qt::NoBrush);
     q.drawPath(line);
     return m_track;
@@ -225,8 +225,8 @@ void ChartNavigator::paintEvent(QPaintEvent *)
 {
     QPainter p(this);
     const QRectF all = rect();
-    p.fillRect(all, theme::color("--bg"));
-    p.setPen(QPen(theme::color("--border"), 1));
+    p.fillRect(all, theme::chartColor("--bg"));
+    p.setPen(QPen(theme::chartColor("--border"), 1));
     p.drawLine(QPointF(0, 0.5), QPointF(all.width(), 0.5));
     const Span s = span();
     if (!s.ok) return;
@@ -240,20 +240,20 @@ void ChartNavigator::paintEvent(QPaintEvent *)
     const QColor shade = darkTheme() ? QColor(0, 0, 0, 110) : QColor(0, 0, 0, 38);
     if (x0 > 0) p.fillRect(QRectF(0, track.top(), x0, track.height()), shade);
     if (x1 < s.w) p.fillRect(QRectF(x1, track.top(), s.w - x1, track.height()), shade);
-    const QColor accent = theme::color("--accent");
+    const QColor accent = theme::chartColor("--accent");
     p.setPen(QPen(accent, 1));
     // (an explicit QBrush: `? QColor : Qt::NoBrush` would make NoBrush the colour 0, black)
-    p.setBrush(m_gesture.drag() == Drag::Pan ? QBrush(theme::color("--accent", 0.10)) : QBrush(Qt::NoBrush));
+    p.setBrush(m_gesture.drag() == Drag::Pan ? QBrush(theme::chartColor("--accent", 0.10)) : QBrush(Qt::NoBrush));
     p.drawRect(QRectF(x0 + 0.5, track.top() + 0.5, std::max(1.0, x1 - x0 - 1), track.height() - 1));
     // Handles: a small bar on each edge with a grip.
     p.setRenderHint(QPainter::Antialiasing, true);
     const double hh = track.height() * 0.62, hw = 6;
     for (double hx : {x0, x1}) {
         const QRectF h(hx - hw / 2, track.center().y() - hh / 2, hw, hh);
-        p.setPen(QPen(theme::color("--bg"), 1));
+        p.setPen(QPen(theme::chartColor("--bg"), 1));
         p.setBrush(accent);
         p.drawRoundedRect(h, 2, 2);
-        p.setPen(QPen(theme::color("--on-accent", 0.8), 1));
+        p.setPen(QPen(theme::chartColor("--on-accent", 0.8), 1));
         p.drawLine(QPointF(hx, h.top() + 3), QPointF(hx, h.bottom() - 3));
     }
 }

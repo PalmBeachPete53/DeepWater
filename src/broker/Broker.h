@@ -15,6 +15,7 @@ enum class Environment { Unknown, Demo, Live };   // as the service reports it; 
 
 struct Account {
     QString id, alias, server, login, region, status, typeName;
+    int typeId = 0;   // MetaCopier's platform: 1 MT5, 2 MT4, 3 DXtrade, 4 cTrader, 5 TradeLocker, 6 Match-Trader, 7+ exchanges and brokers
     bool propFirm = false;
     bool tradingDisabled = false;
     // Its information, synced by the service every minute.
@@ -46,6 +47,10 @@ struct Position {
 };
 
 Account accountFromJson(const QJsonObject &o);
+// The platforms an order is sized for here: those of CFD brokers and prop firms, where MetaCopier takes a volume in lots of
+// a contract size it gives. Its exchanges (Binance, Bybit…), Tradovate, TradeStation and Alpaca use the same call, but
+// their lots haven't been checked: an account there is listed and refused, not guessed.
+bool sizedPlatform(int typeId);
 void applyInformation(Account *account, const QJsonObject &information);
 SymbolSpec symbolFromJson(const QJsonObject &o);
 Quote quoteFromJson(const QJsonObject &o);
@@ -86,6 +91,7 @@ enum class Refusal {
     TradingDisabled,
     RealMoneyLocked,
     NotChecked,          // a computed risk over the one asked for: never sent
+    PlatformNotChecked,  // a platform whose lots aren't checked yet (sizedPlatform)
 };
 
 struct PlanLine {

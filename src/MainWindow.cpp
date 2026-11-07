@@ -17,6 +17,7 @@
 #include "DomesticFinance.h"
 #include "KeyIndicators.h"
 #include "RefreshScheduler.h"
+#include "UiZoom.h"
 #include "ReleaseWatcher.h"
 #include "KeyedSources.h"
 #include "NationalSources.h"
@@ -301,6 +302,12 @@ MainWindow::MainWindow(MarketData *data, const QString &theme, QWidget *parent)
     // they are older than the last trading day.
     quant::StateRefresher::instance()->start();
 
+    // The interface size, as in a browser (UiZoom): Ctrl + and − step through the sizes that fit, Ctrl 0 goes back to 100 %.
+    const auto zoomTo = [this](int percent) { uizoom::choose(this, percent, m_pageById.key(currentPage())); };
+    for (const QKeySequence &keys : {QKeySequence(QKeySequence::ZoomIn), QKeySequence(Qt::CTRL | Qt::Key_Equal)})
+        connect(new QShortcut(keys, this), &QShortcut::activated, this, [zoomTo] { zoomTo(uizoom::step(+1)); });
+    connect(new QShortcut(QKeySequence(QKeySequence::ZoomOut), this), &QShortcut::activated, this, [zoomTo] { zoomTo(uizoom::step(-1)); });
+    connect(new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_0), this), &QShortcut::activated, this, [zoomTo] { zoomTo(100); });
     auto *esc = new QShortcut(QKeySequence(Qt::Key_Escape), this);
     connect(esc, &QShortcut::activated, this, [this] { clearSelection(); });
     auto *space = new QShortcut(QKeySequence(Qt::Key_Space), this);
@@ -445,7 +452,7 @@ void MainWindow::buildUi()
         return desk;
     });
     addPage("journal", tr("Journal"), [] { return new JournalPage; });
-    addPage("metatrader", tr("MetaTrader"), [] { return new MetaTraderPage; });
+    addPage("metatrader", tr("Accounts"), [] { return new MetaTraderPage; });
     addPage("ai", tr("AI"), [this] { return new AiPage(mlSources()); });
     addPage("sources", tr("Sources"), [this] {
         auto *sourcesPage = new SourcesPage(sourceTargets());
@@ -818,6 +825,10 @@ void MainWindow::openSettings()
         m_settings = new SettingsDialog(this);
         connect(m_settings, &SettingsDialog::languageChosen, this, &MainWindow::setLanguage);
         connect(m_settings, &SettingsDialog::themeChosen, this, &MainWindow::setTheme);
+        connect(m_settings, &SettingsDialog::zoomChosen, this, [this](int percent) {
+            if (!uizoom::choose(m_settings, percent, m_pageById.key(currentPage())))
+                m_settings->setCurrent(m_language, Theme::current().id, newsui::Reader::translationEnabled());
+        });
         connect(m_settings, &SettingsDialog::newsTranslationChosen, this, [this](bool on) {
             newsui::Reader::setTranslationEnabled(on);
             for (auto *reader : findChildren<newsui::Reader *>())   // the News page's and Desk's

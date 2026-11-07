@@ -109,9 +109,9 @@ void VolumeProfile::draw(QPainter &ctx, const QSizeF &size)
         const bool inVa = k >= prof->vaLow && k <= prof->vaHigh;
         const double uw = (prof->up[k] / prof->max) * W, dw = (prof->down[k] / prof->max) * W;
         ctx.fillRect(QRectF(x0 + W - uw - dw, *yTop, uw, h).normalized(),
-                     theme::color("--up", inVa ? 0.45 : 0.2));
+                     theme::chartColor("--up", inVa ? 0.45 : 0.2));
         ctx.fillRect(QRectF(x0 + W - dw, *yTop, dw, h).normalized(),
-                     theme::color("--down", inVa ? 0.45 : 0.2));
+                     theme::chartColor("--down", inVa ? 0.45 : 0.2));
     }
     const auto yPoc = m_series->priceToCoordinate(prof->lo + (prof->poc + 0.5) * prof->step);
     if (yPoc) {
@@ -186,8 +186,8 @@ void SessionVolumeProfile::draw(QPainter &ctx, const QSizeF &)
         m_closedRows = rows;
         m_closedValueArea = valueArea;
     }
-    const QColor upIn = theme::color("--up", 0.4), upOut = theme::color("--up", 0.16);
-    const QColor downIn = theme::color("--down", 0.4), downOut = theme::color("--down", 0.16);
+    const QColor upIn = theme::chartColor("--up", 0.4), upOut = theme::chartColor("--up", 0.16);
+    const QColor downIn = theme::chartColor("--down", 0.4), downOut = theme::chartColor("--down", 0.16);
     for (const Session &s : std::as_const(m_sessions.list)) {
         if (s.to < range->from - 1 || s.from > range->to + 1) continue;
         std::optional<Profile> prof;

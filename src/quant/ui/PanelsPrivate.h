@@ -119,6 +119,14 @@ struct Panels::Private
     QVector<panels::TabButton *> sideTabs, bottomTabs;
     panels::TabButton *toggle = nullptr;
     panels::Body *sideBody = nullptr;
+    // The side panel folded to a rail of icons, as TradingView's right toolbar: the active tab or » folds it, an icon opens
+    // that tab (a deepwater addition, kept in the settings).
+    QWidget *sideFull = nullptr, *sideRail = nullptr;
+    QVector<QAbstractButton *> railButtons;
+    QAbstractButton *foldButton = nullptr;
+    bool sideFolded = false;
+    void setSideFolded(bool on);
+    void paintRail();
     panels::Body *bottom = nullptr;
     QPointer<TerminalPanel> terminal;   // made the first time the Terminal tab opens; kept after
     bool collapsed = true;

@@ -13,6 +13,7 @@
 #include "Myfxbook.h"
 #include "LayoutAudit.h"
 #include "SecretStore.h"
+#include "UiZoom.h"
 #include "MainWindow.h"
 #include "DeskHistory.h"
 #include "SettingsDialog.h"
@@ -21,6 +22,7 @@
 #include "Theme.h"
 #include "quant/core/Error.h"
 #include "quant/core/PineIndicators.h"
+#include "quant/ui/App.h"
 
 #include <QAbstractButton>
 #include <QApplication>
@@ -43,6 +45,10 @@ int main(int argc, char *argv[])
 
     // The News reader embeds web pages (Qt WebEngine), which wants shared GL contexts set before the application.
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+    // The interface size is a scale factor Qt reads once, before the application: the settings are read first.
+    QCoreApplication::setOrganizationName("Deepwater");
+    QCoreApplication::setApplicationName("Deepwater");
+    uizoom::applyAtStartup();
     QApplication app(argc, argv);
     app.setOrganizationName("Deepwater");
     app.setApplicationName("Deepwater");
@@ -222,6 +228,12 @@ int main(int argc, char *argv[])
         if (settingsArg + 1 < args.size())
             static_cast<SettingsDialog *>(w.settingsWindow())->showPage(args.at(settingsArg + 1).toInt());
     }
+    // --chart-settings: the Charts page's Settings window (with --page charts), once its charts are up.
+    if (args.contains("--chart-settings"))
+        QTimer::singleShot(4000, &w, [&w] {
+            if (auto *charts = w.findChild<qtm::App *>())
+                charts->openSettings();
+        });
     // --update-dialog: the update icon's dialog, checking at once. --update-auto: installs what it finds (tests).
     if (args.contains("--update-dialog") || args.contains("--update-auto"))
         w.openUpdates(true);
@@ -267,5 +279,5 @@ int main(int argc, char *argv[])
     }
     const int status = app.exec();
     HttpCache::waitForWrites();
-    return status;
+    return status;   // a new interface size starts the app again after this (uizoom::choose, at exit)
 }

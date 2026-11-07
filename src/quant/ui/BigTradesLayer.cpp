@@ -237,8 +237,8 @@ void BigTradesLayer::draw(QPainter &p, const QSizeF &size)
 
     const BubbleStyle &style = m_style.bubble;
     const double ref = m_model->refVolume();
-    const QColor up = m_style.buy.isValid() ? m_style.buy : theme::color("--up");
-    const QColor down = m_style.sell.isValid() ? m_style.sell : theme::color("--down");
+    const QColor up = m_style.buy.isValid() ? m_style.buy : theme::chartColor("--up");
+    const QColor down = m_style.sell.isValid() ? m_style.sell : theme::chartColor("--down");
     const double dpr = p.device() ? p.device()->devicePixelRatioF() : 1;
     const std::optional<QPointF> mouse = m_pane->bigTradesMouse;
     const QFont volFont = theme::font(10, 600);
@@ -266,7 +266,7 @@ void BigTradesLayer::draw(QPainter &p, const QSizeF &size)
             const QRectF box(x - fm.horizontalAdvance(vol) / 2 - 3, *y - fm.height() / 2, fm.horizontalAdvance(vol) + 6, fm.height());
             p.setRenderHint(QPainter::Antialiasing, true);
             p.setPen(Qt::NoPen);
-            p.setBrush(theme::color("--bg", 0.75));
+            p.setBrush(theme::chartColor("--bg", 0.75));
             p.drawRoundedRect(box, 3, 3);
             p.setFont(f);
             p.setPen(tc);
@@ -330,12 +330,12 @@ void BigTradesTooltip::draw(QPainter &p, const QSizeF &size)
     tl.setY(std::clamp(tl.y(), 4.0, std::max(4.0, size.height() - box.height() - 4)));
     p.save();
     p.setRenderHint(QPainter::Antialiasing, true);
-    p.setPen(QPen(theme::color("--border"), 1));
-    p.setBrush(theme::color("--bg", 0.96));
+    p.setPen(QPen(theme::chartColor("--border"), 1));
+    p.setBrush(theme::chartColor("--bg", 0.96));
     p.drawRoundedRect(QRectF(tl, box), 4, 4);
     for (int i = 0; i < lines.size(); ++i) {
         p.setFont(i == 1 ? bold : f);
-        p.setPen(i == 1 ? theme::color(buy ? "--up" : "--down") : i == 0 ? theme::color("--muted") : theme::color("--text"));
+        p.setPen(i == 1 ? theme::chartColor(buy ? "--up" : "--down") : i == 0 ? theme::chartColor("--muted") : theme::chartColor("--text"));
         p.drawText(QPointF(tl.x() + pad, tl.y() + pad + i * lh + fm.ascent()), lines[i]);
     }
     p.restore();

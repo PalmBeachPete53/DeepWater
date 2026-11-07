@@ -7491,7 +7491,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location filename="../src/MacroIndicators.cpp" line="+2"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/MainWindow.cpp" line="+1517"/>
+        <location filename="../src/MainWindow.cpp" line="+1528"/>
         <source>%1%</source>
         <translation>%1 %</translation>
     </message>
@@ -7499,7 +7499,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../src/MainWindow.cpp" line="-1177"/>
+        <location filename="../src/MainWindow.cpp" line="-1181"/>
         <source>Deepwater — Commodity Markets</source>
         <translation>Deepwater — Marchés des matières premières</translation>
     </message>
@@ -7569,9 +7569,13 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Journal</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>MetaTrader</source>
-        <translation>MetaTrader</translation>
+        <translation type="vanished">MetaTrader</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Accounts</source>
+        <translation>Comptes</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -7584,7 +7588,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Sources</translation>
     </message>
     <message>
-        <location line="+431"/>
+        <location line="+435"/>
         <source>A new version of Deepwater is available.</source>
         <translation>Une nouvelle version de Deepwater est disponible.</translation>
     </message>
@@ -7967,12 +7971,11 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>MetaTraderPage</name>
     <message>
-        <location filename="../src/MetaTraderPage.cpp" line="+86"/>
         <source>Orders sent from here are real orders on your MetaTrader accounts, through MetaCopier, a paid service that holds your MetaTrader logins. Check that your broker or prop firm allows it: FTMO limits the capital per trader or strategy and may suspend accounts with identical trades.</source>
-        <translation>Les ordres envoyés d&apos;ici sont de vrais ordres sur vos comptes MetaTrader, via MetaCopier, un service payant qui détient vos identifiants MetaTrader. Vérifiez que votre courtier ou votre prop firm l&apos;autorise : FTMO limite le capital par trader ou par stratégie et peut suspendre les comptes aux trades identiques.</translation>
+        <translation type="vanished">Les ordres envoyés d&apos;ici sont de vrais ordres sur vos comptes MetaTrader, via MetaCopier, un service payant qui détient vos identifiants MetaTrader. Vérifiez que votre courtier ou votre prop firm l&apos;autorise : FTMO limite le capital par trader ou par stratégie et peut suspendre les comptes aux trades identiques.</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location filename="../src/MetaTraderPage.cpp" line="+141"/>
         <location line="+198"/>
         <source>Your MetaCopier API key</source>
         <translation>Votre clé d&apos;API MetaCopier</translation>
@@ -8036,12 +8039,21 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <translation>Compte</translation>
     </message>
     <message>
-        <location line="-84"/>
         <source>Server</source>
-        <translation>Serveur</translation>
+        <translation type="vanished">Serveur</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="-179"/>
+        <source>Orders sent from here are real orders on your trading accounts (MetaTrader 4 and 5, cTrader, DXtrade, TradeLocker, Match-Trader), through MetaCopier, a paid service that holds your logins. Check that your broker or prop firm allows it: FTMO limits the capital per trader or strategy and may suspend accounts with identical trades.</source>
+        <translation>Les ordres envoyés d’ici sont de vrais ordres sur vos comptes de trading (MetaTrader 4 et 5, cTrader, DXtrade, TradeLocker, Match-Trader), via MetaCopier, un service payant qui détient vos identifiants. Vérifiez que votre courtier ou votre prop firm l’autorise : FTMO limite le capital par trader ou par stratégie et peut suspendre les comptes aux opérations identiques.</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>&lt;b&gt;Safety.&lt;/b&gt; The MetaCopier key stays in your system&apos;s secret store (Keychain, Windows Credential Manager), never in the app&apos;s settings, and only goes to MetaCopier over HTTPS. Your platform passwords never go through Deepwater: they are entered on MetaCopier&apos;s site. No AI can read this page or send an order. Real-money accounts stay locked until you allow them, an order is shown before it leaves and is sent once. Your part: a strong password and two-factor authentication on MetaCopier, a demo account to start, and Forget the key on a shared computer.</source>
+        <translation>&lt;b&gt;Sécurité.&lt;/b&gt; La clé MetaCopier reste dans le coffre de secrets du système (Trousseau, Gestionnaire d’identification Windows), jamais dans les réglages de l’application, et ne part que vers MetaCopier, en HTTPS. Les mots de passe de vos plateformes ne passent jamais par Deepwater : ils se saisissent sur le site de MetaCopier. Aucune IA ne peut lire cette page ni envoyer un ordre. Les comptes en argent réel restent bloqués tant que vous ne les autorisez pas, un ordre est montré avant de partir et n’est envoyé qu’une fois. À vous : un mot de passe solide et la double authentification sur MetaCopier, un compte démo pour commencer, et « Oublier » la clé sur un ordinateur partagé.</translation>
+    </message>
+    <message>
+        <location line="+88"/>
         <source>Kind</source>
         <translation>Type</translation>
     </message>
@@ -8064,33 +8076,38 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     <message>
         <location line="+0"/>
         <location line="+84"/>
-        <location line="+262"/>
+        <location line="+263"/>
         <source>Open</source>
         <translation>Ouvert</translation>
     </message>
     <message>
-        <location line="-330"/>
+        <location line="-347"/>
+        <source>Platform</source>
+        <translation>Plateforme</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>SYMBOL</source>
         <translation>SYMBOLE</translation>
     </message>
     <message>
         <location line="+5"/>
-        <location line="+344"/>
+        <location line="+345"/>
         <location line="+24"/>
         <location line="+40"/>
         <source>Buy</source>
         <translation>Achat</translation>
     </message>
     <message>
-        <location line="-408"/>
-        <location line="+344"/>
+        <location line="-409"/>
+        <location line="+345"/>
         <location line="+24"/>
         <location line="+40"/>
         <source>Sell</source>
         <translation>Vente</translation>
     </message>
     <message>
-        <location line="-407"/>
+        <location line="-408"/>
         <source>RISK PER ACCOUNT</source>
         <translation>RISQUE PAR COMPTE</translation>
     </message>
@@ -8166,12 +8183,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <location line="+306"/>
+        <location line="+307"/>
         <source>Prepare an order to see what each account would send. Lots are rounded down, so an account never risks more than asked.</source>
         <translation>Préparez un ordre pour voir ce que chaque compte enverrait. Les lots sont arrondis à l&apos;inférieur : un compte ne risque jamais plus que demandé.</translation>
     </message>
     <message>
-        <location line="-296"/>
+        <location line="-297"/>
         <source>Positions</source>
         <translation>Positions</translation>
     </message>
@@ -8248,12 +8265,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+219"/>
+        <location line="+220"/>
         <source>Real money</source>
         <translation>Argent réel</translation>
     </message>
     <message>
-        <location line="-219"/>
+        <location line="-220"/>
         <source>Unknown: counted as real</source>
         <translation>Inconnu : compté comme réel</translation>
     </message>
@@ -8366,8 +8383,12 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+2"/>
+        <source>Wrong login on the platform</source>
+        <translation>Identifiants refusés par la plateforme</translation>
+    </message>
+    <message>
         <source>Wrong MetaTrader login</source>
-        <translation>Identifiants MetaTrader erronés</translation>
+        <translation type="vanished">Identifiants MetaTrader erronés</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -8378,6 +8399,16 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+1"/>
         <source>The risk couldn&apos;t be checked</source>
         <translation>Le risque n&apos;a pas pu être vérifié</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>%1: sizing in lots not checked for this platform yet</source>
+        <translation>%1 : le calcul de la taille en lots n’est pas encore vérifié pour cette plateforme</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>This platform</source>
+        <translation>Cette plateforme</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -10751,7 +10782,7 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
 <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../src/SettingsDialog.cpp" line="+195"/>
+        <location filename="../src/SettingsDialog.cpp" line="+238"/>
         <source>Settings</source>
         <translation>Paramètres</translation>
     </message>
@@ -10762,24 +10793,49 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+3"/>
+        <location line="+9"/>
         <source>Language</source>
         <translation>Langue</translation>
     </message>
     <message>
-        <location line="-2"/>
-        <location line="+4"/>
+        <location line="-8"/>
+        <location line="+10"/>
         <source>Theme</source>
         <translation>Thème</translation>
     </message>
     <message>
-        <location line="-3"/>
-        <location line="+5"/>
+        <location line="-9"/>
+        <location line="+11"/>
         <source>News</source>
         <translation>News</translation>
     </message>
     <message>
-        <location line="-3"/>
+        <location line="-10"/>
+        <source>Display</source>
+        <translation>Affichage</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Interface size</source>
+        <translation>Taille de l’interface</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Makes everything larger or smaller, as a browser&apos;s zoom. The app restarts to apply it. Shortcuts: Ctrl and + or − (⌘ on a Mac), Ctrl and 0 for 100 %. Greyed sizes don&apos;t fit this screen.</source>
+        <translation>Agrandit ou réduit tout, comme le zoom d’un navigateur. L’application redémarre pour l’appliquer. Raccourcis : Ctrl et + ou − (⌘ sur Mac), Ctrl et 0 pour 100 %. Les tailles grisées ne tiennent pas sur cet écran.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 % (default)</source>
+        <translation>%1 % (par défaut)</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>%1 %</source>
+        <translation>%1 %</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Choose the language used across the interface and market data.</source>
         <translation>Choisissez la langue de l&apos;interface et des données de marché.</translation>
     </message>
@@ -14623,6 +14679,19 @@ Lancez /graphify dans le projet pour construire le graphe du code.</translation>
         <location line="+2"/>
         <source>TARGET</source>
         <translation>OBJECTIF</translation>
+    </message>
+</context>
+<context>
+    <name>UiZoom</name>
+    <message>
+        <location filename="../src/UiZoom.cpp" line="+85"/>
+        <source>Interface size</source>
+        <translation>Taille de l’interface</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Deepwater restarts to show the interface at %1 %. Restart now?</source>
+        <translation>Deepwater redémarre pour afficher l’interface à %1 %. Redémarrer maintenant ?</translation>
     </message>
 </context>
 <context>

@@ -50,6 +50,7 @@ static Account demo(double balance = 100000)
 {
     Account a;
     a.id = "a";
+    a.typeId = 1;   // MT5
     a.connected = true;
     a.environment = Environment::Demo;
     a.balance = balance;
@@ -124,6 +125,15 @@ static void testPlan()
     CHECK(refused([](PlanInput &p) { p.account.connected = false; }) == Refusal::NotConnected);
     CHECK(refused([](PlanInput &p) { p.account.wrongCredentials = true; }) == Refusal::WrongCredentials);
     CHECK(refused([](PlanInput &p) { p.account.tradingDisabled = true; }) == Refusal::TradingDisabled);
+    // Platforms: the CFD ones are sized, the exchanges and futures brokers aren't checked yet.
+    for (int type : {1, 2, 3, 4, 5, 6}) {
+        PlanInput p = euroBuy();
+        p.account.typeId = type;
+        CHECK(buildPlanLine(p).ok());
+    }
+    CHECK(accountFromJson(QJsonObject {{"type", QJsonObject {{"id", 4}, {"name", "cTrader"}}}}).typeId == 4);
+    for (int type : {0, 7, 13, 14, 17})
+        CHECK(refused([type](PlanInput &p) { p.account.typeId = type; }) == Refusal::PlatformNotChecked);
     CHECK(refused([](PlanInput &p) { p.account.environment = Environment::Live; }) == Refusal::RealMoneyLocked);
     CHECK(refused([](PlanInput &p) { p.account.environment = Environment::Unknown; }) == Refusal::RealMoneyLocked);
     CHECK(refused([](PlanInput &p) { p.intent.riskPercent = 0; }) == Refusal::RiskInvalid);

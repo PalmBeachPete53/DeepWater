@@ -316,6 +316,7 @@ qt_add_executable(deepwater MACOSX_BUNDLE WIN32
     src/EconomyData.h src/EconomyData.cpp
     src/EconomyPage.h src/EconomyPage.cpp
     src/RefreshScheduler.h src/RefreshScheduler.cpp
+    src/UiZoom.h src/UiZoom.cpp
     src/ReleaseWatcher.h src/ReleaseWatcher.cpp
     src/CountryData.h src/CountryData.cpp
     src/CountriesView.h src/CountriesView.cpp

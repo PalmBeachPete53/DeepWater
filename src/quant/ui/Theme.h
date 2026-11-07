@@ -51,6 +51,17 @@ QString css(const QString &var);
 // Parses CSS colour text: #rgb, #rrggbb, #rrggbbaa, rgb(), rgba() and the named colours used.
 QColor parseColor(const QString &cssColor);
 
+// The charts' own look (a deepwater addition): `base` "app" follows the theme above, "dark" or "light" draws the charts in
+// that built-in palette whatever the app's; `colors` overrides single variables of the charts (CSS colour text), among
+// chartVars(). Read by everything drawn inside a chart (ChartPane, Legend, layers, navigator) through chartColor().
+void setChartStyle(const QString &base, const QHash<QString, QString> &colors);
+QString chartBase();
+QHash<QString, QString> chartColors();
+// The variables a user can set, with their English names, in display order.
+const QVector<QPair<QString, QString>> &chartVars();
+QColor chartColor(const QString &var);
+QColor chartColor(const QString &var, double a);
+
 // The full stylesheet for the terminal (app.css), built for the current theme. It appends
 // panelsStyleSheet() (ui/PanelsStyle.cpp, owned by the panels port) for the panel-specific rules.
 QString styleSheet();
